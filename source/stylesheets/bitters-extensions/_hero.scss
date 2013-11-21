@@ -1,0 +1,29 @@
+.hero {
+	background-color: desaturate($blue, 10);
+	margin-bottom: 3em;
+	padding-bottom: 4em;
+
+	.hero-inner {
+		@include clearfix;
+		@extend .wrapper;
+		color: white;
+
+		.hero-copy {
+			margin-bottom: 1em;	
+
+			h6 {
+				margin-bottom: 2em;	
+			}
+
+			@include media($medium-screen) {
+				@include span-columns(6);
+			}
+		}
+
+		.hero-image {
+			@include media($medium-screen) {
+				@include span-columns(6);
+			}
+		}
+	}
+}
