@@ -1,55 +1,36 @@
-@charset "utf-8";
+/*
+Errno::ENOENT: No such file or directory - all.scss
 
-body {
-  background: #d4d4d4 url("../images/background.png");
-  text-align: center;
-  font-family: sans-serif; }
-
-h1 {
-  color: rgba(0, 0, 0, .3);
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  background: url("../images/middleman.png") no-repeat center 100px;
-  padding: 350px 0 10px;
-  margin: 0; }
-
-.doc {
-  font-size: 14px;
-  margin: 0; }
-  .doc:before,
-  .doc:after {
-    opacity: .2;
-    padding: 6px;
-    font-style: normal;
-    position: relative;
-    content: "•"; }
-  .doc a {
-    color: rgba(0, 0, 0, 0.3); }
-    .doc a:hover {
-      color: #666; }
-
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
-
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
+Backtrace:
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:360:in `read'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:360:in `update_stylesheet'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:203:in `update_stylesheets'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `each'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:283:in `watch'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:117:in `initialize_adapter'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/vendor/listen/lib/listen/adapter.rb:198:in `call'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/vendor/listen/lib/listen/adapter.rb:198:in `report_changes'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/vendor/listen/lib/listen/adapter.rb:210:in `poll_changed_dirs'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/darwin.rb:38:in `start'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/darwin.rb:38:in `initialize'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/darwin.rb:38:in `new'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/darwin.rb:38:in `start'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:44:in `start'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:291:in `watch'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin.rb:107:in `send'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/exec.rb:463:in `watch_or_update'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/exec.rb:326:in `process_result'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/exec.rb:41:in `parse'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
+/Users/Magnus/.rvm/gems/ruby-1.9.3-p448/gems/sass-3.2.12/bin/sass:9
+/usr/bin/sass:19:in `load'
+/usr/bin/sass:19
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory - all.scss"; }
