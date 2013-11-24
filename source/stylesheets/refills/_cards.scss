@@ -1,0 +1,56 @@
+.cards {
+  @include clearfix;
+  cursor: pointer;
+  margin-bottom: 1em;
+
+  .card {
+    $card-header-color: darken($light-gray, 10);
+    height: 190px;
+    border: 1px solid $base-border-color;
+    background-color: $subtle-gray;
+    border-radius: $base-border-radius;
+    margin-bottom: $base-line-height;
+
+    @include media($medium-screen) {
+      @include span-columns(4 of 12);
+    }
+
+    .card-header {
+      // background-color: $card-header-color;
+      border-bottom: 1px solid $base-border-color;
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      font-weight: bold;
+      padding: 0.5em 1em;
+    }
+
+    p {
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 1em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+
+    h3 {
+      font-weight: 800;
+    }
+
+    &:hover {
+      background-color: darken($subtle-gray, 5);
+      .card-header {
+        background-color: darken($subtle-gray, 5);
+      }
+    }
+
+    &:active {
+      background-color: $subtle-gray;
+      .card-header {
+        background-color: $subtle-gray;
+      }
+    }
+  }
+}

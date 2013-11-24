@@ -1,0 +1,33 @@
+.dashboard {
+	@include clearfix;
+	background-color: $light-gray;
+	border-radius: $base-border-radius;
+	width: 100%;
+	padding: 1em;
+	
+	.dashboard-item {
+		@include span-columns(3);
+		h1 {
+			font-size: $base-font-size * 5;
+			text-align: center;
+			font-weight: 200;
+			margin: 0;
+
+			span {
+				font-size: $base-font-size/2;
+				margin: 5px;
+				font-weight: 300;
+			}
+		}
+
+		p {
+			border-top: 1px solid;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding-top: 1em;
+			text-align: center;
+			margin-left: 3em;
+			margin-right: 3em;
+		}
+	}
+}
