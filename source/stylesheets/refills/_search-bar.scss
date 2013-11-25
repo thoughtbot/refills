@@ -11,10 +11,6 @@ $search-bar-background-color: $light-gray;
   .search-item {
     @include span-columns(12);
     position: relative; 
-
-    @include media($medium-screen) {
-      @include span-columns(6);
-    }
   }
 
   input {

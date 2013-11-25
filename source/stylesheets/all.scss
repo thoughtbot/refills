@@ -44,6 +44,8 @@ $refills-color: #DAD2A8;
 	}
 }
 
+/////////////////////////
+
 .refills-wrapper {
   max-width: 1200px;
   padding: 1em;
@@ -69,8 +71,8 @@ $refills-color: #DAD2A8;
   		box-shadow: 0 1px 0 darken($refills-color, 10);
   		font-size: $base-font-size /1.5;
   		border-radius: $base-border-radius;
-  		color: white;
-  		padding: 0.5em;
+  		color: darken($refills-color, 40);
+  		padding: 0.5em 1em;
 
   		&:hover {
   			background-color: darken($refills-color, 5);
@@ -86,12 +88,6 @@ $refills-color: #DAD2A8;
   }
 }
 
-
-
-
-
-
-
 @import "refills/button-group";
 @import "refills/header-nav";
 @import "refills/item-list";
@@ -104,3 +100,4 @@ $refills-color: #DAD2A8;
 @import "refills/dashboard";
 @import "refills/search-bar";
 @import "refills/tooltip";
+@import "refills/footer";
