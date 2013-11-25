@@ -4,11 +4,93 @@
 @import "bitters/bitters";
 @import "normalize";
 
-.wrapper {
+$refills-color: #DAD2A8;
+
+.refills-hero {
+	$hero-background-color: $refills-color;
+	background-color: $hero-background-color;
+	padding-bottom: 4em;
+
+	.hero-inner {
+		@include clearfix;
+		max-width: 1200px;
+		padding: 1em;
+		margin: auto;
+
+		$button-group-color: saturate($refills-color, 11);
+		$button-group-border: lighten($button-group-color, 3);
+
+		.hero-copy {
+			margin-bottom: 1em;	
+
+			h1 {
+				font-size: 60px;
+			}
+
+			h6 {
+				margin-bottom: 2em;	
+			}
+
+			@include media($medium-screen) {
+				@include span-columns(6);
+			}
+		}
+
+		.hero-image {
+			@include media($medium-screen) {
+				@include span-columns(6);
+			}
+		}
+	}
+}
+
+.refills-wrapper {
   max-width: 1200px;
   padding: 1em;
   margin: auto;
+
+  h1.main-header {
+  	background-color: $refills-color;
+  	display: inline-block;
+  	padding: 0.5em;
+  }
+
+  .refill {
+  	margin-bottom: 2em;
+  	h3 {
+  		// border-top: 1px dashed gray;
+  		padding-top: 0.5em;
+  		margin-top: 1em;
+  		margin-bottom: 0.3em;
+  	}
+
+  	a {
+  		background-color: $refills-color;
+  		box-shadow: 0 1px 0 darken($refills-color, 10);
+  		font-size: $base-font-size /1.5;
+  		border-radius: $base-border-radius;
+  		color: white;
+  		padding: 0.5em;
+
+  		&:hover {
+  			background-color: darken($refills-color, 5);
+  			box-shadow: 0 2px 0 darken($refills-color, 15);
+  		}
+
+  		&:active {
+  			background-color: darken($refills-color, 7);
+  			box-shadow: 0 2px 0 darken($refills-color, 17);
+  			box-shadow: none;
+  		}
+  	}
+  }
 }
+
+
+
+
+
+
 
 @import "refills/button-group";
 @import "refills/header-nav";
@@ -22,4 +104,3 @@
 @import "refills/dashboard";
 @import "refills/search-bar";
 @import "refills/tooltip";
-@import "refills/buttons";

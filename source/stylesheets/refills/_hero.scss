@@ -6,7 +6,9 @@ $hero-background-color: $light-gray;
 
 	.hero-inner {
 		@include clearfix;
-		@extend .wrapper;
+		max-width: 1200px;
+		padding: 1em;
+		margin: auto;
 
 		button {
 			@include button(minimal, $base-accent-color);
