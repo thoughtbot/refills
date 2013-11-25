@@ -596,10 +596,70 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.wrapper, .hero .hero-inner {
+.refills-hero {
+  background-color: #dad2a8;
+  padding-bottom: 4em; }
+  .refills-hero .hero-inner {
+    *zoom: 1;
+    max-width: 1200px;
+    padding: 1em;
+    margin: auto; }
+    .refills-hero .hero-inner:before, .refills-hero .hero-inner:after {
+      content: " ";
+      display: table; }
+    .refills-hero .hero-inner:after {
+      clear: both; }
+    .refills-hero .hero-inner .hero-copy {
+      margin-bottom: 1em; }
+      .refills-hero .hero-inner .hero-copy h1 {
+        font-size: 60px; }
+      .refills-hero .hero-inner .hero-copy h6 {
+        margin-bottom: 2em; }
+      @media screen and (min-width: 47.5em) {
+        .refills-hero .hero-inner .hero-copy {
+          display: block;
+          float: left;
+          margin-right: 2.35765%;
+          width: 48.82117%; }
+          .refills-hero .hero-inner .hero-copy:last-child {
+            margin-right: 0; } }
+    @media screen and (min-width: 47.5em) {
+      .refills-hero .hero-inner .hero-image {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        .refills-hero .hero-inner .hero-image:last-child {
+          margin-right: 0; } }
+
+.refills-wrapper {
   max-width: 1200px;
   padding: 1em;
   margin: auto; }
+  .refills-wrapper h1.main-header {
+    background-color: #dad2a8;
+    display: inline-block;
+    padding: 0.5em; }
+  .refills-wrapper .refill {
+    margin-bottom: 2em; }
+    .refills-wrapper .refill h3 {
+      padding-top: 0.5em;
+      margin-top: 1em;
+      margin-bottom: 0.3em; }
+    .refills-wrapper .refill a {
+      background-color: #dad2a8;
+      box-shadow: 0 1px 0 #cbbf84;
+      font-size: 0.66667em;
+      border-radius: 0.1875em;
+      color: white;
+      padding: 0.5em; }
+      .refills-wrapper .refill a:hover {
+        background-color: #d2c996;
+        box-shadow: 0 2px 0 #c3b672; }
+      .refills-wrapper .refill a:active {
+        background-color: #cfc58f;
+        box-shadow: 0 2px 0 #c0b36b;
+        box-shadow: none; }
 
 .button-group {
   *zoom: 1; }
@@ -1046,7 +1106,10 @@ ul.item-list {
   background-color: #dddddd;
   padding-bottom: 4em; }
   .hero .hero-inner {
-    *zoom: 1; }
+    *zoom: 1;
+    max-width: 1200px;
+    padding: 1em;
+    margin: auto; }
     .hero .hero-inner:before, .hero .hero-inner:after {
       content: " ";
       display: table; }
