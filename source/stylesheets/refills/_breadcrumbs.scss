@@ -1,6 +1,7 @@
 $breadcrumb-height: 2em;
 $breadcrumb-arrow-color: $base-border-color;
 $breadcrumb-background-color: white;
+$breadcrumb-inactive-hover-color: darken($light-gray, 5);
 
 .breadcrumb { 
   margin: 0;
@@ -34,11 +35,11 @@ $breadcrumb-background-color: white;
     }
 
     &:hover {
-      background-color: $inactive-hover-color;
+      background-color: $breadcrumb-inactive-hover-color;
     }
 
     &:hover:after {
-      border-left-color: $inactive-hover-color;;
+      border-left-color: $breadcrumb-inactive-hover-color;;
     }
 
     &:after,

@@ -1,3 +1,8 @@
+$tab-inactive-color: darken($light-gray, 10);
+$tab-inactive-hover-color: darken($light-gray, 5);
+$tab-active-color: $light-gray;
+$tab-content-color: $light-gray;
+
 .tabs {
   @include clearfix;
   width: 100%;
@@ -11,16 +16,16 @@
       display: block;
       padding: 0.5em 1em;
       font-weight: bold;
-      background-color: $inactive-color;
+      background-color: $tab-inactive-color;
       text-decoration: none;
       color: $dark-gray;
 
       &:hover {
-        background-color: $inactive-hover-color;
+        background-color: $tab-inactive-hover-color;
       } 
 
       &.active {
-        background-color: $active-color;
+        background-color: $tab-active-color;
         border-bottom: 1px solid darken($base-border-color, 15%);
       }
     }
@@ -28,7 +33,7 @@
     section {
       padding: 1em;
       display: none; 
-      background-color: $content-color;
+      background-color: $tab-content-color;
       overflow: hidden; 
     }
   }

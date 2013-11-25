@@ -4,18 +4,6 @@
 @import "bitters/bitters";
 @import "normalize";
 
-// put into bitters?
-
-$inactive-color: darken($light-gray, 10);
-$inactive-hover-color: darken($light-gray, 5);
-$active-color: $light-gray;
-$content-color: $light-gray;
-$subtle-gray: lighten($light-gray, 10);
-
-%gradient {
-  @include background-image(linear-gradient(top, rgb(253,253,253), rgb(240,240,240)));
-}
-
 .wrapper {
   max-width: 1200px;
   padding: 1em;
@@ -34,3 +22,4 @@ $subtle-gray: lighten($light-gray, 10);
 @import "refills/dashboard";
 @import "refills/search-bar";
 @import "refills/tooltip";
+@import "refills/buttons";

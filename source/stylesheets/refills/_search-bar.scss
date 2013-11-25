@@ -1,8 +1,9 @@
+$search-bar-background-color: $light-gray;
+
 .search-bar {
   @include clearfix;
-  @extend %gradient;
   border: 1px solid $base-border-color;
-  background-color: $light-gray;
+  background-color: $search-bar-background-color;
   border-radius: $base-border-radius;
   padding: 0.5em;
   margin-bottom: 1em;
@@ -35,32 +36,14 @@
     }
 
     input[type=submit] {
-      box-shadow: none;
-      @extend %gradient;
-      border: 1px solid $base-border-color;
-      text-shadow: 0 1px 0 white;
+      @include button(minimal, $light-gray);
+      font-size: $base-font-size;
       color: darken($light-gray, 20);
+      outline: none;
       position: absolute;
       right: 0.3em;
       top: 0.3em;
       bottom: 0.3em;
-      z-index: 1;
-      width: 6em;
-      padding: 0;
-      cursor: pointer;
-
-      &:hover {
-        @extend %gradient;
-        color: darken($light-gray, 10);
-        box-shadow: none;
-      }
-
-      &:active {
-        border: 1px solid $base-border-color;
-        color: darken($light-gray, 30);
-        text-shadow: 0 1px 0 transparentize(white, 0.5);
-        box-shadow: none;
-      }
     }
   }  
 }

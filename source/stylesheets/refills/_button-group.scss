@@ -1,12 +1,17 @@
+$button-group-border: lighten($light-gray, 10);
+$button-group-color: lighten($light-gray, 7);
+$button-group-active: $blue;
+
 .button-group {
   @include clearfix;
-  input[type="submit"] {
-    @include button(simple, white);
-    float: left;
+  button {
+    @include button(minimal, $button-group-color);
     font-size: $base-font-size;
+    outline: none;
+    float: left;
 
     &.active {
-      @include button(simple, $base-accent-color);
+      @include button(minimal, $button-group-active);
       font-size: $base-font-size;
     }
 
@@ -16,12 +21,12 @@
     }
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
-      border-left: 1px solid lighten($light-gray, 10);
+      border-left: 1px solid $button-group-border;
     }
     &:last-child {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-      border-left: 1px solid lighten($light-gray, 10);
+      border-left: 1px solid $button-group-border;
     }
   }
 }
