@@ -1,3 +1,6 @@
+$item-list-border: 1px solid $base-border-color;
+$item-list-background: $component-color;
+
 ul.item-list {
   @include clearfix;
   $item-list-height: 5em;
@@ -11,7 +14,9 @@ ul.item-list {
       width: $item-list-height;
       height: $item-list-height;
       margin-right: 1em;
-      border: 2px solid $light-gray;
+      border: $item-list-border;
+      border-radius: $base-border-radius;
+      background-color: $item-list-background;
     }
 
     p {

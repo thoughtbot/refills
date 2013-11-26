@@ -1,13 +1,17 @@
+$card-color: $component-color;
+$card-header-color: $card-color;
+$card-border: 1px solid $base-border-color;
+$card-hover-color: darken($card-color, 5);
+
 .cards {
   @include clearfix;
   cursor: pointer;
   margin-bottom: 1em;
 
   .card {
-    $card-header-color: darken($light-gray, 10);
     height: 190px;
-    border: 1px solid $base-border-color;
-    background-color: $subtle-gray;
+    border: $card-border;
+    background-color: $card-color;
     border-radius: $base-border-radius;
     margin-bottom: $base-line-height;
 
@@ -16,8 +20,8 @@
     }
 
     .card-header {
-      // background-color: $card-header-color;
-      border-bottom: 1px solid $base-border-color;
+      background-color: $card-header-color;
+      border-bottom: $card-border;
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
       font-weight: bold;
@@ -40,16 +44,16 @@
     }
 
     &:hover {
-      background-color: darken($subtle-gray, 5);
+      background-color: $card-hover-color;
       .card-header {
-        background-color: darken($subtle-gray, 5);
+        background-color: $card-hover-color;
       }
     }
 
     &:active {
-      background-color: $subtle-gray;
+      background-color: $card-color;
       .card-header {
-        background-color: $subtle-gray;
+        background-color: $card-color;
       }
     }
   }

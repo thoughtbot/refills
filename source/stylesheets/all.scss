@@ -4,44 +4,101 @@
 @import "bitters/bitters";
 @import "normalize";
 
-$refills-color: #DAD2A8;
+$refills-color: lighten(desaturate(teal, 60), 40);
+$base-body-color: white;
+$component-color: lighten($light-gray, 10);
 
-.refills-hero {
-	$hero-background-color: $refills-color;
-	background-color: $hero-background-color;
-	padding-bottom: 4em;
+body {
+  background-color: $base-body-color; 
+}
 
-	.hero-inner {
-		@include clearfix;
-		max-width: 1200px;
-		padding: 1em;
-		margin: auto;
+$refills-nav-height: 60px;
 
-		$button-group-color: saturate($refills-color, 11);
-		$button-group-border: lighten($button-group-color, 3);
+header.refills-header {
+  width: 100%;
+  margin: 0 0 $base-line-height;
+  height: $refills-nav-height;
+  background-color: $base-body-color;
 
-		.hero-copy {
-			margin-bottom: 1em;	
+  .logo {
+    font-weight: bold;
+    float: left;
+    padding: 0; 
+    font-size: 50px;
+    line-height: $refills-nav-height;
+    color: $dark-gray;
+  }
 
-			h1 {
-				font-size: 60px;
-			}
+  p {
+    padding-right: 1em;
+    display: block;
+    float: right;
+    margin: 0;
+    line-height: $refills-nav-height;
+    background-color: $base-body-color;
+  }
 
-			h6 {
-				margin-bottom: 2em;	
-			}
+  &:hover {
+    .nav ul {
+      display: block;
+    }
+  }
 
-			@include media($medium-screen) {
-				@include span-columns(6);
-			}
-		}
+  .nav {
+    ul {
+      display: none;
+      -webkit-transform-style: preserve-3d; // stop webkit flicker
+      overflow: hidden;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
 
-		.hero-image {
-			@include media($medium-screen) {
-				@include span-columns(6);
-			}
-		}
-	}
+      li {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        text-align: right;
+        padding: 1em;
+        border-radius: $base-border-radius;
+        line-height: $refills-nav-height;
+        width: 100%;
+        position: relative;
+        display: block;
+        z-index: 99999999;
+        overflow: hidden;
+        font-size: $base-font-size /1.2;
+        font-weight: 200;
+        background-color: $refills-color;
+        a {
+          padding: 1em;
+        }
+      }
+    }
+  }
+
+  @include media ($medium-screen) {
+    p {
+      display: none;
+    }
+    .nav {
+      float: right;
+
+      ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline;
+          display: inline;
+          text-decoration: none;
+          line-height: $refills-nav-height;
+          padding-right: 1em;
+        }
+      }
+    }
+  }
 }
 
 /////////////////////////
@@ -60,28 +117,24 @@ $refills-color: #DAD2A8;
   .refill {
   	margin-bottom: 2em;
   	h3 {
-  		// border-top: 1px dashed gray;
   		padding-top: 0.5em;
   		margin-top: 1em;
   		margin-bottom: 0.3em;
   	}
 
   	a {
-  		background-color: $refills-color;
-  		box-shadow: 0 1px 0 darken($refills-color, 10);
   		font-size: $base-font-size /1.5;
-  		border-radius: $base-border-radius;
+      border-bottom: 1px solid;
+      padding-bottom: 0.5em;
+      margin-right: 1em;
   		color: darken($refills-color, 40);
-  		padding: 0.5em 1em;
 
   		&:hover {
-  			background-color: darken($refills-color, 5);
-  			box-shadow: 0 2px 0 darken($refills-color, 15);
+  			color: darken($refills-color, 5);
   		}
 
   		&:active {
-  			background-color: darken($refills-color, 7);
-  			box-shadow: 0 2px 0 darken($refills-color, 17);
+  			color: darken($refills-color, 7);
   			box-shadow: none;
   		}
   	}

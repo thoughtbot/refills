@@ -1,25 +1,27 @@
 $table-padding: 0.5em;
-$table-background: white;
-$table-stripe: darken($table-background, 4);
-$table-hover-color: transparentize(lighten($base-accent-color, 40), 0.5);
+$table-background: $component-color;
+$table-header-color: $component-color;
+$table-hover-color: darken($table-background, 5);
+$table-stripe-color: darken($table-background, 4);
+$table-stripe-color-hover: darken($table-stripe-color, 5);
 $table-border-radius: $base-border-radius;
+$table-border: 1px solid $base-border-color;
 
 %gradient {
   @include background-image(linear-gradient(top, rgb(253,253,253), rgb(240,240,240)));
 }
 
 .table-borders {
-  @extend %table-striped;
   @extend %table-hover;
   @extend %table-rounded-border;
-  border: 1px solid $base-border-color;
+  border: $table-border;
   border-left: 0px;
   border-collapse: separate;
   border-spacing: 0;
 
   thead {
     th {
-      @extend %gradient;
+      background-color: $table-header-color;
       padding: $table-padding;
       border-left: 1px solid $base-border-color;
       border-bottom: 0px;
@@ -44,20 +46,18 @@ $table-border-radius: $base-border-radius;
   }
 }
 
-%table-striped {
-  tbody {
-    background-color: $table-background;
-    tr:nth-child(even) > td, tr:nth-child(even) > th {
-      background-color: $table-stripe;
-    }
-  }
-}
 
 %table-hover {
   tbody {
     background-color: $table-background;
     tr:hover > td, tr:hover > th {
       background-color: $table-hover-color;
+    }
+    tr:nth-child(even) {
+      background-color: $table-stripe-color;
+      &:hover > td {
+        background-color: $table-stripe-color-hover;
+      }
     }
   }
 }

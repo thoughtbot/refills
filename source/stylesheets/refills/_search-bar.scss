@@ -1,8 +1,9 @@
-$search-bar-background-color: $light-gray;
+$search-bar-background-color: $component-color;
+$search-bar-border: 1px solid $base-border-color;
 
 .search-bar {
   @include clearfix;
-  border: 1px solid $base-border-color;
+  border: $search-bar-border;
   background-color: $search-bar-background-color;
   border-radius: $base-border-radius;
   padding: 0.5em;
@@ -32,7 +33,7 @@ $search-bar-background-color: $light-gray;
     }
 
     input[type=submit] {
-      @include button(minimal, $light-gray);
+      @include button(minimal, $component-color);
       font-size: $base-font-size;
       color: darken($light-gray, 20);
       outline: none;

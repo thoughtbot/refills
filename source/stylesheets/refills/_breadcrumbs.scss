@@ -1,7 +1,8 @@
 $breadcrumb-height: 2em;
 $breadcrumb-arrow-color: $base-border-color;
-$breadcrumb-background-color: white;
-$breadcrumb-inactive-hover-color: darken($light-gray, 5);
+$breadcrumb-background-color: $base-body-color;
+$breadcrumb-inactive-hover-color: darken($base-body-color, 5);
+$breadcrumb-border: 1px solid $base-border-color;
 
 .breadcrumb { 
   margin: 0;
@@ -11,8 +12,8 @@ $breadcrumb-inactive-hover-color: darken($light-gray, 5);
 
   a {
     color: $base-font-color;
-    background-color: white;
-    border: 1px solid $base-border-color;
+    background-color: $breadcrumb-background-color;
+    border: $breadcrumb-border;
     display: inline-block;
     line-height: $breadcrumb-height;
     text-decoration: none;

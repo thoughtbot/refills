@@ -1,7 +1,8 @@
-$border-style: 1px solid darken($base-border-color, 15%);
+$master-detail-background-color: $component-color;
+$master-detail-height: 400px;
+$border-style: 1px solid $base-border-color;
 
-.master-detail {
-  $master-detail-height: 400px;
+.master-detail {  
   border-radius: $base-border-radius;
   @include clearfix;
   margin-bottom: $base-line-height;
@@ -11,6 +12,7 @@ $border-style: 1px solid darken($base-border-color, 15%);
     @include media($medium-screen) {
       width: 30%;
       float: left;
+      background-color: $master-detail-background-color;
     }
     ul {
       height: $master-detail-height;
@@ -20,6 +22,8 @@ $border-style: 1px solid darken($base-border-color, 15%);
       li {
         padding: 1em;
         border-bottom: $border-style;
+        border-right: $border-style;
+        
         &:last-child {
           border-bottom: 0;
         }

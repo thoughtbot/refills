@@ -75,7 +75,7 @@ $tooltip-placement: top; // "top" or "bottom"
 }
 
 a.tooltip-item {
-  @include button(minimal, $light-gray);
+  @include button(minimal, $component-color);
   @include tooltip($tooltip-placement);
   font-size: $base-font-size;
 }

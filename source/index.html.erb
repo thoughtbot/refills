@@ -2,18 +2,20 @@
 title: Refills
 ---
 
-<div class="refills-hero">
-	<div class="hero-inner">
-		<div class="hero-copy">
-			<h1>Refills</h1>
-			<p>Copy paste components to be used together with Bourbon, Neat and Bitters. Very WIP.</p>	
-		</div>
-		<div class="hero-image">
-		</div>
-	</div>
-</div>
-
 <div class="refills-wrapper">
+
+<header class="refills-header">
+  <div class="menu-wrapper">
+  	<div class="logo">Refills</div>
+    <p>Menu</p>
+    <div class="nav">
+      <ul>
+        <li><a href="">Examples</a></li>
+        <li><a href="https://github.com/thoughtbot/refills">Github</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
 	
 	
 	<div class="refill">
@@ -104,6 +106,12 @@ title: Refills
 	</div>	
 	<%= partial "master-detail" %>
 
+	<div class="refill">
+		<h3>Info Section</h3>	
+		<a href="">HTML</a>
+		<a href="">SCSS</a>
+	</div>
+	<%= partial "info-section" %>
 
 	<div class="refill">
 		<h3>Hero Unit</h3>	
@@ -114,14 +122,7 @@ title: Refills
 <%= partial "hero" %>
 
 
-<div class="refills-wrapper">
-	<div class="refill">
-		<h3>Info Section</h3>	
-		<a href="">HTML</a>
-		<a href="">SCSS</a>
-	</div>
-</div>
-<%= partial "info-section" %>
+
 
 
 <div class="refills-wrapper">

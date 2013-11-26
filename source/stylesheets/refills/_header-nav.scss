@@ -1,17 +1,20 @@
+$header-nav-background-color: $dark-gray;
+$header-nav-color: white;
 $nav-height: 60px;
+
 
 header {
   width: 100%;
   margin: 0 0 $base-line-height;
   height: $nav-height;
-  background-color: $light-gray;
-  color: $dark-gray;
+  background-color: $header-nav-background-color;
 
   .logo {
     padding: 0 20px;
     font-weight: bold;
     float: left;
     line-height: $nav-height;
+    color: white;
   }
 
   p {
@@ -20,6 +23,7 @@ header {
     float: right;
     margin: 0;
     line-height: $nav-height;
+    color: white;
   }
 
   &:hover {
@@ -50,7 +54,13 @@ header {
         display: block;
         z-index: 99999999;
         overflow: hidden;
-        background-color: $light-gray;
+        background-color: $header-nav-background-color;
+
+        a {
+          text-transform: uppercase;
+          font-weight: bold;
+          color: white;
+        }
       }
     }
   }

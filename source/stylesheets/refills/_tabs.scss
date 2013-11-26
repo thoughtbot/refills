@@ -1,16 +1,31 @@
-$tab-inactive-color: darken($light-gray, 10);
+$tab-content-color: $component-color;
+$tab-border: 1px solid $base-border-color;
+$tab-active-color: $tab-content-color;
+$tab-inactive-color: $base-body-color;
 $tab-inactive-hover-color: darken($light-gray, 5);
-$tab-active-color: $light-gray;
-$tab-content-color: $light-gray;
 
-.tabs {
+
+.tabs { // small screens: accordion
   @include clearfix;
   width: 100%;
   margin-bottom: $base-line-height;
+  border: $tab-border;
+  border-radius: $base-border-radius;
 
   li {
     list-style: none; 
     display: block;
+
+    &:first-child a {
+      border-top: 0;
+      border-top-right-radius: $base-border-radius; 
+      border-top-left-radius: $base-border-radius; 
+    }
+
+    &:last-child a {
+      border-bottom-right-radius: $base-border-radius; 
+      border-bottom-left-radius: $base-border-radius; 
+    }
 
     a {
       display: block;
@@ -19,14 +34,15 @@ $tab-content-color: $light-gray;
       background-color: $tab-inactive-color;
       text-decoration: none;
       color: $dark-gray;
+      border-top: $tab-border;
 
       &:hover {
-        background-color: $tab-inactive-hover-color;
+        color: $base-link-color;
       } 
 
       &.active {
         background-color: $tab-active-color;
-        border-bottom: 1px solid darken($base-border-color, 15%);
+        border-bottom: 0;
       }
     }
 
@@ -39,25 +55,35 @@ $tab-content-color: $light-gray;
   }
 }
 
-@include media($medium-screen) { 
+@include media($medium-screen) { // turns into tabs
   .tabs {
     position: relative; 
     border: none; 
+    border-radius: $base-border-radius;
 
     li { 
       display: inline; 
 
       a {
         display: inline-block; 
+        border-top: 0;
 
         &.active {
-          border: 0;
+          background-color: $tab-active-color;
+          border-bottom: 1px solid $tab-active-color;
+          margin-bottom: -1px;
+          border-top-right-radius: $base-border-radius; 
+          border-top-left-radius: $base-border-radius; 
+          border-top: $tab-border;
+          border-left: $tab-border;
+          border-right: $tab-border;
         }
       }
     }
 
     section { 
       padding: 1em;
+      border: $tab-border;
       border-top-right-radius: $base-border-radius; 
       border-bottom-left-radius: $base-border-radius; 
       border-bottom-right-radius: $base-border-radius; 

@@ -1,4 +1,4 @@
-$button-group-color: lighten($light-gray, 7);
+$button-group-color: $component-color;
 $button-group-border: lighten($button-group-color, 3);
 $button-group-active: $blue;
 
