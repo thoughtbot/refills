@@ -1,4 +1,4 @@
-$card-color: $component-color;
+$card-color: lighten($light-gray, 10);
 $card-header-color: $card-color;
 $card-border: 1px solid $base-border-color;
 $card-hover-color: darken($card-color, 5);

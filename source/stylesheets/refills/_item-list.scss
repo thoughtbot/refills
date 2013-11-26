@@ -1,5 +1,5 @@
 $item-list-border: 1px solid $base-border-color;
-$item-list-background: $component-color;
+$item-list-background: lighten($light-gray, 10);
 
 ul.item-list {
   @include clearfix;

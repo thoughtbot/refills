@@ -1,4 +1,4 @@
-$tab-content-color: $component-color;
+$tab-content-color: lighten($light-gray, 10);
 $tab-border: 1px solid $base-border-color;
 $tab-active-color: $tab-content-color;
 $tab-inactive-color: $base-body-color;

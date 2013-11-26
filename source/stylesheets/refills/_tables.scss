@@ -1,6 +1,6 @@
 $table-padding: 0.5em;
-$table-background: $component-color;
-$table-header-color: $component-color;
+$table-background: lighten($light-gray, 10);
+$table-header-color: lighten($light-gray, 10);
 $table-hover-color: darken($table-background, 5);
 $table-stripe-color: darken($table-background, 4);
 $table-stripe-color-hover: darken($table-stripe-color, 5);

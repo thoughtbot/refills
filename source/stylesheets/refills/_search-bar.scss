@@ -1,4 +1,4 @@
-$search-bar-background-color: $component-color;
+$search-bar-background-color: lighten($light-gray, 10);
 $search-bar-border: 1px solid $base-border-color;
 
 .search-bar {
@@ -33,7 +33,7 @@ $search-bar-border: 1px solid $base-border-color;
     }
 
     input[type=submit] {
-      @include button(minimal, $component-color);
+      @include button(minimal, lighten($light-gray, 10));
       font-size: $base-font-size;
       color: darken($light-gray, 20);
       outline: none;
