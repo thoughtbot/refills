@@ -1,0 +1,48 @@
+$info-section-color: $light-gray;
+$info-section-inset-color: darken($info-section-color, 5);
+$info-section-img-bg-color: darken($info-section-color, 10);
+
+.info-section {
+	@include clearfix;
+	background-color: $info-section-color;
+	padding-bottom: 3em;
+
+	@if lightness($info-section-color) < 50% {
+		color: white;
+	}
+
+	& > div {
+		max-width: 1200px;
+		padding: 1em;
+		margin: auto;
+	}
+
+	li {
+		@include media($medium-screen) {
+			@include span-columns(4);
+			@include omega(3n);
+		}
+		img {
+			content: '';
+		}
+	}
+}
+
+.img-wrapper {
+  display: block;
+  margin: 40px auto;
+  height: 200px;
+  width: 200px;
+  border-radius: 190px;
+  background-color: $info-section-img-bg-color;
+  box-shadow: 0 1px 3px transparentize(black, 0.5) inset, 0 1px 1px transparentize(white, 0.2);
+  border: 5px solid $info-section-inset-color;
+
+  img {
+    padding: 30px;
+    height: 135px;
+    width: 135px;
+    display: block;
+    margin: auto;
+  }
+}
