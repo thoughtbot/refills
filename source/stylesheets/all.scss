@@ -15,7 +15,7 @@ $refills-nav-height: 60px;
 
 header.refills-header {
   width: 100%;
-  margin: 0 0 $base-line-height;
+  margin: 0 0 $base-line-height*3;
   height: $refills-nav-height;
   background-color: $base-body-color;
 
@@ -25,7 +25,9 @@ header.refills-header {
     padding: 0; 
     text-transform: uppercase;
     line-height: $refills-nav-height;
-    color: $dark-gray;
+    color: white;
+    background-color: $dark-gray;
+    padding: 0 2em;
   }
 
   p {
@@ -154,3 +156,4 @@ header.refills-header {
 @import "refills/tooltip";
 @import "refills/footer";
 @import "refills/info-section";
+@import "refills/sidebar-layout";

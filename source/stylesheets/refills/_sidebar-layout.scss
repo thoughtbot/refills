@@ -1,0 +1,54 @@
+$sidebar-layout-border: 1px solid $base-border-color;
+
+.sidebar-layout {
+	@include clearfix;
+	height: 100%;
+	border: $sidebar-layout-border;
+
+	aside {
+		height: 100%;
+		@include media($medium-screen) {
+			@include span-columns(3);
+		}
+		
+		ul {
+			height: 100%;
+			padding: 1em;
+			@include media($medium-screen) {
+				padding: 0;
+				border-right: $sidebar-layout-border;
+			}
+		}
+
+		li {
+			margin-right: 1em;
+			margin-bottom: 1em;
+			display: inline-block;
+			@include media($medium-screen) {
+				margin: 0;
+				padding: 1em;
+				display: block;
+				border-bottom: $sidebar-layout-border;
+			}
+		}
+	}
+
+	.content {
+		@include media($medium-screen) {
+			@include span-columns(9);	
+		}
+		background-color: $base-body-color;
+		padding: 1em;
+
+		section {
+			@include media($medium-screen) {
+				@include span-columns(6);	
+				@include omega(2n);
+			}
+			border: $sidebar-layout-border;
+			margin-bottom: 1em;
+			background-color: lighten($light-gray, 10);
+			padding: 1em;
+		}	
+	}
+}
