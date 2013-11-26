@@ -1422,3 +1422,47 @@ a.tooltip-item {
       text-align: center;
       color: #9d9d9d;
       max-width: 35em; }
+
+.info-section {
+  *zoom: 1;
+  background-color: #dddddd;
+  padding-bottom: 3em; }
+  .info-section:before, .info-section:after {
+    content: " ";
+    display: table; }
+  .info-section:after {
+    clear: both; }
+  .info-section > div {
+    max-width: 1200px;
+    padding: 1em;
+    margin: auto; }
+  @media screen and (min-width: 47.5em) {
+    .info-section li {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .info-section li:last-child {
+        margin-right: 0; }
+      .info-section li:nth-child(3n) {
+        margin-right: 0; }
+      .info-section li:nth-child(3n+1) {
+        clear: left; } }
+  .info-section li img {
+    content: ''; }
+
+.img-wrapper {
+  display: block;
+  margin: 40px auto;
+  height: 200px;
+  width: 200px;
+  border-radius: 190px;
+  background-color: #c4c4c4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) inset, 0 1px 1px rgba(255, 255, 255, 0.8);
+  border: 5px solid #d0d0d0; }
+  .img-wrapper img {
+    padding: 30px;
+    height: 135px;
+    width: 135px;
+    display: block;
+    margin: auto; }
