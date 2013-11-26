@@ -602,7 +602,7 @@ body {
 
 header.refills-header {
   width: 100%;
-  margin: 0 0 1.5em;
+  margin: 0 0 4.5em;
   height: 60px;
   background-color: white; }
   header.refills-header .logo {
@@ -611,7 +611,9 @@ header.refills-header {
     padding: 0;
     text-transform: uppercase;
     line-height: 60px;
-    color: #333333; }
+    color: white;
+    background-color: #333333;
+    padding: 0 2em; }
   header.refills-header p {
     padding-right: 1em;
     display: block;
@@ -1514,3 +1516,68 @@ a.tooltip-item {
     width: 135px;
     display: block;
     margin: auto; }
+
+.sidebar-layout {
+  *zoom: 1;
+  height: 100%;
+  border: 1px solid #dddddd; }
+  .sidebar-layout:before, .sidebar-layout:after {
+    content: " ";
+    display: table; }
+  .sidebar-layout:after {
+    clear: both; }
+  .sidebar-layout aside {
+    height: 100%; }
+    @media screen and (min-width: 47.5em) {
+      .sidebar-layout aside {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 23.23176%; }
+        .sidebar-layout aside:last-child {
+          margin-right: 0; } }
+    .sidebar-layout aside ul {
+      height: 100%;
+      padding: 1em; }
+      @media screen and (min-width: 47.5em) {
+        .sidebar-layout aside ul {
+          padding: 0;
+          border-right: 1px solid #dddddd; } }
+    .sidebar-layout aside li {
+      margin-right: 1em;
+      margin-bottom: 1em;
+      display: inline-block; }
+      @media screen and (min-width: 47.5em) {
+        .sidebar-layout aside li {
+          margin: 0;
+          padding: 1em;
+          display: block;
+          border-bottom: 1px solid #dddddd; } }
+  .sidebar-layout .content {
+    background-color: white;
+    padding: 1em; }
+    @media screen and (min-width: 47.5em) {
+      .sidebar-layout .content {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 74.41059%; }
+        .sidebar-layout .content:last-child {
+          margin-right: 0; } }
+    .sidebar-layout .content section {
+      border: 1px solid #dddddd;
+      margin-bottom: 1em;
+      background-color: #f7f7f7;
+      padding: 1em; }
+      @media screen and (min-width: 47.5em) {
+        .sidebar-layout .content section {
+          display: block;
+          float: left;
+          margin-right: 2.35765%;
+          width: 48.82117%; }
+          .sidebar-layout .content section:last-child {
+            margin-right: 0; }
+          .sidebar-layout .content section:nth-child(2n) {
+            margin-right: 0; }
+          .sidebar-layout .content section:nth-child(2n+1) {
+            clear: left; } }
