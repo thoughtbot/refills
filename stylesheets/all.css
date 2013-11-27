@@ -7,33 +7,37 @@ button,
 input[type="submit"] {
   border: 1px solid #2459a6;
   border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #89a8d5;
+  box-shadow: inset 0 1px 0 0 #769ace;
   color: white;
   display: inline-block;
-  font-size: inherit;
+  font-size: 11px;
   font-weight: bold;
+  text-shadow: none;
   background-color: #477dca;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #477dca), color-stop(100%, #2760b2));
-  background-image: -webkit-linear-gradient(#477dca, #2760b2);
-  background-image: linear-gradient(#477dca, #2760b2);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #477dca), color-stop(100%, #477dca));
+  background-image: -webkit-linear-gradient(#477dca, #477dca);
+  background-image: linear-gradient(#477dca, #477dca);
   padding: 7px 18px;
   text-decoration: none;
-  text-shadow: 0 1px 0 #1b4f9a;
   background-clip: padding-box;
   font-size: 1em;
   outline: none; }
   button:hover:not(:disabled),
   input[type="submit"]:hover:not(:disabled) {
+    background-color: #3872c4;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3872c4), color-stop(100%, #3872c4));
+    background-image: -webkit-linear-gradient(#3872c4, #3872c4);
+    background-image: linear-gradient(#3872c4, #3872c4);
     box-shadow: inset 0 1px 0 0 #628cc8;
-    cursor: pointer;
-    background-color: #3c71bb;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c71bb), color-stop(100%, #255aa5));
-    background-image: -webkit-linear-gradient(#3c71bb, #255aa5);
-    background-image: linear-gradient(#3c71bb, #255aa5); }
+    cursor: pointer; }
   button:active:not(:disabled),
   input[type="submit"]:active:not(:disabled) {
+    background-color: #3872c4;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3872c4), color-stop(100%, #3872c4));
+    background-image: -webkit-linear-gradient(#3872c4, #3872c4);
+    background-image: linear-gradient(#3872c4, #3872c4);
     border: 1px solid #2459a6;
-    box-shadow: inset 0 0 8px 4px #235397, inset 0 0 8px 4px #235397, 0 1px 1px 0 #eeeeee; }
+    box-shadow: inset 0 0 1px 1px #2a63b4, inset 0 0 1px 1px #2a63b4, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
   button:disabled,
   input[type="submit"]:disabled {
     opacity: 0.5;
