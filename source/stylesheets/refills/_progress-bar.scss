@@ -1,0 +1,80 @@
+@mixin ui-progress-meter ($meter-color: rgb(120,120,120), $base-color: rgb(250,250,250), $animation-duration: 0s) {
+
+  background: $base-color;
+  border: 1px solid darken($base-color, 30%);
+  @include box-shadow(inset 0 0 3px 0 rgba(darken($base-color, 50%), 0.15));
+  border-radius: 4px;
+  height: 20px;
+  margin: 0 auto;
+  padding: 2px;
+  width: 100%;
+
+  > span.meter {
+    @include animation(progress $animation-duration linear infinite);
+    background-color: $meter-color;
+    @include background-image(linear-gradient(-45deg, rgba(255,255,255, 0.15) 25%,
+                                                      transparent 25%,
+                                                      transparent 50%,
+                                                      rgba(255,255,255, 0.15) 50%,
+                                                      rgba(255,255,255, 0.15) 75%,
+                                                      transparent 75%));
+    background-size: 40px 40px;
+    background-repeat: repeat-x;
+    border: 1px solid darken($meter-color, 15%);
+    border-radius: 4px;
+    @include box-sizing(border-box);
+    display: block;
+    height: 100%;
+    @include transition(all 0.2s linear);
+    width: 60%;
+  }
+}
+
+@-webkit-keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+@-moz-keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+@-ms-keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+@-o-keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+@keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+.progress-bar {
+  @include ui-progress-meter(#54C6FC, #FDFDFD, 0.7s);
+}
