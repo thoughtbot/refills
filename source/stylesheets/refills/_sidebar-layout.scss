@@ -1,4 +1,6 @@
-$sidebar-layout-border: 1px solid $base-border-color;
+$sidebar-layout-border-color: $base-border-color;
+$sidebar-layout-border: 1px solid $sidebar-layout-border-color;
+$sidebar-layout-section-background: lighten($sidebar-layout-border-color, 10);
 
 .sidebar-layout {
 	@include clearfix;
@@ -47,7 +49,7 @@ $sidebar-layout-border: 1px solid $base-border-color;
 			}
 			border: $sidebar-layout-border;
 			margin-bottom: 1em;
-			background-color: lighten($light-gray, 10);
+			background-color: $sidebar-layout-section-background;
 			padding: 1em;
 		}	
 	}

@@ -1,8 +1,9 @@
-$info-section-color: lighten($light-gray, 10);
-$info-section-img-background: $light-gray;
-$info-section-border: 1px solid $base-border-color;
-
 .info-section {
+	$info-section-border-color: $base-border-color;
+	$info-section-border: 1px solid $info-section-border-color;
+	$info-section-color: lighten($info-section-border-color, 10);
+	$info-section-img-background: $info-section-border-color;
+	
 	@include clearfix;
 	background-color: $info-section-color;
 	border-radius: $base-border-radius;
@@ -27,21 +28,22 @@ $info-section-border: 1px solid $base-border-color;
 			@include omega(3n);
 		}
 	}
+
+	.img-wrapper {
+	  display: block;
+	  margin: 40px auto;
+	  height: 200px;
+	  width: 200px;
+	  border-radius: 190px;
+	  background-color: $info-section-img-background;
+
+	  img {
+	    padding: 30px;
+	    height: 135px;
+	    width: 135px;
+	    display: block;
+	    margin: auto;
+	  }
+	}
 }
 
-.img-wrapper {
-  display: block;
-  margin: 40px auto;
-  height: 200px;
-  width: 200px;
-  border-radius: 190px;
-  background-color: $info-section-img-background;
-
-  img {
-    padding: 30px;
-    height: 135px;
-    width: 135px;
-    display: block;
-    margin: auto;
-  }
-}

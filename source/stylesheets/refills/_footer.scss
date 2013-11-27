@@ -1,7 +1,7 @@
-$footer-color: $light-gray;
-$footer-text-color: darken($footer-color, 25);
-
 .footer {
+	$footer-color: lighten($base-border-color, 10);
+	$footer-text-color: darken($footer-color, 25);
+
 	background-color: $footer-color;
 	padding: 1em 0;
 

@@ -1,10 +1,11 @@
-$breadcrumb-height: 2em;
-$breadcrumb-arrow-color: $base-border-color;
-$breadcrumb-background: $base-body-color;
-$breadcrumb-inactive-hover-color: darken($base-body-color, 5);
-$breadcrumb-border: 1px solid $base-border-color;
-
 .breadcrumb { 
+  $breadcrumb-border-color: $base-border-color;
+  $breadcrumb-border: 1px solid $breadcrumb-border-color;
+  $breadcrumb-height: 2em;
+  $breadcrumb-arrow-color: $breadcrumb-border-color;
+  $breadcrumb-background: $base-body-color;
+  $breadcrumb-inactive-hover-color: darken($breadcrumb-border-color, 5);
+
   margin: 0;
   padding: 0;
   border-radius: $base-border-radius;

@@ -1,9 +1,10 @@
-$card-color: lighten($light-gray, 10);
-$card-header-color: $card-color;
-$card-border: 1px solid $base-border-color;
-$card-hover-color: darken($card-color, 5);
-
 .cards {
+  $card-border-color: $base-border-color;
+  $card-border: 1px solid $card-border-color;
+  $card-color: lighten($card-border-color, 10);
+  $card-header-color: $card-color;
+  $card-hover-color: darken($card-color, 5);
+
   @include clearfix;
   cursor: pointer;
   margin-bottom: 1em;

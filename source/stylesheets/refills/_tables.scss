@@ -1,53 +1,19 @@
-$table-padding: 0.5em;
-$table-background: lighten($light-gray, 10);
-$table-header-color: lighten($light-gray, 10);
-$table-hover-color: darken($table-background, 5);
-$table-stripe-color: darken($table-background, 4);
-$table-stripe-color-hover: darken($table-stripe-color, 5);
-$table-border-radius: $base-border-radius;
-$table-border: 1px solid $base-border-color;
-
-%gradient {
-  @include background-image(linear-gradient(top, rgb(253,253,253), rgb(240,240,240)));
-}
-
 .table-borders {
-  @extend %table-hover;
-  @extend %table-rounded-border;
-  border: $table-border;
-  border-left: 0px;
-  border-collapse: separate;
-  border-spacing: 0;
-
-  thead {
-    th {
-      background-color: $table-header-color;
-      padding: $table-padding;
-      border-left: 1px solid $base-border-color;
-      border-bottom: 0px;
-    }
+  $table-border-color: $base-border-color;
+  $table-border: 1px solid $table-border-color;
+  $table-background: lighten($table-border-color, 10);
+  $table-header-color: lighten($table-background, 10);
+  $table-hover-color: darken($table-background, 5);
+  $table-stripe-color: darken($table-background, 4);
+  $table-stripe-color-hover: darken($table-stripe-color, 5);
+  $table-padding: 0.5em;
+  
+  @if lightness($table-background) < 50% {
+    color: white;
   }
 
-  tbody {
-    background-color: $table-background;
+  border-radius: $base-border-radius;
 
-    td {
-      padding: $table-padding;
-      border-left: 1px solid $base-border-color;
-      border-top: 1px solid $base-border-color;
-      border-bottom: 0px;
-
-      button {
-        @include button(simple, $table-background);
-        margin-right: 0.5em;
-        display: inline-block;
-      }
-    }
-  }
-}
-
-
-%table-hover {
   tbody {
     background-color: $table-background;
     tr:hover > td, tr:hover > th {
@@ -60,28 +26,55 @@ $table-border: 1px solid $base-border-color;
       }
     }
   }
-}
-
-%table-rounded-border {
-  border-radius: $table-border-radius;
 
   thead:first-of-type {
     tr:first-child > th:first-child {
-      border-top-left-radius: $table-border-radius;
+      border-top-left-radius: $base-border-radius;
     }
 
     tr:first-child > th:last-child {
-      border-top-right-radius: $table-border-radius;
+      border-top-right-radius: $base-border-radius;
     }
   }
 
   tbody:last-child {
     tr:last-child > td:first-child {
-      border-bottom-left-radius: $table-border-radius;
+      border-bottom-left-radius: $base-border-radius;
     }
 
     tr:last-child > td:last-child {
-      border-bottom-right-radius: $table-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+    }
+  }
+
+  border: $table-border;
+  border-left: 0px;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  thead {
+    th {
+      background-color: $table-header-color;
+      padding: $table-padding;
+      border-left: 1px solid $table-border-color;
+      border-bottom: 0px;
+    }
+  }
+
+  tbody {
+    background-color: $table-background;
+
+    td {
+      padding: $table-padding;
+      border-left: 1px solid $table-border-color;
+      border-top: 1px solid $table-border-color;
+      border-bottom: 0px;
+
+      button {
+        @include button(simple, $table-background);
+        margin-right: 0.5em;
+        display: inline-block;
+      }
     }
   }
 }

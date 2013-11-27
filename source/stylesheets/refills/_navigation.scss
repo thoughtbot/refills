@@ -1,9 +1,8 @@
-$navigation-background: $dark-gray;
-$navigation-color: white;
-$navigation-height: 60px;
+header.navigation {
+  $navigation-background: $dark-gray;
+  $navigation-color: white;
+  $navigation-height: 60px;
 
-
-header {
   width: 100%;
   margin: 0 0 $base-line-height;
   height: $navigation-height;
@@ -27,7 +26,7 @@ header {
     float: right;
     margin: 0;
     line-height: $navigation-height;
-    color: white;
+    color: $navigation-color;
   }
 
   &:hover {

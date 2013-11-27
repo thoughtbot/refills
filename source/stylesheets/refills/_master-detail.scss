@@ -1,12 +1,13 @@
-$master-detail-background: lighten($light-gray, 10);
-$master-detail-height: 400px;
-$border-style: 1px solid $base-border-color;
-
 .master-detail {  
+  $master-detail-border-color: $base-border-color;
+  $master-detail-background: lighten($master-detail-border-color, 10);
+  $master-detail-height: 400px;
+  $master-detail-border: 1px solid $master-detail-border-color;
+  
   border-radius: $base-border-radius;
   @include clearfix;
   margin-bottom: $base-line-height;
-  border: $border-style;  
+  border: $master-detail-border;  
 
   .master {
     @include media($medium-screen) {
@@ -21,8 +22,8 @@ $border-style: 1px solid $base-border-color;
 
       li {
         padding: 1em;
-        border-bottom: $border-style;
-        border-right: $border-style;
+        border-bottom: $master-detail-border;
+        border-right: $master-detail-border;
         
         &:last-child {
           border-bottom: 0;

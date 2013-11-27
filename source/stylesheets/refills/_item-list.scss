@@ -1,5 +1,7 @@
-$item-list-border: 1px solid $base-border-color;
-$item-list-background: lighten($light-gray, 10);
+$item-list-border-color: $base-border-color;
+$item-list-border: 1px solid $item-list-border-color;
+
+$item-list-background: lighten($item-list-border-color, 10);
 
 ul.item-list {
   @include clearfix;

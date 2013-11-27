@@ -1,6 +1,6 @@
-$hero-background: $light-gray;
-
 .hero {
+	$hero-background: lighten($base-border-color, 10);	
+
 	background-color: $hero-background;
 	padding-bottom: 4em;
 

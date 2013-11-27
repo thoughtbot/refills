@@ -65,8 +65,15 @@ header.refills-header {
         font-size: $base-font-size /1.2;
         font-weight: 200;
         background-color: $refills-color;
+
+        &:hover {
+          background-color: darken($refills-color, 10);          
+        }
+
+
         a {
           padding: 1em;
+          color: white;
         }
       }
     }
@@ -139,7 +146,9 @@ header.refills-header {
   @include clearfix;
 
   .narrow {
-    @include span-columns(6);
-    @include omega(2n);
+    @include media($medium-screen) {
+      @include span-columns(6);
+      @include omega(2n);  
+    }    
   }
 }

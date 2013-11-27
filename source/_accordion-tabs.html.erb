@@ -1,4 +1,4 @@
-<ul class="tabs">
+<ul class="accordion-tabs">
   <li><a href="#" class="active">Item 1</a>
     <section>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
@@ -24,19 +24,19 @@
 <script>
   $(document).ready(function () {
       
-      $('.tabs').children('li').first().children('a').addClass('active')
+      $('.accordion-tabs').children('li').first().children('a').addClass('active')
           .next().addClass('is-open').show();
           
-      $('.tabs').on('click', 'li > a', function() {
+      $('.accordion-tabs').on('click', 'li > a', function() {
           
         if (!$(this).hasClass('active')) {
 
           event.preventDefault()
 
-          $('.tabs .is-open').removeClass('is-open').hide();
+          $('.accordion-tabs .is-open').removeClass('is-open').hide();
           $(this).next().toggleClass('is-open').toggle();
             
-          $('.tabs').find('.active').removeClass('active');
+          $('.accordion-tabs').find('.active').removeClass('active');
           $(this).addClass('active');
         } 
 

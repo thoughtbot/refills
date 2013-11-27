@@ -1,11 +1,14 @@
-$tab-content-color: lighten($light-gray, 10);
-$tab-border: 1px solid $base-border-color;
+$tab-border-color: $base-border-color;
+$tab-border: 1px solid $tab-border-color;
+
+$tab-content-color: lighten($tab-border-color, 10);
+
 $tab-active-color: $tab-content-color;
 $tab-inactive-color: $base-body-color;
 $tab-inactive-hover-color: darken($light-gray, 5);
 
+.accordion-tabs { // small screens: accordion
 
-.tabs { // small screens: accordion
   @include clearfix;
   width: 100%;
   margin-bottom: $base-line-height;
@@ -56,24 +59,29 @@ $tab-inactive-hover-color: darken($light-gray, 5);
 }
 
 @include media($medium-screen) { // turns into tabs
-  .tabs {
+  .accordion-tabs {
     position: relative; 
     border: none; 
-    border-radius: $base-border-radius;
 
     li { 
       display: inline; 
 
+      &:last-child a {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
       a {
         display: inline-block; 
         border-top: 0;
+        border-top-right-radius: $base-border-radius; 
+        border-top-left-radius: $base-border-radius; 
 
         &.active {
           background-color: $tab-active-color;
           border-bottom: 1px solid $tab-active-color;
           margin-bottom: -1px;
-          border-top-right-radius: $base-border-radius; 
-          border-top-left-radius: $base-border-radius; 
+          
           border-top: $tab-border;
           border-left: $tab-border;
           border-right: $tab-border;
@@ -84,7 +92,6 @@ $tab-inactive-hover-color: darken($light-gray, 5);
     section { 
       padding: 1em;
       border: $tab-border;
-      border-top-right-radius: $base-border-radius; 
       border-bottom-left-radius: $base-border-radius; 
       border-bottom-right-radius: $base-border-radius; 
       float: left;
