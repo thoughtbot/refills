@@ -33,7 +33,7 @@ $search-bar-border: 1px solid $base-border-color;
     }
 
     input[type=submit] {
-      @include button(minimal, lighten($light-gray, 10));
+      @include button(simple, lighten($light-gray, 10));
       font-size: $base-font-size;
       color: darken($light-gray, 20);
       outline: none;

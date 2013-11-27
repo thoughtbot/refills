@@ -5,13 +5,13 @@ $button-group-active: $blue;
 .button-group {
   @include clearfix;
   button {
-    @include button(minimal, $button-group-color);
+    @include button(simple, $button-group-color);
     font-size: $base-font-size;
     outline: none;
     float: left;
 
     &.active {
-      @include button(minimal, $button-group-active);
+      @include button(simple, $button-group-active);
       font-size: $base-font-size;
     }
 

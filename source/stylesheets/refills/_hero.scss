@@ -11,7 +11,7 @@ $hero-background-color: $light-gray;
 		margin: auto;
 
 		button {
-			@include button(minimal, $base-accent-color);
+			@include button(simple, $base-accent-color);
 			font-size: $base-font-size;
 			outline: none;
 		}

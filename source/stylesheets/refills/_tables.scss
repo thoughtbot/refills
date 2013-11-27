@@ -38,7 +38,7 @@ $table-border: 1px solid $base-border-color;
       border-bottom: 0px;
 
       button {
-        @include button(minimal, $table-background);
+        @include button(simple, $table-background);
         margin-right: 0.5em;
         display: inline-block;
       }

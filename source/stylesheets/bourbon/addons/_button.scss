@@ -19,8 +19,8 @@
       @include pill($base-color, $grayscale: true);
     }
 
-    @else if $style == minimal {
-      @include minimal($base-color, $grayscale: true);
+    @else if $style == simple {
+      @include simple($base-color, $grayscale: true);
     }
   }
 
@@ -38,8 +38,8 @@
       @include pill($base-color);
     }
 
-    @else if $style == minimal {
-      @include minimal($base-color);
+    @else if $style == simple {
+      @include simple($base-color);
     }
   }
 
@@ -281,9 +281,9 @@
 }
 
 
-// Minimal Button
+// simple Button
 //************************************************************************//
-@mixin minimal($base-color, $grayscale: false) {
+@mixin simple($base-color, $grayscale: false) {
   $color:         hsl(0, 0, 100%);
   $border:        adjust-color($base-color, $saturation:  9%,  $lightness: -14%);
   $inset-shadow:  adjust-color($base-color, $saturation: -8%,  $lightness:  10%);
