@@ -1,0 +1,27 @@
+  <ul class="dropdown-menus"> 
+    <li>
+      <a href="">Item 1</a>
+    </li>
+    <li class="expanded">
+      <a href="#" class="nolink">Dropdown</a>
+      <ul class="submenu">
+        <li>
+          <a href="">Sub Item 1</a>
+        </li>
+        <li>
+          <a href="">Sub Item 2</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="">Item 1</a></li>
+  </ul>
+
+
+<script>
+  jQuery('.expanded').find('.nolink') // find the .nolink inside .expanded
+    .bind('click focus', function(){
+      jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
+      jQuery(this).parent().toggleClass('expand'); 
+      event.preventDefault()
+  });;
+</script>

@@ -134,3 +134,12 @@ header.refills-header {
   	}
   }
 }
+
+.row {
+  @include clearfix;
+
+  .narrow {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+}

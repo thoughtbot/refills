@@ -1,11 +1,11 @@
-$button-group-color: lighten($light-gray, 10);
-$button-group-border: lighten($button-group-color, 3);
+$button-group-background: lighten($light-gray, 10);
+$button-group-border-highlight: white;
 $button-group-active: $blue;
 
 .button-group {
   @include clearfix;
   button {
-    @include button(simple, $button-group-color);
+    @include button(simple, $button-group-background);
     font-size: $base-font-size;
     outline: none;
     float: left;
@@ -21,12 +21,12 @@ $button-group-active: $blue;
     }
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
-      border-left: 1px solid $button-group-border;
+      border-left: 1px solid $button-group-border-highlight;
     }
     &:last-child {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-      border-left: 1px solid $button-group-border;
+      border-left: 1px solid $button-group-border-highlight;
     }
   }
 }
