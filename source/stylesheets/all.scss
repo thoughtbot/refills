@@ -105,9 +105,8 @@ header.refills-header {
 /////////////////////////
 
 .refills-wrapper {
-  max-width: 1200px;
-  padding: 1em;
-  margin: auto;
+    @include outer-container;
+    padding: 1em;
 
   h1.main-header {
   	background-color: $refills-color;
@@ -143,7 +142,7 @@ header.refills-header {
 }
 
 @import "refills/button-group";
-@import "refills/header-nav";
+@import "refills/navigation";
 @import "refills/item-list";
 @import "refills/master-detail";
 @import "refills/cards";

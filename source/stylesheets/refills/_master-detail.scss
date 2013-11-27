@@ -1,4 +1,4 @@
-$master-detail-background-color: lighten($light-gray, 10);
+$master-detail-background: lighten($light-gray, 10);
 $master-detail-height: 400px;
 $border-style: 1px solid $base-border-color;
 
@@ -12,7 +12,7 @@ $border-style: 1px solid $base-border-color;
     @include media($medium-screen) {
       width: 30%;
       float: left;
-      background-color: $master-detail-background-color;
+      background-color: $master-detail-background;
     }
     ul {
       height: $master-detail-height;

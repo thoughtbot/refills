@@ -1,5 +1,5 @@
 $info-section-color: lighten($light-gray, 10);
-$info-section-img-bg-color: $light-gray;
+$info-section-img-background: $light-gray;
 $info-section-border: 1px solid $base-border-color;
 
 .info-section {
@@ -35,7 +35,7 @@ $info-section-border: 1px solid $base-border-color;
   height: 200px;
   width: 200px;
   border-radius: 190px;
-  background-color: $info-section-img-bg-color;
+  background-color: $info-section-img-background;
 
   img {
     padding: 30px;

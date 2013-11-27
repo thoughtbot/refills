@@ -1,6 +1,6 @@
 $breadcrumb-height: 2em;
 $breadcrumb-arrow-color: $base-border-color;
-$breadcrumb-background-color: $base-body-color;
+$breadcrumb-background: $base-body-color;
 $breadcrumb-inactive-hover-color: darken($base-body-color, 5);
 $breadcrumb-border: 1px solid $base-border-color;
 
@@ -12,7 +12,7 @@ $breadcrumb-border: 1px solid $base-border-color;
 
   a {
     color: $base-font-color;
-    background-color: $breadcrumb-background-color;
+    background-color: $breadcrumb-background;
     border: $breadcrumb-border;
     display: inline-block;
     line-height: $breadcrumb-height;
@@ -29,7 +29,7 @@ $breadcrumb-border: 1px solid $base-border-color;
 
     &:last-child {
       font-weight: bold;
-      background-color: $breadcrumb-background-color;
+      background-color: $breadcrumb-background;
       padding-right: $breadcrumb-height/2;
       border-top-right-radius: $base-border-radius;
       border-bottom-right-radius: $base-border-radius;
@@ -69,7 +69,7 @@ $breadcrumb-border: 1px solid $base-border-color;
       z-index: 1;
     }
     &:after { 
-      border-left-color: $breadcrumb-background-color;
+      border-left-color: $breadcrumb-background;
     }
   }
 }

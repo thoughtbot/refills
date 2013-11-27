@@ -1,12 +1,12 @@
-$hero-background-color: $light-gray;
+$hero-background: $light-gray;
 
 .hero {
-	background-color: $hero-background-color;
+	background-color: $hero-background;
 	padding-bottom: 4em;
 
 	.hero-inner {
+		@include outer-container;
 		@include clearfix;
-		max-width: 1200px;
 		padding: 1em;
 		margin: auto;
 
@@ -17,13 +17,12 @@ $hero-background-color: $light-gray;
 		}
 
 		.hero-copy {
-
-			h6 {
-				margin-bottom: 2em;	
-			}
-
 			@include media($medium-screen) {
 				@include span-columns(6);
+			}
+			
+			h6 {
+				margin-bottom: 2em;	
 			}
 		}
 

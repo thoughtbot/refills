@@ -8,7 +8,7 @@ $sidebar-layout-border: 1px solid $base-border-color;
 	aside {
 		height: 100%;
 		@include media($medium-screen) {
-			@include span-columns(3);
+			@include span-columns(3, block-collapse);
 		}
 		
 		ul {

@@ -1,19 +1,23 @@
-$header-nav-background-color: $dark-gray;
-$header-nav-color: white;
-$nav-height: 60px;
+$navigation-background: $dark-gray;
+$navigation-color: white;
+$navigation-height: 60px;
 
 
 header {
   width: 100%;
   margin: 0 0 $base-line-height;
-  height: $nav-height;
-  background-color: $header-nav-background-color;
+  height: $navigation-height;
+  background-color: $navigation-background;
+
+  .menu-wrapper {
+    @include outer-container;
+  }
 
   .logo {
     padding: 0 20px;
     font-weight: bold;
     float: left;
-    line-height: $nav-height;
+    line-height: $navigation-height;
     color: white;
   }
 
@@ -22,7 +26,7 @@ header {
     display: block;
     float: right;
     margin: 0;
-    line-height: $nav-height;
+    line-height: $navigation-height;
     color: white;
   }
 
@@ -48,13 +52,13 @@ header {
         width: 100%;
         text-align: right;
         padding-right: 1em;
-        line-height: $nav-height;
+        line-height: $navigation-height;
         width: 100%;
         position: relative;
         display: block;
         z-index: 99999999;
         overflow: hidden;
-        background-color: $header-nav-background-color;
+        background-color: $navigation-background;
 
         a {
           text-transform: uppercase;
@@ -81,7 +85,7 @@ header {
           display: inline;
           display: inline;
           text-decoration: none;
-          line-height: $nav-height;
+          line-height: $navigation-height;
           padding-right: 1em;
         }
       }

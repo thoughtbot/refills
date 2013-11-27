@@ -1,10 +1,10 @@
-$search-bar-background-color: lighten($light-gray, 10);
+$search-bar-background: lighten($light-gray, 10);
 $search-bar-border: 1px solid $base-border-color;
 
 .search-bar {
   @include clearfix;
   border: $search-bar-border;
-  background-color: $search-bar-background-color;
+  background-color: $search-bar-background;
   border-radius: $base-border-radius;
   padding: 0.5em;
   margin-bottom: 1em;
