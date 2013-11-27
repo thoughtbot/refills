@@ -1,17 +1,22 @@
-@mixin ui-progress-meter ($meter-color: rgb(120,120,120), $base-color: rgb(250,250,250), $animation-duration: 0s) {
+$progress-meter-color: #54C6FC;
+$progress-background: rgb(250,250,250);
+$progress-animation-duration: 0.7s;
+$progress-border: 1px solid darken($progress-background, 30%);
+$progress-meter-border: 1px solid darken($progress-meter-color, 15%);
 
-  background: $base-color;
-  border: 1px solid darken($base-color, 30%);
-  @include box-shadow(inset 0 0 3px 0 rgba(darken($base-color, 50%), 0.15));
-  border-radius: 4px;
+.progress-bar {
+  background-color: $progress-background;
+  border: $progress-border;
+  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
+  border-radius: $base-border-radius;
   height: 20px;
   margin: 0 auto;
   padding: 2px;
   width: 100%;
 
   > span.meter {
-    @include animation(progress $animation-duration linear infinite);
-    background-color: $meter-color;
+    @include animation(progress $progress-animation-duration linear infinite);
+    background-color: $progress-meter-color;
     @include background-image(linear-gradient(-45deg, rgba(255,255,255, 0.15) 25%,
                                                       transparent 25%,
                                                       transparent 50%,
@@ -20,8 +25,8 @@
                                                       transparent 75%));
     background-size: 40px 40px;
     background-repeat: repeat-x;
-    border: 1px solid darken($meter-color, 15%);
-    border-radius: 4px;
+    border: $progress-meter-border;
+    border-radius: $base-border-radius /1.5;
     @include box-sizing(border-box);
     display: block;
     height: 100%;
@@ -73,8 +78,4 @@
   100% {
     background-position: 40px 0px;
   }
-}
-
-.progress-bar {
-  @include ui-progress-meter(#54C6FC, #FDFDFD, 0.7s);
 }
