@@ -80,6 +80,7 @@ header.refills-header {
   }
 
   @include media ($medium-screen) {
+    margin: 2em 0 $base-line-height*3;
     p {
       display: none;
     }
@@ -125,7 +126,7 @@ header.refills-header {
 
   	a {
   		font-size: $base-font-size /1.5;
-      border-bottom: 1px solid;
+      // border-bottom: 1px solid $light-gray;
       padding-bottom: 0.5em;
       margin-right: 1em;
   		color: darken($refills-color, 40);

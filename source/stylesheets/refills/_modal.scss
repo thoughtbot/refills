@@ -1,0 +1,130 @@
+$modal-padding: 2em;
+$modal-close-color: $light-gray;
+
+.modal {
+  input[type="checkbox"] {
+    display: none;
+  }
+}
+
+.modal-window {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background: rgba(0,0,0, .9);
+  transition: opacity .25s ease;
+  z-index: 999;
+
+  .modal__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+  }
+
+  .modal__inner {
+    transition: top .25s ease;
+    position: absolute;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 95%;
+    @include media($medium-screen) {
+      width: 50%;  
+    }
+    
+    margin: auto;
+    overflow: auto;
+    background: #fff;
+    border-radius: 5px;
+    padding: $modal-padding;
+    height: 30%;
+  }
+
+  .modal-close {
+    position: absolute;
+    right: $modal-padding /2;
+    top: $modal-padding /2;
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;  
+
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 1.5em;
+      background: $modal-close-color;
+      display: block;
+      @include transform(rotate(45deg));
+      left: 50%;
+      margin: -3px 0 0 -1px;
+      top: 0;
+    }
+
+    &:hover:after,
+    &:hover:before {
+      background: darken($modal-close-color, 10);
+    }
+
+    &:before {
+      @include transform(rotate(-45deg));
+    }
+  }
+}
+
+.modal-state:checked + .modal-window {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-state:checked + .modal-window .modal__inner {
+  top: 0;
+}
+
+
+.btn {
+  @include button(simple, $base-accent-color);
+  font-size: $base-font-size;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #2ecc71;
+}
+
+.btn:active {
+  background: #27ae60;
+  box-shadow: 0 1px 2px rgba(0,0,0, .2) inset;
+}
+
+.btn--blue {
+  background: #2980b9;
+}
+
+.btn--blue:hover,
+.btn--blue:focus {
+  background: #3498db;
+}
+
+.btn--blue:active {
+  background: #2980b9;
+}
+
+p img {
+  max-width: 200px;
+  height: auto;
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+// Originally by Kasper Mikiewicz
