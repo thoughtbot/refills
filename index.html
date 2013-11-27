@@ -77,16 +77,13 @@
 
 			<div class="narrow">
 			<div class="refill">
-				<h3>Refills Dropdown Menu</h3>
+				<h3>Dropdown Menu</h3>
 				<a href="">HTML</a>
 				<a href="">SCSS</a>
 			</div>
 			  <ul class="dropdown-menus"> 
-    <li>
-      <a href="">Item 1</a>
-    </li>
     <li class="expanded">
-      <a href="#" class="nolink">Dropdown</a>
+      <a href="#" class="nolink">Item 1</a>
       <ul class="submenu">
         <li>
           <a href="">Sub Item 1</a>
@@ -96,7 +93,17 @@
         </li>
       </ul>
     </li>
-    <li><a href="">Item 1</a></li>
+    <li class="expanded">
+      <a href="#" class="nolink">Item 2</a>
+      <ul class="submenu">
+        <li>
+          <a href="">Sub Item 1</a>
+        </li>
+        <li>
+          <a href="">Sub Item 2</a>
+        </li>
+      </ul>
+    </li>
   </ul>
 
 
@@ -193,13 +200,14 @@
   </tbody>
 </table>
 
-
-	<div class="refill">
-		<h3>Breadcrumbs</h3>
-		<a href="https://raw.github.com/thoughtbot/refills/master/source/_breadcrumbs.html.erb?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2UvX2JyZWFkY3J1bWJzLmh0bWwuZXJiIiwiZXhwaXJlcyI6MTM4NjAxMDg1OH0%3D--b7a13de128ba7944d81d5e3e3488f2312238c153">HTML</a>
-		<a href="https://raw.github.com/thoughtbot/refills/master/source/stylesheets/refills/_breadcrumbs.scss?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2Uvc3R5bGVzaGVldHMvcmVmaWxscy9fYnJlYWRjcnVtYnMuc2NzcyIsImV4cGlyZXMiOjEzODYwMTExMzh9--0dc44d2ec52f139336dd1ceff9bde56abed749ab">SCSS</a>
-	</div>	
-	<div class="breadcrumb">
+	<div class="row">
+		<div class="narrow">
+			<div class="refill">
+				<h3>Breadcrumbs</h3>
+				<a href="https://raw.github.com/thoughtbot/refills/master/source/_breadcrumbs.html.erb?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2UvX2JyZWFkY3J1bWJzLmh0bWwuZXJiIiwiZXhwaXJlcyI6MTM4NjAxMDg1OH0%3D--b7a13de128ba7944d81d5e3e3488f2312238c153">HTML</a>
+				<a href="https://raw.github.com/thoughtbot/refills/master/source/stylesheets/refills/_breadcrumbs.scss?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2Uvc3R5bGVzaGVldHMvcmVmaWxscy9fYnJlYWRjcnVtYnMuc2NzcyIsImV4cGlyZXMiOjEzODYwMTExMzh9--0dc44d2ec52f139336dd1ceff9bde56abed749ab">SCSS</a>
+			</div>	
+			<div class="breadcrumb">
   <a href="#">One</a>
   <a href="#">Two</a>
   <a href="#">Three</a>
@@ -207,28 +215,30 @@
   <a href="#">Five</a>
   <a href="#">Six</a>
 </div>
+		</div>
 
-  
-  <div class="refill">
-  	<h3>Button Group</h3>
-  	<a href="https://raw.github.com/thoughtbot/refills/master/source/_button-group.html.erb?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2UvX2J1dHRvbi1ncm91cC5odG1sLmVyYiIsImV4cGlyZXMiOjEzODYwMTA4ODd9--3472f0d9190fa0bcfe231ff54dcaa7a8f1277952">HTML</a>
-  	<a href="https://raw.github.com/thoughtbot/refills/master/source/stylesheets/refills/_button-group.scss?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2Uvc3R5bGVzaGVldHMvcmVmaWxscy9fYnV0dG9uLWdyb3VwLnNjc3MiLCJleHBpcmVzIjoxMzg2MDExMTU2fQ%3D%3D--7d6f8f0c1216b29f6823b78bea7d95109192bb5c">SCSS</a>
-	</div>
-  <div class="button-group">
+		<div class="narrow">
+		  <div class="refill">
+		  	<h3>Button Group</h3>
+		  	<a href="https://raw.github.com/thoughtbot/refills/master/source/_button-group.html.erb?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2UvX2J1dHRvbi1ncm91cC5odG1sLmVyYiIsImV4cGlyZXMiOjEzODYwMTA4ODd9--3472f0d9190fa0bcfe231ff54dcaa7a8f1277952">HTML</a>
+		  	<a href="https://raw.github.com/thoughtbot/refills/master/source/stylesheets/refills/_button-group.scss?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2Uvc3R5bGVzaGVldHMvcmVmaWxscy9fYnV0dG9uLWdyb3VwLnNjc3MiLCJleHBpcmVzIjoxMzg2MDExMTU2fQ%3D%3D--7d6f8f0c1216b29f6823b78bea7d95109192bb5c">SCSS</a>
+			</div>
+	  <div class="button-group">
   <button class="active">Item</button>
   <button>Item</button>
   <button>Item</button>
   <button>Item</button>
   <button>Item</button>
 </div>
-
+	</div>
+</div>
 	
 	<div class="refill">
 		<h3>Navigation</h3>
 		<a href="https://raw.github.com/thoughtbot/refills/master/source/_navigation.html.erb?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2UvX25hdmlnYXRpb24uaHRtbC5lcmIiLCJleHBpcmVzIjoxMzg2MDExMDI5fQ%3D%3D--1fb5e32f9c14640009fa1abb1e9fd7dadd625fa6">HTML</a>
 		<a href="https://raw.github.com/thoughtbot/refills/master/source/stylesheets/refills/_header-nav.scss?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2Uvc3R5bGVzaGVldHMvcmVmaWxscy9faGVhZGVyLW5hdi5zY3NzIiwiZXhwaXJlcyI6MTM4NjAxMTI0NH0%3D--bcc4c0862f3bc3d4f3a9ef12ce7cd3f9fd7a41b6">SCSS</a>
 	</div>	
-	<header>
+	<header class="navigation">
   <div class="menu-wrapper">
   	<div class="logo">Logo</div>
     <p>Menu</p>
@@ -308,7 +318,7 @@
 		<a href="https://raw.github.com/thoughtbot/refills/master/source/_accordion-tabs.html.erb?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2UvX2FjY29yZGlvbi10YWJzLmh0bWwuZXJiIiwiZXhwaXJlcyI6MTM4NjAxMDgyN30%3D--6630eeb81ef65669f916b6a466f5bb0d85a88210">HTML</a>
 		<a href="https://raw.github.com/thoughtbot/refills/master/source/stylesheets/refills/_tabs.scss?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2Uvc3R5bGVzaGVldHMvcmVmaWxscy9fdGFicy5zY3NzIiwiZXhwaXJlcyI6MTM4NjAxMTM1M30%3D--73c6387f24c6de159a45e7aa871ef8d78a94fa2d">SCSS</a>
 	</div>	
-	<ul class="tabs">
+	<ul class="accordion-tabs">
   <li><a href="#" class="active">Item 1</a>
     <section>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
@@ -334,19 +344,19 @@
 <script>
   $(document).ready(function () {
       
-      $('.tabs').children('li').first().children('a').addClass('active')
+      $('.accordion-tabs').children('li').first().children('a').addClass('active')
           .next().addClass('is-open').show();
           
-      $('.tabs').on('click', 'li > a', function() {
+      $('.accordion-tabs').on('click', 'li > a', function() {
           
         if (!$(this).hasClass('active')) {
 
           event.preventDefault()
 
-          $('.tabs .is-open').removeClass('is-open').hide();
+          $('.accordion-tabs .is-open').removeClass('is-open').hide();
           $(this).next().toggleClass('is-open').toggle();
             
-          $('.tabs').find('.active').removeClass('active');
+          $('.accordion-tabs').find('.active').removeClass('active');
           $(this).addClass('active');
         } 
 
@@ -412,6 +422,9 @@
 			<li>Sidebar Item 3</li>
 			<li>Sidebar Item 4</li>
 			<li>Sidebar Item 5</li>
+			<li>Sidebar Item 1</li>
+			<li>Sidebar Item 2</li>
+			<li>Sidebar Item 2</li>
 		</ul>
 	</aside>
 	<div class="content">
