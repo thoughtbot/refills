@@ -1610,6 +1610,36 @@ a.tooltip-item {
           .sidebar-layout .content section:nth-child(2n+1) {
             clear: left; } }
 
+.progress-bar {
+  background-color: #fafafa;
+  border: 1px solid #adadad;
+  box-shadow: inset 0 0 3px 0 rgba(122, 122, 122, 0.15);
+  border-radius: 0.1875em;
+  height: 20px;
+  margin: 0 auto;
+  padding: 2px;
+  width: 100%; }
+  .progress-bar > span.meter {
+    -webkit-animation: progress 0.7s linear infinite;
+    -moz-animation: progress 0.7s linear infinite;
+    animation: progress 0.7s linear infinite;
+    background-color: #54c6fc;
+    background-image: -webkit-linear-gradient(-225deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%);
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%);
+    background-size: 40px 40px;
+    background-repeat: repeat-x;
+    border: 1px solid #09adfb;
+    border-radius: 0.125em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    width: 60%; }
+
 @-webkit-keyframes progress {
   0% {
     background-position: 0px 0px; }
@@ -1644,33 +1674,3 @@ a.tooltip-item {
 
   100% {
     background-position: 40px 0px; } }
-
-.progress-bar {
-  background: #fdfdfd;
-  border: 1px solid #b1b1b1;
-  box-shadow: inset 0 0 3px 0 rgba(126, 126, 126, 0.15);
-  border-radius: 4px;
-  height: 20px;
-  margin: 0 auto;
-  padding: 2px;
-  width: 100%; }
-  .progress-bar > span.meter {
-    -webkit-animation: progress 0.7s linear infinite;
-    -moz-animation: progress 0.7s linear infinite;
-    animation: progress 0.7s linear infinite;
-    background-color: #54c6fc;
-    background-image: -webkit-linear-gradient(-225deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%);
-    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%);
-    background-size: 40px 40px;
-    background-repeat: repeat-x;
-    border: 1px solid #09adfb;
-    border-radius: 4px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    display: block;
-    height: 100%;
-    -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-    width: 60%; }
