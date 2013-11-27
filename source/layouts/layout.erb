@@ -8,10 +8,10 @@
     
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
-    <link rel="shortcut icon" href="favicon.ico" />    
     <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag  "all" %>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" />    
   </head>
   
   <body class="<%= page_classes %>">
