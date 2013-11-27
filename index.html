@@ -62,6 +62,55 @@
   </tbody>
 </table> -->
 	
+	<div class="row">
+		<div class="narrow">
+			<div class="refill">
+				<h3>Tooltip</h3>
+				<a href="https://raw.github.com/thoughtbot/refills/master/source/_tooltip.html.erb?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2UvX3Rvb2x0aXAuaHRtbC5lcmIiLCJleHBpcmVzIjoxMzg2MDExNDg5fQ%3D%3D--bc37ee21531e22bf162915ed5091d05a4fb4ef7b">HTML</a>
+				<a href="https://raw.github.com/thoughtbot/refills/master/source/stylesheets/refills/_tooltip.scss?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2Uvc3R5bGVzaGVldHMvcmVmaWxscy9fdG9vbHRpcC5zY3NzIiwiZXhwaXJlcyI6MTM4NjAxMTM3MX0%3D--4d79e8c41c733c19dc94e9b66b3d3c230adbf21d">SCSS</a>
+			</div>
+			<a href="#" class="tooltip-item">
+  Hover for Tooltip
+  <div class="tooltip">Tooltip text</div>
+</a>
+			</div>
+
+			<div class="narrow">
+			<div class="refill">
+				<h3>Refills Dropdown Menu</h3>
+				<a href="">HTML</a>
+				<a href="">SCSS</a>
+			</div>
+			  <ul class="dropdown-menus"> 
+    <li>
+      <a href="">Item 1</a>
+    </li>
+    <li class="expanded">
+      <a href="#" class="nolink">Dropdown</a>
+      <ul class="submenu">
+        <li>
+          <a href="">Sub Item 1</a>
+        </li>
+        <li>
+          <a href="">Sub Item 2</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="">Item 1</a></li>
+  </ul>
+
+
+<script>
+  jQuery('.expanded').find('.nolink') // find the .nolink inside .expanded
+    .bind('click focus', function(){
+      jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
+      jQuery(this).parent().toggleClass('expand'); 
+      event.preventDefault()
+  });;
+</script>
+		</div>
+	</div>
+	
 	<div class="refill">
 		<h3>Progress Bar</h3>
 		<a href="https://raw.github.com/thoughtbot/refills/master/source/_progress-bar.html.erb?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2UvX3Byb2dyZXNzLWJhci5odG1sLmVyYiIsImV4cGlyZXMiOjEzODYxNzM3MzB9--2eac8908e7b33abb8c8b2b8bd8e88663c9cdcaf6">HTML</a>
@@ -144,15 +193,6 @@
   </tbody>
 </table>
 
-	<div class="refill">
-		<h3>Tooltip</h3>
-		<a href="https://raw.github.com/thoughtbot/refills/master/source/_tooltip.html.erb?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2UvX3Rvb2x0aXAuaHRtbC5lcmIiLCJleHBpcmVzIjoxMzg2MDExNDg5fQ%3D%3D--bc37ee21531e22bf162915ed5091d05a4fb4ef7b">HTML</a>
-		<a href="https://raw.github.com/thoughtbot/refills/master/source/stylesheets/refills/_tooltip.scss?token=2095625__eyJzY29wZSI6IlJhd0Jsb2I6dGhvdWdodGJvdC9yZWZpbGxzL21hc3Rlci9zb3VyY2Uvc3R5bGVzaGVldHMvcmVmaWxscy9fdG9vbHRpcC5zY3NzIiwiZXhwaXJlcyI6MTM4NjAxMTM3MX0%3D--4d79e8c41c733c19dc94e9b66b3d3c230adbf21d">SCSS</a>
-	</div>
-	<a href="#" class="tooltip-item">
-  Hover for Tooltip
-  <div class="tooltip">Tooltip text</div>
-</a>
 
 	<div class="refill">
 		<h3>Breadcrumbs</h3>
