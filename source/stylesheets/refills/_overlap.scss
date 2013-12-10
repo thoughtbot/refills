@@ -1,0 +1,35 @@
+$overlap-height: 20px;
+$overlap-border-color: $base-border-color;
+$overlap-border: 1px solid $overlap-border-color;
+$overlap-background: lighten($overlap-border-color, 10);
+
+.overlap {
+  @include outer-container;
+  margin-bottom: -$overlap-height;
+}
+
+.overlap-content {
+  margin: auto;
+  width: 100%;
+  z-index: 999;
+  max-width: 500px;
+
+  .overlap-content-centered {
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: $overlap-background;
+    border-top-left-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+    border: $overlap-border;
+    height: 100px;
+  }
+}
+
+.overlapped {
+  background-color: $overlap-background;
+  height: $overlap-height;
+  border-bottom: $overlap-border;
+  @include texture($overlap-background, 62, 0); 
+  // see http://magnus-g.github.io/texture-mixin/ for info on how to use this texture mixin
+}

@@ -1,7 +1,22 @@
-$modal-padding: 2em;
+$modal-padding: 3em;
 $modal-close-color: $light-gray;
+$modal-image-height: 135px;
+$modal-image-width: $modal-image-height;
 
 .modal {
+  label {
+    cursor: pointer;
+
+    img {
+      $img-width: 300px;
+      border-radius: $img-width/2;
+      max-width: $img-width;
+      margin: auto;
+      display: block;
+      margin-bottom: 2em;
+    }
+  }
+
   input[type="checkbox"] {
     display: none;
   }
@@ -20,7 +35,7 @@ $modal-close-color: $light-gray;
   transition: opacity .25s ease;
   z-index: 999;
 
-  .modal__bg {
+  .modal-bg {
     position: absolute;
     top: 0;
     right: 0;
@@ -29,7 +44,7 @@ $modal-close-color: $light-gray;
     cursor: pointer;
   }
 
-  .modal__inner {
+  .modal-inner {
     transition: top .25s ease;
     position: absolute;
     top: -20%;
@@ -37,20 +52,77 @@ $modal-close-color: $light-gray;
     bottom: 0;
     left: 0;
     width: 95%;
-    @include media($medium-screen) {
-      width: 50%;  
-    }
-    
     margin: auto;
     overflow: auto;
     background: #fff;
-    border-radius: 5px;
     padding: $modal-padding;
-    height: 30%;
+    max-height: 70%;
+
+    @include media($medium-screen) {
+      width: 50%;  
+    }
+
+    .img-wrapper-modal {
+      display: block;
+      height: $modal-image-height;
+      width: $modal-image-width;
+      border-radius: 190px;
+      background-color: $light-gray;
+
+      img {
+        padding: 30px;
+        content: '';
+        height: $modal-image-height;
+        width: $modal-image-width;
+        display: block;
+      }
+    }  
+
+    h1 {
+      text-align: left;
+      color: $base-font-color;
+      text-transform: capitalize;
+      margin-bottom: .6em;
+    }
+
+    p {
+      max-width: 100% !important;
+      padding: 0;
+    }
+
+    p.intro {
+      color: $blue;
+      font-family: $sans-serif;
+      line-height: 1.6em;
+      margin-bottom: 1.7em;
+      text-align: left;
+      font-size: $base-font-size;
+    }
+
+    p.body { 
+      color: $base-font-color;
+      line-height: 1.45em;
+      text-align: left;
+      font-size: $base-font-size;
+      @include media($medium-screen) {
+        @include columns(2 8em);  
+      }
+    }
+    a.cta {
+      display: inline-block;
+      margin-top: 1em;
+      margin-right: .5em;
+      color: #fff;
+      
+      &:last-child {
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+    }
   }
 
   .modal-close {
-    position: absolute;
+    position: fixed;
     right: $modal-padding /2;
     top: $modal-padding /2;
     width: 1.1em;
@@ -97,28 +169,6 @@ $modal-close-color: $light-gray;
   font-size: $base-font-size;
 }
 
-.btn:hover,
-.btn:focus {
-  background: #2ecc71;
-}
-
-.btn:active {
-  background: #27ae60;
-  box-shadow: 0 1px 2px rgba(0,0,0, .2) inset;
-}
-
-.btn--blue {
-  background: #2980b9;
-}
-
-.btn--blue:hover,
-.btn--blue:focus {
-  background: #3498db;
-}
-
-.btn--blue:active {
-  background: #2980b9;
-}
 
 p img {
   max-width: 200px;

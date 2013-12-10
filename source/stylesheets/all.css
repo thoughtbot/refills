@@ -972,28 +972,28 @@ ul.item-list {
     display: table; }
   .cards:after {
     clear: both; }
-  .cards .card {
+  .cards .card, .cards .system ul li, .system ul .cards li {
     height: 190px;
     border: 1px solid #dddddd;
     background-color: #f7f7f7;
     border-radius: 0.1875em;
     margin-bottom: 1.5em; }
     @media screen and (min-width: 47.5em) {
-      .cards .card {
+      .cards .card, .cards .system ul li, .system ul .cards li {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 31.76157%; }
-        .cards .card:last-child {
+        .cards .card:last-child, .cards .system ul li:last-child, .system ul .cards li:last-child {
           margin-right: 0; } }
-    .cards .card .card-header {
+    .cards .card .card-header, .cards .system ul li .card-header, .system ul .cards li .card-header {
       background-color: #f7f7f7;
       border-bottom: 1px solid #dddddd;
       border-top-left-radius: 0.1875em;
       border-top-right-radius: 0.1875em;
       font-weight: bold;
       padding: 0.5em 1em; }
-    .cards .card p {
+    .cards .card p, .cards .system ul li p, .system ul .cards li p {
       padding-left: 1em;
       padding-right: 1em;
       padding-top: 1em;
@@ -1002,15 +1002,15 @@ ul.item-list {
       display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical; }
-    .cards .card h3 {
+    .cards .card h3, .cards .system ul li h3, .system ul .cards li h3 {
       font-weight: 800; }
-    .cards .card:hover {
+    .cards .card:hover, .cards .system ul li:hover, .system ul .cards li:hover {
       background-color: #eaeaea; }
-      .cards .card:hover .card-header {
+      .cards .card:hover .card-header, .cards .system ul li:hover .card-header, .system ul .cards li:hover .card-header {
         background-color: #eaeaea; }
-    .cards .card:active {
+    .cards .card:active, .cards .system ul li:active, .system ul .cards li:active {
       background-color: #f7f7f7; }
-      .cards .card:active .card-header {
+      .cards .card:active .card-header, .cards .system ul li:active .card-header, .system ul .cards li:active .card-header {
         background-color: #f7f7f7; }
 
 .accordion-tabs {
@@ -1724,6 +1724,14 @@ a.tooltip-item {
     display: block;
     padding-bottom: 0; }
 
+.modal label {
+  cursor: pointer; }
+  .modal label img {
+    border-radius: 150px;
+    max-width: 300px;
+    margin: auto;
+    display: block;
+    margin-bottom: 2em; }
 .modal input[type="checkbox"] {
   display: none; }
 
@@ -1739,14 +1747,14 @@ a.tooltip-item {
   background: rgba(0, 0, 0, 0.9);
   transition: opacity .25s ease;
   z-index: 999; }
-  .modal-window .modal__bg {
+  .modal-window .modal-bg {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     cursor: pointer; }
-  .modal-window .modal__inner {
+  .modal-window .modal-inner {
     transition: top .25s ease;
     position: absolute;
     top: -20%;
@@ -1757,16 +1765,60 @@ a.tooltip-item {
     margin: auto;
     overflow: auto;
     background: #fff;
-    border-radius: 5px;
-    padding: 2em;
-    height: 30%; }
+    padding: 3em;
+    max-height: 70%; }
     @media screen and (min-width: 47.5em) {
-      .modal-window .modal__inner {
+      .modal-window .modal-inner {
         width: 50%; } }
+    .modal-window .modal-inner .img-wrapper-modal {
+      display: block;
+      height: 135px;
+      width: 135px;
+      border-radius: 190px;
+      background-color: #dddddd; }
+      .modal-window .modal-inner .img-wrapper-modal img {
+        padding: 30px;
+        content: '';
+        height: 135px;
+        width: 135px;
+        display: block; }
+    .modal-window .modal-inner h1 {
+      text-align: left;
+      color: #333333;
+      text-transform: capitalize;
+      margin-bottom: .6em; }
+    .modal-window .modal-inner p {
+      max-width: 100% !important;
+      padding: 0; }
+    .modal-window .modal-inner p.intro {
+      color: #477dca;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.6em;
+      margin-bottom: 1.7em;
+      text-align: left;
+      font-size: 1em; }
+    .modal-window .modal-inner p.body {
+      color: #333333;
+      line-height: 1.45em;
+      text-align: left;
+      font-size: 1em; }
+      @media screen and (min-width: 47.5em) {
+        .modal-window .modal-inner p.body {
+          -webkit-columns: 2 8em;
+          -moz-columns: 2 8em;
+          columns: 2 8em; } }
+    .modal-window .modal-inner a.cta {
+      display: inline-block;
+      margin-top: 1em;
+      margin-right: .5em;
+      color: #fff; }
+      .modal-window .modal-inner a.cta:last-child {
+        padding-left: 2em;
+        padding-right: 2em; }
   .modal-window .modal-close {
-    position: absolute;
-    right: 1em;
-    top: 1em;
+    position: fixed;
+    right: 1.5em;
+    top: 1.5em;
     width: 1.1em;
     height: 1.1em;
     cursor: pointer; }
@@ -1836,26 +1888,119 @@ a.tooltip-item {
     opacity: 0.5;
     cursor: not-allowed; }
 
-.btn:hover,
-.btn:focus {
-  background: #2ecc71; }
-
-.btn:active {
-  background: #27ae60;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
-
-.btn--blue {
-  background: #2980b9; }
-
-.btn--blue:hover,
-.btn--blue:focus {
-  background: #3498db; }
-
-.btn--blue:active {
-  background: #2980b9; }
-
 p img {
   max-width: 200px;
   height: auto;
   float: left;
   margin: 0 1em 1em 0; }
+
+.overlap {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -20px; }
+  .overlap:before, .overlap:after {
+    content: " ";
+    display: table; }
+  .overlap:after {
+    clear: both; }
+
+.overlap-content {
+  margin: auto;
+  width: 100%;
+  z-index: 999;
+  max-width: 500px; }
+  .overlap-content .overlap-content-centered {
+    position: relative;
+    width: 100%;
+    float: left;
+    background-color: #f7f7f7;
+    border-top-left-radius: 0.1875em;
+    border-top-right-radius: 0.1875em;
+    border: 1px solid #dddddd;
+    height: 100px; }
+
+.overlapped {
+  background-color: #f7f7f7;
+  height: 20px;
+  border-bottom: 1px solid #dddddd;
+  background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/line_diagonal1.png");
+  background-color: #f7f7f7; }
+
+.course-cards-wrapper {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .course-cards-wrapper:before, .course-cards-wrapper:after {
+    content: " ";
+    display: table; }
+  .course-cards-wrapper:after {
+    clear: both; }
+  @media screen and (min-width: 47.5em) {
+    .course-cards-wrapper ul li {
+      width: 33%;
+      float: left;
+      margin-bottom: 1em; } }
+
+.course-cards {
+  margin: auto;
+  width: 100%;
+  z-index: 999; }
+  .course-cards .card, .course-cards .system ul li, .system ul .course-cards li {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 1em;
+    float: left;
+    background-color: red;
+    background-size: 100%;
+    text-align: center;
+    color: white;
+    padding: 1em;
+    min-height: 20em; }
+    .course-cards .card.active, .course-cards .system ul li.active, .system ul .course-cards li.active {
+      position: relative; }
+      .course-cards .card.active .card-bottom h3, .course-cards .system ul li.active .card-bottom h3, .system ul .course-cards li.active .card-bottom h3 {
+        color: white; }
+      .course-cards .card.active .pointer, .course-cards .system ul li.active .pointer, .system ul .course-cards li.active .pointer {
+        position: absolute;
+        bottom: 0;
+        left: 48%;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid white; }
+  .course-cards li:last-child .card, .course-cards li:last-child .system ul li, .system ul .course-cards li:last-child li {
+    background-color: green; }
+  .course-cards .card-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .course-cards .card-bottom:hover {
+      background-color: rgba(0, 0, 0, 0.1); }
+    .course-cards .card-bottom h3 {
+      padding: 2em 0 1.5em 0; }
+
+.system {
+  display: block; }
+  .system li:last-child .card, .system li:last-child ul li, .system ul li:last-child li {
+    display: block; }
+    @media screen and (min-width: 460px) {
+      .system li:last-child .card, .system li:last-child ul li, .system ul li:last-child li {
+        background-size: 100%; } }
+  @media screen and (min-width: 57.5em) {
+    .system {
+      display: none; } }
+  .system ul, .system ul li, .system ul li a {
+    width: 100%;
+    background-size: 100%;
+    display: block; }
+  .system ul li {
+    display: block; }

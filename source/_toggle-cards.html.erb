@@ -1,0 +1,64 @@
+<div class="course-cards-wrapper" id="programs">
+  <ul class="course-cards">
+    <li>
+      <a class="card active" href="#js-first">
+        <h1>Lorem</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, maiores ad molestias esse totam nesciunt explicabo, magnam, adipisci, atque harum distinctio dignissimos voluptate voluptatibus minus vitae quae.</p>
+          <div class="pointer"></div>
+      </a>
+    </li>
+    <div id="js-first" class="course-detail bootcamp">
+        <h1>First</h1>
+    </div>
+
+    <li>
+      <div class="card" href="#js-second">
+        <h1>Lorem</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, maiores ad molestias esse totam nesciunt explicabo voluptatibus. Quibusdam, delectus, magnam, adipisci, atque harum distinctio dignissimos voluptate voluptatibus minus vitae quae.</p>
+          <div class="pointer"></div>
+      </div>
+    </li>
+
+    <li>
+      <div class="card" href="#js-third">
+        <h1>Lorem</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, maiores ad molestias esse totam nesciunt explicabo voluptatibus. Quibusdam, delectus, magnam, adipisci, atque harum distinctio dignissimos voluptate voluptatibus minus vitae quae.</p>
+          <div class="pointer"></div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="course-content">
+  <div class="course-content-inner">
+    
+
+    <div id="js-second" class="course-detail intensive">
+        <h1>Second</h1>
+    </div>
+    <div id="js-third" class="course-detail intensive">
+        <h1>Third</h1>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(function() {
+    $('.course-content .course-detail').hide();
+    $('.course-content .bootcamp').show();
+
+    $('.course-cards .card').click(function() {
+      $('.course-cards .card').removeClass('active');
+      $(this).addClass('active');
+      var target_id = $(this).attr('href');
+      $('.course-content .course-detail').hide();
+      $(target_id).show();
+      return false;
+    });
+  });
+</script>    

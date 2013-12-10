@@ -1,0 +1,104 @@
+.course-cards-wrapper {
+  @include outer-container;
+  ul li {
+    @include media($medium-screen) {
+      // @include span-columns(4);
+      // @include omega(3n);
+      width: 33%;
+      float: left;
+      margin-bottom: 1em;
+      
+    }
+  }
+}
+
+
+
+.course-cards {
+  margin: auto;
+  width: 100%;
+  z-index: 999;
+
+  .card {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 1em;
+    float: left;
+    background-color: red;
+    background-size: 100%;
+    text-align: center;    
+    color: white;
+    padding: 1em;
+    min-height: 20em;
+
+
+
+    &.active {
+      position: relative;
+      .card-bottom h3 {
+        color: white;
+      }
+      .pointer {
+        position: absolute;
+        bottom: 0;
+        left: 48%;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid white;
+      }
+    }
+  }
+
+  li:last-child .card {
+    // display: none;
+    // position: relative;
+    background-color: green;
+  }
+
+  .card-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparentize(black, 0.8);
+    @include transition (all 0.2s ease-in-out);
+
+    &:hover {
+      background-color: transparentize(black, 0.9);
+    }
+    h3 {
+      padding: 2em 0 1.5em 0;
+    }
+  }
+}
+
+.system {
+  display: block;
+
+  li:last-child .card {
+    display: block;
+    @include media(460px) {
+      background-size: 100%;
+    }
+  }
+
+  @include media($large-screen) {
+    display: none;
+  }
+
+  ul, ul li, ul li a {
+    width: 100%;
+    background-size: 100%;  
+    display: block;
+  }
+  ul li {
+    @extend .card;
+    display: block;
+  }
+}
+
+
+
+
