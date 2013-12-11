@@ -2,256 +2,256 @@ $refills-color: lighten(desaturate(teal, 60), 40);
 $base-body-color: white;
 
 body {
-  background-color: $base-body-color; 
+	background-color: $base-body-color; 
 }
 
 $refills-nav-height: 60px;
 
 header.refills-header {
-  width: 100%;
-  margin: 0 0 $base-line-height*3;
-  height: $refills-nav-height;
-  background-color: $base-body-color;
+	width: 100%;
+	margin: 0 0 $base-line-height*3;
+	height: $refills-nav-height;
+	background-color: $base-body-color;
 
-  .logo {
-    font-weight: bold;
-    float: left;
-    padding: 0; 
-    text-transform: uppercase;
-    line-height: $refills-nav-height;
-    color: white;
-    background-color: $dark-gray;
-    padding: 0 2em;
-  }
+	.logo {
+		font-weight: bold;
+		float: left;
+		padding: 0; 
+		text-transform: uppercase;
+		line-height: $refills-nav-height;
+		color: white;
+		background-color: $dark-gray;
+		padding: 0 2em;
+	}
 
-  p {
-    padding-right: 1em;
-    display: block;
-    float: right;
-    margin: 0;
-    line-height: $refills-nav-height;
-    background-color: $base-body-color;
-  }
+	p {
+		padding-right: 1em;
+		display: block;
+		float: right;
+		margin: 0;
+		line-height: $refills-nav-height;
+		background-color: $base-body-color;
+	}
 
-  &:hover {
-    .nav ul {
-      display: block;
-    }
-  }
+	&:hover {
+		.nav ul {
+			display: block;
+		}
+	}
 
-  .nav {
-    ul {
-      display: none;
-      -webkit-transform-style: preserve-3d; // stop webkit flicker
-      overflow: hidden;
-      margin: 0 auto;
-      padding: 0;
-      width: 100%;
+	.nav {
+		ul {
+			display: none;
+			-webkit-transform-style: preserve-3d; // stop webkit flicker
+			overflow: hidden;
+			margin: 0 auto;
+			padding: 0;
+			width: 100%;
 
-      li {
-        position: relative;
-        overflow: hidden;
-        display: block;
-        width: 100%;
-        text-align: right;
-        padding: 1em;
-        border-radius: $base-border-radius;
-        line-height: $refills-nav-height;
-        width: 100%;
-        position: relative;
-        display: block;
-        z-index: 99999999;
-        overflow: hidden;
-        font-size: $base-font-size /1.2;
-        font-weight: 200;
-        background-color: $refills-color;
+			li {
+				position: relative;
+				overflow: hidden;
+				display: block;
+				width: 100%;
+				text-align: right;
+				padding: 1em;
+				border-radius: $base-border-radius;
+				line-height: $refills-nav-height;
+				width: 100%;
+				position: relative;
+				display: block;
+				z-index: 99999999;
+				overflow: hidden;
+				font-size: $base-font-size /1.2;
+				font-weight: 200;
+				background-color: $refills-color;
 
-        &:hover {
-          background-color: darken($refills-color, 10);          
-        }
+				&:hover {
+					background-color: darken($refills-color, 10);          
+				}
 
 
-        a {
-          padding: 1em;
-          color: white;
-        }
-      }
-    }
-  }
+				a {
+					padding: 1em;
+					color: white;
+				}
+			}
+		}
+	}
 
-  @include media ($medium-screen) {
-    margin: 2em 0 $base-line-height*3;
-    p {
-      display: none;
-    }
-    .nav {
-      float: right;
+	@include media ($medium-screen) {
+		margin: 2em 0 $base-line-height*3;
+		p {
+			display: none;
+		}
+		.nav {
+			float: right;
 
-      ul {
-        display: block;
-        margin: 0;
-        padding: 0;
+			ul {
+				display: block;
+				margin: 0;
+				padding: 0;
 
-        li {
-          display: inline;
-          display: inline;
-          text-decoration: none;
-          line-height: $refills-nav-height;
-          padding-right: 1em;
-        }
-      }
-    }
-  }
+				li {
+					display: inline;
+					display: inline;
+					text-decoration: none;
+					line-height: $refills-nav-height;
+					padding-right: 1em;
+				}
+			}
+		}
+	}
 }
 
 /////////////////////////
 
 .refills-wrapper {
-    @include outer-container;
-    padding: 1em;
+		@include outer-container;
+		padding: 1em;
 
-  h1.main-header {
-  	background-color: $refills-color;
-  	display: inline-block;
-  	padding: 0.5em;
-  }
+	h1.main-header {
+		background-color: $refills-color;
+		display: inline-block;
+		padding: 0.5em;
+	}
 
-  .refill {
-  	margin-bottom: 2em;
-  	h3 {
-  		padding-top: 0.5em;
-  		margin-top: 1em;
-  		margin-bottom: 0.3em;
-  	}
+	.refill {
+		margin-bottom: 2em;
+		h3 {
+			padding-top: 0.5em;
+			margin-top: 1em;
+			margin-bottom: 0.3em;
+		}
 
-  	a {
-  		font-size: $base-font-size /1.5;
-      // border-bottom: 1px solid $light-gray;
-      padding-bottom: 0.5em;
-      margin-right: 1em;
-  		color: darken($refills-color, 40);
+		a {
+			font-size: $base-font-size /1.5;
+			// border-bottom: 1px solid $light-gray;
+			padding-bottom: 0.5em;
+			margin-right: 1em;
+			color: darken($refills-color, 40);
 
-  		&:hover {
-  			color: darken($refills-color, 5);
-  		}
+			&:hover {
+				color: darken($refills-color, 5);
+			}
 
-  		&:active {
-  			color: darken($refills-color, 7);
-  			box-shadow: none;
-  		}
-  	}
-  }
+			&:active {
+				color: darken($refills-color, 7);
+				box-shadow: none;
+			}
+		}
+	}
 }
 
 .row {
-  @include clearfix;
+	@include clearfix;
 
-  .narrow {
-    @include media($medium-screen) {
-      @include span-columns(6);
-      @include omega(2n);  
-    }    
-  }
+	.narrow {
+		@include media($medium-screen) {
+			@include span-columns(6);
+			@include omega(2n);  
+		}    
+	}
 }
 
 
 
 @mixin texture($bg-color, $texture-number, $inverted) { $texture-list: "paper.png"             // Fabric and paper
-  "rice_paper.png"
-  "noise_lines.png"
-  "fabric_plaid.png"
-  "first_aid_kit.png"
-  "texturetastic_gray.png"
-  "lil_fiber.png"
-  "tex2res5.png"
-  "skin_side_up.png"
-  "light_noise_diagonal.png"
-  "chruch.png"
-  "45degreee_fabric.png"
-  "bgnoise_lg.png"
-  "little_pluses.png"
-  "squairy_light.png"
-  "white_texture.png"
-  "binding_light.png"
-  "double_lined.png"      // Grid, mesh and squares
-  "grid.png"
-  "absurdidad.png"
-  "grid_noise.png"
-  "fancy_deboss.png"
-  "graphy.png"
-  "noise_pattern_with_crosslines.png"
-  "old_mathematics.png"
-  "ps_neutral.png"
-  "subtle_freckles.png"
-  "wavegrid.png"
-  "az_subtle.png"
-  "tiny_grid.png"
-  "wavegrid.png"
-  "gridme.png"
-  "noisy_grid.png"
-  "subtlenet2.png"
-  "white_carbon.png"
-  "lghtmesh.png"
-  "p5.png"                 // Dots
-  "worn_dots.png"
-  "subtle_dots.png"
-  "brillant.png"
-  "farmer.png"
-  "retina_dust.png"        // Lines
-  "pinstripe.png"
-  "line_horizontal1.png"
-  "line_horizontal2.png"
-  "linen.png" 
-  "vintage_speckles.png"   // Patina and irregular
-  "subtle_grunge.png"
-  "old_wall.png"
-  "brushed.png"
-  "stucco.png"
-  "mooning.png"
-  "husk.png"
-  "concrete_wall_2.png"
-  "noisy.png"
-  "concrete_wall_3.png"
-  "subtle_surface.png"
-  "dust.png"
-  "light_alu.png"
-  "corrugation.png" 
-  "kindajean.png"           // Diagonal
-  "line_diagonal1.png"
-  "line_diagonal2.png"
-  "groovepaper.png"
-  "brushed_alu.png"
-  "rough_diagonal.png"
-  "diagonal-noise.png"
-  "cross_scratches.png"
-  "striped_lens.png"
-  "debut_light.png"
-  "diagonal_waves.png"    // Special
-  "honey_im_subtle.png"
-  "pw_maze_white.png"
-  "subtle_zebra_3d.png"
-  "white_wave.png"
-  "circles.png"
-  "crosses.png"
-  "grilled.png"
-  "pw_pattern.png"
-  "struckaxiom.png"
-  "vichy.png"
-  "wavecut.png"
-  "whitey.png"
-  "cream_pixels.png"
-  "grey.png"
-  "shinedotted.png"
-  "stacked_circles.png"
-  ;
+	"rice_paper.png"
+	"noise_lines.png"
+	"fabric_plaid.png"
+	"first_aid_kit.png"
+	"texturetastic_gray.png"
+	"lil_fiber.png"
+	"tex2res5.png"
+	"skin_side_up.png"
+	"light_noise_diagonal.png"
+	"chruch.png"
+	"45degreee_fabric.png"
+	"bgnoise_lg.png"
+	"little_pluses.png"
+	"squairy_light.png"
+	"white_texture.png"
+	"binding_light.png"
+	"double_lined.png"      // Grid, mesh and squares
+	"grid.png"
+	"absurdidad.png"
+	"grid_noise.png"
+	"fancy_deboss.png"
+	"graphy.png"
+	"noise_pattern_with_crosslines.png"
+	"old_mathematics.png"
+	"ps_neutral.png"
+	"subtle_freckles.png"
+	"wavegrid.png"
+	"az_subtle.png"
+	"tiny_grid.png"
+	"wavegrid.png"
+	"gridme.png"
+	"noisy_grid.png"
+	"subtlenet2.png"
+	"white_carbon.png"
+	"lghtmesh.png"
+	"p5.png"                 // Dots
+	"worn_dots.png"
+	"subtle_dots.png"
+	"brillant.png"
+	"farmer.png"
+	"retina_dust.png"        // Lines
+	"pinstripe.png"
+	"line_horizontal1.png"
+	"line_horizontal2.png"
+	"linen.png" 
+	"vintage_speckles.png"   // Patina and irregular
+	"subtle_grunge.png"
+	"old_wall.png"
+	"brushed.png"
+	"stucco.png"
+	"mooning.png"
+	"husk.png"
+	"concrete_wall_2.png"
+	"noisy.png"
+	"concrete_wall_3.png"
+	"subtle_surface.png"
+	"dust.png"
+	"light_alu.png"
+	"corrugation.png" 
+	"kindajean.png"           // Diagonal
+	"line_diagonal1.png"
+	"line_diagonal2.png"
+	"groovepaper.png"
+	"brushed_alu.png"
+	"rough_diagonal.png"
+	"diagonal-noise.png"
+	"cross_scratches.png"
+	"striped_lens.png"
+	"debut_light.png"
+	"diagonal_waves.png"    // Special
+	"honey_im_subtle.png"
+	"pw_maze_white.png"
+	"subtle_zebra_3d.png"
+	"white_wave.png"
+	"circles.png"
+	"crosses.png"
+	"grilled.png"
+	"pw_pattern.png"
+	"struckaxiom.png"
+	"vichy.png"
+	"wavecut.png"
+	"whitey.png"
+	"cream_pixels.png"
+	"grey.png"
+	"shinedotted.png"
+	"stacked_circles.png"
+	;
 
-  @if ($inverted == 1) {
-    background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/inverted/#{nth($texture-list, $texture-number)}");
-    background-color: $bg-color;
-  }
+	@if ($inverted == 1) {
+		background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/inverted/#{nth($texture-list, $texture-number)}");
+		background-color: $bg-color;
+	}
 
-  @else {
-    background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/#{nth($texture-list, $texture-number)}");
-    background-color: $bg-color;
-  }
+	@else {
+		background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/#{nth($texture-list, $texture-number)}");
+		background-color: $bg-color;
+	}
 }

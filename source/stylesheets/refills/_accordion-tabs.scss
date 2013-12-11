@@ -9,93 +9,93 @@ $tab-inactive-hover-color: darken($light-gray, 5);
 
 .accordion-tabs { // small screens: accordion
 
-  @include clearfix;
-  width: 100%;
-  margin-bottom: $base-line-height;
-  border: $tab-border;
-  border-radius: $base-border-radius;
+	@include clearfix;
+	width: 100%;
+	margin-bottom: $base-line-height;
+	border: $tab-border;
+	border-radius: $base-border-radius;
 
-  li {
-    list-style: none; 
-    display: block;
+	li {
+		list-style: none; 
+		display: block;
 
-    &:first-child a {
-      border-top: 0;
-      border-top-right-radius: $base-border-radius; 
-      border-top-left-radius: $base-border-radius; 
-    }
+		&:first-child a {
+			border-top: 0;
+			border-top-right-radius: $base-border-radius; 
+			border-top-left-radius: $base-border-radius; 
+		}
 
-    &:last-child a {
-      border-bottom-right-radius: $base-border-radius; 
-      border-bottom-left-radius: $base-border-radius; 
-    }
+		&:last-child a {
+			border-bottom-right-radius: $base-border-radius; 
+			border-bottom-left-radius: $base-border-radius; 
+		}
 
-    a {
-      display: block;
-      padding: 0.5em 1em;
-      font-weight: bold;
-      background-color: $tab-inactive-color;
-      text-decoration: none;
-      color: $dark-gray;
-      border-top: $tab-border;
+		a {
+			display: block;
+			padding: 0.5em 1em;
+			font-weight: bold;
+			background-color: $tab-inactive-color;
+			text-decoration: none;
+			color: $dark-gray;
+			border-top: $tab-border;
 
-      &:hover {
-        color: $base-link-color;
-      } 
+			&:hover {
+				color: $base-link-color;
+			} 
 
-      &.active {
-        background-color: $tab-active-color;
-        border-bottom: 0;
-      }
-    }
+			&.active {
+				background-color: $tab-active-color;
+				border-bottom: 0;
+			}
+		}
 
-    section {
-      padding: 1em;
-      display: none; 
-      background-color: $tab-content-color;
-      overflow: hidden; 
-    }
-  }
+		section {
+			padding: 1em;
+			display: none; 
+			background-color: $tab-content-color;
+			overflow: hidden; 
+		}
+	}
 }
 
 @include media($medium-screen) { // turns into tabs
-  .accordion-tabs {
-    position: relative; 
-    border: none; 
+	.accordion-tabs {
+		position: relative; 
+		border: none; 
 
-    li { 
-      display: inline; 
+		li { 
+			display: inline; 
 
-      &:last-child a {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-      }
+			&:last-child a {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
 
-      a {
-        display: inline-block; 
-        border-top: 0;
-        border-top-right-radius: $base-border-radius; 
-        border-top-left-radius: $base-border-radius; 
+			a {
+				display: inline-block; 
+				border-top: 0;
+				border-top-right-radius: $base-border-radius; 
+				border-top-left-radius: $base-border-radius; 
 
-        &.active {
-          background-color: $tab-active-color;
-          border-bottom: 1px solid $tab-active-color;
-          margin-bottom: -1px;
-          
-          border-top: $tab-border;
-          border-left: $tab-border;
-          border-right: $tab-border;
-        }
-      }
-    }
+				&.active {
+					background-color: $tab-active-color;
+					border-bottom: 1px solid $tab-active-color;
+					margin-bottom: -1px;
+					
+					border-top: $tab-border;
+					border-left: $tab-border;
+					border-right: $tab-border;
+				}
+			}
+		}
 
-    section { 
-      padding: 1em;
-      border: $tab-border;
-      border-bottom-left-radius: $base-border-radius; 
-      border-bottom-right-radius: $base-border-radius; 
-      float: left;
-      left: 0;  
-    }
-  }
+		section { 
+			padding: 1em;
+			border: $tab-border;
+			border-bottom-left-radius: $base-border-radius; 
+			border-bottom-right-radius: $base-border-radius; 
+			float: left;
+			left: 0;  
+		}
+	}
 }

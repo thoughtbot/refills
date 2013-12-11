@@ -1,0 +1,126 @@
+$tab-border-color: $base-border-color;
+$tab-border: 1px solid $tab-border-color;
+$tab-content-background: lighten($tab-border-color, 10);
+$tab-active-color: $tab-content-background;
+$tab-inactive-color: $base-body-color;
+
+$vertical-tabs-height: 300px;
+
+
+.vertical-tabs { // small screens: accordion
+  @include clearfix;
+  width: 100%;
+  margin-bottom: $base-line-height;
+  border: $tab-border;
+  border-radius: $base-border-radius;
+
+  ul.tabs {
+    display: none;
+  }
+
+  .tab_container {
+    display: block;
+    margin: 0 auto;
+
+    .tab_content {
+      padding: 1em;
+      background-color: $tab-content-background;
+
+      &:last-child {
+        border-bottom-left-radius: $base-border-radius;
+        border-bottom-right-radius: $base-border-radius;
+      }
+    }
+  }
+
+  .tab_drawer_heading {
+    padding: 0.5em 1em;
+    margin: 0;
+    border-top: $tab-border;
+    font-weight: bold;
+    background-color: $tab-inactive-color;
+    text-decoration: none;
+    color: $dark-gray;
+    display: block;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:hover {
+      color: $base-accent-color;
+    }
+
+    &:first-child {
+      border-top: none;
+      border-top-right-radius: $base-border-radius; 
+      border-top-left-radius: $base-border-radius; 
+    }
+
+    &.accordion_active {
+    	background: $tab-active-color;
+    	border-bottom: none;
+  	}
+  }
+
+  @include media($medium-screen) { // turns into tabs
+    .tab_content,
+    .tab_drawer_heading {
+      display: none;
+    }
+
+    ul.tabs {
+      float: left;
+      width: 20%;
+      display: inline;
+      vertical-align: top;
+      height: $vertical-tabs-height;
+      border-right: none;
+      border-top-left-radius: $base-border-radius;
+      border-bottom-left-radius: $base-border-radius;
+      background-color: $tab-inactive-color;
+
+      li {
+        cursor: pointer;
+        padding: 0.5em 1em;
+        font-weight: bold;
+        border-bottom: $tab-border;
+
+        &:hover {
+          color: $base-accent-color;
+        }
+
+        &:first-child.active {
+          border-top-left-radius: $base-border-radius;
+        }
+
+        &.active {
+          background-color: $tab-content-background;
+        }
+      }
+    }
+
+    .tab_container {
+      background-color: $tab-content-background;
+      display: inline-block;
+      border-top-right-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+      width: 80%;
+      height: $vertical-tabs-height;
+
+      .tab_content {
+        border: none;
+      }
+
+      p {
+        border: none;
+        padding: 0;
+      }
+    }
+  }
+}
+
+// Based on code by Jett Miller jettmiller.net
