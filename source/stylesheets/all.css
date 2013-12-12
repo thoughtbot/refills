@@ -1724,6 +1724,9 @@ a.tooltip-item {
     display: block;
     padding-bottom: 0; }
 
+.modal-open {
+  overflow: hidden; }
+
 .modal label {
   cursor: pointer; }
   .modal label img {
@@ -1850,7 +1853,7 @@ a.tooltip-item {
   opacity: 1;
   visibility: visible; }
 
-.modal-state:checked + .modal-window .modal__inner {
+.modal-state:checked + .modal-window .modal-inner {
   top: 0; }
 
 .btn {
