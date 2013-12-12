@@ -1,25 +1,23 @@
-.dropdown-menus {
-  $dropdown-menu-border-color: $base-border-color;
-  $dropdown-menu-border: 1px solid $dropdown-menu-border-color;
-  $dropdown-menu-background: lighten($dropdown-menu-border-color, 10);
-  $dropdown-menu-hover: lighten($dropdown-menu-background, 10);
-  $dropdown-menu-sub-background: darken($dropdown-menu-background, 5);
-  $dropdown-menu-sub-inset: darken($dropdown-menu-sub-background, 6);
-  $dropdown-menu-sub-hover: darken($dropdown-menu-sub-background, 5);
-  $dropdown-menu-list-padding: 0.5em;
-
-  border: $dropdown-menu-border;
-  background-color: $dropdown-menu-background;
+.accordions {
+  $accordion-border-color: $base-border-color;
+  $accordion-border: 1px solid $accordion-border-color;
+  $accordion-background: lighten($accordion-border-color, 10);
+  $accordion-hover: lighten($accordion-background, 10);
+  $accordion-sub-background: darken($accordion-background, 5);
+  $accordion-sub-inset: darken($accordion-sub-background, 6);
+  $accordion-sub-hover: darken($accordion-sub-background, 5);
+  $accordion-list-padding: 0.5em;
+  background-color: $accordion-background;
+  border: $accordion-border;
 
   li {
-    border-bottom: $dropdown-menu-border;
-    padding-top: $dropdown-menu-list-padding;
-    padding-bottom: $dropdown-menu-list-padding;
+    border-bottom: $accordion-border;
+    padding-bottom: $accordion-list-padding;
+    padding-top: $accordion-list-padding;
 
     a {
-      padding-left: $dropdown-menu-list-padding;
-      margin-bottom: $dropdown-menu-list-padding;
-
+      margin-bottom: $accordion-list-padding;
+      padding-left: $accordion-list-padding;
     }
 
     &:last-child {
@@ -27,27 +25,26 @@
     }
 
     &:hover {
-      background-color: $dropdown-menu-hover;
+      background-color: $accordion-hover;
     }
   }
 
   ul.submenu {
-    margin-top: $dropdown-menu-list-padding;
     display: none;
+    margin-top: $accordion-list-padding;
 
     li {
-      background-color: $dropdown-menu-sub-background;
+      background-color: $accordion-sub-background;
 
       &:first-child {
-        box-shadow: inset 0 1px 1px $dropdown-menu-sub-inset;
-        border-top: $dropdown-menu-border;
+        border-top: $accordion-border;
+        box-shadow: inset 0 1px 1px $accordion-sub-inset;
       }
 
       &:hover {
-        background-color: $dropdown-menu-sub-hover;
+        background-color: $accordion-sub-hover;
       }
     }
-    
   }
   .expand {
     display: block;
