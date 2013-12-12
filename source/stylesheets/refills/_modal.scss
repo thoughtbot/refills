@@ -110,7 +110,7 @@ $modal-image-width: $modal-image-height;
 
   .modal-close {
     @include position(fixed, ($modal-padding /2) ($modal-padding /2) 0 0);
-    @include size(1.1em);
+    @include size(0.5em);
     cursor: pointer;
 
     &:after,
