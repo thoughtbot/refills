@@ -7,14 +7,13 @@
   $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
   $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
   $accordion-menu-list-padding: 0.5em;
-
-  border: $accordion-menu-border;
   background-color: $accordion-menu-background;
+  border: $accordion-menu-border;
 
   li {
     border-bottom: $accordion-menu-border;
-    padding-top: $accordion-menu-list-padding;
     padding-bottom: $accordion-menu-list-padding;
+    padding-top: $accordion-menu-list-padding;
 
     a {
       margin-bottom: $accordion-menu-list-padding;
@@ -38,8 +37,8 @@
       background-color: $accordion-menu-sub-background;
 
       &:first-child {
-        box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
         border-top: $accordion-menu-border;
+        box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
       }
 
       &:hover {
