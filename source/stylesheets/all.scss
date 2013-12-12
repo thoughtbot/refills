@@ -30,6 +30,7 @@
 @import "refills/vertical-tabs";
 @import "refills/image-cards";
 @import "refills/sliding-menu";
+@import "refills/switch-toggle";
 
 @mixin texture($bg-color, $texture-number, $inverted) { $texture-list: "paper.png"             // Fabric and paper
 	"rice_paper.png"
