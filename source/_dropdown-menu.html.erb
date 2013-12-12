@@ -1,34 +1,45 @@
-  <ul class="dropdown-menus"> 
-    <li class="expanded">
-      <a href="#" class="nolink">Item 1</a>
-      <ul class="submenu">
-        <li>
-          <a href="">Sub Item 1</a>
-        </li>
-        <li>
-          <a href="">Sub Item 2</a>
-        </li>
-      </ul>
-    </li>
-    <li class="expanded">
-      <a href="#" class="nolink">Item 2</a>
-      <ul class="submenu">
-        <li>
-          <a href="">Sub Item 1</a>
-        </li>
-        <li>
-          <a href="">Sub Item 2</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
+<section class="dropdown">
+  <div class="js-dropdown-link dropdown-link">Dropdown</div>
+  <div class="js-dropdown-menu dropdown-menu">
+    <ul>
+      <li>
+      <a href="#">Lettuce</a>
+      </li>
+      <li>
+      <a href="#">Tomato</a>
+      </li>
+      <li>
+      <a href="#">Onion</a>
+      </li>
+    </ul>
+  </div>
+</section>
 
 <script>
-  jQuery('.expanded').find('.nolink') // find the .nolink inside .expanded
-    .bind('click focus', function(){
-      jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
-      jQuery(this).parent().toggleClass('expand'); 
-      event.preventDefault()
-  });;
+  (function($) {
+    $.fn.clickToggle = function(func1, func2) {
+      var funcs = [func1, func2];
+      this.data('toggleclicked', 0);
+      this.click(function() {
+        var data = $(this).data();
+        var tc = data.toggleclicked;
+        $.proxy(funcs[tc], this)();
+        data.toggleclicked = (tc + 1) % 2;
+      });
+      return this;
+    };
+  }(jQuery));
+
+  $(document).ready(function () {
+    $('.js-dropdown-link').clickToggle(function() {
+      var menu = $(this).siblings('.js-dropdown-menu');
+      menu.css('top', $(this).outerHeight() + 15);
+      menu.fadeIn(150);
+      $(this).addClass("is-active");
+    }, function() {
+      var menu = $(this).siblings('.dropdown-menu');
+      menu.fadeOut(150);
+      $(this).removeClass("is-active");
+    });
+  });
 </script>
