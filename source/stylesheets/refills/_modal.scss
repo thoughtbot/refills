@@ -3,6 +3,10 @@ $modal-close-color: $light-gray;
 $modal-image-height: 135px;
 $modal-image-width: $modal-image-height;
 
+.modal-open {
+  overflow: hidden;
+}
+
 .modal {
   label {
     cursor: pointer;
@@ -10,10 +14,9 @@ $modal-image-width: $modal-image-height;
     img {
       $img-width: 300px;
       border-radius: $img-width/2;
-      max-width: $img-width;
-      margin: auto;
       display: block;
       margin-bottom: 2em;
+      max-width: $img-width;
     }
   }
 
@@ -23,124 +26,102 @@ $modal-image-width: $modal-image-height;
 }
 
 .modal-window {
+  @include transition(opacity .25s ease);
+  @include position(fixed, 0px 0px 0px 0px);
+  background: rgba(0,0,0, .85);
   opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   text-align: left;
-  background: rgba(0,0,0, .9);
-  transition: opacity .25s ease;
+  visibility: hidden;
   z-index: 999;
 
   .modal-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    @include position(absolute, 0px 0px 0px 0px);
     cursor: pointer;
   }
 
   .modal-inner {
-    transition: top .25s ease;
-    position: absolute;
-    top: -20%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 95%;
+    @include transition(opacity .25s ease);
+    @include position(absolute, -20% 0px 0px 0px);
+    border-radius: 3px;
+    background: white;
     margin: auto;
-    overflow: auto;
-    background: #fff;
-    padding: $modal-padding;
     max-height: 70%;
+    overflow: auto;
+    padding: $modal-padding;
+    width: 95%;
 
     @include media($medium-screen) {
-      width: 50%;  
+      width: 50%;
     }
 
     .img-wrapper-modal {
-      display: block;
-      height: $modal-image-height;
-      width: $modal-image-width;
-      border-radius: 190px;
+      @include size($modal-image-width $modal-image-height);
       background-color: $light-gray;
+      border-radius: 190px;
+      display: block;
 
       img {
-        padding: 30px;
+        @include size($modal-image-width $modal-image-height);
         content: '';
-        height: $modal-image-height;
-        width: $modal-image-width;
         display: block;
+        padding: 30px;
       }
-    }  
+    }
 
     h1 {
-      text-align: left;
       color: $base-font-color;
-      text-transform: capitalize;
       margin-bottom: .6em;
+      text-align: left;
+      text-transform: capitalize;
     }
 
     p {
+      font-size: $base-font-size;
       max-width: 100% !important;
       padding: 0;
-    }
-
-    p.intro {
-      color: $blue;
-      font-family: $sans-serif;
-      line-height: 1.6em;
-      margin-bottom: 1.7em;
       text-align: left;
-      font-size: $base-font-size;
-    }
 
-    p.body { 
-      color: $base-font-color;
-      line-height: 1.45em;
-      text-align: left;
-      font-size: $base-font-size;
-      @include media($medium-screen) {
-        @include columns(2 8em);  
+      &.intro {
+        color: $blue;
+        line-height: 1.6em;
+      }
+
+      &.body { 
+        color: $base-font-color;
+        line-height: 1.45em;
+
+        @include media($medium-screen) {
+          @include columns(2 8em);
+        }
       }
     }
+
     a.cta {
+      color: white;
       display: inline-block;
-      margin-top: 1em;
       margin-right: .5em;
-      color: #fff;
-      
+      margin-top: 1em;
+
       &:last-child {
-        padding-left: 2em;
-        padding-right: 2em;
+        padding: 0 2em;
       }
     }
   }
 
   .modal-close {
-    position: fixed;
-    right: $modal-padding /2;
-    top: $modal-padding /2;
-    width: 1.1em;
-    height: 1.1em;
-    cursor: pointer;  
+    @include position(fixed, ($modal-padding /2) ($modal-padding /2) 0 0);
+    @include size(0.5em);
+    cursor: pointer;
 
     &:after,
     &:before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      height: 1.5em;
-      background: $modal-close-color;
-      display: block;
+      @include position(absolute, 0px 0 0 -50%);
       @include transform(rotate(45deg));
-      left: 50%;
+      @include size(.15em 1.5em);
+      background: $modal-close-color;
+      content: '';
+      display: block;
       margin: -3px 0 0 -1px;
-      top: 0;
     }
 
     &:hover:after,
@@ -159,7 +140,7 @@ $modal-image-width: $modal-image-height;
   visibility: visible;
 }
 
-.modal-state:checked + .modal-window .modal__inner {
+.modal-state:checked + .modal-window .modal-inner {
   top: 0;
 }
 
@@ -170,10 +151,10 @@ $modal-image-width: $modal-image-height;
 }
 
 p img {
-  max-width: 200px;
-  height: auto;
   float: left;
+  height: auto;
   margin: 0 1em 1em 0;
+  max-width: 200px;
 }
 
 // Based on code by Kasper Mikiewicz
