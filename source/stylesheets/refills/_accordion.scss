@@ -1,23 +1,25 @@
-.accordions {
-  $accordion-border-color: $base-border-color;
-  $accordion-border: 1px solid $accordion-border-color;
-  $accordion-background: lighten($accordion-border-color, 10);
-  $accordion-hover: lighten($accordion-background, 10);
-  $accordion-sub-background: darken($accordion-background, 5);
-  $accordion-sub-inset: darken($accordion-sub-background, 6);
-  $accordion-sub-hover: darken($accordion-sub-background, 5);
-  $accordion-list-padding: 0.5em;
-  background-color: $accordion-background;
-  border: $accordion-border;
+.accordion-menus {
+  $accordion-menu-border-color: $base-border-color;
+  $accordion-menu-border: 1px solid $accordion-menu-border-color;
+  $accordion-menu-background: lighten($accordion-menu-border-color, 10);
+  $accordion-menu-hover: lighten($accordion-menu-background, 10);
+  $accordion-menu-sub-background: darken($accordion-menu-background, 5);
+  $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
+  $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
+  $accordion-menu-list-padding: 0.5em;
+
+  border: $accordion-menu-border;
+  background-color: $accordion-menu-background;
 
   li {
-    border-bottom: $accordion-border;
-    padding-bottom: $accordion-list-padding;
-    padding-top: $accordion-list-padding;
+    border-bottom: $accordion-menu-border;
+    padding-top: $accordion-menu-list-padding;
+    padding-bottom: $accordion-menu-list-padding;
 
     a {
-      margin-bottom: $accordion-list-padding;
-      padding-left: $accordion-list-padding;
+      padding-left: $accordion-menu-list-padding;
+      margin-bottom: $accordion-menu-list-padding;
+
     }
 
     &:last-child {
@@ -25,26 +27,27 @@
     }
 
     &:hover {
-      background-color: $accordion-hover;
+      background-color: $accordion-menu-hover;
     }
   }
 
   ul.submenu {
+    margin-top: $accordion-menu-list-padding;
     display: none;
-    margin-top: $accordion-list-padding;
 
     li {
-      background-color: $accordion-sub-background;
+      background-color: $accordion-menu-sub-background;
 
       &:first-child {
-        border-top: $accordion-border;
-        box-shadow: inset 0 1px 1px $accordion-sub-inset;
+        box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
+        border-top: $accordion-menu-border;
       }
 
       &:hover {
-        background-color: $accordion-sub-hover;
+        background-color: $accordion-menu-sub-hover;
       }
     }
+    
   }
   .expand {
     display: block;
