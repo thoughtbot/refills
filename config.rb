@@ -1,3 +1,4 @@
+require 'erubis'
 ###
 # Compass
 ###
@@ -54,6 +55,11 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+ready do
+  sprockets.append_path 'vendor/stylesheets'
+  sprockets.append_path 'vendor/javascripts'
+end
 
 # Build-specific configuration
 configure :build do

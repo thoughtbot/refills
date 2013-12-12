@@ -7,6 +7,14 @@ body {
 
 $refills-nav-height: 60px;
 
+pre {
+  display: none;
+}
+
+a.is-active {
+  font-weight: bold;
+}
+
 .refills-header {
   width: 100%;
   margin: 0 0 $base-line-height*3;

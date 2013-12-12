@@ -38,9 +38,41 @@ title: Refills
   <div class="narrow">
   <div class="refill">
     <h3>Sliding Menu</h3>
-    <a href="">HTML</a>
-    <a href="">SCSS</a>
-  </div>  
+    <a href="#" class="js-show-code" data-language="markup">HTML</a>
+    <a href="#" class="js-show-code" data-language="scss">SCSS</a>
+    <a href="#" class="hide-code">Hide code</a>
+    <pre>
+      <code class='language-markup'>
+        <%== partial "sliding-menu" %>
+      </code>
+    </pre>
+
+    <pre>
+      <code class='language-scss'>
+        <% file_path = File.join(File.expand_path('../', __FILE__), 'stylesheets', 'refills', '_sliding-menu.scss') %>
+        <% File.readlines(file_path).each do |line| %>
+          <%= line.chomp %>
+        <% end %>
+      </code>
+    </pre>
+  </div>
+
+  <script>
+    $('a.js-show-code').on('click', function(e){
+      $('pre').hide();
+      language = this.getAttribute('data-language');
+      $(this).siblings('a').removeClass('is-active');
+      $(this).addClass('is-active');
+      $(this).siblings('.language-' + language).show();
+      e.preventDefault();
+    })
+
+    $('a.hide-code').on('click', function(e) {
+      $(this).siblings('a').removeClass('is-active');
+      $('pre').hide();
+      e.preventDefault();
+    });
+  </script>
   <%= partial "sliding-menu" %>
 </div>
 
