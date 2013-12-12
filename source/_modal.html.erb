@@ -1,6 +1,6 @@
 <div class="modal">
-  <label class="" for="modal-matt">
-    <div class="btn">Click for Modal</div>
+  <label for="modal-matt">
+    <div class="btn js-btn">Click for Modal</div>
   </label>
   <input class="modal-state" id="modal-matt" type="checkbox" />
   <div class="modal-window">
@@ -17,3 +17,18 @@
   </div>
 </div>
 
+<script>
+  $(document).ready(function () {
+    $('.modal').find('.js-btn').on('click', function() {
+      $(document.body).addClass('modal-open');
+    });
+
+    $('.modal-close').on('click', function() {
+      $(document.body).removeClass('modal-open');
+    })
+
+    $('.modal-bg').on('click', function() {
+      $(document.body).removeClass('modal-open');
+    })
+  })
+</script>
