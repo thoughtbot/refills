@@ -20,7 +20,7 @@ menu.sliding-menu-content {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 999999;
   width: 220px;
   height: 100%;
   background: $sliding-menu-background;
