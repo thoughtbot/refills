@@ -29,15 +29,18 @@
       padding: 0.5em 1em;
     }
 
-    p {
+    .card-content {
       padding-left: 1em;
       padding-right: 1em;
       padding-top: 1em;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
+      
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }  
     }
 
     h3 {

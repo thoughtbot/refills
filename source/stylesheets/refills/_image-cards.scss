@@ -1,0 +1,102 @@
+@mixin texture($bg-color, $texture-number) { 
+  $texture-list: "line_diagonal1.png";
+  background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/#{nth($texture-list, $texture-number)}");
+  background-color: $bg-color;
+  // see http://magnus-g.github.io/texture-mixin/ for info on how to use this texture mixin
+}
+
+.image-cards {
+  $image-card-border-color: $base-border-color;
+  $image-card-border: 1px solid $image-card-border-color;
+  $image-card-color: lighten($image-card-border-color, 10);
+  $image-card-header-color: $image-card-color;
+  $image-card-hover-color: darken($image-card-color, 5);
+
+  $image-card-height: 300px;
+
+  @include clearfix;
+  cursor: pointer;
+  margin-bottom: 1em;
+
+  .image-card {
+    height: $image-card-height;
+    border: $image-card-border;
+    background-color: $image-card-color;
+    border-radius: $base-border-radius;
+    margin-bottom: $base-line-height;
+
+    @include media($medium-screen) {
+      @include span-columns(4 of 12);
+    }
+
+    &.top {
+      .image-wrapper {
+        height: $image-card-height /2;
+        border-top-left-radius: $base-border-radius;
+        border-bottom-left-radius: $base-border-radius;
+      }
+    }
+
+    &.left {
+      .image-wrapper {
+        float: left;
+        height: $image-card-height;
+        width: 5%;
+        border-top-left-radius: $base-border-radius;
+        border-bottom-left-radius: $base-border-radius;
+      }
+      .image-card-content {
+        float: right;
+        width: 95%;
+      }
+    }
+
+    &.bottom {
+      position: relative;
+      .image-wrapper {
+        height: $image-card-height /2;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+    }
+
+    .image-wrapper {
+      @include texture($light-gray, 1); 
+      // see http://magnus-g.github.io/texture-mixin/ for info on how to use this texture mixin
+    }
+
+    .image-card-content {
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 1em;
+      
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }  
+    }
+
+    h3 {
+      font-weight: 800;
+    }
+
+    &:hover {
+      background-color: $image-card-hover-color;
+      .card-header {
+        background-color: $image-card-hover-color;
+      }
+    }
+
+    &:active {
+      background-color: $image-card-color;
+      .card-header {
+        background-color: $image-card-color;
+      }
+    }
+  }
+}

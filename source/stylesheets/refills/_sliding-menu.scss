@@ -1,0 +1,59 @@
+$sliding-menu-border-color: $dark-gray;
+$sliding-menu-background: lighten($sliding-menu-border-color, 5);
+$sliding-menu-color: white;
+$sliding-menu-border: 1px solid $sliding-menu-border-color;
+$sliding-menu-background-hover: $base-accent-color;
+$sliding-menu-color-hover: white;
+
+.menu-anchor {
+  @include button(simple, lighten($light-gray, 10));
+  @include tooltip($tooltip-placement);
+  font-size: $base-font-size;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+menu.sliding-menu-content {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 220px;
+  height: 100%;
+  background: $sliding-menu-background;
+  @include transform(translateX(-220px));
+  @include transition(all .25s linear);
+
+  li a {
+    display: block;
+    border-bottom: $sliding-menu-border;
+    padding: 1em;
+    font-weight: bold;
+    color: $sliding-menu-color;
+    &:hover {
+      background-color: $sliding-menu-background-hover;
+      color: $sliding-menu-color-hover;
+    }
+  }
+}
+
+.sliding-menu-moving-content, 
+.main {
+  @include transform(translateX(0));
+  @include transition(all .25s linear);
+}
+
+// .menu-active is added to <html> on click
+.menu-active menu {
+  @include transform(translateX(0));
+}
+
+.menu-active .sliding-menu-moving-content, 
+.menu-active .main {
+  @include transform(translateX(220px));
+}
+
+// Based on code by Diego Eis

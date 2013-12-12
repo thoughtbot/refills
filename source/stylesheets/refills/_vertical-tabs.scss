@@ -88,6 +88,7 @@ $vertical-tabs-height: 300px;
         padding: 0.5em 1em;
         font-weight: bold;
         border-bottom: $tab-border;
+        margin-right: -1px;
 
         &:hover {
           color: $base-accent-color;
@@ -99,6 +100,7 @@ $vertical-tabs-height: 300px;
 
         &.active {
           background-color: $tab-content-background;
+          margin-right: -1px;
         }
       }
     }

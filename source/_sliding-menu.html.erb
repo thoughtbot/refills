@@ -1,0 +1,20 @@
+<div class="sliding-menu-moving-content">
+  <a class="sliding-menu-trigger menu-anchor">Click for Sliding Menu</a>
+</div>
+
+<menu class="sliding-menu-content">
+  <ul>
+    <li><a href="#">Item 1</a></li>
+    <li><a href="#">Item 2</a></li>
+    <li><a href="#">Item 3</a></li>
+  </ul>
+</menu>
+
+<script>
+  $(document).ready(function(){
+    $('.menu-anchor').on('click touchstart', function(e){
+      $('html').toggleClass('menu-active');
+        e.preventDefault();
+    });
+  })
+</script>

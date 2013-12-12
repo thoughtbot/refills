@@ -40,7 +40,7 @@
   $(".tab_content").hide();
   $(".tab_content:first").show();
 
-	/* if in tab mode */
+  /* if in tab mode */
   $("ul.tabs li").click(function() {
   
     $(".tab_content").hide();
@@ -55,9 +55,9 @@
   
   });
 
-	/* if in drawer mode */
-	$(".tab_drawer_heading").click(function() {
-  	event.preventDefault()
+  /* if in drawer mode */
+  $(".tab_drawer_heading").click(function() {
+    event.preventDefault()
     
     $(".tab_content").hide();
     var accordion_activeTab = $(this).attr("rel"); 
