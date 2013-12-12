@@ -1,6 +1,6 @@
   <ul class="accordion-menus"> 
     <li class="expanded">
-      <a href="#" class="nolink">Item 1</a>
+      <a href="#" class="js-nolink">Item 1</a>
       <ul class="submenu">
         <li>
           <a href="">Sub Item 1</a>
@@ -11,7 +11,7 @@
       </ul>
     </li>
     <li class="expanded">
-      <a href="#" class="nolink">Item 2</a>
+      <a href="#" class="js-nolink">Item 2</a>
       <ul class="submenu">
         <li>
           <a href="">Sub Item 1</a>
@@ -25,7 +25,7 @@
 
 
 <script>
-  jQuery('.expanded').find('.nolink') // find the .nolink inside .expanded
+  jQuery('.expanded').find('.js-nolink') // find the .js-nolink inside .expanded
     .bind('click focus', function(){
       jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
       jQuery(this).parent().toggleClass('expand'); 

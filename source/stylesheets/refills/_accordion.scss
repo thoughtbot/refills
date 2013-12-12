@@ -17,9 +17,8 @@
     padding-bottom: $accordion-menu-list-padding;
 
     a {
-      padding-left: $accordion-menu-list-padding;
       margin-bottom: $accordion-menu-list-padding;
-
+      padding-left: $accordion-menu-list-padding;
     }
 
     &:last-child {
@@ -32,8 +31,8 @@
   }
 
   ul.submenu {
-    margin-top: $accordion-menu-list-padding;
     display: none;
+    margin-top: $accordion-menu-list-padding;
 
     li {
       background-color: $accordion-menu-sub-background;
@@ -47,8 +46,8 @@
         background-color: $accordion-menu-sub-hover;
       }
     }
-    
   }
+
   .expand {
     display: block;
     padding-bottom: 0;
