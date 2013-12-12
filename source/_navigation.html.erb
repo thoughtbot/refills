@@ -1,14 +1,36 @@
 <header class="navigation">
   <div class="menu-wrapper">
-  	<div class="logo">Logo</div>
-    <p>Menu</p>
+    <div class="logo">Logo</div>
+    <p id="js-mobile-menu">MENU</p>
     <div class="nav">
-      <ul>
-        <li><a href="">One</a></li>
-        <li><a href="">Two</a></li>
-        <li><a href="">Three</a></li>
-        <li><a href="">Four</a></li>
+      <ul id="navigation">
+        <li><a href="">Item 1</a></li>
+        <li><a href="">Item 2</a></li>
+        <li><a href="">Item 3</a></li>
+        <li><a href="">Item 4</a></li>
+        <li><a href="">Item 5</a></li>
       </ul>
     </div>
+    <ul class="nav-button">
+      <li><a href="">Nav Button</a></li>
+    </ul>
   </div>
 </header>
+
+
+
+<script>
+  $(function() {
+    var menu = $('#navigation');
+    var menuToggle = $('#js-mobile-menu');
+
+    $(menuToggle).on('click', function(e) {
+      e.preventDefault();
+      menu.slideToggle(function(){
+        if(menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+  });
+</script>
