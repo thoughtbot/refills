@@ -1,0 +1,54 @@
+.accordion-menus {
+  $accordion-menu-border-color: $base-border-color;
+  $accordion-menu-border: 1px solid $accordion-menu-border-color;
+  $accordion-menu-background: lighten($accordion-menu-border-color, 10);
+  $accordion-menu-hover: lighten($accordion-menu-background, 10);
+  $accordion-menu-sub-background: darken($accordion-menu-background, 5);
+  $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
+  $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
+  $accordion-menu-list-padding: 0.5em;
+  background-color: $accordion-menu-background;
+  border: $accordion-menu-border;
+
+  li {
+    border-bottom: $accordion-menu-border;
+    padding-bottom: $accordion-menu-list-padding;
+    padding-top: $accordion-menu-list-padding;
+
+    a {
+      margin-bottom: $accordion-menu-list-padding;
+      padding-left: $accordion-menu-list-padding;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    &:hover {
+      background-color: $accordion-menu-hover;
+    }
+  }
+
+  ul.submenu {
+    display: none;
+    margin-top: $accordion-menu-list-padding;
+
+    li {
+      background-color: $accordion-menu-sub-background;
+
+      &:first-child {
+        border-top: $accordion-menu-border;
+        box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
+      }
+
+      &:hover {
+        background-color: $accordion-menu-sub-hover;
+      }
+    }
+  }
+
+  .expand {
+    display: block;
+    padding-bottom: 0;
+  }
+}

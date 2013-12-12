@@ -1,56 +1,65 @@
-.dropdown-menus {
-  $dropdown-menu-border-color: $base-border-color;
-  $dropdown-menu-border: 1px solid $dropdown-menu-border-color;
-  $dropdown-menu-background: lighten($dropdown-menu-border-color, 10);
-  $dropdown-menu-hover: lighten($dropdown-menu-background, 10);
-  $dropdown-menu-sub-background: darken($dropdown-menu-background, 5);
-  $dropdown-menu-sub-inset: darken($dropdown-menu-sub-background, 6);
-  $dropdown-menu-sub-hover: darken($dropdown-menu-sub-background, 5);
-  $dropdown-menu-list-padding: 0.5em;
+@mixin ui-dropdown($align: center, $width: 180px, $style: null) {
 
-  border: $dropdown-menu-border;
-  background-color: $dropdown-menu-background;
+  @if $style == null {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgb(150,150,150);
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.3);
+    margin: 0px;
+    padding: 1px;
+    text-align: left;
 
-  li {
-    border-bottom: $dropdown-menu-border;
-    padding-top: $dropdown-menu-list-padding;
-    padding-bottom: $dropdown-menu-list-padding;
+    ul, ol {
+      margin: 0px;
+      overflow: scroll;
+      padding: 0px;
 
-    a {
-      padding-left: $dropdown-menu-list-padding;
-      margin-bottom: $dropdown-menu-list-padding;
+      > li {
+        list-style: none;
 
-    }
+        > a {
+          display: block;
+          margin: 2px 0px;
+          padding: 6px 15px;
+          text-decoration: none;
 
-    &:last-child {
-      border: none;
-    }
-
-    &:hover {
-      background-color: $dropdown-menu-hover;
-    }
-  }
-
-  ul.submenu {
-    margin-top: $dropdown-menu-list-padding;
-    display: none;
-
-    li {
-      background-color: $dropdown-menu-sub-background;
-
-      &:first-child {
-        box-shadow: inset 0 1px 1px $dropdown-menu-sub-inset;
-        border-top: $dropdown-menu-border;
-      }
-
-      &:hover {
-        background-color: $dropdown-menu-sub-hover;
+          &:hover {
+            background: rgb(248,248,248);
+          }
+        }
       }
     }
-    
   }
-  .expand {
-    display: block;
-    padding-bottom: 0;
+
+  @else {
+    @extend %#{$style};
   }
+
+  display: none;
+  position: absolute;
+  width: $width;
+  z-index: 20;
+
+  // position the dropdown absolute to its container
+  @if $align == center {
+    left: 50%;
+    margin-left: -($width/2);
+  }
+  @else {
+    #{$align}: 0%;
+  }
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-link {
+  @include button(simple, $base-accent-color);
+  font-size: $base-font-size;
+}
+
+.dropdown-menu {
+  @include ui-dropdown(left, 11.25em);
 }
