@@ -21,55 +21,36 @@ $tooltip-placement: top; // "top" or "bottom"
   }
 
   .tooltip {
+    @include position(absolute, 0 0 0 50%);
+    @include transition(all 0.15s linear);
+    #{$position}: -55px;
     background-color: $tooltip-color;
+    border-radius: $base-border-radius;
     box-sizing: border-box;
     color: white;
     font-weight: normal;
+    margin-left: -(200px/2);
     opacity: 0;
     padding: 0.5em 1em;
-    border-radius: $base-border-radius;
-    position: absolute;
     text-align: center;
     text-overflow: ellipsis;
     text-shadow: 0 1px 0 darken(rgb(80,80,80), 4%);
     text-transform: none;
-    transition: all 0.15s linear;
-    white-space: nowrap;
     visibility: hidden;
+    white-space: nowrap;
     width: 200px;
     z-index: 10;
-    #{$position}: -50px;
-    left: 50%;
-    margin-left: -(200px/2);
 
-    &:before,
     &:after {
-      display: block;
-      pointer-events: none;
-      position: absolute;
-      width: 0;
-      height: 0;
-      content: '';
+      @include size(0);
       border: 8px solid transparent;
-    }
-
-    &:before {
-      top: auto;
-      bottom: -18px;
-      left: auto;
-      right: auto;
-      left: 50%;
-      margin-left: -(8px + 1);
-    }
-
-    &:after {
       border-#{$position}-color: $tooltip-color;
-      $position: auto;
-      #{$opposite-position}: -16px;
-      left: auto;
-      right: auto;
-      left: 50%;
+      content: '';
+      pointer-events: none;
       margin-left: -8px;
+      @include position(absolute, 0 0 0px 50%);
+      $position: auto;
+      #{$opposite-position}: -14px;
     }
   }
 }
