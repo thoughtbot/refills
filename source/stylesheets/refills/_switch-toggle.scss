@@ -4,8 +4,10 @@ $switch-toggle-rectangle-radius: $base-border-radius;
 
 .switch-toggle {
   @include user-select(none);
+  @include inline-block;
   position: relative;
   width: $switch-toggle-width;
+  margin-bottom: $base-line-height;
 
   input.switch-checkbox {
     display: none;

@@ -15,6 +15,8 @@ $badge-font-size: $base-font-size * .75;
   line-height: 1;
   padding: 0 .5em;
   text-align: center;
+  @include inline-block;
+  margin-bottom: $base-line-height;
 
   &.dark {
     background: $badge-dark-color;

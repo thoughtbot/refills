@@ -58,6 +58,7 @@
 .dropdown-link {
   @include button(simple, $base-accent-color);
   font-size: $base-font-size;
+  margin-bottom: $base-line-height;
 }
 
 .dropdown-menu {

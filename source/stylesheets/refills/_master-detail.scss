@@ -6,8 +6,8 @@
   
   border-radius: $base-border-radius;
   @include clearfix;
-  margin-bottom: $base-line-height;
   border: $master-detail-border;  
+  margin-bottom: $base-line-height;
 
   .master {
     @include media($medium-screen) {

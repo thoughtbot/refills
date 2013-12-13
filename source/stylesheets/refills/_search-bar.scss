@@ -8,7 +8,7 @@
   background-color: $search-bar-background;
   border-radius: $base-border-radius;
   padding: 0.5em;
-  margin-bottom: 1em;
+  margin-bottom: $base-line-height;
 
   .search-item {
     @include fill-parent;

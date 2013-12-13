@@ -6,7 +6,6 @@ $item-list-background: lighten($item-list-border-color, 10);
 ul.item-list {
   @include clearfix;
   $item-list-height: 5em;
-  margin: 0 0 $base-line-height;
   
   li {
     margin-bottom: $base-line-height;

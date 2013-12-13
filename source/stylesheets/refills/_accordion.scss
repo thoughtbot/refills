@@ -9,6 +9,7 @@
   $accordion-menu-list-padding: $base-line-height/2 $gutter;
   background-color: $accordion-menu-background;
   border: $accordion-menu-border;
+  margin-bottom: $base-line-height;
 
   li {
     border-bottom: $accordion-menu-border;

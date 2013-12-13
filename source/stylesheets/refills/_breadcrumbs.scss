@@ -9,6 +9,9 @@
   border-radius: $base-border-radius;
   margin: 0;
   padding: 0;
+  border-radius: $base-border-radius;
+  display: inline-block;
+  margin-bottom: $base-line-height;
 
   a {
     @include inline-block;

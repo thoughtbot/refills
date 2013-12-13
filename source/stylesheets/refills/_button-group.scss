@@ -4,7 +4,8 @@ $button-group-active: $blue;
 
 .button-group {
   @include clearfix;
-
+  margin-bottom: $base-line-height;
+  
   button {
     @include button(simple, $button-group-background);
     font-size: $base-font-size;

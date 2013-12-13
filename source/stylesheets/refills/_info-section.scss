@@ -9,6 +9,7 @@
 	border-radius: $base-border-radius;
 	border: $info-section-border;
 	padding: 4em;
+	margin-bottom: $base-line-height;
 
 	@if lightness($info-section-color) < 50% {
 		color: white;

@@ -11,6 +11,7 @@ $sliding-menu-color-hover: white;
   display: inline-block;
   position: relative;
   cursor: pointer;
+  margin-bottom: $base-line-height;
 }
 
 menu.sliding-menu-content {

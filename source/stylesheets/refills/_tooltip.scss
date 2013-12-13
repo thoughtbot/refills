@@ -78,4 +78,5 @@ a.tooltip-item {
   @include button(simple, lighten($light-gray, 10));
   @include tooltip($tooltip-placement);
   font-size: $base-font-size;
+  margin-bottom: $base-line-height;
 }

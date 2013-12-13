@@ -3,6 +3,7 @@
 
 	background-color: $hero-background;
 	padding-bottom: 4em;
+	margin-bottom: $base-line-height;
 
 	.hero-inner {
 		@include outer-container;

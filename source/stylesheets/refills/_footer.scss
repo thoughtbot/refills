@@ -1,48 +1,56 @@
 .footer {
-  $footer-color: lighten($base-border-color, 10);
-  $footer-text-color: darken($footer-color, 25);
+	$footer-color: lighten($base-border-color, 10);
+	$footer-text-color: darken($footer-color, 25);
 
-  background-color: $footer-color;
-  padding: $base-line-height*2 0;
-  @include outer-container;
+	background-color: $footer-color;
+	padding: 1em 0;
+	margin-bottom: $base-line-height;
 
-  .footer-links {
-    @include clearfix;
-    margin-bottom: $base-line-height;
+	.footer-inner {
+		max-width: 1200px;
+		padding: 3em;
+		margin: auto;
 
-    @include media($medium-screen) {
-      @include shift(3);
-    }
-  }
+		.footer-links {
+			margin-bottom: 1em;
+			@include clearfix;
+			@include media($medium-screen) {
+				@include shift(3);	
+			}
+		}
 
-  ul {
-    margin-bottom: $base-line-height*2;
+		ul {
+			margin-bottom: 2em;
+			@include media($medium-screen) {
+				@include span-columns(3);
+				@include omega(3n);
+				@include clearfix;
+			}
+			li {
+				text-align: center;
+				@include media($medium-screen) {
+					text-align: left;
+				}
 
-    @include media($medium-screen) {
-      @include span-columns(3);
-      @include omega(3n);
-      @include clearfix;
-    }
 
-    li {
-      text-align: center;
+				a {
+					display: inline-block;
+				}
+			} 
+		}
 
-      @include media($medium-screen) {
-        text-align: left;
-      }
-    }
-  }
+		hr {
+			border-bottom: 1px solid $footer-text-color;
+			width: 12em;
+			margin: auto;
+			margin-bottom: 1em;
+		}
 
-  hr {
-    border-bottom: 1px solid $footer-text-color;
-    margin: 0 auto $base-line-height;
-    width: 12em;
-  }
-
-  p {
-    color: $footer-text-color;
-    margin: auto;
-    max-width: 35em;
-    text-align: center;
-  }
+		p {
+			margin: auto;
+			text-align: center;
+			color: $footer-text-color;
+			max-width: 35em;
+		}
+	}
 }

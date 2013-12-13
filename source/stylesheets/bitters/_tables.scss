@@ -3,6 +3,7 @@ $subtle-gray: lighten($light-gray, 10);
 table {
   margin: ($base-line-height / 2) 0;
   width: 100%;
+  margin-bottom: $base-line-height;
 }
 
 th {

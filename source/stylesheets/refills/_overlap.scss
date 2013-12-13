@@ -10,6 +10,10 @@ $overlap-border-color: $base-border-color;
 $overlap-border: 1px solid $overlap-border-color;
 $overlap-background: lighten($overlap-border-color, 10);
 
+.overlap-container {
+  margin-bottom: $base-line-height;
+}
+
 .overlap {
   @include outer-container;
   margin-bottom: -$overlap-height;

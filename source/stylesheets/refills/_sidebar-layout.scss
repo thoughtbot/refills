@@ -6,6 +6,7 @@ $sidebar-layout-section-background: lighten($sidebar-layout-border-color, 10);
 	@include clearfix;
 	height: 100%;
 	border: $sidebar-layout-border;
+	margin-bottom: $base-line-height;
 
 	aside {
 		height: 100%;

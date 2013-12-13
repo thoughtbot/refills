@@ -10,12 +10,12 @@ $modal-image-width: $modal-image-height;
 .modal {
   label {
     cursor: pointer;
+    margin-bottom: 0;
 
     img {
       $img-width: 300px;
       border-radius: $img-width/2;
       display: block;
-      margin-bottom: 2em;
       max-width: $img-width;
     }
   }
@@ -148,6 +148,7 @@ $modal-image-width: $modal-image-height;
 .btn {
   @include button(simple, $base-accent-color);
   font-size: $base-font-size;
+  margin-bottom: $base-line-height;
 }
 
 p img {

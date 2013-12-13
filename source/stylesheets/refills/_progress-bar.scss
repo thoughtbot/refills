@@ -15,6 +15,7 @@
   margin: 0 auto;
   padding: 2px;
   width: 100%;
+  margin-bottom: $base-line-height;
 
   > span.meter {
     @include animation(progress $progress-animation-duration linear infinite);
