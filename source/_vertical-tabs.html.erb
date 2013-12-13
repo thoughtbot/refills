@@ -1,72 +1,67 @@
 <div class="vertical-tabs">
-  <ul class="tabs">
-    <li class="active" rel="tab1">Item 1</li>
-    <li rel="tab2">Item 2</li>
-    <li rel="tab3">Item 3</li>
-    <li rel="tab4">Item 4</li>
-    <li rel="tab5">Item 5</li>
-  </ul>
+  <div class="tabs">
+    <a href="" class="tab active" rel="tab1">Item 1</a href="">
+    <a href="" class="tab" rel="tab2">Item 2</a href="">
+    <a href="" class="tab" rel="tab3">Item 3</a href="">
+    <a href="" class="tab" rel="tab4">Item 4</a href="">
+  </div>
 
-  <div class="tab_container">
-    <a href="" class="accordion_active tab_drawer_heading" rel="tab1">Item 1</a>
-    <div id="tab1" class="tab_content">
+  <div class="tab-container">
+    <a href="" class="accordion-active accordion-heading" rel="tab1">Item 1</a>
+    <div id="tab1" class="tab-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
     </div>
 
-    <a href="" class="tab_drawer_heading" rel="tab2">Item 2</a>
-    <div id="tab2" class="tab_content">
-      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
+    <a href="" class="accordion-heading" rel="tab2">Item 2</a>
+    <div id="tab2" class="tab-content">
+      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum.</p>
     </div>
 
-    <a href="" class="tab_drawer_heading" rel="tab3">Item 3</a>
-    <div id="tab3" class="tab_content">
+    <a href="" class="accordion-heading" rel="tab3">Item 3</a>
+    <div id="tab3" class="tab-content">
       <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
     </div>
 
-    <a href="" class="tab_drawer_heading" rel="tab4">Item 4</a>
-    <div id="tab4" class="tab_content">
+    <a href="" class="accordion-heading" rel="tab4">Item 4</a>
+    <div id="tab4" class="tab-content">
       <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.</p>
-    </div>
-
-    <a href="" class="tab_drawer_heading" rel="tab5">Item 5</a>
-    <div id="tab5" class="tab_content">
-      <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis.</p>
     </div>
   </div>
 </div>
 
 
 <script>
-  $(".tab_content").hide();
-  $(".tab_content:first").show();
+  $(".tab-content").hide();
+  $(".tab-content:first").show();
 
   /* if in tab mode */
-  $("ul.tabs li").click(function() {
+  $(".tabs .tab").click(function() {
+    event.preventDefault()
   
-    $(".tab_content").hide();
+    $(".tab-content").hide();
     var activeTab = $(this).attr("rel"); 
     $("#"+activeTab).show();    
   
-    $("ul.tabs li").removeClass("active");
+    $(".tabs .tab").removeClass("active");
     $(this).addClass("active");
 
-  $(".tab_drawer_heading").removeClass("accordion_active");
-  $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("accordion_active");
+  $(".accordion-heading").removeClass("accordion-active");
+  $(".accordion-heading[rel^='"+activeTab+"']").addClass("accordion-active");
   
   });
 
-  /* if in drawer mode */
-  $(".tab_drawer_heading").click(function() {
+  /* if in accordion mode */
+  $(".accordion-heading").click(function() {
     event.preventDefault()
     
-    $(".tab_content").hide();
+    $(".tab-content").hide();
     var accordion_activeTab = $(this).attr("rel"); 
     $("#"+accordion_activeTab).show();
   
-  $(".tab_drawer_heading").removeClass("accordion_active");
-    $(this).addClass("accordion_active");
+  $(".accordion-heading").removeClass("accordion-active");
+    $(this).addClass("accordion-active");
   
-  $("ul.tabs li").removeClass("active");
-  $("ul.tabs li[rel^='"+accordion_activeTab+"']").addClass("active");
+  $(".tabs .tab").removeClass("active");
+  $(".tabs .tab[rel^='"+accordion_activeTab+"']").addClass("active");
   });
 </script>
