@@ -51,7 +51,7 @@
 }
 
 .dropdown {
-  display: inline-block;
+  @include inline-block;
   position: relative;
 }
 
