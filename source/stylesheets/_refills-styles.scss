@@ -7,12 +7,8 @@ body {
 
 $refills-nav-height: 60px;
 
-pre {
+.js-hide-code, pre {
   display: none;
-}
-
-a.is-active {
-  font-weight: bold;
 }
 
 .refills-header {

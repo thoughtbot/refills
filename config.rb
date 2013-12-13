@@ -57,6 +57,10 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 helpers do
+  def snippet(snippet_name)
+    partial 'snippet', locals: { snippet: snippet_name }
+  end
+
   def html_snippet(partial_name)
     partial 'html_snippet', locals: { snippet: partial_name }
   end
