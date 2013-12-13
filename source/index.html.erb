@@ -48,21 +48,18 @@ title: Refills
     <%= partial "image-cards" %>
     <%= snippet('image-cards') %>
   </div>
-  
 
   <div id="vertical-tabs" class="refill">
     <h3>Vertical Tabs</h3>
     <%= partial "vertical-tabs" %>
     <%= snippet('vertical-tabs') %>
   </div>
-  
 
   <div id="accordion-tabs" class="refill">
     <h3>Accordion / Tabs</h3>
     <%= partial "accordion-tabs" %>
     <%= snippet('accordion-tabs') %>
   </div>
-  
 
   <div id="overlap" class="refill">
     <h3>Overlap</h3>
@@ -70,31 +67,17 @@ title: Refills
     <%= snippet('overlap') %>
   </div>
 
-  <div class="row">
-    <div class="narrow">
-      <div id="modal" class="refill">
-        <h3>Modal</h3>
-        <%= snippet('modal') %>
-      </div>
-      <%= partial "modal" %>
-    </div>
-
-    <div class="narrow">
-      <div id="progress-bar" class="refill">
-        <h3>Progress Bar</h3>
-        <%= snippet('progress-bar') %>
-      </div>
-      <%= partial "progress-bar" %>
-    </div>
+  <div id="modal" class="refill">
+    <h3>Modal</h3>
+    <%= partial "modal" %>
+    <%= snippet('modal') %>
   </div>
-  
-             
-  <div class="refill">
+
+  <div id="progress-bar" class="refill">
     <h3>Progress Bar</h3>
     <%= partial "progress-bar" %>
     <%= snippet('progress-bar') %>
   </div>
-  
 
   <div id="tooltip" class="refill">
     <h3>Tooltip</h3>
@@ -187,10 +170,6 @@ title: Refills
     <%= snippet('footer') %>
   </div>
 </div>
-
-
-
-
 
 <script>
   $('a.js-show-code').on('click', function(e){
