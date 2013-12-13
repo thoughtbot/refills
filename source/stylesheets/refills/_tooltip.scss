@@ -23,13 +23,13 @@ $tooltip-placement: top; // "top" or "bottom"
   .tooltip {
     @include position(absolute, 0 0 0 50%);
     @include transition(all 0.15s linear);
+    @include box-sizing(border-box);
     #{$position}: -55px;
     background-color: $tooltip-color;
     border-radius: $base-border-radius;
-    box-sizing: border-box;
     color: white;
     font-weight: normal;
-    margin-left: -(200px/2);
+    margin-left: -(em(200)/2);
     opacity: 0;
     padding: 0.5em 1em;
     text-align: center;
@@ -38,12 +38,12 @@ $tooltip-placement: top; // "top" or "bottom"
     text-transform: none;
     visibility: hidden;
     white-space: nowrap;
-    width: 200px;
+    width: em(200);
     z-index: 10;
 
     &:after {
       @include size(0);
-      @include position(absolute, 0 0 0 48%);
+      @include position(absolute, 0 0 0 em(200)/2);
       border: 8px solid transparent;
       border-#{$position}-color: $tooltip-color;
       content: '';
