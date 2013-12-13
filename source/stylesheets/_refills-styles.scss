@@ -14,7 +14,6 @@ $refills-nav-height: 60px;
   background-color: $base-body-color;
   clear: both;
   margin-top: $base-line-height * 2;
-  margin: 0 0 $base-line-height*3;
   width: 100%;
 
   a {
@@ -27,8 +26,18 @@ $refills-nav-height: 60px;
   }
 
   h2 {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 100;
+    margin: 0 0 $base-line-height*.25;
+
+    @include media($medium-screen) {
+      font-size: 3rem;
+    }
+
+    @include media($large-screen) {
+      font-size: 4rem;
+    }
+
   }
 
   .logo {
