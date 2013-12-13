@@ -43,14 +43,13 @@ $tooltip-placement: top; // "top" or "bottom"
 
     &:after {
       @include size(0);
+      @include position(absolute, 0 0 0 48%);
       border: 8px solid transparent;
       border-#{$position}-color: $tooltip-color;
       content: '';
       pointer-events: none;
-      margin-left: -8px;
-      @include position(absolute, 0 0 0px 50%);
+      #{$opposite-position}: -15px;
       $position: auto;
-      #{$opposite-position}: -14px;
     }
   }
 }
