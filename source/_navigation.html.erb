@@ -3,12 +3,10 @@
     <div class="logo">Logo</div>
     <p id="js-mobile-menu">MENU</p>
     <div class="nav">
-      <ul id="navigation">
+      <ul id="navigation-menu">
         <li><a href="">Item 1</a></li>
         <li><a href="">Item 2</a></li>
         <li><a href="">Item 3</a></li>
-        <li><a href="">Item 4</a></li>
-        <li><a href="">Item 5</a></li>
       </ul>
     </div>
     <ul class="nav-button">
@@ -21,7 +19,7 @@
 
 <script>
   $(function() {
-    var menu = $('#navigation');
+    var menu = $('#navigation-menu');
     var menuToggle = $('#js-mobile-menu');
 
     $(menuToggle).on('click', function(e) {
