@@ -12,12 +12,10 @@
 
   li {
     border-bottom: $accordion-menu-border;
-    padding-bottom: $accordion-menu-list-padding;
-    padding-top: $accordion-menu-list-padding;
 
-    a {
-      margin-bottom: $accordion-menu-list-padding;
-      padding-left: $accordion-menu-list-padding;
+    > a {
+      padding: $accordion-menu-list-padding;
+      display: block;
     }
 
     &:last-child {
@@ -31,7 +29,6 @@
 
   ul.submenu {
     display: none;
-    margin-top: $accordion-menu-list-padding;
 
     li {
       background-color: $accordion-menu-sub-background;
@@ -47,7 +44,7 @@
     }
   }
 
-  .expand {
+  .is-expanded {
     display: block;
     padding-bottom: 0;
   }
