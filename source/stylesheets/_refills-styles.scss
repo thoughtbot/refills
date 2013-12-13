@@ -123,7 +123,7 @@ $refills-nav-height: 60px;
   .refill {
     margin-bottom: 2em;
     padding-bottom: 3em;
-    border-bottom: 2px dashed $light-gray;
+    border-bottom: 1px dashed $light-gray;
     position: relative;
     @include clearfix;
 
@@ -170,10 +170,13 @@ pre {
 .snippet {
   display: none;
   padding: 0;
-  width: 50%;
   margin-top: $base-line-height !important;
-  float: left;
   height: em(400);
+
+  @include media($medium-screen) {
+    width: 50%;
+    float: left;
+  }
 
   code {
     max-height: em(400);    
