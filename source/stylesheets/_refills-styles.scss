@@ -45,7 +45,6 @@ $refills-nav-height: 60px;
   background-color: $base-body-color;
   clear: both;
   margin-top: $base-line-height * 2;
-  margin: 0 0 $base-line-height*3;
   width: 100%;
 
   a {
@@ -58,8 +57,18 @@ $refills-nav-height: 60px;
   }
 
   h2 {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 100;
+    margin: 0 0 $base-line-height*.25;
+
+    @include media($medium-screen) {
+      font-size: 3rem;
+    }
+
+    @include media($large-screen) {
+      font-size: 4rem;
+    }
+
   }
 
   .logo {
@@ -116,7 +125,7 @@ $refills-nav-height: 60px;
         background-color: $refills-color;
 
         &:hover {
-          background-color: darken($refills-color, 10);          
+          background-color: darken($refills-color, 10);
         }
 
 
@@ -206,6 +215,10 @@ $refills-nav-height: 60px;
 pre {
   height: 350px;
   border-top: 2px solid black;
+
+  @include media($medium-screen) {
+    box-shadow: -2px 0 0 rgba(0,0,0,0.1);
+  }
 }
 
 .copy-source {
@@ -228,9 +241,13 @@ pre {
     float: left;
   }
 
+  &:first-child {
+
+  }
+
   code {
-    max-height: em(400);    
-    font-size: $base-font-size/1.5;  
+    max-height: em(400);
+    font-size: $base-font-size/1.5;
     line-height: $base-line-height/2;
     overflow: scroll;
   }

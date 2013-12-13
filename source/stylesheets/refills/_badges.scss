@@ -9,19 +9,18 @@ $badge-font-size: $base-font-size * .75;
 .badges {
   display: block;
   margin-bottom: $base-line-height;
-  
 }
 
 .badge {
+  @include inline-block;
   background: $badge-color;
   border-radius: 2em;
   color: $badge-font-color;
   font-size: $badge-font-size;
   font-weight: 600;
   line-height: 1;
-  padding: 0 .5em;
+  padding: .25em 1em;
   text-align: center;
-  @include inline-block;
 
   &.dark {
     background: $badge-dark-color;
