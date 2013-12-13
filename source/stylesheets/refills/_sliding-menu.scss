@@ -7,7 +7,6 @@ $sliding-menu-color-hover: white;
 
 .menu-anchor {
   @include button(simple, lighten($light-gray, 10));
-  @include tooltip($tooltip-placement);
   font-size: $base-font-size;
   display: inline-block;
   position: relative;
