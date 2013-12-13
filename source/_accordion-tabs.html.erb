@@ -1,5 +1,5 @@
 <ul class="accordion-tabs">
-  <li><a href="#" class="active">Item 1</a>
+  <li><a href="#" class="is-active">Item 1</a>
     <section>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
     </section>
@@ -22,27 +22,20 @@
 </ul>
 
 <script>
-$(document).ready(function () {
+  $(document).ready(function () {
+    $('.accordion-tabs').children('li').first().children('a').addClass('is-active')
+      .next().addClass('is-open').show();
 
-  $('.accordion-tabs').children('li').first().children('a').addClass('active')
-    .next().addClass('is-open').show();
-
-  $('.accordion-tabs').on('click', 'li > a', function() {
-
-    if (!$(this).hasClass('active')) {
-
-      event.preventDefault()
-
-      $('.accordion-tabs .is-open').removeClass('is-open').hide();
-      $(this).next().toggleClass('is-open').toggle();
-
-      $('.accordion-tabs').find('.active').removeClass('active');
-        $(this).addClass('active');
-    }
-
-    else {
-      event.preventDefault()
-    }
+    $('.accordion-tabs').on('click', 'li > a', function() {
+      if (!$(this).hasClass('is-active')) {
+        event.preventDefault();
+        $('.accordion-tabs .is-open').removeClass('is-open').hide();
+        $(this).next().toggleClass('is-open').toggle();
+        $('.accordion-tabs').find('.is-active').removeClass('is-active');
+        $(this).addClass('is-active');
+      } else {
+        event.preventDefault();
+      }
+    });
   });
-});
 </script>

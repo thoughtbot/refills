@@ -4,20 +4,19 @@
   $card-color: lighten($card-border-color, 10);
   $card-header-color: $card-color;
   $card-hover-color: darken($card-color, 5);
-
   @include clearfix;
   cursor: pointer;
-  margin-bottom: 1em;
+  margin-bottom: $base-line-height;
 
   .card {
-    height: 190px;
-    border: $card-border;
     background-color: $card-color;
     border-radius: $base-border-radius;
+    border: $card-border;
+    height: em(190);
     margin-bottom: $base-line-height;
 
     @include media($medium-screen) {
-      @include span-columns(4 of 12);
+      @include span-columns(4);
     }
 
     .card-header {
@@ -26,29 +25,25 @@
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
       font-weight: bold;
-      padding: 0.5em 1em;
+      padding: $base-line-height/2 $gutter/2;
     }
 
     .card-content {
-      padding-left: 1em;
-      padding-right: 1em;
-      padding-top: 1em;
-      
+      padding: $base-line-height/2 $gutter/2;
+      padding-bottom: 0;
+
       p {
+        @include box-orient(vertical);
+        @include display-box;
+        @include prefixer(line-clamp, 4, webkit moz ms o spec);
         overflow: hidden;
         text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-      }  
-    }
-
-    h3 {
-      font-weight: 800;
+      }
     }
 
     &:hover {
       background-color: $card-hover-color;
+
       .card-header {
         background-color: $card-hover-color;
       }
@@ -56,6 +51,7 @@
 
     &:active {
       background-color: $card-color;
+
       .card-header {
         background-color: $card-color;
       }

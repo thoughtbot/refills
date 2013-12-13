@@ -4,11 +4,10 @@ $button-group-active: $blue;
 
 .button-group {
   @include clearfix;
-  
+
   button {
     @include button(simple, $button-group-background);
     font-size: $base-font-size;
-    outline: none;
     float: left;
 
     &.active {
@@ -21,13 +20,13 @@ $button-group-active: $blue;
       border-bottom-right-radius: 0;
     }
     &:not(:first-child):not(:last-child) {
-      border-radius: 0;
       border-left: 1px solid $button-group-border-highlight;
+      border-radius: 0;
     }
     &:last-child {
-      border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       border-left: 1px solid $button-group-border-highlight;
+      border-top-left-radius: 0;
     }
   }
 }
