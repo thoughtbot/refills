@@ -1,11 +1,11 @@
-$st-width: 72px;
-$st-rounded-radius: $st-width / 2;
-$st-rectangle-radius: 3px;
+$switch-toggle-width: 5em;
+$switch-toggle-rounded-radius: $switch-toggle-width / 2;
+$switch-toggle-rectangle-radius: $base-border-radius;
 
 .switch-toggle {
   @include user-select(none);
   position: relative;
-  width: $st-width;
+  width: $switch-toggle-width;
 
   input.switch-checkbox {
     display: none;
@@ -20,7 +20,7 @@ $st-rectangle-radius: 3px;
   }
 
   label.switch-label {
-    border-radius: $st-rounded-radius;
+    border-radius: $switch-toggle-rounded-radius;
     cursor: pointer;
     display: block;
     overflow: hidden;
@@ -52,7 +52,7 @@ $st-rectangle-radius: 3px;
 
     .switch-toggle-switch {
       @include size(24px);
-      @include position(absolute, 0px 35px 0px 0);
+      @include position(absolute, 0px ($switch-toggle-width / 1.8) 0px 0);
       @include transition(all 0.3s ease-in 0s);
       border-radius: 100%;
       margin: 6px;
@@ -63,10 +63,10 @@ $st-rectangle-radius: 3px;
 
   &.rectangle {
     label.switch-label {
-      border-radius: $st-rectangle-radius;
+      border-radius: $switch-toggle-rectangle-radius;
 
       .switch-toggle-switch {
-        border-radius: $st-rectangle-radius;
+        border-radius: $switch-toggle-rectangle-radius;
       }
     }
   }
