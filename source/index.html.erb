@@ -41,20 +41,9 @@ title: Refills
     <a href="#" class="js-show-code" data-language="markup">HTML</a>
     <a href="#" class="js-show-code" data-language="scss">SCSS</a>
     <a href="#" class="hide-code">Hide code</a>
-    <pre>
-      <code class='language-markup'>
-        <%== partial "sliding-menu" %>
-      </code>
-    </pre>
+    <%= html_snippet 'sliding-menu' %>
 
-    <pre>
-      <code class='language-scss'>
-        <% file_path = File.join(File.expand_path('../', __FILE__), 'stylesheets', 'refills', '_sliding-menu.scss') %>
-        <% File.readlines(file_path).each do |line| %>
-          <%= line.chomp %>
-        <% end %>
-      </code>
-    </pre>
+    <%= stylesheet_snippet 'sliding-menu' %>
   </div>
 
   <script>
