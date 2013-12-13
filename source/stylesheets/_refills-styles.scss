@@ -151,6 +151,20 @@ $refills-nav-height: 60px;
   border-radius: $base-border-radius;
 }
 
+pre {
+  height: 350px;
+  border-top: 2px solid black;
+}
+
+.copy-source {
+  background-color: $dark-gray;
+  font-size: $base-font-size/2;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 0.3em 1em;
+}
+
 .snippet {
   display: none;
   padding: 0;
