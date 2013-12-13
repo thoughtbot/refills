@@ -1,0 +1,37 @@
+$sidebar-width: em(200);
+
+nav#menu {
+  display: none;
+
+  @include media($medium-screen) {
+    @include position(fixed, 0px 0 0 0px);
+    @include size($sidebar-width 100%);
+    display: block;
+    box-shadow: inset 1px 0 1px rgba(0,0,0,0.9);
+    background: $dark-gray;
+
+    ul {
+      padding: 1em;
+
+      li {
+        a {
+          color: $light-gray;
+          font-size: $base-font-size * 0.8;
+
+          &:hover {
+            color: #FFF;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.inner-content {
+  margin-left: auto;
+
+  @include media($medium-screen) {
+    margin-left: $sidebar-width;
+  }
+}

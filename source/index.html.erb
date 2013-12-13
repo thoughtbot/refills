@@ -17,57 +17,75 @@ title: Refills
     </div>
   </div>
 
-  <div class="refill">
-    <h3>Sliding Menu</h3>
-    <%= partial "sliding-menu" %>
-    <%= snippet('sliding-menu') %>
+<!--  <div class="refill">
+    <h3>Toggle Card</h3>
+    <a href="">HTML</a>
+    <a href="">SCSS</a>
   </div>
+  <%= partial "toggle-cards" %> -->
 
-  <div class="refill">
+<div id="sliding-menu" class="refill">
+  <h3>Sliding Menu</h3>
+  <%= partial "sliding-menu" %>
+  <%= snippet('sliding-menu') %>
+</div>
+
+<div class="narrow">
+  <div id="badges" class="refill">
     <h3>Badges</h3>
     <%= partial "badges" %>
     <%= snippet('badges') %>
   </div>
 
-  <div class="refill">
+  <div id="cards" class="refill">
     <h3>Cards</h3>
     <%= partial "cards" %>
     <%= snippet('cards') %>
   </div>
-  
 
-  <div class="refill">
+  <div id="image-cards" class="refill">
     <h3>Image Cards</h3>
     <%= partial "image-cards" %>
     <%= snippet('image-cards') %>
   </div>
   
 
-  <div class="refill">
+  <div id="vertical-tabs" class="refill">
     <h3>Vertical Tabs</h3>
     <%= partial "vertical-tabs" %>
     <%= snippet('vertical-tabs') %>
   </div>
   
 
-  <div class="refill">
+  <div id="accordion-tabs" class="refill">
     <h3>Accordion / Tabs</h3>
     <%= partial "accordion-tabs" %>
     <%= snippet('accordion-tabs') %>
   </div>
   
 
-  <div class="refill">
+  <div id="overlap" class="refill">
     <h3>Overlap</h3>
     <%= partial "overlap" %>
     <%= snippet('overlap') %>
   </div>
-  
 
-  <div class="refill">
-    <h3>Modal</h3>
-    <%= partial "modal" %>
-    <%= snippet('modal') %>
+  <div class="row">
+    <div class="narrow">
+      <div id="modal" class="refill">
+        <h3>Modal</h3>
+        <%= snippet('modal') %>
+      </div>
+      <%= partial "modal" %>
+    </div>
+
+    <div class="narrow">
+      <div id="progress-bar" class="refill">
+        <h3>Progress Bar</h3>
+        <%= snippet('progress-bar') %>
+      </div>
+      <%= partial "progress-bar" %>
+    </div>
   </div>
   
              
@@ -78,105 +96,96 @@ title: Refills
   </div>
   
 
-  <div class="refill">
+  <div id="tooltip" class="refill">
     <h3>Tooltip</h3>
     <%= partial "tooltip" %>
     <%= snippet('tooltip') %>
   </div>
-  
 
-  <div class="refill">
+  <div id="accordion" class="refill">
     <h3>Accordion</h3>
     <%= partial "accordion" %>
     <%= snippet('accordion') %>
   </div>
-  
 
-  <div class="refill">
+  <div id="dropdown-menu" class="refill">
     <h3>Dropdown Menu</h3>
     <%= partial "dropdown-menu" %>
     <%= snippet('dropdown-menu') %>
   </div>
-  
 
-  <div class="refill">
+  <div id="switch-toggle" class="refill">
     <h3>Switch Toggle</h3>
     <%= partial "switch-toggle" %>
     <%= snippet('switch-toggle') %>
   </div>
-  
 
-  <div class="refill">
+  <div id="search-bar" class="refill">
     <h3>Search bar</h3>
     <%= partial "search-bar" %>
     <%= snippet('search-bar') %>
   </div>
   
-  
-  <div class="refill">
+  <div id="tables" class="refill">
     <h3>Tables</h3>
     <%= partial "tables" %>
     <%= snippet('tables') %>
-  </div>  
-  
+  </div>
 
-  <div class="refill">
+  <div id="breadcrumbs" class="refill">
     <h3>Breadcrumbs</h3>
     <%= partial "breadcrumbs" %>
     <%= snippet('breadcrumbs') %>
-  </div>  
-  
+  </div>
 
-  <div class="refill">
+  <div id="button-group" class="refill">
     <h3>Button Group</h3>
     <%= partial "button-group" %>
     <%= snippet('button-group') %>
   </div>
-  
 
-  <div class="refill">
+  <div id="navigation" class="refill">
     <h3>Navigation</h3>
     <%= partial "navigation" %>
     <%= snippet('navigation') %>
-  </div>  
-  
-  <div class="refill">
+  </div>
+
+  <div id="item-list" class="refill">
     <h3>Item List</h3>
+    <%= partial "item-list" %>
     <%= snippet('item-list') %>
   </div>
-  <%= partial "item-list" %>
 
-  
-  <div class="refill">
+  <div id="master-detail" class="refill">
     <h3>Master and Detail</h3>
+    <%= partial "master-detail" %>
     <%= snippet('master-detail') %>
-  </div>  
-  <%= partial "master-detail" %>
+  </div>
 
-  <div class="refill">
+  <div id="sidebar-layout" class="refill">
     <h3>Sidebar Layout</h3>
+    <%= partial "sidebar-layout" %>
     <%= snippet('sidebar-layout') %>
   </div>
-  <%= partial "sidebar-layout" %>
 
-  <div class="refill">
+  <div id="info-section" class="refill">
     <h3>Info Section</h3> 
+    <%= partial "info-section" %>
     <%= snippet('info-section') %>
   </div>
-  <%= partial "info-section" %>
 
-  <div class="refill">
+  <div id="hero" class="refill">
     <h3>Hero Unit</h3>  
     <%= partial "hero" %>
     <%= snippet('hero') %>
   </div>
-  
-  <div class="refill">
+
+<div class="refills-wrapper">
+  <div id="footer" class="refill">
     <h3>Footer</h3> 
     <%= partial "footer" %>
     <%= snippet('footer') %>
   </div>
-
 </div>
 
 
@@ -206,5 +215,3 @@ title: Refills
     client.setText(code);
   });
 </script>
-
-
