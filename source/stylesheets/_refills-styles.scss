@@ -9,13 +9,27 @@ body {
 
 $refills-nav-height: 60px;
 
-
-
 .refills-header {
-  width: 100%;
-  margin: 0 0 $base-line-height*3;
-  height: $refills-nav-height;
+  @include clearfix;
   background-color: $base-body-color;
+  clear: both;
+  margin-top: $base-line-height * 2;
+  margin: 0 0 $base-line-height*3;
+  width: 100%;
+
+  a {
+    color: $base-font-color;
+    font-weight: bold;
+
+    &:hover, &:active, &:focus {
+      color: $refills-color;
+    }
+  }
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 100;
+  }
 
   .logo {
     font-weight: bold;
@@ -106,6 +120,11 @@ $refills-nav-height: 60px;
       }
     }
   }
+}
+
+
+.menu-wrapper {
+  @include clearfix;
 }
 
 /////////////////////////
