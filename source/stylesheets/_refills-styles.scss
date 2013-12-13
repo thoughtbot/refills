@@ -1,5 +1,7 @@
 $refills-color: lighten(desaturate(teal, 60), 40);
 $base-body-color: white;
+$base-border-color: lighten(gray, 10);
+$light-gray: lighten(gray, 10);
 
 body {
   background-color: $base-body-color; 
@@ -135,7 +137,7 @@ $refills-nav-height: 60px;
 
 .js-hide-code {
   display: none;
-  padding: 1em;
+  padding: 0.5em 1em;
   width: 8em;
   text-align: center;
   border: 1px solid $light-gray;
@@ -144,7 +146,7 @@ $refills-nav-height: 60px;
 
 .js-show-code {
   display: inline-block;
-  padding: 1em;
+  padding: 0.5em 1em;
   width: 8em;
   text-align: center;
   border: 1px solid $light-gray;
