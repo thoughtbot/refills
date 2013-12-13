@@ -123,6 +123,7 @@ $refills-nav-height: 60px;
     padding-bottom: 3em;
     border-bottom: 2px dashed $light-gray;
     position: relative;
+    @include clearfix;
 
     > h3 {
       padding-top: 0.5em;
@@ -134,17 +135,28 @@ $refills-nav-height: 60px;
 
 .js-hide-code {
   display: none;
+  padding: 1em;
+  width: 8em;
+  text-align: center;
+  border: 1px solid $light-gray;
+  border-radius: $base-border-radius;
 }
 
 .js-show-code {
-  display: block;
+  display: inline-block;
+  padding: 1em;
+  width: 8em;
+  text-align: center;
+  border: 1px solid $light-gray;
+  border-radius: $base-border-radius;
 }
 
 .snippet {
   display: none;
   padding: 0;
   width: 50%;
-  // float: left;
+  margin-top: $base-line-height !important;
+  float: left;
   height: em(400);
 
   code {

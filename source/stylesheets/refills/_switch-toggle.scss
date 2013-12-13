@@ -2,6 +2,10 @@ $switch-toggle-width: 5em;
 $switch-toggle-rounded-radius: $switch-toggle-width / 2;
 $switch-toggle-rectangle-radius: $base-border-radius;
 
+.switch-toggles {
+  display: block;
+}
+
 .switch-toggle {
   @include user-select(none);
   @include inline-block;

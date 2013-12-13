@@ -6,6 +6,12 @@ $badge-success-color: $success-color;
 $badge-font-color: #fff;
 $badge-font-size: $base-font-size * .75;
 
+.badges {
+  display: block;
+  margin-bottom: $base-line-height;
+  
+}
+
 .badge {
   background: $badge-color;
   border-radius: 2em;
@@ -16,7 +22,6 @@ $badge-font-size: $base-font-size * .75;
   padding: 0 .5em;
   text-align: center;
   @include inline-block;
-  margin-bottom: $base-line-height;
 
   &.dark {
     background: $badge-dark-color;

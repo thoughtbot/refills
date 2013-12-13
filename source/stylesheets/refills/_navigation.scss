@@ -17,8 +17,6 @@ header.navigation {
 
   .menu-wrapper {
     @include outer-container;
-    padding-left: 1em;
-    padding-right: 1em;
   }
 
   .logo {
@@ -29,7 +27,7 @@ header.navigation {
     float: left;    
     color: white;
     @include media($medium-screen) {
-      padding-left: 0;
+      padding-left: 1em;
     }
   }
 
@@ -54,6 +52,7 @@ header.navigation {
       margin: 0 auto;
       padding: 0;
       width: 100%;
+      z-index: 9999;
 
       li {
         position: relative;

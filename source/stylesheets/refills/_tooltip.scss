@@ -79,4 +79,7 @@ a.tooltip-item {
   @include tooltip($tooltip-placement);
   font-size: $base-font-size;
   margin-bottom: $base-line-height;
+  display: block;
+  max-width: 13em;
+  text-align: center;
 }
