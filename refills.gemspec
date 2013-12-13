@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["magnus@thoughtbot.com"]
   spec.description   = %q{Refills}
   spec.summary       = %q{Refills}
-  spec.homepage      = ""
+  spec.homepage      = "http://thoughtbot.github.io/refills/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

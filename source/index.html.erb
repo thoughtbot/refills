@@ -27,7 +27,7 @@ title: Refills
     <h3>Badges</h3>
     <%= partial "badges" %>
     <%= snippet('badges') %>
-  </div>                                                                                         
+  </div>
 
   <div class="refill">
     <h3>Cards</h3>
@@ -187,15 +187,23 @@ title: Refills
   $('a.js-show-code').on('click', function(e){
     $(this).hide();
     $(this).siblings('.js-hide-code').css('display', 'block');
-    $(this).siblings('pre').show();
+    $(this).siblings('.snippet').show();
     e.preventDefault();
   })
 
   $('a.js-hide-code').on('click', function(e) {
     $(this).hide();
     $(this).siblings('.js-show-code').css("display", "block");
-    $(this).siblings('pre').hide();
+    $(this).siblings('.snippet').hide();
     e.preventDefault();
+  });
+</script>
+
+<script>
+  client = new ZeroClipboard($('.copy-source'), {moviePath: 'images/ZeroClipboard.swf'})
+  client.on('dataRequested', function(client, args) {
+    code = $(this).siblings('pre').text();
+    client.setText(code);
   });
 </script>
 
