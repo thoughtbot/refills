@@ -7,9 +7,7 @@ body {
 
 $refills-nav-height: 60px;
 
-.js-hide-code, pre {
-  display: none;
-}
+
 
 .refills-header {
   width: 100%;
@@ -122,29 +120,39 @@ $refills-nav-height: 60px;
 
   .refill {
     margin-bottom: 2em;
-    h3 {
+    padding-bottom: 3em;
+    border-bottom: 2px dashed $light-gray;
+    position: relative;
+
+    > h3 {
       padding-top: 0.5em;
       margin-top: 1em;
-      margin-bottom: 0.3em;
-    }
-
-    a {
-      font-size: $base-font-size /1.5;
-      // border-bottom: 1px solid $light-gray;
-      padding-bottom: 0.5em;
-      margin-right: 1em;
-      color: darken($refills-color, 40);
-
-      &:hover {
-        color: darken($refills-color, 5);
-      }
-
-      &:active {
-        color: darken($refills-color, 7);
-        box-shadow: none;
-      }
+      margin-bottom: 1.3em;
     }
   }
+}
+
+.js-hide-code {
+  display: none;
+}
+
+.js-show-code {
+  display: block;
+}
+
+pre {
+  display: none;
+  padding: 0;
+  width: 50%;
+  float: left;
+
+  code {
+    max-height: em(400);
+    font-size: $base-font-size/2;  
+    line-height: $base-line-height/2;
+    overflow: scroll;
+  }
+  
 }
 
 .row {
