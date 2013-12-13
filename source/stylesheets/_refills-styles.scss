@@ -1,7 +1,38 @@
 $refills-color: lighten(desaturate(teal, 60), 40);
 $base-body-color: white;
+
+
+
 $base-border-color: lighten(gray, 10);
 $light-gray: lighten(gray, 10);
+
+
+
+.external {
+  // float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  width: 0;
+  height: 0;
+  background-image: url(../images/cat.png);
+  background-size: 50px 50px;
+  background-position: 90px 20px;
+  background-repeat: no-repeat;
+  border-bottom: 170px solid transparent;
+  border-right: 170px solid transparentize(teal, .5);
+  &:hover {
+    border-right: 170px solid transparentize(teal, .7);
+  }
+  &:active {
+    border-right: 170px solid transparentize(blue, .7);
+  }
+}
+
+
+
+
 
 body {
   background-color: $base-body-color; 
