@@ -94,7 +94,7 @@ $refills-nav-height: 60px;
         background-color: $refills-color;
 
         &:hover {
-          background-color: darken($refills-color, 10);          
+          background-color: darken($refills-color, 10);
         }
 
 
@@ -184,6 +184,10 @@ $refills-nav-height: 60px;
 pre {
   height: 350px;
   border-top: 2px solid black;
+
+  @include media($medium-screen) {
+    box-shadow: -2px 0 0 rgba(0,0,0,0.1);
+  }
 }
 
 .copy-source {
@@ -206,9 +210,13 @@ pre {
     float: left;
   }
 
+  &:first-child {
+
+  }
+
   code {
-    max-height: em(400);    
-    font-size: $base-font-size/1.5;  
+    max-height: em(400);
+    font-size: $base-font-size/1.5;
     line-height: $base-line-height/2;
     overflow: scroll;
   }
