@@ -1,59 +1,57 @@
 $sliding-menu-border-color: $dark-gray;
 $sliding-menu-background: lighten($sliding-menu-border-color, 5);
-$sliding-menu-color: white;
+$sliding-menu-color: #fff;
 $sliding-menu-border: 1px solid $sliding-menu-border-color;
 $sliding-menu-background-hover: $base-accent-color;
-$sliding-menu-color-hover: white;
+$sliding-menu-color-hover: #fff;
 
 .menu-anchor {
   @include button(simple, lighten($light-gray, 10));
-  font-size: $base-font-size;
-  display: inline-block;
-  position: relative;
+  @include inline-block;
   cursor: pointer;
+  font-size: $base-font-size;
   margin-bottom: $base-line-height;
+  position: relative;
 }
 
-menu.sliding-menu-content {
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999999;
-  width: 220px;
-  height: 100%;
-  background: $sliding-menu-background;
+.sliding-menu-content {
+  @include position(fixed, 0px auto 0px 0px);
+  @include size(220px 100%);
   @include transform(translateX(-220px));
   @include transition(all .25s linear);
+  background: $sliding-menu-background;
+  z-index: 999999;
 
   li a {
-    display: block;
     border-bottom: $sliding-menu-border;
-    padding: 1em;
-    font-weight: bold;
     color: $sliding-menu-color;
+    display: block;
+    font-weight: bold;
+    padding: 1em;
+
     &:hover {
       background-color: $sliding-menu-background-hover;
       color: $sliding-menu-color-hover;
     }
   }
+
+  &.is-visible {
+    @include transform(translateX(0));
+  }
 }
 
-.sliding-menu-moving-content, 
-.main {
-  @include transform(translateX(0));
-  @include transition(all .25s linear);
-}
+.menu-screen {
+  @include position(fixed, 0px 0px 0px 0px);
+  @include transition;
+  background: $sliding-menu-border-color;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999998;
 
-// .menu-active is added to <html> on click
-.menu-active menu {
-  @include transform(translateX(0));
-}
-
-.menu-active .sliding-menu-moving-content, 
-.menu-active .main {
-  @include transform(translateX(220px));
+  &.is-visible {
+    opacity: .4;
+    visibility: visible;
+  }
 }
 
 // Based on code by Diego Eis

@@ -1,20 +1,31 @@
-<div class="sliding-menu-moving-content">
-  <a class="sliding-menu-trigger menu-anchor">Click for Sliding Menu</a>
+<div>
+  <a class="js-menu-trigger menu-anchor">Click for Sliding Menu</a>
 </div>
 
-<menu class="sliding-menu-content">
+<nav class="js-menu sliding-menu-content">
   <ul>
     <li><a href="#">Item 1</a></li>
     <li><a href="#">Item 2</a></li>
     <li><a href="#">Item 3</a></li>
   </ul>
-</menu>
+</nav>
+
+<div class="js-menu-screen menu-screen">
+</div>
 
 <script>
   $(document).ready(function(){
-    $('.menu-anchor').on('click touchstart', function(e){
-      $('html').toggleClass('menu-active');
-        e.preventDefault();
+
+    $('.js-menu-trigger').on('click touchstart', function(e){
+      $('.js-menu').toggleClass('is-visible');
+      $('.js-menu-screen').toggleClass('is-visible');
+      e.preventDefault();
     });
-  })
+
+    $('.js-menu-screen').on('click touchstart', function(e){
+      $('.js-menu').toggleClass('is-visible');
+      $('.js-menu-screen').toggleClass('is-visible');
+      e.preventDefault();
+    });
+  });
 </script>
