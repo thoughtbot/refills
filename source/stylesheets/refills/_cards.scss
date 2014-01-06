@@ -1,60 +1,50 @@
+$card-border-color: $base-border-color;
+$card-border: 1px solid $card-border-color;
+$card-color: lighten($card-border-color, 10);
+$card-header-color: $card-color;
+$card-hover-color: darken($card-color, 5);
+
 .cards {
-  $card-border-color: $base-border-color;
-  $card-border: 1px solid $card-border-color;
-  $card-color: lighten($card-border-color, 10);
-  $card-header-color: $card-color;
-  $card-hover-color: darken($card-color, 5);
   @include clearfix;
   cursor: pointer;
   margin-bottom: $base-line-height;
+}
 
-  .card {
-    background-color: $card-color;
-    border-radius: $base-border-radius;
-    border: $card-border;
-    height: em(190);
-    margin-bottom: $base-line-height;
+.card {
+  background-color: $card-color;
+  border-radius: $base-border-radius;
+  border: $card-border;
+  margin-bottom: $base-line-height;
 
-    @include media($medium-screen) {
-      @include span-columns(4);
-    }
+  @include media($medium-screen) {
+    @include span-columns(4);
+  }
+
+  &:hover {
+    background-color: $card-hover-color;
 
     .card-header {
-      background-color: $card-header-color;
-      border-bottom: $card-border;
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
-      font-weight: bold;
-      padding: $base-line-height/2 $gutter/2;
-    }
-
-    .card-content {
-      padding: $base-line-height/2 $gutter/2;
-      padding-bottom: 0;
-
-      p {
-        @include box-orient(vertical);
-        @include display-box;
-        @include prefixer(line-clamp, 4, webkit moz ms o spec);
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-
-    &:hover {
       background-color: $card-hover-color;
-
-      .card-header {
-        background-color: $card-hover-color;
-      }
-    }
-
-    &:active {
-      background-color: $card-color;
-
-      .card-header {
-        background-color: $card-color;
-      }
     }
   }
+
+  &:active {
+    background-color: $card-color;
+
+    .card-header {
+      background-color: $card-color;
+    }
+  }
+}
+
+.card-header {
+  background-color: $card-header-color;
+  border-bottom: $card-border;
+  border-radius: $base-border-radius $base-border-radius 0 0;
+  font-weight: bold;
+  padding: $base-line-height/2 $gutter/2;
+}
+
+.card-content {
+  padding: $base-line-height/2 $gutter/2 0;
 }
