@@ -1,112 +1,90 @@
 $tab-border-color: $base-border-color;
 $tab-border: 1px solid $tab-border-color;
+$tab-border-radius: $base-border-radius;
 $tab-content-background: lighten($tab-border-color, 10);
 $tab-active-color: $tab-content-background;
 $tab-inactive-color: $base-body-color;
 $vertical-tabs-height: em(300);
 
-.vertical-tabs { // small screens: accordion
+.vertical-tabs-container { // small screens: accordion
   @include clearfix;
-  margin-bottom: $base-line-height;
+  border-radius: $tab-border-radius;
   border: $tab-border;
-  border-radius: $base-border-radius;
+  margin-bottom: $base-line-height;
+  overflow: hidden;
+}
 
-  .tabs {
+.vertical-tabs {
+  display: none;
+
+  @include media($medium-screen) {
+    background-color: $tab-inactive-color;
+    display: inline;
+    float: left;
+    height: $vertical-tabs-height;
+    width: 20%;
+  }
+}
+
+.vertical-tab {
+  @include media($medium-screen) {
+    border-bottom: $tab-border;
+    display: block;
+    font-weight: bold;
+    margin-right: -1px;
+    padding: $base-line-height/2 $gutter/2;
+
+    &.is-active {
+      background-color: $tab-content-background;
+      margin-right: -1px;
+    }
+  }
+}
+
+.vertical-tab-content-container {
+  display: block;
+  margin: 0 auto;
+
+  @include media($medium-screen) {
+    @include inline-block;
+    @include size(80% $vertical-tabs-height);
+    background-color: $tab-content-background;
+  }
+}
+
+.vertical-tab-content {
+  background-color: $tab-content-background;
+  padding: 1em;
+
+  @include media($medium-screen) {
+    border: none;
+    display: none;
+  }
+}
+
+.vertical-tab-accordion-heading {
+  background-color: $tab-inactive-color;
+  border-top: $tab-border;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  padding: $base-line-height/2 $gutter/2;
+
+  @include media($medium-screen) {
     display: none;
   }
 
-  .tab-container {
-    display: block;
-    margin: 0 auto;
-
-    .tab-content {
-      padding: 1em;
-      background-color: $tab-content-background;
-
-      &:last-child {
-        border-bottom-left-radius: $base-border-radius;
-        border-bottom-right-radius: $base-border-radius;
-      }
-    }
+  &:hover {
+    color: $base-accent-color;
   }
 
-  .accordion-heading {
-    padding: $base-line-height/2 $gutter/2;
-    border-top: $tab-border;
-    font-weight: bold;
-    background-color: $tab-inactive-color;
-    display: block;
-    cursor: pointer;
-
-    &:hover {
-      color: $base-accent-color;
-    }
-
-    &:first-child {
-      border-top: none;
-      border-top-right-radius: $base-border-radius; 
-      border-top-left-radius: $base-border-radius; 
-    }
-
-    &.accordion-active {
-    	background: $tab-active-color;
-    	border-bottom: none;
-  	}
+  &:first-child {
+    border-top: none;
   }
 
-  @include media($medium-screen) { // turns into tabs
-    .tab-content,
-    .accordion-heading {
-      display: none;
-    }
-
-    .tabs {
-      float: left;
-      width: 20%;
-      height: $vertical-tabs-height; 
-      display: inline; 
-      border-top-left-radius: $base-border-radius;
-      border-bottom-left-radius: $base-border-radius;
-      background-color: $tab-inactive-color;
-
-      .tab {
-        display: block;
-        padding: $base-line-height/2 $gutter/2;
-        font-weight: bold;
-        border-bottom: $tab-border;
-        margin-right: -1px;
-
-        &:hover {
-          color: $base-accent-color;
-        }
-
-        &:first-child.active {
-          border-top-left-radius: $base-border-radius;
-        }
-
-        &.active {
-          background-color: $tab-content-background;
-          margin-right: -1px;
-        }
-      }
-    }
-
-    .tab-container {
-      @include inline-block;
-      @include size(80% $vertical-tabs-height);
-      background-color: $tab-content-background;
-      border-top-right-radius: $base-border-radius;
-      border-bottom-right-radius: $base-border-radius;
-
-      .tab-content {
-        border: none;
-      }
-
-      p {
-        border: none;
-        padding: 0;
-      }
-    }
+  &.is-active {
+    background: $tab-active-color;
+    border-bottom: none;
   }
 }
 
