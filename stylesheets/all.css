@@ -1661,18 +1661,18 @@ pre {
     clear: both; }
   /* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_button-group.scss */
   .button-group button {
-    border: 1px solid #8f8f8f;
+    border: 1px solid darkgrey;
     border-radius: 3px;
-    box-shadow: inset 0 1px 0 0 #cccccc;
+    box-shadow: inset 0 1px 0 0 #e6e6e6;
     color: #333333;
     display: inline-block;
     font-size: 11px;
     font-weight: bold;
     text-shadow: none;
-    background-color: #b3b3b3;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b3b3b3), color-stop(100%, #b3b3b3));
-    background-image: -webkit-linear-gradient(#b3b3b3, #b3b3b3);
-    background-image: linear-gradient(#b3b3b3, #b3b3b3);
+    background-color: #cccccc;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cccccc), color-stop(100%, #cccccc));
+    background-image: -webkit-linear-gradient(#cccccc, #cccccc);
+    background-image: linear-gradient(#cccccc, #cccccc);
     padding: 7px 18px;
     text-decoration: none;
     background-clip: padding-box;
@@ -1680,20 +1680,20 @@ pre {
     float: left; }
     /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
     .button-group button:hover:not(:disabled) {
-      background-color: darkgrey;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, darkgrey), color-stop(100%, darkgrey));
-      background-image: -webkit-linear-gradient(darkgrey, darkgrey);
-      background-image: linear-gradient(darkgrey, darkgrey);
-      box-shadow: inset 0 1px 0 0 silver;
+      background-color: #c2c2c2;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c2c2c2), color-stop(100%, #c2c2c2));
+      background-image: -webkit-linear-gradient(#c2c2c2, #c2c2c2);
+      background-image: linear-gradient(#c2c2c2, #c2c2c2);
+      box-shadow: inset 0 1px 0 0 #d9d9d9;
       cursor: pointer; }
     /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
     .button-group button:active:not(:disabled) {
-      background-color: darkgrey;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, darkgrey), color-stop(100%, darkgrey));
-      background-image: -webkit-linear-gradient(darkgrey, darkgrey);
-      background-image: linear-gradient(darkgrey, darkgrey);
-      border: 1px solid #8f8f8f;
-      box-shadow: inset 0 0 1px 1px #9a9a9a, inset 0 0 1px 1px #9a9a9a, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
+      background-color: #c2c2c2;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c2c2c2), color-stop(100%, #c2c2c2));
+      background-image: -webkit-linear-gradient(#c2c2c2, #c2c2c2);
+      background-image: linear-gradient(#c2c2c2, #c2c2c2);
+      border: 1px solid darkgrey;
+      box-shadow: inset 0 0 1px 1px #b3b3b3, inset 0 0 1px 1px #b3b3b3, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
     /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
     .button-group button:disabled {
       opacity: 0.5;
@@ -1742,12 +1742,12 @@ pre {
       border-bottom-right-radius: 0; }
     /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_button-group.scss */
     .button-group button:not(:first-child):not(:last-child) {
-      border-left: 1px solid white;
+      border-left: 1px solid lighteni(#cccccc, 15);
       border-radius: 0; }
     /* line 27, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_button-group.scss */
     .button-group button:last-child {
       border-bottom-left-radius: 0;
-      border-left: 1px solid white;
+      border-left: 1px solid lighteni(#cccccc, 15);
       border-top-left-radius: 0; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
@@ -2165,7 +2165,7 @@ pre {
     /* line 64, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
     .image-cards .image-card .image-wrapper {
       background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/line_diagonal1.png");
-      background-color: #9a9a9a; }
+      background-color: silver; }
     /* line 69, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
     .image-cards .image-card .image-card-content {
       padding-left: 1em;
@@ -2698,6 +2698,114 @@ header.navigation {
       header.navigation ul.nav-button li:first-child:before {
         content: ''; } }
 
+/* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+.image-gradient {
+  background: url(http://organicclimber.com/wp-content/uploads/2012/06/EmeraldLake.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 12em;
+  position: relative;
+  width: 100%;
+  display: table;
+  margin-bottom: 1.5em; }
+  /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+  .image-gradient .copy {
+    position: absolute;
+    left: 50%;
+    margin: auto;
+    z-index: 999;
+    top: 40%;
+    text-align: center; }
+    /* line 32, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+    .image-gradient .copy p {
+      padding: 1em 2em;
+      position: relative;
+      left: -50%;
+      color: white;
+      font-weight: 800;
+      background-color: rgba(0, 0, 0, 0.4); }
+  /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+  .image-gradient .overlay {
+    background-color: rgba(0, 128, 128, 0.4);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 128, 128, 0.4)), color-stop(100%, rgba(0, 128, 0, 0.4)));
+    background-image: -webkit-linear-gradient(-450deg, rgba(0, 128, 128, 0.4), rgba(0, 128, 0, 0.4));
+    background-image: linear-gradient(180deg,rgba(0, 128, 128, 0.4), rgba(0, 128, 0, 0.4));
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; }
+    /* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+    .image-gradient .overlay:after {
+      content: '';
+      background-color: rgba(255, 0, 0, 0.1);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 0, 0, 0.1)), color-stop(100%, rgba(255, 255, 0, 0.2)));
+      background-image: -webkit-linear-gradient(-360deg, rgba(255, 0, 0, 0.1), rgba(255, 255, 0, 0.2));
+      background-image: linear-gradient(90deg,rgba(255, 0, 0, 0.1), rgba(255, 255, 0, 0.2));
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px; }
+
+/* line 60, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+.image-gradient-dynamic {
+  position: relative;
+  line-height: 0;
+  margin-bottom: 1.5em; }
+  /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+  .image-gradient-dynamic img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0; }
+  /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+  .image-gradient-dynamic .copy {
+    position: absolute;
+    left: 50%;
+    margin: auto;
+    z-index: 999;
+    top: 40%;
+    text-align: center; }
+    /* line 81, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+    .image-gradient-dynamic .copy p {
+      line-height: 1.5em;
+      padding: 1em 2em;
+      position: relative;
+      left: -50%;
+      color: white;
+      font-weight: 800;
+      background-color: rgba(0, 0, 0, 0.4); }
+  /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+  .image-gradient-dynamic .overlay {
+    background-color: rgba(0, 128, 128, 0.4);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 128, 128, 0.4)), color-stop(100%, rgba(0, 128, 0, 0.4)));
+    background-image: -webkit-linear-gradient(-450deg, rgba(0, 128, 128, 0.4), rgba(0, 128, 0, 0.4));
+    background-image: linear-gradient(180deg,rgba(0, 128, 128, 0.4), rgba(0, 128, 0, 0.4));
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; }
+    /* line 98, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+    .image-gradient-dynamic .overlay:after {
+      content: '';
+      background-color: rgba(255, 0, 0, 0.1);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 0, 0, 0.1)), color-stop(100%, rgba(255, 255, 0, 0.2)));
+      background-image: -webkit-linear-gradient(-360deg, rgba(255, 0, 0, 0.1), rgba(255, 255, 0, 0.2));
+      background-image: linear-gradient(90deg,rgba(255, 0, 0, 0.1), rgba(255, 255, 0, 0.2));
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px; }
+
 /* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_overlap.scss */
 .overlap-container {
   margin-bottom: 1.5em; }
@@ -2862,18 +2970,18 @@ header.navigation {
       margin: 0; }
     /* line 35, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-bar.scss */
     .search-bar div.search-and-submit input[type=submit] {
-      border: 1px solid #8f8f8f;
+      border: 1px solid darkgrey;
       border-radius: 3px;
-      box-shadow: inset 0 1px 0 0 #cccccc;
+      box-shadow: inset 0 1px 0 0 #e6e6e6;
       color: #333333;
       display: inline-block;
       font-size: 11px;
       font-weight: bold;
       text-shadow: none;
-      background-color: #b3b3b3;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b3b3b3), color-stop(100%, #b3b3b3));
-      background-image: -webkit-linear-gradient(#b3b3b3, #b3b3b3);
-      background-image: linear-gradient(#b3b3b3, #b3b3b3);
+      background-color: #cccccc;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cccccc), color-stop(100%, #cccccc));
+      background-image: -webkit-linear-gradient(#cccccc, #cccccc);
+      background-image: linear-gradient(#cccccc, #cccccc);
       padding: 7px 18px;
       text-decoration: none;
       background-clip: padding-box;
@@ -2882,24 +2990,23 @@ header.navigation {
       right: 0.3em;
       bottom: 0.3em;
       font-size: 1em;
-      color: #676767;
       outline: none; }
       /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
       .search-bar div.search-and-submit input[type=submit]:hover:not(:disabled) {
-        background-color: darkgrey;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, darkgrey), color-stop(100%, darkgrey));
-        background-image: -webkit-linear-gradient(darkgrey, darkgrey);
-        background-image: linear-gradient(darkgrey, darkgrey);
-        box-shadow: inset 0 1px 0 0 silver;
+        background-color: #c2c2c2;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c2c2c2), color-stop(100%, #c2c2c2));
+        background-image: -webkit-linear-gradient(#c2c2c2, #c2c2c2);
+        background-image: linear-gradient(#c2c2c2, #c2c2c2);
+        box-shadow: inset 0 1px 0 0 #d9d9d9;
         cursor: pointer; }
       /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
       .search-bar div.search-and-submit input[type=submit]:active:not(:disabled) {
-        background-color: darkgrey;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, darkgrey), color-stop(100%, darkgrey));
-        background-image: -webkit-linear-gradient(darkgrey, darkgrey);
-        background-image: linear-gradient(darkgrey, darkgrey);
-        border: 1px solid #8f8f8f;
-        box-shadow: inset 0 0 1px 1px #9a9a9a, inset 0 0 1px 1px #9a9a9a, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
+        background-color: #c2c2c2;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c2c2c2), color-stop(100%, #c2c2c2));
+        background-image: -webkit-linear-gradient(#c2c2c2, #c2c2c2);
+        background-image: linear-gradient(#c2c2c2, #c2c2c2);
+        border: 1px solid darkgrey;
+        box-shadow: inset 0 0 1px 1px #b3b3b3, inset 0 0 1px 1px #b3b3b3, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
       /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
       .search-bar div.search-and-submit input[type=submit]:disabled {
         opacity: 0.5;
@@ -2990,18 +3097,18 @@ header.navigation {
 
 /* line 8, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
 .menu-anchor {
-  border: 1px solid #8f8f8f;
+  border: 1px solid darkgrey;
   border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #cccccc;
+  box-shadow: inset 0 1px 0 0 #e6e6e6;
   color: #333333;
   display: inline-block;
   font-size: 11px;
   font-weight: bold;
   text-shadow: none;
-  background-color: #b3b3b3;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b3b3b3), color-stop(100%, #b3b3b3));
-  background-image: -webkit-linear-gradient(#b3b3b3, #b3b3b3);
-  background-image: linear-gradient(#b3b3b3, #b3b3b3);
+  background-color: #cccccc;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cccccc), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(#cccccc, #cccccc);
+  background-image: linear-gradient(#cccccc, #cccccc);
   padding: 7px 18px;
   text-decoration: none;
   background-clip: padding-box;
@@ -3016,20 +3123,20 @@ header.navigation {
   position: relative; }
   /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .menu-anchor:hover:not(:disabled) {
-    background-color: darkgrey;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, darkgrey), color-stop(100%, darkgrey));
-    background-image: -webkit-linear-gradient(darkgrey, darkgrey);
-    background-image: linear-gradient(darkgrey, darkgrey);
-    box-shadow: inset 0 1px 0 0 silver;
+    background-color: #c2c2c2;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c2c2c2), color-stop(100%, #c2c2c2));
+    background-image: -webkit-linear-gradient(#c2c2c2, #c2c2c2);
+    background-image: linear-gradient(#c2c2c2, #c2c2c2);
+    box-shadow: inset 0 1px 0 0 #d9d9d9;
     cursor: pointer; }
   /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .menu-anchor:active:not(:disabled) {
-    background-color: darkgrey;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, darkgrey), color-stop(100%, darkgrey));
-    background-image: -webkit-linear-gradient(darkgrey, darkgrey);
-    background-image: linear-gradient(darkgrey, darkgrey);
-    border: 1px solid #8f8f8f;
-    box-shadow: inset 0 0 1px 1px #9a9a9a, inset 0 0 1px 1px #9a9a9a, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
+    background-color: #c2c2c2;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c2c2c2), color-stop(100%, #c2c2c2));
+    background-image: -webkit-linear-gradient(#c2c2c2, #c2c2c2);
+    background-image: linear-gradient(#c2c2c2, #c2c2c2);
+    border: 1px solid darkgrey;
+    box-shadow: inset 0 0 1px 1px #b3b3b3, inset 0 0 1px 1px #b3b3b3, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
   /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .menu-anchor:disabled {
     opacity: 0.5;
