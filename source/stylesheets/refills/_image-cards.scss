@@ -62,7 +62,7 @@
     }
 
     .image-wrapper {
-      @include texture($light-gray, 1); 
+      @include texture(darken($image-card-color, 5), 1); 
       // see http://magnus-g.github.io/texture-mixin/ for info on how to use this texture mixin
     }
 

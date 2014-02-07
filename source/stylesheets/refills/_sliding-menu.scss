@@ -6,7 +6,7 @@ $sliding-menu-background-hover: $base-accent-color;
 $sliding-menu-color-hover: #fff;
 
 .menu-anchor {
-  @include button(simple, lighten($light-gray, 10));
+  @include button(simple, lighten($base-border-color, 10));
   @include inline-block;
   cursor: pointer;
   font-size: $base-font-size;

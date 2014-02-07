@@ -33,10 +33,9 @@
     }
 
     input[type=submit] {
-      @include button(simple, lighten($light-gray, 10));
+      @include button(simple, $search-bar-background);
       @include position(absolute, 0.3em 0.3em 0.3em 0);
       font-size: $base-font-size;
-      color: darken($light-gray, 20);
       outline: none;
     }
   }
