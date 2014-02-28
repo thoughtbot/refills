@@ -17,6 +17,9 @@
       <nav id="menu">
   <ul>
     <li>
+      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#hover-tile-animation">Hover Tile Animation</a>
+    </li>
+    <li>
       <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#sliding-menu">Sliding Menu</a>
     </li>
     <li>
@@ -104,6 +107,93 @@
   <div class="refills-header">
     <h2>Refills are prepackaged patterns and compontents, built ontop of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://www.bitters.bourbon.io">Bitters</a>, and <a href="http://www.neat.bourbon.io">Neat</a>.</h2>
   </div>
+
+<div id="hover-tile-animation" class="refill">
+  <h3>Hover Tile Animation</h3>
+  <div class="hover-tile-outer">
+  <div class="hover-tile-container">
+    <div class="hover-tile hover-tile-visible">
+      <h2>Hover Here</h2>
+    </div>
+    <div class="hover-tile hover-tile-hidden">
+      <h4>This Appears On Top</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, placeat, doloremque, sint esse quaerat at dolorem assumenda consequatur eligendi.</p>
+    </div>
+  </div>
+</div>
+  <a href="#" class="js-show-code">Show code</a>
+<a href="#" class="js-hide-code">Hide code</a>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class="language-markup">
+      &lt;div class=&quot;hover-tile-outer&quot;&gt;
+  &lt;div class=&quot;hover-tile-container&quot;&gt;
+    &lt;div class=&quot;hover-tile hover-tile-visible&quot;&gt;
+      &lt;h2&gt;Hover Here&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hover-tile hover-tile-hidden&quot;&gt;
+      &lt;h4&gt;This Appears On Top&lt;/h4&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, placeat, doloremque, sint esse quaerat at dolorem assumenda consequatur eligendi.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    </code>
+  </pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class='language-scss'>
+        $hover-tile-height: 10em;
+        
+        .hover-tile-outer {
+          background: gray;
+          background: url(http://www.nomadtours.co.za/images/uploaded_images/drakensberg.jpg);
+          background-size: cover;
+          background-position: bottom;
+          height: $hover-tile-height;
+          margin-bottom: $base-line-height;
+          
+          @include media($medium-screen) {
+            width: 50%;
+          }
+        }
+        
+        .hover-tile-container {
+          height: $hover-tile-height;
+          overflow: hidden;
+        }
+        
+        .hover-tile-container:hover > .hover-tile {
+          @include transform(translate(0, -100%));
+        }
+        
+        .hover-tile {
+          background:inherit;
+          height:inherit;
+          @include transition(all, .2s ease-in-out);
+          padding: 1em 1.5em;
+          color: white;
+        }
+        
+        .hover-tile-visible {
+          text-align: center;
+          padding-top: 4em;
+          font-weight: 100;  
+        }
+        
+        .hover-tile-hidden {
+          background: transparentize(black, .5);
+        }
+    </code>
+  </pre>
+</div>
+
+
+</div>
 
 <div id="sliding-menu" class="refill">
   <h3>Sliding Menu</h3>
