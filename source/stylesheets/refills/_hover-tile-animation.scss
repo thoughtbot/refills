@@ -1,0 +1,41 @@
+$hover-tile-height: 10em;
+
+.hover-tile-outer {
+  background: gray;
+  background: url(http://www.nomadtours.co.za/images/uploaded_images/drakensberg.jpg);
+  background-size: cover;
+  background-position: bottom;
+  height: $hover-tile-height;
+  margin-bottom: $base-line-height;
+  
+  @include media($medium-screen) {
+    width: 50%;
+  }
+}
+
+.hover-tile-container {
+  height: $hover-tile-height;
+  overflow: hidden;
+}
+
+.hover-tile-container:hover > .hover-tile {
+  @include transform(translate(0, -100%));
+}
+
+.hover-tile {
+  background:inherit;
+  height:inherit;
+  @include transition(all, .2s ease-in-out);
+  padding: 1em 1.5em;
+  color: white;
+}
+
+.hover-tile-visible {
+  text-align: center;
+  padding-top: 4em;
+  font-weight: 100;  
+}
+
+.hover-tile-hidden {
+  background: transparentize(black, .5);
+}

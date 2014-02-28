@@ -29,6 +29,7 @@ $refills-nav-height: 60px;
 
 body {
   background-color: $base-body-color; 
+  min-width: 320px;
 }
 
 .refills-header {
