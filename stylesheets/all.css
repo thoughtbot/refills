@@ -3691,3 +3691,64 @@ a.tooltip-item {
 /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
 .hover-tile-hidden {
   background: rgba(0, 0, 0, 0.5); }
+
+/* line 3, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_icon-bullet-points.scss */
+.bullets {
+  margin-bottom: 12em;
+  overflow: auto;
+  margin-bottom: 1.5em; }
+
+@media screen and (min-width: 57.5em) {
+  /* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_icon-bullet-points.scss */
+  .two-col-bullet {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
+    .two-col-bullet:last-child {
+      margin-right: 0; }
+    /* line 70, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_omega.scss */
+    .two-col-bullet:nth-child(2n) {
+      margin-right: 0; }
+    /* line 75, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_omega.scss */
+    .two-col-bullet:nth-child(2n+1) {
+      clear: left; } }
+
+@media screen and (min-width: 57.5em) {
+  /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_icon-bullet-points.scss */
+  .three-col-bullet {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
+    .three-col-bullet:last-child {
+      margin-right: 0; }
+    /* line 70, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_omega.scss */
+    .three-col-bullet:nth-child(3n) {
+      margin-right: 0; }
+    /* line 75, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_omega.scss */
+    .three-col-bullet:nth-child(3n+1) {
+      clear: left; } }
+
+/* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_icon-bullet-points.scss */
+.bullet p {
+  margin-left: 1.6em; }
+/* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_icon-bullet-points.scss */
+.bullet span {
+  font-weight: 600;
+  font-style: italic; }
+/* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_icon-bullet-points.scss */
+.bullet .wraptocenter {
+  float: left;
+  width: 4em;
+  height: 4em; }
+/* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_icon-bullet-points.scss */
+.bullet .wraptocenter * {
+  vertical-align: middle;
+  border-radius: 50%; }
+/* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_icon-bullet-points.scss */
+.bullet .bullet-content {
+  margin-left: 4em;
+  margin-bottom: 2em; }
