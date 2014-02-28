@@ -1,0 +1,48 @@
+$icon-bullet-size: 4em;
+
+.bullets {
+  margin-bottom: 12em;
+  overflow: auto;
+  margin-bottom: $base-line-height;
+}
+
+.two-col-bullet {
+  @include media($large-screen) {
+    @include span-columns(6);
+    @include omega(2n);  
+  } 
+}
+
+.three-col-bullet {
+  @include media($large-screen) {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+}
+
+.bullet {
+  p { 
+    margin-left: 1.6em;
+  }
+
+  span {
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .wraptocenter {
+    float: left;
+    width: $icon-bullet-size;
+    height: $icon-bullet-size;
+  }
+
+  .wraptocenter * {
+    vertical-align: middle;
+    border-radius: 50%;
+  }
+
+  .bullet-content {
+    margin-left: $icon-bullet-size;
+    margin-bottom: 2em;
+  }
+}
