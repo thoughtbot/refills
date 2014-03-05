@@ -2701,7 +2701,7 @@ header.navigation {
 
 /* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
 .image-gradient {
-  background: url(http://organicclimber.com/wp-content/uploads/2012/06/EmeraldLake.jpg);
+  background: url(https://raw.github.com/Magnus-G/Random/master/EmeraldLake.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -3649,7 +3649,7 @@ a.tooltip-item {
 /* line 3, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
 .hover-tile-outer {
   background: gray;
-  background: url(http://www.nomadtours.co.za/images/uploaded_images/drakensberg.jpg);
+  background: url(https://raw.github.com/Magnus-G/Random/master/EmeraldLake.jpg);
   background-size: cover;
   background-position: bottom;
   height: 10em;
@@ -3685,10 +3685,11 @@ a.tooltip-item {
 /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
 .hover-tile-visible {
   text-align: center;
+  color: black;
   padding-top: 4em;
   font-weight: 100; }
 
-/* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
+/* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
 .hover-tile-hidden {
   background: rgba(0, 0, 0, 0.5); }
 
@@ -3746,8 +3747,7 @@ a.tooltip-item {
   height: 4em; }
 /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_icon-bullet-points.scss */
 .bullet .wraptocenter * {
-  vertical-align: middle;
-  border-radius: 50%; }
+  vertical-align: middle; }
 /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_icon-bullet-points.scss */
 .bullet .bullet-content {
   margin-left: 4em;
