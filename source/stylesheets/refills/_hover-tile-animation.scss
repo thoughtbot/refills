@@ -2,7 +2,7 @@ $hover-tile-height: 10em;
 
 .hover-tile-outer {
   background: gray;
-  background: url(http://www.nomadtours.co.za/images/uploaded_images/drakensberg.jpg);
+  background: url(https://raw.github.com/Magnus-G/Random/master/EmeraldLake.jpg);
   background-size: cover;
   background-position: bottom;
   height: $hover-tile-height;
@@ -32,6 +32,7 @@ $hover-tile-height: 10em;
 
 .hover-tile-visible {
   text-align: center;
+  color: black;
   padding-top: 4em;
   font-weight: 100;  
 }
