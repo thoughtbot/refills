@@ -7,14 +7,13 @@ header.navigation {
   $navigation-nav-button-background-hover: lighten($navigation-background, 10);
   $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
 
-  width: 100%;
-  margin: 0;
-  height: $navigation-height;
   background-color: $navigation-background;
-  font-family: $sans-serif;
   border-bottom: 1px solid darken($navigation-background, 10);
-  z-index: 999;
+  font-family: $sans-serif;
+  height: $navigation-height;
   margin-bottom: $base-line-height;
+  width: 100%;
+  z-index: 999;
 
   .menu-wrapper {
     @include outer-container;
@@ -22,10 +21,10 @@ header.navigation {
   }
 
   .logo {
-    max-height: $navigation-height;
-    padding-right: 2em;
-    padding-left: 1em;
     float: left;    
+    max-height: $navigation-height;
+    padding-left: 1em;
+    padding-right: 2em;
 
     img {
       max-height: $navigation-height;
@@ -38,40 +37,40 @@ header.navigation {
   }
 
   p {
-    font-family: $sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
+    color: $navigation-color;
     cursor: pointer;
-    padding-right: 1em;
     display: block;
     float: right;
-    margin: 0;
+    font-family: $sans-serif;
+    font-weight: 700;
     line-height: $navigation-height;
-    color: $navigation-color;
+    margin: 0;
+    padding-right: 1em;
+    text-transform: uppercase;
+
     &:hover {
       color: $navigation-color-hover;
     }
   }
 
   .nav ul {    
-    display: none;
     -webkit-transform-style: preserve-3d; // stop webkit flicker
-    overflow: hidden;
+    display: none;
     margin: 0 auto;
+    overflow: hidden;
     padding: 0;
     width: 100%;
     z-index: 9999;
 
     li {
-      position: relative;
-      overflow: hidden;
-      display: block;
-      width: 100%;
-      text-align: right;
-      padding-right: .8em;
-      line-height: $navigation-height;
-      z-index: 99999999;
       background: $navigation-background;
+      display: block;
+      line-height: $navigation-height;
+      overflow: hidden;
+      padding-right: .8em;
+      text-align: right;
+      width: 100%;
+      z-index: 99999999;
 
       a {
         font-weight: 400;
@@ -84,10 +83,11 @@ header.navigation {
     }
   }
 
-  @include media ($medium-screen) {
+  @include media ($large-screen) {
     p {
       display: none;
     }
+
     .nav {
       float: left;
 
@@ -97,29 +97,28 @@ header.navigation {
         padding: 0;
 
         li {
+          background: transparent;
           display: inline;
-          text-decoration: none;
           line-height: $navigation-height;
           padding-right: 2em;
+          text-decoration: none;
           width: auto;
-          background: transparent;
 
           // CTA button
           &:last-child {
-            position: absolute;
+            @include position(absolute, 0px 0px 0 0);
             padding-right: 1em;
-            top: 0;
-            right: 0;
 
             a {
-              background: $navigation-nav-button-background;
-              color: white;
-              padding: .6em 1em;
-              border-radius: $base-border-radius; 
-              text-transform: uppercase;
-              font-weight: 800;
-              font-size: .8em;  
               @include transition (all 0.2s ease-in-out);
+              background: $navigation-nav-button-background;
+              border-radius: $base-border-radius; 
+              color: white;
+              font-size: .8em;  
+              font-weight: 800;
+              padding: .6em 1em;
+              text-transform: uppercase;
+
               &:hover {
                 background: lighten($navigation-nav-button-background, 10);
               }

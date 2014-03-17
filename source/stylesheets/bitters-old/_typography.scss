@@ -7,10 +7,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $header-font-family;
-  line-height: 1.25em;
-  margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  margin: 0;
+  line-height: 1.25em;
 }
 
 h1 {
