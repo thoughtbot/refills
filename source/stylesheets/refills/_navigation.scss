@@ -20,12 +20,16 @@ header.navigation {
   }
 
   .logo {
-    line-height: $navigation-height;
-    padding-right: 1.35em;
+    max-height: $navigation-height;
+    padding-right: 2em;
     padding-left: 1em;
-    font-weight: bold;
     float: left;    
-    color: white;
+
+    img {
+      max-height: $navigation-height;
+      padding: .8em 0;
+    }
+
     @include media($medium-screen) {
       padding-left: 1em;
     }
@@ -60,7 +64,7 @@ header.navigation {
         display: block;
         width: 100%;
         text-align: right;
-        padding-right: 1em;
+        padding-right: .8em;
         line-height: $navigation-height;
         width: 100%;
         position: relative;
@@ -70,8 +74,7 @@ header.navigation {
         background-color: $navigation-background;
 
         a {
-          text-transform: uppercase;
-          font-weight: bold;
+          font-weight: 400;
           color: white;
         }
       }
