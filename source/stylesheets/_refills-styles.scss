@@ -91,7 +91,6 @@ body {
 .refill {
   margin-bottom: 2em;
   padding-bottom: 3em;
-  // border-bottom: 1px dashed $light-gray;
   position: relative;
   @include clearfix;
 
@@ -102,9 +101,20 @@ body {
   }
 }
 
+// this centers the refill and sets back to text-align left below first object
+.refill-example {
+  text-align: center;
+  & > * {
+    display: inline-block;
+    & > * {
+      text-align: left;      
+    }
+  }
+}
+
 .line-behind-text {
   text-align: center;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #CACACA;
   margin-bottom: $base-line-height *3;
 }
 
@@ -125,25 +135,39 @@ body {
   margin-bottom: $base-line-height;
 }
 
-.js-hide-code {
-  display: none;
-  padding: 0.5em 1em;
+/////////////////////////
+
+.refill-show-code {
   text-align: center;
-  // border: 1px solid $light-gray;
-  border-radius: $base-border-radius;
-  width: 100%;
-  // margin-top: 1em;
+}
+
+.js-hide-code, 
+.js-show-code {
+  background: #BDD7F3;
+  color: white;
+
+  &:hover {
+    background: darken(#BDD7F3, 10);
+    color: white;
+  }
 }
 
 .js-show-code {
   display: inline-block;
   padding: 0.5em 1em;
   width: 8em;
-  text-align: center;
-  // border: 1px solid $light-gray;
+  // text-align: center;
   border-radius: $base-border-radius;
-  width: 100%;
-  // margin-top: 1em;
+  // width: 100%;
+}
+
+.js-hide-code {
+  display: none;
+  padding: 0.5em 1em;
+  // text-align: center;
+  border-radius: $base-border-radius;
+  width: 8em;
+  // width: 100%;
 }
 
 /////////////////////////
@@ -192,4 +216,5 @@ pre {
 .token.variable {
   background-color: transparent;
 }
+
 

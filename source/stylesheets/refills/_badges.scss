@@ -1,43 +1,45 @@
-$badge-color: $medium-gray;
-$badge-dark-color: $dark-gray;
-$badge-error-color: $error-color;
-$badge-notice-color: $notice-color;
-$badge-success-color: $success-color;
-$badge-font-color: #fff;
-$badge-font-size: $base-font-size * .75;
-
 .badges {
+  $badge-background: $medium-gray;
+  $badge-dark-color: $dark-gray;
+  $badge-error-color: $error-color;
+  $badge-notice-color: $notice-color;
+  $badge-success-color: $success-color;
+  $badge-font-color: #fff;
+  $badge-font-size: $base-font-size * .75;
+
   display: block;
   margin-bottom: $base-line-height;
+
+  .badge {
+    @include inline-block;
+    background: $badge-background;
+    border-radius: 2em;
+    color: $badge-font-color;
+    font-size: $badge-font-size;
+    font-weight: 600;
+    line-height: 1;
+    padding: .25em 1em;
+    text-align: center;
+
+    &.dark {
+      background: $badge-dark-color;
+    }
+
+    &.error {
+      background: $badge-error-color;
+      color: darken($badge-error-color, 60);
+    }
+
+    &.notice {
+      background: $badge-notice-color;
+      color: darken($badge-error-color, 60);
+    }
+
+    &.success {
+      background: $badge-success-color;
+      color: darken($badge-success-color, 60);
+    }
+  }
+
 }
 
-.badge {
-  @include inline-block;
-  background: $badge-color;
-  border-radius: 2em;
-  color: $badge-font-color;
-  font-size: $badge-font-size;
-  font-weight: 600;
-  line-height: 1;
-  padding: .25em 1em;
-  text-align: center;
-
-  &.dark {
-    background: $badge-dark-color;
-  }
-
-  &.error {
-    background: $badge-error-color;
-    color: darken($badge-error-color, 60);
-  }
-
-  &.notice {
-    background: $badge-notice-color;
-    color: darken($badge-error-color, 60);
-  }
-
-  &.success {
-    background: $badge-success-color;
-    color: darken($badge-success-color, 60);
-  }
-}

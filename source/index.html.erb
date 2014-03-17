@@ -30,17 +30,23 @@ title: Refills
     <%= snippet('accordion-tabs') %>
   </div>
 
+  <div id="badges" class="refill">
+    <div class="line-behind-text"><h6>Badges</h6></div>
+    <div class="refill-example"><%= partial "badges" %></div>
+    <%= snippet('badges') %>
+  </div>
+
+  <div id="hover-tile-animation" class="refill">
+    <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
+    <div class="refill-example"><%= partial "hover-tile-animation" %></div>
+    <%= snippet('hover-tile-animation') %>
+  </div>
+
 <!-- 
   <div id="icon-bullet-points" class="refill">
     <h6>Icon Bullet Points</h6>
     <%= partial "icon-bullet-points" %>
     <%= snippet('icon-bullet-points') %>
-  </div>
-
-  <div id="hover-tile-animation" class="refill">
-    <h6>Hover Tile Animation</h6>
-    <%= partial "hover-tile-animation" %>
-    <%= snippet('hover-tile-animation') %>
   </div>
 
   <div id="sliding-menu" class="refill">
@@ -50,11 +56,6 @@ title: Refills
   </div>
 
   <div class="narrow">
-  <div id="badges" class="refill">
-    <h6>Badges</h6>
-    <%= partial "badges" %>
-    <%= snippet('badges') %>
-  </div>
 
   <div id="cards" class="refill">
     <h6>Cards</h6>
@@ -187,14 +188,14 @@ title: Refills
 <script>
   $('a.js-show-code').on('click', function(e){
     $(this).hide();
-    $(this).siblings('.js-hide-code').css('display', 'block');
+    $(this).siblings('.js-hide-code').css('display', 'inline-block');
     $(this).siblings('.snippet').show();
     e.preventDefault();
   })
 
   $('a.js-hide-code').on('click', function(e) {
     $(this).hide();
-    $(this).siblings('.js-show-code').css("display", "block");
+    $(this).siblings('.js-show-code').css("display", "inline-block");
     $(this).siblings('.snippet').hide();
     e.preventDefault();
   });
