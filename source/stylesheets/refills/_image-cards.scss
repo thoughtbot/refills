@@ -9,7 +9,7 @@ $image-card-border-color: $base-border-color;
 $image-card-border: 1px solid $image-card-border-color;
 $image-card-color: lighten($image-card-border-color, 10);
 $image-card-header-color: $image-card-color;
-$image-card-image-height: em(480);
+$image-card-image-height: em(380);
 $image-card-hover-color: darken($image-card-color, 5);
 
 .image-cards {
@@ -48,7 +48,7 @@ $image-card-hover-color: darken($image-card-color, 5);
 
 .image-card.top {
   .image-wrapper {
-    height: $image-card-image-height/2;
+    height: $image-card-image-height/3;
   }
 }
 
@@ -69,7 +69,7 @@ $image-card-hover-color: darken($image-card-color, 5);
 
   .image-wrapper {
     @include position(absolute, auto 0px 0px 0px);
-    height: $image-card-image-height /2;
+    height: $image-card-image-height /3;
   }
 }
 
