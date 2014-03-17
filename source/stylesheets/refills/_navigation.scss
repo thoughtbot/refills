@@ -12,7 +12,7 @@ header.navigation {
   height: $navigation-height;
   background-color: $navigation-background;
   font-family: $sans-serif;
-  border-bottom: 1px solid $dark-gray;
+  border-bottom: 1px solid darken($navigation-background, 10);
   z-index: 999;
   margin-bottom: $base-line-height;
 
