@@ -1136,12 +1136,20 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help; }
 
-/* line 3, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_layout.scss */
-nav#menu {
+/* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+section.inner-content {
+  margin-left: auto; }
+  @media screen and (min-width: 47.5em) {
+    /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+    section.inner-content {
+      margin-left: 12.5em; } }
+
+/* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+.er_toc {
   display: none; }
   @media screen and (min-width: 47.5em) {
-    /* line 3, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_layout.scss */
-    nav#menu {
+    /* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+    .er_toc {
       position: fixed;
       top: 0px;
       left: 0px;
@@ -1150,25 +1158,17 @@ nav#menu {
       display: block;
       box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.9);
       background: #333333; }
-      /* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_layout.scss */
-      nav#menu ul {
+      /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+      .er_toc ul {
         padding: 1em; }
-        /* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_layout.scss */
-        nav#menu ul li a {
+        /* line 55, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+        .er_toc ul li a {
           color: #dddddd;
           font-size: 0.8em; }
-          /* line 21, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_layout.scss */
-          nav#menu ul li a:hover {
+          /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+          .er_toc ul li a:hover {
             color: #FFF;
             text-decoration: underline; } }
-
-/* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_layout.scss */
-section.inner-content {
-  margin-left: auto; }
-  @media screen and (min-width: 47.5em) {
-    /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_layout.scss */
-    section.inner-content {
-      margin-left: 12.5em; } }
 
 /* line 7, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 .external {
@@ -1337,27 +1337,33 @@ body {
     background-color: #82caca;
     display: inline-block;
     padding: 0.5em; }
-  /* line 174, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
-  .refills-wrapper .refill {
-    margin-bottom: 2em;
-    padding-bottom: 3em;
-    border-bottom: 1px dashed #9a9a9a;
-    position: relative;
-    *zoom: 1; }
-    /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-    .refills-wrapper .refill:before, .refills-wrapper .refill:after {
-      content: " ";
-      display: table; }
-    /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-    .refills-wrapper .refill:after {
-      clear: both; }
-    /* line 181, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
-    .refills-wrapper .refill > h3 {
-      padding-top: 0.5em;
-      margin-top: 1em;
-      margin-bottom: 1.3em; }
+
+/* line 175, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+.refill {
+  margin-bottom: 2em;
+  padding-bottom: 3em;
+  border-bottom: 1px dashed #9a9a9a;
+  position: relative;
+  *zoom: 1; }
+  /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
+  .refill:before, .refill:after {
+    content: " ";
+    display: table; }
+  /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
+  .refill:after {
+    clear: both; }
+  /* line 182, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+  .refill > h3 {
+    padding-top: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1.3em; }
 
 /* line 189, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+.refill h6 {
+  margin-bottom: 1.5em;
+  font-size: 2em; }
+
+/* line 194, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 .js-hide-code {
   display: none;
   padding: 0.5em 1em;
@@ -1366,11 +1372,11 @@ body {
   border-radius: 0.1875em;
   width: 100%; }
   @media screen and (min-width: 47.5em) {
-    /* line 189, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+    /* line 194, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
     .js-hide-code {
       width: 8em; } }
 
-/* line 202, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+/* line 207, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 .js-show-code {
   display: inline-block;
   padding: 0.5em 1em;
@@ -1380,20 +1386,20 @@ body {
   border-radius: 0.1875em;
   width: 100%; }
   @media screen and (min-width: 47.5em) {
-    /* line 202, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+    /* line 207, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
     .js-show-code {
       width: 8em; } }
 
-/* line 216, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+/* line 221, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 pre {
   height: 350px;
   border-top: 2px solid black; }
   @media screen and (min-width: 47.5em) {
-    /* line 216, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+    /* line 221, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
     pre {
       box-shadow: -2px 0 0 rgba(0, 0, 0, 0.1); } }
 
-/* line 225, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+/* line 230, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 .copy-source {
   background-color: #333333;
   font-size: 0.5em;
@@ -1402,25 +1408,25 @@ pre {
   font-weight: 800;
   padding: 0.3em 1em; }
 
-/* line 234, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+/* line 239, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 .snippet {
   display: none;
   padding: 0;
   margin-top: 1.5em !important;
   height: 25em; }
   @media screen and (min-width: 47.5em) {
-    /* line 234, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+    /* line 239, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
     .snippet {
       width: 50%;
       float: left; } }
-  /* line 249, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+  /* line 254, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
   .snippet code {
     max-height: 25em;
     font-size: 0.66667em;
     line-height: 0.75em;
     overflow: scroll; }
 
-/* line 257, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+/* line 262, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 .token.variable {
   background-color: transparent; }
 
@@ -1751,7 +1757,7 @@ pre {
       border-left: 1px solid lighteni(#cccccc, 15);
       border-top-left-radius: 0; }
 
-/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+/* line 7, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
 .cards {
   *zoom: 1;
   cursor: pointer;
@@ -1763,62 +1769,47 @@ pre {
   /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
   .cards:after {
     clear: both; }
-  /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-  .cards .card, .cards .system ul li, .system ul .cards li {
-    background-color: #cccccc;
-    border-radius: 0.1875em;
-    border: 1px solid #b3b3b3;
-    height: 11.875em;
-    margin-bottom: 1.5em; }
-    @media screen and (min-width: 47.5em) {
-      /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-      .cards .card, .cards .system ul li, .system ul .cards li {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 31.76157%; }
-        /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
-        .cards .card:last-child, .cards .system ul li:last-child, .system ul .cards li:last-child {
-          margin-right: 0; } }
-    /* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-    .cards .card .card-header, .cards .system ul li .card-header, .system ul .cards li .card-header {
-      background-color: #cccccc;
-      border-bottom: 1px solid #b3b3b3;
-      border-top-left-radius: 0.1875em;
-      border-top-right-radius: 0.1875em;
-      font-weight: bold;
-      padding: 0.75em 0.809em; }
-    /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-    .cards .card .card-content, .cards .system ul li .card-content, .system ul .cards li .card-content {
-      padding: 0.75em 0.809em;
-      padding-bottom: 0; }
-      /* line 35, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-      .cards .card .card-content p, .cards .system ul li .card-content p, .system ul .cards li .card-content p {
-        -webkit-box-orient: vertical;
-        -moz-box-orient: vertical;
-        box-orient: vertical;
-        display: -webkit-box;
-        display: -moz-box;
-        display: box;
-        -webkit-line-clamp: 4;
-        -moz-line-clamp: 4;
-        -ms-line-clamp: 4;
-        -o-line-clamp: 4;
-        line-clamp: 4;
-        overflow: hidden;
-        text-overflow: ellipsis; }
-    /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-    .cards .card:hover, .cards .system ul li:hover, .system ul .cards li:hover {
+
+/* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+.card, .system ul li {
+  background-color: #cccccc;
+  border-radius: 0.1875em;
+  border: 1px solid #b3b3b3;
+  margin-bottom: 1.5em; }
+  @media screen and (min-width: 47.5em) {
+    /* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    .card, .system ul li {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
+      .card:last-child, .system ul li:last-child {
+        margin-right: 0; } }
+  /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  .card:hover, .system ul li:hover {
+    background-color: silver; }
+    /* line 26, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    .card:hover .card-header, .system ul li:hover .card-header {
       background-color: silver; }
-      /* line 47, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-      .cards .card:hover .card-header, .cards .system ul li:hover .card-header, .system ul .cards li:hover .card-header {
-        background-color: silver; }
-    /* line 52, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-    .cards .card:active, .cards .system ul li:active, .system ul .cards li:active {
+  /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  .card:active, .system ul li:active {
+    background-color: #cccccc; }
+    /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    .card:active .card-header, .system ul li:active .card-header {
       background-color: #cccccc; }
-      /* line 55, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-      .cards .card:active .card-header, .cards .system ul li:active .card-header, .system ul .cards li:active .card-header {
-        background-color: #cccccc; }
+
+/* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+.card-header {
+  background-color: #cccccc;
+  border-bottom: 1px solid #b3b3b3;
+  border-radius: 0.1875em 0.1875em 0 0;
+  font-weight: bold;
+  padding: 0.75em 0.809em; }
+
+/* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+.card-content {
+  padding: 0.75em 0.809em 0; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_dashboard.scss */
 .dashboard {
@@ -2096,7 +2087,7 @@ pre {
         .hero .hero-inner .hero-copy:last-child {
           margin-right: 0; } }
     /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hero.scss */
-    .hero .hero-inner .hero-copy h6 {
+    .hero .hero-inner .hero-copy h5 {
       margin-bottom: 2em; }
     @media screen and (min-width: 47.5em) {
       /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hero.scss */
@@ -2109,7 +2100,7 @@ pre {
         .hero .hero-inner .hero-image:last-child {
           margin-right: 0; } }
 
-/* line 8, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+/* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
 .image-cards {
   *zoom: 1;
   cursor: pointer; }
@@ -2120,80 +2111,75 @@ pre {
   /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
   .image-cards:after {
     clear: both; }
-  /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-  .image-cards .image-card {
-    height: 300px;
-    border: 1px solid #b3b3b3;
-    background-color: #cccccc;
-    border-radius: 0.1875em;
-    margin-bottom: 1.5em; }
-    @media screen and (min-width: 47.5em) {
-      /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-      .image-cards .image-card {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 31.76157%; }
-        /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
-        .image-cards .image-card:last-child {
-          margin-right: 0; } }
-    /* line 32, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-    .image-cards .image-card.top .image-wrapper {
-      height: 150px;
-      border-top-left-radius: 0.1875em;
-      border-bottom-left-radius: 0.1875em; }
-    /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-    .image-cards .image-card.left .image-wrapper {
-      float: left;
-      height: 300px;
-      width: 5%;
-      border-top-left-radius: 0.1875em;
-      border-bottom-left-radius: 0.1875em; }
-    /* line 47, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-    .image-cards .image-card.left .image-card-content {
-      float: right;
-      width: 95%; }
-    /* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-    .image-cards .image-card.bottom {
-      position: relative; }
-      /* line 55, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-      .image-cards .image-card.bottom .image-wrapper {
-        height: 150px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        left: 0; }
-    /* line 64, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-    .image-cards .image-card .image-wrapper {
-      background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/line_diagonal1.png");
+
+/* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+.image-card {
+  border: 1px solid #b3b3b3;
+  background-color: #cccccc;
+  border-radius: 0.1875em;
+  margin-bottom: 1.5em;
+  position: relative;
+  height: 23.75em; }
+  /* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+  .image-card:hover {
+    background-color: silver; }
+    /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+    .image-card:hover .card-header {
       background-color: silver; }
-    /* line 69, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-    .image-cards .image-card .image-card-content {
-      padding-left: 1em;
-      padding-right: 1em;
-      padding-top: 1em; }
-      /* line 74, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-      .image-cards .image-card .image-card-content p {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical; }
-    /* line 83, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-    .image-cards .image-card h3 {
-      font-weight: 800; }
-    /* line 87, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-    .image-cards .image-card:hover {
-      background-color: silver; }
-      /* line 89, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-      .image-cards .image-card:hover .card-header {
-        background-color: silver; }
-    /* line 94, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-    .image-cards .image-card:active {
+  /* line 36, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+  .image-card:active {
+    background-color: #cccccc; }
+    /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+    .image-card:active .card-header {
       background-color: #cccccc; }
-      /* line 96, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
-      .image-cards .image-card:active .card-header {
-        background-color: #cccccc; }
+  @media screen and (min-width: 47.5em) {
+    /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+    .image-card {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
+      .image-card:last-child {
+        margin-right: 0; } }
+
+/* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+.image-card.top .image-wrapper {
+  height: 7.91667em; }
+
+/* line 56, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+.image-card.left .image-wrapper {
+  position: absolute;
+  top: 0px;
+  right: auto;
+  bottom: 0px;
+  left: 0px;
+  width: 5%; }
+/* line 61, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+.image-card.left .image-card-content {
+  margin-left: 5%; }
+
+/* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+.image-card.bottom {
+  position: relative;
+  padding-bottom: 11.875em; }
+  /* line 70, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+  .image-card.bottom .image-wrapper {
+    position: absolute;
+    top: auto;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 7.91667em; }
+
+/* line 76, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+.image-wrapper {
+  background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/line_diagonal1.png");
+  background-color: #9a9a9a; }
+
+/* line 81, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-cards.scss */
+.image-card-content {
+  padding: 0.75em 0.809em 0; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_info-section.scss */
 .info-section {
@@ -3547,87 +3533,53 @@ a.tooltip-item {
       pointer-events: none;
       bottom: -15px; }
 
-/* line 8, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-.vertical-tabs {
+/* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+.vertical-tabs-container {
   *zoom: 1;
-  margin-bottom: 1.5em;
+  border-radius: 0.1875em;
   border: 1px solid #b3b3b3;
-  border-radius: 0.1875em; }
+  margin-bottom: 1.5em;
+  overflow: hidden; }
   /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .vertical-tabs:before, .vertical-tabs:after {
+  .vertical-tabs-container:before, .vertical-tabs-container:after {
     content: " ";
     display: table; }
   /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .vertical-tabs:after {
+  .vertical-tabs-container:after {
     clear: both; }
-  /* line 14, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-  .vertical-tabs .tabs {
-    display: none; }
-  /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-  .vertical-tabs .tab-container {
-    display: block;
-    margin: 0 auto; }
-    /* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-    .vertical-tabs .tab-container .tab-content {
-      padding: 1em;
-      background-color: #cccccc; }
-      /* line 26, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-      .vertical-tabs .tab-container .tab-content:last-child {
-        border-bottom-left-radius: 0.1875em;
-        border-bottom-right-radius: 0.1875em; }
-  /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-  .vertical-tabs .accordion-heading {
-    padding: 0.75em 0.809em;
-    border-top: 1px solid #b3b3b3;
-    font-weight: bold;
-    background-color: white;
-    display: block;
-    cursor: pointer; }
-    /* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-    .vertical-tabs .accordion-heading:hover {
-      color: #477dca; }
-    /* line 45, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-    .vertical-tabs .accordion-heading:first-child {
-      border-top: none;
-      border-top-right-radius: 0.1875em;
-      border-top-left-radius: 0.1875em; }
-    /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-    .vertical-tabs .accordion-heading.accordion-active {
-      background: #cccccc;
-      border-bottom: none; }
+
+/* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+.vertical-tabs {
+  display: none; }
   @media screen and (min-width: 47.5em) {
-    /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-    .vertical-tabs .tab-content,
-    .vertical-tabs .accordion-heading {
-      display: none; }
-    /* line 63, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-    .vertical-tabs .tabs {
-      float: left;
-      width: 20%;
-      height: 18.75em;
+    /* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+    .vertical-tabs {
+      background-color: white;
       display: inline;
-      border-top-left-radius: 0.1875em;
-      border-bottom-left-radius: 0.1875em;
-      background-color: white; }
-      /* line 72, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-      .vertical-tabs .tabs .tab {
-        display: block;
-        padding: 0.75em 0.809em;
-        font-weight: bold;
-        border-bottom: 1px solid #b3b3b3;
-        margin-right: -1px; }
-        /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-        .vertical-tabs .tabs .tab:hover {
-          color: #477dca; }
-        /* line 83, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-        .vertical-tabs .tabs .tab:first-child.active {
-          border-top-left-radius: 0.1875em; }
-        /* line 87, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-        .vertical-tabs .tabs .tab.active {
-          background-color: #cccccc;
-          margin-right: -1px; }
-    /* line 94, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-    .vertical-tabs .tab-container {
+      float: left;
+      height: 18.75em;
+      width: 20%; } }
+
+@media screen and (min-width: 47.5em) {
+  /* line 29, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+  .vertical-tab {
+    border-bottom: 1px solid #b3b3b3;
+    display: block;
+    font-weight: bold;
+    margin-right: -1px;
+    padding: 0.75em 0.809em; }
+    /* line 37, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+    .vertical-tab.is-active {
+      background-color: #cccccc;
+      margin-right: -1px; } }
+
+/* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+.vertical-tab-content-container {
+  display: block;
+  margin: 0 auto; }
+  @media screen and (min-width: 47.5em) {
+    /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+    .vertical-tab-content-container {
       display: inline-block;
       vertical-align: baseline;
       zoom: 1;
@@ -3635,16 +3587,40 @@ a.tooltip-item {
       *vertical-align: auto;
       width: 80%;
       height: 18.75em;
-      background-color: #cccccc;
-      border-top-right-radius: 0.1875em;
-      border-bottom-right-radius: 0.1875em; }
-      /* line 101, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-      .vertical-tabs .tab-container .tab-content {
-        border: none; }
-      /* line 105, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
-      .vertical-tabs .tab-container p {
-        border: none;
-        padding: 0; } }
+      background-color: #cccccc; } }
+
+/* line 55, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+.vertical-tab-content {
+  background-color: #cccccc;
+  padding: 1em; }
+  @media screen and (min-width: 47.5em) {
+    /* line 55, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+    .vertical-tab-content {
+      border: none;
+      display: none; } }
+
+/* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+.vertical-tab-accordion-heading {
+  background-color: white;
+  border-top: 1px solid #b3b3b3;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  padding: 0.75em 0.809em; }
+  @media screen and (min-width: 47.5em) {
+    /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+    .vertical-tab-accordion-heading {
+      display: none; } }
+  /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+  .vertical-tab-accordion-heading:hover {
+    color: #477dca; }
+  /* line 81, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+  .vertical-tab-accordion-heading:first-child {
+    border-top: none; }
+  /* line 85, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
+  .vertical-tab-accordion-heading.is-active {
+    background: #cccccc;
+    border-bottom: none; }
 
 /* line 3, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
 .hover-tile-outer {

@@ -10,110 +10,23 @@
     <link rel="shortcut icon" href="favicon.ico" />    
     <link href="stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type='text/javascript' src='javascripts/jquery.erToc.js'></script>
   </head>
   
   <body class="index">
     <section class="container">
-      <nav id="menu">
-  <ul>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#icon-bullet-points">Icon Bullet Points</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#hover-tile-animation">Hover Tile Animation</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#sliding-menu">Sliding Menu</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#badges">Badges</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#cards">Cards</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#image-cards">Image Cards</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#vertical-tabs">Vertical Tabs</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#accordion-tabs">Accordion Tabs</a>
-    </li>
-    <!--
-      <li>
-        <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#overlap">Overlap</a>
-      </li>
-    -->
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#modal">Modal</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#progress-bar">Progress Bar</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#tooltip">Tooltip</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#accordion">Accordion</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#dropdown-menu">Dropdown Menu</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#switch-toggle">Switch Toggle</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#search-bar">Search Bar</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#tables">Tables</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#breadcrumbs">Breadcrumbs</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#button-group">Button Group</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#navigation">Navigation</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#image-gradient">Image Gradient Overlay</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#item-list">Item List</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#master-detail">Master Detail</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#sidebar-layout">Sidebar Layout</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#info-section">Info Section</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#hero">Hero</a>
-    </li>
-    <li>
-      <a class="scroll" data-speed="500" data-easing="easeInOutCubic" href="#footer">Footer</a>
-    </li>
-  </ul>
-</nav>
-
       <section class="inner-content">
         <a class="external" href="https://github.com/thoughtbot/refills">
 </a>
 
-<div class="refills-wrapper">
+<div id="example1" class="refills-wrapper">
   <div class="refills-header">
     <h2>Refills are prepackaged patterns and compontents, built ontop of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://www.bitters.bourbon.io">Bitters</a>, and <a href="http://www.neat.bourbon.io">Neat</a>.</h2>
   </div>
 
-<div id="icon-bullet-points" class="refill">
-  <h3>Icon Bullet Points</h3>
-  <div class="bullets">
+  <div id="icon-bullet-points" class="refill">
+    <h6>Icon Bullet Points</h6>
+    <div class="bullets">
   <div class="bullet two-col-bullet">
     <div class="wraptocenter">
       <img src="https://raw.github.com/Magnus-G/Random/master/181912_300.jpg" />
@@ -174,7 +87,7 @@
     </div>
   </div> 
 </div>
-  <a href="#" class="js-show-code">Show code</a>
+    <a href="#" class="js-show-code">Show code</a>
 <a href="#" class="js-hide-code">Hide code</a>
 
 <div class="snippet">
@@ -303,11 +216,11 @@
 </div>
 
 
-</div>
+  </div>
 
-<div id="hover-tile-animation" class="refill">
-  <h3>Hover Tile Animation</h3>
-  <div class="hover-tile-outer">
+  <div id="hover-tile-animation" class="refill">
+    <h6>Hover Tile Animation</h6>
+    <div class="hover-tile-outer">
   <div class="hover-tile-container">
     <div class="hover-tile hover-tile-visible">
       <h2>Hover Here</h2>
@@ -318,7 +231,7 @@
     </div>
   </div>
 </div>
-  <a href="#" class="js-show-code">Show code</a>
+    <a href="#" class="js-show-code">Show code</a>
 <a href="#" class="js-hide-code">Hide code</a>
 
 <div class="snippet">
@@ -391,11 +304,11 @@
 </div>
 
 
-</div>
+  </div>
 
-<div id="sliding-menu" class="refill">
-  <h3>Sliding Menu</h3>
-  <div>
+  <div id="sliding-menu" class="refill">
+    <h6>Sliding Menu</h6>
+    <div>
   <a class="js-menu-trigger menu-anchor">Click for Sliding Menu</a>
 </div>
 
@@ -427,7 +340,7 @@
   });
 </script>
 
-  <a href="#" class="js-show-code">Show code</a>
+    <a href="#" class="js-show-code">Show code</a>
 <a href="#" class="js-hide-code">Hide code</a>
 
 <div class="snippet">
@@ -536,11 +449,11 @@
 </div>
 
 
-</div>
+  </div>
 
-<div class="narrow">
+  <div class="narrow">
   <div id="badges" class="refill">
-    <h3>Badges</h3>
+    <h6>Badges</h6>
     <div class="badges">
 	<span class="badge">4</span>
 	<span class="badge dark">4</span>
@@ -621,14 +534,14 @@
   </div>
 
   <div id="cards" class="refill">
-    <h3>Cards</h3>
+    <h6>Cards</h6>
     <div class="cards">
   <div class="card">
     <div class="card-header">
       Header
     </div>
     <div class="card-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
     </div>
   </div>
   <div class="card">
@@ -636,7 +549,7 @@
       Header
     </div>
     <div class="card-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
     </div>
   </div>
   <div class="card">
@@ -644,10 +557,11 @@
       Header
     </div>
     <div class="card-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
     </div>
   </div>
 </div>
+
     <a href="#" class="js-show-code">Show code</a>
 <a href="#" class="js-hide-code">Hide code</a>
 
@@ -661,7 +575,7 @@
       Header
     &lt;/div&gt;
     &lt;div class=&quot;card-content&quot;&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;card&quot;&gt;
@@ -669,7 +583,7 @@
       Header
     &lt;/div&gt;
     &lt;div class=&quot;card-content&quot;&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;card&quot;&gt;
@@ -677,10 +591,11 @@
       Header
     &lt;/div&gt;
     &lt;div class=&quot;card-content&quot;&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
     </code>
   </pre>
 </div>
@@ -689,65 +604,55 @@
   <a href="#" class="copy-source">Copy</a>
   <pre>
     <code class='language-scss'>
+        $card-border-color: $base-border-color;
+        $card-border: 1px solid $card-border-color;
+        $card-color: lighten($card-border-color, 10);
+        $card-header-color: $card-color;
+        $card-hover-color: darken($card-color, 5);
+        
         .cards {
-          $card-border-color: $base-border-color;
-          $card-border: 1px solid $card-border-color;
-          $card-color: lighten($card-border-color, 10);
-          $card-header-color: $card-color;
-          $card-hover-color: darken($card-color, 5);
           @include clearfix;
           cursor: pointer;
           margin-bottom: $base-line-height;
+        }
         
-          .card {
-            background-color: $card-color;
-            border-radius: $base-border-radius;
-            border: $card-border;
-            height: em(190);
-            margin-bottom: $base-line-height;
+        .card {
+          background-color: $card-color;
+          border-radius: $base-border-radius;
+          border: $card-border;
+          margin-bottom: $base-line-height;
         
-            @include media($medium-screen) {
-              @include span-columns(4);
-            }
+          @include media($medium-screen) {
+            @include span-columns(4);
+          }
+        
+          &:hover {
+            background-color: $card-hover-color;
         
             .card-header {
-              background-color: $card-header-color;
-              border-bottom: $card-border;
-              border-top-left-radius: $base-border-radius;
-              border-top-right-radius: $base-border-radius;
-              font-weight: bold;
-              padding: $base-line-height/2 $gutter/2;
-            }
-        
-            .card-content {
-              padding: $base-line-height/2 $gutter/2;
-              padding-bottom: 0;
-        
-              p {
-                @include box-orient(vertical);
-                @include display-box;
-                @include prefixer(line-clamp, 4, webkit moz ms o spec);
-                overflow: hidden;
-                text-overflow: ellipsis;
-              }
-            }
-        
-            &:hover {
               background-color: $card-hover-color;
-        
-              .card-header {
-                background-color: $card-hover-color;
-              }
-            }
-        
-            &:active {
-              background-color: $card-color;
-        
-              .card-header {
-                background-color: $card-color;
-              }
             }
           }
+        
+          &:active {
+            background-color: $card-color;
+        
+            .card-header {
+              background-color: $card-color;
+            }
+          }
+        }
+        
+        .card-header {
+          background-color: $card-header-color;
+          border-bottom: $card-border;
+          border-radius: $base-border-radius $base-border-radius 0 0;
+          font-weight: bold;
+          padding: $base-line-height/2 $gutter/2;
+        }
+        
+        .card-content {
+          padding: $base-line-height/2 $gutter/2 0;
         }
     </code>
   </pre>
@@ -757,35 +662,33 @@
   </div>
 
   <div id="image-cards" class="refill">
-    <h3>Image Cards</h3>
+    <h6>Image Cards</h6>
     <div class="image-cards">
-	<div class="image-card top">
-		<div class="image-wrapper">
-		</div>
-		<div class="image-card-content">
-		<h5>Header</h5>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.</p>
-		</div>
-	</div>
-	<div class="image-card bottom">
-		<div class="image-card-content">
-		<div class="image-wrapper">
-		</div>
-		<h5>Header</h5>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.</p>
-		</div>
+  <div class="image-card top">
+    <div class="image-wrapper"></div>
+    <div class="image-card-content">
+      <h5>Header</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.</p>
+    </div>
+  </div>
 
-	</div>
-	<div class="image-card left">
-		<div class="image-wrapper">
-		</div>
-		<div class="image-card-content">
-		<h5>Header</h5>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.</p>
-		</div>
-	</div>
+  <div class="image-card bottom">
+    <div class="image-wrapper"></div>
+    <div class="image-card-content">
+      <h5>Header</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.</p>
+    </div>
+  </div>
 
+  <div class="image-card left">
+    <div class="image-wrapper"></div>
+    <div class="image-card-content">
+      <h5>Header</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.</p>
+    </div>
+  </div>
 </div>
+
     <a href="#" class="js-show-code">Show code</a>
 <a href="#" class="js-hide-code">Hide code</a>
 
@@ -794,33 +697,31 @@
   <pre>
     <code class="language-markup">
       &lt;div class=&quot;image-cards&quot;&gt;
-	&lt;div class=&quot;image-card top&quot;&gt;
-		&lt;div class=&quot;image-wrapper&quot;&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;image-card-content&quot;&gt;
-		&lt;h5&gt;Header&lt;/h5&gt;
-		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;image-card bottom&quot;&gt;
-		&lt;div class=&quot;image-card-content&quot;&gt;
-		&lt;div class=&quot;image-wrapper&quot;&gt;
-		&lt;/div&gt;
-		&lt;h5&gt;Header&lt;/h5&gt;
-		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.&lt;/p&gt;
-		&lt;/div&gt;
+  &lt;div class=&quot;image-card top&quot;&gt;
+    &lt;div class=&quot;image-wrapper&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;image-card-content&quot;&gt;
+      &lt;h5&gt;Header&lt;/h5&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 
-	&lt;/div&gt;
-	&lt;div class=&quot;image-card left&quot;&gt;
-		&lt;div class=&quot;image-wrapper&quot;&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;image-card-content&quot;&gt;
-		&lt;h5&gt;Header&lt;/h5&gt;
-		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
+  &lt;div class=&quot;image-card bottom&quot;&gt;
+    &lt;div class=&quot;image-wrapper&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;image-card-content&quot;&gt;
+      &lt;h5&gt;Header&lt;/h5&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 
+  &lt;div class=&quot;image-card left&quot;&gt;
+    &lt;div class=&quot;image-wrapper&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;image-card-content&quot;&gt;
+      &lt;h5&gt;Header&lt;/h5&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident. Similique, quibusdam inventore necessitatibus perspiciatis voluptatum error dolor eaque exercitationem fugit.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
+
     </code>
   </pre>
 </div>
@@ -829,106 +730,88 @@
   <a href="#" class="copy-source">Copy</a>
   <pre>
     <code class='language-scss'>
-        @mixin texture($bg-color, $texture-number) { 
+        @mixin texture($bg-color, $texture-number) {
           $texture-list: "line_diagonal1.png";
           background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/#{nth($texture-list, $texture-number)}");
           background-color: $bg-color;
           // see http://magnus-g.github.io/texture-mixin/ for info on how to use this texture mixin
         }
         
+        $image-card-border-color: $base-border-color;
+        $image-card-border: 1px solid $image-card-border-color;
+        $image-card-color: lighten($image-card-border-color, 10);
+        $image-card-header-color: $image-card-color;
+        $image-card-image-height: em(380);
+        $image-card-hover-color: darken($image-card-color, 5);
+        
         .image-cards {
-          $image-card-border-color: $base-border-color;
-          $image-card-border: 1px solid $image-card-border-color;
-          $image-card-color: lighten($image-card-border-color, 10);
-          $image-card-header-color: $image-card-color;
-          $image-card-hover-color: darken($image-card-color, 5);
-        
-          $image-card-height: 300px;
-        
           @include clearfix;
           cursor: pointer;
+        }
         
-          .image-card {
-            height: $image-card-height;
-            border: $image-card-border;
-            background-color: $image-card-color;
-            border-radius: $base-border-radius;
-            margin-bottom: $base-line-height;
+        .image-card {
+          border: $image-card-border;
+          background-color: $image-card-color;
+          border-radius: $base-border-radius;
+          margin-bottom: $base-line-height;
+          position: relative;
+          height: $image-card-image-height;
         
-            @include media($medium-screen) {
-              @include span-columns(4 of 12);
-            }
+          &:hover {
+            background-color: $image-card-hover-color;
         
-            &.top {
-              .image-wrapper {
-                height: $image-card-height /2;
-                border-top-left-radius: $base-border-radius;
-                border-bottom-left-radius: $base-border-radius;
-              }
-            }
-        
-            &.left {
-              .image-wrapper {
-                float: left;
-                height: $image-card-height;
-                width: 5%;
-                border-top-left-radius: $base-border-radius;
-                border-bottom-left-radius: $base-border-radius;
-              }
-              .image-card-content {
-                float: right;
-                width: 95%;
-              }
-            }
-        
-            &.bottom {
-              position: relative;
-              .image-wrapper {
-                height: $image-card-height /2;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                left: 0;
-              }
-            }
-        
-            .image-wrapper {
-              @include texture(darken($image-card-color, 5), 1); 
-              // see http://magnus-g.github.io/texture-mixin/ for info on how to use this texture mixin
-            }
-        
-            .image-card-content {
-              padding-left: 1em;
-              padding-right: 1em;
-              padding-top: 1em;
-              
-              p {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-              }  
-            }
-        
-            h3 {
-              font-weight: 800;
-            }
-        
-            &:hover {
+            .card-header {
               background-color: $image-card-hover-color;
-              .card-header {
-                background-color: $image-card-hover-color;
-              }
-            }
-        
-            &:active {
-              background-color: $image-card-color;
-              .card-header {
-                background-color: $image-card-color;
-              }
             }
           }
+        
+          &:active {
+            background-color: $image-card-color;
+        
+            .card-header {
+              background-color: $image-card-color;
+            }
+          }
+        
+          @include media($medium-screen) {
+            @include span-columns(4 of 12);
+          }
+        }
+        
+        .image-card.top {
+          .image-wrapper {
+            height: $image-card-image-height/3;
+          }
+        }
+        
+        .image-card.left {
+          .image-wrapper {
+            @include position(absolute, 0px auto 0px 0px);
+            width: 5%;
+          }
+        
+          .image-card-content {
+            margin-left: 5%;
+          }
+        }
+        
+        .image-card.bottom {
+          position: relative;
+          padding-bottom: $image-card-image-height/2;
+        
+          .image-wrapper {
+            @include position(absolute, auto 0px 0px 0px);
+            height: $image-card-image-height /3;
+          }
+        }
+        
+        .image-wrapper {
+          @include texture($light-gray, 1);
+          // see http://magnus-g.github.io/texture-mixin/ for info on how to use this texture mixin
+        }
+        
+        .image-card-content {
+          padding: $base-line-height/2 $gutter/2 0;
         }
     </code>
   </pre>
@@ -938,73 +821,73 @@
   </div>
 
   <div id="vertical-tabs" class="refill">
-    <h3>Vertical Tabs</h3>
-    <div class="vertical-tabs">
-  <div class="tabs">
-    <a href="" class="tab active" rel="tab1">Item 1</a href="">
-    <a href="" class="tab" rel="tab2">Item 2</a href="">
-    <a href="" class="tab" rel="tab3">Item 3</a href="">
-    <a href="" class="tab" rel="tab4">Item 4</a href="">
+    <h6>Vertical Tabs</h6>
+    <div class="vertical-tabs-container">
+  <div class="vertical-tabs">
+    <a href="#" class="js-vertical-tab vertical-tab is-active" rel="tab1">Item 1</a>
+    <a href="#" class="js-vertical-tab vertical-tab" rel="tab2">Item 2</a>
+    <a href="#" class="js-vertical-tab vertical-tab" rel="tab3">Item 3</a>
+    <a href="#" class="js-vertical-tab vertical-tab" rel="tab4">Item 4</a>
   </div>
 
-  <div class="tab-container">
-    <a href="" class="accordion-active accordion-heading" rel="tab1">Item 1</a>
-    <div id="tab1" class="tab-content">
+  <div class="vertical-tab-content-container">
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab1">Item 1</a>
+    <div id="tab1" class="js-vertical-tab-content vertical-tab-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
     </div>
 
-    <a href="" class="accordion-heading" rel="tab2">Item 2</a>
-    <div id="tab2" class="tab-content">
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab2">Item 2</a>
+    <div id="tab2" class="js-vertical-tab-content vertical-tab-content">
       <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum.</p>
     </div>
 
-    <a href="" class="accordion-heading" rel="tab3">Item 3</a>
-    <div id="tab3" class="tab-content">
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab3">Item 3</a>
+    <div id="tab3" class="js-vertical-tab-content vertical-tab-content">
       <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
     </div>
 
-    <a href="" class="accordion-heading" rel="tab4">Item 4</a>
-    <div id="tab4" class="tab-content">
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab4">Item 4</a>
+    <div id="tab4" class="js-vertical-tab-content vertical-tab-content">
       <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.</p>
     </div>
   </div>
 </div>
 
 <script>
-  $(".tab-content").hide();
-  $(".tab-content:first").show();
+  $(".js-vertical-tab-content").hide();
+  $(".js-vertical-tab-content:first").show();
 
   /* if in tab mode */
-  $(".tabs .tab").click(function() {
-    event.preventDefault()
-  
-    $(".tab-content").hide();
-    var activeTab = $(this).attr("rel"); 
-    $("#"+activeTab).show();    
-  
-    $(".tabs .tab").removeClass("active");
-    $(this).addClass("active");
+  $(".js-vertical-tab").click(function() {
+    event.preventDefault();
 
-  $(".accordion-heading").removeClass("accordion-active");
-  $(".accordion-heading[rel^='"+activeTab+"']").addClass("accordion-active");
-  
+    $(".js-vertical-tab-content").hide();
+    var activeTab = $(this).attr("rel");
+    $("#"+activeTab).show();
+
+    $(".js-vertical-tab").removeClass("is-active");
+    $(this).addClass("is-active");
+
+    $(".js-vertical-tab-accordion-heading").removeClass("is-active");
+    $(".js-vertical-tab-accordion-heading[rel^='"+activeTab+"']").addClass("is-active");
   });
 
   /* if in accordion mode */
-  $(".accordion-heading").click(function() {
+  $(".js-vertical-tab-accordion-heading").click(function() {
     event.preventDefault()
-    
-    $(".tab-content").hide();
-    var accordion_activeTab = $(this).attr("rel"); 
+
+    $(".js-vertical-tab-content").hide();
+    var accordion_activeTab = $(this).attr("rel");
     $("#"+accordion_activeTab).show();
-  
-  $(".accordion-heading").removeClass("accordion-active");
-    $(this).addClass("accordion-active");
-  
-  $(".tabs .tab").removeClass("active");
-  $(".tabs .tab[rel^='"+accordion_activeTab+"']").addClass("active");
+
+    $(".js-vertical-tab-accordion-heading").removeClass("is-active");
+    $(this).addClass("is-active");
+
+    $(".js-vertical-tab").removeClass("is-active");
+    $(".js-vertical-tab[rel^='"+accordion_activeTab+"']").addClass("is-active");
   });
 </script>
+
     <a href="#" class="js-show-code">Show code</a>
 <a href="#" class="js-hide-code">Hide code</a>
 
@@ -1012,72 +895,72 @@
   <a href="#" class="copy-source">Copy</a>
   <pre>
     <code class="language-markup">
-      &lt;div class=&quot;vertical-tabs&quot;&gt;
-  &lt;div class=&quot;tabs&quot;&gt;
-    &lt;a href=&quot;&quot; class=&quot;tab active&quot; rel=&quot;tab1&quot;&gt;Item 1&lt;/a href=&quot;&quot;&gt;
-    &lt;a href=&quot;&quot; class=&quot;tab&quot; rel=&quot;tab2&quot;&gt;Item 2&lt;/a href=&quot;&quot;&gt;
-    &lt;a href=&quot;&quot; class=&quot;tab&quot; rel=&quot;tab3&quot;&gt;Item 3&lt;/a href=&quot;&quot;&gt;
-    &lt;a href=&quot;&quot; class=&quot;tab&quot; rel=&quot;tab4&quot;&gt;Item 4&lt;/a href=&quot;&quot;&gt;
+      &lt;div class=&quot;vertical-tabs-container&quot;&gt;
+  &lt;div class=&quot;vertical-tabs&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-vertical-tab vertical-tab is-active&quot; rel=&quot;tab1&quot;&gt;Item 1&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-vertical-tab vertical-tab&quot; rel=&quot;tab2&quot;&gt;Item 2&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-vertical-tab vertical-tab&quot; rel=&quot;tab3&quot;&gt;Item 3&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-vertical-tab vertical-tab&quot; rel=&quot;tab4&quot;&gt;Item 4&lt;/a&gt;
   &lt;/div&gt;
 
-  &lt;div class=&quot;tab-container&quot;&gt;
-    &lt;a href=&quot;&quot; class=&quot;accordion-active accordion-heading&quot; rel=&quot;tab1&quot;&gt;Item 1&lt;/a&gt;
-    &lt;div id=&quot;tab1&quot; class=&quot;tab-content&quot;&gt;
+  &lt;div class=&quot;vertical-tab-content-container&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active&quot; rel=&quot;tab1&quot;&gt;Item 1&lt;/a&gt;
+    &lt;div id=&quot;tab1&quot; class=&quot;js-vertical-tab-content vertical-tab-content&quot;&gt;
       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.&lt;/p&gt;
     &lt;/div&gt;
 
-    &lt;a href=&quot;&quot; class=&quot;accordion-heading&quot; rel=&quot;tab2&quot;&gt;Item 2&lt;/a&gt;
-    &lt;div id=&quot;tab2&quot; class=&quot;tab-content&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;js-vertical-tab-accordion-heading vertical-tab-accordion-heading&quot; rel=&quot;tab2&quot;&gt;Item 2&lt;/a&gt;
+    &lt;div id=&quot;tab2&quot; class=&quot;js-vertical-tab-content vertical-tab-content&quot;&gt;
       &lt;p&gt;Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum.&lt;/p&gt;
     &lt;/div&gt;
 
-    &lt;a href=&quot;&quot; class=&quot;accordion-heading&quot; rel=&quot;tab3&quot;&gt;Item 3&lt;/a&gt;
-    &lt;div id=&quot;tab3&quot; class=&quot;tab-content&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;js-vertical-tab-accordion-heading vertical-tab-accordion-heading&quot; rel=&quot;tab3&quot;&gt;Item 3&lt;/a&gt;
+    &lt;div id=&quot;tab3&quot; class=&quot;js-vertical-tab-content vertical-tab-content&quot;&gt;
       &lt;p&gt;Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.&lt;/p&gt;
     &lt;/div&gt;
 
-    &lt;a href=&quot;&quot; class=&quot;accordion-heading&quot; rel=&quot;tab4&quot;&gt;Item 4&lt;/a&gt;
-    &lt;div id=&quot;tab4&quot; class=&quot;tab-content&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;js-vertical-tab-accordion-heading vertical-tab-accordion-heading&quot; rel=&quot;tab4&quot;&gt;Item 4&lt;/a&gt;
+    &lt;div id=&quot;tab4&quot; class=&quot;js-vertical-tab-content vertical-tab-content&quot;&gt;
       &lt;p&gt;Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;script&gt;
-  $(&quot;.tab-content&quot;).hide();
-  $(&quot;.tab-content:first&quot;).show();
+  $(&quot;.js-vertical-tab-content&quot;).hide();
+  $(&quot;.js-vertical-tab-content:first&quot;).show();
 
   /* if in tab mode */
-  $(&quot;.tabs .tab&quot;).click(function() {
-    event.preventDefault()
-  
-    $(&quot;.tab-content&quot;).hide();
-    var activeTab = $(this).attr(&quot;rel&quot;); 
-    $(&quot;#&quot;+activeTab).show();    
-  
-    $(&quot;.tabs .tab&quot;).removeClass(&quot;active&quot;);
-    $(this).addClass(&quot;active&quot;);
+  $(&quot;.js-vertical-tab&quot;).click(function() {
+    event.preventDefault();
 
-  $(&quot;.accordion-heading&quot;).removeClass(&quot;accordion-active&quot;);
-  $(&quot;.accordion-heading[rel^='&quot;+activeTab+&quot;']&quot;).addClass(&quot;accordion-active&quot;);
-  
+    $(&quot;.js-vertical-tab-content&quot;).hide();
+    var activeTab = $(this).attr(&quot;rel&quot;);
+    $(&quot;#&quot;+activeTab).show();
+
+    $(&quot;.js-vertical-tab&quot;).removeClass(&quot;is-active&quot;);
+    $(this).addClass(&quot;is-active&quot;);
+
+    $(&quot;.js-vertical-tab-accordion-heading&quot;).removeClass(&quot;is-active&quot;);
+    $(&quot;.js-vertical-tab-accordion-heading[rel^='&quot;+activeTab+&quot;']&quot;).addClass(&quot;is-active&quot;);
   });
 
   /* if in accordion mode */
-  $(&quot;.accordion-heading&quot;).click(function() {
+  $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function() {
     event.preventDefault()
-    
-    $(&quot;.tab-content&quot;).hide();
-    var accordion_activeTab = $(this).attr(&quot;rel&quot;); 
+
+    $(&quot;.js-vertical-tab-content&quot;).hide();
+    var accordion_activeTab = $(this).attr(&quot;rel&quot;);
     $(&quot;#&quot;+accordion_activeTab).show();
-  
-  $(&quot;.accordion-heading&quot;).removeClass(&quot;accordion-active&quot;);
-    $(this).addClass(&quot;accordion-active&quot;);
-  
-  $(&quot;.tabs .tab&quot;).removeClass(&quot;active&quot;);
-  $(&quot;.tabs .tab[rel^='&quot;+accordion_activeTab+&quot;']&quot;).addClass(&quot;active&quot;);
+
+    $(&quot;.js-vertical-tab-accordion-heading&quot;).removeClass(&quot;is-active&quot;);
+    $(this).addClass(&quot;is-active&quot;);
+
+    $(&quot;.js-vertical-tab&quot;).removeClass(&quot;is-active&quot;);
+    $(&quot;.js-vertical-tab[rel^='&quot;+accordion_activeTab+&quot;']&quot;).addClass(&quot;is-active&quot;);
   });
 &lt;/script&gt;
+
     </code>
   </pre>
 </div>
@@ -1088,113 +971,91 @@
     <code class='language-scss'>
         $tab-border-color: $base-border-color;
         $tab-border: 1px solid $tab-border-color;
+        $tab-border-radius: $base-border-radius;
         $tab-content-background: lighten($tab-border-color, 10);
         $tab-active-color: $tab-content-background;
         $tab-inactive-color: $base-body-color;
         $vertical-tabs-height: em(300);
         
-        .vertical-tabs { // small screens: accordion
+        .vertical-tabs-container { // small screens: accordion
           @include clearfix;
-          margin-bottom: $base-line-height;
+          border-radius: $tab-border-radius;
           border: $tab-border;
-          border-radius: $base-border-radius;
+          margin-bottom: $base-line-height;
+          overflow: hidden;
+        }
         
-          .tabs {
+        .vertical-tabs {
+          display: none;
+        
+          @include media($medium-screen) {
+            background-color: $tab-inactive-color;
+            display: inline;
+            float: left;
+            height: $vertical-tabs-height;
+            width: 20%;
+          }
+        }
+        
+        .vertical-tab {
+          @include media($medium-screen) {
+            border-bottom: $tab-border;
+            display: block;
+            font-weight: bold;
+            margin-right: -1px;
+            padding: $base-line-height/2 $gutter/2;
+        
+            &.is-active {
+              background-color: $tab-content-background;
+              margin-right: -1px;
+            }
+          }
+        }
+        
+        .vertical-tab-content-container {
+          display: block;
+          margin: 0 auto;
+        
+          @include media($medium-screen) {
+            @include inline-block;
+            @include size(80% $vertical-tabs-height);
+            background-color: $tab-content-background;
+          }
+        }
+        
+        .vertical-tab-content {
+          background-color: $tab-content-background;
+          padding: 1em;
+        
+          @include media($medium-screen) {
+            border: none;
+            display: none;
+          }
+        }
+        
+        .vertical-tab-accordion-heading {
+          background-color: $tab-inactive-color;
+          border-top: $tab-border;
+          cursor: pointer;
+          display: block;
+          font-weight: bold;
+          padding: $base-line-height/2 $gutter/2;
+        
+          @include media($medium-screen) {
             display: none;
           }
         
-          .tab-container {
-            display: block;
-            margin: 0 auto;
-        
-            .tab-content {
-              padding: 1em;
-              background-color: $tab-content-background;
-        
-              &:last-child {
-                border-bottom-left-radius: $base-border-radius;
-                border-bottom-right-radius: $base-border-radius;
-              }
-            }
+          &:hover {
+            color: $base-accent-color;
           }
         
-          .accordion-heading {
-            padding: $base-line-height/2 $gutter/2;
-            border-top: $tab-border;
-            font-weight: bold;
-            background-color: $tab-inactive-color;
-            display: block;
-            cursor: pointer;
-        
-            &:hover {
-              color: $base-accent-color;
-            }
-        
-            &:first-child {
-              border-top: none;
-              border-top-right-radius: $base-border-radius; 
-              border-top-left-radius: $base-border-radius; 
-            }
-        
-            &.accordion-active {
-            	background: $tab-active-color;
-            	border-bottom: none;
-          	}
+          &:first-child {
+            border-top: none;
           }
         
-          @include media($medium-screen) { // turns into tabs
-            .tab-content,
-            .accordion-heading {
-              display: none;
-            }
-        
-            .tabs {
-              float: left;
-              width: 20%;
-              height: $vertical-tabs-height; 
-              display: inline; 
-              border-top-left-radius: $base-border-radius;
-              border-bottom-left-radius: $base-border-radius;
-              background-color: $tab-inactive-color;
-        
-              .tab {
-                display: block;
-                padding: $base-line-height/2 $gutter/2;
-                font-weight: bold;
-                border-bottom: $tab-border;
-                margin-right: -1px;
-        
-                &:hover {
-                  color: $base-accent-color;
-                }
-        
-                &:first-child.active {
-                  border-top-left-radius: $base-border-radius;
-                }
-        
-                &.active {
-                  background-color: $tab-content-background;
-                  margin-right: -1px;
-                }
-              }
-            }
-        
-            .tab-container {
-              @include inline-block;
-              @include size(80% $vertical-tabs-height);
-              background-color: $tab-content-background;
-              border-top-right-radius: $base-border-radius;
-              border-bottom-right-radius: $base-border-radius;
-        
-              .tab-content {
-                border: none;
-              }
-        
-              p {
-                border: none;
-                padding: 0;
-              }
-            }
+          &.is-active {
+            background: $tab-active-color;
+            border-bottom: none;
           }
         }
         
@@ -1207,7 +1068,7 @@
   </div>
 
   <div id="accordion-tabs" class="refill">
-    <h3>Accordion / Tabs</h3>
+    <h6>Accordion / Tabs</h6>
     <ul class="accordion-tabs">
   <li><a href="#" class="is-active">Item 1</a>
     <section>
@@ -1406,7 +1267,7 @@
   </div>
 
   <div id="modal" class="refill">
-    <h3>Modal</h3>
+    <h6>Modal</h6>
     <div class="modal">
   <label for="modal-1">
     <div class="btn js-btn">Click for Modal</div>
@@ -1661,7 +1522,7 @@
   </div>
 
   <div id="progress-bar" class="refill">
-    <h3>Progress Bar</h3>
+    <h6>Progress Bar</h6>
     <div class="progress-bar">
   <span class="meter" style="width: 60%"></span>
 </div>
@@ -1775,7 +1636,7 @@
   </div>
 
   <div id="tooltip" class="refill">
-    <h3>Tooltip</h3>
+    <h6>Tooltip</h6>
     <a href="#" class="tooltip-item">
   Hover for Tooltip
   <div class="tooltip">Tooltip text</div>
@@ -1872,7 +1733,7 @@
   </div>
 
   <div id="accordion" class="refill">
-    <h3>Accordion</h3>
+    <h6>Accordion</h6>
     <ul class="accordion-menus">
   <li>
     <a href="#" class="js-accordion-trigger">Item 1</a>
@@ -2016,7 +1877,7 @@
   </div>
 
   <div id="dropdown-menu" class="refill">
-    <h3>Dropdown Menu</h3>
+    <h6>Dropdown Menu</h6>
     <section class="dropdown">
   <div class="js-dropdown-link dropdown-link">Dropdown</div>
   <div class="js-dropdown-menu dropdown-menu">
@@ -2198,7 +2059,7 @@
   </div>
 
   <div id="switch-toggle" class="refill">
-    <h3>Switch Toggle</h3>
+    <h6>Switch Toggle</h6>
     <div class="switch-toggles">
   <div class="switch-toggle">
     <input type="checkbox" id="switch-toggle-1" name="switch-toggle" class="switch-checkbox" checked/>
@@ -2335,7 +2196,7 @@
   </div>
 
   <div id="search-bar" class="refill">
-    <h3>Search bar</h3>
+    <h6>Search bar</h6>
     <div class="search-bar">
   <div class="search-item">
     <div class="search-and-submit">
@@ -2419,7 +2280,7 @@
   </div>
   
   <div id="tables" class="refill">
-    <h3>Tables</h3>
+    <h6>Tables</h6>
     <table class="table-borders">
   <thead>
     <tr>
@@ -2585,7 +2446,7 @@
   </div>
 
   <div id="breadcrumbs" class="refill">
-    <h3>Breadcrumbs</h3>
+    <h6>Breadcrumbs</h6>
     <div class="breadcrumb">
   <a href="#">One</a>
   <a href="#">Two</a>
@@ -2701,7 +2562,7 @@
   </div>
 
   <div id="button-group" class="refill">
-    <h3>Button Group</h3>
+    <h6>Button Group</h6>
     <div class="button-group">
   <button class="active">Item</button>
   <button>Item</button>
@@ -2772,7 +2633,7 @@
   </div>
 
   <div id="navigation" class="refill">
-    <h3>Navigation</h3>
+    <h6>Navigation</h6>
     <header class="navigation">
   <div class="menu-wrapper">
     <div class="logo">Logo</div>
@@ -3035,7 +2896,7 @@
 
 
   <div id="image-gradient" class="refill">
-    <h3>Image with gradient overlays</h3>
+    <h6>Image with gradient overlays</h6>
     <div class="image-container">
   <div class="image-gradient">
     <div class="copy">
@@ -3197,7 +3058,7 @@
   </div>
 
   <div id="item-list" class="refill">
-    <h3>Item List</h3>
+    <h6>Item List</h6>
     <ul class="item-list">  		
 	<li>
 		<div class="item-list-image"></div>
@@ -3308,7 +3169,7 @@
   
 
   <div id="master-detail" class="refill">
-    <h3>Master and Detail</h3>
+    <h6>Master and Detail</h6>
     <div class="master-detail">
 	<div class="master">
 		<ul>
@@ -3457,7 +3318,7 @@
   
 
   <div id="sidebar-layout" class="refill">
-    <h3>Sidebar Layout</h3>
+    <h6>Sidebar Layout</h6>
     <div class="sidebar-layout">
 	<aside>
 		<ul>
@@ -3594,7 +3455,7 @@
   </div>
 
   <div id="info-section" class="refill">
-    <h3>Info Section</h3> 
+    <h6>Info Section</h6> 
     <div class="info-section">
 	<ul>
 		<li>
@@ -3719,12 +3580,12 @@
 
 
   <div id="hero" class="refill">
-    <h3>Hero Unit</h3>  
+    <h6>Hero Unit</h6>  
     <div class="hero">
 	<div class="hero-inner">
 		<div class="hero-copy">
 			<h1>Lorem ipsum dolor sit amet</h1>
-			<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, et, eos deleniti molestias officiis sequi praesentium placeat omnis </h6>	
+			<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, et, eos deleniti molestias officiis sequi praesentium placeat omnis </h5>	
 			<button>Call to Action</button>
 		</div>
 		<div class="hero-image">
@@ -3742,7 +3603,7 @@
 	&lt;div class=&quot;hero-inner&quot;&gt;
 		&lt;div class=&quot;hero-copy&quot;&gt;
 			&lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;
-			&lt;h6&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, et, eos deleniti molestias officiis sequi praesentium placeat omnis &lt;/h6&gt;	
+			&lt;h5&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, et, eos deleniti molestias officiis sequi praesentium placeat omnis &lt;/h5&gt;	
 			&lt;button&gt;Call to Action&lt;/button&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;hero-image&quot;&gt;
@@ -3781,7 +3642,7 @@
         				@include span-columns(6);
         			}
         			
-        			h6 {
+        			h5 {
         				margin-bottom: 2em;	
         			}
         		}
@@ -3802,7 +3663,7 @@
 
 <div class="refills-wrapper">
   <div id="footer" class="refill">
-    <h3>Footer</h3> 
+    <h6>Footer</h6> 
     <div class="footer">
   <div class="footer-links">
     <ul>
