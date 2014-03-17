@@ -36,8 +36,7 @@ label {
 }
 
 textarea,
-#{$all-text-inputs},
-select[multiple=multiple] {
+#{$all-text-inputs} {
   @include box-sizing(border-box);
   @include transition(border-color);
   background-color: white;
@@ -48,6 +47,7 @@ select[multiple=multiple] {
   font-size: $form-font-size;
   margin-bottom: $base-line-height / 2;
   padding: ($base-line-height / 3) ($base-line-height / 3);
+  resize: vertical;
   width: 100%;
 
   &:hover {
@@ -61,10 +61,6 @@ select[multiple=multiple] {
   }
 }
 
-textarea {
-  resize: vertical;
-}
-
 input[type="search"] {
   @include appearance(none);
 }
@@ -74,13 +70,8 @@ input[type="checkbox"], input[type="radio"] {
   margin-right: $base-line-height / 4;
 }
 
-input[type="file"] {
-  width: 100%;
-}
-
 select {
   width: auto;
-  max-width: 100%;
   margin-bottom: $base-line-height;
 }
 
@@ -92,4 +83,5 @@ input[type="submit"] {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  background-clip: border-box;
 }

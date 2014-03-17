@@ -1,8 +1,9 @@
+$subtle-gray: lighten($light-gray, 10);
+
 table {
-  border-collapse: collapse;
   margin: ($base-line-height / 2) 0;
-  table-layout: fixed;
   width: 100%;
+  margin-bottom: $base-line-height;
 }
 
 th {
