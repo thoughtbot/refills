@@ -2,21 +2,34 @@
 title: Refills
 ---
 
-<a class="external" href="https://github.com/thoughtbot/refills">
-</a>
-
 <div id="example1" class="refills-wrapper">
 
   <div class="refills-header">
     <h2>Refills are prepackaged patterns and compontents, built ontop of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://www.bitters.bourbon.io">Bitters</a>, and <a href="http://www.neat.bourbon.io">Neat</a>.</h2>
+    <!-- <h3>Expand each item's code by clicking its "Show Code" button, and use the "Copy" buttons.</h3> -->
   </div>
 
+  <div class="external">
+    <a href="https://github.com/thoughtbot/refills"></a>
+  </div>
 
   <div id="navigation" class="refill">
-    <h6>Navigation</h6>
+    <div class="line-behind-text">
+      <h6>Navigation</h6>
+    </div>
+
     <%= partial "navigation" %>
     <%= snippet('navigation') %>
   </div>
+
+  <div id="accordion-tabs" class="refill">
+    <div class="line-behind-text">
+      <h6>Accordion / Tabs</h6>
+    </div>
+    <%= partial "accordion-tabs" %>
+    <%= snippet('accordion-tabs') %>
+  </div>
+
 <!-- 
   <div id="icon-bullet-points" class="refill">
     <h6>Icon Bullet Points</h6>
@@ -59,12 +72,6 @@ title: Refills
     <h6>Vertical Tabs</h6>
     <%= partial "vertical-tabs" %>
     <%= snippet('vertical-tabs') %>
-  </div>
-
-  <div id="accordion-tabs" class="refill">
-    <h6>Accordion / Tabs</h6>
-    <%= partial "accordion-tabs" %>
-    <%= snippet('accordion-tabs') %>
   </div>
 
   <div id="modal" class="refill">

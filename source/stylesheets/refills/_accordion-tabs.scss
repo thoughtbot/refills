@@ -1,11 +1,11 @@
-$tab-border-color: $base-border-color;
-$tab-border: 1px solid $tab-border-color;
-$tab-content-color: lighten($tab-border-color, 10);
-$tab-active-color: $tab-content-color;
-$tab-inactive-color: $base-body-color;
-$tab-inactive-hover-color: darken($light-gray, 5);
-
 .accordion-tabs { // small screens: accordion
+  $tab-border-color: $base-border-color;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-content-background: lighten($light-gray, 10);
+  $tab-active-color: $tab-content-background;
+  $tab-inactive-color: $base-body-color;
+  $tab-inactive-hover-color: darken($light-gray, 5);
+
   @include clearfix;
   @include fill-parent;
   margin-bottom: $base-line-height;
@@ -43,16 +43,14 @@ $tab-inactive-hover-color: darken($light-gray, 5);
     }
 
     section {
-      padding: $base-line-height/2 $gutter/2;
-      background-color: $tab-content-color;
+      padding: $base-line-height $gutter;
+      background: $tab-content-background;
       display: none;
       overflow: hidden;
     }
   }
-}
 
-@include media($medium-screen) { // turns into tabs
-  .accordion-tabs {
+  @include media($medium-screen) { // turns into tabs
     border: none;
     position: relative;
 
@@ -86,6 +84,11 @@ $tab-inactive-hover-color: darken($light-gray, 5);
       float: left;
       left: 0;
       padding: $base-line-height/2 $gutter/2;
+
+      p {
+        @include columns(2)
+      }
     }
   }
 }
+    
