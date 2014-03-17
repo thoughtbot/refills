@@ -10,11 +10,11 @@
     <link rel="shortcut icon" href="favicon.ico" />    
     <%= stylesheet_link_tag "all" %>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type='text/javascript' src='javascripts/jquery.erToc.js'></script>
   </head>
   
   <body class="<%= page_classes %>">
     <section class="container">
-      <%= partial "menu" %>
       <section class="inner-content">
         <%= yield %>
       </section>

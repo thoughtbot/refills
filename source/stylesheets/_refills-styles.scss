@@ -170,20 +170,25 @@ body {
     display: inline-block;
     padding: 0.5em;
   }
+}
 
-  .refill {
-    margin-bottom: 2em;
-    padding-bottom: 3em;
-    border-bottom: 1px dashed $light-gray;
-    position: relative;
-    @include clearfix;
+.refill {
+  margin-bottom: 2em;
+  padding-bottom: 3em;
+  border-bottom: 1px dashed $light-gray;
+  position: relative;
+  @include clearfix;
 
-    > h3 {
-      padding-top: 0.5em;
-      margin-top: 1em;
-      margin-bottom: 1.3em;
-    }
+  > h3 {
+    padding-top: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1.3em;
   }
+}
+
+.refill h6 {
+  margin-bottom: $base-line-height;
+  font-size: 2em;
 }
 
 .js-hide-code {
@@ -257,3 +262,4 @@ pre {
 .token.variable {
   background-color: transparent;
 }
+
