@@ -1136,19 +1136,23 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help; }
 
-/* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+/* line 3, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
 section.inner-content {
   margin-left: auto; }
   @media screen and (min-width: 47.5em) {
-    /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+    /* line 3, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
     section.inner-content {
       margin-left: 12.5em; } }
 
-/* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+/* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+.er_toc_title {
+  display: none; }
+
+/* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
 .er_toc {
   display: none; }
   @media screen and (min-width: 47.5em) {
-    /* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+    /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
     .er_toc {
       position: fixed;
       top: 0px;
@@ -1158,14 +1162,14 @@ section.inner-content {
       display: block;
       box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.9);
       background: #333333; }
-      /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+      /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
       .er_toc ul {
         padding: 1em; }
-        /* line 55, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+        /* line 29, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
         .er_toc ul li a {
           color: #dddddd;
           font-size: 0.8em; }
-          /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+          /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
           .er_toc ul li a:hover {
             color: #FFF;
             text-decoration: underline; } }
