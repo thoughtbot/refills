@@ -1,15 +1,26 @@
 .hero {
-	$hero-background: lighten($base-border-color, 10);	
+	$hero-background: #355B70;	
+	$hero-color: white;
 
+	background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
 	background-color: $hero-background;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
 	padding-bottom: 4em;
-	margin-bottom: $base-line-height;
+
+	.hero-logo img {
+		height: 3em;
+		margin-bottom: 1em;
+	}
 
 	.hero-inner {
 		@include outer-container;
 		@include clearfix;
-		padding: 1em;
+		padding: 3em;
 		margin: auto;
+		text-align: center;
+		color: $hero-color;
 
 		button {
 			@include button(simple, $base-accent-color);
@@ -18,12 +29,27 @@
 		}
 
 		.hero-copy {
-			@include media($medium-screen) {
-				@include span-columns(6);
-			}
+			text-align: center;
 			
+			h1 {
+				font-size: 1.4em;
+				margin-bottom: .2em;
+
+				@include media($large-screen) {
+					font-size: 1.8em;
+				}
+			}
+
 			h5 {
-				margin-bottom: 2em;	
+				font-size: 1em;
+				margin: auto;
+				margin-bottom: 3em;	
+				font-weight: 200;
+
+				@include media($large-screen) {
+					font-size: 1.2em;
+					max-width: 40%;
+				}
 			}
 		}
 

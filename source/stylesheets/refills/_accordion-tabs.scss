@@ -8,9 +8,9 @@
 
   @include clearfix;
   @include fill-parent;
-  margin-bottom: $base-line-height;
   border: $tab-border;
   border-radius: $base-border-radius;
+  margin-bottom: $base-line-height;
 
   li {
     &:first-child a {

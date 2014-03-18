@@ -101,8 +101,12 @@ body {
   }
 }
 
+.refill-snippet {
+  margin-top: $base-line-height;
+}
+
 // this centers the refill and sets back to text-align left below first object
-.refill-example {
+.refill-centering {
   text-align: center;
   & > * {
     display: inline-block;

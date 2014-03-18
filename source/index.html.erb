@@ -14,31 +14,32 @@ title: Refills
   </div>
 
   <div id="navigation" class="refill">
-    <div class="line-behind-text">
-      <h6>Navigation</h6>
-    </div>
-
+    <div class="line-behind-text"><h6>Navigation</h6></div>
     <%= partial "navigation" %>
-    <%= snippet('navigation') %>
+    <div class="refill-snippet"><%= snippet('navigation') %></div>
+  </div>
+
+  <div id="hero" class="refill">
+    <div class="line-behind-text"><h6>Hero Unit</h6>  </div>
+    <%= partial "hero" %>
+    <div class="refill-snippet"><%= snippet('hero') %></div>
   </div>
 
   <div id="accordion-tabs" class="refill">
-    <div class="line-behind-text">
-      <h6>Accordion / Tabs</h6>
-    </div>
+    <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
     <%= partial "accordion-tabs" %>
-    <%= snippet('accordion-tabs') %>
+    <div class="refill-snippet"><%= snippet('accordion-tabs') %></div>
   </div>
 
   <div id="badges" class="refill">
     <div class="line-behind-text"><h6>Badges</h6></div>
-    <div class="refill-example"><%= partial "badges" %></div>
+    <div class="refill-centering"><%= partial "badges" %></div>
     <%= snippet('badges') %>
   </div>
 
   <div id="hover-tile-animation" class="refill">
     <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
-    <div class="refill-example"><%= partial "hover-tile-animation" %></div>
+    <div class="refill-centering"><%= partial "hover-tile-animation" %></div>
     <%= snippet('hover-tile-animation') %>
   </div>
 
@@ -168,13 +169,6 @@ title: Refills
     <h6>Info Section</h6> 
     <%= partial "info-section" %>
     <%= snippet('info-section') %>
-  </div>
-
-
-  <div id="hero" class="refill">
-    <h6>Hero Unit</h6>  
-    <%= partial "hero" %>
-    <%= snippet('hero') %>
   </div>
 
 <div class="refills-wrapper">
