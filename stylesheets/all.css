@@ -1145,7 +1145,7 @@ section.inner-content {
           /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
           .er_toc ul li a:hover {
             color: #FFF;
-            text-decoration: underline; } }
+            text-decoration: none; } }
 
 @font-face {
   font-family: Fairview;
@@ -1705,11 +1705,9 @@ pre {
       border-left: 1px solid lighteni(#f7f7f7, 15);
       border-top-left-radius: 0; }
 
-/* line 7, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+/* line 2, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
 .cards {
-  *zoom: 1;
-  cursor: pointer;
-  margin-bottom: 1.5em; }
+  *zoom: 1; }
   /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
   .cards:before, .cards:after {
     content: " ";
@@ -1717,47 +1715,119 @@ pre {
   /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
   .cards:after {
     clear: both; }
-
-/* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-.card, .system ul li {
-  background-color: #f7f7f7;
-  border-radius: 0.1875em;
-  border: 1px solid #dddddd;
-  margin-bottom: 1.5em; }
-  @media screen and (min-width: 40em) {
-    /* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-    .card, .system ul li {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%; }
-      /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
-      .card:last-child, .system ul li:last-child {
-        margin-right: 0; } }
-  /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-  .card:hover, .system ul li:hover {
-    background-color: #eaeaea; }
-    /* line 26, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-    .card:hover .card-header, .system ul li:hover .card-header {
-      background-color: #eaeaea; }
-  /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-  .card:active, .system ul li:active {
-    background-color: #f7f7f7; }
-    /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-    .card:active .card-header, .system ul li:active .card-header {
+  /* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  .cards .card, .cards .system ul li, .system ul .cards li {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    background-color: #f7f7f7;
+    border-radius: 0.1875em;
+    border: 1px solid #dddddd;
+    margin-bottom: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 2px 4px #e6e6e6;
+    position: relative; }
+    /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
+    .cards .card:last-child, .cards .system ul li:last-child, .system ul .cards li:last-child {
+      margin-right: 0; }
+    /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    .cards .card .card-image, .cards .system ul li .card-image, .system ul .cards li .card-image {
+      overflow: hidden;
+      max-height: 150px; }
+      /* line 29, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+      .cards .card .card-image img, .cards .system ul li .card-image img, .system ul .cards li .card-image img {
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        background: #dbd199;
+        border-top-left-radius: 0.1875em;
+        border-top-right-radius: 0.1875em; }
+    /* line 37, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    .cards .card .ribbon-wrapper, .cards .system ul li .ribbon-wrapper, .system ul .cards li .ribbon-wrapper {
+      width: 85px;
+      height: 85px;
+      overflow: hidden;
+      position: absolute;
+      top: -1px;
+      right: -1px; }
+      /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+      .cards .card .ribbon-wrapper .ribbon, .cards .system ul li .ribbon-wrapper .ribbon, .system ul .cards li .ribbon-wrapper .ribbon {
+        font-size: .8em;
+        font-weight: 800;
+        text-align: center;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: relative;
+        padding: 2px 7px;
+        left: -5px;
+        top: 15px;
+        width: 120px;
+        background-color: #477dca;
+        color: white;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3); }
+    /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    .cards .card .card-header, .cards .system ul li .card-header, .system ul .cards li .card-header {
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      background-color: #f7f7f7;
+      border-bottom: 1px solid #dddddd;
+      border-radius: 0.1875em 0.1875em 0 0;
+      font-weight: bold;
+      padding: 0.5em 0.809em; }
+    /* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    .cards .card .card-copy, .cards .system ul li .card-copy, .system ul .cards li .card-copy {
+      padding: 0.75em 0.809em;
+      font-size: .9em;
+      line-height: 1.5em; }
+    /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    .cards .card .card-stats, .cards .system ul li .card-stats, .system ul .cards li .card-stats {
+      padding: 0.75em 0.809em;
+      overflow: auto; }
+      /* line 81, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+      .cards .card .card-stats ul li, .cards .system ul li .card-stats ul li, .system ul .cards li .card-stats ul li {
+        display: inline;
+        color: #6f99d5;
+        font-weight: 800;
+        font-size: 1.2em;
+        float: left;
+        border-right: 1px solid rgba(51, 51, 51, 0.2);
+        line-height: 1.1em;
+        padding: 0 .7em 0 .7em; }
+        /* line 91, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+        .cards .card .card-stats ul li:first-child, .cards .system ul li .card-stats ul li:first-child, .system ul .cards li .card-stats ul li:first-child {
+          padding-left: 0; }
+        /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+        .cards .card .card-stats ul li:last-child, .cards .system ul li .card-stats ul li:last-child, .system ul .cards li .card-stats ul li:last-child {
+          border-right: 0; }
+        /* line 99, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+        .cards .card .card-stats ul li span, .cards .system ul li .card-stats ul li span, .system ul .cards li .card-stats ul li span {
+          color: #333333;
+          font-size: .7em;
+          display: block;
+          font-weight: normal; }
+    /* line 108, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    .cards .card:hover, .cards .system ul li:hover, .system ul .cards li:hover {
+      background-color: white; }
+      /* line 111, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+      .cards .card:hover .card-image img, .cards .system ul li:hover .card-image img, .system ul .cards li:hover .card-image img {
+        background: #e2daac; }
+      /* line 115, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+      .cards .card:hover .card-header, .cards .system ul li:hover .card-header, .system ul .cards li:hover .card-header {
+        background-color: white; }
+    /* line 120, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    .cards .card:active, .cards .system ul li:active, .system ul .cards li:active {
       background-color: #f7f7f7; }
-
-/* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-.card-header {
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #dddddd;
-  border-radius: 0.1875em 0.1875em 0 0;
-  font-weight: bold;
-  padding: 0.75em 0.809em; }
-
-/* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-.card-content {
-  padding: 0.75em 0.809em 0; }
+      /* line 123, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+      .cards .card:active .card-header, .cards .system ul li:active .card-header, .system ul .cards li:active .card-header {
+        background-color: #f7f7f7; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_dashboard.scss */
 .dashboard {
