@@ -16,142 +16,407 @@
   <body class="index">
     <section class="container">
       <section class="inner-content">
-        <a class="external" href="https://github.com/thoughtbot/refills">
-</a>
+        <div id="example1" class="refills-wrapper">
 
-<div id="example1" class="refills-wrapper">
   <div class="refills-header">
-    <h2>Refills are prepackaged patterns and compontents, built ontop of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://www.bitters.bourbon.io">Bitters</a>, and <a href="http://www.neat.bourbon.io">Neat</a>.</h2>
+    <h2>Refills are prepackaged patterns and compontents, built ontop of <br><a href="http://www.bourbon.io">Bourbon</a>, <a href="http://www.bitters.bourbon.io">Bitters</a>, and <a href="http://www.neat.bourbon.io">Neat</a>.</h2>
+  </div>
+
+  <div class="external">
+    <a href="https://github.com/thoughtbot/refills"></a>
+  </div>
+
+  <div id="navigation" class="refill">
+    <div class="line-behind-text"><h6>Navigation</h6></div>
+    <header class="navigation">
+  <div class="menu-wrapper">
+    <a href="" class="logo"><img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt=""></a>
+    <p id="js-mobile-menu">MENU</p>
+    <div class="nav">
+      <ul id="navigation-menu">
+        <li><a href="">Products</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<script>
+  $(function() {
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+
+    $(menuToggle).on('click', function(e) {
+      e.preventDefault();
+      menu.slideToggle(function(){
+        if(menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+  });
+</script>
+
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class="language-markup">
+      &lt;header class=&quot;navigation&quot;&gt;
+  &lt;div class=&quot;menu-wrapper&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;logo&quot;&gt;&lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+    &lt;p id=&quot;js-mobile-menu&quot;&gt;MENU&lt;/p&gt;
+    &lt;div class=&quot;nav&quot;&gt;
+      &lt;ul id=&quot;navigation-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Sign Up&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;script&gt;
+  $(function() {
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+
+    $(menuToggle).on('click', function(e) {
+      e.preventDefault();
+      menu.slideToggle(function(){
+        if(menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+  });
+&lt;/script&gt;
+
+    </code>
+  </pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class='language-scss'>
+        header.navigation {
+          $navigation-background: $dark-gray;
+          $navigation-color: transparentize(white, 0.3);
+          $navigation-color-hover: white;
+          $navigation-height: 60px;
+          $navigation-nav-button-background: $base-accent-color;
+          $navigation-nav-button-background-hover: lighten($navigation-background, 10);
+          $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
+        
+          background-color: $navigation-background;
+          border-bottom: 1px solid darken($navigation-background, 10);
+          font-family: $sans-serif;
+          height: $navigation-height;
+          width: 100%;
+          z-index: 999;
+        
+          .menu-wrapper {
+            @include outer-container;
+            position: relative;
+          }
+        
+          .logo {
+            float: left;    
+            max-height: $navigation-height;
+            padding-left: 1em;
+            padding-right: 2em;
+        
+            img {
+              max-height: $navigation-height;
+              padding: .8em 0;
+            }
+        
+            @include media($medium-screen) {
+              padding-left: 1em;
+            }
+          }
+        
+          p {
+            color: $navigation-color;
+            cursor: pointer;
+            display: block;
+            float: right;
+            font-family: $sans-serif;
+            font-weight: 700;
+            line-height: $navigation-height;
+            margin: 0;
+            padding-right: 1em;
+            text-transform: uppercase;
+        
+            &:hover {
+              color: $navigation-color-hover;
+            }
+          }
+        
+          .nav ul {    
+            -webkit-transform-style: preserve-3d; // stop webkit flicker
+            display: none;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 0;
+            width: 100%;
+            z-index: 9999;
+        
+            li {
+              background: $navigation-background;
+              display: block;
+              line-height: $navigation-height;
+              overflow: hidden;
+              padding-right: .8em;
+              text-align: right;
+              width: 100%;
+              z-index: 99999999;
+        
+              a {
+                font-weight: 400;
+                color: $navigation-color;
+        
+                &:hover {
+                  color: $navigation-color-hover;
+                }
+              }
+            }
+          }
+        
+          @include media ($large-screen) {
+            p {
+              display: none;
+            }
+        
+            .nav {
+              float: left;
+        
+              ul {
+                display: inline;
+                margin: 0;
+                padding: 0;
+        
+                li {
+                  background: transparent;
+                  display: inline;
+                  line-height: $navigation-height;
+                  padding-right: 2em;
+                  text-decoration: none;
+                  width: auto;
+        
+                  // CTA button
+                  &:last-child {
+                    @include position(absolute, 0px 0px 0 0);
+                    padding-right: 1em;
+        
+                    a {
+                      @include transition (all 0.2s ease-in-out);
+                      background: $navigation-nav-button-background;
+                      border-radius: $base-border-radius; 
+                      color: white;
+                      font-size: .8em;  
+                      font-weight: 800;
+                      padding: .6em 1em;
+                      text-transform: uppercase;
+        
+                      &:hover {
+                        background: lighten($navigation-nav-button-background, 10);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+    </code>
+  </pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="hero" class="refill">
+    <div class="line-behind-text"><h6>Hero Unit</h6>  </div>
+    <div class="hero">
+	<div class="hero-inner">
+    <a href="" class="hero-logo"><img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt=""></a>
+		<div class="hero-copy">
+			<h1>Short description of Product</h1>
+			<p>A few reasons why this product is worth using, who is it for and why do they need it.</p>	
+		</div>
+    <button>Learn More</button>
+	</div>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class="language-markup">
+      &lt;div class=&quot;hero&quot;&gt;
+	&lt;div class=&quot;hero-inner&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;hero-logo&quot;&gt;&lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+		&lt;div class=&quot;hero-copy&quot;&gt;
+			&lt;h1&gt;Short description of Product&lt;/h1&gt;
+			&lt;p&gt;A few reasons why this product is worth using, who is it for and why do they need it.&lt;/p&gt;	
+		&lt;/div&gt;
+    &lt;button&gt;Learn More&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+    </code>
+  </pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class='language-scss'>
+        .hero {
+        	$hero-background: #355B70;	
+        	$hero-color: white;
+        
+        	background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
+        	background-color: $hero-background;
+        	background-repeat: no-repeat;
+        	background-position: top;
+        	background-size: cover;
+        	padding-bottom: 4em;
+        
+        	.hero-logo img {
+        		height: 3em;
+        		margin-bottom: 1em;
+        	}
+        
+        	.hero-inner {
+        		@include outer-container;
+        		@include clearfix;
+        		padding: 3em;
+        		margin: auto;
+        		text-align: center;
+        		color: $hero-color;
+        
+        		button {
+        			@include button(simple, $base-accent-color);
+        			font-size: $base-font-size;
+        			outline: none;
+        		}
+        
+        		.hero-copy {
+        			text-align: center;
+        			
+        			h1 {
+        				font-size: 1.4em;
+        				margin-bottom: .2em;
+        
+        				@include media($large-screen) {
+        					font-size: 1.8em;
+        				}
+        			}
+        
+        			p {
+        				margin: auto;
+        				margin-bottom: 3em;	
+        				font-weight: 200;
+        
+        				@include media($large-screen) {
+        					font-size: 1.2em;
+        					max-width: 40%;
+        				}
+        			}
+        		}
+        
+        		.hero-image {
+        			@include media($medium-screen) {
+        				@include span-columns(6);
+        			}
+        		}
+        	}
+        }
+    </code>
+  </pre>
+</div>
+
+</div>
   </div>
 
   <div id="icon-bullet-points" class="refill">
-    <h6>Icon Bullet Points</h6>
+    <div class="line-behind-text"><h6>Icon Bullet Points</h6></div>
     <div class="bullets">
-  <div class="bullet two-col-bullet">
-    <div class="wraptocenter">
-      <img src="https://raw.github.com/Magnus-G/Random/master/181912_300.jpg" />
-    </div>
-    <div class="bullet-content">
-    <p><span>Lorem ipsum dolor sit amet</span> consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.</p>
-    </div>
-  </div>  
-  <div class="bullet two-col-bullet">
-    <div class="wraptocenter">
-      <img src="https://raw.github.com/Magnus-G/Random/master/181912_300.jpg" />
-    </div>
-    <div class="bullet-content">
-    <p><span>Lorem ipsum dolor sit amet</span> consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.</p>
-    </div>
-  </div>
-  <div class="bullet two-col-bullet">
-    <div class="wraptocenter">
-      <img src="https://raw.github.com/Magnus-G/Random/master/181912_300.jpg" />
-    </div>
-    <div class="bullet-content">
-    <p><span>Lorem ipsum dolor sit amet</span> consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.</p>
-    </div>
-  </div>
-  <div class="bullet two-col-bullet">
-    <div class="wraptocenter">
-      <img src="https://raw.github.com/Magnus-G/Random/master/181912_300.jpg" />
-    </div>
-    <div class="bullet-content">
-    <p><span>Lorem ipsum dolor sit amet</span> consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.</p>
-    </div>
-  </div>
-</div>
-
-<div class="bullets">
   <div class="bullet three-col-bullet">
-    <div class="wraptocenter">
-      <img src="https://raw.github.com/Magnus-G/Random/master/181912_300.jpg" />
+    <div class="bullet-icon bullet-icon-1">
+      <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png" alt="">
     </div>
     <div class="bullet-content">
-    <p><span>Lorem ipsum dolor sit amet</span> consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.</p>
-    </div>
+      <h2>This Bullet Title</h2>
+      <p>Lorem dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
+      </div>
   </div>  
   <div class="bullet three-col-bullet">
-    <div class="wraptocenter">
-      <img src="https://raw.github.com/Magnus-G/Random/master/181912_300.jpg" />
+    <div class="bullet-icon bullet-icon-2">
+      <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png" alt="">
     </div>
     <div class="bullet-content">
-    <p><span>Lorem ipsum dolor sit amet</span> consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.</p>
+      <h2>Another Bullet Title</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.</p>
     </div>
   </div>
   <div class="bullet three-col-bullet">
-    <div class="wraptocenter">
-      <img src="https://raw.github.com/Magnus-G/Random/master/181912_300.jpg" />
+    <div class="bullet-icon bullet-icon-3">
+      <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_4.png" alt="">
     </div>
     <div class="bullet-content">
-    <p><span>Lorem ipsum dolor sit amet</span> consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.</p>
+      <h2>Last Bullet Title</h2>
+      <p>Lorem ipsum sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
     </div>
   </div> 
 </div>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre>
     <code class="language-markup">
       &lt;div class=&quot;bullets&quot;&gt;
-  &lt;div class=&quot;bullet two-col-bullet&quot;&gt;
-    &lt;div class=&quot;wraptocenter&quot;&gt;
-      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/181912_300.jpg&quot; /&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;bullet-content&quot;&gt;
-    &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt; consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;  
-  &lt;div class=&quot;bullet two-col-bullet&quot;&gt;
-    &lt;div class=&quot;wraptocenter&quot;&gt;
-      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/181912_300.jpg&quot; /&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;bullet-content&quot;&gt;
-    &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt; consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;bullet two-col-bullet&quot;&gt;
-    &lt;div class=&quot;wraptocenter&quot;&gt;
-      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/181912_300.jpg&quot; /&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;bullet-content&quot;&gt;
-    &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt; consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;bullet two-col-bullet&quot;&gt;
-    &lt;div class=&quot;wraptocenter&quot;&gt;
-      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/181912_300.jpg&quot; /&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;bullet-content&quot;&gt;
-    &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt; consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;bullets&quot;&gt;
   &lt;div class=&quot;bullet three-col-bullet&quot;&gt;
-    &lt;div class=&quot;wraptocenter&quot;&gt;
-      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/181912_300.jpg&quot; /&gt;
+    &lt;div class=&quot;bullet-icon bullet-icon-1&quot;&gt;
+      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png&quot; alt=&quot;&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;bullet-content&quot;&gt;
-    &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt; consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.&lt;/p&gt;
-    &lt;/div&gt;
+      &lt;h2&gt;This Bullet Title&lt;/h2&gt;
+      &lt;p&gt;Lorem dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.&lt;/p&gt;
+      &lt;/div&gt;
   &lt;/div&gt;  
   &lt;div class=&quot;bullet three-col-bullet&quot;&gt;
-    &lt;div class=&quot;wraptocenter&quot;&gt;
-      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/181912_300.jpg&quot; /&gt;
+    &lt;div class=&quot;bullet-icon bullet-icon-2&quot;&gt;
+      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png&quot; alt=&quot;&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;bullet-content&quot;&gt;
-    &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt; consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.&lt;/p&gt;
+      &lt;h2&gt;Another Bullet Title&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;bullet three-col-bullet&quot;&gt;
-    &lt;div class=&quot;wraptocenter&quot;&gt;
-      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/181912_300.jpg&quot; /&gt;
+    &lt;div class=&quot;bullet-icon bullet-icon-3&quot;&gt;
+      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_4.png&quot; alt=&quot;&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;bullet-content&quot;&gt;
-    &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt; consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem repellat.&lt;/p&gt;
+      &lt;h2&gt;Last Bullet Title&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt; 
 &lt;/div&gt;
@@ -163,76 +428,383 @@
   <a href="#" class="copy-source">Copy</a>
   <pre>
     <code class='language-scss'>
-        $icon-bullet-size: 4em;
-        
         .bullets {
-          margin-bottom: 12em;
+          $icon-bullet-size: 3.5em;
+        
           overflow: auto;
           margin-bottom: $base-line-height;
-        }
         
-        .two-col-bullet {
-          @include media($large-screen) {
-            @include span-columns(6);
-            @include omega(2n);  
-          } 
-        }
-        
-        .three-col-bullet {
-          @include media($large-screen) {
-            @include span-columns(4);
-            @include omega(3n);
+          // change ".three-col-bullet" class to this for two bullet layout
+          .two-col-bullet {
+            @include media($large-screen) {
+              @include span-columns(6);
+              @include omega(2n);  
+            } 
           }
-        }
-        
-        .bullet {
-          p { 
-            margin-left: 1.6em;
+          
+          .three-col-bullet {
+            @include media($large-screen) {
+              @include span-columns(4);
+              @include omega(3n);
+            }
           }
         
-          span {
-            font-weight: 600;
-            font-style: italic;
+          // change ".three-col-bullet" class to this for four bullet layout
+          .four-col-bullet {
+            @include media($large-screen) {
+              @include span-columns(3);
+              @include omega(4n);
+            }
           }
         
-          .wraptocenter {
-            float: left;
-            width: $icon-bullet-size;
-            height: $icon-bullet-size;
-          }
+          .bullet {
+            .bullet-icon {
+              float: left;
+              background: $base-accent-color;
+              padding: $icon-bullet-size /4;
+              border-radius: 50%;
+              width: $icon-bullet-size;
+              height: $icon-bullet-size;
+            }
         
-          .wraptocenter * {
-            vertical-align: middle;
-            // border-radius: 50%;
-          }
+            .bullet-icon-1 {
+              background: $base-accent-color;
+            }
         
-          .bullet-content {
-            margin-left: $icon-bullet-size;
-            margin-bottom: 2em;
+            .bullet-icon-2 {
+              background: adjust-hue($base-accent-color, 50);
+            }
+        
+            .bullet-icon-3 {
+              background: adjust-hue($base-accent-color, 100);
+            }
+        
+            .bullet-content {
+              margin-left: $icon-bullet-size *1.4;
+              margin-bottom: 2em;
+            }
+        
+            h2 {
+              font-size: $icon-bullet-size /2.5;
+              padding-top: $icon-bullet-size /7;
+              margin-bottom: $icon-bullet-size /6;
+              border-bottom: 1px solid transparentize($base-font-color, .8);
+              display: inline-block;
+            }
           }
         }
     </code>
   </pre>
 </div>
 
+</div>
+  </div>
 
+  <div id="accordion-tabs" class="refill">
+    <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
+    <ul class="accordion-tabs">
+  <li><a href="#" class="is-active">Tab Item</a>
+    <section>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
+    </section>
+  </li>
+  <li><a href="#">Another Tab</a>
+    <section>
+      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
+    </section>
+  </li>
+  <li><a href="#">Third</a>
+    <section>
+      <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>    
+    </section>
+  </li>
+  <li><a href="#">Last Item</a>
+    <section>
+      <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.</p
+    </section>
+  </li>
+</ul>
+
+<script>
+  $(document).ready(function () {
+    $('.accordion-tabs').children('li').first().children('a').addClass('is-active')
+      .next().addClass('is-open').show();
+
+    $('.accordion-tabs').on('click', 'li > a', function() {
+      if (!$(this).hasClass('is-active')) {
+        event.preventDefault();
+        $('.accordion-tabs .is-open').removeClass('is-open').hide();
+        $(this).next().toggleClass('is-open').toggle();
+        $('.accordion-tabs').find('.is-active').removeClass('is-active');
+        $(this).addClass('is-active');
+      } else {
+        event.preventDefault();
+      }
+    });
+  });
+</script>
+
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class="language-markup">
+      &lt;ul class=&quot;accordion-tabs&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;is-active&quot;&gt;Tab Item&lt;/a&gt;
+    &lt;section&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Tab&lt;/a&gt;
+    &lt;section&gt;
+      &lt;p&gt;Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Third&lt;/a&gt;
+    &lt;section&gt;
+      &lt;p&gt;Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.&lt;/p&gt;    
+    &lt;/section&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last Item&lt;/a&gt;
+    &lt;section&gt;
+      &lt;p&gt;Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.&lt;/p
+    &lt;/section&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+  $(document).ready(function () {
+    $('.accordion-tabs').children('li').first().children('a').addClass('is-active')
+      .next().addClass('is-open').show();
+
+    $('.accordion-tabs').on('click', 'li &gt; a', function() {
+      if (!$(this).hasClass('is-active')) {
+        event.preventDefault();
+        $('.accordion-tabs .is-open').removeClass('is-open').hide();
+        $(this).next().toggleClass('is-open').toggle();
+        $('.accordion-tabs').find('.is-active').removeClass('is-active');
+        $(this).addClass('is-active');
+      } else {
+        event.preventDefault();
+      }
+    });
+  });
+&lt;/script&gt;
+
+    </code>
+  </pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class='language-scss'>
+        .accordion-tabs { // small screens: accordion
+          $tab-border-color: $base-border-color;
+          $tab-border: 1px solid $tab-border-color;
+          $tab-content-background: lighten($light-gray, 10);
+          $tab-active-color: $tab-content-background;
+          $tab-inactive-color: $base-body-color;
+          $tab-inactive-hover-color: darken($light-gray, 5);
+        
+          @include clearfix;
+          @include fill-parent;
+          border: $tab-border;
+          border-radius: $base-border-radius;
+          margin-bottom: $base-line-height;
+        
+          li {
+            &:first-child a {
+              border-top-left-radius: $base-border-radius; 
+              border-top-right-radius: $base-border-radius; 
+              border-top: 0;
+            }
+        
+            &:last-child a {
+              border-bottom-left-radius: $base-border-radius; 
+              border-bottom-right-radius: $base-border-radius; 
+            }
+        
+            a {
+              background-color: $tab-inactive-color;
+              border-top: $tab-border;
+              color: $dark-gray;
+              display: block;
+              font-weight: bold;
+              padding: $base-line-height/2 $gutter/2;
+        
+              &:hover {
+                color: $base-link-color;
+              }
+        
+              &.is-active {
+                background-color: $tab-active-color;
+                border-bottom: 0;
+              }
+            }
+        
+            section {
+              padding: $base-line-height $gutter;
+              background: $tab-content-background;
+              display: none;
+              overflow: hidden;
+            }
+          }
+        
+          @include media($medium-screen) { // turns into tabs
+            border: none;
+            position: relative;
+        
+            li {
+              display: inline;
+        
+              &:last-child a {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+              }
+        
+              a {
+                @include inline-block;
+                border-top: 0;
+                border-top-right-radius: $base-border-radius;
+                border-top-left-radius: $base-border-radius;
+        
+                &.is-active {
+                  background-color: $tab-active-color;
+                  border: $tab-border;
+                  border-bottom: 1px solid $tab-active-color;
+                  margin-bottom: -1px;
+                }
+              }
+            }
+        
+            section {
+              border-bottom-left-radius: $base-border-radius;
+              border-bottom-right-radius: $base-border-radius;
+              border: $tab-border;
+              float: left;
+              left: 0;
+              padding: $base-line-height/2 $gutter/2;
+        
+              p {
+                @include columns(2)
+              }
+            }
+          }
+        }
+            
+    </code>
+  </pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="badges" class="refill">
+    <div class="line-behind-text"><h6>Badges</h6></div>
+    <div class="refill-centering"><div class="badges">
+	<span class="badge">4</span>
+	<span class="badge dark">4</span>
+	<span class="badge error">4</span>
+	<span class="badge notice">4</span>
+	<span class="badge success">4</span>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class="language-markup">
+      &lt;div class=&quot;badges&quot;&gt;
+	&lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
+	&lt;span class=&quot;badge dark&quot;&gt;4&lt;/span&gt;
+	&lt;span class=&quot;badge error&quot;&gt;4&lt;/span&gt;
+	&lt;span class=&quot;badge notice&quot;&gt;4&lt;/span&gt;
+	&lt;span class=&quot;badge success&quot;&gt;4&lt;/span&gt;
+&lt;/div&gt;
+    </code>
+  </pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class='language-scss'>
+        .badges {
+          $badge-background: $medium-gray;
+          $badge-dark-color: $dark-gray;
+          $badge-error-color: $error-color;
+          $badge-notice-color: $notice-color;
+          $badge-success-color: $success-color;
+          $badge-font-color: #fff;
+          $badge-font-size: $base-font-size * .75;
+        
+          display: block;
+          margin-bottom: $base-line-height;
+        
+          .badge {
+            @include inline-block;
+            background: $badge-background;
+            border-radius: 2em;
+            color: $badge-font-color;
+            font-size: $badge-font-size;
+            font-weight: 600;
+            line-height: 1;
+            padding: .25em 1em;
+            text-align: center;
+        
+            &.dark {
+              background: $badge-dark-color;
+            }
+        
+            &.error {
+              background: $badge-error-color;
+              color: darken($badge-error-color, 60);
+            }
+        
+            &.notice {
+              background: $badge-notice-color;
+              color: darken($badge-error-color, 60);
+            }
+        
+            &.success {
+              background: $badge-success-color;
+              color: darken($badge-success-color, 60);
+            }
+          }
+        }
+        
+    </code>
+  </pre>
+</div>
+
+</div>
   </div>
 
   <div id="hover-tile-animation" class="refill">
-    <h6>Hover Tile Animation</h6>
-    <div class="hover-tile-outer">
+    <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
+    <div class="refill-centering"><div class="hover-tile-outer">
   <div class="hover-tile-container">
     <div class="hover-tile hover-tile-visible">
-      <h2>Hover Here</h2>
+      <h3>Hover Here</h3>
     </div>
     <div class="hover-tile hover-tile-hidden">
       <h4>This Appears On Top</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, placeat, doloremque, sint esse quaerat at dolorem assumenda consequatur eligendi.</p>
     </div>
   </div>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
 </div>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -241,7 +813,7 @@
       &lt;div class=&quot;hover-tile-outer&quot;&gt;
   &lt;div class=&quot;hover-tile-container&quot;&gt;
     &lt;div class=&quot;hover-tile hover-tile-visible&quot;&gt;
-      &lt;h2&gt;Hover Here&lt;/h2&gt;
+      &lt;h3&gt;Hover Here&lt;/h3&gt;
     &lt;/div&gt;
     &lt;div class=&quot;hover-tile hover-tile-hidden&quot;&gt;
       &lt;h4&gt;This Appears On Top&lt;/h4&gt;
@@ -257,54 +829,57 @@
   <a href="#" class="copy-source">Copy</a>
   <pre>
     <code class='language-scss'>
-        $hover-tile-height: 10em;
-        
         .hover-tile-outer {
-          background: gray;
-          background: url(https://raw.github.com/Magnus-G/Random/master/EmeraldLake.jpg);
-          background-size: cover;
+          $hover-tile-height: 10em;
+        
           background-position: bottom;
+          background-size: cover;
+          background: lighten($light-gray, 10);
+          border: 1px solid $base-border-color;
           height: $hover-tile-height;
           margin-bottom: $base-line-height;
           
           @include media($medium-screen) {
-            width: 50%;
+            width: 40%;
           }
-        }
         
-        .hover-tile-container {
-          height: $hover-tile-height;
-          overflow: hidden;
-        }
+          .hover-tile-container {
+            height: $hover-tile-height;
+            overflow: hidden;
+          }
         
-        .hover-tile-container:hover > .hover-tile {
-          @include transform(translate(0, -100%));
-        }
+          .hover-tile-container:hover > .hover-tile {
+            @include transform(translate(0, -100%));
+          }
         
-        .hover-tile {
-          background:inherit;
-          height:inherit;
-          @include transition(all, .2s ease-in-out);
-          padding: 1em 1.5em;
-          color: white;
-        }
+          .hover-tile {
+            @include transition(all, .2s ease-in-out);
+            background:inherit;
+            color: white;
+            height:inherit;
+            padding: 1em 1.5em;
+          }
         
-        .hover-tile-visible {
-          text-align: center;
-          color: black;
-          padding-top: 4em;
-          font-weight: 100;  
-        }
+          .hover-tile-visible {
+            color: gray;
+            font-weight: 100;  
+            padding-top: 3em;
+            text-align: center;
+          }
         
-        .hover-tile-hidden {
-          background: transparentize(black, .5);
+          .hover-tile-hidden {
+            background: transparentize(black, .5);
+          }
         }
     </code>
   </pre>
 </div>
 
-
+</div>
   </div>
+
+<!-- 
+
 
   <div id="sliding-menu" class="refill">
     <h6>Sliding Menu</h6>
@@ -340,8 +915,10 @@
   });
 </script>
 
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -452,86 +1029,6 @@
   </div>
 
   <div class="narrow">
-  <div id="badges" class="refill">
-    <h6>Badges</h6>
-    <div class="badges">
-	<span class="badge">4</span>
-	<span class="badge dark">4</span>
-	<span class="badge error">4</span>
-	<span class="badge notice">4</span>
-	<span class="badge success">4</span>
-</div>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;badges&quot;&gt;
-	&lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge dark&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge error&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge notice&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge success&quot;&gt;4&lt;/span&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        $badge-color: $medium-gray;
-        $badge-dark-color: $dark-gray;
-        $badge-error-color: $error-color;
-        $badge-notice-color: $notice-color;
-        $badge-success-color: $success-color;
-        $badge-font-color: #fff;
-        $badge-font-size: $base-font-size * .75;
-        
-        .badges {
-          display: block;
-          margin-bottom: $base-line-height;
-        }
-        
-        .badge {
-          @include inline-block;
-          background: $badge-color;
-          border-radius: 2em;
-          color: $badge-font-color;
-          font-size: $badge-font-size;
-          font-weight: 600;
-          line-height: 1;
-          padding: .25em 1em;
-          text-align: center;
-        
-          &.dark {
-            background: $badge-dark-color;
-          }
-        
-          &.error {
-            background: $badge-error-color;
-            color: darken($badge-error-color, 60);
-          }
-        
-          &.notice {
-            background: $badge-notice-color;
-            color: darken($badge-error-color, 60);
-          }
-        
-          &.success {
-            background: $badge-success-color;
-            color: darken($badge-success-color, 60);
-          }
-        }
-    </code>
-  </pre>
-</div>
-
-
-  </div>
 
   <div id="cards" class="refill">
     <h6>Cards</h6>
@@ -562,8 +1059,10 @@
   </div>
 </div>
 
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -689,8 +1188,10 @@
   </div>
 </div>
 
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -888,8 +1389,10 @@
   });
 </script>
 
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -1067,205 +1570,6 @@
 
   </div>
 
-  <div id="accordion-tabs" class="refill">
-    <h6>Accordion / Tabs</h6>
-    <ul class="accordion-tabs">
-  <li><a href="#" class="is-active">Item 1</a>
-    <section>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
-    </section>
-  </li>
-  <li><a href="#">Item 2</a>
-    <section>
-      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
-    </section>
-  </li>
-  <li><a href="#">Item 3</a>
-    <section>
-      <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>    
-    </section>
-  </li>
-  <li><a href="#">Item 4</a>
-    <section>
-      <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.</p
-    </section>
-  </li>
-</ul>
-
-<script>
-  $(document).ready(function () {
-    $('.accordion-tabs').children('li').first().children('a').addClass('is-active')
-      .next().addClass('is-open').show();
-
-    $('.accordion-tabs').on('click', 'li > a', function() {
-      if (!$(this).hasClass('is-active')) {
-        event.preventDefault();
-        $('.accordion-tabs .is-open').removeClass('is-open').hide();
-        $(this).next().toggleClass('is-open').toggle();
-        $('.accordion-tabs').find('.is-active').removeClass('is-active');
-        $(this).addClass('is-active');
-      } else {
-        event.preventDefault();
-      }
-    });
-  });
-</script>
-
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;ul class=&quot;accordion-tabs&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;is-active&quot;&gt;Item 1&lt;/a&gt;
-    &lt;section&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.&lt;/p&gt;
-    &lt;/section&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;
-    &lt;section&gt;
-      &lt;p&gt;Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.&lt;/p&gt;
-    &lt;/section&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;
-    &lt;section&gt;
-      &lt;p&gt;Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.&lt;/p&gt;    
-    &lt;/section&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 4&lt;/a&gt;
-    &lt;section&gt;
-      &lt;p&gt;Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.&lt;/p
-    &lt;/section&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script&gt;
-  $(document).ready(function () {
-    $('.accordion-tabs').children('li').first().children('a').addClass('is-active')
-      .next().addClass('is-open').show();
-
-    $('.accordion-tabs').on('click', 'li &gt; a', function() {
-      if (!$(this).hasClass('is-active')) {
-        event.preventDefault();
-        $('.accordion-tabs .is-open').removeClass('is-open').hide();
-        $(this).next().toggleClass('is-open').toggle();
-        $('.accordion-tabs').find('.is-active').removeClass('is-active');
-        $(this).addClass('is-active');
-      } else {
-        event.preventDefault();
-      }
-    });
-  });
-&lt;/script&gt;
-
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        $tab-border-color: $base-border-color;
-        $tab-border: 1px solid $tab-border-color;
-        $tab-content-color: lighten($tab-border-color, 10);
-        $tab-active-color: $tab-content-color;
-        $tab-inactive-color: $base-body-color;
-        $tab-inactive-hover-color: darken($light-gray, 5);
-        
-        .accordion-tabs { // small screens: accordion
-          @include clearfix;
-          @include fill-parent;
-          margin-bottom: $base-line-height;
-          border: $tab-border;
-          border-radius: $base-border-radius;
-        
-          li {
-            &:first-child a {
-              border-top-left-radius: $base-border-radius; 
-              border-top-right-radius: $base-border-radius; 
-              border-top: 0;
-            }
-        
-            &:last-child a {
-              border-bottom-left-radius: $base-border-radius; 
-              border-bottom-right-radius: $base-border-radius; 
-            }
-        
-            a {
-              background-color: $tab-inactive-color;
-              border-top: $tab-border;
-              color: $dark-gray;
-              display: block;
-              font-weight: bold;
-              padding: $base-line-height/2 $gutter/2;
-        
-              &:hover {
-                color: $base-link-color;
-              }
-        
-              &.is-active {
-                background-color: $tab-active-color;
-                border-bottom: 0;
-              }
-            }
-        
-            section {
-              padding: $base-line-height/2 $gutter/2;
-              background-color: $tab-content-color;
-              display: none;
-              overflow: hidden;
-            }
-          }
-        }
-        
-        @include media($medium-screen) { // turns into tabs
-          .accordion-tabs {
-            border: none;
-            position: relative;
-        
-            li {
-              display: inline;
-        
-              &:last-child a {
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-              }
-        
-              a {
-                @include inline-block;
-                border-top: 0;
-                border-top-right-radius: $base-border-radius;
-                border-top-left-radius: $base-border-radius;
-        
-                &.is-active {
-                  background-color: $tab-active-color;
-                  border: $tab-border;
-                  border-bottom: 1px solid $tab-active-color;
-                  margin-bottom: -1px;
-                }
-              }
-            }
-        
-            section {
-              border-bottom-left-radius: $base-border-radius;
-              border-bottom-right-radius: $base-border-radius;
-              border: $tab-border;
-              float: left;
-              left: 0;
-              padding: $base-line-height/2 $gutter/2;
-            }
-          }
-        }
-    </code>
-  </pre>
-</div>
-
-
-  </div>
-
   <div id="modal" class="refill">
     <h6>Modal</h6>
     <div class="modal">
@@ -1303,8 +1607,10 @@
   })
 </script>
 
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -1526,8 +1832,10 @@
     <div class="progress-bar">
   <span class="meter" style="width: 60%"></span>
 </div>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -1641,8 +1949,10 @@
   Hover for Tooltip
   <div class="tooltip">Tooltip text</div>
 </a>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -1768,8 +2078,10 @@
   });
 </script>
 
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -1826,6 +2138,7 @@
           $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
           $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
           $accordion-menu-list-padding: $base-line-height/2 $gutter;
+          
           background-color: $accordion-menu-background;
           border: $accordion-menu-border;
           margin-bottom: $base-line-height;
@@ -1924,8 +2237,10 @@
   });
 </script>
 
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -2077,8 +2392,10 @@
     </label>
   </div>
 </div>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -2206,8 +2523,10 @@
   </div>
 </div>
 
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -2312,8 +2631,10 @@
     </tr>
   </tbody>
 </table>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -2455,8 +2776,10 @@
   <a href="#">Five</a>
   <a href="#">Six</a>
 </div>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -2570,8 +2893,10 @@
   <button>Item</button>
   <button>Item</button>
 </div>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -2632,267 +2957,7 @@
 
   </div>
 
-  <div id="navigation" class="refill">
-    <h6>Navigation</h6>
-    <header class="navigation">
-  <div class="menu-wrapper">
-    <div class="logo">Logo</div>
-    <p id="js-mobile-menu">MENU</p>
-    <div class="nav">
-      <ul id="navigation-menu">
-        <li><a href="">Item 1</a></li>
-        <li><a href="">Item 2</a></li>
-        <li><a href="">Item 3</a></li>
-      </ul>
-    </div>
-    <ul class="nav-button">
-      <li><a href="">Nav Button</a></li>
-    </ul>
-  </div>
-</header>
 
-
-
-<script>
-  $(function() {
-    var menu = $('#navigation-menu');
-    var menuToggle = $('#js-mobile-menu');
-
-    $(menuToggle).on('click', function(e) {
-      e.preventDefault();
-      menu.slideToggle(function(){
-        if(menu.is(':hidden')) {
-          menu.removeAttr('style');
-        }
-      });
-    });
-  });
-</script>
-
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;header class=&quot;navigation&quot;&gt;
-  &lt;div class=&quot;menu-wrapper&quot;&gt;
-    &lt;div class=&quot;logo&quot;&gt;Logo&lt;/div&gt;
-    &lt;p id=&quot;js-mobile-menu&quot;&gt;MENU&lt;/p&gt;
-    &lt;div class=&quot;nav&quot;&gt;
-      &lt;ul id=&quot;navigation-menu&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;ul class=&quot;nav-button&quot;&gt;
-      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Nav Button&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/header&gt;
-
-
-
-&lt;script&gt;
-  $(function() {
-    var menu = $('#navigation-menu');
-    var menuToggle = $('#js-mobile-menu');
-
-    $(menuToggle).on('click', function(e) {
-      e.preventDefault();
-      menu.slideToggle(function(){
-        if(menu.is(':hidden')) {
-          menu.removeAttr('style');
-        }
-      });
-    });
-  });
-&lt;/script&gt;
-
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        header.navigation {
-          $navigation-background: $dark-gray;
-          $navigation-color: white;
-          $navigation-height: 60px;
-          $navigation-nav-button-background: $navigation-background;
-          $navigation-nav-button-background-hover: lighten($navigation-background, 10);
-          $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
-        
-          width: 100%;
-          margin: 0;
-          height: $navigation-height;
-          background-color: $navigation-background;
-          font-family: $sans-serif;
-          border-bottom: 1px solid $dark-gray;
-          z-index: 999;
-          margin-bottom: $base-line-height;
-        
-          .menu-wrapper {
-            @include outer-container;
-          }
-        
-          .logo {
-            line-height: $navigation-height;
-            padding-right: 1.35em;
-            padding-left: 1em;
-            font-weight: bold;
-            float: left;    
-            color: white;
-            @include media($medium-screen) {
-              padding-left: 1em;
-            }
-          }
-        
-          p {
-            font-family: $sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
-            cursor: pointer;
-            padding-right: 1em;
-            display: block;
-            float: right;
-            margin: 0;
-            line-height: $navigation-height;
-            color: $navigation-color;
-          }
-        
-          .nav {
-            ul {
-              display: none;
-              -webkit-transform-style: preserve-3d; // stop webkit flicker
-              overflow: hidden;
-              margin: 0 auto;
-              padding: 0;
-              width: 100%;
-              z-index: 9999;
-        
-              li {
-                position: relative;
-                overflow: hidden;
-                display: block;
-                width: 100%;
-                text-align: right;
-                padding-right: 1em;
-                line-height: $navigation-height;
-                width: 100%;
-                position: relative;
-                display: block;
-                z-index: 99999999;
-                overflow: hidden;
-                background-color: $navigation-background;
-        
-                a {
-                  text-transform: uppercase;
-                  font-weight: bold;
-                  color: white;
-                }
-              }
-            }
-          }
-        
-          ul.nav-button {
-            display: none;
-            float: right;
-            background-color: $navigation-background;
-            padding: 0 1em 0 1em;
-            width: 100%;
-            list-style: none;
-        
-            li {
-              float: right;
-              a {
-                display: inline;
-                line-height: $navigation-height;
-                font-family: $sans-serif;
-                font-weight: 700;
-                text-transform: uppercase;
-                color: white;
-                padding: 1em 1.5em;
-                background-color: $navigation-nav-button-background;
-                border: $navigation-nav-button-border;
-                border-radius: $base-border-radius;
-                font-size: $base-font-size *.8;
-        
-                @include transition(ease-in-out, .2s);
-        
-                &:hover {
-                  background-color: $navigation-nav-button-background-hover;
-                }
-              }
-            }
-            
-            li:first-child:before {
-              content: '';
-            }
-          }
-        
-          @include media ($medium-screen) {
-            p {
-              display: none;
-            }
-            .nav {
-              float: left;
-        
-              ul {
-                float: left;
-                display: inline;
-                margin: 0;
-                padding: 0;
-        
-                li {
-                  display: inline;
-                  text-decoration: none;
-                  line-height: $navigation-height;
-                  padding-right: 2em;
-        
-                  a {
-                    color: $navigation-color;
-                    letter-spacing: 1px;
-                    &:hover {
-                      color: lighten($navigation-color, 15);
-                    }
-                  }
-                }
-              }
-            }
-        
-            ul.nav-button {
-              float: right;
-              display: inline;
-              width: auto;
-              background-color: transparent;
-              
-              li {
-                display: inline;
-        
-                &:before {
-                  content: "•";
-                  color: $navigation-color;
-                  margin-right: .3em;
-                }
-              }
-        
-              li:first-child:before {
-                content: '';
-              }
-            }
-          }
-        }
-    </code>
-  </pre>
-</div>
-
-
-  </div>
 
 
   <div id="image-gradient" class="refill">
@@ -2913,8 +2978,10 @@
   </div>
   <div class="overlay"></div>
 </div>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -3084,8 +3151,10 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, sit, vel, sequi dolorum tempora quo velit saepe provident accusamus veniam maxime at cumque excepturi debitis natus eius consequuntur cum inventore!</p>
 	</li>	  		
 </ul>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -3205,8 +3274,10 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, laudantium corporis dolorum natus architecto nisi praesentium accusantium dignissimos dolor totam voluptatum molestias nostrum autem soluta delectus alias quisquam ullam recusandae.</p>
 	</div>
 </div>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -3347,8 +3418,10 @@
 		</section>
 	</div>
 </div>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -3481,8 +3554,10 @@
 		</li>
 	</ul>
 </div>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -3578,89 +3653,6 @@
 
   </div>
 
-
-  <div id="hero" class="refill">
-    <h6>Hero Unit</h6>  
-    <div class="hero">
-	<div class="hero-inner">
-		<div class="hero-copy">
-			<h1>Lorem ipsum dolor sit amet</h1>
-			<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, et, eos deleniti molestias officiis sequi praesentium placeat omnis </h5>	
-			<button>Call to Action</button>
-		</div>
-		<div class="hero-image">
-		</div>
-	</div>
-</div>
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;hero&quot;&gt;
-	&lt;div class=&quot;hero-inner&quot;&gt;
-		&lt;div class=&quot;hero-copy&quot;&gt;
-			&lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;
-			&lt;h5&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, et, eos deleniti molestias officiis sequi praesentium placeat omnis &lt;/h5&gt;	
-			&lt;button&gt;Call to Action&lt;/button&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;hero-image&quot;&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .hero {
-        	$hero-background: lighten($base-border-color, 10);	
-        
-        	background-color: $hero-background;
-        	padding-bottom: 4em;
-        	margin-bottom: $base-line-height;
-        
-        	.hero-inner {
-        		@include outer-container;
-        		@include clearfix;
-        		padding: 1em;
-        		margin: auto;
-        
-        		button {
-        			@include button(simple, $base-accent-color);
-        			font-size: $base-font-size;
-        			outline: none;
-        		}
-        
-        		.hero-copy {
-        			@include media($medium-screen) {
-        				@include span-columns(6);
-        			}
-        			
-        			h5 {
-        				margin-bottom: 2em;	
-        			}
-        		}
-        
-        		.hero-image {
-        			@include media($medium-screen) {
-        				@include span-columns(6);
-        			}
-        		}
-        	}
-        }
-    </code>
-  </pre>
-</div>
-
-
-  </div>
-
 <div class="refills-wrapper">
   <div id="footer" class="refill">
     <h6>Footer</h6> 
@@ -3692,8 +3684,10 @@
   <p>Refills is Copyright © 2013 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.</p>
 </div>
 
-    <a href="#" class="js-show-code">Show code</a>
-<a href="#" class="js-hide-code">Hide code</a>
+    <div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
@@ -3791,19 +3785,19 @@
 
   </div>
 </div>
-
+ -->
 <script>
   $('a.js-show-code').on('click', function(e){
     $(this).hide();
-    $(this).siblings('.js-hide-code').css('display', 'block');
-    $(this).siblings('.snippet').show();
+    $(this).siblings('.js-hide-code').css('display', 'inline-block');
+    $(this).parent().siblings('.snippet').show();
     e.preventDefault();
   })
 
   $('a.js-hide-code').on('click', function(e) {
     $(this).hide();
-    $(this).siblings('.js-show-code').css("display", "block");
-    $(this).siblings('.snippet').hide();
+    $(this).siblings('.js-show-code').css("display", "inline-block");
+    $(this).parent().siblings('.snippet').hide();
     e.preventDefault();
   });
 </script>
