@@ -1,48 +1,65 @@
-$icon-bullet-size: 4em;
-
 .bullets {
-  margin-bottom: 12em;
+  $icon-bullet-size: 3.5em;
+
   overflow: auto;
   margin-bottom: $base-line-height;
-}
 
-.two-col-bullet {
-  @include media($large-screen) {
-    @include span-columns(6);
-    @include omega(2n);  
-  } 
-}
-
-.three-col-bullet {
-  @include media($large-screen) {
-    @include span-columns(4);
-    @include omega(3n);
+  // change ".three-col-bullet" class to this for two bullet layout
+  .two-col-bullet {
+    @include media($large-screen) {
+      @include span-columns(6);
+      @include omega(2n);  
+    } 
   }
-}
-
-.bullet {
-  p { 
-    margin-left: 1.6em;
+  
+  .three-col-bullet {
+    @include media($large-screen) {
+      @include span-columns(4);
+      @include omega(3n);
+    }
   }
 
-  span {
-    font-weight: 600;
-    font-style: italic;
+  // change ".three-col-bullet" class to this for four bullet layout
+  .four-col-bullet {
+    @include media($large-screen) {
+      @include span-columns(3);
+      @include omega(4n);
+    }
   }
 
-  .wraptocenter {
-    float: left;
-    width: $icon-bullet-size;
-    height: $icon-bullet-size;
-  }
+  .bullet {
+    .bullet-icon {
+      float: left;
+      background: $base-accent-color;
+      padding: $icon-bullet-size /4;
+      border-radius: 50%;
+      width: $icon-bullet-size;
+      height: $icon-bullet-size;
+    }
 
-  .wraptocenter * {
-    vertical-align: middle;
-    // border-radius: 50%;
-  }
+    .bullet-icon-1 {
+      background: $base-accent-color;
+    }
 
-  .bullet-content {
-    margin-left: $icon-bullet-size;
-    margin-bottom: 2em;
+    .bullet-icon-2 {
+      background: adjust-hue($base-accent-color, 50);
+    }
+
+    .bullet-icon-3 {
+      background: adjust-hue($base-accent-color, 100);
+    }
+
+    .bullet-content {
+      margin-left: $icon-bullet-size *1.4;
+      margin-bottom: 2em;
+    }
+
+    h2 {
+      font-size: $icon-bullet-size /2.5;
+      padding-top: $icon-bullet-size /7;
+      margin-bottom: $icon-bullet-size /6;
+      border-bottom: 1px solid transparentize($base-font-color, .8);
+      display: inline-block;
+    }
   }
 }

@@ -6,7 +6,6 @@ title: Refills
 
   <div class="refills-header">
     <h2>Refills are prepackaged patterns and compontents, built ontop of <br><a href="http://www.bourbon.io">Bourbon</a>, <a href="http://www.bitters.bourbon.io">Bitters</a>, and <a href="http://www.neat.bourbon.io">Neat</a>.</h2>
-    <!-- <h3>Expand each item's code by clicking its "Show Code" button, and use the "Copy" buttons.</h3> -->
   </div>
 
   <div class="external">
@@ -25,6 +24,12 @@ title: Refills
     <div class="refill-snippet"><%= snippet('hero') %></div>
   </div>
 
+  <div id="icon-bullet-points" class="refill">
+    <div class="line-behind-text"><h6>Icon Bullet Points</h6></div>
+    <%= partial "icon-bullet-points" %>
+    <div class="refill-snippet"><%= snippet('icon-bullet-points') %></div>
+  </div>
+
   <div id="accordion-tabs" class="refill">
     <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
     <%= partial "accordion-tabs" %>
@@ -34,21 +39,17 @@ title: Refills
   <div id="badges" class="refill">
     <div class="line-behind-text"><h6>Badges</h6></div>
     <div class="refill-centering"><%= partial "badges" %></div>
-    <%= snippet('badges') %>
+    <div class="refill-snippet"><%= snippet('badges') %></div>
   </div>
 
   <div id="hover-tile-animation" class="refill">
     <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
     <div class="refill-centering"><%= partial "hover-tile-animation" %></div>
-    <%= snippet('hover-tile-animation') %>
+    <div class="refill-snippet"><%= snippet('hover-tile-animation') %></div>
   </div>
 
 <!-- 
-  <div id="icon-bullet-points" class="refill">
-    <h6>Icon Bullet Points</h6>
-    <%= partial "icon-bullet-points" %>
-    <%= snippet('icon-bullet-points') %>
-  </div>
+
 
   <div id="sliding-menu" class="refill">
     <h6>Sliding Menu</h6>
@@ -183,14 +184,14 @@ title: Refills
   $('a.js-show-code').on('click', function(e){
     $(this).hide();
     $(this).siblings('.js-hide-code').css('display', 'inline-block');
-    $(this).siblings('.snippet').show();
+    $(this).parent().siblings('.snippet').show();
     e.preventDefault();
   })
 
   $('a.js-hide-code').on('click', function(e) {
     $(this).hide();
     $(this).siblings('.js-show-code').css("display", "inline-block");
-    $(this).siblings('.snippet').hide();
+    $(this).parent().siblings('.snippet').hide();
     e.preventDefault();
   });
 </script>

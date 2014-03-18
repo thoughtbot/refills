@@ -101,9 +101,7 @@ body {
   }
 }
 
-.refill-snippet {
-  margin-top: $base-line-height;
-}
+//////////////////
 
 // this centers the refill and sets back to text-align left below first object
 .refill-centering {
@@ -141,18 +139,15 @@ body {
 
 /////////////////////////
 
-.refill-show-code {
-  text-align: center;
-}
-
 .js-hide-code, 
 .js-show-code {
-  background: #BDD7F3;
-  color: white;
+  background: #F5F2F0;
+  border: 1px solid #BEBCBC;
+  color: #7E7A7A;
 
   &:hover {
-    background: darken(#BDD7F3, 10);
-    color: white;
+    background: darken(#F5F2F0, 3);
+    color: darken(#ACACAC, 10);
   }
 }
 
@@ -160,21 +155,28 @@ body {
   display: inline-block;
   padding: 0.5em 1em;
   width: 8em;
-  // text-align: center;
   border-radius: $base-border-radius;
-  // width: 100%;
 }
 
 .js-hide-code {
   display: none;
   padding: 0.5em 1em;
-  // text-align: center;
   border-radius: $base-border-radius;
   width: 8em;
-  // width: 100%;
 }
 
-/////////////////////////
+.refill-snippet {
+  margin-top: $base-line-height *2;
+}
+
+.refill-control {
+  display: block;
+  text-align: center;
+
+  width: 100%;
+}
+
+//////////////////////////
 
 pre {
   height: 350px;
