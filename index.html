@@ -26,6 +26,8 @@
     <a href="https://github.com/thoughtbot/refills"></a>
   </div>
 
+  <h5>Components</h5>
+
   <div id="navigation" class="refill">
     <div class="line-behind-text"><h6>Navigation</h6></div>
     <header class="navigation">
@@ -472,11 +474,11 @@
             }
         
             .bullet-icon-2 {
-              background: adjust-hue($base-accent-color, 50);
+              background: adjust-hue($base-accent-color, -50);
             }
         
             .bullet-icon-3 {
-              background: adjust-hue($base-accent-color, 100);
+              background: adjust-hue($base-accent-color, -140);
             }
         
             .bullet-content {
@@ -643,131 +645,130 @@
   <a href="#" class="copy-source">Copy</a>
   <pre>
     <code class='language-scss'>
-        
         .cards {
           @include clearfix;
-          
-          .card {
-            $card-border-color: $base-border-color;
-            $card-border: 1px solid $card-border-color;
-            $card-background: lighten($card-border-color, 10);
-            $card-header-background: $card-background;
-            $card-hover-background: lighten($card-background, 5);
-            $card-image-background: #DBD199;
-            $card-image-hover-background: lighten($card-image-background, 5);
-            $card-stats-color: lighten($base-accent-color, 10);
+        }
         
+        .card {
+          $card-border-color: $base-border-color;
+          $card-border: 1px solid $card-border-color;
+          $card-background: lighten($card-border-color, 10);
+          $card-header-background: $card-background;
+          $card-hover-background: lighten($card-background, 5);
+          $card-image-background: #DBD199;
+          $card-image-hover-background: lighten($card-image-background, 5);
+          $card-stats-color: lighten($base-accent-color, 10);
+        
+          @include transition (all 0.2s ease-in-out);
+          @include span-columns(4);
+          background-color: $card-background;
+          border-radius: $base-border-radius;
+          border: $card-border;
+          margin-bottom: $base-line-height;
+          cursor: pointer;
+          box-shadow: 0 2px 4px darken($base-body-color, 10);
+          position: relative;
+        
+          .card-image {
+            overflow: hidden;
+            max-height: 150px;
+        
+            img {
+              @include transition (all 0.2s ease-in-out);
+              background: $card-image-background;
+              border-top-left-radius: $base-border-radius;
+              border-top-right-radius: $base-border-radius;
+            }
+          }
+        
+          .ribbon-wrapper {
+            $ribbon-size: 85px;
+            $ribbon-background: $base-accent-color;
+            @include size($ribbon-size);
+            overflow: hidden;
+            position: absolute;
+            top: -1px;
+            right: -1px;
+        
+            .ribbon {
+              font-size: .8em;
+              font-weight: 800;
+              text-align: center;
+              @include transform(rotate(45deg));
+              position: relative;
+              padding: 2px 7px;
+              left: -5px;
+              top: 15px;
+              width: 120px;
+              background-color: $ribbon-background;
+              color: white;
+              box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+            }
+          }
+        
+          .card-header {
             @include transition (all 0.2s ease-in-out);
-            @include span-columns(4);
+            background-color: $card-header-background;
+            border-bottom: $card-border;
+            border-radius: $base-border-radius $base-border-radius 0 0;
+            font-weight: bold;
+            padding: $base-line-height/3 $gutter/2;
+          }
+        
+          .card-copy {
+            padding: $base-line-height/2 $gutter/2;
+            font-size: .9em;
+            line-height: 1.5em;
+          }
+        
+          .card-stats {
+            padding: $base-line-height/2 $gutter/2;
+            overflow: auto;
+        
+            ul li {
+              display: inline;
+              color: $card-stats-color;
+              font-weight: 800;
+              font-size: 1.2em;
+              float: left;
+              border-right: 1px solid transparentize($base-font-color, .8);
+              line-height: 1.1em;
+              padding: 0 .7em 0 .7em;
+        
+              &:first-child {
+                padding-left: 0;
+              }
+        
+              &:last-child {
+                border-right: 0;
+              }
+        
+              span {
+                color: $base-font-color;
+                font-size: .7em;
+                display: block;
+                font-weight: normal;
+              }
+            }
+          }
+        
+          &:hover {
+            background-color: $card-hover-background;
+            
+            .card-image img {
+              background: $card-image-hover-background;
+            }
+          
+            .card-header {
+              background-color: $card-hover-background;
+            }
+          }
+        
+          &:active {
             background-color: $card-background;
-            border-radius: $base-border-radius;
-            border: $card-border;
-            margin-bottom: $base-line-height;
-            cursor: pointer;
-            box-shadow: 0 2px 4px darken($base-body-color, 10);
-            position: relative;
-        
-            .card-image {
-              overflow: hidden;
-              max-height: 150px;
-        
-              img {
-                @include transition (all 0.2s ease-in-out);
-                background: $card-image-background;
-                border-top-left-radius: $base-border-radius;
-                border-top-right-radius: $base-border-radius;
-              }
-            }
-        
-            .ribbon-wrapper {
-              $ribbon-size: 85px;
-              $ribbon-background: $base-accent-color;
-              @include size($ribbon-size);
-              overflow: hidden;
-              position: absolute;
-              top: -1px;
-              right: -1px;
-        
-              .ribbon {
-                font-size: .8em;
-                font-weight: 800;
-                text-align: center;
-                @include transform(rotate(45deg));
-                position: relative;
-                padding: 2px 7px;
-                left: -5px;
-                top: 15px;
-                width: 120px;
-                background-color: $ribbon-background;
-                color: white;
-                box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-              }
-            }
         
             .card-header {
-              @include transition (all 0.2s ease-in-out);
-              background-color: $card-header-background;
-              border-bottom: $card-border;
-              border-radius: $base-border-radius $base-border-radius 0 0;
-              font-weight: bold;
-              padding: $base-line-height/3 $gutter/2;
-            }
-        
-            .card-copy {
-              padding: $base-line-height/2 $gutter/2;
-              font-size: .9em;
-              line-height: 1.5em;
-            }
-        
-            .card-stats {
-              padding: $base-line-height/2 $gutter/2;
-              overflow: auto;
-        
-              ul li {
-                display: inline;
-                color: $card-stats-color;
-                font-weight: 800;
-                font-size: 1.2em;
-                float: left;
-                border-right: 1px solid transparentize($base-font-color, .8);
-                line-height: 1.1em;
-                padding: 0 .7em 0 .7em;
-        
-                &:first-child {
-                  padding-left: 0;
-                }
-        
-                &:last-child {
-                  border-right: 0;
-                }
-        
-                span {
-                  color: $base-font-color;
-                  font-size: .7em;
-                  display: block;
-                  font-weight: normal;
-                }
-              }
-            }
-        
-            &:hover {
-              background-color: $card-hover-background;
-              
-              .card-image img {
-                background: $card-image-hover-background;
-              }
-            
-              .card-header {
-                background-color: $card-hover-background;
-              }
-            }
-        
-            &:active {
               background-color: $card-background;
-        
-              .card-header {
-                background-color: $card-background;
-              }
             }
           }
         }
@@ -982,187 +983,10 @@
 </div>
   </div>
 
-  <div id="badges" class="refill">
-    <div class="line-behind-text"><h6>Badges</h6></div>
-    <div class="refill-centering"><div class="badges">
-	<span class="badge">4</span>
-	<span class="badge dark">4</span>
-	<span class="badge error">4</span>
-	<span class="badge notice">4</span>
-	<span class="badge success">4</span>
-</div></div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;badges&quot;&gt;
-	&lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge dark&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge error&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge notice&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge success&quot;&gt;4&lt;/span&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .badges {
-          $badge-background: $medium-gray;
-          $badge-dark-color: $dark-gray;
-          $badge-error-color: $error-color;
-          $badge-notice-color: $notice-color;
-          $badge-success-color: $success-color;
-          $badge-font-color: #fff;
-          $badge-font-size: $base-font-size * .75;
-        
-          display: block;
-          margin-bottom: $base-line-height;
-        
-          .badge {
-            @include inline-block;
-            background: $badge-background;
-            border-radius: 2em;
-            color: $badge-font-color;
-            font-size: $badge-font-size;
-            font-weight: 600;
-            line-height: 1;
-            padding: .25em 1em;
-            text-align: center;
-        
-            &.dark {
-              background: $badge-dark-color;
-            }
-        
-            &.error {
-              background: $badge-error-color;
-              color: darken($badge-error-color, 60);
-            }
-        
-            &.notice {
-              background: $badge-notice-color;
-              color: darken($badge-error-color, 60);
-            }
-        
-            &.success {
-              background: $badge-success-color;
-              color: darken($badge-success-color, 60);
-            }
-          }
-        }
-        
-    </code>
-  </pre>
-</div>
-
-</div>
-  </div>
-
-  <div id="hover-tile-animation" class="refill">
-    <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
-    <div class="refill-centering"><div class="hover-tile-outer">
-  <div class="hover-tile-container">
-    <div class="hover-tile hover-tile-visible">
-      <h3>Hover Here</h3>
-    </div>
-    <div class="hover-tile hover-tile-hidden">
-      <h4>This Appears On Top</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, placeat, doloremque, sint esse quaerat at dolorem assumenda consequatur eligendi.</p>
-    </div>
-  </div>
-</div></div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;hover-tile-outer&quot;&gt;
-  &lt;div class=&quot;hover-tile-container&quot;&gt;
-    &lt;div class=&quot;hover-tile hover-tile-visible&quot;&gt;
-      &lt;h3&gt;Hover Here&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;hover-tile hover-tile-hidden&quot;&gt;
-      &lt;h4&gt;This Appears On Top&lt;/h4&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, placeat, doloremque, sint esse quaerat at dolorem assumenda consequatur eligendi.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .hover-tile-outer {
-          $hover-tile-height: 10em;
-        
-          background-position: bottom;
-          background-size: cover;
-          background: lighten($light-gray, 10);
-          border: 1px solid $base-border-color;
-          height: $hover-tile-height;
-          margin-bottom: $base-line-height;
-          
-          @include media($medium-screen) {
-            width: 40%;
-          }
-        
-          .hover-tile-container {
-            height: $hover-tile-height;
-            overflow: hidden;
-          }
-        
-          .hover-tile-container:hover > .hover-tile {
-            @include transform(translate(0, -100%));
-          }
-        
-          .hover-tile {
-            @include transition(all, .2s ease-in-out);
-            background:inherit;
-            color: white;
-            height:inherit;
-            padding: 1em 1.5em;
-          }
-        
-          .hover-tile-visible {
-            color: gray;
-            font-weight: 100;  
-            padding-top: 3em;
-            text-align: center;
-          }
-        
-          .hover-tile-hidden {
-            background: transparentize(black, .5);
-          }
-        }
-    </code>
-  </pre>
-</div>
-
-</div>
-  </div>
-
-<!-- 
-
-
   <div id="sliding-menu" class="refill">
-    <h6>Sliding Menu</h6>
-    <div>
-  <a class="js-menu-trigger menu-anchor">Click for Sliding Menu</a>
+    <div class="line-behind-text"><h6>Sliding Menu</h6></div>
+    <div class="refill-centering"><div>
+  <a class="js-menu-trigger menu-anchor">&#9776;</a>
 </div>
 
 <nav class="js-menu sliding-menu-content">
@@ -1192,8 +1016,8 @@
     });
   });
 </script>
-
-    <div class="refill-control">
+</div>
+    <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -1203,7 +1027,7 @@
   <pre>
     <code class="language-markup">
       &lt;div&gt;
-  &lt;a class=&quot;js-menu-trigger menu-anchor&quot;&gt;Click for Sliding Menu&lt;/a&gt;
+  &lt;a class=&quot;js-menu-trigger menu-anchor&quot;&gt;&amp;#9776;&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;nav class=&quot;js-menu sliding-menu-content&quot;&gt;
@@ -1303,8 +1127,197 @@
   </pre>
 </div>
 
-
+</div>
   </div>
+
+  <div id="badges" class="refill">
+    <div class="line-behind-text"><h6>Badges</h6></div>
+    <div class="refill-centering"><div class="badges">
+	<span class="badge">4</span>
+	<span class="badge dark">4</span>
+	<span class="badge error">4</span>
+	<span class="badge notice">4</span>
+	<span class="badge success">4</span>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class="language-markup">
+      &lt;div class=&quot;badges&quot;&gt;
+	&lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
+	&lt;span class=&quot;badge dark&quot;&gt;4&lt;/span&gt;
+	&lt;span class=&quot;badge error&quot;&gt;4&lt;/span&gt;
+	&lt;span class=&quot;badge notice&quot;&gt;4&lt;/span&gt;
+	&lt;span class=&quot;badge success&quot;&gt;4&lt;/span&gt;
+&lt;/div&gt;
+    </code>
+  </pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class='language-scss'>
+        .badges {
+          $badge-background: $medium-gray;
+          $badge-dark-color: $dark-gray;
+          $badge-error-color: $error-color;
+          $badge-notice-color: $notice-color;
+          $badge-success-color: $success-color;
+          $badge-font-color: #fff;
+          $badge-font-size: $base-font-size * .75;
+        
+          display: block;
+          margin-bottom: $base-line-height;
+        
+          .badge {
+            @include inline-block;
+            background: $badge-background;
+            border-radius: 2em;
+            color: $badge-font-color;
+            font-size: $badge-font-size;
+            font-weight: 600;
+            line-height: 1;
+            padding: .25em 1em;
+            text-align: center;
+        
+            &.dark {
+              background: $badge-dark-color;
+            }
+        
+            &.error {
+              background: $badge-error-color;
+              color: darken($badge-error-color, 60);
+            }
+        
+            &.notice {
+              background: $badge-notice-color;
+              color: darken($badge-error-color, 60);
+            }
+        
+            &.success {
+              background: $badge-success-color;
+              color: darken($badge-success-color, 60);
+            }
+          }
+        }
+        
+    </code>
+  </pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="hover-tile-animation" class="refill">
+    <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
+    <div class="refill-centering"><div class="hover-tile-outer">
+  <div class="hover-tile-container">
+    <div class="hover-tile hover-tile-visible">
+      Hover
+    </div>
+    <div class="hover-tile hover-tile-hidden">
+      <h4>Hidden Copy</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.</p>
+    </div>
+  </div>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class="language-markup">
+      &lt;div class=&quot;hover-tile-outer&quot;&gt;
+  &lt;div class=&quot;hover-tile-container&quot;&gt;
+    &lt;div class=&quot;hover-tile hover-tile-visible&quot;&gt;
+      Hover
+    &lt;/div&gt;
+    &lt;div class=&quot;hover-tile hover-tile-hidden&quot;&gt;
+      &lt;h4&gt;Hidden Copy&lt;/h4&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    </code>
+  </pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class='language-scss'>
+        .hover-tile-outer {
+          $hover-tile-height: 10em;
+        
+          background-position: bottom;
+          background-size: cover;
+          background: url("https://raw.github.com/Magnus-G/Random/master/mountains.png");
+          background-size: cover;
+          background-color: #BEB56E;
+          border: 1px solid $base-border-color;
+          height: $hover-tile-height;
+          margin-bottom: $base-line-height;
+          cursor: pointer;
+          
+          @include media($medium-screen) {
+            width: 40%;
+          }
+        
+          .hover-tile-container {
+            height: $hover-tile-height;
+            overflow: hidden;
+          }
+        
+          .hover-tile-container:hover > .hover-tile {
+            @include transform(translate(0, -100%));
+          }
+        
+          .hover-tile {
+            @include transition(all, .2s ease-in-out);
+            background:inherit;
+            color: white;
+            height:inherit;
+            padding: 1em 1.5em;
+          }
+        
+          .hover-tile-visible {
+            color: transparentize(white, .3);
+            font-size: 2em;
+            font-weight: 200;  
+            padding-top: 2em;
+            text-align: center;
+          }
+        
+          .hover-tile-hidden {
+            background: transparentize(black, .5);
+            h4 {
+              margin-bottom: .5em;
+            }
+            p {
+              color: transparentize(white, .3);
+            }
+          }
+        }
+    </code>
+  </pre>
+</div>
+
+</div>
+  </div>
+
+<!-- 
+
+
+
 
 
   <div id="image-cards" class="refill">
@@ -3959,6 +3972,10 @@
   });
 </script>
 
+        <footer class="refills-footer">
+        <img src="https://raw.github.com/Magnus-G/Random/master/ralph-gray.png" alt="">
+          Refills is maintained and funded by <a href="http://thoughtbot.com">thoughtbot</a>. <br>Refills is Copyright © 2014 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+        </footer>
       </section>
     </section>
   </body>

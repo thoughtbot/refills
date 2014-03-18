@@ -440,9 +440,9 @@
      * erToc default options
      */
     $.erToc.defaults = {
-        startLevel: 'h6', // node name, class or node array subscript [0|1]...n
+        startLevel: 'h5', // node name, class or node array subscript [0|1]...n
         maxLevel: 'h6', // node name, class or node array subscript [0|1]...n
-        nodes: ['h6'], // nodes for prepare toc, support class ['.p1', '.p2', '.p3', '.p4', '.p5', '.p6']
+        nodes: ['h5', 'h6'], // nodes for prepare toc, support class ['.p1', '.p2', '.p3', '.p4', '.p5', '.p6']
         nodeMin: 0, // min nodes for toc
         nodeMax: 0, // max nodes for toc
         nodeClass: 'er_toc_tag',
