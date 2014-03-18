@@ -2,7 +2,7 @@
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
   $tab-content-background: lighten($light-gray, 10);
-  $tab-active-color: $tab-content-background;
+  $tab-active-background: $tab-content-background;
   $tab-inactive-color: $base-body-color;
   $tab-inactive-hover-color: darken($light-gray, 5);
 
@@ -37,7 +37,7 @@
       }
 
       &.is-active {
-        background-color: $tab-active-color;
+        background-color: $tab-active-background;
         border-bottom: 0;
       }
     }
@@ -69,9 +69,9 @@
         border-top-left-radius: $base-border-radius;
 
         &.is-active {
-          background-color: $tab-active-color;
+          background-color: $tab-active-background;
           border: $tab-border;
-          border-bottom: 1px solid $tab-active-color;
+          border-bottom: 1px solid $tab-active-background;
           margin-bottom: -1px;
         }
       }

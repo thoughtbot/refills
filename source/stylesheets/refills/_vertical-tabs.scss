@@ -54,7 +54,7 @@ $vertical-tabs-height: em(300);
 
 .vertical-tab-content {
   background-color: $tab-content-background;
-  padding: 1em;
+  padding: $base-line-height $gutter;
 
   @include media($medium-screen) {
     border: none;

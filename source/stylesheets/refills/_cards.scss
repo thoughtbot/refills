@@ -13,7 +13,6 @@
   $card-stats-color: lighten($base-accent-color, 10);
 
   @include transition (all 0.2s ease-in-out);
-  @include span-columns(4);
   background-color: $card-background;
   border-radius: $base-border-radius;
   border: $card-border;
@@ -22,11 +21,16 @@
   box-shadow: 0 2px 4px darken($base-body-color, 10);
   position: relative;
 
+  @include media($large-screen) {
+    @include span-columns(4);  
+  }
+
   .card-image {
     overflow: hidden;
     max-height: 150px;
 
     img {
+      width: 100%;
       @include transition (all 0.2s ease-in-out);
       background: $card-image-background;
       border-top-left-radius: $base-border-radius;
