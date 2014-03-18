@@ -3,10 +3,13 @@
 
   background-position: bottom;
   background-size: cover;
-  background: lighten($light-gray, 10);
+  background: url("https://raw.github.com/Magnus-G/Random/master/mountains.png");
+  background-size: cover;
+  background-color: #BEB56E;
   border: 1px solid $base-border-color;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
+  cursor: pointer;
   
   @include media($medium-screen) {
     width: 40%;
@@ -30,13 +33,20 @@
   }
 
   .hover-tile-visible {
-    color: gray;
-    font-weight: 100;  
-    padding-top: 3em;
+    color: transparentize(white, .3);
+    font-size: 2em;
+    font-weight: 200;  
+    padding-top: 2em;
     text-align: center;
   }
 
   .hover-tile-hidden {
     background: transparentize(black, .5);
+    h4 {
+      margin-bottom: .5em;
+    }
+    p {
+      color: transparentize(white, .3);
+    }
   }
 }

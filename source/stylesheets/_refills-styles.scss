@@ -7,8 +7,12 @@ $refills-nav-height: 60px;
   src: url("/fonts/Fairview_Regular.otf") format("opentype");
 }
 
+@font-face {
+  font-family: PoetsenOne;
+  src: url("/fonts/PoetsenOne-Regular.ttf") format("opentype");
+}
+
 .external {
-  // color: white;
   height: 84px;
   width: 84px;
   border: 2px solid white;
@@ -75,8 +79,6 @@ body {
   @include clearfix;
 }
 
-/////////////////////////
-
 .refills-wrapper {
     @include outer-container;
     padding: 1em;
@@ -87,6 +89,15 @@ body {
     padding: 0.5em;
   }
 }
+
+h5 {
+  font-family: 'PoetsenOne';
+  font-size: 2em;
+  color: $base-accent-color; 
+  text-align: center;
+}
+
+//////////////////
 
 .refill {
   margin-bottom: 2em;
@@ -101,8 +112,6 @@ body {
   }
 }
 
-//////////////////
-
 // this centers the refill and sets back to text-align left below first object
 .refill-centering {
   text-align: center;
@@ -111,6 +120,9 @@ body {
     & > * {
       text-align: left;      
     }
+  }
+  script {
+    display: none;
   }
 }
 
@@ -141,28 +153,30 @@ body {
 
 .js-hide-code, 
 .js-show-code {
-  background: #F5F2F0;
-  border: 1px solid #BEBCBC;
+  // background: #F5F2F0;
+  border-top: 1px dashed #BEBCBC;
   color: #7E7A7A;
+  text-transform: uppercase;
+  font-size: .8em;
+  width: 9em;
+
 
   &:hover {
-    background: darken(#F5F2F0, 3);
-    color: darken(#ACACAC, 10);
+    // background: darken(desaturate(#F5F2F0, 10), 3);
+    color: $base-accent-color;
   }
 }
 
 .js-show-code {
   display: inline-block;
   padding: 0.5em 1em;
-  width: 8em;
-  border-radius: $base-border-radius;
+  // border-radius: $base-border-radius;
 }
 
 .js-hide-code {
   display: none;
   padding: 0.5em 1em;
-  border-radius: $base-border-radius;
-  width: 8em;
+  // border-radius: $base-border-radius;
 }
 
 .refill-snippet {
@@ -223,4 +237,16 @@ pre {
   background-color: transparent;
 }
 
-
+footer.refills-footer {
+  // border-top: 1px solid silver;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  color: silver;
+  text-align: center;
+  img {
+    display: block;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 2em;
+  }
+}

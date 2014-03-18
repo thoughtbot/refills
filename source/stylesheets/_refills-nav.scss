@@ -24,18 +24,25 @@ section.inner-content {
 
     ul {
       padding: 1em;
+    }
 
-      li {
-        a {
-          color: $light-gray;
-          font-size: $base-font-size * 0.8;
+    ul li a {
+      color: $light-gray;
+      font-weight: 800;
+      font-size: $base-font-size * 0.8;
 
-          &:hover {
-            color: #FFF;
-            text-decoration: none;
-          }
-        }
+      &:hover {
+        color: #FFF;
+        text-decoration: none;
       }
+    }
+
+    ul ul {
+      padding: 0;
+    }
+
+    ul ul li a {
+      font-weight: 200;
     }
   }
 }

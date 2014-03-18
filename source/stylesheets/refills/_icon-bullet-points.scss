@@ -42,11 +42,11 @@
     }
 
     .bullet-icon-2 {
-      background: adjust-hue($base-accent-color, 50);
+      background: adjust-hue($base-accent-color, -50);
     }
 
     .bullet-icon-3 {
-      background: adjust-hue($base-accent-color, 100);
+      background: adjust-hue($base-accent-color, -140);
     }
 
     .bullet-content {
