@@ -26,7 +26,7 @@
     $('.accordion-tabs').children('li').first().children('a').addClass('is-active')
       .next().addClass('is-open').show();
 
-    $('.accordion-tabs').on('click', 'li > a', function() {
+    $('.accordion-tabs').on('click', 'li > a', function(event) {
       if (!$(this).hasClass('is-active')) {
         event.preventDefault();
         $('.accordion-tabs .is-open').removeClass('is-open').hide();

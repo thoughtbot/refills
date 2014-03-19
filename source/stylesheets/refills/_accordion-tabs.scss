@@ -36,6 +36,10 @@
         color: $base-link-color;
       }
 
+      &:focus { 
+        outline: none; 
+      }
+
       &.is-active {
         background-color: $tab-active-background;
         border-bottom: 0;

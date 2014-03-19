@@ -34,7 +34,7 @@
   $(".js-vertical-tab-content:first").show();
 
   /* if in tab mode */
-  $(".js-vertical-tab").click(function() {
+  $(".js-vertical-tab").click(function(event) {
     event.preventDefault();
 
     $(".js-vertical-tab-content").hide();
@@ -49,7 +49,7 @@
   });
 
   /* if in accordion mode */
-  $(".js-vertical-tab-accordion-heading").click(function() {
+  $(".js-vertical-tab-accordion-heading").click(function(event) {
     event.preventDefault()
 
     $(".js-vertical-tab-content").hide();
