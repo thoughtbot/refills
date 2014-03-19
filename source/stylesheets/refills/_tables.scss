@@ -7,11 +7,11 @@
   $table-stripe-color: darken($table-background, 4);
   $table-stripe-color-hover: darken($table-stripe-color, 5);
   $table-padding: 0.5em;
-  
-  @if lightness($table-background) < 50% {
-    color: white;
-  }
 
+  border: $table-border;
+  border-left: 0px;
+  border-collapse: separate;
+  border-spacing: 0;
   border-radius: $base-border-radius;
 
   tbody {
@@ -47,11 +47,6 @@
     }
   }
 
-  border: $table-border;
-  border-left: 0px;
-  border-collapse: separate;
-  border-spacing: 0;
-
   thead {
     th {
       background-color: $table-header-color;
@@ -74,7 +69,16 @@
         @include button(simple, $table-background);
         margin-right: 0.5em;
         display: inline-block;
+        width: 100%;
+        margin-bottom: .3em;
       }
+    }
+  }
+
+  @include media($medium-screen) {
+    tbody td button {
+      width: auto;
+      margin-bottom: 0;
     }
   }
 }
