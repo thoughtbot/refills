@@ -6,6 +6,7 @@
   $tab-active-color: $tab-content-background;
   $tab-inactive-color: $base-body-color;
   $vertical-tabs-height: em(300);
+  $vertical-tab-mode: $medium-screen;
 
   @include clearfix;
   border-radius: $tab-border-radius;
@@ -16,7 +17,7 @@
   .vertical-tabs {
     display: none;
 
-    @include media($medium-screen) {
+    @include media($vertical-tab-mode) {
       background-color: $tab-inactive-color;
       display: inline;
       float: left;
@@ -26,7 +27,7 @@
   }
 
   .vertical-tab {
-    @include media($medium-screen) {
+    @include media($vertical-tab-mode) {
       border-bottom: $tab-border;
       display: block;
       font-weight: bold;
@@ -52,7 +53,7 @@
       outline: none; 
     }
 
-    @include media($medium-screen) {
+    @include media($vertical-tab-mode) {
       @include inline-block;
       @include size(80% $vertical-tabs-height);
       background-color: $tab-content-background;
@@ -63,7 +64,7 @@
     background-color: $tab-content-background;
     padding: $base-line-height $gutter;
 
-    @include media($medium-screen) {
+    @include media($vertical-tab-mode) {
       border: none;
       display: none;
     }
@@ -90,7 +91,7 @@
       border-bottom: none;
     }
 
-    @include media($medium-screen) {
+    @include media($vertical-tab-mode) {
       display: none;
     }
   }
