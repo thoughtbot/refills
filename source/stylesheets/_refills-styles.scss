@@ -2,16 +2,6 @@ $refills-color: lighten(desaturate(teal, 60), 40);
 $base-body-color: white;
 $refills-nav-height: 60px;
 
-@font-face {
-  font-family: Fairview;
-  src: url("/fonts/Fairview_Regular.otf") format("opentype");
-}
-
-@font-face {
-  font-family: PoetsenOne;
-  src: url("/fonts/PoetsenOne-Regular.ttf") format("opentype");
-}
-
 .external {
   height: 84px;
   width: 84px;
@@ -91,9 +81,9 @@ body {
 }
 
 h5 {
-  font-family: 'PoetsenOne';
+  font-family: 'Lusitana', serif;
   font-size: 2em;
-  color: $base-accent-color; 
+  color: #BBB295; 
   text-align: center;
 }
 
@@ -133,14 +123,14 @@ h5 {
 }
 
 .line-behind-text h6 {
-  font-family: 'Fairview';
+  font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   color: gray;
-  font-weight: 800;
+  font-weight: 500;
   display: inline-block;
   position: relative;
-  font-size: 1.2em;
-  top: 40px;
+  font-size: 1em;
+  top: 34px;
   background: white;
   padding: 0 10px;
 }
