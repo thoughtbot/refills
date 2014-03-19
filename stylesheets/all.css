@@ -3359,11 +3359,11 @@ header.navigation {
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
 .table-borders {
-  border-radius: 0.1875em;
   border: 1px solid #dddddd;
   border-left: 0px;
   border-collapse: separate;
-  border-spacing: 0; }
+  border-spacing: 0;
+  border-radius: 0.1875em; }
   /* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
   .table-borders tbody {
     background-color: #f7f7f7; }
@@ -3388,22 +3388,22 @@ header.navigation {
   /* line 45, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
   .table-borders tbody:last-child tr:last-child > td:last-child {
     border-bottom-right-radius: 0.1875em; }
-  /* line 56, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
+  /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
   .table-borders thead th {
     background-color: white;
     padding: 0.5em;
     border-left: 1px solid #dddddd;
     border-bottom: 0px; }
-  /* line 64, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
+  /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
   .table-borders tbody {
     background-color: #f7f7f7; }
-    /* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
+    /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
     .table-borders tbody td {
       padding: 0.5em;
       border-left: 1px solid #dddddd;
       border-top: 1px solid #dddddd;
       border-bottom: 0px; }
-      /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
+      /* line 68, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
       .table-borders tbody td button {
         border: 1px solid lightgrey;
         border-radius: 3px;
@@ -3421,7 +3421,9 @@ header.navigation {
         text-decoration: none;
         background-clip: padding-box;
         margin-right: 0.5em;
-        display: inline-block; }
+        display: inline-block;
+        width: 100%;
+        margin-bottom: .3em; }
         /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
         .table-borders tbody td button:hover:not(:disabled) {
           background-color: #ececec;
@@ -3442,6 +3444,11 @@ header.navigation {
         .table-borders tbody td button:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
+  @media screen and (min-width: 40em) {
+    /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
+    .table-borders tbody td button {
+      width: auto;
+      margin-bottom: 0; } }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_toggle-cards.scss */
 .course-cards-wrapper {

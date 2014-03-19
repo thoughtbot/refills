@@ -994,6 +994,178 @@
 </div>
   </div>
 
+  <div id="tables" class="refill">
+    <div class="line-behind-text"><h6>Tables</h6></div>
+    <table class="table-borders">
+  <thead>
+    <tr>
+      <th>Header Cell 1</th>
+      <th>Header Cell 2</th>
+      <th>Header Cell 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Row 1 Cell 1</td>
+      <td>Row 1 Cell 2</td>
+      <td><button>Confirm</button><button>Reject</button></td>
+    </tr>
+    <tr>
+      <td>Row 2 Cell 1</td>
+      <td>Row 2 Cell 2</td>
+      <td><button>Confirm</button><button>Reject</button></td>
+    </tr>
+    <tr>
+      <td>Row 3 Cell 1</td>
+      <td>Row 3 Cell 2</td>
+      <td><button>Confirm</button><button>Reject</button></td>
+    </tr>
+    <tr>
+      <td>Row 4 Cell 1</td>
+      <td>Row 4 Cell 2</td>
+      <td><button>Confirm</button><button>Reject</button></td>
+    </tr>
+  </tbody>
+</table>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class="language-markup">
+      &lt;table class=&quot;table-borders&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Header Cell 1&lt;/th&gt;
+      &lt;th&gt;Header Cell 2&lt;/th&gt;
+      &lt;th&gt;Header Cell 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Row 1 Cell 1&lt;/td&gt;
+      &lt;td&gt;Row 1 Cell 2&lt;/td&gt;
+      &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Row 2 Cell 1&lt;/td&gt;
+      &lt;td&gt;Row 2 Cell 2&lt;/td&gt;
+      &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Row 3 Cell 1&lt;/td&gt;
+      &lt;td&gt;Row 3 Cell 2&lt;/td&gt;
+      &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Row 4 Cell 1&lt;/td&gt;
+      &lt;td&gt;Row 4 Cell 2&lt;/td&gt;
+      &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+    </code>
+  </pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class='language-scss'>
+        .table-borders {
+          $table-border-color: $base-border-color;
+          $table-border: 1px solid $table-border-color;
+          $table-background: lighten($table-border-color, 10);
+          $table-header-color: lighten($table-background, 10);
+          $table-hover-color: darken($table-background, 5);
+          $table-stripe-color: darken($table-background, 4);
+          $table-stripe-color-hover: darken($table-stripe-color, 5);
+          $table-padding: 0.5em;
+        
+          border: $table-border;
+          border-left: 0px;
+          border-collapse: separate;
+          border-spacing: 0;
+          border-radius: $base-border-radius;
+        
+          tbody {
+            background-color: $table-background;
+            tr:hover > td, tr:hover > th {
+              background-color: $table-hover-color;
+            }
+            tr:nth-child(even) {
+              background-color: $table-stripe-color;
+              &:hover > td {
+                background-color: $table-stripe-color-hover;
+              }
+            }
+          }
+        
+          thead:first-of-type {
+            tr:first-child > th:first-child {
+              border-top-left-radius: $base-border-radius;
+            }
+        
+            tr:first-child > th:last-child {
+              border-top-right-radius: $base-border-radius;
+            }
+          }
+        
+          tbody:last-child {
+            tr:last-child > td:first-child {
+              border-bottom-left-radius: $base-border-radius;
+            }
+        
+            tr:last-child > td:last-child {
+              border-bottom-right-radius: $base-border-radius;
+            }
+          }
+        
+          thead {
+            th {
+              background-color: $table-header-color;
+              padding: $table-padding;
+              border-left: 1px solid $table-border-color;
+              border-bottom: 0px;
+            }
+          }
+        
+          tbody {
+            background-color: $table-background;
+        
+            td {
+              padding: $table-padding;
+              border-left: 1px solid $table-border-color;
+              border-top: 1px solid $table-border-color;
+              border-bottom: 0px;
+        
+              button {
+                @include button(simple, $table-background);
+                margin-right: 0.5em;
+                display: inline-block;
+                width: 100%;
+                margin-bottom: .3em;
+              }
+            }
+          }
+        
+          @include media($medium-screen) {
+            tbody td button {
+              width: auto;
+              margin-bottom: 0;
+            }
+          }
+        }
+    </code>
+  </pre>
+</div>
+
+</div>
+  </div>
+
   <div id="vertical-tabs" class="refill">
     <div class="line-behind-text"><h6>Vertical Tabs</h6></div>
     <div class="vertical-tabs-container">
@@ -2740,173 +2912,7 @@
 
   </div>
   
-  <div id="tables" class="refill">
-    <h6>Tables</h6>
-    <table class="table-borders">
-  <thead>
-    <tr>
-      <th>Header Cell 1</th>
-      <th>Header Cell 2</th>
-      <th>Header Cell 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Row 1 Cell 1</td>
-      <td>Row 1 Cell 2</td>
-      <td><button>Confirm</button><button>Reject</button></td>
-    </tr>
-    <tr>
-      <td>Row 2 Cell 1</td>
-      <td>Row 2 Cell 2</td>
-      <td><button>Confirm</button><button>Reject</button></td>
-    </tr>
-    <tr>
-      <td>Row 3 Cell 1</td>
-      <td>Row 3 Cell 2</td>
-      <td><button>Confirm</button><button>Reject</button></td>
-    </tr>
-    <tr>
-      <td>Row 4 Cell 1</td>
-      <td>Row 4 Cell 2</td>
-      <td><button>Confirm</button><button>Reject</button></td>
-    </tr>
-  </tbody>
-</table>
-    <div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
 
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;table class=&quot;table-borders&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Header Cell 1&lt;/th&gt;
-      &lt;th&gt;Header Cell 2&lt;/th&gt;
-      &lt;th&gt;Header Cell 3&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Row 1 Cell 1&lt;/td&gt;
-      &lt;td&gt;Row 1 Cell 2&lt;/td&gt;
-      &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Row 2 Cell 1&lt;/td&gt;
-      &lt;td&gt;Row 2 Cell 2&lt;/td&gt;
-      &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Row 3 Cell 1&lt;/td&gt;
-      &lt;td&gt;Row 3 Cell 2&lt;/td&gt;
-      &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Row 4 Cell 1&lt;/td&gt;
-      &lt;td&gt;Row 4 Cell 2&lt;/td&gt;
-      &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .table-borders {
-          $table-border-color: $base-border-color;
-          $table-border: 1px solid $table-border-color;
-          $table-background: lighten($table-border-color, 10);
-          $table-header-color: lighten($table-background, 10);
-          $table-hover-color: darken($table-background, 5);
-          $table-stripe-color: darken($table-background, 4);
-          $table-stripe-color-hover: darken($table-stripe-color, 5);
-          $table-padding: 0.5em;
-          
-          @if lightness($table-background) < 50% {
-            color: white;
-          }
-        
-          border-radius: $base-border-radius;
-        
-          tbody {
-            background-color: $table-background;
-            tr:hover > td, tr:hover > th {
-              background-color: $table-hover-color;
-            }
-            tr:nth-child(even) {
-              background-color: $table-stripe-color;
-              &:hover > td {
-                background-color: $table-stripe-color-hover;
-              }
-            }
-          }
-        
-          thead:first-of-type {
-            tr:first-child > th:first-child {
-              border-top-left-radius: $base-border-radius;
-            }
-        
-            tr:first-child > th:last-child {
-              border-top-right-radius: $base-border-radius;
-            }
-          }
-        
-          tbody:last-child {
-            tr:last-child > td:first-child {
-              border-bottom-left-radius: $base-border-radius;
-            }
-        
-            tr:last-child > td:last-child {
-              border-bottom-right-radius: $base-border-radius;
-            }
-          }
-        
-          border: $table-border;
-          border-left: 0px;
-          border-collapse: separate;
-          border-spacing: 0;
-        
-          thead {
-            th {
-              background-color: $table-header-color;
-              padding: $table-padding;
-              border-left: 1px solid $table-border-color;
-              border-bottom: 0px;
-            }
-          }
-        
-          tbody {
-            background-color: $table-background;
-        
-            td {
-              padding: $table-padding;
-              border-left: 1px solid $table-border-color;
-              border-top: 1px solid $table-border-color;
-              border-bottom: 0px;
-        
-              button {
-                @include button(simple, $table-background);
-                margin-right: 0.5em;
-                display: inline-block;
-              }
-            }
-          }
-        }
-    </code>
-  </pre>
-</div>
-
-
-  </div>
 
   <div id="breadcrumbs" class="refill">
     <h6>Breadcrumbs</h6>
