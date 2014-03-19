@@ -1,53 +1,87 @@
 $sidebar-width: em(200);
+$sliding-menu-border-color: $dark-gray;
+$sliding-menu-background: lighten($sliding-menu-border-color, 5);
+$sliding-menu-color: #fff;
+$sliding-menu-border: 1px solid $sliding-menu-border-color;
+$sliding-menu-background-hover: $base-accent-color;
+$sliding-menu-color-hover: #fff;
 
 section.inner-content {
   margin-left: auto;
+}
 
-  @include media($medium-screen) {
-    margin-left: $sidebar-width;
-  }
+.refills-menu-anchor {
+  @include inline-block;
+  cursor: pointer;
+  color: black;
+  border: 1px solid black;
+  padding: .7em 1em;
+  border-radius: 50%;
+  font-size: $base-font-size;
+  margin-bottom: $base-line-height;
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 9999;
 }
 
 .er_toc_title {
   display: none;
 }
 
-.er_toc {
+.er_toc_top {
   display: none;
+}
 
-  title {
-    display: none;
-    visibility: hidden;
-  }
-
-  @include media($medium-screen) {
-    @include position(fixed, 0px 0 0 0px);
-    @include size($sidebar-width 100%);
+.er_toc {
+  @include position(fixed, 0px auto 0px 0px);
+  @include size(220px 100%);
+  @include transform(translateX(-220px));
+  @include transition(all .25s linear);
+  background: $sliding-menu-background;
+  z-index: 999999;
+  
+  li a {
+    border-bottom: $sliding-menu-border;
+    color: $sliding-menu-color;
     display: block;
-    box-shadow: inset 1px 0 1px rgba(0,0,0,0.9);
-    background: $dark-gray;
-
-    ul {
-      padding: 1em;
+    font-weight: bold;
+    padding: 1em;
+  
+    &:hover {
+      background-color: $sliding-menu-background-hover;
+      color: $sliding-menu-color-hover;
     }
-
-    ul li a {
-      color: $light-gray;
-      font-weight: 800;
-      font-size: $base-font-size * 0.8;
-
-      &:hover {
-        color: #FFF;
-        text-decoration: none;
-      }
-    }
-
-    ul ul {
-      padding: 0;
-    }
-
-    ul ul li a {
-      font-weight: 200;
-    }
+  }
+  
+  &.is-visible {
+    @include transform(translateX(0));
   }
 }
+
+
+//////////
+
+    
+
+        
+
+        
+
+        .refills-menu-screen {
+          @include position(fixed, 0px 0px 0px 0px);
+          @include transition;
+          background: $sliding-menu-border-color;
+          opacity: 0;
+          visibility: hidden;
+          z-index: 999998;
+        
+          &.is-visible {
+            opacity: .4;
+            visibility: visible;
+          }
+        }
+        
+        // Based on code by Diego Eis
+    
+  
