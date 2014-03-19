@@ -15,16 +15,17 @@ section.inner-content {
 .er_toc {
   display: none;
 
+  title {
+    display: none;
+    visibility: hidden;
+  }
+
   @include media($medium-screen) {
     @include position(fixed, 0px 0 0 0px);
     @include size($sidebar-width 100%);
     display: block;
     box-shadow: inset 1px 0 1px rgba(0,0,0,0.9);
     background: $dark-gray;
-
-    title {
-      display: none;
-    }
 
     ul {
       padding: 1em;
