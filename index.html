@@ -131,6 +131,7 @@
           .menu-wrapper {
             @include outer-container;
             position: relative;
+            z-index: 9999;
           }
         
           .logo {
@@ -167,6 +168,7 @@
           }
         
           .nav ul {    
+            clear: both;
             -webkit-transform-style: preserve-3d; // stop webkit flicker
             display: none;
             margin: 0 auto;
@@ -183,7 +185,7 @@
               padding-right: .8em;
               text-align: right;
               width: 100%;
-              z-index: 99999999;
+              z-index: 9999;
         
               a {
                 font-weight: 400;
@@ -816,7 +818,7 @@
     $('.accordion-tabs').children('li').first().children('a').addClass('is-active')
       .next().addClass('is-open').show();
 
-    $('.accordion-tabs').on('click', 'li > a', function() {
+    $('.accordion-tabs').on('click', 'li > a', function(event) {
       if (!$(this).hasClass('is-active')) {
         event.preventDefault();
         $('.accordion-tabs .is-open').removeClass('is-open').hide();
@@ -867,7 +869,7 @@
     $('.accordion-tabs').children('li').first().children('a').addClass('is-active')
       .next().addClass('is-open').show();
 
-    $('.accordion-tabs').on('click', 'li &gt; a', function() {
+    $('.accordion-tabs').on('click', 'li &gt; a', function(event) {
       if (!$(this).hasClass('is-active')) {
         event.preventDefault();
         $('.accordion-tabs .is-open').removeClass('is-open').hide();
@@ -925,6 +927,10 @@
         
               &:hover {
                 color: $base-link-color;
+              }
+        
+              &:focus { 
+                outline: none; 
               }
         
               &.is-active {
@@ -1028,7 +1034,7 @@
   $(".js-vertical-tab-content:first").show();
 
   /* if in tab mode */
-  $(".js-vertical-tab").click(function() {
+  $(".js-vertical-tab").click(function(event) {
     event.preventDefault();
 
     $(".js-vertical-tab-content").hide();
@@ -1043,7 +1049,7 @@
   });
 
   /* if in accordion mode */
-  $(".js-vertical-tab-accordion-heading").click(function() {
+  $(".js-vertical-tab-accordion-heading").click(function(event) {
     event.preventDefault()
 
     $(".js-vertical-tab-content").hide();
@@ -1103,7 +1109,7 @@
   $(&quot;.js-vertical-tab-content:first&quot;).show();
 
   /* if in tab mode */
-  $(&quot;.js-vertical-tab&quot;).click(function() {
+  $(&quot;.js-vertical-tab&quot;).click(function(event) {
     event.preventDefault();
 
     $(&quot;.js-vertical-tab-content&quot;).hide();
@@ -1118,7 +1124,7 @@
   });
 
   /* if in accordion mode */
-  $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function() {
+  $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
     event.preventDefault()
 
     $(&quot;.js-vertical-tab-content&quot;).hide();
@@ -1141,96 +1147,103 @@
   <a href="#" class="copy-source">Copy</a>
   <pre>
     <code class='language-scss'>
-        $tab-border-color: $base-border-color;
-        $tab-border: 1px solid $tab-border-color;
-        $tab-border-radius: $base-border-radius;
-        $tab-content-background: lighten($tab-border-color, 10);
-        $tab-active-color: $tab-content-background;
-        $tab-inactive-color: $base-body-color;
-        $vertical-tabs-height: em(300);
-        
         .vertical-tabs-container { // small screens: accordion
+          $tab-border-color: $base-border-color;
+          $tab-border: 1px solid $tab-border-color;
+          $tab-border-radius: $base-border-radius;
+          $tab-content-background: lighten($tab-border-color, 10);
+          $tab-active-color: $tab-content-background;
+          $tab-inactive-color: $base-body-color;
+          $vertical-tabs-height: em(300);
+        
           @include clearfix;
           border-radius: $tab-border-radius;
           border: $tab-border;
           margin-bottom: $base-line-height;
           overflow: hidden;
-        }
         
-        .vertical-tabs {
-          display: none;
-        
-          @include media($medium-screen) {
-            background-color: $tab-inactive-color;
-            display: inline;
-            float: left;
-            height: $vertical-tabs-height;
-            width: 20%;
+          .vertical-tabs {
+            display: none;
           }
-        }
         
-        .vertical-tab {
-          @include media($medium-screen) {
-            border-bottom: $tab-border;
+          .vertical-tab:focus {
+            outline: none; 
+          }
+        
+          .vertical-tab-content-container {
+            display: block;
+            margin: 0 auto;
+        
+            & a:focus { 
+              outline: none; 
+            }
+          }
+        
+          .vertical-tab-content {
+            background-color: $tab-content-background;
+            padding: $base-line-height $gutter;
+          }
+        
+          .vertical-tab-accordion-heading {
+            background-color: $tab-inactive-color;
+            border-top: $tab-border;
+            cursor: pointer;
             display: block;
             font-weight: bold;
-            margin-right: -1px;
             padding: $base-line-height/2 $gutter/2;
         
+            &:hover {
+              color: $base-accent-color;
+            }
+        
+            &:first-child {
+              border-top: none;
+            }
+        
             &.is-active {
-              background-color: $tab-content-background;
+              background: $tab-active-color;
+              border-bottom: none;
+            }
+          }
+        
+          @include media($medium-screen) { //turns into vertical tabs
+            .vertical-tabs {
+              background-color: $tab-inactive-color;
+              display: inline;
+              float: left;
+              height: $vertical-tabs-height;
+              width: 20%;
+            }
+        
+            .vertical-tab {
+              border-bottom: $tab-border;
+              display: block;
+              font-weight: bold;
               margin-right: -1px;
+              padding: $base-line-height/2 $gutter/2;
+        
+              &.is-active {
+                background-color: $tab-content-background;
+                margin-right: -1px;
+              }
+            }
+        
+            .vertical-tab-content-container {
+              @include inline-block;
+              @include size(80% $vertical-tabs-height);
+              background-color: $tab-content-background;
+            }
+        
+            .vertical-tab-content {
+              border: none;
+              display: none;
+            }
+        
+            .vertical-tab-accordion-heading {
+              display: none;
             }
           }
         }
-        
-        .vertical-tab-content-container {
-          display: block;
-          margin: 0 auto;
-        
-          @include media($medium-screen) {
-            @include inline-block;
-            @include size(80% $vertical-tabs-height);
-            background-color: $tab-content-background;
-          }
-        }
-        
-        .vertical-tab-content {
-          background-color: $tab-content-background;
-          padding: $base-line-height $gutter;
-        
-          @include media($medium-screen) {
-            border: none;
-            display: none;
-          }
-        }
-        
-        .vertical-tab-accordion-heading {
-          background-color: $tab-inactive-color;
-          border-top: $tab-border;
-          cursor: pointer;
-          display: block;
-          font-weight: bold;
-          padding: $base-line-height/2 $gutter/2;
-        
-          @include media($medium-screen) {
-            display: none;
-          }
-        
-          &:hover {
-            color: $base-accent-color;
-          }
-        
-          &:first-child {
-            border-top: none;
-          }
-        
-          &.is-active {
-            background: $tab-active-color;
-            border-bottom: none;
-          }
-        }
-        
         // Based on code by Jett Miller jettmiller.net
     </code>
   </pre>
