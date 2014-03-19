@@ -1811,7 +1811,7 @@ footer.refills-footer {
   cursor: pointer;
   box-shadow: 0 2px 4px #e6e6e6;
   position: relative; }
-  @media screen and (min-width: 53.75em) {
+  @media screen and (min-width: 40em) {
     /* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .card, .system ul li {
       float: left;
