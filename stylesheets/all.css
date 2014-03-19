@@ -1124,6 +1124,10 @@ section.inner-content {
 /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
 .er_toc {
   display: none; }
+  /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  .er_toc title {
+    display: none;
+    visibility: hidden; }
   @media screen and (min-width: 40em) {
     /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
     .er_toc {
@@ -1135,25 +1139,22 @@ section.inner-content {
       display: block;
       box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.9);
       background: #333333; }
-      /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
-      .er_toc title {
-        display: none; }
-      /* line 29, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+      /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
       .er_toc ul {
         padding: 1em; }
-      /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+      /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
       .er_toc ul li a {
         color: #dddddd;
         font-weight: 800;
         font-size: 0.8em; }
-        /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+        /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
         .er_toc ul li a:hover {
           color: #FFF;
           text-decoration: none; }
-      /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+      /* line 45, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
       .er_toc ul ul {
         padding: 0; }
-      /* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+      /* line 49, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
       .er_toc ul ul li a {
         font-weight: 200; } }
 
