@@ -30,10 +30,6 @@ header.navigation {
       max-height: $navigation-height;
       padding: .8em 0;
     }
-
-    @include media($medium-screen) {
-      padding-left: 1em;
-    }
   }
 
   p {

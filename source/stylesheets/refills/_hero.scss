@@ -51,11 +51,5 @@
 				}
 			}
 		}
-
-		.hero-image {
-			@include media($medium-screen) {
-				@include span-columns(6);
-			}
-		}
 	}
 }
