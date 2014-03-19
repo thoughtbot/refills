@@ -21,8 +21,9 @@
   box-shadow: 0 2px 4px darken($base-body-color, 10);
   position: relative;
 
-  @include media($medium-screen) {
+  @include media($large-screen) {
     @include span-columns(4);  
+    @include omega(3n);
   }
 
   .card-image {
