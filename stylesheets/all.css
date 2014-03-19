@@ -1620,7 +1620,7 @@ footer.refills-footer {
   border-radius: 0.1875em;
   display: block;
   margin-bottom: 1.5em; }
-  /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
+  /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
   .breadcrumb a {
     display: inline-block;
     vertical-align: baseline;
@@ -1629,31 +1629,33 @@ footer.refills-footer {
     *vertical-align: auto;
     background-color: white;
     border: 1px solid #dddddd;
-    color: #333333;
+    color: #999999;
     line-height: 2.25em;
     margin-right: -5px;
-    padding: 0 1.125em 0 1.5em;
+    font-size: .8em;
+    padding: 0 0.5625em 0 1.125em;
     position: relative;
     text-decoration: none; }
-    /* line 27, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
+    /* line 32, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
     .breadcrumb a:first-child {
       padding-left: 1.125em;
       border-top-left-radius: 0.1875em;
       border-bottom-left-radius: 0.1875em; }
-    /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
+    /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
     .breadcrumb a:last-child {
       background-color: white;
+      color: #999999;
       border-bottom-right-radius: 0.1875em;
       border-top-right-radius: 0.1875em;
-      font-weight: bold;
       padding-right: 1.125em; }
-    /* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
+    /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
     .breadcrumb a:hover {
-      background-color: #d0d0d0; }
-    /* line 45, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
+      color: #477dca;
+      background-color: white; }
+    /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
     .breadcrumb a:hover:after {
-      border-left-color: #d0d0d0; }
-    /* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
+      border-left-color: white; }
+    /* line 56, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
     .breadcrumb a:after, .breadcrumb a:before {
       position: absolute;
       top: 0px;
@@ -1667,17 +1669,22 @@ footer.refills-footer {
       display: block;
       margin: auto;
       z-index: 2; }
-    /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
+    /* line 68, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
     .breadcrumb a:last-child:after, .breadcrumb a:last-child:before {
       border: none; }
-    /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
+    /* line 72, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
     .breadcrumb a:before {
       border-left-color: #dddddd;
       margin-left: 1px;
       z-index: 1; }
-    /* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
+    /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
     .breadcrumb a:after {
       border-left-color: white; }
+    @media screen and (min-width: 40em) {
+      /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
+      .breadcrumb a {
+        font-size: 1em;
+        padding: 0 1.125em 0 1.5em; } }
 
 /* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_button-group.scss */
 .button-group {
