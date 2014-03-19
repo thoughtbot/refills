@@ -15,6 +15,29 @@
 
   .vertical-tabs {
     display: none;
+
+    @include media($medium-screen) {
+      background-color: $tab-inactive-color;
+      display: inline;
+      float: left;
+      height: $vertical-tabs-height;
+      width: 20%;
+    }
+  }
+
+  .vertical-tab {
+    @include media($medium-screen) {
+      border-bottom: $tab-border;
+      display: block;
+      font-weight: bold;
+      margin-right: -1px;
+      padding: $base-line-height/2 $gutter/2;
+
+      &.is-active {
+        background-color: $tab-content-background;
+        margin-right: -1px;
+      }
+    }
   }
 
   .vertical-tab:focus {
@@ -28,11 +51,22 @@
     & a:focus { 
       outline: none; 
     }
+
+    @include media($medium-screen) {
+      @include inline-block;
+      @include size(80% $vertical-tabs-height);
+      background-color: $tab-content-background;
+    }
   }
 
   .vertical-tab-content {
     background-color: $tab-content-background;
     padding: $base-line-height $gutter;
+
+    @include media($medium-screen) {
+      border: none;
+      display: none;
+    }
   }
 
   .vertical-tab-accordion-heading {
@@ -55,44 +89,9 @@
       background: $tab-active-color;
       border-bottom: none;
     }
-  }
 
-  @include media($medium-screen) { //turns into vertical tabs
-    .vertical-tabs {
-      background-color: $tab-inactive-color;
-      display: inline;
-      float: left;
-      height: $vertical-tabs-height;
-      width: 20%;
-    }
-
-    .vertical-tab {
-      border-bottom: $tab-border;
-      display: block;
-      font-weight: bold;
-      margin-right: -1px;
-      padding: $base-line-height/2 $gutter/2;
-
-      &.is-active {
-        background-color: $tab-content-background;
-        margin-right: -1px;
-      }
-    }
-
-    .vertical-tab-content-container {
-      @include inline-block;
-      @include size(80% $vertical-tabs-height);
-      background-color: $tab-content-background;
-    }
-
-    .vertical-tab-content {
-      border: none;
-      display: none;
-    }
-
-    .vertical-tab-accordion-heading {
+    @include media($medium-screen) {
       display: none;
     }
   }
 }
-// Based on code by Jett Miller jettmiller.net
