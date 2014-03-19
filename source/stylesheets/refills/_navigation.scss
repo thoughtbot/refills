@@ -17,6 +17,7 @@ header.navigation {
   .menu-wrapper {
     @include outer-container;
     position: relative;
+    z-index: 9999;
   }
 
   .logo {
@@ -53,6 +54,7 @@ header.navigation {
   }
 
   .nav ul {    
+    clear: both;
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     display: none;
     margin: 0 auto;
@@ -69,7 +71,7 @@ header.navigation {
       padding-right: .8em;
       text-align: right;
       width: 100%;
-      z-index: 99999999;
+      z-index: 9999;
 
       a {
         font-weight: 400;
