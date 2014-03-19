@@ -22,6 +22,10 @@ section.inner-content {
     box-shadow: inset 1px 0 1px rgba(0,0,0,0.9);
     background: $dark-gray;
 
+    title {
+      display: none;
+    }
+
     ul {
       padding: 1em;
     }
