@@ -1449,38 +1449,38 @@ footer.refills-footer {
     margin-bottom: 2em; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion.scss */
-.accordion-menus {
+.accordion {
   background-color: #f7f7f7;
   border: 1px solid #dddddd;
   margin-bottom: 1.5em; }
   /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion.scss */
-  .accordion-menus li {
+  .accordion li {
     border-bottom: 1px solid #dddddd; }
     /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion.scss */
-    .accordion-menus li > a {
+    .accordion li > a {
       padding: 0.75em 1.618em;
       display: block; }
     /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion.scss */
-    .accordion-menus li:last-child {
+    .accordion li:last-child {
       border: none; }
     /* line 27, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion.scss */
-    .accordion-menus li:hover {
+    .accordion li:hover {
       background-color: white; }
   /* line 32, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion.scss */
-  .accordion-menus ul.submenu {
+  .accordion ul.submenu {
     display: none; }
     /* line 35, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion.scss */
-    .accordion-menus ul.submenu li {
+    .accordion ul.submenu li {
       background-color: #eaeaea; }
       /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion.scss */
-      .accordion-menus ul.submenu li:first-child {
+      .accordion ul.submenu li:first-child {
         border-top: 1px solid #dddddd;
         box-shadow: inset 0 1px 1px #dadada; }
       /* line 43, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion.scss */
-      .accordion-menus ul.submenu li:hover {
+      .accordion ul.submenu li:hover {
         background-color: #dddddd; }
   /* line 49, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion.scss */
-  .accordion-menus .is-expanded {
+  .accordion .is-expanded {
     display: block;
     padding-bottom: 0; }
 

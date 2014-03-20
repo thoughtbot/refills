@@ -2283,6 +2283,153 @@
 </div>
   </div>
 
+  <div id="accordion" class="refill">
+    <div class="line-behind-text"><h6>Accordion</h6></div>
+    <div class="refill-centering"><ul class="accordion">
+  <li>
+    <a href="#" class="js-accordion-trigger">Accordion Item</a>
+    <ul class="submenu">
+      <li>
+        <a href="">Sub Item 1</a>
+      </li>
+      <li>
+        <a href="">Sub Item 2</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="#" class="js-accordion-trigger">Another Item</a>
+    <ul class="submenu">
+      <li>
+        <a href="">Sub Item 1</a>
+      </li>
+      <li>
+        <a href="">Sub Item 2</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<script>
+  jQuery('.js-accordion-trigger') // find the trigger
+    .bind('click focus', function(){
+      jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
+      jQuery(this).parent().toggleClass('is-expanded');
+      event.preventDefault();
+  });
+</script>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class="language-markup">
+      &lt;ul class=&quot;accordion&quot;&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-accordion-trigger&quot;&gt;Accordion Item&lt;/a&gt;
+    &lt;ul class=&quot;submenu&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Sub Item 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Sub Item 2&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-accordion-trigger&quot;&gt;Another Item&lt;/a&gt;
+    &lt;ul class=&quot;submenu&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Sub Item 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Sub Item 2&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+  jQuery('.js-accordion-trigger') // find the trigger
+    .bind('click focus', function(){
+      jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
+      jQuery(this).parent().toggleClass('is-expanded');
+      event.preventDefault();
+  });
+&lt;/script&gt;
+
+    </code>
+  </pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class='language-scss'>
+        .accordion {
+          $accordion-menu-border-color: $base-border-color;
+          $accordion-menu-border: 1px solid $accordion-menu-border-color;
+          $accordion-menu-background: lighten($accordion-menu-border-color, 10);
+          $accordion-menu-hover: lighten($accordion-menu-background, 10);
+          $accordion-menu-sub-background: darken($accordion-menu-background, 5);
+          $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
+          $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
+          $accordion-menu-list-padding: $base-line-height/2 $gutter;
+          
+          background-color: $accordion-menu-background;
+          border: $accordion-menu-border;
+          margin-bottom: $base-line-height;
+        
+          li {
+            border-bottom: $accordion-menu-border;
+        
+            > a {
+              padding: $accordion-menu-list-padding;
+              display: block;
+            }
+        
+            &:last-child {
+              border: none;
+            }
+        
+            &:hover {
+              background-color: $accordion-menu-hover;
+            }
+          }
+        
+          ul.submenu {
+            display: none;
+        
+            li {
+              background-color: $accordion-menu-sub-background;
+        
+              &:first-child {
+                border-top: $accordion-menu-border;
+                box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
+              }
+        
+              &:hover {
+                background-color: $accordion-menu-sub-hover;
+              }
+            }
+          }
+        
+          .is-expanded {
+            display: block;
+            padding-bottom: 0;
+          }
+        }
+    </code>
+  </pre>
+</div>
+
+</div>
+  </div>
+
 <!-- 
 
 
@@ -2502,152 +2649,7 @@
 
   </div>
 
-  <div id="accordion" class="refill">
-    <h6>Accordion</h6>
-    <ul class="accordion-menus">
-  <li>
-    <a href="#" class="js-accordion-trigger">Item 1</a>
-    <ul class="submenu">
-      <li>
-        <a href="">Sub Item 1</a>
-      </li>
-      <li>
-        <a href="">Sub Item 2</a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a href="#" class="js-accordion-trigger">Item 2</a>
-    <ul class="submenu">
-      <li>
-        <a href="">Sub Item 1</a>
-      </li>
-      <li>
-        <a href="">Sub Item 2</a>
-      </li>
-    </ul>
-  </li>
-</ul>
 
-<script>
-  jQuery('.js-accordion-trigger') // find the trigger
-    .bind('click focus', function(){
-      jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
-      jQuery(this).parent().toggleClass('is-expanded');
-      event.preventDefault();
-  });
-</script>
-
-    <div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;ul class=&quot;accordion-menus&quot;&gt;
-  &lt;li&gt;
-    &lt;a href=&quot;#&quot; class=&quot;js-accordion-trigger&quot;&gt;Item 1&lt;/a&gt;
-    &lt;ul class=&quot;submenu&quot;&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;&quot;&gt;Sub Item 1&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;&quot;&gt;Sub Item 2&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;a href=&quot;#&quot; class=&quot;js-accordion-trigger&quot;&gt;Item 2&lt;/a&gt;
-    &lt;ul class=&quot;submenu&quot;&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;&quot;&gt;Sub Item 1&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;&quot;&gt;Sub Item 2&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script&gt;
-  jQuery('.js-accordion-trigger') // find the trigger
-    .bind('click focus', function(){
-      jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
-      jQuery(this).parent().toggleClass('is-expanded');
-      event.preventDefault();
-  });
-&lt;/script&gt;
-
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .accordion-menus {
-          $accordion-menu-border-color: $base-border-color;
-          $accordion-menu-border: 1px solid $accordion-menu-border-color;
-          $accordion-menu-background: lighten($accordion-menu-border-color, 10);
-          $accordion-menu-hover: lighten($accordion-menu-background, 10);
-          $accordion-menu-sub-background: darken($accordion-menu-background, 5);
-          $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
-          $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
-          $accordion-menu-list-padding: $base-line-height/2 $gutter;
-          
-          background-color: $accordion-menu-background;
-          border: $accordion-menu-border;
-          margin-bottom: $base-line-height;
-        
-          li {
-            border-bottom: $accordion-menu-border;
-        
-            > a {
-              padding: $accordion-menu-list-padding;
-              display: block;
-            }
-        
-            &:last-child {
-              border: none;
-            }
-        
-            &:hover {
-              background-color: $accordion-menu-hover;
-            }
-          }
-        
-          ul.submenu {
-            display: none;
-        
-            li {
-              background-color: $accordion-menu-sub-background;
-        
-              &:first-child {
-                border-top: $accordion-menu-border;
-                box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
-              }
-        
-              &:hover {
-                background-color: $accordion-menu-sub-hover;
-              }
-            }
-          }
-        
-          .is-expanded {
-            display: block;
-            padding-bottom: 0;
-          }
-        }
-    </code>
-  </pre>
-</div>
-
-
-  </div>
 
   <div id="dropdown-menu" class="refill">
     <h6>Dropdown Menu</h6>
