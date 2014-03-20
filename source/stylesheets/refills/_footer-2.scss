@@ -1,0 +1,45 @@
+.footer-2 {
+  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, .6);
+  $footer-disclaimer-color: transparentize($footer-color, .6);
+
+  background: $footer-background;
+  padding: $base-line-height;
+  width: 100%;
+
+  .footer-logo {
+    float: left;
+
+    img {
+      height: 1.6em;
+    }
+  } 
+
+  ul {
+    margin-left: 1em;
+    float: left;
+  }
+
+  li {
+    text-align: center;
+    padding-right: 1em;
+
+    @include media($medium-screen) {
+      display: inline;
+      text-align: left;
+    }
+  }
+
+  li a {
+    color: $footer-link-color;
+
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  .footer-secondary-link {
+    font-size: .8em;
+  }
+}

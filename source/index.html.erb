@@ -16,7 +16,7 @@ title: Refills
     <a href="https://github.com/thoughtbot/refills"></a>
   </div>
 
-  <h5>Components</h5>
+  <h5>Patterns</h5>
 
   <div id="navigation" class="refill">
     <div class="line-behind-text"><h6>Navigation</h6></div>
@@ -60,6 +60,26 @@ title: Refills
     <div class="refill-snippet"><%= snippet('vertical-tabs') %></div>
   </div>
 
+  <div id="grid-item" class="refill">
+    <div class="line-behind-text"><h6>Grid Items</h6></div>
+    <div class="refill-centering"><%= partial "grid-item" %></div>
+    <div class="refill-snippet"><%= snippet('grid-item') %></div>
+  </div>
+
+  <div class="refills-wrapper">
+    <div id="footer" class="refill">
+      <div class="line-behind-text"><h6>Footers</h6></div>
+      <div class="refill-centering"><%= partial "footer" %></div>
+      <div class="refill-snippet"><%= snippet('footer') %></div>
+      <!--
+      <div class="refill-centering"><%= partial "footer-2" %></div>
+      <div class="refill-snippet"><%= snippet('footer-2') %></div>
+      -->
+    </div>
+  </div>
+
+  <h5>Components</h5>
+
   <div id="sliding-menu" class="refill">
     <div class="line-behind-text"><h6>Sliding Menu</h6></div>
     <div class="refill-centering"><%= partial "sliding-menu" %></div>
@@ -88,12 +108,6 @@ title: Refills
     <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
     <div class="refill-centering"><%= partial "hover-tile-animation" %></div>
     <div class="refill-snippet"><%= snippet('hover-tile-animation') %></div>
-  </div>
-
-  <div id="grid-item" class="refill">
-    <div class="line-behind-text"><h6>Grid Items</h6></div>
-    <div class="refill-centering"><%= partial "grid-item" %></div>
-    <div class="refill-snippet"><%= snippet('grid-item') %></div>
   </div>
 
   <div id="accordion" class="refill">
@@ -187,13 +201,7 @@ title: Refills
     <%= snippet('info-section') %>
   </div>
 
-<div class="refills-wrapper">
-  <div id="footer" class="refill">
-    <h6>Footer</h6> 
-    <%= partial "footer" %>
-    <%= snippet('footer') %>
-  </div>
-</div>
+
  -->
 <script>
   $('a.js-show-code').on('click', function(e){

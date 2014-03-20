@@ -1,11 +1,21 @@
 .footer {
-  $footer-color: lighten($base-border-color, 10);
-  $footer-text-color: darken($footer-color, 25);
+  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, .6);
+  $footer-disclaimer-color: transparentize($footer-color, .6);
 
-  background-color: $footer-color;
+  background: $footer-background;
   padding: $base-line-height*2 0;
-  margin-bottom: $base-line-height;
-  @include outer-container;
+  width: 100%;
+
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 2em;
+
+    img {
+      height: 3em;
+    }
+  } 
 
   .footer-links {
     @include clearfix;
@@ -24,24 +34,41 @@
       @include omega(3n);
       @include clearfix;
     }
+  }
 
-    li {
-      text-align: center;
+  li {
+    text-align: center;
 
-      @include media($medium-screen) {
-        text-align: left;
-      }
+    @include media($medium-screen) {
+      text-align: left;
     }
   }
 
+  li a {
+    color: $footer-link-color;
+
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  li h3 {
+    color: $footer-color;
+    font-size: 1em;
+    font-weight: 800;
+    margin-bottom: .4em;
+  }  
+
   hr {
-    border-bottom: 1px solid $footer-text-color;
+    border: 1px solid transparentize($footer-disclaimer-color, .3);
     margin: 0 auto $base-line-height;
     width: 12em;
   }
 
   p {
-    color: $footer-text-color;
+    color: $footer-disclaimer-color;
+    font-size: .9em;
+    line-height: 1.5em;
     margin: auto;
     max-width: 35em;
     text-align: center;
