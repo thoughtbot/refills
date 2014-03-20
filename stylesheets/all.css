@@ -2456,25 +2456,62 @@ ul.item-list {
         padding: 1em;
         display: block; } }
 
-/* line 6, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-.modal-open {
-  overflow: hidden; }
-
-/* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+/* line 7, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
 .modal label {
   cursor: pointer;
   margin-bottom: 0; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-  .modal label img {
-    border-radius: 150px;
-    display: block;
-    max-width: 300px; }
-/* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+/* line 12, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+.modal label img {
+  border-radius: 150px;
+  display: block;
+  max-width: 300px; }
+/* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
 .modal input[type="checkbox"] {
   display: none; }
-
-/* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-.modal-window {
+/* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+.modal .btn {
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 white;
+  color: #333333;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow: none;
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #f7f7f7));
+  background-image: -webkit-linear-gradient(#f7f7f7, #f7f7f7);
+  background-image: linear-gradient(#f7f7f7, #f7f7f7);
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+  font-size: 1em;
+  margin-bottom: 1.5em; }
+  /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  .modal .btn:hover:not(:disabled) {
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ececec));
+    background-image: -webkit-linear-gradient(#ececec, #ececec);
+    background-image: linear-gradient(#ececec, #ececec);
+    box-shadow: inset 0 1px 0 0 white;
+    cursor: pointer; }
+  /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  .modal .btn:active:not(:disabled) {
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ececec));
+    background-image: -webkit-linear-gradient(#ececec, #ececec);
+    background-image: linear-gradient(#ececec, #ececec);
+    border: 1px solid lightgrey;
+    box-shadow: inset 0 0 1px 1px #dddddd, inset 0 0 1px 1px #dddddd, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
+  /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  .modal .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
+/* line 29, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+.modal .modal-open {
+  overflow: hidden; }
+/* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+.modal .modal-window {
   -webkit-transition: opacity 0.25s ease;
   -moz-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
@@ -2487,175 +2524,126 @@ ul.item-list {
   opacity: 0;
   text-align: left;
   visibility: hidden;
-  z-index: 999; }
-  /* line 37, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-  .modal-window .modal-bg {
+  z-index: 99999999999; }
+  /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+  .modal .modal-window .modal-bg {
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
     cursor: pointer; }
-  /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-  .modal-window .modal-inner {
-    -webkit-transition: opacity 0.25s ease;
-    -moz-transition: opacity 0.25s ease;
-    transition: opacity 0.25s ease;
+/* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+.modal .modal-close {
+  position: fixed;
+  top: 1.5em;
+  right: 1.5em;
+  width: 0.5em;
+  height: 0.5em;
+  cursor: pointer; }
+  /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+  .modal .modal-close:after, .modal .modal-close:before {
     position: absolute;
-    top: -20%;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    border-radius: 3px;
-    background: white;
-    margin: auto;
-    max-height: 70%;
-    overflow: auto;
-    padding: 3em;
-    width: 95%; }
-    @media screen and (min-width: 40em) {
-      /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-      .modal-window .modal-inner {
-        width: 50%; } }
-    /* line 57, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-    .modal-window .modal-inner .img-wrapper-modal {
-      width: 135px;
-      height: 135px;
-      background-color: #dddddd;
-      border-radius: 190px;
-      display: block; }
-      /* line 63, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-      .modal-window .modal-inner .img-wrapper-modal img {
-        width: 135px;
-        height: 135px;
-        content: '';
-        display: block;
-        padding: 30px; }
-    /* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-    .modal-window .modal-inner h1 {
+    top: 0px;
+    left: -50%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 0.15em;
+    height: 1.5em;
+    background: #dddddd;
+    content: '';
+    display: block;
+    margin: -3px 0 0 -1px; }
+  /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+  .modal .modal-close:hover:after, .modal .modal-close:hover:before {
+    background: #c4c4c4; }
+  /* line 69, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+  .modal .modal-close:before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+/* line 74, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+.modal .modal-inner {
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  border-radius: 0.1875em;
+  background: white;
+  margin: auto;
+  max-height: 95%;
+  overflow: auto;
+  width: 95%;
+  padding: 1.5em;
+  margin-top: .6em; }
+  @media screen and (min-width: 40em) {
+    /* line 74, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+    .modal .modal-inner {
+      padding: 3em;
+      width: 50%;
+      max-height: 60%;
+      margin-top: 10em; } }
+  /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+  .modal .modal-inner h1 {
+    color: #333333;
+    margin-bottom: .6em;
+    text-align: left;
+    text-transform: capitalize; }
+  /* line 99, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+  .modal .modal-inner p {
+    font-size: 1em;
+    max-width: 100% !important;
+    padding: 0;
+    text-align: left; }
+    /* line 105, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+    .modal .modal-inner p.intro {
+      color: #477dca;
+      line-height: 1.6em; }
+    /* line 110, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+    .modal .modal-inner p.body {
       color: #333333;
-      margin-bottom: .6em;
-      text-align: left;
-      text-transform: capitalize; }
-    /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-    .modal-window .modal-inner p {
-      font-size: 1em;
-      max-width: 100% !important;
-      padding: 0;
-      text-align: left; }
-      /* line 84, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-      .modal-window .modal-inner p.intro {
-        color: #477dca;
-        line-height: 1.6em; }
-      /* line 89, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-      .modal-window .modal-inner p.body {
-        color: #333333;
-        line-height: 1.45em; }
-        @media screen and (min-width: 40em) {
-          /* line 89, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-          .modal-window .modal-inner p.body {
-            -webkit-columns: 2 8em;
-            -moz-columns: 2 8em;
-            columns: 2 8em; } }
-    /* line 99, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-    .modal-window .modal-inner a.cta {
-      color: white;
-      display: inline-block;
-      margin-right: .5em;
-      margin-top: 1em; }
-      /* line 105, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-      .modal-window .modal-inner a.cta:last-child {
-        padding: 0 2em; }
-  /* line 111, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-  .modal-window .modal-close {
-    position: fixed;
-    top: 1.5em;
-    right: 1.5em;
-    width: 0.5em;
-    height: 0.5em;
-    cursor: pointer; }
-    /* line 117, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-    .modal-window .modal-close:after, .modal-window .modal-close:before {
-      position: absolute;
-      top: 0px;
-      left: -50%;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      width: 0.15em;
-      height: 1.5em;
-      background: #dddddd;
-      content: '';
-      display: block;
-      margin: -3px 0 0 -1px; }
-    /* line 128, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-    .modal-window .modal-close:hover:after, .modal-window .modal-close:hover:before {
-      background: #c4c4c4; }
-    /* line 132, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-    .modal-window .modal-close:before {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg); }
-
-/* line 138, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-.modal-state:checked + .modal-window {
+      line-height: 1.45em; }
+      @media screen and (min-width: 40em) {
+        /* line 110, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+        .modal .modal-inner p.body {
+          -webkit-columns: 2 8em;
+          -moz-columns: 2 8em;
+          columns: 2 8em; } }
+  /* line 120, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+  .modal .modal-inner a.cta {
+    color: white;
+    display: inline-block;
+    margin-right: .5em;
+    margin-top: 1em; }
+    /* line 126, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+    .modal .modal-inner a.cta:last-child {
+      padding: 0 2em; }
+/* line 132, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+.modal .img-wrapper-modal {
+  width: 135px;
+  height: 135px;
+  background-color: #dddddd;
+  border-radius: 190px;
+  display: block;
+  margin-bottom: 1em; }
+  /* line 139, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+  .modal .img-wrapper-modal img {
+    width: 135px;
+    height: 135px;
+    content: '';
+    display: block;
+    padding: 30px; }
+/* line 147, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+.modal .modal-state:checked + .modal-window {
   opacity: 1;
   visibility: visible; }
-
-/* line 143, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-.modal-state:checked + .modal-window .modal-inner {
+/* line 152, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+.modal .modal-state:checked + .modal-window .modal-inner {
   top: 0; }
-
-/* line 148, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-.btn {
-  border: 1px solid #2459a6;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #769ace;
-  color: white;
-  display: inline-block;
-  font-size: 11px;
-  font-weight: bold;
-  text-shadow: none;
-  background-color: #477dca;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #477dca), color-stop(100%, #477dca));
-  background-image: -webkit-linear-gradient(#477dca, #477dca);
-  background-image: linear-gradient(#477dca, #477dca);
-  padding: 7px 18px;
-  text-decoration: none;
-  background-clip: padding-box;
-  font-size: 1em;
-  margin-bottom: 1.5em; }
-  /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
-  .btn:hover:not(:disabled) {
-    background-color: #3872c4;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3872c4), color-stop(100%, #3872c4));
-    background-image: -webkit-linear-gradient(#3872c4, #3872c4);
-    background-image: linear-gradient(#3872c4, #3872c4);
-    box-shadow: inset 0 1px 0 0 #628cc8;
-    cursor: pointer; }
-  /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
-  .btn:active:not(:disabled) {
-    background-color: #3872c4;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3872c4), color-stop(100%, #3872c4));
-    background-image: -webkit-linear-gradient(#3872c4, #3872c4);
-    background-image: linear-gradient(#3872c4, #3872c4);
-    border: 1px solid #2459a6;
-    box-shadow: inset 0 0 1px 1px #2a63b4, inset 0 0 1px 1px #2a63b4, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
-  /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
-  .btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed; }
-
-/* line 154, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-p img {
-  float: left;
-  height: auto;
-  margin: 0 1em 1em 0;
-  max-width: 200px; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
 header.navigation {
@@ -3866,7 +3854,7 @@ a.tooltip-item {
   /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
   .grid-items:after {
     clear: both; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+  /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
   .grid-items .grid-item {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -3881,53 +3869,53 @@ a.tooltip-item {
     color: white;
     text-align: center;
     cursor: pointer; }
-    /* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    /* line 29, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
     .grid-items .grid-item img {
       display: block;
       height: 3em;
       margin: auto;
       margin-bottom: 1em; }
-    /* line 35, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    /* line 36, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
     .grid-items .grid-item h1 {
       color: white;
       font-size: 1.3em;
       margin-bottom: .4em; }
-    /* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
     .grid-items .grid-item p {
       margin: auto;
       color: rgba(255, 255, 255, 0.7); }
       @media screen and (min-width: 40em) {
-        /* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+        /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
         .grid-items .grid-item p {
           max-width: 70%; } }
-    /* line 49, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    /* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
     .grid-items .grid-item:hover {
       background-color: #536a8b;
       background-repeat: no-repeat;
       background-position: top;
       background-size: cover; }
     @media screen and (min-width: 53.75em) {
-      /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+      /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
       .grid-items .grid-item {
         width: 33.33333%;
         border: 4px solid white;
         border-right: 0;
         border-top: 0; }
-        /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+        /* line 63, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
         .grid-items .grid-item:first-child {
           border-left: 4px solid white; }
-        /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+        /* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
         .grid-items .grid-item:nth-child(5) {
           border-left: 4px solid white; } }
   @media screen and (min-width: 53.75em) {
-    /* line 72, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
     .grid-items .grid-item-big {
       width: 66.66667%; } }
   @media screen and (min-width: 40em) {
-    /* line 76, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
     .grid-items .grid-item-big p {
       max-width: 60%; } }
-  /* line 83, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+  /* line 84, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
   .grid-items .grid-item-image {
     background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
     background-color: #6b83a6;
