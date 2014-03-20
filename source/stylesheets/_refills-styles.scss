@@ -2,11 +2,12 @@ $refills-color: lighten(desaturate(teal, 60), 40);
 $base-body-color: white;
 $refills-nav-height: 60px;
 
-.external {
+.external a {
   height: 84px;
   width: 84px;
   border: 2px solid white;
   padding: 2px;
+  display: block;
   margin: auto;
   margin-bottom: 3em;
   background-image: url(../images/cat.png);

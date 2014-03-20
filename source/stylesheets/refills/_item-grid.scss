@@ -1,0 +1,50 @@
+.item-grid {
+  $item-grid-background: $base-body-color;
+  $item-grid-item-background: $base-accent-color;
+  $item-grid-border: 4px solid $item-grid-background;
+  $item-grid-columns: 2;
+  $item-grid-max-columns: 3;
+
+  @include clearfix;
+  background: $item-grid-background;
+  
+  .item-grid-item {
+    @include transition (all 0.2s ease-in-out);
+    background: $item-grid-item-background;
+    width: 100%;
+    float: left;
+    padding: 2em;
+    border: $item-grid-border;
+    color: white;
+    cursor: pointer;
+
+    img {
+      display: block;
+      height: 3em;
+      margin-bottom: 1em;
+    }
+
+    &:hover {
+      background: darken($item-grid-item-background, 10);
+    }
+
+    @include media($medium-screen) {
+      width: 100% / $item-grid-columns;
+    } 
+
+    @include media($large-screen) {
+      width: 100% / $item-grid-max-columns;
+      border: $item-grid-border;
+      border-right: 0;
+      border-top: 0;
+
+      &:first-child {
+        border-left: $item-grid-border;
+      }
+
+      &:nth-child(#{$item-grid-columns +1}) {
+        border-left: $item-grid-border; 
+      }
+    } 
+  }
+}
