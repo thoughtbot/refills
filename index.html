@@ -292,7 +292,7 @@
   <pre>
     <code class='language-scss'>
         .hero {
-        	$hero-background: #355B70;	
+        	$hero-background: desaturate(darken($base-accent-color, 20), 30);	
         	$hero-color: white;
         
         	background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
@@ -1873,36 +1873,29 @@
 
   <div id="item-grid" class="refill">
     <div class="line-behind-text"><h6>Item Grid</h6></div>
-    <div class="refill-centering"><div class="item-grid">
-  <a href="" class="item-grid-item">
+    <div class="refill-centering"><div class="grid-items">
+  <a href="" class="grid-item">
     <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+    <h1>Grid Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
   </a>
-  <a href="" class="item-grid-item">
+  <a href="" class="grid-item grid-item-big grid-item-image">
     <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png" alt="">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+    <h1>Grid Item With an Image</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
   </a>
-  <a href="" class="item-grid-item">
+  <a href="" class="grid-item grid-item-big">
     <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png" alt="">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+    <h1>Another Wide Item</h1>
+    <p>Lorem ipsum consectetur dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
   </a>
-  <a href="" class="item-grid-item">
+  <a href="" class="grid-item">
     <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png" alt="">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+    <h1>Last Grid Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
   </a>
-  <a href="" class="item-grid-item">
-    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png" alt="">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
-  </a>
-  <a href="" class="item-grid-item">
-    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
-  </a>
-  <a href="" class="item-grid-item">
-    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png" alt="">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
-  </a>
-</div></div>
+</div>
+</div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
@@ -1912,36 +1905,29 @@
   <a href="#" class="copy-source">Copy</a>
   <pre>
     <code class="language-markup">
-      &lt;div class=&quot;item-grid&quot;&gt;
-  &lt;a href=&quot;&quot; class=&quot;item-grid-item&quot;&gt;
+      &lt;div class=&quot;grid-items&quot;&gt;
+  &lt;a href=&quot;&quot; class=&quot;grid-item&quot;&gt;
     &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+    &lt;h1&gt;Grid Item&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, elit. Rem, illum.&lt;/p&gt;
   &lt;/a&gt;
-  &lt;a href=&quot;&quot; class=&quot;item-grid-item&quot;&gt;
+  &lt;a href=&quot;&quot; class=&quot;grid-item grid-item-big grid-item-image&quot;&gt;
     &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png&quot; alt=&quot;&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+    &lt;h1&gt;Grid Item With an Image&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.&lt;/p&gt;
   &lt;/a&gt;
-  &lt;a href=&quot;&quot; class=&quot;item-grid-item&quot;&gt;
+  &lt;a href=&quot;&quot; class=&quot;grid-item grid-item-big&quot;&gt;
     &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png&quot; alt=&quot;&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+    &lt;h1&gt;Another Wide Item&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum consectetur dolor sit amet, consectetur adipisicing elit. Rem, illum.&lt;/p&gt;
   &lt;/a&gt;
-  &lt;a href=&quot;&quot; class=&quot;item-grid-item&quot;&gt;
+  &lt;a href=&quot;&quot; class=&quot;grid-item&quot;&gt;
     &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png&quot; alt=&quot;&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
-  &lt;/a&gt;
-  &lt;a href=&quot;&quot; class=&quot;item-grid-item&quot;&gt;
-    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png&quot; alt=&quot;&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
-  &lt;/a&gt;
-  &lt;a href=&quot;&quot; class=&quot;item-grid-item&quot;&gt;
-    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
-  &lt;/a&gt;
-  &lt;a href=&quot;&quot; class=&quot;item-grid-item&quot;&gt;
-    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png&quot; alt=&quot;&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+    &lt;h1&gt;Last Grid Item&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, elit. Rem, illum.&lt;/p&gt;
   &lt;/a&gt;
 &lt;/div&gt;
+
     </code>
   </pre>
 </div>
@@ -1950,54 +1936,94 @@
   <a href="#" class="copy-source">Copy</a>
   <pre>
     <code class='language-scss'>
-        .item-grid {
-          $item-grid-background: $base-body-color;
-          $item-grid-item-background: $base-accent-color;
-          $item-grid-border: 4px solid $item-grid-background;
-          $item-grid-columns: 2;
-          $item-grid-max-columns: 3;
+        @mixin grid-item-columns($columns) {
+          width: (100% / 12) * $columns;
+        }
+        
+        .grid-items {
+          $grid-items-background: $base-body-color;
+          $grid-item-background: desaturate($base-accent-color, 30); 
+          $grid-item-border: 4px solid $grid-items-background;
+          $grid-item-columns: 4;
+          $grid-item-color: white;
+          $grid-item-height: 14em;
         
           @include clearfix;
-          background: $item-grid-background;
-          
-          .item-grid-item {
+            
+          .grid-item {
             @include transition (all 0.2s ease-in-out);
-            background: $item-grid-item-background;
+            height: $grid-item-height;
+            background: $grid-item-background;
             width: 100%;
+            overflow: hidden;
             float: left;
             padding: 2em;
-            border: $item-grid-border;
+            border: $grid-item-border;
             color: white;
+            text-align: center;
             cursor: pointer;
         
             img {
               display: block;
               height: 3em;
+              margin: auto;
               margin-bottom: 1em;
             }
         
-            &:hover {
-              background: darken($item-grid-item-background, 10);
+            h1 {
+              color: $grid-item-color;
+              font-size: 1.3em;
+              margin-bottom: .4em;
             }
         
-            @include media($medium-screen) {
-              width: 100% / $item-grid-columns;
-            } 
+            p {
+              margin: auto;
+              color: transparentize($grid-item-color, .3);
+              @include media($medium-screen) {
+                max-width: 70%;
+              }
+            }
+        
+            &:hover {
+              background-color: darken($grid-item-background, 10);
+              background-repeat: no-repeat;
+              background-position: top;
+              background-size: cover;
+            }
         
             @include media($large-screen) {
-              width: 100% / $item-grid-max-columns;
-              border: $item-grid-border;
+              @include grid-item-columns($grid-item-columns);
+              border: $grid-item-border;
               border-right: 0;
               border-top: 0;
         
               &:first-child {
-                border-left: $item-grid-border;
+                border-left: $grid-item-border;
               }
         
-              &:nth-child(#{$item-grid-columns +1}) {
-                border-left: $item-grid-border; 
+              &:nth-child(#{$grid-item-columns +1}) {
+                border-left: $grid-item-border; 
               }
             } 
+          }
+        
+          .grid-item-big {
+            @include media($large-screen) {
+              @include grid-item-columns(8);
+            }
+            p {
+              @include media($medium-screen) {
+                max-width: 60%;
+              }  
+            }
+          }
+        
+          .grid-item-image {
+            background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
+            background-color: $grid-item-background;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
           }
         }
     </code>
