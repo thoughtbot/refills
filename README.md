@@ -34,7 +34,7 @@ Lists all the available snippets
 Copies partials to `app/views/refills` and stylesheets to
 `app/assets/stylesheets/refills`
 
-# Submitting components or patterns to Refills
+# Submitting components or patterns
 
 You are more than welcome to submit any component or pattern you can't find in the library, or feel free to send requests for content you'd like to see. When submitting a pull request, please think of these style guides:
 
@@ -68,7 +68,7 @@ You are more than welcome to submit any component or pattern you can't find in t
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
 
-Bitters is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community).
+Refills is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community).
 
 # License
 
