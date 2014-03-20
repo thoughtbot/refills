@@ -1,71 +1,92 @@
-$modal-padding: 3em;
-$modal-close-color: $light-gray;
-$modal-image-height: 135px;
-$modal-image-width: $modal-image-height;
-
-.modal-open {
-  overflow: hidden;
-}
-
 .modal {
+  $modal-padding: 3em;
+  $modal-close-color: $light-gray;
+  $modal-image-height: 135px;
+  $modal-image-width: $modal-image-height;
+
   label {
     cursor: pointer;
     margin-bottom: 0;
+  }
 
-    img {
-      $img-width: 300px;
-      border-radius: $img-width/2;
-      display: block;
-      max-width: $img-width;
-    }
+  label img {
+    $img-width: 300px;
+    border-radius: $img-width/2;
+    display: block;
+    max-width: $img-width;
   }
 
   input[type="checkbox"] {
     display: none;
   }
-}
 
-.modal-window {
-  @include transition(opacity .25s ease);
-  @include position(fixed, 0px 0px 0px 0px);
-  background: rgba(0,0,0, .85);
-  opacity: 0;
-  text-align: left;
-  visibility: hidden;
-  z-index: 999;
+  .btn {
+    @include button(simple, lighten($base-border-color, 10));
+    font-size: $base-font-size;
+    margin-bottom: $base-line-height;
+  }
 
-  .modal-bg {
-    @include position(absolute, 0px 0px 0px 0px);
+  .modal-open {
+    overflow: hidden;
+  }
+
+  .modal-window { // overlay
+    @include transition(opacity .25s ease);
+    @include position(fixed, 0px 0px 0px 0px);
+    background: rgba(0,0,0, .85);
+    opacity: 0;
+    text-align: left;
+    visibility: hidden;
+    z-index: 99999999999;
+
+    .modal-bg {
+      @include position(absolute, 0px 0px 0px 0px);
+      cursor: pointer;
+    }
+  }
+
+  .modal-close {
+    @include position(fixed, ($modal-padding /2) ($modal-padding /2) 0 0);
+    @include size(0.5em);
     cursor: pointer;
+
+    &:after,
+    &:before {
+      @include position(absolute, 0px 0 0 -50%);
+      @include transform(rotate(45deg));
+      @include size(.15em 1.5em);
+      background: $modal-close-color;
+      content: '';
+      display: block;
+      margin: -3px 0 0 -1px;
+    }
+
+    &:hover:after,
+    &:hover:before {
+      background: darken($modal-close-color, 10);
+    }
+
+    &:before {
+      @include transform(rotate(-45deg));
+    }
   }
 
   .modal-inner {
     @include transition(opacity .25s ease);
-    @include position(absolute, -20% 0px 0px 0px);
-    border-radius: 3px;
+    border-radius: $base-border-radius;
     background: white;
     margin: auto;
-    max-height: 70%;
+    max-height: 95%;
     overflow: auto;
-    padding: $modal-padding;
     width: 95%;
+    padding: $modal-padding /2;
+    margin-top: .6em;
 
     @include media($medium-screen) {
+      padding: $modal-padding;
       width: 50%;
-    }
-
-    .img-wrapper-modal {
-      @include size($modal-image-width $modal-image-height);
-      background-color: $light-gray;
-      border-radius: 190px;
-      display: block;
-
-      img {
-        @include size($modal-image-width $modal-image-height);
-        content: '';
-        display: block;
-        padding: 30px;
-      }
+      max-height: 60%;
+      margin-top: 10em;
     }
 
     h1 {
@@ -108,54 +129,31 @@ $modal-image-width: $modal-image-height;
     }
   }
 
-  .modal-close {
-    @include position(fixed, ($modal-padding /2) ($modal-padding /2) 0 0);
-    @include size(0.5em);
-    cursor: pointer;
+  .img-wrapper-modal {
+    @include size($modal-image-width $modal-image-height);
+    background-color: $light-gray;
+    border-radius: 190px;
+    display: block;
+    margin-bottom: 1em;
 
-    &:after,
-    &:before {
-      @include position(absolute, 0px 0 0 -50%);
-      @include transform(rotate(45deg));
-      @include size(.15em 1.5em);
-      background: $modal-close-color;
+    img {
+      @include size($modal-image-width $modal-image-height);
       content: '';
       display: block;
-      margin: -3px 0 0 -1px;
+      padding: 30px;
     }
+  }
 
-    &:hover:after,
-    &:hover:before {
-      background: darken($modal-close-color, 10);
-    }
+  .modal-state:checked + .modal-window {
+    opacity: 1;
+    visibility: visible;
+  }
 
-    &:before {
-      @include transform(rotate(-45deg));
-    }
+  .modal-state:checked + .modal-window .modal-inner {
+    top: 0;
   }
 }
 
-.modal-state:checked + .modal-window {
-  opacity: 1;
-  visibility: visible;
-}
 
-.modal-state:checked + .modal-window .modal-inner {
-  top: 0;
-}
-
-
-.btn {
-  @include button(simple, $base-accent-color);
-  font-size: $base-font-size;
-  margin-bottom: $base-line-height;
-}
-
-p img {
-  float: left;
-  height: auto;
-  margin: 0 1em 1em 0;
-  max-width: 200px;
-}
 
 // Based on code by Kasper Mikiewicz
