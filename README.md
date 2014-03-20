@@ -1,8 +1,9 @@
-Refills
--------
+# Refills
 
 [Bourbon](http://bourbon.io/) provides Sass mixins and eliminates vendor prefixes, for faster CSS coding.
+
 [Neat](http://neat.bourbon.io/) provides a lightweight grid framework.
+
 [Bitters](http://bitters.bourbon.io/) provides basic variables and structure to a Bourbon/Neat project.
 
 [Refills](http://thoughtbot.github.io/refills/) provides "copy-paste" components and patterns based on Bourbon, Neat and Bitters.
