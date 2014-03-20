@@ -7,6 +7,7 @@
   $grid-item-background: desaturate($base-accent-color, 30); 
   $grid-item-border: 4px solid $grid-items-background;
   $grid-item-columns: 4;
+  $grid-item-big-columns: 8;
   $grid-item-color: white;
   $grid-item-height: 14em;
 
@@ -71,7 +72,7 @@
 
   .grid-item-big {
     @include media($large-screen) {
-      @include grid-item-columns(8);
+      @include grid-item-columns($grid-item-big-columns);
     }
     p {
       @include media($medium-screen) {
