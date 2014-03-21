@@ -107,7 +107,7 @@ header.navigation {
     }
   }
 
-  ul li:last-child {
+  .sign-up {
     @include media ($large-screen) {
       @include position(absolute, 0px 0px 0 0);
       padding-right: 1em;
@@ -156,7 +156,6 @@ header.navigation {
       position: relative;
 
       input[type=search] {
-        @include appearance(none);
         background: $navigation-search-background;
         border: $navigation-search-border;
         padding: .6em .8em;
@@ -171,6 +170,7 @@ header.navigation {
         @include button(simple, lighten($navigation-search-background, 10));
         @include position(absolute, 0.3em 0.3em 0.3em 0);
         outline: none;
+        padding: 5px 15px;
 
         img {
           height: 12px;

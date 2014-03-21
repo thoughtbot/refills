@@ -1,0 +1,67 @@
+.switch-container {
+  $switch-container-width: 5em;
+  $switch-height: 2em;
+  $switch-width: 1em;
+  $switch-radius: 3px;
+  $switch-inner-margin: .2em;
+
+  @include user-select(none);
+  @include inline-block;
+  position: relative;
+  width: $switch-container-width;
+  margin-bottom: $base-line-height;
+
+  input.switch-checkbox {
+    display: none;
+
+    &:checked + .switch-label .switch-inner {
+      margin-left: 0;
+    }
+
+    &:checked + .switch-label .switch-toggle-switch {
+      right: 0;
+    }
+  }
+
+  label.switch-label {
+    border-radius: $switch-radius;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+
+    .switch-inner {
+      @include transition(opacity 0.3s ease);
+      margin-left: -100%;
+      width: 200%;
+
+      &:before, &:after {
+        @include box-sizing(border-box);
+        float: left;
+        height: $switch-height;
+        padding: 0;
+        width: 50%;
+      }
+
+      &:before {
+        content: '';
+        background: $blue;
+      }
+
+      &:after {
+        content: '';
+        background: #DDD;
+      }
+    }
+
+    .switch-toggle-switch {
+      @include position(absolute, 0px ($switch-container-width - $switch-width - $switch-inner-margin *2) 0px 0);
+      @include transition(all 0.3s ease-in 0s);
+      height: $switch-height - $switch-inner-margin *2;
+      width: $switch-width;
+      border-radius: $switch-radius / 2;
+      margin: $switch-inner-margin;
+      background: white;
+      box-shadow: 0 0 1px 2px rgba(0,0,0,0.1);
+    }
+  }
+}

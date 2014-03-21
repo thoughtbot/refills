@@ -71,6 +71,7 @@
         display: inline-block;
         width: 100%;
         margin-bottom: .3em;
+        outline: none;
 
         @include media($medium-screen) {
           width: auto;
