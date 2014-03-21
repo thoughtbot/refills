@@ -3,17 +3,8 @@
   $search-bar-border: 1px solid $search-bar-border-color;
   $search-bar-background: lighten($search-bar-border-color, 10);
 
-  @include clearfix;
-  border: $search-bar-border;
-  background-color: $search-bar-background;
-  border-radius: $base-border-radius;
-  padding: 0.5em;
-  margin-bottom: $base-line-height;
-
-  .search-item {
-    @include fill-parent;
-    position: relative; 
-  }
+  position: relative; 
+  display: inline-block;
 
   input {
     @include box-sizing(border-box);
@@ -26,17 +17,23 @@
     input[type=search] {
       @include appearance(none);
       width: 100%;
-      padding: 1em;
+      padding: .5em .8em;
+      font-size: .9em;
       font-style: italic;
       border-radius: $base-border-radius * 2;
       margin: 0;
     }
 
-    input[type=submit] {
-      @include button(simple, $search-bar-background);
+    button[type=submit] {
+      @include button(simple, lighten($base-border-color, 10));
       @include position(absolute, 0.3em 0.3em 0.3em 0);
-      font-size: $base-font-size;
       outline: none;
+      padding: 5px 10px;
+
+      img {
+        height: 12px;
+        opacity: .7;
+      }
     }
   }
 }
