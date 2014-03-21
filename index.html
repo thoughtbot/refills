@@ -48,6 +48,16 @@
         <li><a href="">Products</a></li>
         <li><a href="">About Us</a></li>
         <li><a href="">Contact</a></li>
+        <li class="navigation-search-bar">
+          <div class="search-bar">
+            <div class="search-and-submit">
+              <input type="search" placeholder="Enter Search" />
+              <button type="submit">
+                <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon.png" alt="">
+              </button>
+            </div>
+          </div>
+        </li>
         <li><a href="">Sign Up</a></li>
       </ul>
     </div>
@@ -90,6 +100,16 @@
         &lt;li&gt;&lt;a href=&quot;&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;navigation-search-bar&quot;&gt;
+          &lt;div class=&quot;search-bar&quot;&gt;
+            &lt;div class=&quot;search-and-submit&quot;&gt;
+              &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
+              &lt;button type=&quot;submit&quot;&gt;
+                &lt;img src=&quot;https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon.png&quot; alt=&quot;&quot;&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;&quot;&gt;Sign Up&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -128,6 +148,8 @@
           $navigation-nav-button-background: $base-accent-color;
           $navigation-nav-button-background-hover: lighten($navigation-background, 10);
           $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
+          $navigation-search-background: lighten($navigation-background, 5);
+          $navigation-search-border: 1px solid darken($navigation-background, 5);
         
           background-color: $navigation-background;
           border-bottom: 1px solid darken($navigation-background, 10);
@@ -244,6 +266,57 @@
         
                 &:hover {
                   background: lighten($navigation-nav-button-background, 10);
+                }
+              }
+            }
+          }
+        
+          .navigation-search-bar {
+            display: none;
+        
+            @include media($large-screen) {
+              display: inline-block;
+              @include position(absolute, 0px 76px 0 0);
+            }
+          }
+        
+          .search-bar {
+            $search-bar-border-color: $base-border-color;
+            $search-bar-border: 1px solid $search-bar-border-color;
+            $search-bar-background: lighten($search-bar-border-color, 10);
+        
+            width: 19em;
+            position: relative; 
+            display: inline-block;
+        
+            input {
+              @include box-sizing(border-box);
+              display: block;
+            }
+        
+            .search-and-submit {
+              position: relative;
+        
+              input[type=search] {
+                @include appearance(none);
+                background: $navigation-search-background;
+                border: $navigation-search-border;
+                padding: .6em .8em;
+                font-size: .9em;
+                font-style: italic;
+                color: $navigation-color;
+                border-radius: $base-border-radius * 2;
+                margin: 0;
+              }
+        
+              button[type=submit] {
+                @include button(simple, lighten($navigation-search-background, 10));
+                @include position(absolute, 0.3em 0.3em 0.3em 0);
+                outline: none;
+        
+                img {
+                  height: 12px;
+                  opacity: .7;
                 }
               }
             }
@@ -2806,6 +2879,89 @@
 </div>
   </div>
 
+  <div id="search-bar" class="refill">
+    <div class="line-behind-text"><h6>Search bar</h6></div>
+    <div class="refill-centering">  <div class="search-bar">
+    <div class="search-and-submit">
+      <input type="search" placeholder="Enter Search" />
+      <button type="submit">
+        <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon-black.png" alt="">
+      </button>
+    </div>
+  </div>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class="language-markup">
+        &lt;div class=&quot;search-bar&quot;&gt;
+    &lt;div class=&quot;search-and-submit&quot;&gt;
+      &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
+      &lt;button type=&quot;submit&quot;&gt;
+        &lt;img src=&quot;https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon-black.png&quot; alt=&quot;&quot;&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+    </code>
+  </pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class='language-scss'>
+        .search-bar {
+          $search-bar-border-color: $base-border-color;
+          $search-bar-border: 1px solid $search-bar-border-color;
+          $search-bar-background: lighten($search-bar-border-color, 10);
+        
+          position: relative; 
+          display: inline-block;
+        
+          input {
+            @include box-sizing(border-box);
+            display: block;
+          }
+        
+          div.search-and-submit {
+            position: relative;
+        
+            input[type=search] {
+              @include appearance(none);
+              width: 100%;
+              padding: .5em .8em;
+              font-size: .9em;
+              font-style: italic;
+              border-radius: $base-border-radius * 2;
+              margin: 0;
+            }
+        
+            button[type=submit] {
+              @include button(simple, lighten($base-border-color, 10));
+              @include position(absolute, 0.3em 0.3em 0.3em 0);
+              outline: none;
+              padding: 5px 10px;
+        
+              img {
+                height: 12px;
+                opacity: .7;
+              }
+            }
+          }
+        }
+    </code>
+  </pre>
+</div>
+
+</div>
+  </div>
+
 <!-- 
 
 
@@ -3027,189 +3183,7 @@
 
 
 
-  <div id="dropdown-menu" class="refill">
-    <h6>Dropdown Menu</h6>
-    <section class="dropdown">
-  <div class="js-dropdown-link dropdown-link">Dropdown</div>
-  <div class="js-dropdown-menu dropdown-menu">
-    <ul>
-      <li>
-      <a href="#">Lettuce</a>
-      </li>
-      <li>
-      <a href="#">Tomato</a>
-      </li>
-      <li>
-      <a href="#">Onion</a>
-      </li>
-    </ul>
-  </div>
-</section>
 
-<script>
-  (function($) {
-    $.fn.clickToggle = function(func1, func2) {
-      var funcs = [func1, func2];
-      this.data('toggleclicked', 0);
-      this.click(function() {
-        var data = $(this).data();
-        var tc = data.toggleclicked;
-        $.proxy(funcs[tc], this)();
-        data.toggleclicked = (tc + 1) % 2;
-      });
-      return this;
-    };
-  }(jQuery));
-
-  $(document).ready(function () {
-    $('.js-dropdown-link').clickToggle(function() {
-      var menu = $(this).siblings('.js-dropdown-menu');
-      menu.css('top', $(this).outerHeight() + 15);
-      menu.fadeIn(150);
-      $(this).addClass("is-active");
-    }, function() {
-      var menu = $(this).siblings('.dropdown-menu');
-      menu.fadeOut(150);
-      $(this).removeClass("is-active");
-    });
-  });
-</script>
-
-    <div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;section class=&quot;dropdown&quot;&gt;
-  &lt;div class=&quot;js-dropdown-link dropdown-link&quot;&gt;Dropdown&lt;/div&gt;
-  &lt;div class=&quot;js-dropdown-menu dropdown-menu&quot;&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-      &lt;a href=&quot;#&quot;&gt;Lettuce&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-      &lt;a href=&quot;#&quot;&gt;Tomato&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-      &lt;a href=&quot;#&quot;&gt;Onion&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/section&gt;
-
-&lt;script&gt;
-  (function($) {
-    $.fn.clickToggle = function(func1, func2) {
-      var funcs = [func1, func2];
-      this.data('toggleclicked', 0);
-      this.click(function() {
-        var data = $(this).data();
-        var tc = data.toggleclicked;
-        $.proxy(funcs[tc], this)();
-        data.toggleclicked = (tc + 1) % 2;
-      });
-      return this;
-    };
-  }(jQuery));
-
-  $(document).ready(function () {
-    $('.js-dropdown-link').clickToggle(function() {
-      var menu = $(this).siblings('.js-dropdown-menu');
-      menu.css('top', $(this).outerHeight() + 15);
-      menu.fadeIn(150);
-      $(this).addClass(&quot;is-active&quot;);
-    }, function() {
-      var menu = $(this).siblings('.dropdown-menu');
-      menu.fadeOut(150);
-      $(this).removeClass(&quot;is-active&quot;);
-    });
-  });
-&lt;/script&gt;
-
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        @mixin ui-dropdown($align: center, $width: 180px, $style: null) {
-        
-          @if $style == null {
-            background-color: #fff;
-            border-radius: 4px;
-            border: 1px solid rgb(150,150,150);
-            box-shadow: 0 1px 6px 0 rgba(0,0,0,0.3);
-            margin: 0px;
-            padding: 1px;
-            text-align: left;
-        
-            ul, ol {
-              margin: 0px;
-              overflow: scroll;
-              padding: 0px;
-        
-              > li {
-                list-style: none;
-        
-                > a {
-                  display: block;
-                  margin: 2px 0px;
-                  padding: 6px 15px;
-                  text-decoration: none;
-        
-                  &:hover {
-                    background: rgb(248,248,248);
-                  }
-                }
-              }
-            }
-          }
-        
-          @else {
-            @extend %#{$style};
-          }
-        
-          display: none;
-          position: absolute;
-          width: $width;
-          z-index: 20;
-        
-          // position the dropdown absolute to its container
-          @if $align == center {
-            left: 50%;
-            margin-left: -($width/2);
-          }
-          @else {
-            #{$align}: 0%;
-          }
-        }
-        
-        .dropdown {
-          position: relative;
-          display: block;
-        }
-        
-        .dropdown-link {
-          @include button(simple, $base-accent-color);
-          font-size: $base-font-size;
-          margin-bottom: $base-line-height;
-        }
-        
-        .dropdown-menu {
-          @include ui-dropdown(left, 11.25em);
-        }
-    </code>
-  </pre>
-</div>
-
-
-  </div>
 
   <div id="switch-toggle" class="refill">
     <h6>Switch Toggle</h6>
@@ -3350,91 +3324,7 @@
 
   </div>
 
-  <div id="search-bar" class="refill">
-    <h6>Search bar</h6>
-    <div class="search-bar">
-  <div class="search-item">
-    <div class="search-and-submit">
-      <input type="search" placeholder="Enter Search" />
-      <input type="submit" value="Search">
-    </div>
-  </div>
-</div>
 
-    <div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;search-bar&quot;&gt;
-  &lt;div class=&quot;search-item&quot;&gt;
-    &lt;div class=&quot;search-and-submit&quot;&gt;
-      &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
-      &lt;input type=&quot;submit&quot; value=&quot;Search&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .search-bar {
-          $search-bar-border-color: $base-border-color;
-          $search-bar-border: 1px solid $search-bar-border-color;
-          $search-bar-background: lighten($search-bar-border-color, 10);
-        
-          @include clearfix;
-          border: $search-bar-border;
-          background-color: $search-bar-background;
-          border-radius: $base-border-radius;
-          padding: 0.5em;
-          margin-bottom: $base-line-height;
-        
-          .search-item {
-            @include fill-parent;
-            position: relative; 
-          }
-        
-          input {
-            @include box-sizing(border-box);
-            display: block;
-          }
-        
-          div.search-and-submit {
-            position: relative;
-        
-            input[type=search] {
-              @include appearance(none);
-              width: 100%;
-              padding: 1em;
-              font-style: italic;
-              border-radius: $base-border-radius * 2;
-              margin: 0;
-            }
-        
-            input[type=submit] {
-              @include button(simple, $search-bar-background);
-              @include position(absolute, 0.3em 0.3em 0.3em 0);
-              font-size: $base-font-size;
-              outline: none;
-            }
-          }
-        }
-    </code>
-  </pre>
-</div>
-
-
-  </div>
   
 
 
