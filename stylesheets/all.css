@@ -1310,7 +1310,7 @@ h5 {
 /* line 93, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 .refill {
   margin-bottom: 2em;
-  padding-bottom: 3em;
+  padding-bottom: 1em;
   position: relative;
   *zoom: 1; }
   /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
@@ -1393,6 +1393,7 @@ h5 {
 .refill-control {
   display: block;
   text-align: center;
+  margin-bottom: 2em;
   width: 100%; }
 
 /* line 186, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
@@ -1441,7 +1442,7 @@ footer.refills-footer {
   padding-bottom: 2em;
   color: silver;
   text-align: center; }
-  /* line 237, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
+  /* line 236, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
   footer.refills-footer img {
     display: block;
     height: 60px;
@@ -2053,7 +2054,7 @@ footer.refills-footer {
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
 .footer {
   background: #40526b;
-  padding: 3em 0;
+  padding: 3em 1.618em;
   width: 100%; }
   /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
   .footer .footer-logo {
@@ -2144,32 +2145,70 @@ footer.refills-footer {
   width: 100%; }
   /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
   .footer-2 .footer-logo {
-    float: left; }
-    /* line 14, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
-    .footer-2 .footer-logo img {
-      height: 1.6em; }
-  /* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+    margin-right: 1em;
+    margin-bottom: 1em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+      .footer-2 .footer-logo {
+        float: left;
+        margin-bottom: 0; } }
+  /* line 21, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+  .footer-2 .footer-logo img {
+    height: 1.6em; }
+  /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
   .footer-2 ul {
-    margin-left: 1em;
-    float: left; }
-  /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
-  .footer-2 li {
-    text-align: center;
-    padding-right: 1em; }
-    @media screen and (min-width: 40em) {
-      /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
-      .footer-2 li {
+    margin-bottom: 1em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+      .footer-2 ul {
+        float: left;
+        margin-left: 1em;
+        margin-bottom: 0; } }
+  /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+  .footer-2 ul li {
+    padding-right: 1em;
+    font-weight: 800; }
+    @media screen and (min-width: 53.75em) {
+      /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+      .footer-2 ul li {
         display: inline;
         text-align: left; } }
-  /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
-  .footer-2 li a {
+  /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+  .footer-2 ul li a {
     color: rgba(255, 255, 255, 0.4); }
-    /* line 37, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
-    .footer-2 li a:hover {
+    /* line 47, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+    .footer-2 ul li a:hover {
       color: white; }
-  /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
-  .footer-2 .footer-secondary-link {
-    font-size: .8em; }
+  @media screen and (min-width: 53.75em) {
+    /* line 52, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+    .footer-2 .footer-secondary-links {
+      float: right; } }
+  /* line 57, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+  .footer-2 .footer-secondary-links li {
+    font-size: .8em;
+    font-weight: 400; }
+  /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+  .footer-2 .footer-secondary-links ul.footer-social {
+    margin-top: 1em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+      .footer-2 .footer-secondary-links ul.footer-social {
+        float: right;
+        margin-top: 0; } }
+    /* line 70, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+    .footer-2 .footer-secondary-links ul.footer-social li {
+      font-size: 1em;
+      display: inline;
+      padding-right: .5em;
+      margin-bottom: .7em; }
+    /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+    .footer-2 .footer-secondary-links ul.footer-social img {
+      opacity: .7;
+      height: 1.6em;
+      padding: 1px; }
+      /* line 82, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+      .footer-2 .footer-secondary-links ul.footer-social img:hover {
+        opacity: 1; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hero.scss */
 .hero {
