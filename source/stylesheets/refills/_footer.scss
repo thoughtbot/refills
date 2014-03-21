@@ -5,7 +5,7 @@
   $footer-disclaimer-color: transparentize($footer-color, .6);
 
   background: $footer-background;
-  padding: $base-line-height*2 0;
+  padding: $base-line-height*2 $gutter;
   width: 100%;
 
   .footer-logo {

@@ -92,7 +92,7 @@ h5 {
 
 .refill {
   margin-bottom: 2em;
-  padding-bottom: 3em;
+  padding-bottom: 1em;
   position: relative;
   @include clearfix;
 
@@ -177,7 +177,7 @@ h5 {
 .refill-control {
   display: block;
   text-align: center;
-
+  margin-bottom: 2em;
   width: 100%;
 }
 
@@ -229,7 +229,6 @@ pre {
 }
 
 footer.refills-footer {
-  // border-top: 1px solid silver;
   padding-top: 1em;
   padding-bottom: 2em;
   color: silver;
