@@ -58,7 +58,7 @@
             </div>
           </div>
         </li>
-        <li><a href="">Sign Up</a></li>
+        <li class="sign-up"><a href="">Sign Up</a></li>
       </ul>
     </div>
   </div>
@@ -110,7 +110,7 @@
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Sign Up&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;sign-up&quot;&gt;&lt;a href=&quot;&quot;&gt;Sign Up&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -249,7 +249,7 @@
             }
           }
         
-          ul li:last-child {
+          .sign-up {
             @include media ($large-screen) {
               @include position(absolute, 0px 0px 0 0);
               padding-right: 1em;
@@ -298,7 +298,6 @@
               position: relative;
         
               input[type=search] {
-                @include appearance(none);
                 background: $navigation-search-background;
                 border: $navigation-search-border;
                 padding: .6em .8em;
@@ -313,6 +312,7 @@
                 @include button(simple, lighten($navigation-search-background, 10));
                 @include position(absolute, 0.3em 0.3em 0.3em 0);
                 outline: none;
+                padding: 5px 15px;
         
                 img {
                   height: 12px;
@@ -1216,6 +1216,7 @@
                 display: inline-block;
                 width: 100%;
                 margin-bottom: .3em;
+                outline: none;
         
                 @include media($medium-screen) {
                   width: auto;
@@ -2962,6 +2963,116 @@
 </div>
   </div>
 
+  <div id="switch" class="refill">
+    <div class="line-behind-text"><h6>Switch</h6></div>
+    <div class="refill-centering"><div class="switch-container">
+  <input type="checkbox" id="switch-toggle-1" name="switch-toggle" class="switch-checkbox" checked/>
+  <label class="switch-label" for="switch-toggle-1">
+    <div class="switch-inner"></div>
+    <div class="switch-toggle-switch"></div>
+  </label>
+</div>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class="language-markup">
+      &lt;div class=&quot;switch-container&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch-toggle-1&quot; name=&quot;switch-toggle&quot; class=&quot;switch-checkbox&quot; checked/&gt;
+  &lt;label class=&quot;switch-label&quot; for=&quot;switch-toggle-1&quot;&gt;
+    &lt;div class=&quot;switch-inner&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;switch-toggle-switch&quot;&gt;&lt;/div&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+
+    </code>
+  </pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class='language-scss'>
+        .switch-container {
+          $switch-container-width: 5em;
+          $switch-height: 2em;
+          $switch-width: 1em;
+          $switch-radius: 3px;
+          $switch-inner-margin: .2em;
+        
+          @include user-select(none);
+          @include inline-block;
+          position: relative;
+          width: $switch-container-width;
+          margin-bottom: $base-line-height;
+        
+          input.switch-checkbox {
+            display: none;
+        
+            &:checked + .switch-label .switch-inner {
+              margin-left: 0;
+            }
+        
+            &:checked + .switch-label .switch-toggle-switch {
+              right: 0;
+            }
+          }
+        
+          label.switch-label {
+            border-radius: $switch-radius;
+            cursor: pointer;
+            display: block;
+            overflow: hidden;
+        
+            .switch-inner {
+              @include transition(opacity 0.3s ease);
+              margin-left: -100%;
+              width: 200%;
+        
+              &:before, &:after {
+                @include box-sizing(border-box);
+                float: left;
+                height: $switch-height;
+                padding: 0;
+                width: 50%;
+              }
+        
+              &:before {
+                content: '';
+                background: $blue;
+              }
+        
+              &:after {
+                content: '';
+                background: #DDD;
+              }
+            }
+        
+            .switch-toggle-switch {
+              @include position(absolute, 0px ($switch-container-width - $switch-width - $switch-inner-margin *2) 0px 0);
+              @include transition(all 0.3s ease-in 0s);
+              height: $switch-height - $switch-inner-margin *2;
+              width: $switch-width;
+              border-radius: $switch-radius / 2;
+              margin: $switch-inner-margin;
+              background: white;
+              box-shadow: 0 0 1px 2px rgba(0,0,0,0.1);
+            }
+          }
+        }
+    </code>
+  </pre>
+</div>
+
+</div>
+  </div>
+
+
 <!-- 
 
 
@@ -3185,144 +3296,6 @@
 
 
 
-  <div id="switch-toggle" class="refill">
-    <h6>Switch Toggle</h6>
-    <div class="switch-toggles">
-  <div class="switch-toggle">
-    <input type="checkbox" id="switch-toggle-1" name="switch-toggle" class="switch-checkbox" checked/>
-    <label class="switch-label" for="switch-toggle-1">
-      <div class="switch-inner"></div>
-      <div class="switch-toggle-switch"></div>
-    </label>
-  </div>
-
-  <div class="switch-toggle rectangle">
-    <input type="checkbox" id="switch-toggle-2" name="switch-toggle" class="switch-checkbox" checked/>
-    <label class="switch-label" for="switch-toggle-2">
-      <div class="switch-inner"></div>
-      <div class="switch-toggle-switch"></div>
-    </label>
-  </div>
-</div>
-    <div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;switch-toggles&quot;&gt;
-  &lt;div class=&quot;switch-toggle&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;switch-toggle-1&quot; name=&quot;switch-toggle&quot; class=&quot;switch-checkbox&quot; checked/&gt;
-    &lt;label class=&quot;switch-label&quot; for=&quot;switch-toggle-1&quot;&gt;
-      &lt;div class=&quot;switch-inner&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;switch-toggle-switch&quot;&gt;&lt;/div&gt;
-    &lt;/label&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;switch-toggle rectangle&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;switch-toggle-2&quot; name=&quot;switch-toggle&quot; class=&quot;switch-checkbox&quot; checked/&gt;
-    &lt;label class=&quot;switch-label&quot; for=&quot;switch-toggle-2&quot;&gt;
-      &lt;div class=&quot;switch-inner&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;switch-toggle-switch&quot;&gt;&lt;/div&gt;
-    &lt;/label&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        $switch-toggle-width: 5em;
-        $switch-toggle-rounded-radius: $switch-toggle-width / 2;
-        $switch-toggle-rectangle-radius: $base-border-radius;
-        
-        .switch-toggles {
-          display: block;
-        }
-        
-        .switch-toggle {
-          @include user-select(none);
-          @include inline-block;
-          position: relative;
-          width: $switch-toggle-width;
-          margin-bottom: $base-line-height;
-        
-          input.switch-checkbox {
-            display: none;
-        
-            &:checked + .switch-label .switch-inner {
-              margin-left: 0;
-            }
-        
-            &:checked + .switch-label .switch-toggle-switch {
-              right: 0;
-            }
-          }
-        
-          label.switch-label {
-            border-radius: $switch-toggle-rounded-radius;
-            cursor: pointer;
-            display: block;
-            overflow: hidden;
-        
-            .switch-inner {
-              @include transition(opacity 0.5s ease);
-              border-radius: 3px;
-              margin-left: -100%;
-              width: 200%;
-        
-              &:before, &:after {
-                @include box-sizing(border-box);
-                float: left;
-                height: 35px;
-                padding: 0;
-                width: 50%;
-              }
-        
-              &:before {
-                content: '';
-                background: $blue;
-              }
-        
-              &:after {
-                content: '';
-                background: #DDD;
-              }
-            }
-        
-            .switch-toggle-switch {
-              @include size(24px);
-              @include position(absolute, 0px ($switch-toggle-width / 1.8) 0px 0);
-              @include transition(all 0.3s ease-in 0s);
-              border-radius: 100%;
-              margin: 6px;
-              background: white;
-              box-shadow: 0 0 1px 2px rgba(0,0,0,0.1);
-            }
-          }
-        
-          &.rectangle {
-            label.switch-label {
-              border-radius: $switch-toggle-rectangle-radius;
-        
-              .switch-toggle-switch {
-                border-radius: $switch-toggle-rectangle-radius;
-              }
-            }
-          }
-        }
-    </code>
-  </pre>
-</div>
-
-
-  </div>
 
 
   

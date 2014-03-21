@@ -358,42 +358,38 @@ button,
 input[type="submit"] {
   border: 1px solid #2459a6;
   border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #769ace;
+  box-shadow: inset 0 1px 0 0 #89a8d5;
   color: white;
   display: inline-block;
   font-size: 11px;
   font-weight: bold;
-  text-shadow: none;
   background-color: #477dca;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #477dca), color-stop(100%, #477dca));
-  background-image: -webkit-linear-gradient(#477dca, #477dca);
-  background-image: linear-gradient(#477dca, #477dca);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #477dca), color-stop(100%, #2760b2));
+  background-image: -webkit-linear-gradient(#477dca, #2760b2);
+  background-image: linear-gradient(#477dca, #2760b2);
   padding: 7px 18px;
   text-decoration: none;
+  text-shadow: 0 1px 0 #1b4f9a;
   background-clip: padding-box;
   -webkit-font-smoothing: antialiased;
   font-size: 1em;
   font-weight: bold;
   line-height: 1em; }
-  /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   button:hover:not(:disabled),
   input[type="submit"]:hover:not(:disabled) {
-    background-color: #3872c4;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3872c4), color-stop(100%, #3872c4));
-    background-image: -webkit-linear-gradient(#3872c4, #3872c4);
-    background-image: linear-gradient(#3872c4, #3872c4);
     box-shadow: inset 0 1px 0 0 #628cc8;
-    cursor: pointer; }
-  /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    cursor: pointer;
+    background-color: #3c71bb;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c71bb), color-stop(100%, #255aa5));
+    background-image: -webkit-linear-gradient(#3c71bb, #255aa5);
+    background-image: linear-gradient(#3c71bb, #255aa5); }
+  /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   button:active:not(:disabled),
   input[type="submit"]:active:not(:disabled) {
-    background-color: #3872c4;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3872c4), color-stop(100%, #3872c4));
-    background-image: -webkit-linear-gradient(#3872c4, #3872c4);
-    background-image: linear-gradient(#3872c4, #3872c4);
     border: 1px solid #2459a6;
-    box-shadow: inset 0 0 1px 1px #2a63b4, inset 0 0 1px 1px #2a63b4, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
-  /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    box-shadow: inset 0 0 8px 4px #235397, inset 0 0 8px 4px #235397, 0 1px 1px 0 #eeeeee; }
+  /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   button:disabled,
   input[type="submit"]:disabled {
     opacity: 0.5;
@@ -1713,33 +1709,29 @@ footer.refills-footer {
     display: inline-block;
     font-size: 11px;
     font-weight: bold;
-    text-shadow: none;
     background-color: #f7f7f7;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #f7f7f7));
-    background-image: -webkit-linear-gradient(#f7f7f7, #f7f7f7);
-    background-image: linear-gradient(#f7f7f7, #f7f7f7);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #dadada));
+    background-image: -webkit-linear-gradient(#f7f7f7, #dadada);
+    background-image: linear-gradient(#f7f7f7, #dadada);
     padding: 7px 18px;
     text-decoration: none;
+    text-shadow: 0 1px 0 white;
     background-clip: padding-box;
     font-size: 1em;
     float: left; }
-    /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
     .button-group button:hover:not(:disabled) {
-      background-color: #ececec;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ececec));
-      background-image: -webkit-linear-gradient(#ececec, #ececec);
-      background-image: linear-gradient(#ececec, #ececec);
       box-shadow: inset 0 1px 0 0 white;
-      cursor: pointer; }
-    /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      cursor: pointer;
+      background-color: #eaeaea;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eaeaea), color-stop(100%, lightgrey));
+      background-image: -webkit-linear-gradient(#eaeaea, lightgrey);
+      background-image: linear-gradient(#eaeaea, lightgrey); }
+    /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
     .button-group button:active:not(:disabled) {
-      background-color: #ececec;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ececec));
-      background-image: -webkit-linear-gradient(#ececec, #ececec);
-      background-image: linear-gradient(#ececec, #ececec);
       border: 1px solid lightgrey;
-      box-shadow: inset 0 0 1px 1px #dddddd, inset 0 0 1px 1px #dddddd, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
-    /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      box-shadow: inset 0 0 8px 4px #cbcbcb, inset 0 0 8px 4px #cbcbcb, 0 1px 1px 0 #eeeeee; }
+    /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
     .button-group button:disabled {
       opacity: 0.5;
       cursor: not-allowed; }
@@ -1747,37 +1739,33 @@ footer.refills-footer {
     .button-group button.active {
       border: 1px solid #2459a6;
       border-radius: 3px;
-      box-shadow: inset 0 1px 0 0 #769ace;
+      box-shadow: inset 0 1px 0 0 #89a8d5;
       color: white;
       display: inline-block;
       font-size: 11px;
       font-weight: bold;
-      text-shadow: none;
       background-color: #477dca;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #477dca), color-stop(100%, #477dca));
-      background-image: -webkit-linear-gradient(#477dca, #477dca);
-      background-image: linear-gradient(#477dca, #477dca);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #477dca), color-stop(100%, #2760b2));
+      background-image: -webkit-linear-gradient(#477dca, #2760b2);
+      background-image: linear-gradient(#477dca, #2760b2);
       padding: 7px 18px;
       text-decoration: none;
+      text-shadow: 0 1px 0 #1b4f9a;
       background-clip: padding-box;
       font-size: 1em; }
-      /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
       .button-group button.active:hover:not(:disabled) {
-        background-color: #3872c4;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3872c4), color-stop(100%, #3872c4));
-        background-image: -webkit-linear-gradient(#3872c4, #3872c4);
-        background-image: linear-gradient(#3872c4, #3872c4);
         box-shadow: inset 0 1px 0 0 #628cc8;
-        cursor: pointer; }
-      /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        cursor: pointer;
+        background-color: #3c71bb;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c71bb), color-stop(100%, #255aa5));
+        background-image: -webkit-linear-gradient(#3c71bb, #255aa5);
+        background-image: linear-gradient(#3c71bb, #255aa5); }
+      /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
       .button-group button.active:active:not(:disabled) {
-        background-color: #3872c4;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3872c4), color-stop(100%, #3872c4));
-        background-image: -webkit-linear-gradient(#3872c4, #3872c4);
-        background-image: linear-gradient(#3872c4, #3872c4);
         border: 1px solid #2459a6;
-        box-shadow: inset 0 0 1px 1px #2a63b4, inset 0 0 1px 1px #2a63b4, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
-      /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        box-shadow: inset 0 0 8px 4px #235397, inset 0 0 8px 4px #235397, 0 1px 1px 0 #eeeeee; }
+      /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
       .button-group button.active:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -1983,38 +1971,34 @@ footer.refills-footer {
 .dropdown-link {
   border: 1px solid #2459a6;
   border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #769ace;
+  box-shadow: inset 0 1px 0 0 #89a8d5;
   color: white;
   display: inline-block;
   font-size: 11px;
   font-weight: bold;
-  text-shadow: none;
   background-color: #477dca;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #477dca), color-stop(100%, #477dca));
-  background-image: -webkit-linear-gradient(#477dca, #477dca);
-  background-image: linear-gradient(#477dca, #477dca);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #477dca), color-stop(100%, #2760b2));
+  background-image: -webkit-linear-gradient(#477dca, #2760b2);
+  background-image: linear-gradient(#477dca, #2760b2);
   padding: 7px 18px;
   text-decoration: none;
+  text-shadow: 0 1px 0 #1b4f9a;
   background-clip: padding-box;
   font-size: 1em;
   margin-bottom: 1.5em; }
-  /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .dropdown-link:hover:not(:disabled) {
-    background-color: #3872c4;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3872c4), color-stop(100%, #3872c4));
-    background-image: -webkit-linear-gradient(#3872c4, #3872c4);
-    background-image: linear-gradient(#3872c4, #3872c4);
     box-shadow: inset 0 1px 0 0 #628cc8;
-    cursor: pointer; }
-  /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    cursor: pointer;
+    background-color: #3c71bb;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c71bb), color-stop(100%, #255aa5));
+    background-image: -webkit-linear-gradient(#3c71bb, #255aa5);
+    background-image: linear-gradient(#3c71bb, #255aa5); }
+  /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .dropdown-link:active:not(:disabled) {
-    background-color: #3872c4;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3872c4), color-stop(100%, #3872c4));
-    background-image: -webkit-linear-gradient(#3872c4, #3872c4);
-    background-image: linear-gradient(#3872c4, #3872c4);
     border: 1px solid #2459a6;
-    box-shadow: inset 0 0 1px 1px #2a63b4, inset 0 0 1px 1px #2a63b4, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
-  /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    box-shadow: inset 0 0 8px 4px #235397, inset 0 0 8px 4px #235397, 0 1px 1px 0 #eeeeee; }
+  /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .dropdown-link:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
@@ -2251,38 +2235,34 @@ footer.refills-footer {
     .hero .hero-inner button {
       border: 1px solid #2459a6;
       border-radius: 3px;
-      box-shadow: inset 0 1px 0 0 #769ace;
+      box-shadow: inset 0 1px 0 0 #89a8d5;
       color: white;
       display: inline-block;
       font-size: 11px;
       font-weight: bold;
-      text-shadow: none;
       background-color: #477dca;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #477dca), color-stop(100%, #477dca));
-      background-image: -webkit-linear-gradient(#477dca, #477dca);
-      background-image: linear-gradient(#477dca, #477dca);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #477dca), color-stop(100%, #2760b2));
+      background-image: -webkit-linear-gradient(#477dca, #2760b2);
+      background-image: linear-gradient(#477dca, #2760b2);
       padding: 7px 18px;
       text-decoration: none;
+      text-shadow: 0 1px 0 #1b4f9a;
       background-clip: padding-box;
       font-size: 1em;
       outline: none; }
-      /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
       .hero .hero-inner button:hover:not(:disabled) {
-        background-color: #3872c4;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3872c4), color-stop(100%, #3872c4));
-        background-image: -webkit-linear-gradient(#3872c4, #3872c4);
-        background-image: linear-gradient(#3872c4, #3872c4);
         box-shadow: inset 0 1px 0 0 #628cc8;
-        cursor: pointer; }
-      /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        cursor: pointer;
+        background-color: #3c71bb;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c71bb), color-stop(100%, #255aa5));
+        background-image: -webkit-linear-gradient(#3c71bb, #255aa5);
+        background-image: linear-gradient(#3c71bb, #255aa5); }
+      /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
       .hero .hero-inner button:active:not(:disabled) {
-        background-color: #3872c4;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3872c4), color-stop(100%, #3872c4));
-        background-image: -webkit-linear-gradient(#3872c4, #3872c4);
-        background-image: linear-gradient(#3872c4, #3872c4);
         border: 1px solid #2459a6;
-        box-shadow: inset 0 0 1px 1px #2a63b4, inset 0 0 1px 1px #2a63b4, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
-      /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        box-shadow: inset 0 0 8px 4px #235397, inset 0 0 8px 4px #235397, 0 1px 1px 0 #eeeeee; }
+      /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
       .hero .hero-inner button:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -2560,33 +2540,29 @@ ul.item-list {
   display: inline-block;
   font-size: 11px;
   font-weight: bold;
-  text-shadow: none;
   background-color: #f7f7f7;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #f7f7f7));
-  background-image: -webkit-linear-gradient(#f7f7f7, #f7f7f7);
-  background-image: linear-gradient(#f7f7f7, #f7f7f7);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #dadada));
+  background-image: -webkit-linear-gradient(#f7f7f7, #dadada);
+  background-image: linear-gradient(#f7f7f7, #dadada);
   padding: 7px 18px;
   text-decoration: none;
+  text-shadow: 0 1px 0 white;
   background-clip: padding-box;
   font-size: 1em;
   margin-bottom: 1.5em; }
-  /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .modal .btn:hover:not(:disabled) {
-    background-color: #ececec;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ececec));
-    background-image: -webkit-linear-gradient(#ececec, #ececec);
-    background-image: linear-gradient(#ececec, #ececec);
     box-shadow: inset 0 1px 0 0 white;
-    cursor: pointer; }
-  /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    cursor: pointer;
+    background-color: #eaeaea;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eaeaea), color-stop(100%, lightgrey));
+    background-image: -webkit-linear-gradient(#eaeaea, lightgrey);
+    background-image: linear-gradient(#eaeaea, lightgrey); }
+  /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .modal .btn:active:not(:disabled) {
-    background-color: #ececec;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ececec));
-    background-image: -webkit-linear-gradient(#ececec, #ececec);
-    background-image: linear-gradient(#ececec, #ececec);
     border: 1px solid lightgrey;
-    box-shadow: inset 0 0 1px 1px #dddddd, inset 0 0 1px 1px #dddddd, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
-  /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    box-shadow: inset 0 0 8px 4px #cbcbcb, inset 0 0 8px 4px #cbcbcb, 0 1px 1px 0 #eeeeee; }
+  /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .modal .btn:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
@@ -2828,13 +2804,13 @@ header.navigation {
         color: white; }
   @media screen and (min-width: 53.75em) {
     /* line 110, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-    header.navigation ul li:last-child {
+    header.navigation .sign-up {
       position: absolute;
       top: 0px;
       right: 0px;
       padding-right: 1em; }
       /* line 115, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-      header.navigation ul li:last-child a {
+      header.navigation .sign-up a {
         -webkit-transition: all 0.2s ease-in-out;
         -moz-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
@@ -2846,7 +2822,7 @@ header.navigation {
         padding: .6em 1em;
         text-transform: uppercase; }
         /* line 125, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-        header.navigation ul li:last-child a:hover {
+        header.navigation .sign-up a:hover {
           background: #6f99d5; } }
   /* line 132, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation .navigation-search-bar {
@@ -2874,11 +2850,6 @@ header.navigation {
       position: relative; }
       /* line 158, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .search-bar .search-and-submit input[type=search] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        -ms-appearance: none;
-        -o-appearance: none;
-        appearance: none;
         background: #404040;
         border: 1px solid #262626;
         padding: .6em .8em;
@@ -2887,45 +2858,42 @@ header.navigation {
         color: rgba(255, 255, 255, 0.7);
         border-radius: 0.375em;
         margin: 0; }
-      /* line 170, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 169, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .search-bar .search-and-submit button[type=submit] {
         border: 1px solid #363636;
         border-radius: 3px;
-        box-shadow: inset 0 1px 0 0 #737373;
+        box-shadow: inset 0 1px 0 0 gray;
         color: white;
         display: inline-block;
         font-size: 11px;
         font-weight: bold;
-        text-shadow: none;
         background-color: #595959;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #595959), color-stop(100%, #595959));
-        background-image: -webkit-linear-gradient(#595959, #595959);
-        background-image: linear-gradient(#595959, #595959);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #595959), color-stop(100%, #3d3d3d));
+        background-image: -webkit-linear-gradient(#595959, #3d3d3d);
+        background-image: linear-gradient(#595959, #3d3d3d);
         padding: 7px 18px;
         text-decoration: none;
+        text-shadow: 0 1px 0 #2b2b2b;
         background-clip: padding-box;
         position: absolute;
         top: 0.3em;
         right: 0.3em;
         bottom: 0.3em;
-        outline: none; }
-        /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        outline: none;
+        padding: 5px 15px; }
+        /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
         header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled) {
-          background-color: #4f4f4f;
-          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4f4f4f), color-stop(100%, #4f4f4f));
-          background-image: -webkit-linear-gradient(#4f4f4f, #4f4f4f);
-          background-image: linear-gradient(#4f4f4f, #4f4f4f);
           box-shadow: inset 0 1px 0 0 #666666;
-          cursor: pointer; }
-        /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+          cursor: pointer;
+          background-color: #4d4d4d;
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4d4d4d), color-stop(100%, #363636));
+          background-image: -webkit-linear-gradient(#4d4d4d, #363636);
+          background-image: linear-gradient(#4d4d4d, #363636); }
+        /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
         header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled) {
-          background-color: #4f4f4f;
-          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4f4f4f), color-stop(100%, #4f4f4f));
-          background-image: -webkit-linear-gradient(#4f4f4f, #4f4f4f);
-          background-image: linear-gradient(#4f4f4f, #4f4f4f);
           border: 1px solid #363636;
-          box-shadow: inset 0 0 1px 1px #404040, inset 0 0 1px 1px #404040, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
-        /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+          box-shadow: inset 0 0 8px 4px #2e2e2e, inset 0 0 8px 4px #2e2e2e, 0 1px 1px 0 #eeeeee; }
+        /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
         header.navigation .search-bar .search-and-submit button[type=submit]:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
@@ -3199,13 +3167,13 @@ header.navigation {
       display: inline-block;
       font-size: 11px;
       font-weight: bold;
-      text-shadow: none;
       background-color: #f7f7f7;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #f7f7f7));
-      background-image: -webkit-linear-gradient(#f7f7f7, #f7f7f7);
-      background-image: linear-gradient(#f7f7f7, #f7f7f7);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #dadada));
+      background-image: -webkit-linear-gradient(#f7f7f7, #dadada);
+      background-image: linear-gradient(#f7f7f7, #dadada);
       padding: 7px 18px;
       text-decoration: none;
+      text-shadow: 0 1px 0 white;
       background-clip: padding-box;
       position: absolute;
       top: 0.3em;
@@ -3213,23 +3181,19 @@ header.navigation {
       bottom: 0.3em;
       outline: none;
       padding: 5px 10px; }
-      /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
       .search-bar div.search-and-submit button[type=submit]:hover:not(:disabled) {
-        background-color: #ececec;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ececec));
-        background-image: -webkit-linear-gradient(#ececec, #ececec);
-        background-image: linear-gradient(#ececec, #ececec);
         box-shadow: inset 0 1px 0 0 white;
-        cursor: pointer; }
-      /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        cursor: pointer;
+        background-color: #eaeaea;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eaeaea), color-stop(100%, lightgrey));
+        background-image: -webkit-linear-gradient(#eaeaea, lightgrey);
+        background-image: linear-gradient(#eaeaea, lightgrey); }
+      /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
       .search-bar div.search-and-submit button[type=submit]:active:not(:disabled) {
-        background-color: #ececec;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ececec));
-        background-image: -webkit-linear-gradient(#ececec, #ececec);
-        background-image: linear-gradient(#ececec, #ececec);
         border: 1px solid lightgrey;
-        box-shadow: inset 0 0 1px 1px #dddddd, inset 0 0 1px 1px #dddddd, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
-      /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        box-shadow: inset 0 0 8px 4px #cbcbcb, inset 0 0 8px 4px #cbcbcb, 0 1px 1px 0 #eeeeee; }
+      /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
       .search-bar div.search-and-submit button[type=submit]:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -3330,13 +3294,13 @@ header.navigation {
   display: inline-block;
   font-size: 11px;
   font-weight: bold;
-  text-shadow: none;
   background-color: #f7f7f7;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #f7f7f7));
-  background-image: -webkit-linear-gradient(#f7f7f7, #f7f7f7);
-  background-image: linear-gradient(#f7f7f7, #f7f7f7);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #dadada));
+  background-image: -webkit-linear-gradient(#f7f7f7, #dadada);
+  background-image: linear-gradient(#f7f7f7, #dadada);
   padding: 7px 18px;
   text-decoration: none;
+  text-shadow: 0 1px 0 white;
   background-clip: padding-box;
   display: inline-block;
   vertical-align: baseline;
@@ -3347,23 +3311,19 @@ header.navigation {
   font-size: 1em;
   margin-bottom: 1.5em;
   position: relative; }
-  /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .menu-anchor:hover:not(:disabled) {
-    background-color: #ececec;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ececec));
-    background-image: -webkit-linear-gradient(#ececec, #ececec);
-    background-image: linear-gradient(#ececec, #ececec);
     box-shadow: inset 0 1px 0 0 white;
-    cursor: pointer; }
-  /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    cursor: pointer;
+    background-color: #eaeaea;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eaeaea), color-stop(100%, lightgrey));
+    background-image: -webkit-linear-gradient(#eaeaea, lightgrey);
+    background-image: linear-gradient(#eaeaea, lightgrey); }
+  /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .menu-anchor:active:not(:disabled) {
-    background-color: #ececec;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ececec));
-    background-image: -webkit-linear-gradient(#ececec, #ececec);
-    background-image: linear-gradient(#ececec, #ececec);
     border: 1px solid lightgrey;
-    box-shadow: inset 0 0 1px 1px #dddddd, inset 0 0 1px 1px #dddddd, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
-  /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    box-shadow: inset 0 0 8px 4px #cbcbcb, inset 0 0 8px 4px #cbcbcb, 0 1px 1px 0 #eeeeee; }
+  /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .menu-anchor:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
@@ -3425,12 +3385,8 @@ header.navigation {
     opacity: .4;
     visibility: visible; }
 
-/* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-.switch-toggles {
-  display: block; }
-
-/* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-.switch-toggle {
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
+.switch-container {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3443,67 +3399,60 @@ header.navigation {
   position: relative;
   width: 5em;
   margin-bottom: 1.5em; }
-  /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-  .switch-toggle input.switch-checkbox {
+  /* line 14, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
+  .switch-container input.switch-checkbox {
     display: none; }
-    /* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-    .switch-toggle input.switch-checkbox:checked + .switch-label .switch-inner {
+    /* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
+    .switch-container input.switch-checkbox:checked + .switch-label .switch-inner {
       margin-left: 0; }
-    /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-    .switch-toggle input.switch-checkbox:checked + .switch-label .switch-toggle-switch {
+    /* line 21, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
+    .switch-container input.switch-checkbox:checked + .switch-label .switch-toggle-switch {
       right: 0; }
-  /* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-  .switch-toggle label.switch-label {
-    border-radius: 2.5em;
+  /* line 26, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
+  .switch-container label.switch-label {
+    border-radius: 3px;
     cursor: pointer;
     display: block;
     overflow: hidden; }
-    /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-    .switch-toggle label.switch-label .switch-inner {
-      -webkit-transition: opacity 0.5s ease;
-      -moz-transition: opacity 0.5s ease;
-      transition: opacity 0.5s ease;
-      border-radius: 3px;
+    /* line 32, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
+    .switch-container label.switch-label .switch-inner {
+      -webkit-transition: opacity 0.3s ease;
+      -moz-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
       margin-left: -100%;
       width: 200%; }
-      /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-      .switch-toggle label.switch-label .switch-inner:before, .switch-toggle label.switch-label .switch-inner:after {
+      /* line 37, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
+      .switch-container label.switch-label .switch-inner:before, .switch-container label.switch-label .switch-inner:after {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         float: left;
-        height: 35px;
+        height: 2em;
         padding: 0;
         width: 50%; }
-      /* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-      .switch-toggle label.switch-label .switch-inner:before {
+      /* line 45, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
+      .switch-container label.switch-label .switch-inner:before {
         content: '';
         background: #477dca; }
-      /* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-      .switch-toggle label.switch-label .switch-inner:after {
+      /* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
+      .switch-container label.switch-label .switch-inner:after {
         content: '';
         background: #DDD; }
-    /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-    .switch-toggle label.switch-label .switch-toggle-switch {
-      width: 24px;
-      height: 24px;
+    /* line 56, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
+    .switch-container label.switch-label .switch-toggle-switch {
       position: absolute;
       top: 0px;
-      right: 2.77778em;
+      right: 3.6em;
       bottom: 0px;
       -webkit-transition: all 0.3s ease-in 0s;
       -moz-transition: all 0.3s ease-in 0s;
       transition: all 0.3s ease-in 0s;
-      border-radius: 100%;
-      margin: 6px;
+      height: 1.6em;
+      width: 1em;
+      border-radius: 1.5px;
+      margin: 0.2em;
       background: white;
       box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.1); }
-  /* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-  .switch-toggle.rectangle label.switch-label {
-    border-radius: 0.1875em; }
-    /* line 74, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch-toggle.scss */
-    .switch-toggle.rectangle label.switch-label .switch-toggle-switch {
-      border-radius: 0.1875em; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables.scss */
 .table-borders {
@@ -3560,35 +3509,32 @@ header.navigation {
         display: inline-block;
         font-size: 11px;
         font-weight: bold;
-        text-shadow: none;
         background-color: #f7f7f7;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #f7f7f7));
-        background-image: -webkit-linear-gradient(#f7f7f7, #f7f7f7);
-        background-image: linear-gradient(#f7f7f7, #f7f7f7);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #dadada));
+        background-image: -webkit-linear-gradient(#f7f7f7, #dadada);
+        background-image: linear-gradient(#f7f7f7, #dadada);
         padding: 7px 18px;
         text-decoration: none;
+        text-shadow: 0 1px 0 white;
         background-clip: padding-box;
         margin-right: 0.5em;
         display: inline-block;
         width: 100%;
-        margin-bottom: .3em; }
-        /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        margin-bottom: .3em;
+        outline: none; }
+        /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
         .table-borders tbody td button:hover:not(:disabled) {
-          background-color: #ececec;
-          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ececec));
-          background-image: -webkit-linear-gradient(#ececec, #ececec);
-          background-image: linear-gradient(#ececec, #ececec);
           box-shadow: inset 0 1px 0 0 white;
-          cursor: pointer; }
-        /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+          cursor: pointer;
+          background-color: #eaeaea;
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eaeaea), color-stop(100%, lightgrey));
+          background-image: -webkit-linear-gradient(#eaeaea, lightgrey);
+          background-image: linear-gradient(#eaeaea, lightgrey); }
+        /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
         .table-borders tbody td button:active:not(:disabled) {
-          background-color: #ececec;
-          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ececec));
-          background-image: -webkit-linear-gradient(#ececec, #ececec);
-          background-image: linear-gradient(#ececec, #ececec);
           border: 1px solid lightgrey;
-          box-shadow: inset 0 0 1px 1px #dddddd, inset 0 0 1px 1px #dddddd, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
-        /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+          box-shadow: inset 0 0 8px 4px #cbcbcb, inset 0 0 8px 4px #cbcbcb, 0 1px 1px 0 #eeeeee; }
+        /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
         .table-borders tbody td button:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
@@ -3698,18 +3644,18 @@ header.navigation {
 a.tooltip-item {
   border: 1px solid #b9b9b9;
   border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #f7f7f7;
+  box-shadow: inset 0 1px 0 0 white;
   color: #333333;
   display: inline-block;
   font-size: 11px;
   font-weight: bold;
-  text-shadow: none;
   background-color: #dddddd;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #dddddd));
-  background-image: -webkit-linear-gradient(#dddddd, #dddddd);
-  background-image: linear-gradient(#dddddd, #dddddd);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #c1c1c1));
+  background-image: -webkit-linear-gradient(#dddddd, #c1c1c1);
+  background-image: linear-gradient(#dddddd, #c1c1c1);
   padding: 7px 18px;
   text-decoration: none;
+  text-shadow: 0 1px 0 #e7e7e7;
   background-clip: padding-box;
   position: relative;
   font-size: 1em;
@@ -3717,23 +3663,19 @@ a.tooltip-item {
   display: block;
   max-width: 13em;
   text-align: center; }
-  /* line 316, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   a.tooltip-item:hover:not(:disabled) {
-    background-color: lightgrey;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lightgrey), color-stop(100%, lightgrey));
-    background-image: -webkit-linear-gradient(lightgrey, lightgrey);
-    background-image: linear-gradient(lightgrey, lightgrey);
     box-shadow: inset 0 1px 0 0 #eaeaea;
-    cursor: pointer; }
-  /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    cursor: pointer;
+    background-color: #d0d0d0;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d0d0d0), color-stop(100%, #b9b9b9));
+    background-image: -webkit-linear-gradient(#d0d0d0, #b9b9b9);
+    background-image: linear-gradient(#d0d0d0, #b9b9b9); }
+  /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   a.tooltip-item:active:not(:disabled) {
-    background-color: lightgrey;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lightgrey), color-stop(100%, lightgrey));
-    background-image: -webkit-linear-gradient(lightgrey, lightgrey);
-    background-image: linear-gradient(lightgrey, lightgrey);
     border: 1px solid #b9b9b9;
-    box-shadow: inset 0 0 1px 1px #c4c4c4, inset 0 0 1px 1px #c4c4c4, 0 1px 1px 0 rgba(255, 255, 255, 0.2); }
-  /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    box-shadow: inset 0 0 8px 4px #b2b2b2, inset 0 0 8px 4px #b2b2b2, 0 1px 1px 0 #eeeeee; }
+  /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   a.tooltip-item:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
