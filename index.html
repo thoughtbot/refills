@@ -1444,13 +1444,13 @@
     <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
   </a>
     <a href="" class="grid-item">
-    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png" alt="">
-    <h1>Last Grid Item</h1>
+    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png" alt="">
+    <h1>A Grid Item</h1>
     <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
   </a>
     <a href="" class="grid-item">
-    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png" alt="">
-    <h1>Last Grid Item</h1>
+    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
+    <h1>Item</h1>
     <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
   </a>
 </div>
@@ -1491,13 +1491,13 @@
     &lt;p&gt;Lorem ipsum dolor sit amet, elit. Rem, illum.&lt;/p&gt;
   &lt;/a&gt;
     &lt;a href=&quot;&quot; class=&quot;grid-item&quot;&gt;
-    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png&quot; alt=&quot;&quot;&gt;
-    &lt;h1&gt;Last Grid Item&lt;/h1&gt;
+    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png&quot; alt=&quot;&quot;&gt;
+    &lt;h1&gt;A Grid Item&lt;/h1&gt;
     &lt;p&gt;Lorem ipsum dolor sit amet, elit. Rem, illum.&lt;/p&gt;
   &lt;/a&gt;
     &lt;a href=&quot;&quot; class=&quot;grid-item&quot;&gt;
-    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png&quot; alt=&quot;&quot;&gt;
-    &lt;h1&gt;Last Grid Item&lt;/h1&gt;
+    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
+    &lt;h1&gt;Item&lt;/h1&gt;
     &lt;p&gt;Lorem ipsum dolor sit amet, elit. Rem, illum.&lt;/p&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -1517,6 +1517,14 @@
         .grid-items {
           $grid-items-background: $base-body-color;
           $grid-item-background: desaturate($base-accent-color, 30); 
+          $grid-item-colors: 
+            desaturate($base-accent-color, 30), 
+            #3581A5, 
+            #5FBEBE,
+            #98C79A,
+            #A7A891, 
+            #BDCC97,
+            #979EA0;
           $grid-item-border-size: 9px;
           $grid-item-border: $grid-item-border-size solid $grid-items-background;
           $grid-item-columns: 4;
@@ -1541,40 +1549,46 @@
             color: white;
             text-align: center;
             cursor: pointer;
-            box-shadow: inset 0px 0px 1px 0px darken($grid-item-background, 60);
         
-            img {
+            @include media($large-screen) {
+              @include grid-item-columns($grid-item-columns);
+            }
+        
+            @for $i from 1 to 8 { // assign colors from $grid-item-colors list
+              &:nth-child(#{$i}) {
+                $background-from-list: nth($grid-item-colors, $i);
+                background-color: $background-from-list;
+                box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10);
+                &:hover {
+                  background-color: darken($background-from-list, 10);
+                  background-repeat: no-repeat;
+                  background-position: top;
+                  background-size: cover;
+                }
+              }
+            }
+          }
+        
+          .grid-item img {
               display: block;
               height: 3em;
               margin: auto;
               margin-bottom: 1em;
             }
         
-            h1 {
+          .grid-item h1 {
               color: $grid-item-color;
               font-size: 1.3em;
               margin-bottom: .4em;
             }
         
-            p {
+          .grid-item p {
               margin: auto;
               color: transparentize($grid-item-color, .3);
               @include media($medium-screen) {
                 max-width: 70%;
               }
             }
-        
-            &:hover {
-              background-color: darken($grid-item-background, 10);
-              background-repeat: no-repeat;
-              background-position: top;
-              background-size: cover;
-            }
-        
-            @include media($large-screen) {
-              @include grid-item-columns($grid-item-columns);
-            } 
-          }
         
           .grid-item-big {
             @include media($large-screen) {

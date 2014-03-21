@@ -3937,7 +3937,7 @@ a.tooltip-item {
   /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
   .grid-items:after {
     clear: both; }
-  /* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+  /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
   .grid-items .grid-item {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -3954,46 +3954,109 @@ a.tooltip-item {
     border-right: 4.5px solid white;
     color: white;
     text-align: center;
-    cursor: pointer;
-    box-shadow: inset 0px 0px 1px 0px black; }
-    /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
-    .grid-items .grid-item img {
-      display: block;
-      height: 3em;
-      margin: auto;
-      margin-bottom: 1em; }
-    /* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
-    .grid-items .grid-item h1 {
-      color: white;
-      font-size: 1.3em;
-      margin-bottom: .4em; }
-    /* line 47, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
-    .grid-items .grid-item p {
-      margin: auto;
-      color: rgba(255, 255, 255, 0.7); }
-      @media screen and (min-width: 40em) {
-        /* line 47, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
-        .grid-items .grid-item p {
-          max-width: 70%; } }
-    /* line 55, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
-    .grid-items .grid-item:hover {
-      background-color: #536a8b;
-      background-repeat: no-repeat;
-      background-position: top;
-      background-size: cover; }
+    cursor: pointer; }
     @media screen and (min-width: 53.75em) {
-      /* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+      /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
       .grid-items .grid-item {
         width: 33.33333%; } }
+    /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    .grid-items .grid-item:nth-child(1) {
+      background-color: #6b83a6;
+      box-shadow: inset 0px 0px 1px 2px #536a8b; }
+      /* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+      .grid-items .grid-item:nth-child(1):hover {
+        background-color: #536a8b;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover; }
+    /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    .grid-items .grid-item:nth-child(2) {
+      background-color: #3581a5;
+      box-shadow: inset 0px 0px 1px 2px #29637e; }
+      /* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+      .grid-items .grid-item:nth-child(2):hover {
+        background-color: #29637e;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover; }
+    /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    .grid-items .grid-item:nth-child(3) {
+      background-color: #5fbebe;
+      box-shadow: inset 0px 0px 1px 2px #44a6a6; }
+      /* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+      .grid-items .grid-item:nth-child(3):hover {
+        background-color: #44a6a6;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover; }
+    /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    .grid-items .grid-item:nth-child(4) {
+      background-color: #98c79a;
+      box-shadow: inset 0px 0px 1px 2px #77b57a; }
+      /* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+      .grid-items .grid-item:nth-child(4):hover {
+        background-color: #77b57a;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover; }
+    /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    .grid-items .grid-item:nth-child(5) {
+      background-color: #a7a891;
+      box-shadow: inset 0px 0px 1px 2px #909175; }
+      /* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+      .grid-items .grid-item:nth-child(5):hover {
+        background-color: #909175;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover; }
+    /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    .grid-items .grid-item:nth-child(6) {
+      background-color: #bdcc97;
+      box-shadow: inset 0px 0px 1px 2px #a7bb75; }
+      /* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+      .grid-items .grid-item:nth-child(6):hover {
+        background-color: #a7bb75;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover; }
+    /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    .grid-items .grid-item:nth-child(7) {
+      background-color: #979ea0;
+      box-shadow: inset 0px 0px 1px 2px #7c8588; }
+      /* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+      .grid-items .grid-item:nth-child(7):hover {
+        background-color: #7c8588;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover; }
+  /* line 60, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+  .grid-items .grid-item img {
+    display: block;
+    height: 3em;
+    margin: auto;
+    margin-bottom: 1em; }
+  /* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+  .grid-items .grid-item h1 {
+    color: white;
+    font-size: 1.3em;
+    margin-bottom: .4em; }
+  /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+  .grid-items .grid-item p {
+    margin: auto;
+    color: rgba(255, 255, 255, 0.7); }
+    @media screen and (min-width: 40em) {
+      /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+      .grid-items .grid-item p {
+        max-width: 70%; } }
   @media screen and (min-width: 53.75em) {
-    /* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    /* line 81, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
     .grid-items .grid-item-big {
       width: 66.66667%; } }
   @media screen and (min-width: 40em) {
-    /* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+    /* line 85, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
     .grid-items .grid-item-big p {
       max-width: 60%; } }
-  /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
+  /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-item.scss */
   .grid-items .grid-item-image {
     background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
     background-color: #6b83a6;
