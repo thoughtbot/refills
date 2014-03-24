@@ -322,12 +322,13 @@ h5 {
 
 //////////////////////////
 
-pre {
-  height: 350px;
-  border-top: 2px solid black;
+pre[class*="language-"] {
+  height: 200px;
+  border-top: 2px solid silver;
+  background: #F8F8F8;
 
   @include media($medium-screen) {
-    box-shadow: -2px 0 0 rgba(0,0,0,0.1);
+    // box-shadow: -2px 0 0 rgba(0,0,0,0.1);
   }
 }
 
@@ -341,29 +342,30 @@ pre {
   padding: 0.4em 1em;
 
   &:hover, &:active {
-    background: red;
+    background-color: lighten($dark-gray, 20);
+    color: white;
   }
 }
 
 .snippet {
   display: none;
-  padding: 0;
-  margin-top: $base-line-height !important;
-  height: em(400);
+  // padding: 0;
+//   margin-top: $base-line-height !important;
+//   height: em(400);
 
   @include media($medium-screen) {
     width: 50%;
     float: left;
   }
 
-  &:first-child {
+//   &:first-child {
 
-  }
+//   }
 
   code {
     max-height: em(400);
-    font-size: $base-font-size/1.5;
-    line-height: $base-line-height/2;
+    font-size: $base-font-size/2;
+    line-height: $base-line-height/3;
     overflow: scroll;
   }
 }
