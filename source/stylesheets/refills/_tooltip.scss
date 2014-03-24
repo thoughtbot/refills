@@ -1,65 +1,47 @@
-$tooltip-color: transparentize($dark-gray, 0.1);
-$tooltip-placement: top; // "top" or "bottom"
+.tooltip-item {
+  $tooltip-background: transparentize($dark-gray, 0.1);
+  $tooltip-color: white;
 
-@mixin tooltip($position) {
+  border: 1px solid $base-border-color;
+  padding: .5em 1em;
+  border-radius: $base-border-radius;
   position: relative;
-  $opposite-position: bottom;
+  margin-bottom: $base-line-height;
 
-  @if ($position == top) {
-    $opposite-position: bottom;
-  }
-
-  @else if ($position == bottom) {
-    $opposite-position: top;
-  }
-
-  &:hover {
-    .tooltip {
-      opacity: 1;
-      visibility: visible;
-    }
+  &:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
   }
 
   .tooltip {
     @include position(absolute, 0 0 0 50%);
-    @include transition(all 0.15s linear);
     @include box-sizing(border-box);
-    #{$position}: -55px;
-    background-color: $tooltip-color;
+    bottom: 130%;
+    background-color: $tooltip-background;
     border-radius: $base-border-radius;
-    color: white;
-    font-weight: normal;
+    color: $tooltip-color;
+    font-size: .9em;
+    line-height: 1.5em;
     margin-left: -(em(200)/2);
     opacity: 0;
-    padding: 0.5em 1em;
+    padding: 1em;
     text-align: center;
-    text-overflow: ellipsis;
-    text-shadow: 0 1px 0 darken(rgb(80,80,80), 4%);
-    text-transform: none;
     visibility: hidden;
-    white-space: nowrap;
     width: em(200);
     z-index: 10;
+
+    p {
+      margin-bottom: 0;
+    }
 
     &:after {
       @include size(0);
       @include position(absolute, 0 0 0 em(200)/2);
       border: 8px solid transparent;
-      border-#{$position}-color: $tooltip-color;
+      border-top-color: $tooltip-background;
       content: '';
       pointer-events: none;
-      #{$opposite-position}: -15px;
-      $position: auto;
+      bottom: -15px;
     }
   }
-}
-
-a.tooltip-item {
-  @include button(simple, $base-border-color);
-  @include tooltip($tooltip-placement);
-  font-size: $base-font-size;
-  margin-bottom: $base-line-height;
-  display: block;
-  max-width: 13em;
-  text-align: center;
 }

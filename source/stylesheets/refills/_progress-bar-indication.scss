@@ -1,0 +1,39 @@
+.progress-bar-indication {
+  $progress-border-color: $base-border-color;
+  $progress-border: 1px solid $progress-border-color;
+  $progress-meter-border-color: $base-accent-color;
+  $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
+  $progress-meter-color: $progress-meter-border-color;
+  $progress-background: darken($base-body-color, 5);
+  $progress-animation-duration: 0.7s;
+  $progress-color: white;
+
+  background-color: $progress-background;
+  border: $progress-border;
+  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
+  border-radius: $base-border-radius;
+  margin: 0 auto;
+  width: 50%;
+
+  > span.meter {
+    @include box-sizing(border-box);
+    background-color: $progress-meter-color;
+    background-size: 40px 40px;
+    background-repeat: repeat-x;
+    border: $progress-meter-border;
+    border-radius: $base-border-radius /1.5;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    display: block;
+    height: 100%;
+    width: 60%;
+  }
+
+  p {
+    margin-bottom: 0;
+    padding: .1em .5em;
+    font-weight: 800;
+    color: $progress-color;    
+    text-shadow: 0 0 1px black;
+  }
+}

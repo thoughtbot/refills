@@ -1,18 +1,22 @@
-$button-group-background: lighten($base-border-color, 10);
-$button-group-border-highlight: lighteni($button-group-background, 15);
-$button-group-active: $blue;
-
 .button-group {
+  $button-group-background: $base-body-color;
+  $button-group-color: lighten($base-font-color, 30);
+  $button-group-border-highlight: lighten($button-group-background, 15);
+  $button-group-active: $base-accent-color;
+
   @include clearfix;
-  margin-bottom: $base-line-height;
   
   button {
     @include button(simple, $button-group-background);
+    font-weight: 400;
+    color: $button-group-color;
     font-size: $base-font-size;
+    outline: none;
     float: left;
 
     &.active {
       @include button(simple, $button-group-active);
+      font-weight: 400;
       font-size: $base-font-size;
     }
 
@@ -20,10 +24,12 @@ $button-group-active: $blue;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
+
     &:not(:first-child):not(:last-child) {
       border-left: 1px solid $button-group-border-highlight;
       border-radius: 0;
     }
+    
     &:last-child {
       border-bottom-left-radius: 0;
       border-left: 1px solid $button-group-border-highlight;

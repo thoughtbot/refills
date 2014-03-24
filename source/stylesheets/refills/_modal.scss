@@ -21,7 +21,7 @@
   }
 
   .btn {
-    @include button(simple, lighten($base-border-color, 10));
+    @include button(simple, $base-body-color);
     font-size: $base-font-size;
     margin-bottom: $base-line-height;
   }

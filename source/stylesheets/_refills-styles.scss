@@ -1,6 +1,108 @@
+@mixin texture($bg-color, $texture-number, $inverted) { $texture-list: "paper.png"             // Fabric and paper
+  "rice_paper.png"
+  "noise_lines.png"
+  "fabric_plaid.png"
+  "first_aid_kit.png"
+  "texturetastic_gray.png"
+  "lil_fiber.png"
+  "tex2res5.png"
+  "skin_side_up.png"
+  "light_noise_diagonal.png"
+  "chruch.png"
+  "45degreee_fabric.png"
+  "bgnoise_lg.png"
+  "little_pluses.png"
+  "squairy_light.png"
+  "white_texture.png"
+  "binding_light.png"
+  "double_lined.png"      // Grid, mesh and squares
+  "grid.png"
+  "absurdidad.png"
+  "grid_noise.png"
+  "fancy_deboss.png"
+  "graphy.png"
+  "noise_pattern_with_crosslines.png"
+  "old_mathematics.png"
+  "ps_neutral.png"
+  "subtle_freckles.png"
+  "wavegrid.png"
+  "az_subtle.png"
+  "tiny_grid.png"
+  "wavegrid.png"
+  "gridme.png"
+  "noisy_grid.png"
+  "subtlenet2.png"
+  "white_carbon.png"
+  "lghtmesh.png"
+  "p5.png"                 // Dots
+  "worn_dots.png"
+  "subtle_dots.png"
+  "brillant.png"
+  "farmer.png"
+  "retina_dust.png"        // Lines
+  "pinstripe.png"
+  "line_horizontal1.png"
+  "line_horizontal2.png"
+  "linen.png" 
+  "vintage_speckles.png"   // Patina and irregular
+  "subtle_grunge.png"
+  "old_wall.png"
+  "brushed.png"
+  "stucco.png"
+  "mooning.png"
+  "husk.png"
+  "concrete_wall_2.png"
+  "noisy.png"
+  "concrete_wall_3.png"
+  "subtle_surface.png"
+  "dust.png"
+  "light_alu.png"
+  "corrugation.png" 
+  "kindajean.png"           // Diagonal
+  "line_diagonal1.png"
+  "line_diagonal2.png"
+  "groovepaper.png"
+  "brushed_alu.png"
+  "rough_diagonal.png"
+  "diagonal-noise.png"
+  "cross_scratches.png"
+  "striped_lens.png"
+  "debut_light.png"
+  "diagonal_waves.png"    // Special
+  "honey_im_subtle.png"
+  "pw_maze_white.png"
+  "subtle_zebra_3d.png"
+  "white_wave.png"
+  "circles.png"
+  "crosses.png"
+  "grilled.png"
+  "pw_pattern.png"
+  "struckaxiom.png"
+  "vichy.png"
+  "wavecut.png"
+  "whitey.png"
+  "cream_pixels.png"
+  "grey.png"
+  "shinedotted.png"
+  "stacked_circles.png"
+  "noisy_grid_simple.png"
+  ;
+
+  @if ($inverted == 1) {
+    background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/inverted/#{nth($texture-list, $texture-number)}");
+    background-color: $bg-color;
+  }
+
+  @else {
+    background: url("https://raw.github.com/Magnus-G/texture-mixin/gh-pages/textures/#{nth($texture-list, $texture-number)}");
+    background-color: $bg-color;
+  }
+}
+
 $refills-color: lighten(desaturate(teal, 60), 40);
 $base-body-color: white;
 $refills-nav-height: 60px;
+$refills-anchor-color: #FF4286;
 
 .external a {
   height: 84px;
@@ -28,32 +130,55 @@ body {
 
 .refills-header {
   @include clearfix;
-  background-color: $base-body-color;
+  background-color: #DDF0EF;
   clear: both;
-  margin-top: $base-line-height * 2;
+  margin-bottom: 4em;
   width: 100%;
+  text-align: center;
+  @include texture(#DDF0EF, 30, 1); 
+  padding: 5em 0;
 
-  a {
-    color: $base-font-color;
-    font-weight: bold;
+  @include media($medium-screen) {
+    padding: 6em 0;
+  }
 
-    &:hover, &:active, &:focus {
-      color: $refills-color;
-    }
+  @include media($large-screen) {
+    padding: 9em 0;
+  }
+
+  h1 {
+    font-size: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    padding: .5em 1em;
+    background: #FF4286;
+    color: white;
+    display: inline-block;
+    margin-bottom: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.8em;
     text-align: center;
     font-weight: 100;
+    font-family: 'Lusitana', serif;
     margin: 0 0 $base-line-height*.25;
+    margin: auto; 
+    max-width: 90%;
+    margin-bottom: 1em;
 
     @include media($medium-screen) {
-      font-size: 3rem;
+      font-size: 3em;
+      max-width: 90%;
+      margin-bottom: 1em;
     }
 
     @include media($large-screen) {
-      font-size: 4rem;
+      font-size: 3em;
+      max-width: 60%;
+      margin-bottom: .8em;
     }
   }
 
@@ -63,8 +188,22 @@ body {
     font-size: 1.3em;
     margin-bottom: 1em;
   }
+
+  a {
+    color: $refills-anchor-color;
+  }
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    display: inline;
+    padding-top: 1em;
+    @include media($medium-screen) {
+      border-top: 1px solid darken(#DDF0EF, 20);
+    }
+  }
 }
 
+/////////////////////////////////
 
 .menu-wrapper {
   @include clearfix;
@@ -193,12 +332,17 @@ pre {
 }
 
 .copy-source {
-  background-color: $dark-gray;
+  background-color: lighten($dark-gray, 20);
+  border-radius: 10px;
   font-size: $base-font-size/2;
   color: white;
   text-transform: uppercase;
   font-weight: 800;
-  padding: 0.3em 1em;
+  padding: 0.4em 1em;
+
+  &:hover, &:active {
+    background: red;
+  }
 }
 
 .snippet {
@@ -233,6 +377,11 @@ footer.refills-footer {
   padding-bottom: 2em;
   color: silver;
   text-align: center;
+  
+  a {
+    color: $refills-anchor-color;
+  }
+
   img {
     display: block;
     height: 60px;

@@ -2,20 +2,24 @@
 title: Refills
 ---
 
+<div class="refills-header">
+  <h1>Refills</h1>
+  <h2><span>Refills</span> are prepackaged patterns and compontents, built ontop of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://bitters.bourbon.io/">Bitters</a>, and <a href="http://neat.bourbon.io/">Neat</a>.</h2>
+  <p>Managed by <a href="https://thoughtbot.com/">thoughtbot</a>, instructions at <a href="https://github.com/thoughtbot/refills">Github</a></p>
+</div>
+
 <div id="example1" class="refills-wrapper">
 
   <a class="js-menu-trigger-refills refills-menu-anchor">&#9776;</a>
   <div class="js-menu-screen-refills refills-menu-screen"></div>
   
 
-  <div class="refills-header">
-    <h2>Refills are prepackaged patterns and compontents, built ontop of <br><a href="http://www.bourbon.io">Bourbon</a>, <a href="http://www.bitters.bourbon.io">Bitters</a>, and <a href="http://www.neat.bourbon.io">Neat</a>.</h2>
-  </div>
-
+<!--
   <div class="external">
     <a href="https://github.com/thoughtbot/refills"></a>
   </div>
 
+-->
   <h5>Patterns</h5>
 
   <div id="navigation" class="refill">
@@ -134,38 +138,6 @@ title: Refills
     <div class="refill-snippet"><%= snippet('image-gradient-dynamic') %></div>
   </div>
 
-<!-- 
-
-
-
-  <div id="progress-bar" class="refill">
-    <h6>Progress Bar</h6>
-    <%= partial "progress-bar" %>
-    <%= snippet('progress-bar') %>
-  </div>
-
-  <div id="tooltip" class="refill">
-    <h6>Tooltip</h6>
-    <%= partial "tooltip" %>
-    <%= snippet('tooltip') %>
-  </div>
-
-
-
-
-
-
-
-  
-
-
-  <div id="breadcrumbs" class="refill">
-    <h6>Breadcrumbs</h6>
-    <%= partial "breadcrumbs" %>
-    <%= snippet('breadcrumbs') %>
-  </div>
-
-
   <div id="button-group" class="refill">
     <div class="line-behind-text"><h6>Button Group</h6></div>
     <div class="refill-centering"><%= partial "button-group" %></div>
@@ -173,31 +145,24 @@ title: Refills
   </div>
 
 
-  <div id="item-list" class="refill">
-    <h6>Item List</h6>
-    <%= partial "item-list" %>
-    <%= snippet('item-list') %>
-  </div>
-  
-
-  <div id="master-detail" class="refill">
-    <h6>Master and Detail</h6>
-    <%= partial "master-detail" %>
-    <%= snippet('master-detail') %>
-  </div>
-  
-
-  <div id="sidebar-layout" class="refill">
-    <h6>Sidebar Layout</h6>
-    <%= partial "sidebar-layout" %>
-    <%= snippet('sidebar-layout') %>
+  <div id="progress-bar" class="refill">
+    <div class="line-behind-text"><h6>Progress Bars</h6></div>
+    <div class="refill-centering"><%= partial "progress-bar" %></div>
+    <div class="refill-snippet"><%= snippet('progress-bar') %></div>
+    <div class="refill-centering"><%= partial "progress-bar-indication" %></div>
+    <div class="refill-snippet"><%= snippet('progress-bar-indication') %></div>
   </div>
 
-  <div id="info-section" class="refill">
-    <h6>Info Section</h6> 
-    <%= partial "info-section" %>
-    <%= snippet('info-section') %>
-  </div>
+
+<!-- 
+
+
+
+
+
+
+
+
 
 
  -->

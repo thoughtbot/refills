@@ -1,6 +1,6 @@
 # Refills
 
-## prepackaged patterns and compontents, built ontop of Bourbon, Bitters, and Neat
+## Prepackaged patterns and compontents, built ontop of Bourbon, Bitters, and Neat
 
 
 [Bourbon](http://bourbon.io/) provides Sass mixins and eliminates vendor prefixes, for faster CSS coding.
@@ -82,7 +82,7 @@ You are more than welcome to submit any component or pattern you can't find in t
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
 
-Refills is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community).
+Refills is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community). Whenever a code snippet is borrowed or inspired by existing code, we try to credit the original developer/designer in our source code. Let us know if you think we have missed to do this.
 
 # License
 

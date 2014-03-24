@@ -61,7 +61,7 @@ header.navigation {
     }
   }
 
-  ul {    
+  ul#navigation-menu {    
     clear: both;
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     display: none;
@@ -129,12 +129,14 @@ header.navigation {
     }
   }
 
-  .navigation-search-bar {
+  li.navigation-search-bar {
     display: none;
 
     @include media($large-screen) {
-      display: inline-block;
       @include position(absolute, 0px 76px 0 0);
+      display: inline-block;
+      line-height: 0 !important;
+      padding: 13px 30px; // this to get around Firefox/Opera line-height "bug"
     }
   }
 
