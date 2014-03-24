@@ -3,6 +3,7 @@
   <head>
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lusitana' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
 
     <meta charset="utf-8">
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
@@ -19,20 +20,24 @@
   <body class="index">
     <section class="container">
       <section class="inner-content">
-        <div id="example1" class="refills-wrapper">
+        <div class="refills-header">
+  <h1>Refills</h1>
+  <h2><span>Refills</span> are prepackaged patterns and compontents, built ontop of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://bitters.bourbon.io/">Bitters</a>, and <a href="http://neat.bourbon.io/">Neat</a>.</h2>
+  <p>Managed by <a href="https://thoughtbot.com/">thoughtbot</a>, instructions at <a href="https://github.com/thoughtbot/refills">Github</a></p>
+</div>
+
+<div id="example1" class="refills-wrapper">
 
   <a class="js-menu-trigger-refills refills-menu-anchor">&#9776;</a>
   <div class="js-menu-screen-refills refills-menu-screen"></div>
   
 
-  <div class="refills-header">
-    <h2>Refills are prepackaged patterns and compontents, built ontop of <br><a href="http://www.bourbon.io">Bourbon</a>, <a href="http://www.bitters.bourbon.io">Bitters</a>, and <a href="http://www.neat.bourbon.io">Neat</a>.</h2>
-  </div>
-
+<!--
   <div class="external">
     <a href="https://github.com/thoughtbot/refills"></a>
   </div>
 
+-->
   <h5>Patterns</h5>
 
   <div id="navigation" class="refill">
@@ -203,7 +208,7 @@
             }
           }
         
-          ul {    
+          ul#navigation-menu {    
             clear: both;
             -webkit-transform-style: preserve-3d; // stop webkit flicker
             display: none;
@@ -271,12 +276,14 @@
             }
           }
         
-          .navigation-search-bar {
+          li.navigation-search-bar {
             display: none;
         
             @include media($large-screen) {
-              display: inline-block;
               @include position(absolute, 0px 76px 0 0);
+              display: inline-block;
+              line-height: 0 !important;
+              padding: 13px 30px; // this to get around Firefox/Opera line-height "bug"
             }
           }
         
@@ -2115,7 +2122,7 @@
         $sliding-menu-color-hover: #fff;
         
         .menu-anchor {
-          @include button(simple, lighten($base-border-color, 10));
+          @include button(simple, $base-body-color);
           @include inline-block;
           cursor: pointer;
           font-size: $base-font-size;
@@ -2490,7 +2497,7 @@
           }
         
           .btn {
-            @include button(simple, lighten($base-border-color, 10));
+            @include button(simple, $base-body-color);
             font-size: $base-font-size;
             margin-bottom: $base-line-height;
           }
@@ -3266,16 +3273,90 @@
 </div>
   </div>
 
-<!-- 
+  <div id="button-group" class="refill">
+    <div class="line-behind-text"><h6>Button Group</h6></div>
+    <div class="refill-centering"><div class="button-group">
+  <button class="active">Item</button>
+  <button>Button Group Item</button>
+  <button>Another Item</button>
+  <button>Last Item</button>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
 
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class="language-markup">
+      &lt;div class=&quot;button-group&quot;&gt;
+  &lt;button class=&quot;active&quot;&gt;Item&lt;/button&gt;
+  &lt;button&gt;Button Group Item&lt;/button&gt;
+  &lt;button&gt;Another Item&lt;/button&gt;
+  &lt;button&gt;Last Item&lt;/button&gt;
+&lt;/div&gt;
+    </code>
+  </pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre>
+    <code class='language-scss'>
+        .button-group {
+          $button-group-background: $base-body-color;
+          $button-group-color: lighten($base-font-color, 30);
+          $button-group-border-highlight: lighten($button-group-background, 15);
+          $button-group-active: $base-accent-color;
+        
+          @include clearfix;
+          
+          button {
+            @include button(simple, $button-group-background);
+            font-weight: 400;
+            color: $button-group-color;
+            font-size: $base-font-size;
+            outline: none;
+            float: left;
+        
+            &.active {
+              @include button(simple, $button-group-active);
+              font-weight: 400;
+              font-size: $base-font-size;
+            }
+        
+            &:first-child {
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+        
+            &:not(:first-child):not(:last-child) {
+              border-left: 1px solid $button-group-border-highlight;
+              border-radius: 0;
+            }
+            
+            &:last-child {
+              border-bottom-left-radius: 0;
+              border-left: 1px solid $button-group-border-highlight;
+              border-top-left-radius: 0;
+            }
+          }
+        }
+    </code>
+  </pre>
+</div>
+
+</div>
+  </div>
 
 
   <div id="progress-bar" class="refill">
-    <h6>Progress Bar</h6>
-    <div class="progress-bar">
+    <div class="line-behind-text"><h6>Progress Bars</h6></div>
+    <div class="refill-centering"><div class="progress-bar">
   <span class="meter" style="width: 60%"></span>
-</div>
-    <div class="refill-control">
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -3303,19 +3384,20 @@
           $progress-meter-color: $progress-meter-border-color;
           $progress-background: darken($base-body-color, 5);
           $progress-animation-duration: 0.7s;
+          $progress-height: 30px;
         
           background-color: $progress-background;
           border: $progress-border;
           box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
           border-radius: $base-border-radius;
-          height: 20px;
+          height: $progress-height;
           margin: 0 auto;
           padding: 2px;
-          width: 100%;
-          margin-bottom: $base-line-height;
+          width: 50%;
         
           > span.meter {
             @include animation(progress $progress-animation-duration linear infinite);
+            @include box-sizing(border-box);
             background-color: $progress-meter-color;
             @include background-image(linear-gradient(-45deg, rgba(255,255,255, 0.15) 25%,
                                                               transparent 25%,
@@ -3327,10 +3409,8 @@
             background-repeat: repeat-x;
             border: $progress-meter-border;
             border-radius: $base-border-radius /1.5;
-            @include box-sizing(border-box);
             display: block;
             height: 100%;
-            @include transition(all 0.2s linear);
             width: 60%;
           }
         }
@@ -3383,255 +3463,11 @@
   </pre>
 </div>
 
-
-  </div>
-
-  <div id="tooltip" class="refill">
-    <h6>Tooltip</h6>
-    <a href="#" class="tooltip-item">
-  Hover for Tooltip
-  <div class="tooltip">Tooltip text</div>
-</a>
-    <div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
 </div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;a href=&quot;#&quot; class=&quot;tooltip-item&quot;&gt;
-  Hover for Tooltip
-  &lt;div class=&quot;tooltip&quot;&gt;Tooltip text&lt;/div&gt;
-&lt;/a&gt;
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        $tooltip-color: transparentize($dark-gray, 0.1);
-        $tooltip-placement: top; // "top" or "bottom"
-        
-        @mixin tooltip($position) {
-          position: relative;
-          $opposite-position: bottom;
-        
-          @if ($position == top) {
-            $opposite-position: bottom;
-          }
-        
-          @else if ($position == bottom) {
-            $opposite-position: top;
-          }
-        
-          &:hover {
-            .tooltip {
-              opacity: 1;
-              visibility: visible;
-            }
-          }
-        
-          .tooltip {
-            @include position(absolute, 0 0 0 50%);
-            @include transition(all 0.15s linear);
-            @include box-sizing(border-box);
-            #{$position}: -55px;
-            background-color: $tooltip-color;
-            border-radius: $base-border-radius;
-            color: white;
-            font-weight: normal;
-            margin-left: -(em(200)/2);
-            opacity: 0;
-            padding: 0.5em 1em;
-            text-align: center;
-            text-overflow: ellipsis;
-            text-shadow: 0 1px 0 darken(rgb(80,80,80), 4%);
-            text-transform: none;
-            visibility: hidden;
-            white-space: nowrap;
-            width: em(200);
-            z-index: 10;
-        
-            &:after {
-              @include size(0);
-              @include position(absolute, 0 0 0 em(200)/2);
-              border: 8px solid transparent;
-              border-#{$position}-color: $tooltip-color;
-              content: '';
-              pointer-events: none;
-              #{$opposite-position}: -15px;
-              $position: auto;
-            }
-          }
-        }
-        
-        a.tooltip-item {
-          @include button(simple, $base-border-color);
-          @include tooltip($tooltip-placement);
-          font-size: $base-font-size;
-          margin-bottom: $base-line-height;
-          display: block;
-          max-width: 13em;
-          text-align: center;
-        }
-    </code>
-  </pre>
-</div>
-
-
-  </div>
-
-
-
-
-
-
-
-  
-
-
-  <div id="breadcrumbs" class="refill">
-    <h6>Breadcrumbs</h6>
-    <div class="breadcrumb">
-  <a href="#">One</a>
-  <a href="#">Two</a>
-  <a href="#">Three</a>
-  <a href="#">Four</a>
-  <a href="#">Five</a>
-  <a href="#">Six</a>
-</div>
-    <div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;breadcrumb&quot;&gt;
-  &lt;a href=&quot;#&quot;&gt;One&lt;/a&gt;
-  &lt;a href=&quot;#&quot;&gt;Two&lt;/a&gt;
-  &lt;a href=&quot;#&quot;&gt;Three&lt;/a&gt;
-  &lt;a href=&quot;#&quot;&gt;Four&lt;/a&gt;
-  &lt;a href=&quot;#&quot;&gt;Five&lt;/a&gt;
-  &lt;a href=&quot;#&quot;&gt;Six&lt;/a&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .breadcrumb { 
-          $breadcrumb-border-color: $base-border-color;
-          $breadcrumb-border: 1px solid $breadcrumb-border-color;
-          $breadcrumb-height: $base-line-height * 1.5;
-          $breadcrumb-arrow-color: $breadcrumb-border-color;
-          $breadcrumb-background: $base-body-color;
-          $breadcrumb-inactive-hover-color: $breadcrumb-background;
-          $breadcrumb-color: $medium-gray;
-          $breadcrumb-color-hover: $base-accent-color;
-          $breadcrumb-color-active: $breadcrumb-color;
-        
-          @include inline-block;
-          border-radius: $base-border-radius;
-          margin: 0;
-          padding: 0;
-          border-radius: $base-border-radius;
-          display: block;
-          margin-bottom: $base-line-height;
-        
-          a {
-            @include inline-block;
-            background-color: $breadcrumb-background;
-            border: $breadcrumb-border;
-            color: $breadcrumb-color;
-            line-height: $breadcrumb-height;
-            margin-right: -5px;
-            font-size: .8em;
-            padding: 0 $breadcrumb-height/4 0 $breadcrumb-height/2;
-            position: relative;
-            text-decoration: none;
-        
-            &:first-child {
-              padding-left: $breadcrumb-height/2;
-              border-top-left-radius: $base-border-radius;
-              border-bottom-left-radius: $base-border-radius;
-            }
-        
-            &:last-child {
-              background-color: $breadcrumb-background;
-              color: $breadcrumb-color-active;
-              border-bottom-right-radius: $base-border-radius;
-              border-top-right-radius: $base-border-radius;
-              padding-right: $breadcrumb-height/2;
-            }
-        
-            &:hover {
-              color: $breadcrumb-color-hover;
-              background-color: $breadcrumb-inactive-hover-color;
-            }
-        
-            &:hover:after {
-              border-left-color: $breadcrumb-inactive-hover-color;;
-            }
-        
-            &:after,
-            &:before {
-              @include position(absolute, 0px auto 0px 100%);
-              border-bottom: $breadcrumb-height/2 solid transparent;
-              border-left: $breadcrumb-height/4 solid transparent;
-              border-top: $breadcrumb-height/2 solid transparent;
-              content: '';
-              display: block;
-              margin: auto;
-              z-index: 2;
-            }
-        
-            &:last-child:after,
-            &:last-child:before {
-               border: none;
-            }
-        
-            &:before {
-              border-left-color: $breadcrumb-arrow-color;
-              margin-left: 1px;
-              z-index: 1;
-            }
-            &:after {
-              border-left-color: $breadcrumb-background;
-            }
-        
-            @include media($medium-screen) {
-              font-size: 1em;
-              padding: 0 $breadcrumb-height/2 0 $breadcrumb-height/1.5;
-            }
-          }
-        }
-        
-    </code>
-  </pre>
-</div>
-
-
-  </div>
-
-
-  <div id="button-group" class="refill">
-    <div class="line-behind-text"><h6>Button Group</h6></div>
-    <div class="refill-centering"><div class="button-group">
-  <button class="active">Item</button>
-  <button>Item</button>
-  <button>Item</button>
-  <button>Item</button>
-  <button>Item</button>
+    <div class="refill-centering"><div class="progress-bar-indication">
+  <span class="meter" style="width: 50%">
+    <p>60%</p>
+  </span>
 </div></div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
@@ -3642,12 +3478,10 @@
   <a href="#" class="copy-source">Copy</a>
   <pre>
     <code class="language-markup">
-      &lt;div class=&quot;button-group&quot;&gt;
-  &lt;button class=&quot;active&quot;&gt;Item&lt;/button&gt;
-  &lt;button&gt;Item&lt;/button&gt;
-  &lt;button&gt;Item&lt;/button&gt;
-  &lt;button&gt;Item&lt;/button&gt;
-  &lt;button&gt;Item&lt;/button&gt;
+      &lt;div class=&quot;progress-bar-indication&quot;&gt;
+  &lt;span class=&quot;meter&quot; style=&quot;width: 50%&quot;&gt;
+    &lt;p&gt;60%&lt;/p&gt;
+  &lt;/span&gt;
 &lt;/div&gt;
     </code>
   </pre>
@@ -3657,575 +3491,62 @@
   <a href="#" class="copy-source">Copy</a>
   <pre>
     <code class='language-scss'>
-        $button-group-background: lighten($base-border-color, 10);
-        $button-group-border-highlight: lighteni($button-group-background, 15);
-        $button-group-active: $blue;
+        .progress-bar-indication {
+          $progress-border-color: $base-border-color;
+          $progress-border: 1px solid $progress-border-color;
+          $progress-meter-border-color: $base-accent-color;
+          $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
+          $progress-meter-color: $progress-meter-border-color;
+          $progress-background: darken($base-body-color, 5);
+          $progress-animation-duration: 0.7s;
+          $progress-color: white;
         
-        .button-group {
-          @include clearfix;
-          margin-bottom: $base-line-height;
-          
-          button {
-            @include button(simple, $button-group-background);
-            font-size: $base-font-size;
-            float: left;
-        
-            &.active {
-              @include button(simple, $button-group-active);
-              font-size: $base-font-size;
-            }
-        
-            &:first-child {
-              border-top-right-radius: 0;
-              border-bottom-right-radius: 0;
-            }
-            &:not(:first-child):not(:last-child) {
-              border-left: 1px solid $button-group-border-highlight;
-              border-radius: 0;
-            }
-            &:last-child {
-              border-bottom-left-radius: 0;
-              border-left: 1px solid $button-group-border-highlight;
-              border-top-left-radius: 0;
-            }
-          }
-        }
-    </code>
-  </pre>
-</div>
-
-</div>
-  </div>
-
-
-  <div id="item-list" class="refill">
-    <h6>Item List</h6>
-    <ul class="item-list">  		
-	<li>
-		<div class="item-list-image"></div>
-			<h5><a href="">Title</a></h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem explicabo possimus qui nesciunt. Ipsa, tempora, et mollitia quam dolores magnam temporibus necessitatibus quisquam ad repellendus natus facere voluptates quasi commodi.</p>
-	</li>
-
-	<li>
-		<div class="item-list-image"></div>
-			<h5><a href="">Title</a></h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, nisi, necessitatibus ipsam et quis blanditiis quos mollitia suscipit reiciendis totam aspernatur molestias officiis natus aperiam minus molestiae quod quibusdam ab?</p>
-	</li>
-
-	<li>
-		<div class="item-list-image"></div>
-			<h5><a href="">Title</a></h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, consequatur, ipsam, quidem dolorum sint placeat deserunt natus nesciunt officiis hic architecto omnis obcaecati minus optio ut. Necessitatibus ullam qui hic!</p>
-	</li>
-
-	<li>
-		<div class="item-list-image"></div>
-			<h5><a href="">Title</a></h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, sit, vel, sequi dolorum tempora quo velit saepe provident accusamus veniam maxime at cumque excepturi debitis natus eius consequuntur cum inventore!</p>
-	</li>	  		
-</ul>
-    <div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;ul class=&quot;item-list&quot;&gt;  		
-	&lt;li&gt;
-		&lt;div class=&quot;item-list-image&quot;&gt;&lt;/div&gt;
-			&lt;h5&gt;&lt;a href=&quot;&quot;&gt;Title&lt;/a&gt;&lt;/h5&gt;
-			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem explicabo possimus qui nesciunt. Ipsa, tempora, et mollitia quam dolores magnam temporibus necessitatibus quisquam ad repellendus natus facere voluptates quasi commodi.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;div class=&quot;item-list-image&quot;&gt;&lt;/div&gt;
-			&lt;h5&gt;&lt;a href=&quot;&quot;&gt;Title&lt;/a&gt;&lt;/h5&gt;
-			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, nisi, necessitatibus ipsam et quis blanditiis quos mollitia suscipit reiciendis totam aspernatur molestias officiis natus aperiam minus molestiae quod quibusdam ab?&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;div class=&quot;item-list-image&quot;&gt;&lt;/div&gt;
-			&lt;h5&gt;&lt;a href=&quot;&quot;&gt;Title&lt;/a&gt;&lt;/h5&gt;
-			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, consequatur, ipsam, quidem dolorum sint placeat deserunt natus nesciunt officiis hic architecto omnis obcaecati minus optio ut. Necessitatibus ullam qui hic!&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;div class=&quot;item-list-image&quot;&gt;&lt;/div&gt;
-			&lt;h5&gt;&lt;a href=&quot;&quot;&gt;Title&lt;/a&gt;&lt;/h5&gt;
-			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, sit, vel, sequi dolorum tempora quo velit saepe provident accusamus veniam maxime at cumque excepturi debitis natus eius consequuntur cum inventore!&lt;/p&gt;
-	&lt;/li&gt;	  		
-&lt;/ul&gt;
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        $item-list-border-color: $base-border-color;
-        $item-list-border: 1px solid $item-list-border-color;
-        
-        $item-list-background: lighten($item-list-border-color, 10);
-        
-        ul.item-list {
-          @include clearfix;
-          $item-list-height: 5em;
-          
-          li {
-            margin-bottom: $base-line-height;
-        
-            .item-list-image {
-              float: left;
-              width: $item-list-height;
-              height: $item-list-height;
-              margin-right: 1em;
-              border: $item-list-border;
-              border-radius: $base-border-radius;
-              background-color: $item-list-background;
-            }
-        
-            p {
-              overflow: hidden;
-              text-overflow: ellipsis;
-              display: -webkit-box;
-              -webkit-line-clamp: 2;
-              -webkit-box-orient: vertical;
-            }
-        
-            @include media($large-screen) {
-              @include span-columns(6);
-              @include omega(2n);
-            }
-          }
-        }
-    </code>
-  </pre>
-</div>
-
-
-  </div>
-  
-
-  <div id="master-detail" class="refill">
-    <h6>Master and Detail</h6>
-    <div class="master-detail">
-	<div class="master">
-		<ul>
-			<li>
-				<h5>Master item 1</h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, officiis, tempora hic quasi excepturi architecto voluptatibus repellendus dolore cumque ipsum fugit minima eaque doloremque facere corrupti beatae deserunt velit est!</p>
-			</li>
-			<li>
-				<h5>Master item 2</h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nemo ea officia dignissimos quo vero iure! Quasi, mollitia, esse placeat distinctio asperiores aspernatur quibusdam quas tempore illo debitis quis perferendis!</p>
-			</li>
-			<li>
-				<h5>Master item 3</h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat porro quis numquam quod. Animi, quam, ducimus, nostrum, consectetur soluta a nulla in earum modi tempora iure temporibus perferendis dignissimos rem.</p>
-			</li>
-			<li>
-				<h5>Master item 4</h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, laboriosam, minus, accusantium excepturi vero quisquam possimus assumenda corrupti aliquid dignissimos est dolor dicta nihil quia dolorum sed reprehenderit rerum quo.</p>
-			</li>
-			<li>
-				<h5>Master item 5</h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, natus, consequatur odit suscipit tempore repellat voluptas labore fugit ipsam dolores iusto praesentium dignissimos sunt doloribus incidunt deleniti adipisci pariatur eos.</p>
-			</li>
-			<li>
-				<h5>Master item 6</h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, aperiam recusandae magnam sunt vitae eligendi magni unde repudiandae ab voluptate labore tempore iure pariatur numquam soluta rem temporibus explicabo vel.</p>
-			</li>
-		</ul>	
-	</div>
-	<div class="detail">
-		<h3>Master item 10</h3>
-		<br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, laudantium corporis dolorum natus architecto nisi praesentium accusantium dignissimos dolor totam voluptatum molestias nostrum autem soluta delectus alias quisquam ullam recusandae.</p>
-	</div>
-</div>
-    <div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;master-detail&quot;&gt;
-	&lt;div class=&quot;master&quot;&gt;
-		&lt;ul&gt;
-			&lt;li&gt;
-				&lt;h5&gt;Master item 1&lt;/h5&gt;
-				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, officiis, tempora hic quasi excepturi architecto voluptatibus repellendus dolore cumque ipsum fugit minima eaque doloremque facere corrupti beatae deserunt velit est!&lt;/p&gt;
-			&lt;/li&gt;
-			&lt;li&gt;
-				&lt;h5&gt;Master item 2&lt;/h5&gt;
-				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nemo ea officia dignissimos quo vero iure! Quasi, mollitia, esse placeat distinctio asperiores aspernatur quibusdam quas tempore illo debitis quis perferendis!&lt;/p&gt;
-			&lt;/li&gt;
-			&lt;li&gt;
-				&lt;h5&gt;Master item 3&lt;/h5&gt;
-				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat porro quis numquam quod. Animi, quam, ducimus, nostrum, consectetur soluta a nulla in earum modi tempora iure temporibus perferendis dignissimos rem.&lt;/p&gt;
-			&lt;/li&gt;
-			&lt;li&gt;
-				&lt;h5&gt;Master item 4&lt;/h5&gt;
-				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, laboriosam, minus, accusantium excepturi vero quisquam possimus assumenda corrupti aliquid dignissimos est dolor dicta nihil quia dolorum sed reprehenderit rerum quo.&lt;/p&gt;
-			&lt;/li&gt;
-			&lt;li&gt;
-				&lt;h5&gt;Master item 5&lt;/h5&gt;
-				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, natus, consequatur odit suscipit tempore repellat voluptas labore fugit ipsam dolores iusto praesentium dignissimos sunt doloribus incidunt deleniti adipisci pariatur eos.&lt;/p&gt;
-			&lt;/li&gt;
-			&lt;li&gt;
-				&lt;h5&gt;Master item 6&lt;/h5&gt;
-				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, aperiam recusandae magnam sunt vitae eligendi magni unde repudiandae ab voluptate labore tempore iure pariatur numquam soluta rem temporibus explicabo vel.&lt;/p&gt;
-			&lt;/li&gt;
-		&lt;/ul&gt;	
-	&lt;/div&gt;
-	&lt;div class=&quot;detail&quot;&gt;
-		&lt;h3&gt;Master item 10&lt;/h3&gt;
-		&lt;br&gt;
-		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, laudantium corporis dolorum natus architecto nisi praesentium accusantium dignissimos dolor totam voluptatum molestias nostrum autem soluta delectus alias quisquam ullam recusandae.&lt;/p&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .master-detail {  
-          $master-detail-border-color: $base-border-color;
-          $master-detail-background: lighten($master-detail-border-color, 10);
-          $master-detail-height: 400px;
-          $master-detail-border: 1px solid $master-detail-border-color;
-          
+          background-color: $progress-background;
+          border: $progress-border;
+          box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
           border-radius: $base-border-radius;
-          @include clearfix;
-          border: $master-detail-border;  
-          margin-bottom: $base-line-height;
+          margin: 0 auto;
+          width: 50%;
         
-          .master {
-            @include media($medium-screen) {
-              width: 30%;
-              float: left;
-              background-color: $master-detail-background;
-            }
-            ul {
-              height: $master-detail-height;
-              overflow: scroll;
-              overflow-x: hidden;
-        
-              li {
-                padding: 1em;
-                border-bottom: $master-detail-border;
-                border-right: $master-detail-border;
-                
-                &:last-child {
-                  border-bottom: 0;
-                }
-        
-                p {
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-                  display: -webkit-box;
-                  -webkit-line-clamp: 2;
-                  -webkit-box-orient: vertical;
-                }
-              }
-            }
+          > span.meter {
+            @include box-sizing(border-box);
+            background-color: $progress-meter-color;
+            background-size: 40px 40px;
+            background-repeat: repeat-x;
+            border: $progress-meter-border;
+            border-radius: $base-border-radius /1.5;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            display: block;
+            height: 100%;
+            width: 60%;
           }
         
-          .detail {
-            height: $master-detail-height;
-            display: none;
-        
-            @include media($medium-screen) {
-              width: 70%;
-              float: right;
-              padding: 1em;
-              display: block;
-            }
+          p {
+            margin-bottom: 0;
+            padding: .1em .5em;
+            font-weight: 800;
+            color: $progress-color;    
+            text-shadow: 0 0 1px black;
           }
         }
     </code>
   </pre>
 </div>
 
-
-  </div>
-  
-
-  <div id="sidebar-layout" class="refill">
-    <h6>Sidebar Layout</h6>
-    <div class="sidebar-layout">
-	<aside>
-		<ul>
-			<li>Sidebar Item 1</li>
-			<li>Sidebar Item 2</li>
-			<li>Sidebar Item 3</li>
-			<li>Sidebar Item 4</li>
-			<li>Sidebar Item 5</li>
-			<li>Sidebar Item 1</li>
-			<li>Sidebar Item 2</li>
-			<li>Sidebar Item 2</li>
-		</ul>
-	</aside>
-	<div class="content">
-		<section>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, autem, ipsam, suscipit, eligendi exercitationem nulla tenetur voluptates quos earum itaque tempore a mollitia optio nemo error quisquam reiciendis distinctio amet.
-		</section>
-		<section>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, autem, ipsam, suscipit, eligendi exercitationem nulla tenetur voluptates quos earum itaque tempore a mollitia optio nemo error quisquam reiciendis distinctio amet.
-		</section>
-		<section>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, autem, ipsam, suscipit, eligendi exercitationem nulla tenetur voluptates quos earum itaque tempore a mollitia optio nemo error quisquam reiciendis distinctio amet.
-		</section>
-		<section>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, autem, ipsam, suscipit, eligendi exercitationem nulla tenetur voluptates quos earum itaque tempore a mollitia optio nemo error quisquam reiciendis distinctio amet.
-		</section>
-	</div>
 </div>
-    <div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;sidebar-layout&quot;&gt;
-	&lt;aside&gt;
-		&lt;ul&gt;
-			&lt;li&gt;Sidebar Item 1&lt;/li&gt;
-			&lt;li&gt;Sidebar Item 2&lt;/li&gt;
-			&lt;li&gt;Sidebar Item 3&lt;/li&gt;
-			&lt;li&gt;Sidebar Item 4&lt;/li&gt;
-			&lt;li&gt;Sidebar Item 5&lt;/li&gt;
-			&lt;li&gt;Sidebar Item 1&lt;/li&gt;
-			&lt;li&gt;Sidebar Item 2&lt;/li&gt;
-			&lt;li&gt;Sidebar Item 2&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/aside&gt;
-	&lt;div class=&quot;content&quot;&gt;
-		&lt;section&gt;
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, autem, ipsam, suscipit, eligendi exercitationem nulla tenetur voluptates quos earum itaque tempore a mollitia optio nemo error quisquam reiciendis distinctio amet.
-		&lt;/section&gt;
-		&lt;section&gt;
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, autem, ipsam, suscipit, eligendi exercitationem nulla tenetur voluptates quos earum itaque tempore a mollitia optio nemo error quisquam reiciendis distinctio amet.
-		&lt;/section&gt;
-		&lt;section&gt;
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, autem, ipsam, suscipit, eligendi exercitationem nulla tenetur voluptates quos earum itaque tempore a mollitia optio nemo error quisquam reiciendis distinctio amet.
-		&lt;/section&gt;
-		&lt;section&gt;
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, autem, ipsam, suscipit, eligendi exercitationem nulla tenetur voluptates quos earum itaque tempore a mollitia optio nemo error quisquam reiciendis distinctio amet.
-		&lt;/section&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        $sidebar-layout-border-color: $base-border-color;
-        $sidebar-layout-border: 1px solid $sidebar-layout-border-color;
-        $sidebar-layout-section-background: lighten($sidebar-layout-border-color, 10);
-        
-        .sidebar-layout {
-        	@include clearfix;
-        	height: 100%;
-        	border: $sidebar-layout-border;
-        	margin-bottom: $base-line-height;
-        
-        	aside {
-        		height: 100%;
-        		@include media($medium-screen) {
-        			@include span-columns(3, block-collapse);
-        		}
-        		
-        		ul {
-        			height: 100%;
-        			padding: 1em;
-        			@include media($medium-screen) {
-        				padding: 0;
-        				border-right: $sidebar-layout-border;
-        			}
-        		}
-        
-        		li {
-        			margin-right: 1em;
-        			margin-bottom: 1em;
-        			display: inline-block;
-        			@include media($medium-screen) {
-        				margin: 0;
-        				padding: 1em;
-        				display: block;
-        				border-bottom: $sidebar-layout-border;
-        			}
-        		}
-        	}
-        
-        	.content {
-        		@include media($medium-screen) {
-        			@include span-columns(9);	
-        		}
-        		background-color: $base-body-color;
-        		padding: 1em;
-        
-        		section {
-        			@include media($medium-screen) {
-        				@include span-columns(6);	
-        				@include omega(2n);
-        			}
-        			border: $sidebar-layout-border;
-        			margin-bottom: 1em;
-        			background-color: $sidebar-layout-section-background;
-        			padding: 1em;
-        		}	
-        	}
-        }
-    </code>
-  </pre>
-</div>
-
-
   </div>
 
-  <div id="info-section" class="refill">
-    <h6>Info Section</h6> 
-    <div class="info-section">
-	<ul>
-		<li>
-			<div class="img-wrapper">
-				<img src="" alt="">
-			</div>
-			<h3>Lorem</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, cum, placeat obcaecati itaque nobis esse numquam eos tenetur rerum ipsa nam commodi blanditiis ab voluptas a assumenda eveniet modi mollitia.</p>
-		</li>
-		<li>
-			<div class="img-wrapper">
-				<img src="" alt="">
-			</div>
-			<h3>Lorem</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, aliquam, quaerat facilis nisi culpa quia fugit hic doloribus tenetur perspiciatis tempora labore ullam at. Sapiente porro enim est fuga repudiandae?</p>
-		</li>
-		<li>
-			<div class="img-wrapper">
-				<img src="" alt="">
-			</div>
-			<h3>Lorem</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, nihil nisi sequi eaque voluptate quaerat maiores quibusdam inventore ea magni praesentium asperiores odio assumenda totam corporis cupiditate odit labore unde.</p>
-		</li>
-	</ul>
-</div>
-    <div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
 
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;info-section&quot;&gt;
-	&lt;ul&gt;
-		&lt;li&gt;
-			&lt;div class=&quot;img-wrapper&quot;&gt;
-				&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
-			&lt;/div&gt;
-			&lt;h3&gt;Lorem&lt;/h3&gt;
-			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, cum, placeat obcaecati itaque nobis esse numquam eos tenetur rerum ipsa nam commodi blanditiis ab voluptas a assumenda eveniet modi mollitia.&lt;/p&gt;
-		&lt;/li&gt;
-		&lt;li&gt;
-			&lt;div class=&quot;img-wrapper&quot;&gt;
-				&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
-			&lt;/div&gt;
-			&lt;h3&gt;Lorem&lt;/h3&gt;
-			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, aliquam, quaerat facilis nisi culpa quia fugit hic doloribus tenetur perspiciatis tempora labore ullam at. Sapiente porro enim est fuga repudiandae?&lt;/p&gt;
-		&lt;/li&gt;
-		&lt;li&gt;
-			&lt;div class=&quot;img-wrapper&quot;&gt;
-				&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
-			&lt;/div&gt;
-			&lt;h3&gt;Lorem&lt;/h3&gt;
-			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, nihil nisi sequi eaque voluptate quaerat maiores quibusdam inventore ea magni praesentium asperiores odio assumenda totam corporis cupiditate odit labore unde.&lt;/p&gt;
-		&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
-</div>
-
-<div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .info-section {
-        	$info-section-border-color: $base-border-color;
-        	$info-section-border: 1px solid $info-section-border-color;
-        	$info-section-color: lighten($info-section-border-color, 10);
-        	$info-section-img-background: $info-section-border-color;
-        	
-        	@include clearfix;
-        	background-color: $info-section-color;
-        	border-radius: $base-border-radius;
-        	border: $info-section-border;
-        	padding: 4em;
-        	margin-bottom: $base-line-height;
-        
-        	@if lightness($info-section-color) < 50% {
-        		color: white;
-        	}
-        
-        	img {
-        		content: '';
-        	}
-        
-        	h3 {
-        		margin-bottom: 0.5em;
-        	}
-        
-        	li {
-        		@include media($medium-screen) {
-        			@include span-columns(4);
-        			@include omega(3n);
-        		}
-        	}
-        
-        	.img-wrapper {
-        	  display: block;
-        	  margin: 40px auto;
-        	  height: 200px;
-        	  width: 200px;
-        	  border-radius: 190px;
-        	  background-color: $info-section-img-background;
-        
-        	  img {
-        	    padding: 30px;
-        	    height: 135px;
-        	    width: 135px;
-        	    display: block;
-        	    margin: auto;
-        	  }
-        	}
-        }
-        
-    </code>
-  </pre>
-</div>
+<!-- 
 
 
-  </div>
+
+
+
+
+
+
 
 
  -->
