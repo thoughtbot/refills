@@ -27,7 +27,10 @@ If a component/pattern has javascript it is placed in the HTML.erb file. Feel fr
 
 # Using Refills
 
-Each component/pattern has a set of variables at the very top of its Scss file. These pull out the most important properties of the component/pattern to enable quick changes of color, size and general appearence. 
+* Click the "Show Code" link under the component/pattern you want to copy to your project and use the "copy" buttons to get the code to your clipboard. 
+* If a component uses Javascript, that code will be included at the bottom of the HTML file.
+* Each component/pattern has a set of variables at the very top of its Scss file. These pull out the most important properties of the component/pattern to enable quick changes of color, size and general appearence. 
+
 
 #### Using Refills with a Rails project
 Refills can be used by simply copy-pasting components/patterns from the site but if you prefer adding them via rake tasks, follow these steps:
