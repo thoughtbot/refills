@@ -1,25 +1,28 @@
-.image-gradient {
-  $image-gradient-color-top: teal; 
+.image-gradient-dynamic {
+  $image-gradient-color-top: orange; 
   $transparency-top: .6;
-  $image-gradient-color-bottom: green; 
+  $image-gradient-color-bottom: teal; 
   $transparency-bottom: .6;
   $vertical-angle: 180deg;
 
-  $image-gradient-color-left: red; 
-  $transparency-left: .9;
+  $image-gradient-color-left: teal; 
+  $transparency-left: .8;
   $image-gradient-color-right: yellow; 
   $transparency-right: .8;
   $horizontal-angle: 90deg;
-  
-  background: url(https://raw.github.com/Magnus-G/Random/master/EmeraldLake.jpg);
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  padding: 12em;
+
   position: relative;
+  line-height: 0;
   width: 100%;
-  display: table;
-  margin-bottom: $base-line-height;
+  margin-bottom: $base-line-height;  
+
+  img {
+   width: 100%;
+   height: auto;
+   position: relative;
+   top: 0;
+   left: 0; 
+  }
 
   .copy {
     position: absolute;
@@ -30,6 +33,7 @@
     text-align: center;
 
     p {
+      line-height: 1.5em;
       padding: 1em 2em;
       position: relative;
       left: -50%;

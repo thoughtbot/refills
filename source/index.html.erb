@@ -126,6 +126,13 @@ title: Refills
     <div class="refill-snippet"><%= snippet('switch') %></div>
   </div>
 
+  <div id="image-gradient" class="refill">
+    <div class="line-behind-text"><h6>Image with gradient overlays</h6></div>
+    <div class="refill-centering"><%= partial "image-gradient" %></div>
+    <div class="refill-snippet"><%= snippet('image-gradient') %></div>
+    <div class="refill-centering"><%= partial "image-gradient-dynamic" %></div>
+    <div class="refill-snippet"><%= snippet('image-gradient-dynamic') %></div>
+  </div>
 
 <!-- 
 
@@ -165,13 +172,6 @@ title: Refills
     <div class="refill-snippet"><%= snippet('button-group') %></div>
   </div>
 
-
-
-  <div id="image-gradient" class="refill">
-    <h6>Image with gradient overlays</h6>
-    <%= partial "image-gradient" %>
-    <%= snippet('image-gradient') %>
-  </div>
 
   <div id="item-list" class="refill">
     <h6>Item List</h6>
