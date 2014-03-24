@@ -1,5 +1,8 @@
 # Refills
 
+## prepackaged patterns and compontents, built ontop of Bourbon, Bitters, and Neat
+
+
 [Bourbon](http://bourbon.io/) provides Sass mixins and eliminates vendor prefixes, for faster CSS coding.
 
 [Neat](http://neat.bourbon.io/) provides a lightweight grid framework.
@@ -11,7 +14,7 @@
 
 See examples and get the code snippets [here](http://thoughtbot.github.io/refills/)
 
-# Using Refills
+# Installing Dependencies
 
 [Install Bourbon](http://bourbon.io/)
 [Install Neat](http://neat.bourbon.io/)
@@ -19,7 +22,11 @@ See examples and get the code snippets [here](http://thoughtbot.github.io/refill
 Click "Show Code" under the component/pattern you want in [Refills](http://thoughtbot.github.io/refills/) and paste it into your project. 
 If a component/pattern has javascript it is placed in the HTML.erb file. Feel free to place it somewhere else in your project.
 
-#### Using with a Rails project
+# Using Refills
+
+Each component/pattern has a set of variables at the very top of its Scss file. These pull out the most important properties of the component/pattern to enable quick changes of color, size and general appearence. 
+
+#### Using Refills with a Rails project
 Refills can be used by simply copy-pasting components/patterns from the site but if you prefer adding them via rake tasks, follow these steps:
 
 Add gem to your Gemfile
