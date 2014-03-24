@@ -17,8 +17,11 @@ See examples and get the code snippets [here](http://thoughtbot.github.io/refill
 # Installing Dependencies
 
 [Install Bourbon](http://bourbon.io/)
+
 [Install Neat](http://neat.bourbon.io/)
+
 [Install Bitters](http://bitters.bourbon.io/)
+
 Click "Show Code" under the component/pattern you want in [Refills](http://thoughtbot.github.io/refills/) and paste it into your project. 
 If a component/pattern has javascript it is placed in the HTML.erb file. Feel free to place it somewhere else in your project.
 
