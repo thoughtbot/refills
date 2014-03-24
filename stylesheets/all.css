@@ -2902,7 +2902,7 @@ header.navigation {
           height: 12px;
           opacity: .7; }
 
-/* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
 .image-gradient {
   background: url(https://raw.github.com/Magnus-G/Random/master/EmeraldLake.jpg);
   background-size: cover;
@@ -2955,19 +2955,20 @@ header.navigation {
       bottom: 0px;
       left: 0px; }
 
-/* line 60, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient-dynamic.scss */
 .image-gradient-dynamic {
   position: relative;
   line-height: 0;
+  width: 100%;
   margin-bottom: 1.5em; }
-  /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+  /* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient-dynamic.scss */
   .image-gradient-dynamic img {
     width: 100%;
     height: auto;
     position: relative;
     top: 0;
     left: 0; }
-  /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+  /* line 27, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient-dynamic.scss */
   .image-gradient-dynamic .copy {
     position: absolute;
     left: 50%;
@@ -2975,7 +2976,7 @@ header.navigation {
     z-index: 999;
     top: 40%;
     text-align: center; }
-    /* line 81, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+    /* line 35, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient-dynamic.scss */
     .image-gradient-dynamic .copy p {
       line-height: 1.5em;
       padding: 1em 2em;
@@ -2984,25 +2985,25 @@ header.navigation {
       color: white;
       font-weight: 800;
       background-color: rgba(0, 0, 0, 0.4); }
-  /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+  /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient-dynamic.scss */
   .image-gradient-dynamic .overlay {
-    background-color: rgba(0, 128, 128, 0.4);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 128, 128, 0.4)), color-stop(100%, rgba(0, 128, 0, 0.4)));
-    background-image: -webkit-linear-gradient(-450deg, rgba(0, 128, 128, 0.4), rgba(0, 128, 0, 0.4));
-    background-image: linear-gradient(180deg,rgba(0, 128, 128, 0.4), rgba(0, 128, 0, 0.4));
+    background-color: rgba(255, 165, 0, 0.4);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 165, 0, 0.4)), color-stop(100%, rgba(0, 128, 128, 0.4)));
+    background-image: -webkit-linear-gradient(-450deg, rgba(255, 165, 0, 0.4), rgba(0, 128, 128, 0.4));
+    background-image: linear-gradient(180deg,rgba(255, 165, 0, 0.4), rgba(0, 128, 128, 0.4));
     display: block;
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px; }
-    /* line 98, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
+    /* line 52, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient-dynamic.scss */
     .image-gradient-dynamic .overlay:after {
       content: '';
-      background-color: rgba(255, 0, 0, 0.1);
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 0, 0, 0.1)), color-stop(100%, rgba(255, 255, 0, 0.2)));
-      background-image: -webkit-linear-gradient(-360deg, rgba(255, 0, 0, 0.1), rgba(255, 255, 0, 0.2));
-      background-image: linear-gradient(90deg,rgba(255, 0, 0, 0.1), rgba(255, 255, 0, 0.2));
+      background-color: rgba(0, 128, 128, 0.2);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 128, 128, 0.2)), color-stop(100%, rgba(255, 255, 0, 0.2)));
+      background-image: -webkit-linear-gradient(-360deg, rgba(0, 128, 128, 0.2), rgba(255, 255, 0, 0.2));
+      background-image: linear-gradient(90deg,rgba(0, 128, 128, 0.2), rgba(255, 255, 0, 0.2));
       display: block;
       position: absolute;
       top: 0px;
