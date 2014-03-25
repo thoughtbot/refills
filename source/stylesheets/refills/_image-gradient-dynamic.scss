@@ -26,17 +26,17 @@
 
   .copy {
     position: absolute;
+    top: 50%;
     left: 50%;
     margin: auto;
     z-index: 999;
-    top: 40%;
     text-align: center;
+    @include transform(translate(-50%, -50%));
 
     p {
       line-height: 1.5em;
       padding: 1em 2em;
       position: relative;
-      left: -50%;
       color: white;
       font-weight: 800;
       background-color: transparentize(black, .6);
