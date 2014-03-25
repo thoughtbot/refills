@@ -22,7 +22,7 @@
       <section class="inner-content">
         <div class="refills-header">
   <h1>Refills</h1>
-  <h2><span>Refills</span> are prepackaged patterns and components, built on top of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://bitters.bourbon.io/">Bitters</a>, and <a href="http://neat.bourbon.io/">Neat</a>.</h2>
+  <h2><span>Refills</span> are prepackaged patterns and compontents, built ontop of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://bitters.bourbon.io/">Bitters</a>, and <a href="http://neat.bourbon.io/">Neat</a>.</h2>
   <p>Managed by <a href="https://thoughtbot.com/">thoughtbot</a>, instructions at <a href="https://github.com/thoughtbot/refills">Github</a></p>
 </div>
 
@@ -84,10 +84,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;header class=&quot;navigation&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;header class=&quot;navigation&quot;&gt;
   &lt;div class=&quot;menu-wrapper&quot;&gt;
     &lt;a href=&quot;&quot; class=&quot;logo&quot;&gt;
       &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
@@ -129,201 +126,196 @@
     });
   });
 &lt;/script&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        header.navigation {
-          $navigation-background: $dark-gray;
-          $navigation-color: transparentize(white, 0.3);
-          $navigation-color-hover: white;
-          $navigation-height: 60px;
-          $navigation-nav-button-background: $base-accent-color;
-          $navigation-nav-button-background-hover: lighten($navigation-background, 10);
-          $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
-          $navigation-search-background: lighten($navigation-background, 5);
-          $navigation-search-border: 1px solid darken($navigation-background, 5);
-        
-          background-color: $navigation-background;
-          border-bottom: 1px solid darken($navigation-background, 10);
-          font-family: $sans-serif;
-          height: $navigation-height;
-          width: 100%;
-          z-index: 999;
-        
-          .menu-wrapper {
-            @include outer-container;
-            position: relative;
-            z-index: 9999;
-          }
-        
-          .logo {
-            float: left;    
-            max-height: $navigation-height;
-            padding-left: 1em;
-            padding-right: 2em;
-        
-            img {
-              max-height: $navigation-height;
-              padding: .8em 0;
-            }
-          }
-        
-          .menu-button {
-            color: $navigation-color;
-            cursor: pointer;
-            display: block;
-            float: right;
-            font-family: $sans-serif;
-            font-weight: 700;
-            line-height: $navigation-height;
-            margin: 0;
-            padding-right: 1em;
-            text-transform: uppercase;
-        
-            @include media ($large-screen) {
-              display: none;
-            }
-        
-            &:hover {
-              color: $navigation-color-hover;
-            }
-          }
-        
-          .nav {
-            @include media ($large-screen) {
-              float: left;
-            }
-          }
-        
-          ul#navigation-menu {    
-            clear: both;
-            -webkit-transform-style: preserve-3d; // stop webkit flicker
-            display: none;
-            margin: 0 auto;
-            overflow: hidden;
-            padding: 0;
-            width: 100%;
-            z-index: 9999;
-        
-            @include media ($large-screen) {
-              display: inline;
-              margin: 0;
-              padding: 0;
-            }
-          }
-        
-          ul li {
-            background: $navigation-background;
-            display: block;
-            line-height: $navigation-height;
-            overflow: hidden;
-            padding-right: .8em;
-            text-align: right;
-            width: 100%;
-            z-index: 9999;
-        
-            @include media ($large-screen) {
-              background: transparent;
-              display: inline;
-              line-height: $navigation-height;
-              padding-right: 2em;
-              text-decoration: none;
-              width: auto;
-            }
-        
-            a {
-              font-weight: 400;
-              color: $navigation-color;
-        
-              &:hover {
-                color: $navigation-color-hover;
-              }
-            }
-          }
-        
-          .sign-up {
-            @include media ($large-screen) {
-              @include position(absolute, 0px 0px 0 0);
-              padding-right: 1em;
-        
-              a {
-                @include transition (all 0.2s ease-in-out);
-                background: $navigation-nav-button-background;
-                border-radius: $base-border-radius; 
-                color: white;
-                font-size: .8em;  
-                font-weight: 800;
-                padding: .6em 1em;
-                text-transform: uppercase;
-        
-                &:hover {
-                  background: lighten($navigation-nav-button-background, 10);
-                }
-              }
-            }
-          }
-        
-          li.navigation-search-bar {
-            display: none;
-        
-            @include media($large-screen) {
-              @include position(absolute, 0px 76px 0 0);
-              display: inline-block;
-              line-height: 0 !important;
-              padding: 13px 30px; // this to get around Firefox/Opera line-height "bug"
-            }
-          }
-        
-          .search-bar {
-            $search-bar-border-color: $base-border-color;
-            $search-bar-border: 1px solid $search-bar-border-color;
-            $search-bar-background: lighten($search-bar-border-color, 10);
-        
-            width: 19em;
-            position: relative; 
-            display: inline-block;
-        
-            input {
-              @include box-sizing(border-box);
-              display: block;
-            }
-        
-            .search-and-submit {
-              position: relative;
-        
-              input[type=search] {
-                background: $navigation-search-background;
-                border: $navigation-search-border;
-                padding: .6em .8em;
-                font-size: .9em;
-                font-style: italic;
-                color: $navigation-color;
-                border-radius: $base-border-radius * 2;
-                margin: 0;
-              }
-        
-              button[type=submit] {
-                @include button(simple, lighten($navigation-search-background, 10));
-                @include position(absolute, 0.3em 0.3em 0.3em 0);
-                outline: none;
-                padding: 5px 15px;
-        
-                img {
-                  height: 12px;
-                  opacity: .7;
-                }
-              }
-            }
-          }
+  <pre><code class='language-scss'>header.navigation {
+  $navigation-background: $dark-gray;
+  $navigation-color: transparentize(white, 0.3);
+  $navigation-color-hover: white;
+  $navigation-height: 60px;
+  $navigation-nav-button-background: $base-accent-color;
+  $navigation-nav-button-background-hover: lighten($navigation-background, 10);
+  $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
+  $navigation-search-background: lighten($navigation-background, 5);
+  $navigation-search-border: 1px solid darken($navigation-background, 5);
+
+  background-color: $navigation-background;
+  border-bottom: 1px solid darken($navigation-background, 10);
+  font-family: $sans-serif;
+  height: $navigation-height;
+  width: 100%;
+  z-index: 999;
+
+  .menu-wrapper {
+    @include outer-container;
+    position: relative;
+    z-index: 9999;
+  }
+
+  .logo {
+    float: left;    
+    max-height: $navigation-height;
+    padding-left: 1em;
+    padding-right: 2em;
+
+    img {
+      max-height: $navigation-height;
+      padding: .8em 0;
+    }
+  }
+
+  .menu-button {
+    color: $navigation-color;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-family: $sans-serif;
+    font-weight: 700;
+    line-height: $navigation-height;
+    margin: 0;
+    padding-right: 1em;
+    text-transform: uppercase;
+
+    @include media ($large-screen) {
+      display: none;
+    }
+
+    &:hover {
+      color: $navigation-color-hover;
+    }
+  }
+
+  .nav {
+    @include media ($large-screen) {
+      float: left;
+    }
+  }
+
+  ul#navigation-menu {    
+    clear: both;
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    display: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    z-index: 9999;
+
+    @include media ($large-screen) {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  ul li {
+    background: $navigation-background;
+    display: block;
+    line-height: $navigation-height;
+    overflow: hidden;
+    padding-right: .8em;
+    text-align: right;
+    width: 100%;
+    z-index: 9999;
+
+    @include media ($large-screen) {
+      background: transparent;
+      display: inline;
+      line-height: $navigation-height;
+      padding-right: 2em;
+      text-decoration: none;
+      width: auto;
+    }
+
+    a {
+      font-weight: 400;
+      color: $navigation-color;
+
+      &:hover {
+        color: $navigation-color-hover;
+      }
+    }
+  }
+
+  .sign-up {
+    @include media ($large-screen) {
+      @include position(absolute, 0px 0px 0 0);
+      padding-right: 1em;
+
+      a {
+        @include transition (all 0.2s ease-in-out);
+        background: $navigation-nav-button-background;
+        border-radius: $base-border-radius; 
+        color: white;
+        font-size: .8em;  
+        font-weight: 800;
+        padding: .6em 1em;
+        text-transform: uppercase;
+
+        &:hover {
+          background: lighten($navigation-nav-button-background, 10);
         }
-    </code>
-  </pre>
+      }
+    }
+  }
+
+  li.navigation-search-bar {
+    display: none;
+
+    @include media($large-screen) {
+      @include position(absolute, 0px 76px 0 0);
+      display: inline-block;
+      line-height: 0 !important;
+      padding: 13px 30px; // this to get around Firefox/Opera line-height "bug"
+    }
+  }
+
+  .search-bar {
+    $search-bar-border-color: $base-border-color;
+    $search-bar-border: 1px solid $search-bar-border-color;
+    $search-bar-background: lighten($search-bar-border-color, 10);
+
+    width: 19em;
+    position: relative; 
+    display: inline-block;
+
+    input {
+      @include box-sizing(border-box);
+      display: block;
+    }
+
+    .search-and-submit {
+      position: relative;
+
+      input[type=search] {
+        background: $navigation-search-background;
+        border: $navigation-search-border;
+        padding: .6em .8em;
+        font-size: .9em;
+        font-style: italic;
+        color: $navigation-color;
+        border-radius: $base-border-radius * 2;
+        margin: 0;
+      }
+
+      button[type=submit] {
+        @include button(simple, lighten($navigation-search-background, 10));
+        @include position(absolute, 0.3em 0.3em 0.3em 0);
+        outline: none;
+        padding: 5px 15px;
+
+        img {
+          height: 12px;
+          opacity: .7;
+        }
+      }
+    }
+  }
+}
+</code></pre>
 </div>
 
 </div>
@@ -347,10 +339,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;hero&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;hero&quot;&gt;
 	&lt;div class=&quot;hero-inner&quot;&gt;
     &lt;a href=&quot;&quot; class=&quot;hero-logo&quot;&gt;&lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
 		&lt;div class=&quot;hero-copy&quot;&gt;
@@ -359,72 +348,66 @@
 		&lt;/div&gt;
     &lt;button&gt;Learn More&lt;/button&gt;
 	&lt;/div&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
+&lt;/div&gt;</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .hero {
-        	$hero-background: desaturate(darken($base-accent-color, 20), 30);	
-        	$hero-color: white;
-        
-        	background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
-        	background-color: $hero-background;
-        	background-repeat: no-repeat;
-        	background-position: top;
-        	background-size: cover;
-        	padding-bottom: 4em;
-        
-        	.hero-logo img {
-        		height: 3em;
-        		margin-bottom: 1em;
-        	}
-        
-        	.hero-inner {
-        		@include outer-container;
-        		@include clearfix;
-        		padding: 3em;
-        		margin: auto;
-        		text-align: center;
-        		color: $hero-color;
-        
-        		button {
-        			@include button(simple, $base-accent-color);
-        			font-size: $base-font-size;
-        			outline: none;
-        		}
-        
-        		.hero-copy {
-        			text-align: center;
-        			
-        			h1 {
-        				font-size: 1.4em;
-        				margin-bottom: .2em;
-        
-        				@include media($large-screen) {
-        					font-size: 1.8em;
-        				}
-        			}
-        
-        			p {
-        				margin: auto;
-        				margin-bottom: 3em;	
-        				font-weight: 200;
-        
-        				@include media($large-screen) {
-        					font-size: 1.2em;
-        					max-width: 40%;
-        				}
-        			}
-        		}
-        	}
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.hero {
+	$hero-background: desaturate(darken($base-accent-color, 20), 30);	
+	$hero-color: white;
+
+	background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
+	background-color: $hero-background;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+	padding-bottom: 4em;
+
+	.hero-logo img {
+		height: 3em;
+		margin-bottom: 1em;
+	}
+
+	.hero-inner {
+		@include outer-container;
+		@include clearfix;
+		padding: 3em;
+		margin: auto;
+		text-align: center;
+		color: $hero-color;
+
+		button {
+			@include button(simple, $base-accent-color);
+			font-size: $base-font-size;
+			outline: none;
+		}
+
+		.hero-copy {
+			text-align: center;
+			
+			h1 {
+				font-size: 1.4em;
+				margin-bottom: .2em;
+
+				@include media($large-screen) {
+					font-size: 1.8em;
+				}
+			}
+
+			p {
+				margin: auto;
+				margin-bottom: 3em;	
+				font-weight: 200;
+
+				@include media($large-screen) {
+					font-size: 1.2em;
+					max-width: 40%;
+				}
+			}
+		}
+	}
+}</code></pre>
 </div>
 
 </div>
@@ -467,10 +450,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;bullets&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;bullets&quot;&gt;
   &lt;div class=&quot;bullet three-col-bullet&quot;&gt;
     &lt;div class=&quot;bullet-icon bullet-icon-1&quot;&gt;
       &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png&quot; alt=&quot;&quot;&gt;
@@ -498,80 +478,74 @@
       &lt;p&gt;Lorem ipsum sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt; 
-&lt;/div&gt;
-    </code>
-  </pre>
+&lt;/div&gt;</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .bullets {
-          $icon-bullet-size: 3.5em;
-        
-          overflow: auto;
-          margin-bottom: $base-line-height;
-        
-          // change ".three-col-bullet" class to this for two bullet layout
-          .two-col-bullet {
-            @include media($large-screen) {
-              @include span-columns(6);
-              @include omega(2n);  
-            } 
-          }
-          
-          .three-col-bullet {
-            @include media($large-screen) {
-              @include span-columns(4);
-              @include omega(3n);
-            }
-          }
-        
-          // change ".three-col-bullet" class to this for four bullet layout
-          .four-col-bullet {
-            @include media($large-screen) {
-              @include span-columns(3);
-              @include omega(4n);
-            }
-          }
-        
-          .bullet-icon {
-            float: left;
-            background: $base-accent-color;
-            padding: $icon-bullet-size /4;
-            border-radius: 50%;
-            width: $icon-bullet-size;
-            height: $icon-bullet-size;
-          }
-        
-          .bullet-icon-1 {
-            background: $base-accent-color;
-          }
-        
-          .bullet-icon-2 {
-            background: adjust-hue($base-accent-color, -50);
-          }
-        
-          .bullet-icon-3 {
-            background: adjust-hue($base-accent-color, -140);
-          }
-        
-          .bullet-content {
-            margin-left: $icon-bullet-size *1.4;
-            margin-bottom: 2em;
-          }
-        
-          h2 {
-            font-size: $icon-bullet-size /2.5;
-            padding-top: $icon-bullet-size /7;
-            margin-bottom: $icon-bullet-size /6;
-            border-bottom: 1px solid transparentize($base-font-color, .8);
-            display: inline-block;
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.bullets {
+  $icon-bullet-size: 3.5em;
+
+  overflow: auto;
+  margin-bottom: $base-line-height;
+
+  // change ".three-col-bullet" class to this for two bullet layout
+  .two-col-bullet {
+    @include media($large-screen) {
+      @include span-columns(6);
+      @include omega(2n);  
+    } 
+  }
+  
+  .three-col-bullet {
+    @include media($large-screen) {
+      @include span-columns(4);
+      @include omega(3n);
+    }
+  }
+
+  // change ".three-col-bullet" class to this for four bullet layout
+  .four-col-bullet {
+    @include media($large-screen) {
+      @include span-columns(3);
+      @include omega(4n);
+    }
+  }
+
+  .bullet-icon {
+    float: left;
+    background: $base-accent-color;
+    padding: $icon-bullet-size /4;
+    border-radius: 50%;
+    width: $icon-bullet-size;
+    height: $icon-bullet-size;
+  }
+
+  .bullet-icon-1 {
+    background: $base-accent-color;
+  }
+
+  .bullet-icon-2 {
+    background: adjust-hue($base-accent-color, -50);
+  }
+
+  .bullet-icon-3 {
+    background: adjust-hue($base-accent-color, -140);
+  }
+
+  .bullet-content {
+    margin-left: $icon-bullet-size *1.4;
+    margin-bottom: 2em;
+  }
+
+  h2 {
+    font-size: $icon-bullet-size /2.5;
+    padding-top: $icon-bullet-size /7;
+    margin-bottom: $icon-bullet-size /6;
+    border-bottom: 1px solid transparentize($base-font-color, .8);
+    display: inline-block;
+  }
+}</code></pre>
 </div>
 
 </div>
@@ -644,10 +618,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;cards&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;cards&quot;&gt;
   &lt;div class=&quot;card&quot;&gt;
     &lt;div class=&quot;card-image&quot;&gt;
       &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/mountains.png&quot; alt=&quot;&quot;&gt;
@@ -705,149 +676,144 @@
       &lt;/ul&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
+&lt;/div&gt;</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .cards {
-          @include clearfix;
-        }
-        
-        .card {
-          $card-border-color: $base-border-color;
-          $card-border: 1px solid $card-border-color;
-          $card-background: lighten($card-border-color, 10);
-          $card-header-background: $card-background;
-          $card-hover-background: lighten($card-background, 5);
-          $card-image-background: #DBD199;
-          $card-image-hover-background: lighten($card-image-background, 5);
-          $card-stats-color: lighten($base-accent-color, 10);
-        
-          @include transition (all 0.2s ease-in-out);
-          background-color: $card-background;
-          border-radius: $base-border-radius;
-          border: $card-border;
-          margin-bottom: $base-line-height;
-          cursor: pointer;
-          box-shadow: 0 2px 4px darken($base-body-color, 10);
-          position: relative;
-        
-          @include media($large-screen) {
-            @include span-columns(4);  
-            @include omega(3n);
-          }
-        
-          .card-image {
-            overflow: hidden;
-            max-height: 150px;
-        
-            img {
-              width: 100%;
-              @include transition (all 0.2s ease-in-out);
-              background: $card-image-background;
-              border-top-left-radius: $base-border-radius;
-              border-top-right-radius: $base-border-radius;
-            }
-          }
-        
-          .ribbon-wrapper {
-            $ribbon-size: 85px;
-            $ribbon-background: $base-accent-color;
-            @include size($ribbon-size);
-            overflow: hidden;
-            position: absolute;
-            top: -1px;
-            right: -1px;
-        
-            .ribbon {
-              font-size: .8em;
-              font-weight: 800;
-              text-align: center;
-              @include transform(rotate(45deg));
-              position: relative;
-              padding: 2px 7px;
-              left: -5px;
-              top: 15px;
-              width: 120px;
-              background-color: $ribbon-background;
-              color: white;
-              box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-            }
-          }
-        
-          .card-header {
-            @include transition (all 0.2s ease-in-out);
-            background-color: $card-header-background;
-            border-bottom: $card-border;
-            border-radius: $base-border-radius $base-border-radius 0 0;
-            font-weight: bold;
-            padding: $base-line-height/3 $gutter/2;
-          }
-        
-          .card-copy {
-            padding: $base-line-height/2 $gutter/2;
-            font-size: .9em;
-            line-height: 1.5em;
-          }
-        
-          .card-stats {
-            padding: $base-line-height/2 $gutter/2;
-            overflow: auto;
-        
-            ul li {
-              display: inline;
-              color: $card-stats-color;
-              font-weight: 800;
-              font-size: 1.2em;
-              float: left;
-              border-right: 1px solid transparentize($base-font-color, .8);
-              line-height: 1.1em;
-              padding: 0 .7em 0 .7em;
-        
-              &:first-child {
-                padding-left: 0;
-              }
-        
-              &:last-child {
-                border-right: 0;
-              }
-        
-              span {
-                color: $base-font-color;
-                font-size: .7em;
-                display: block;
-                font-weight: normal;
-              }
-            }
-          }
-        
-          &:hover {
-            background-color: $card-hover-background;
-            
-            .card-image img {
-              background: $card-image-hover-background;
-            }
-          
-            .card-header {
-              background-color: $card-hover-background;
-            }
-          }
-        
-          &:active {
-            background-color: $card-background;
-        
-            .card-header {
-              background-color: $card-background;
-            }
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.cards {
+  @include clearfix;
+}
+
+.card {
+  $card-border-color: $base-border-color;
+  $card-border: 1px solid $card-border-color;
+  $card-background: lighten($card-border-color, 10);
+  $card-header-background: $card-background;
+  $card-hover-background: lighten($card-background, 5);
+  $card-image-background: #DBD199;
+  $card-image-hover-background: lighten($card-image-background, 5);
+  $card-stats-color: lighten($base-accent-color, 10);
+
+  @include transition (all 0.2s ease-in-out);
+  background-color: $card-background;
+  border-radius: $base-border-radius;
+  border: $card-border;
+  margin-bottom: $base-line-height;
+  cursor: pointer;
+  box-shadow: 0 2px 4px darken($base-body-color, 10);
+  position: relative;
+
+  @include media($large-screen) {
+    @include span-columns(4);  
+    @include omega(3n);
+  }
+
+  .card-image {
+    overflow: hidden;
+    max-height: 150px;
+
+    img {
+      width: 100%;
+      @include transition (all 0.2s ease-in-out);
+      background: $card-image-background;
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+    }
+  }
+
+  .ribbon-wrapper {
+    $ribbon-size: 85px;
+    $ribbon-background: $base-accent-color;
+    @include size($ribbon-size);
+    overflow: hidden;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+
+    .ribbon {
+      font-size: .8em;
+      font-weight: 800;
+      text-align: center;
+      @include transform(rotate(45deg));
+      position: relative;
+      padding: 2px 7px;
+      left: -5px;
+      top: 15px;
+      width: 120px;
+      background-color: $ribbon-background;
+      color: white;
+      box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    }
+  }
+
+  .card-header {
+    @include transition (all 0.2s ease-in-out);
+    background-color: $card-header-background;
+    border-bottom: $card-border;
+    border-radius: $base-border-radius $base-border-radius 0 0;
+    font-weight: bold;
+    padding: $base-line-height/3 $gutter/2;
+  }
+
+  .card-copy {
+    padding: $base-line-height/2 $gutter/2;
+    font-size: .9em;
+    line-height: 1.5em;
+  }
+
+  .card-stats {
+    padding: $base-line-height/2 $gutter/2;
+    overflow: auto;
+
+    ul li {
+      display: inline;
+      color: $card-stats-color;
+      font-weight: 800;
+      font-size: 1.2em;
+      float: left;
+      border-right: 1px solid transparentize($base-font-color, .8);
+      line-height: 1.1em;
+      padding: 0 .7em 0 .7em;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      span {
+        color: $base-font-color;
+        font-size: .7em;
+        display: block;
+        font-weight: normal;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $card-hover-background;
+    
+    .card-image img {
+      background: $card-image-hover-background;
+    }
+  
+    .card-header {
+      background-color: $card-hover-background;
+    }
+  }
+
+  &:active {
+    background-color: $card-background;
+
+    .card-header {
+      background-color: $card-background;
+    }
+  }
+}
+</code></pre>
 </div>
 
 </div>
@@ -903,10 +869,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;ul class=&quot;accordion-tabs&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;ul class=&quot;accordion-tabs&quot;&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;is-active&quot;&gt;Tab Item&lt;/a&gt;
     &lt;section&gt;
       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.&lt;/p&gt;
@@ -947,116 +910,110 @@
     });
   });
 &lt;/script&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .accordion-tabs {
-          $tab-border-color: $base-border-color;
-          $tab-border: 1px solid $tab-border-color;
-          $tab-content-background: lighten($light-gray, 10);
-          $tab-active-background: $tab-content-background;
-          $tab-inactive-color: $base-body-color;
-          $tab-inactive-hover-color: darken($light-gray, 5);
-          $tab-mode: $medium-screen;
-        
-          @include clearfix;
-          @include fill-parent;
-          border: $tab-border;
-          border-radius: $base-border-radius;
-          margin-bottom: $base-line-height;
-        
-          @include media($tab-mode) {
-            border: none;
-            position: relative;
-          }
-        
-          li.tab-header-and-content {
-        
-            @include media($tab-mode) {
-              display: inline;
-            }
-        
-            &:first-child a {
-              border-top-left-radius: $base-border-radius; 
-              border-top-right-radius: $base-border-radius; 
-              border-top: 0;
-            }
-        
-            &:last-child a {
-              border-bottom-left-radius: $base-border-radius; 
-              border-bottom-right-radius: $base-border-radius; 
-        
-              @include media($tab-mode) {
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-              }
-            }
-          }
-        
-          li.tab-header-and-content a {
-            background-color: $tab-inactive-color;
-            border-top: $tab-border;
-            color: $dark-gray;
-            display: block;
-            font-weight: bold;
-            padding: $base-line-height/2 $gutter/2;
-        
-            @include media($tab-mode) {
-              @include inline-block;
-              border-top: 0;
-              border-top-right-radius: $base-border-radius;
-              border-top-left-radius: $base-border-radius;
-            }
-        
-            &:hover {
-              color: $base-link-color;
-            }
-        
-            &:focus { 
-              outline: none; 
-            }
-        
-            &.is-active {
-              background-color: $tab-active-background;
-              border-bottom: 0;
-        
-              @include media($tab-mode) {
-                background-color: $tab-active-background;
-                border: $tab-border;
-                border-bottom: 1px solid $tab-active-background;
-                margin-bottom: -1px;
-              }
-            }
-          }
-        
-          li.tab-header-and-content section {
-            padding: $base-line-height $gutter;
-            background: $tab-content-background;
-            display: none;
-            overflow: hidden;
-        
-            @include media($tab-mode) {
-              border-bottom-left-radius: $base-border-radius;
-              border-bottom-right-radius: $base-border-radius;
-              border: $tab-border;
-              float: left;
-              left: 0;
-              padding: $base-line-height/2 $gutter/2;
-        
-              p {
-                @include columns(2);
-              }
-            }
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.accordion-tabs {
+  $tab-border-color: $base-border-color;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-content-background: lighten($light-gray, 10);
+  $tab-active-background: $tab-content-background;
+  $tab-inactive-color: $base-body-color;
+  $tab-inactive-hover-color: darken($light-gray, 5);
+  $tab-mode: $medium-screen;
+
+  @include clearfix;
+  @include fill-parent;
+  border: $tab-border;
+  border-radius: $base-border-radius;
+  margin-bottom: $base-line-height;
+
+  @include media($tab-mode) {
+    border: none;
+    position: relative;
+  }
+
+  li.tab-header-and-content {
+
+    @include media($tab-mode) {
+      display: inline;
+    }
+
+    &:first-child a {
+      border-top-left-radius: $base-border-radius; 
+      border-top-right-radius: $base-border-radius; 
+      border-top: 0;
+    }
+
+    &:last-child a {
+      border-bottom-left-radius: $base-border-radius; 
+      border-bottom-right-radius: $base-border-radius; 
+
+      @include media($tab-mode) {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  li.tab-header-and-content a {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    color: $dark-gray;
+    display: block;
+    font-weight: bold;
+    padding: $base-line-height/2 $gutter/2;
+
+    @include media($tab-mode) {
+      @include inline-block;
+      border-top: 0;
+      border-top-right-radius: $base-border-radius;
+      border-top-left-radius: $base-border-radius;
+    }
+
+    &:hover {
+      color: $base-link-color;
+    }
+
+    &:focus { 
+      outline: none; 
+    }
+
+    &.is-active {
+      background-color: $tab-active-background;
+      border-bottom: 0;
+
+      @include media($tab-mode) {
+        background-color: $tab-active-background;
+        border: $tab-border;
+        border-bottom: 1px solid $tab-active-background;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  li.tab-header-and-content section {
+    padding: $base-line-height $gutter;
+    background: $tab-content-background;
+    display: none;
+    overflow: hidden;
+
+    @include media($tab-mode) {
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+      border: $tab-border;
+      float: left;
+      left: 0;
+      padding: $base-line-height/2 $gutter/2;
+
+      p {
+        @include columns(2);
+      }
+    }
+  }
+}</code></pre>
 </div>
 
 </div>
@@ -1101,10 +1058,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;table class=&quot;table-borders&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;table class=&quot;table-borders&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Header Cell 1&lt;/th&gt;
@@ -1134,100 +1088,95 @@
       &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;
-    </code>
-  </pre>
+&lt;/table&gt;</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .table-borders {
-          $table-border-color: $base-border-color;
-          $table-border: 1px solid $table-border-color;
-          $table-background: lighten($table-border-color, 10);
-          $table-header-color: lighten($table-background, 10);
-          $table-hover-color: darken($table-background, 5);
-          $table-stripe-color: darken($table-background, 4);
-          $table-stripe-color-hover: darken($table-stripe-color, 5);
-          $table-padding: 0.5em;
-        
-          border: $table-border;
-          border-left: 0px;
-          border-collapse: separate;
-          border-spacing: 0;
-          border-radius: $base-border-radius;
-        
-          tbody {
-            background-color: $table-background;
-            tr:hover > td, tr:hover > th {
-              background-color: $table-hover-color;
-            }
-            tr:nth-child(even) {
-              background-color: $table-stripe-color;
-              &:hover > td {
-                background-color: $table-stripe-color-hover;
-              }
-            }
-          }
-        
-          thead:first-of-type {
-            tr:first-child > th:first-child {
-              border-top-left-radius: $base-border-radius;
-            }
-        
-            tr:first-child > th:last-child {
-              border-top-right-radius: $base-border-radius;
-            }
-          }
-        
-          tbody:last-child {
-            tr:last-child > td:first-child {
-              border-bottom-left-radius: $base-border-radius;
-            }
-        
-            tr:last-child > td:last-child {
-              border-bottom-right-radius: $base-border-radius;
-            }
-          }
-        
-          thead {
-            th {
-              background-color: $table-header-color;
-              padding: $table-padding;
-              border-left: 1px solid $table-border-color;
-              border-bottom: 0px;
-            }
-          }
-        
-          tbody {
-            background-color: $table-background;
-        
-            td {
-              padding: $table-padding;
-              border-left: 1px solid $table-border-color;
-              border-top: 1px solid $table-border-color;
-              border-bottom: 0px;
-        
-              button {
-                @include button(simple, $table-background);
-                margin-right: 0.5em;
-                display: inline-block;
-                width: 100%;
-                margin-bottom: .3em;
-                outline: none;
-        
-                @include media($medium-screen) {
-                  width: auto;
-                  margin-bottom: 0;
-                }
-              }
-            }
-          }
+  <pre><code class='language-scss'>.table-borders {
+  $table-border-color: $base-border-color;
+  $table-border: 1px solid $table-border-color;
+  $table-background: lighten($table-border-color, 10);
+  $table-header-color: lighten($table-background, 10);
+  $table-hover-color: darken($table-background, 5);
+  $table-stripe-color: darken($table-background, 4);
+  $table-stripe-color-hover: darken($table-stripe-color, 5);
+  $table-padding: 0.5em;
+
+  border: $table-border;
+  border-left: 0px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: $base-border-radius;
+
+  tbody {
+    background-color: $table-background;
+    tr:hover > td, tr:hover > th {
+      background-color: $table-hover-color;
+    }
+    tr:nth-child(even) {
+      background-color: $table-stripe-color;
+      &:hover > td {
+        background-color: $table-stripe-color-hover;
+      }
+    }
+  }
+
+  thead:first-of-type {
+    tr:first-child > th:first-child {
+      border-top-left-radius: $base-border-radius;
+    }
+
+    tr:first-child > th:last-child {
+      border-top-right-radius: $base-border-radius;
+    }
+  }
+
+  tbody:last-child {
+    tr:last-child > td:first-child {
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    tr:last-child > td:last-child {
+      border-bottom-right-radius: $base-border-radius;
+    }
+  }
+
+  thead {
+    th {
+      background-color: $table-header-color;
+      padding: $table-padding;
+      border-left: 1px solid $table-border-color;
+      border-bottom: 0px;
+    }
+  }
+
+  tbody {
+    background-color: $table-background;
+
+    td {
+      padding: $table-padding;
+      border-left: 1px solid $table-border-color;
+      border-top: 1px solid $table-border-color;
+      border-bottom: 0px;
+
+      button {
+        @include button(simple, $table-background);
+        margin-right: 0.5em;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: .3em;
+        outline: none;
+
+        @include media($medium-screen) {
+          width: auto;
+          margin-bottom: 0;
         }
-    </code>
-  </pre>
+      }
+    }
+  }
+}
+</code></pre>
 </div>
 
 </div>
@@ -1307,10 +1256,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;vertical-tabs-container&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;vertical-tabs-container&quot;&gt;
   &lt;div class=&quot;vertical-tabs&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;js-vertical-tab vertical-tab is-active&quot; rel=&quot;tab1&quot;&gt;Item 1&lt;/a&gt;
     &lt;a href=&quot;#&quot; class=&quot;js-vertical-tab vertical-tab&quot; rel=&quot;tab2&quot;&gt;Item 2&lt;/a&gt;
@@ -1375,115 +1321,109 @@
     $(&quot;.js-vertical-tab[rel^='&quot;+accordion_activeTab+&quot;']&quot;).addClass(&quot;is-active&quot;);
   });
 &lt;/script&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .vertical-tabs-container { // small screens: accordion
-          $tab-border-color: $base-border-color;
-          $tab-border: 1px solid $tab-border-color;
-          $tab-border-radius: $base-border-radius;
-          $tab-content-background: lighten($tab-border-color, 10);
-          $tab-active-color: $tab-content-background;
-          $tab-inactive-color: $base-body-color;
-          $vertical-tabs-height: em(300);
-          $vertical-tab-mode: $medium-screen;
-        
-          @include clearfix;
-          border-radius: $tab-border-radius;
-          border: $tab-border;
-          margin-bottom: $base-line-height;
-          overflow: hidden;
-        
-          .vertical-tabs {
-            display: none;
-        
-            @include media($vertical-tab-mode) {
-              background-color: $tab-inactive-color;
-              display: inline;
-              float: left;
-              height: $vertical-tabs-height;
-              width: 20%;
-            }
-          }
-        
-          .vertical-tab {
-            @include media($vertical-tab-mode) {
-              border-bottom: $tab-border;
-              display: block;
-              font-weight: bold;
-              margin-right: -1px;
-              padding: $base-line-height/2 $gutter/2;
-        
-              &.is-active {
-                background-color: $tab-content-background;
-                margin-right: -1px;
-              }
-            }
-          }
-        
-          .vertical-tab:focus {
-            outline: none; 
-          }
-        
-          .vertical-tab-content-container {
-            display: block;
-            margin: 0 auto;
-        
-            & a:focus { 
-              outline: none; 
-            }
-        
-            @include media($vertical-tab-mode) {
-              @include inline-block;
-              @include size(80% $vertical-tabs-height);
-              background-color: $tab-content-background;
-            }
-          }
-        
-          .vertical-tab-content {
-            background-color: $tab-content-background;
-            padding: $base-line-height $gutter;
-        
-            @include media($vertical-tab-mode) {
-              border: none;
-              display: none;
-            }
-          }
-        
-          .vertical-tab-accordion-heading {
-            background-color: $tab-inactive-color;
-            border-top: $tab-border;
-            cursor: pointer;
-            display: block;
-            font-weight: bold;
-            padding: $base-line-height/2 $gutter/2;
-        
-            &:hover {
-              color: $base-accent-color;
-            }
-        
-            &:first-child {
-              border-top: none;
-            }
-        
-            &.is-active {
-              background: $tab-active-color;
-              border-bottom: none;
-            }
-        
-            @include media($vertical-tab-mode) {
-              display: none;
-            }
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.vertical-tabs-container { // small screens: accordion
+  $tab-border-color: $base-border-color;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-border-radius: $base-border-radius;
+  $tab-content-background: lighten($tab-border-color, 10);
+  $tab-active-color: $tab-content-background;
+  $tab-inactive-color: $base-body-color;
+  $vertical-tabs-height: em(300);
+  $vertical-tab-mode: $medium-screen;
+
+  @include clearfix;
+  border-radius: $tab-border-radius;
+  border: $tab-border;
+  margin-bottom: $base-line-height;
+  overflow: hidden;
+
+  .vertical-tabs {
+    display: none;
+
+    @include media($vertical-tab-mode) {
+      background-color: $tab-inactive-color;
+      display: inline;
+      float: left;
+      height: $vertical-tabs-height;
+      width: 20%;
+    }
+  }
+
+  .vertical-tab {
+    @include media($vertical-tab-mode) {
+      border-bottom: $tab-border;
+      display: block;
+      font-weight: bold;
+      margin-right: -1px;
+      padding: $base-line-height/2 $gutter/2;
+
+      &.is-active {
+        background-color: $tab-content-background;
+        margin-right: -1px;
+      }
+    }
+  }
+
+  .vertical-tab:focus {
+    outline: none; 
+  }
+
+  .vertical-tab-content-container {
+    display: block;
+    margin: 0 auto;
+
+    & a:focus { 
+      outline: none; 
+    }
+
+    @include media($vertical-tab-mode) {
+      @include inline-block;
+      @include size(80% $vertical-tabs-height);
+      background-color: $tab-content-background;
+    }
+  }
+
+  .vertical-tab-content {
+    background-color: $tab-content-background;
+    padding: $base-line-height $gutter;
+
+    @include media($vertical-tab-mode) {
+      border: none;
+      display: none;
+    }
+  }
+
+  .vertical-tab-accordion-heading {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    padding: $base-line-height/2 $gutter/2;
+
+    &:hover {
+      color: $base-accent-color;
+    }
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &.is-active {
+      background: $tab-active-color;
+      border-bottom: none;
+    }
+
+    @include media($vertical-tab-mode) {
+      display: none;
+    }
+  }
+}</code></pre>
 </div>
 
 </div>
@@ -1535,10 +1475,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;grid-items&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;grid-items&quot;&gt;
   &lt;a href=&quot;&quot; class=&quot;grid-item&quot;&gt;
     &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
     &lt;h1&gt;Grid Item&lt;/h1&gt;
@@ -1575,116 +1512,111 @@
     &lt;p&gt;Lorem ipsum dolor sit amet, elit. Rem, illum.&lt;/p&gt;
   &lt;/a&gt;
 &lt;/div&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        @mixin grid-item-columns($columns) {
-          width: (100% / 12) * $columns;
+  <pre><code class='language-scss'>@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+.grid-items {
+  $grid-items-background: $base-body-color;
+  $grid-item-background: desaturate($base-accent-color, 30); 
+  $grid-item-colors: 
+    desaturate($base-accent-color, 30), 
+    #3581A5, 
+    #5FBEBE,
+    #98C79A,
+    #A7A891, 
+    #BDCC97,
+    #979EA0;
+  $grid-item-border-size: 9px;
+  $grid-item-border: $grid-item-border-size solid $grid-items-background;
+  $grid-item-columns: 4;
+  $grid-item-big-columns: 8;
+  $grid-item-color: white;
+  $grid-item-height: 14em;
+
+  @include clearfix;
+    
+  .grid-item {
+    @include transition (all 0.2s ease-in-out);
+    height: $grid-item-height;
+    background: $grid-item-background;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    padding: 2em;
+    border-top: 0;
+    border-bottom: $grid-item-border-size solid $grid-items-background;
+    border-left: $grid-item-border-size /2 solid $grid-items-background;
+    border-right: $grid-item-border-size /2 solid $grid-items-background;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-columns);
+    }
+
+    @for $i from 1 to 8 { // assign colors from $grid-item-colors list
+      &:nth-child(#{$i}) {
+        $background-from-list: nth($grid-item-colors, $i);
+        background-color: $background-from-list;
+        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10);
+        &:hover {
+          background-color: darken($background-from-list, 10);
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: cover;
         }
-        
-        .grid-items {
-          $grid-items-background: $base-body-color;
-          $grid-item-background: desaturate($base-accent-color, 30); 
-          $grid-item-colors: 
-            desaturate($base-accent-color, 30), 
-            #3581A5, 
-            #5FBEBE,
-            #98C79A,
-            #A7A891, 
-            #BDCC97,
-            #979EA0;
-          $grid-item-border-size: 9px;
-          $grid-item-border: $grid-item-border-size solid $grid-items-background;
-          $grid-item-columns: 4;
-          $grid-item-big-columns: 8;
-          $grid-item-color: white;
-          $grid-item-height: 14em;
-        
-          @include clearfix;
-            
-          .grid-item {
-            @include transition (all 0.2s ease-in-out);
-            height: $grid-item-height;
-            background: $grid-item-background;
-            width: 100%;
-            overflow: hidden;
-            float: left;
-            padding: 2em;
-            border-top: 0;
-            border-bottom: $grid-item-border-size solid $grid-items-background;
-            border-left: $grid-item-border-size /2 solid $grid-items-background;
-            border-right: $grid-item-border-size /2 solid $grid-items-background;
-            color: white;
-            text-align: center;
-            cursor: pointer;
-        
-            @include media($large-screen) {
-              @include grid-item-columns($grid-item-columns);
-            }
-        
-            @for $i from 1 to 8 { // assign colors from $grid-item-colors list
-              &:nth-child(#{$i}) {
-                $background-from-list: nth($grid-item-colors, $i);
-                background-color: $background-from-list;
-                box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10);
-                &:hover {
-                  background-color: darken($background-from-list, 10);
-                  background-repeat: no-repeat;
-                  background-position: top;
-                  background-size: cover;
-                }
-              }
-            }
-          }
-        
-          .grid-item img {
-              display: block;
-              height: 3em;
-              margin: auto;
-              margin-bottom: 1em;
-            }
-        
-          .grid-item h1 {
-              color: $grid-item-color;
-              font-size: 1.3em;
-              margin-bottom: .4em;
-            }
-        
-          .grid-item p {
-              margin: auto;
-              color: transparentize($grid-item-color, .3);
-              @include media($medium-screen) {
-                max-width: 70%;
-              }
-            }
-        
-          .grid-item-big {
-            @include media($large-screen) {
-              @include grid-item-columns($grid-item-big-columns);
-            }
-            p {
-              @include media($medium-screen) {
-                max-width: 60%;
-              }  
-            }
-          }
-        
-          .grid-item-image {
-            background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
-            background-color: $grid-item-background;
-            background-repeat: no-repeat;
-            background-position: top;
-            background-size: cover;
-          }
-        }
-    </code>
-  </pre>
+      }
+    }
+  }
+
+  .grid-item img {
+      display: block;
+      height: 3em;
+      margin: auto;
+      margin-bottom: 1em;
+    }
+
+  .grid-item h1 {
+      color: $grid-item-color;
+      font-size: 1.3em;
+      margin-bottom: .4em;
+    }
+
+  .grid-item p {
+      margin: auto;
+      color: transparentize($grid-item-color, .3);
+      @include media($medium-screen) {
+        max-width: 70%;
+      }
+    }
+
+  .grid-item-big {
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-big-columns);
+    }
+    p {
+      @include media($medium-screen) {
+        max-width: 60%;
+      }  
+    }
+  }
+
+  .grid-item-image {
+    background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
+    background-color: $grid-item-background;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+}
+</code></pre>
 </div>
 
 </div>
@@ -1728,10 +1660,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;footer class=&quot;footer&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;footer class=&quot;footer&quot;&gt;
   &lt;div class=&quot;footer-logo&quot;&gt;
     &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
   &lt;/div&gt;
@@ -1759,93 +1688,88 @@
 
   &lt;p&gt;Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.&lt;/p&gt;
 &lt;/footer&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .footer {
-          $footer-background: desaturate(darken($base-accent-color, 20), 30);
-          $footer-color: white;
-          $footer-link-color: transparentize($footer-color, .6);
-          $footer-disclaimer-color: transparentize($footer-color, .6);
-        
-          background: $footer-background;
-          padding: $base-line-height*2 $gutter;
-          width: 100%;
-        
-          .footer-logo {
-            text-align: center;
-            margin-bottom: 2em;
-        
-            img {
-              height: 3em;
-            }
-          } 
-        
-          .footer-links {
-            @include clearfix;
-            margin-bottom: $base-line-height;
-        
-            @include media($medium-screen) {
-              @include shift(3);
-            }
-          }
-        
-          ul {
-            margin-bottom: $base-line-height*2;
-        
-            @include media($medium-screen) {
-              @include span-columns(3);
-              @include omega(3n);
-              @include clearfix;
-            }
-          }
-        
-          li {
-            text-align: center;
-        
-            @include media($medium-screen) {
-              text-align: left;
-            }
-          }
-        
-          li a {
-            color: $footer-link-color;
-        
-            &:hover {
-              color: transparentize($footer-color, 0);
-            }
-          }
-        
-          li h3 {
-            color: $footer-color;
-            font-size: 1em;
-            font-weight: 800;
-            margin-bottom: .4em;
-          }  
-        
-          hr {
-            border: 1px solid transparentize($footer-disclaimer-color, .3);
-            margin: 0 auto $base-line-height;
-            width: 12em;
-          }
-        
-          p {
-            color: $footer-disclaimer-color;
-            font-size: .9em;
-            line-height: 1.5em;
-            margin: auto;
-            max-width: 35em;
-            text-align: center;
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.footer {
+  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, .6);
+  $footer-disclaimer-color: transparentize($footer-color, .6);
+
+  background: $footer-background;
+  padding: $base-line-height*2 $gutter;
+  width: 100%;
+
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 2em;
+
+    img {
+      height: 3em;
+    }
+  } 
+
+  .footer-links {
+    @include clearfix;
+    margin-bottom: $base-line-height;
+
+    @include media($medium-screen) {
+      @include shift(3);
+    }
+  }
+
+  ul {
+    margin-bottom: $base-line-height*2;
+
+    @include media($medium-screen) {
+      @include span-columns(3);
+      @include omega(3n);
+      @include clearfix;
+    }
+  }
+
+  li {
+    text-align: center;
+
+    @include media($medium-screen) {
+      text-align: left;
+    }
+  }
+
+  li a {
+    color: $footer-link-color;
+
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  li h3 {
+    color: $footer-color;
+    font-size: 1em;
+    font-weight: 800;
+    margin-bottom: .4em;
+  }  
+
+  hr {
+    border: 1px solid transparentize($footer-disclaimer-color, .3);
+    margin: 0 auto $base-line-height;
+    width: 12em;
+  }
+
+  p {
+    color: $footer-disclaimer-color;
+    font-size: .9em;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 35em;
+    text-align: center;
+  }
+}
+</code></pre>
 </div>
 
 </div>
@@ -1885,10 +1809,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;footer class=&quot;footer-2&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;footer class=&quot;footer-2&quot;&gt;
   &lt;div class=&quot;footer-logo&quot;&gt;
     &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
   &lt;/div&gt;
@@ -1917,105 +1838,100 @@
       &lt;/ul&gt;
     &lt;/div&gt;
 &lt;/footer&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .footer-2 {
-          $footer-background: desaturate(darken($base-accent-color, 20), 30);
-          $footer-color: white;
-          $footer-link-color: transparentize($footer-color, .6);
-          $footer-disclaimer-color: transparentize($footer-color, .6);
-        
-          background: $footer-background;
-          padding: $base-line-height;
-          width: 100%;
-        
-          .footer-logo {
-            margin-right: 1em;
-            margin-bottom: 1em;
-        
-            @include media($large-screen) {
-              float: left;
-              margin-bottom: 0;
-            }
-          }
-        
-          .footer-logo img {
-            height: 1.6em;
-          } 
-        
-          ul {
-            margin-bottom: 1em;
-            @include media($large-screen) {
-              float: left;
-              margin-left: 1em;
-              margin-bottom: 0;
-            }
-          }
-        
-          ul li {
-            padding-right: 1em;
-            font-weight: 800;
-        
-            @include media($large-screen) {
-              display: inline;
-              text-align: left;
-            }
-          }
-        
-          ul li a {
-            color: $footer-link-color;
-        
-            &:hover {
-              color: transparentize($footer-color, 0);
-            }
-          }
-        
-          .footer-secondary-links {
-            @include media($large-screen) {
-              float: right;
-            }
-        
-            li {
-              font-size: .8em;
-              font-weight: 400;
-            }
-        
-            ul.footer-social {
-              margin-top: 1em;
-        
-              @include media($large-screen) {
-                float: right;
-                margin-top: 0;
-              }
-        
-              li {
-                font-size: 1em;
-                display: inline;
-                padding-right: .5em;
-                margin-bottom: .7em;      
-              }
-        
-              img {
-                opacity: .7;
-                height: 1.6em;
-                padding: 1px;
-        
-                &:hover {
-                  opacity: 1;
-                }
-              }
-            }
-          }
+  <pre><code class='language-scss'>.footer-2 {
+  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, .6);
+  $footer-disclaimer-color: transparentize($footer-color, .6);
+
+  background: $footer-background;
+  padding: $base-line-height;
+  width: 100%;
+
+  .footer-logo {
+    margin-right: 1em;
+    margin-bottom: 1em;
+
+    @include media($large-screen) {
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+
+  .footer-logo img {
+    height: 1.6em;
+  } 
+
+  ul {
+    margin-bottom: 1em;
+    @include media($large-screen) {
+      float: left;
+      margin-left: 1em;
+      margin-bottom: 0;
+    }
+  }
+
+  ul li {
+    padding-right: 1em;
+    font-weight: 800;
+
+    @include media($large-screen) {
+      display: inline;
+      text-align: left;
+    }
+  }
+
+  ul li a {
+    color: $footer-link-color;
+
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  .footer-secondary-links {
+    @include media($large-screen) {
+      float: right;
+    }
+
+    li {
+      font-size: .8em;
+      font-weight: 400;
+    }
+
+    ul.footer-social {
+      margin-top: 1em;
+
+      @include media($large-screen) {
+        float: right;
+        margin-top: 0;
+      }
+
+      li {
+        font-size: 1em;
+        display: inline;
+        padding-right: .5em;
+        margin-bottom: .7em;      
+      }
+
+      img {
+        opacity: .7;
+        height: 1.6em;
+        padding: 1px;
+
+        &:hover {
+          opacity: 1;
         }
-    </code>
-  </pre>
+      }
+    }
+  }
+}
+</code></pre>
 </div>
 
 </div>
@@ -2064,10 +1980,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div&gt;
   &lt;a class=&quot;js-menu-trigger menu-anchor&quot;&gt;&amp;#9776;&lt;/a&gt;
 &lt;/div&gt;
 
@@ -2098,74 +2011,69 @@
     });
   });
 &lt;/script&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        $sliding-menu-border-color: $dark-gray;
-        $sliding-menu-background: lighten($sliding-menu-border-color, 5);
-        $sliding-menu-color: #fff;
-        $sliding-menu-border: 1px solid $sliding-menu-border-color;
-        $sliding-menu-background-hover: $base-accent-color;
-        $sliding-menu-color-hover: #fff;
-        
-        .menu-anchor {
-          @include button(simple, $base-body-color);
-          @include inline-block;
-          cursor: pointer;
-          font-size: $base-font-size;
-          margin-bottom: $base-line-height;
-          position: relative;
-        }
-        
-        .sliding-menu-content {
-          @include position(fixed, 0px auto 0px 0px);
-          @include size(220px 100%);
-          @include transform(translateX(-220px));
-          @include transition(all .25s linear);
-          background: $sliding-menu-background;
-          z-index: 999999;
-        
-          li a {
-            border-bottom: $sliding-menu-border;
-            color: $sliding-menu-color;
-            display: block;
-            font-weight: bold;
-            padding: 1em;
-        
-            &:hover {
-              background-color: $sliding-menu-background-hover;
-              color: $sliding-menu-color-hover;
-            }
-          }
-        
-          &.is-visible {
-            @include transform(translateX(0));
-          }
-        }
-        
-        .menu-screen {
-          @include position(fixed, 0px 0px 0px 0px);
-          @include transition;
-          background: $sliding-menu-border-color;
-          opacity: 0;
-          visibility: hidden;
-          z-index: 999998;
-        
-          &.is-visible {
-            opacity: .4;
-            visibility: visible;
-          }
-        }
-        
-        // Based on code by Diego Eis
-    </code>
-  </pre>
+  <pre><code class='language-scss'>$sliding-menu-border-color: $dark-gray;
+$sliding-menu-background: lighten($sliding-menu-border-color, 5);
+$sliding-menu-color: #fff;
+$sliding-menu-border: 1px solid $sliding-menu-border-color;
+$sliding-menu-background-hover: $base-accent-color;
+$sliding-menu-color-hover: #fff;
+
+.menu-anchor {
+  @include button(simple, $base-body-color);
+  @include inline-block;
+  cursor: pointer;
+  font-size: $base-font-size;
+  margin-bottom: $base-line-height;
+  position: relative;
+}
+
+.sliding-menu-content {
+  @include position(fixed, 0px auto 0px 0px);
+  @include size(220px 100%);
+  @include transform(translateX(-220px));
+  @include transition(all .25s linear);
+  background: $sliding-menu-background;
+  z-index: 999999;
+
+  li a {
+    border-bottom: $sliding-menu-border;
+    color: $sliding-menu-color;
+    display: block;
+    font-weight: bold;
+    padding: 1em;
+
+    &:hover {
+      background-color: $sliding-menu-background-hover;
+      color: $sliding-menu-color-hover;
+    }
+  }
+
+  &.is-visible {
+    @include transform(translateX(0));
+  }
+}
+
+.menu-screen {
+  @include position(fixed, 0px 0px 0px 0px);
+  @include transition;
+  background: $sliding-menu-border-color;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999998;
+
+  &.is-visible {
+    opacity: .4;
+    visibility: visible;
+  }
+}
+
+// Based on code by Diego Eis
+</code></pre>
 </div>
 
 </div>
@@ -2186,70 +2094,62 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;badges&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;badges&quot;&gt;
 	&lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
 	&lt;span class=&quot;badge dark&quot;&gt;4&lt;/span&gt;
 	&lt;span class=&quot;badge error&quot;&gt;4&lt;/span&gt;
 	&lt;span class=&quot;badge notice&quot;&gt;4&lt;/span&gt;
 	&lt;span class=&quot;badge success&quot;&gt;4&lt;/span&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
+&lt;/div&gt;</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .badges {
-          $badge-background: $medium-gray;
-          $badge-dark-color: $dark-gray;
-          $badge-error-color: $error-color;
-          $badge-notice-color: $notice-color;
-          $badge-success-color: $success-color;
-          $badge-font-color: #fff;
-          $badge-font-size: $base-font-size * .75;
-        
-          display: block;
-          margin-bottom: $base-line-height;
-        
-          .badge {
-            @include inline-block;
-            background: $badge-background;
-            border-radius: 2em;
-            color: $badge-font-color;
-            font-size: $badge-font-size;
-            font-weight: 600;
-            line-height: 1;
-            padding: .25em 1em;
-            text-align: center;
-        
-            &.dark {
-              background: $badge-dark-color;
-            }
-        
-            &.error {
-              background: $badge-error-color;
-              color: darken($badge-error-color, 60);
-            }
-        
-            &.notice {
-              background: $badge-notice-color;
-              color: darken($badge-error-color, 60);
-            }
-        
-            &.success {
-              background: $badge-success-color;
-              color: darken($badge-success-color, 60);
-            }
-          }
-        }
-        
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.badges {
+  $badge-background: $medium-gray;
+  $badge-dark-color: $dark-gray;
+  $badge-error-color: $error-color;
+  $badge-notice-color: $notice-color;
+  $badge-success-color: $success-color;
+  $badge-font-color: #fff;
+  $badge-font-size: $base-font-size * .75;
+
+  display: block;
+  margin-bottom: $base-line-height;
+
+  .badge {
+    @include inline-block;
+    background: $badge-background;
+    border-radius: 2em;
+    color: $badge-font-color;
+    font-size: $badge-font-size;
+    font-weight: 600;
+    line-height: 1;
+    padding: .25em 1em;
+    text-align: center;
+
+    &.dark {
+      background: $badge-dark-color;
+    }
+
+    &.error {
+      background: $badge-error-color;
+      color: darken($badge-error-color, 60);
+    }
+
+    &.notice {
+      background: $badge-notice-color;
+      color: darken($badge-error-color, 60);
+    }
+
+    &.success {
+      background: $badge-success-color;
+      color: darken($badge-success-color, 60);
+    }
+  }
+}
+
+</code></pre>
 </div>
 
 </div>
@@ -2271,114 +2171,106 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;breadcrumb&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;breadcrumb&quot;&gt;
   &lt;a href=&quot;#&quot;&gt;One&lt;/a&gt;
   &lt;a href=&quot;#&quot;&gt;Two&lt;/a&gt;
   &lt;a href=&quot;#&quot;&gt;Three&lt;/a&gt;
   &lt;a href=&quot;#&quot;&gt;Four&lt;/a&gt;
   &lt;a href=&quot;#&quot;&gt;Five&lt;/a&gt;
   &lt;a href=&quot;#&quot;&gt;Six&lt;/a&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
+&lt;/div&gt;</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .breadcrumb { 
-          $breadcrumb-border-color: $base-border-color;
-          $breadcrumb-border: 1px solid $breadcrumb-border-color;
-          $breadcrumb-height: $base-line-height * 1.5;
-          $breadcrumb-arrow-color: $breadcrumb-border-color;
-          $breadcrumb-background: $base-body-color;
-          $breadcrumb-inactive-hover-color: $breadcrumb-background;
-          $breadcrumb-color: $medium-gray;
-          $breadcrumb-color-hover: $base-accent-color;
-          $breadcrumb-color-active: $breadcrumb-color;
-        
-          @include inline-block;
-          border-radius: $base-border-radius;
-          margin: 0;
-          padding: 0;
-          border-radius: $base-border-radius;
-          display: block;
-          margin-bottom: $base-line-height;
-        
-          a {
-            @include inline-block;
-            background-color: $breadcrumb-background;
-            border: $breadcrumb-border;
-            color: $breadcrumb-color;
-            line-height: $breadcrumb-height;
-            margin-right: -5px;
-            font-size: .8em;
-            padding: 0 $breadcrumb-height/4 0 $breadcrumb-height/2;
-            position: relative;
-            text-decoration: none;
-        
-            &:first-child {
-              padding-left: $breadcrumb-height/2;
-              border-top-left-radius: $base-border-radius;
-              border-bottom-left-radius: $base-border-radius;
-            }
-        
-            &:last-child {
-              background-color: $breadcrumb-background;
-              color: $breadcrumb-color-active;
-              border-bottom-right-radius: $base-border-radius;
-              border-top-right-radius: $base-border-radius;
-              padding-right: $breadcrumb-height/2;
-            }
-        
-            &:hover {
-              color: $breadcrumb-color-hover;
-              background-color: $breadcrumb-inactive-hover-color;
-            }
-        
-            &:hover:after {
-              border-left-color: $breadcrumb-inactive-hover-color;;
-            }
-        
-            &:after,
-            &:before {
-              @include position(absolute, 0px auto 0px 100%);
-              border-bottom: $breadcrumb-height/2 solid transparent;
-              border-left: $breadcrumb-height/4 solid transparent;
-              border-top: $breadcrumb-height/2 solid transparent;
-              content: '';
-              display: block;
-              margin: auto;
-              z-index: 2;
-            }
-        
-            &:last-child:after,
-            &:last-child:before {
-               border: none;
-            }
-        
-            &:before {
-              border-left-color: $breadcrumb-arrow-color;
-              margin-left: 1px;
-              z-index: 1;
-            }
-            &:after {
-              border-left-color: $breadcrumb-background;
-            }
-        
-            @include media($medium-screen) {
-              font-size: 1em;
-              padding: 0 $breadcrumb-height/2 0 $breadcrumb-height/1.5;
-            }
-          }
-        }
-        
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.breadcrumb { 
+  $breadcrumb-border-color: $base-border-color;
+  $breadcrumb-border: 1px solid $breadcrumb-border-color;
+  $breadcrumb-height: $base-line-height * 1.5;
+  $breadcrumb-arrow-color: $breadcrumb-border-color;
+  $breadcrumb-background: $base-body-color;
+  $breadcrumb-inactive-hover-color: $breadcrumb-background;
+  $breadcrumb-color: $medium-gray;
+  $breadcrumb-color-hover: $base-accent-color;
+  $breadcrumb-color-active: $breadcrumb-color;
+
+  @include inline-block;
+  border-radius: $base-border-radius;
+  margin: 0;
+  padding: 0;
+  border-radius: $base-border-radius;
+  display: block;
+  margin-bottom: $base-line-height;
+
+  a {
+    @include inline-block;
+    background-color: $breadcrumb-background;
+    border: $breadcrumb-border;
+    color: $breadcrumb-color;
+    line-height: $breadcrumb-height;
+    margin-right: -5px;
+    font-size: .8em;
+    padding: 0 $breadcrumb-height/4 0 $breadcrumb-height/2;
+    position: relative;
+    text-decoration: none;
+
+    &:first-child {
+      padding-left: $breadcrumb-height/2;
+      border-top-left-radius: $base-border-radius;
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    &:last-child {
+      background-color: $breadcrumb-background;
+      color: $breadcrumb-color-active;
+      border-bottom-right-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      padding-right: $breadcrumb-height/2;
+    }
+
+    &:hover {
+      color: $breadcrumb-color-hover;
+      background-color: $breadcrumb-inactive-hover-color;
+    }
+
+    &:hover:after {
+      border-left-color: $breadcrumb-inactive-hover-color;;
+    }
+
+    &:after,
+    &:before {
+      @include position(absolute, 0px auto 0px 100%);
+      border-bottom: $breadcrumb-height/2 solid transparent;
+      border-left: $breadcrumb-height/4 solid transparent;
+      border-top: $breadcrumb-height/2 solid transparent;
+      content: '';
+      display: block;
+      margin: auto;
+      z-index: 2;
+    }
+
+    &:last-child:after,
+    &:last-child:before {
+       border: none;
+    }
+
+    &:before {
+      border-left-color: $breadcrumb-arrow-color;
+      margin-left: 1px;
+      z-index: 1;
+    }
+    &:after {
+      border-left-color: $breadcrumb-background;
+    }
+
+    @include media($medium-screen) {
+      font-size: 1em;
+      padding: 0 $breadcrumb-height/2 0 $breadcrumb-height/1.5;
+    }
+  }
+}
+
+</code></pre>
 </div>
 
 </div>
@@ -2424,10 +2316,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;modal&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;modal&quot;&gt;
   &lt;label for=&quot;modal-1&quot;&gt;
     &lt;div class=&quot;btn js-btn&quot;&gt;Click for Modal&lt;/div&gt;
   &lt;/label&gt;
@@ -2458,176 +2347,171 @@
     })
   })
 &lt;/script&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .modal {
-          $modal-padding: 3em;
-          $modal-close-color: $light-gray;
-          $modal-image-height: 135px;
-          $modal-image-width: $modal-image-height;
-        
-          label {
-            cursor: pointer;
-            margin-bottom: 0;
-          }
-        
-          label img {
-            $img-width: 300px;
-            border-radius: $img-width/2;
-            display: block;
-            max-width: $img-width;
-          }
-        
-          input[type="checkbox"] {
-            display: none;
-          }
-        
-          .btn {
-            @include button(simple, $base-body-color);
-            font-size: $base-font-size;
-            margin-bottom: $base-line-height;
-          }
-        
-          .modal-open {
-            overflow: hidden;
-          }
-        
-          .modal-window { // overlay
-            @include transition(opacity .25s ease);
-            @include position(fixed, 0px 0px 0px 0px);
-            background: rgba(0,0,0, .85);
-            opacity: 0;
-            text-align: left;
-            visibility: hidden;
-            z-index: 99999999999;
-        
-            .modal-bg {
-              @include position(absolute, 0px 0px 0px 0px);
-              cursor: pointer;
-            }
-          }
-        
-          .modal-close {
-            @include position(fixed, ($modal-padding /2) ($modal-padding /2) 0 0);
-            @include size(0.5em);
-            cursor: pointer;
-        
-            &:after,
-            &:before {
-              @include position(absolute, 0px 0 0 -50%);
-              @include transform(rotate(45deg));
-              @include size(.15em 1.5em);
-              background: $modal-close-color;
-              content: '';
-              display: block;
-              margin: -3px 0 0 -1px;
-            }
-        
-            &:hover:after,
-            &:hover:before {
-              background: darken($modal-close-color, 10);
-            }
-        
-            &:before {
-              @include transform(rotate(-45deg));
-            }
-          }
-        
-          .modal-inner {
-            @include transition(opacity .25s ease);
-            border-radius: $base-border-radius;
-            background: white;
-            margin: auto;
-            max-height: 95%;
-            overflow: auto;
-            width: 95%;
-            padding: $modal-padding /2;
-            margin-top: .6em;
-        
-            @include media($medium-screen) {
-              padding: $modal-padding;
-              width: 50%;
-              max-height: 60%;
-              margin-top: 10em;
-            }
-        
-            h1 {
-              color: $base-font-color;
-              margin-bottom: .6em;
-              text-align: left;
-              text-transform: capitalize;
-            }
-        
-            p {
-              font-size: $base-font-size;
-              max-width: 100% !important;
-              padding: 0;
-              text-align: left;
-        
-              &.intro {
-                color: $blue;
-                line-height: 1.6em;
-              }
-        
-              &.body { 
-                color: $base-font-color;
-                line-height: 1.45em;
-        
-                @include media($medium-screen) {
-                  @include columns(2 8em);
-                }
-              }
-            }
-        
-            a.cta {
-              color: white;
-              display: inline-block;
-              margin-right: .5em;
-              margin-top: 1em;
-        
-              &:last-child {
-                padding: 0 2em;
-              }
-            }
-          }
-        
-          .img-wrapper-modal {
-            @include size($modal-image-width $modal-image-height);
-            background-color: $light-gray;
-            border-radius: 190px;
-            display: block;
-            margin-bottom: 1em;
-        
-            img {
-              @include size($modal-image-width $modal-image-height);
-              content: '';
-              display: block;
-              padding: 30px;
-            }
-          }
-        
-          .modal-state:checked + .modal-window {
-            opacity: 1;
-            visibility: visible;
-          }
-        
-          .modal-state:checked + .modal-window .modal-inner {
-            top: 0;
-          }
+  <pre><code class='language-scss'>.modal {
+  $modal-padding: 3em;
+  $modal-close-color: $light-gray;
+  $modal-image-height: 135px;
+  $modal-image-width: $modal-image-height;
+
+  label {
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  label img {
+    $img-width: 300px;
+    border-radius: $img-width/2;
+    display: block;
+    max-width: $img-width;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .btn {
+    @include button(simple, $base-body-color);
+    font-size: $base-font-size;
+    margin-bottom: $base-line-height;
+  }
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  .modal-window { // overlay
+    @include transition(opacity .25s ease);
+    @include position(fixed, 0px 0px 0px 0px);
+    background: rgba(0,0,0, .85);
+    opacity: 0;
+    text-align: left;
+    visibility: hidden;
+    z-index: 99999999999;
+
+    .modal-bg {
+      @include position(absolute, 0px 0px 0px 0px);
+      cursor: pointer;
+    }
+  }
+
+  .modal-close {
+    @include position(fixed, ($modal-padding /2) ($modal-padding /2) 0 0);
+    @include size(0.5em);
+    cursor: pointer;
+
+    &:after,
+    &:before {
+      @include position(absolute, 0px 0 0 -50%);
+      @include transform(rotate(45deg));
+      @include size(.15em 1.5em);
+      background: $modal-close-color;
+      content: '';
+      display: block;
+      margin: -3px 0 0 -1px;
+    }
+
+    &:hover:after,
+    &:hover:before {
+      background: darken($modal-close-color, 10);
+    }
+
+    &:before {
+      @include transform(rotate(-45deg));
+    }
+  }
+
+  .modal-inner {
+    @include transition(opacity .25s ease);
+    border-radius: $base-border-radius;
+    background: white;
+    margin: auto;
+    max-height: 95%;
+    overflow: auto;
+    width: 95%;
+    padding: $modal-padding /2;
+    margin-top: .6em;
+
+    @include media($medium-screen) {
+      padding: $modal-padding;
+      width: 50%;
+      max-height: 60%;
+      margin-top: 10em;
+    }
+
+    h1 {
+      color: $base-font-color;
+      margin-bottom: .6em;
+      text-align: left;
+      text-transform: capitalize;
+    }
+
+    p {
+      font-size: $base-font-size;
+      max-width: 100% !important;
+      padding: 0;
+      text-align: left;
+
+      &.intro {
+        color: $blue;
+        line-height: 1.6em;
+      }
+
+      &.body { 
+        color: $base-font-color;
+        line-height: 1.45em;
+
+        @include media($medium-screen) {
+          @include columns(2 8em);
         }
-        
-        
-        
-        // Based on code by Kasper Mikiewicz
-    </code>
-  </pre>
+      }
+    }
+
+    a.cta {
+      color: white;
+      display: inline-block;
+      margin-right: .5em;
+      margin-top: 1em;
+
+      &:last-child {
+        padding: 0 2em;
+      }
+    }
+  }
+
+  .img-wrapper-modal {
+    @include size($modal-image-width $modal-image-height);
+    background-color: $light-gray;
+    border-radius: 190px;
+    display: block;
+    margin-bottom: 1em;
+
+    img {
+      @include size($modal-image-width $modal-image-height);
+      content: '';
+      display: block;
+      padding: 30px;
+    }
+  }
+
+  .modal-state:checked + .modal-window {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-state:checked + .modal-window .modal-inner {
+    top: 0;
+  }
+}
+
+
+
+// Based on code by Kasper Mikiewicz
+</code></pre>
 </div>
 
 </div>
@@ -2652,10 +2536,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;hover-tile-outer&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;hover-tile-outer&quot;&gt;
   &lt;div class=&quot;hover-tile-container&quot;&gt;
     &lt;div class=&quot;hover-tile hover-tile-visible&quot;&gt;
       Hover
@@ -2665,69 +2546,63 @@
       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
+&lt;/div&gt;</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .hover-tile-outer {
-          $hover-tile-height: 10em;
-        
-          background-position: bottom;
-          background-size: cover;
-          background: url("https://raw.github.com/Magnus-G/Random/master/mountains.png");
-          background-size: cover;
-          background-color: #BEB56E;
-          border: 1px solid $base-border-color;
-          height: $hover-tile-height;
-          margin-bottom: $base-line-height;
-          cursor: pointer;
-          
-          @include media($medium-screen) {
-            width: 40%;
-          }
-        
-          .hover-tile-container {
-            height: $hover-tile-height;
-            overflow: hidden;
-          }
-        
-          .hover-tile-container:hover > .hover-tile {
-            @include transform(translate(0, -100%));
-          }
-        
-          .hover-tile {
-            @include transition(all, .2s ease-in-out);
-            background:inherit;
-            color: white;
-            height:inherit;
-            padding: 1em 1.5em;
-          }
-        
-          .hover-tile-visible {
-            color: transparentize(white, .3);
-            font-size: 2em;
-            font-weight: 200;  
-            padding-top: 2em;
-            text-align: center;
-          }
-        
-          .hover-tile-hidden {
-            background: transparentize(black, .5);
-            h4 {
-              margin-bottom: .5em;
-            }
-            p {
-              color: transparentize(white, .3);
-            }
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.hover-tile-outer {
+  $hover-tile-height: 10em;
+
+  background-position: bottom;
+  background-size: cover;
+  background: url("https://raw.github.com/Magnus-G/Random/master/mountains.png");
+  background-size: cover;
+  background-color: #BEB56E;
+  border: 1px solid $base-border-color;
+  height: $hover-tile-height;
+  margin-bottom: $base-line-height;
+  cursor: pointer;
+  
+  @include media($medium-screen) {
+    width: 40%;
+  }
+
+  .hover-tile-container {
+    height: $hover-tile-height;
+    overflow: hidden;
+  }
+
+  .hover-tile-container:hover > .hover-tile {
+    @include transform(translate(0, -100%));
+  }
+
+  .hover-tile {
+    @include transition(all, .2s ease-in-out);
+    background:inherit;
+    color: white;
+    height:inherit;
+    padding: 1em 1.5em;
+  }
+
+  .hover-tile-visible {
+    color: transparentize(white, .3);
+    font-size: 2em;
+    font-weight: 200;  
+    padding-top: 2em;
+    text-align: center;
+  }
+
+  .hover-tile-hidden {
+    background: transparentize(black, .5);
+    h4 {
+      margin-bottom: .5em;
+    }
+    p {
+      color: transparentize(white, .3);
+    }
+  }
+}</code></pre>
 </div>
 
 </div>
@@ -2775,10 +2650,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;ul class=&quot;accordion&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;ul class=&quot;accordion&quot;&gt;
   &lt;li&gt;
     &lt;a href=&quot;#&quot; class=&quot;js-accordion-trigger&quot;&gt;Accordion Item&lt;/a&gt;
     &lt;ul class=&quot;submenu&quot;&gt;
@@ -2811,70 +2683,65 @@
       event.preventDefault();
   });
 &lt;/script&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .accordion {
-          $accordion-menu-border-color: $base-border-color;
-          $accordion-menu-border: 1px solid $accordion-menu-border-color;
-          $accordion-menu-background: lighten($accordion-menu-border-color, 10);
-          $accordion-menu-hover: lighten($accordion-menu-background, 10);
-          $accordion-menu-sub-background: darken($accordion-menu-background, 5);
-          $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
-          $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
-          $accordion-menu-list-padding: $base-line-height/2 $gutter;
-          
-          background-color: $accordion-menu-background;
-          border: $accordion-menu-border;
-          margin-bottom: $base-line-height;
-        
-          li {
-            border-bottom: $accordion-menu-border;
-        
-            > a {
-              padding: $accordion-menu-list-padding;
-              display: block;
-            }
-        
-            &:last-child {
-              border: none;
-            }
-        
-            &:hover {
-              background-color: $accordion-menu-hover;
-            }
-          }
-        
-          ul.submenu {
-            display: none;
-        
-            li {
-              background-color: $accordion-menu-sub-background;
-        
-              &:first-child {
-                border-top: $accordion-menu-border;
-                box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
-              }
-        
-              &:hover {
-                background-color: $accordion-menu-sub-hover;
-              }
-            }
-          }
-        
-          .is-expanded {
-            display: block;
-            padding-bottom: 0;
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.accordion {
+  $accordion-menu-border-color: $base-border-color;
+  $accordion-menu-border: 1px solid $accordion-menu-border-color;
+  $accordion-menu-background: lighten($accordion-menu-border-color, 10);
+  $accordion-menu-hover: lighten($accordion-menu-background, 10);
+  $accordion-menu-sub-background: darken($accordion-menu-background, 5);
+  $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
+  $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
+  $accordion-menu-list-padding: $base-line-height/2 $gutter;
+  
+  background-color: $accordion-menu-background;
+  border: $accordion-menu-border;
+  margin-bottom: $base-line-height;
+
+  li {
+    border-bottom: $accordion-menu-border;
+
+    > a {
+      padding: $accordion-menu-list-padding;
+      display: block;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    &:hover {
+      background-color: $accordion-menu-hover;
+    }
+  }
+
+  ul.submenu {
+    display: none;
+
+    li {
+      background-color: $accordion-menu-sub-background;
+
+      &:first-child {
+        border-top: $accordion-menu-border;
+        box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
+      }
+
+      &:hover {
+        background-color: $accordion-menu-sub-hover;
+      }
+    }
+  }
+
+  .is-expanded {
+    display: block;
+    padding-bottom: 0;
+  }
+}
+</code></pre>
 </div>
 
 </div>
@@ -2897,10 +2764,7 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-        &lt;div class=&quot;search-bar&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">  &lt;div class=&quot;search-bar&quot;&gt;
     &lt;div class=&quot;search-and-submit&quot;&gt;
       &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
       &lt;button type=&quot;submit&quot;&gt;
@@ -2908,56 +2772,50 @@
       &lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .search-bar {
-          $search-bar-border-color: $base-border-color;
-          $search-bar-border: 1px solid $search-bar-border-color;
-          $search-bar-background: lighten($search-bar-border-color, 10);
-        
-          position: relative; 
-          display: inline-block;
-        
-          input {
-            @include box-sizing(border-box);
-            display: block;
-          }
-        
-          div.search-and-submit {
-            position: relative;
-        
-            input[type=search] {
-              @include appearance(none);
-              width: 100%;
-              padding: .5em .8em;
-              font-size: .9em;
-              font-style: italic;
-              border-radius: $base-border-radius * 2;
-              margin: 0;
-            }
-        
-            button[type=submit] {
-              @include button(simple, lighten($base-border-color, 10));
-              @include position(absolute, 0.3em 0.3em 0.3em 0);
-              outline: none;
-              padding: 5px 10px;
-        
-              img {
-                height: 12px;
-                opacity: .7;
-              }
-            }
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.search-bar {
+  $search-bar-border-color: $base-border-color;
+  $search-bar-border: 1px solid $search-bar-border-color;
+  $search-bar-background: lighten($search-bar-border-color, 10);
+
+  position: relative; 
+  display: inline-block;
+
+  input {
+    @include box-sizing(border-box);
+    display: block;
+  }
+
+  div.search-and-submit {
+    position: relative;
+
+    input[type=search] {
+      @include appearance(none);
+      width: 100%;
+      padding: .5em .8em;
+      font-size: .9em;
+      font-style: italic;
+      border-radius: $base-border-radius * 2;
+      margin: 0;
+    }
+
+    button[type=submit] {
+      @include button(simple, lighten($base-border-color, 10));
+      @include position(absolute, 0.3em 0.3em 0.3em 0);
+      outline: none;
+      padding: 5px 10px;
+
+      img {
+        height: 12px;
+        opacity: .7;
+      }
+    }
+  }
+}</code></pre>
 </div>
 
 </div>
@@ -2979,94 +2837,86 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;switch-container&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;switch-container&quot;&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;switch-toggle-1&quot; name=&quot;switch-toggle&quot; class=&quot;switch-checkbox&quot; checked/&gt;
   &lt;label class=&quot;switch-label&quot; for=&quot;switch-toggle-1&quot;&gt;
     &lt;div class=&quot;switch-inner&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;switch-toggle-switch&quot;&gt;&lt;/div&gt;
   &lt;/label&gt;
 &lt;/div&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .switch-container {
-          $switch-container-width: 5em;
-          $switch-height: 2em;
-          $switch-width: 1em;
-          $switch-radius: 3px;
-          $switch-inner-margin: .2em;
-        
-          @include user-select(none);
-          @include inline-block;
-          position: relative;
-          width: $switch-container-width;
-          margin-bottom: $base-line-height;
-        
-          input.switch-checkbox {
-            display: none;
-        
-            &:checked + .switch-label .switch-inner {
-              margin-left: 0;
-            }
-        
-            &:checked + .switch-label .switch-toggle-switch {
-              right: 0;
-            }
-          }
-        
-          label.switch-label {
-            border-radius: $switch-radius;
-            cursor: pointer;
-            display: block;
-            overflow: hidden;
-        
-            .switch-inner {
-              @include transition(opacity 0.3s ease);
-              margin-left: -100%;
-              width: 200%;
-        
-              &:before, &:after {
-                @include box-sizing(border-box);
-                float: left;
-                height: $switch-height;
-                padding: 0;
-                width: 50%;
-              }
-        
-              &:before {
-                content: '';
-                background: $blue;
-              }
-        
-              &:after {
-                content: '';
-                background: #DDD;
-              }
-            }
-        
-            .switch-toggle-switch {
-              @include position(absolute, 0px ($switch-container-width - $switch-width - $switch-inner-margin *2) 0px 0);
-              @include transition(all 0.3s ease-in 0s);
-              height: $switch-height - $switch-inner-margin *2;
-              width: $switch-width;
-              border-radius: $switch-radius / 2;
-              margin: $switch-inner-margin;
-              background: white;
-              box-shadow: 0 0 1px 2px rgba(0,0,0,0.1);
-            }
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.switch-container {
+  $switch-container-width: 5em;
+  $switch-height: 2em;
+  $switch-width: 1em;
+  $switch-radius: 3px;
+  $switch-inner-margin: .2em;
+
+  @include user-select(none);
+  @include inline-block;
+  position: relative;
+  width: $switch-container-width;
+  margin-bottom: $base-line-height;
+
+  input.switch-checkbox {
+    display: none;
+
+    &:checked + .switch-label .switch-inner {
+      margin-left: 0;
+    }
+
+    &:checked + .switch-label .switch-toggle-switch {
+      right: 0;
+    }
+  }
+
+  label.switch-label {
+    border-radius: $switch-radius;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+
+    .switch-inner {
+      @include transition(opacity 0.3s ease);
+      margin-left: -100%;
+      width: 200%;
+
+      &:before, &:after {
+        @include box-sizing(border-box);
+        float: left;
+        height: $switch-height;
+        padding: 0;
+        width: 50%;
+      }
+
+      &:before {
+        content: '';
+        background: $blue;
+      }
+
+      &:after {
+        content: '';
+        background: #DDD;
+      }
+    }
+
+    .switch-toggle-switch {
+      @include position(absolute, 0px ($switch-container-width - $switch-width - $switch-inner-margin *2) 0px 0);
+      @include transition(all 0.3s ease-in 0s);
+      height: $switch-height - $switch-inner-margin *2;
+      width: $switch-width;
+      border-radius: $switch-radius / 2;
+      margin: $switch-inner-margin;
+      background: white;
+      box-shadow: 0 0 1px 2px rgba(0,0,0,0.1);
+    }
+  }
+}
+</code></pre>
 </div>
 
 </div>
@@ -3087,82 +2937,74 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-        &lt;div class=&quot;image-gradient&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">  &lt;div class=&quot;image-gradient&quot;&gt;
     &lt;div class=&quot;copy&quot;&gt;
     &lt;p&gt;Fixed height container&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
   &lt;/div&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .image-gradient {
-          $image-gradient-color-top: teal; 
-          $transparency-top: .6;
-          $image-gradient-color-bottom: green; 
-          $transparency-bottom: .6;
-          $vertical-angle: 180deg;
-        
-          $image-gradient-color-left: red; 
-          $transparency-left: .9;
-          $image-gradient-color-right: yellow; 
-          $transparency-right: .8;
-          $horizontal-angle: 90deg;
-          
-          background: url(https://raw.github.com/Magnus-G/Random/master/EmeraldLake.jpg);
-          background-size: cover;
-          background-position: top;
-          background-repeat: no-repeat;
-          padding: 12em;
-          position: relative;
-          width: 100%;
-          display: table;
-          margin-bottom: $base-line-height;
-        
-          .copy {
-            position: absolute;
-            left: 50%;
-            margin: auto;
-            z-index: 999;
-            top: 40%;
-            text-align: center;
-        
-            p {
-              padding: 1em 2em;
-              position: relative;
-              left: -50%;
-              color: white;
-              font-weight: 800;
-              background-color: transparentize(black, .6);
-            }
-          }
-        
-          .overlay {
-            @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
-              transparentize($image-gradient-color-bottom, $transparency-bottom));
-            display: block;
-            @include position(absolute, 0px 0px 0px 0px);
-        
-            &:after {
-              content: '';
-              @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
-                transparentize($image-gradient-color-right, $transparency-right));
-              display: block;
-              @include position(absolute, 0px 0px 0px 0px);
-            }
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.image-gradient {
+  $image-gradient-color-top: teal; 
+  $transparency-top: .6;
+  $image-gradient-color-bottom: green; 
+  $transparency-bottom: .6;
+  $vertical-angle: 180deg;
+
+  $image-gradient-color-left: red; 
+  $transparency-left: .9;
+  $image-gradient-color-right: yellow; 
+  $transparency-right: .8;
+  $horizontal-angle: 90deg;
+  
+  background: url(https://raw.github.com/Magnus-G/Random/master/EmeraldLake.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 12em;
+  position: relative;
+  width: 100%;
+  display: table;
+  margin-bottom: $base-line-height;
+
+  .copy {
+    position: absolute;
+    left: 50%;
+    margin: auto;
+    z-index: 999;
+    top: 40%;
+    text-align: center;
+
+    p {
+      padding: 1em 2em;
+      position: relative;
+      left: -50%;
+      color: white;
+      font-weight: 800;
+      background-color: transparentize(black, .6);
+    }
+  }
+
+  .overlay {
+    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
+      transparentize($image-gradient-color-bottom, $transparency-bottom));
+    display: block;
+    @include position(absolute, 0px 0px 0px 0px);
+
+    &:after {
+      content: '';
+      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
+        transparentize($image-gradient-color-right, $transparency-right));
+      display: block;
+      @include position(absolute, 0px 0px 0px 0px);
+    }
+  }
+}
+</code></pre>
 </div>
 
 </div>
@@ -3180,87 +3022,78 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;image-gradient-dynamic&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;image-gradient-dynamic&quot;&gt;
   &lt;img src=&quot;http://organicclimber.com/wp-content/uploads/2012/06/EmeraldLake.jpg&quot; alt=&quot;&quot;&gt;
   &lt;div class=&quot;copy&quot;&gt;
     &lt;p&gt;Dynamic height container&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-
-    </code>
-  </pre>
+</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .image-gradient-dynamic {
-          $image-gradient-color-top: orange; 
-          $transparency-top: .6;
-          $image-gradient-color-bottom: teal; 
-          $transparency-bottom: .6;
-          $vertical-angle: 180deg;
-        
-          $image-gradient-color-left: teal; 
-          $transparency-left: .8;
-          $image-gradient-color-right: yellow; 
-          $transparency-right: .8;
-          $horizontal-angle: 90deg;
-        
-          position: relative;
-          line-height: 0;
-          width: 100%;
-          margin-bottom: $base-line-height;  
-        
-          img {
-           width: 100%;
-           height: auto;
-           position: relative;
-           top: 0;
-           left: 0; 
-          }
-        
-          .copy {
-            position: absolute;
-            left: 50%;
-            margin: auto;
-            z-index: 999;
-            top: 40%;
-            text-align: center;
-        
-            p {
-              line-height: 1.5em;
-              padding: 1em 2em;
-              position: relative;
-              left: -50%;
-              color: white;
-              font-weight: 800;
-              background-color: transparentize(black, .6);
-            }
-          }
-        
-          .overlay {
-            @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
-              transparentize($image-gradient-color-bottom, $transparency-bottom));
-            display: block;
-            @include position(absolute, 0px 0px 0px 0px);
-        
-            &:after {
-              content: '';
-              @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
-                transparentize($image-gradient-color-right, $transparency-right));
-              display: block;
-              @include position(absolute, 0px 0px 0px 0px);
-            }
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.image-gradient-dynamic {
+  $image-gradient-color-top: orange; 
+  $transparency-top: .6;
+  $image-gradient-color-bottom: teal; 
+  $transparency-bottom: .6;
+  $vertical-angle: 180deg;
+
+  $image-gradient-color-left: teal; 
+  $transparency-left: .8;
+  $image-gradient-color-right: yellow; 
+  $transparency-right: .8;
+  $horizontal-angle: 90deg;
+
+  position: relative;
+  line-height: 0;
+  width: 100%;
+  margin-bottom: $base-line-height;  
+
+  img {
+   width: 100%;
+   height: auto;
+   position: relative;
+   top: 0;
+   left: 0; 
+  }
+
+  .copy {
+    position: absolute;
+    left: 50%;
+    margin: auto;
+    z-index: 999;
+    top: 40%;
+    text-align: center;
+
+    p {
+      line-height: 1.5em;
+      padding: 1em 2em;
+      position: relative;
+      left: -50%;
+      color: white;
+      font-weight: 800;
+      background-color: transparentize(black, .6);
+    }
+  }
+
+  .overlay {
+    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
+      transparentize($image-gradient-color-bottom, $transparency-bottom));
+    display: block;
+    @include position(absolute, 0px 0px 0px 0px);
+
+    &:after {
+      content: '';
+      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
+        transparentize($image-gradient-color-right, $transparency-right));
+      display: block;
+      @include position(absolute, 0px 0px 0px 0px);
+    }
+  }
+}</code></pre>
 </div>
 
 </div>
@@ -3280,64 +3113,56 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;button-group&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;button-group&quot;&gt;
   &lt;button class=&quot;active&quot;&gt;Item&lt;/button&gt;
   &lt;button&gt;Button Group Item&lt;/button&gt;
   &lt;button&gt;Another Item&lt;/button&gt;
   &lt;button&gt;Last Item&lt;/button&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
+&lt;/div&gt;</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .button-group {
-          $button-group-background: $base-body-color;
-          $button-group-color: lighten($base-font-color, 30);
-          $button-group-border-highlight: lighten($button-group-background, 15);
-          $button-group-active: $base-accent-color;
-        
-          @include clearfix;
-          
-          button {
-            @include button(simple, $button-group-background);
-            font-weight: 400;
-            color: $button-group-color;
-            font-size: $base-font-size;
-            outline: none;
-            float: left;
-        
-            &.active {
-              @include button(simple, $button-group-active);
-              font-weight: 400;
-              font-size: $base-font-size;
-            }
-        
-            &:first-child {
-              border-top-right-radius: 0;
-              border-bottom-right-radius: 0;
-            }
-        
-            &:not(:first-child):not(:last-child) {
-              border-left: 1px solid $button-group-border-highlight;
-              border-radius: 0;
-            }
-            
-            &:last-child {
-              border-bottom-left-radius: 0;
-              border-left: 1px solid $button-group-border-highlight;
-              border-top-left-radius: 0;
-            }
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.button-group {
+  $button-group-background: $base-body-color;
+  $button-group-color: lighten($base-font-color, 30);
+  $button-group-border-highlight: lighten($button-group-background, 15);
+  $button-group-active: $base-accent-color;
+
+  @include clearfix;
+  
+  button {
+    @include button(simple, $button-group-background);
+    font-weight: 400;
+    color: $button-group-color;
+    font-size: $base-font-size;
+    outline: none;
+    float: left;
+
+    &.active {
+      @include button(simple, $button-group-active);
+      font-weight: 400;
+      font-size: $base-font-size;
+    }
+
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-left: 1px solid $button-group-border-highlight;
+      border-radius: 0;
+    }
+    
+    &:last-child {
+      border-bottom-left-radius: 0;
+      border-left: 1px solid $button-group-border-highlight;
+      border-top-left-radius: 0;
+    }
+  }
+}
+</code></pre>
 </div>
 
 </div>
@@ -3355,105 +3180,97 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;progress-bar&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;progress-bar&quot;&gt;
   &lt;span class=&quot;meter&quot; style=&quot;width: 60%&quot;&gt;&lt;/span&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
+&lt;/div&gt;</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .progress-bar {
-          $progress-border-color: $base-border-color;
-          $progress-border: 1px solid $progress-border-color;
-          $progress-meter-border-color: $base-accent-color;
-          $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
-          $progress-meter-color: $progress-meter-border-color;
-          $progress-background: darken($base-body-color, 5);
-          $progress-animation-duration: 0.7s;
-          $progress-height: 30px;
-        
-          background-color: $progress-background;
-          border: $progress-border;
-          box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
-          border-radius: $base-border-radius;
-          height: $progress-height;
-          margin: 0 auto;
-          padding: 2px;
-          width: 50%;
-        
-          > span.meter {
-            @include animation(progress $progress-animation-duration linear infinite);
-            @include box-sizing(border-box);
-            background-color: $progress-meter-color;
-            @include background-image(linear-gradient(-45deg, rgba(255,255,255, 0.15) 25%,
-                                                              transparent 25%,
-                                                              transparent 50%,
-                                                              rgba(255,255,255, 0.15) 50%,
-                                                              rgba(255,255,255, 0.15) 75%,
-                                                              transparent 75%));
-            background-size: 40px 40px;
-            background-repeat: repeat-x;
-            border: $progress-meter-border;
-            border-radius: $base-border-radius /1.5;
-            display: block;
-            height: 100%;
-            width: 60%;
-          }
-        }
-        
-        @-webkit-keyframes progress {
-          0% {
-            background-position: 0px 0px;
-          }
-          100% {
-            background-position: 40px 0px;
-          }
-        }
-        
-        @-moz-keyframes progress {
-          0% {
-            background-position: 0px 0px;
-          }
-          100% {
-            background-position: 40px 0px;
-          }
-        }
-        
-        @-ms-keyframes progress {
-          0% {
-            background-position: 0px 0px;
-          }
-          100% {
-            background-position: 40px 0px;
-          }
-        }
-        
-        @-o-keyframes progress {
-          0% {
-            background-position: 0px 0px;
-          }
-          100% {
-            background-position: 40px 0px;
-          }
-        }
-        
-        @keyframes progress {
-          0% {
-            background-position: 0px 0px;
-          }
-          100% {
-            background-position: 40px 0px;
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.progress-bar {
+  $progress-border-color: $base-border-color;
+  $progress-border: 1px solid $progress-border-color;
+  $progress-meter-border-color: $base-accent-color;
+  $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
+  $progress-meter-color: $progress-meter-border-color;
+  $progress-background: darken($base-body-color, 5);
+  $progress-animation-duration: 0.7s;
+  $progress-height: 30px;
+
+  background-color: $progress-background;
+  border: $progress-border;
+  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
+  border-radius: $base-border-radius;
+  height: $progress-height;
+  margin: 0 auto;
+  padding: 2px;
+  width: 50%;
+
+  > span.meter {
+    @include animation(progress $progress-animation-duration linear infinite);
+    @include box-sizing(border-box);
+    background-color: $progress-meter-color;
+    @include background-image(linear-gradient(-45deg, rgba(255,255,255, 0.15) 25%,
+                                                      transparent 25%,
+                                                      transparent 50%,
+                                                      rgba(255,255,255, 0.15) 50%,
+                                                      rgba(255,255,255, 0.15) 75%,
+                                                      transparent 75%));
+    background-size: 40px 40px;
+    background-repeat: repeat-x;
+    border: $progress-meter-border;
+    border-radius: $base-border-radius /1.5;
+    display: block;
+    height: 100%;
+    width: 60%;
+  }
+}
+
+@-webkit-keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+@-moz-keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+@-ms-keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+@-o-keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+@keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+</code></pre>
 </div>
 
 </div>
@@ -3468,63 +3285,55 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class="language-markup">
-      &lt;div class=&quot;progress-bar-indication&quot;&gt;
+  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;progress-bar-indication&quot;&gt;
   &lt;span class=&quot;meter&quot; style=&quot;width: 60%&quot;&gt;
     &lt;p&gt;60%&lt;/p&gt;
   &lt;/span&gt;
-&lt;/div&gt;
-    </code>
-  </pre>
+&lt;/div&gt;</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre>
-    <code class='language-scss'>
-        .progress-bar-indication {
-          $progress-border-color: $base-border-color;
-          $progress-border: 1px solid $progress-border-color;
-          $progress-meter-border-color: $base-accent-color;
-          $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
-          $progress-meter-color: $progress-meter-border-color;
-          $progress-background: darken($base-body-color, 5);
-          $progress-animation-duration: 0.7s;
-          $progress-color: white;
-        
-          background-color: $progress-background;
-          border: $progress-border;
-          box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
-          border-radius: $base-border-radius;
-          margin: 0 auto;
-          width: 50%;
-        
-          > span.meter {
-            @include box-sizing(border-box);
-            background-color: $progress-meter-color;
-            background-size: 40px 40px;
-            background-repeat: repeat-x;
-            border: $progress-meter-border;
-            border-radius: $base-border-radius /1.5;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            display: block;
-            height: 100%;
-            width: 60%;
-          }
-        
-          p {
-            margin-bottom: 0;
-            padding: .1em .5em;
-            font-weight: 800;
-            color: $progress-color;    
-            text-shadow: 0 0 1px black;
-          }
-        }
-    </code>
-  </pre>
+  <pre><code class='language-scss'>.progress-bar-indication {
+  $progress-border-color: $base-border-color;
+  $progress-border: 1px solid $progress-border-color;
+  $progress-meter-border-color: $base-accent-color;
+  $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
+  $progress-meter-color: $progress-meter-border-color;
+  $progress-background: darken($base-body-color, 5);
+  $progress-animation-duration: 0.7s;
+  $progress-color: white;
+
+  background-color: $progress-background;
+  border: $progress-border;
+  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
+  border-radius: $base-border-radius;
+  margin: 0 auto;
+  width: 50%;
+
+  > span.meter {
+    @include box-sizing(border-box);
+    background-color: $progress-meter-color;
+    background-size: 40px 40px;
+    background-repeat: repeat-x;
+    border: $progress-meter-border;
+    border-radius: $base-border-radius /1.5;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    display: block;
+    height: 100%;
+    width: 60%;
+  }
+
+  p {
+    margin-bottom: 0;
+    padding: .1em .5em;
+    font-weight: 800;
+    color: $progress-color;    
+    text-shadow: 0 0 1px black;
+  }
+}
+</code></pre>
 </div>
 
 </div>
