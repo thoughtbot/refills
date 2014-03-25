@@ -1,0 +1,3422 @@
+<!doctype html>
+<html>
+  <head>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lusitana' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Refills</title>
+    <link rel="shortcut icon" href="favicon.ico" />    
+    <link href="stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type='text/javascript' src='javascripts/jquery.erToc.js'></script>
+  </head>
+  
+  <body class="index">
+    <section class="container">
+      <section class="inner-content">
+        <div class="refills-header">
+  <h1>Refills</h1>
+  <h2><span>Refills</span> are prepackaged patterns and compontents, built ontop of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://bitters.bourbon.io/">Bitters</a>, and <a href="http://neat.bourbon.io/">Neat</a>.</h2>
+  <p>Managed by <a href="https://thoughtbot.com/">thoughtbot</a>, instructions at <a href="https://github.com/thoughtbot/refills">Github</a></p>
+</div>
+
+<div id="example1" class="refills-wrapper">
+
+  <a class="js-menu-trigger-refills refills-menu-anchor">&#9776;</a>
+  <div class="js-menu-screen-refills refills-menu-screen"></div>
+  
+  <h5>Patterns</h5>
+
+  <div id="navigation" class="refill">
+    <div class="line-behind-text"><h6>Navigation</h6></div>
+    <header class="navigation">
+  <div class="menu-wrapper">
+    <a href="" class="logo">
+      <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
+    </a>
+    <p class="menu-button" id="js-mobile-menu">MENU</p>
+    <div class="nav">
+      <ul id="navigation-menu">
+        <li><a href="">Products</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Contact</a></li>
+        <li class="navigation-search-bar">
+          <div class="search-bar">
+            <div class="search-and-submit">
+              <input type="search" placeholder="Enter Search" />
+              <button type="submit">
+                <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon.png" alt="">
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="sign-up"><a href="">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<script>
+  $(function() {
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+
+    $(menuToggle).on('click', function(e) {
+      e.preventDefault();
+      menu.slideToggle(function(){
+        if(menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+  });
+</script>
+
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;header class=&quot;navigation&quot;&gt;
+  &lt;div class=&quot;menu-wrapper&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;logo&quot;&gt;
+      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
+    &lt;/a&gt;
+    &lt;p class=&quot;menu-button&quot; id=&quot;js-mobile-menu&quot;&gt;MENU&lt;/p&gt;
+    &lt;div class=&quot;nav&quot;&gt;
+      &lt;ul id=&quot;navigation-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;navigation-search-bar&quot;&gt;
+          &lt;div class=&quot;search-bar&quot;&gt;
+            &lt;div class=&quot;search-and-submit&quot;&gt;
+              &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
+              &lt;button type=&quot;submit&quot;&gt;
+                &lt;img src=&quot;https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon.png&quot; alt=&quot;&quot;&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;sign-up&quot;&gt;&lt;a href=&quot;&quot;&gt;Sign Up&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;script&gt;
+  $(function() {
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+
+    $(menuToggle).on('click', function(e) {
+      e.preventDefault();
+      menu.slideToggle(function(){
+        if(menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+  });
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">header.navigation {
+  $navigation-background: $dark-gray;
+  $navigation-color: transparentize(white, 0.3);
+  $navigation-color-hover: white;
+  $navigation-height: 60px;
+  $navigation-nav-button-background: $base-accent-color;
+  $navigation-nav-button-background-hover: lighten($navigation-background, 10);
+  $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
+  $navigation-search-background: lighten($navigation-background, 5);
+  $navigation-search-border: 1px solid darken($navigation-background, 5);
+
+  background-color: $navigation-background;
+  border-bottom: 1px solid darken($navigation-background, 10);
+  font-family: $sans-serif;
+  height: $navigation-height;
+  width: 100%;
+  z-index: 999;
+
+  .menu-wrapper {
+    @include outer-container;
+    position: relative;
+    z-index: 9999;
+  }
+
+  .logo {
+    float: left;    
+    max-height: $navigation-height;
+    padding-left: 1em;
+    padding-right: 2em;
+
+    img {
+      max-height: $navigation-height;
+      padding: .8em 0;
+    }
+  }
+
+  .menu-button {
+    color: $navigation-color;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-family: $sans-serif;
+    font-weight: 700;
+    line-height: $navigation-height;
+    margin: 0;
+    padding-right: 1em;
+    text-transform: uppercase;
+
+    @include media ($large-screen) {
+      display: none;
+    }
+
+    &amp;:hover {
+      color: $navigation-color-hover;
+    }
+  }
+
+  .nav {
+    @include media ($large-screen) {
+      float: left;
+    }
+  }
+
+  ul#navigation-menu {    
+    clear: both;
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    display: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    z-index: 9999;
+
+    @include media ($large-screen) {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  ul li {
+    background: $navigation-background;
+    display: block;
+    line-height: $navigation-height;
+    overflow: hidden;
+    padding-right: .8em;
+    text-align: right;
+    width: 100%;
+    z-index: 9999;
+
+    @include media ($large-screen) {
+      background: transparent;
+      display: inline;
+      line-height: $navigation-height;
+      padding-right: 2em;
+      text-decoration: none;
+      width: auto;
+    }
+
+    a {
+      font-weight: 400;
+      color: $navigation-color;
+
+      &amp;:hover {
+        color: $navigation-color-hover;
+      }
+    }
+  }
+
+  .sign-up {
+    @include media ($large-screen) {
+      @include position(absolute, 0px 0px 0 0);
+      padding-right: 1em;
+
+      a {
+        @include transition (all 0.2s ease-in-out);
+        background: $navigation-nav-button-background;
+        border-radius: $base-border-radius; 
+        color: white;
+        font-size: .8em;  
+        font-weight: 800;
+        padding: .6em 1em;
+        text-transform: uppercase;
+
+        &amp;:hover {
+          background: lighten($navigation-nav-button-background, 10);
+        }
+      }
+    }
+  }
+
+  li.navigation-search-bar {
+    display: none;
+
+    @include media($large-screen) {
+      @include position(absolute, 0px 76px 0 0);
+      display: inline-block;
+      line-height: 0 !important;
+      padding: 13px 30px; // this to get around Firefox/Opera line-height &quot;bug&quot;
+    }
+  }
+
+  .search-bar {
+    $search-bar-border-color: $base-border-color;
+    $search-bar-border: 1px solid $search-bar-border-color;
+    $search-bar-background: lighten($search-bar-border-color, 10);
+
+    width: 19em;
+    position: relative; 
+    display: inline-block;
+
+    input {
+      @include box-sizing(border-box);
+      display: block;
+    }
+
+    .search-and-submit {
+      position: relative;
+
+      input[type=search] {
+        background: $navigation-search-background;
+        border: $navigation-search-border;
+        padding: .6em .8em;
+        font-size: .9em;
+        font-style: italic;
+        color: $navigation-color;
+        border-radius: $base-border-radius * 2;
+        margin: 0;
+      }
+
+      button[type=submit] {
+        @include button(simple, lighten($navigation-search-background, 10));
+        @include position(absolute, 0.3em 0.3em 0.3em 0);
+        outline: none;
+        padding: 5px 15px;
+
+        img {
+          height: 12px;
+          opacity: .7;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="hero" class="refill">
+    <div class="line-behind-text"><h6>Hero Unit</h6>  </div>
+    <div class="hero">
+	<div class="hero-inner">
+    <a href="" class="hero-logo"><img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt=""></a>
+		<div class="hero-copy">
+			<h1>Short description of Product</h1>
+			<p>A few reasons why this product is worth using, who is it for and why do they need it.</p>	
+		</div>
+    <button>Learn More</button>
+	</div>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;hero&quot;&gt;
+	&lt;div class=&quot;hero-inner&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;hero-logo&quot;&gt;&lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+		&lt;div class=&quot;hero-copy&quot;&gt;
+			&lt;h1&gt;Short description of Product&lt;/h1&gt;
+			&lt;p&gt;A few reasons why this product is worth using, who is it for and why do they need it.&lt;/p&gt;	
+		&lt;/div&gt;
+    &lt;button&gt;Learn More&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.hero {
+	$hero-background: desaturate(darken($base-accent-color, 20), 30);	
+	$hero-color: white;
+
+	background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
+	background-color: $hero-background;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+	padding-bottom: 4em;
+
+	.hero-logo img {
+		height: 3em;
+		margin-bottom: 1em;
+	}
+
+	.hero-inner {
+		@include outer-container;
+		@include clearfix;
+		padding: 3em;
+		margin: auto;
+		text-align: center;
+		color: $hero-color;
+
+		button {
+			@include button(simple, $base-accent-color);
+			font-size: $base-font-size;
+			outline: none;
+		}
+
+		.hero-copy {
+			text-align: center;
+			
+			h1 {
+				font-size: 1.4em;
+				margin-bottom: .2em;
+
+				@include media($large-screen) {
+					font-size: 1.8em;
+				}
+			}
+
+			p {
+				margin: auto;
+				margin-bottom: 3em;	
+				font-weight: 200;
+
+				@include media($large-screen) {
+					font-size: 1.2em;
+					max-width: 40%;
+				}
+			}
+		}
+	}
+}</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="icon-bullet-points" class="refill">
+    <div class="line-behind-text"><h6>Icon Bullet Points</h6></div>
+    <div class="bullets">
+  <div class="bullet three-col-bullet">
+    <div class="bullet-icon bullet-icon-1">
+      <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png" alt="">
+    </div>
+    <div class="bullet-content">
+      <h2>This Bullet Title</h2>
+      <p>Lorem dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
+      </div>
+  </div>  
+  <div class="bullet three-col-bullet">
+    <div class="bullet-icon bullet-icon-2">
+      <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png" alt="">
+    </div>
+    <div class="bullet-content">
+      <h2>Another Bullet Title</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.</p>
+    </div>
+  </div>
+  <div class="bullet three-col-bullet">
+    <div class="bullet-icon bullet-icon-3">
+      <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_4.png" alt="">
+    </div>
+    <div class="bullet-content">
+      <h2>Last Bullet Title</h2>
+      <p>Lorem ipsum sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
+    </div>
+  </div> 
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;bullets&quot;&gt;
+  &lt;div class=&quot;bullet three-col-bullet&quot;&gt;
+    &lt;div class=&quot;bullet-icon bullet-icon-1&quot;&gt;
+      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bullet-content&quot;&gt;
+      &lt;h2&gt;This Bullet Title&lt;/h2&gt;
+      &lt;p&gt;Lorem dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.&lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;  
+  &lt;div class=&quot;bullet three-col-bullet&quot;&gt;
+    &lt;div class=&quot;bullet-icon bullet-icon-2&quot;&gt;
+      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bullet-content&quot;&gt;
+      &lt;h2&gt;Another Bullet Title&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;bullet three-col-bullet&quot;&gt;
+    &lt;div class=&quot;bullet-icon bullet-icon-3&quot;&gt;
+      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_4.png&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bullet-content&quot;&gt;
+      &lt;h2&gt;Last Bullet Title&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt; 
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.bullets {
+  $icon-bullet-size: 3.5em;
+
+  overflow: auto;
+  margin-bottom: $base-line-height;
+
+  // change &quot;.three-col-bullet&quot; class to this for two bullet layout
+  .two-col-bullet {
+    @include media($large-screen) {
+      @include span-columns(6);
+      @include omega(2n);  
+    } 
+  }
+  
+  .three-col-bullet {
+    @include media($large-screen) {
+      @include span-columns(4);
+      @include omega(3n);
+    }
+  }
+
+  // change &quot;.three-col-bullet&quot; class to this for four bullet layout
+  .four-col-bullet {
+    @include media($large-screen) {
+      @include span-columns(3);
+      @include omega(4n);
+    }
+  }
+
+  .bullet-icon {
+    float: left;
+    background: $base-accent-color;
+    padding: $icon-bullet-size /4;
+    border-radius: 50%;
+    width: $icon-bullet-size;
+    height: $icon-bullet-size;
+  }
+
+  .bullet-icon-1 {
+    background: $base-accent-color;
+  }
+
+  .bullet-icon-2 {
+    background: adjust-hue($base-accent-color, -50);
+  }
+
+  .bullet-icon-3 {
+    background: adjust-hue($base-accent-color, -140);
+  }
+
+  .bullet-content {
+    margin-left: $icon-bullet-size *1.4;
+    margin-bottom: 2em;
+  }
+
+  h2 {
+    font-size: $icon-bullet-size /2.5;
+    padding-top: $icon-bullet-size /7;
+    margin-bottom: $icon-bullet-size /6;
+    border-bottom: 1px solid transparentize($base-font-color, .8);
+    display: inline-block;
+  }
+}</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="cards" class="refill">
+    <div class="line-behind-text"><h6>Cards</h6></div>
+    <div class="refill-centering"><div class="cards">
+  <div class="card">
+    <div class="card-image">
+      <img src="https://raw.github.com/Magnus-G/Random/master/mountains.png" alt="">
+    </div>
+    <div class="card-header">
+      First Card
+    </div>
+    <div class="card-copy">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>98<span>Items</span></li>
+        <li>298<span>Things</span></li>
+        <li>923<span>Objects</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ribbon-wrapper"><div class="ribbon">RIBBON</div></div>
+    <div class="card-image">
+      <img src="https://raw.github.com/Magnus-G/Random/master/mountains-4.png" alt="">
+    </div>
+    <div class="card-header">
+      Another Card
+    </div>
+    <div class="card-copy">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>98<span>Items</span></li>
+        <li>298<span>Things</span></li>
+        <li>923<span>Objects</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-image">
+      <img src="https://raw.github.com/Magnus-G/Random/master/mountains-3.png" alt="">
+    </div>
+    <div class="card-header">
+      The Last Card
+    </div>
+    <div class="card-copy">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+    </div>
+    <div class="card-stats">
+      <ul>
+        <li>98<span>Items</span></li>
+        <li>298<span>Things</span></li>
+        <li>923<span>Objects</span></li>
+      </ul>
+    </div>
+  </div>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;cards&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-image&quot;&gt;
+      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/mountains.png&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-header&quot;&gt;
+      First Card
+    &lt;/div&gt;
+    &lt;div class=&quot;card-copy&quot;&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-stats&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;98&lt;span&gt;Items&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;298&lt;span&gt;Things&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;923&lt;span&gt;Objects&lt;/span&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;ribbon-wrapper&quot;&gt;&lt;div class=&quot;ribbon&quot;&gt;RIBBON&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;card-image&quot;&gt;
+      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/mountains-4.png&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-header&quot;&gt;
+      Another Card
+    &lt;/div&gt;
+    &lt;div class=&quot;card-copy&quot;&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-stats&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;98&lt;span&gt;Items&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;298&lt;span&gt;Things&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;923&lt;span&gt;Objects&lt;/span&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-image&quot;&gt;
+      &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/mountains-3.png&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-header&quot;&gt;
+      The Last Card
+    &lt;/div&gt;
+    &lt;div class=&quot;card-copy&quot;&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-stats&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;98&lt;span&gt;Items&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;298&lt;span&gt;Things&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;923&lt;span&gt;Objects&lt;/span&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.cards {
+  @include clearfix;
+}
+
+.card {
+  $card-border-color: $base-border-color;
+  $card-border: 1px solid $card-border-color;
+  $card-background: lighten($card-border-color, 10);
+  $card-header-background: $card-background;
+  $card-hover-background: lighten($card-background, 5);
+  $card-image-background: #DBD199;
+  $card-image-hover-background: lighten($card-image-background, 5);
+  $card-stats-color: lighten($base-accent-color, 10);
+
+  @include transition (all 0.2s ease-in-out);
+  background-color: $card-background;
+  border-radius: $base-border-radius;
+  border: $card-border;
+  margin-bottom: $base-line-height;
+  cursor: pointer;
+  box-shadow: 0 2px 4px darken($base-body-color, 10);
+  position: relative;
+
+  @include media($large-screen) {
+    @include span-columns(4);  
+    @include omega(3n);
+  }
+
+  .card-image {
+    overflow: hidden;
+    max-height: 150px;
+
+    img {
+      width: 100%;
+      @include transition (all 0.2s ease-in-out);
+      background: $card-image-background;
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+    }
+  }
+
+  .ribbon-wrapper {
+    $ribbon-size: 85px;
+    $ribbon-background: $base-accent-color;
+    @include size($ribbon-size);
+    overflow: hidden;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+
+    .ribbon {
+      font-size: .8em;
+      font-weight: 800;
+      text-align: center;
+      @include transform(rotate(45deg));
+      position: relative;
+      padding: 2px 7px;
+      left: -5px;
+      top: 15px;
+      width: 120px;
+      background-color: $ribbon-background;
+      color: white;
+      box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    }
+  }
+
+  .card-header {
+    @include transition (all 0.2s ease-in-out);
+    background-color: $card-header-background;
+    border-bottom: $card-border;
+    border-radius: $base-border-radius $base-border-radius 0 0;
+    font-weight: bold;
+    padding: $base-line-height/3 $gutter/2;
+  }
+
+  .card-copy {
+    padding: $base-line-height/2 $gutter/2;
+    font-size: .9em;
+    line-height: 1.5em;
+  }
+
+  .card-stats {
+    padding: $base-line-height/2 $gutter/2;
+    overflow: auto;
+
+    ul li {
+      display: inline;
+      color: $card-stats-color;
+      font-weight: 800;
+      font-size: 1.2em;
+      float: left;
+      border-right: 1px solid transparentize($base-font-color, .8);
+      line-height: 1.1em;
+      padding: 0 .7em 0 .7em;
+
+      &amp;:first-child {
+        padding-left: 0;
+      }
+
+      &amp;:last-child {
+        border-right: 0;
+      }
+
+      span {
+        color: $base-font-color;
+        font-size: .7em;
+        display: block;
+        font-weight: normal;
+      }
+    }
+  }
+
+  &amp;:hover {
+    background-color: $card-hover-background;
+    
+    .card-image img {
+      background: $card-image-hover-background;
+    }
+  
+    .card-header {
+      background-color: $card-hover-background;
+    }
+  }
+
+  &amp;:active {
+    background-color: $card-background;
+
+    .card-header {
+      background-color: $card-background;
+    }
+  }
+}
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="accordion-tabs" class="refill">
+    <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
+    <ul class="accordion-tabs">
+  <li class="tab-header-and-content"><a href="#" class="is-active">Tab Item</a>
+    <section>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
+    </section>
+  </li>
+  <li class="tab-header-and-content"><a href="#">Another Tab</a>
+    <section>
+      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
+    </section>
+  </li>
+  <li class="tab-header-and-content"><a href="#">Third</a>
+    <section>
+      <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>    
+    </section>
+  </li>
+  <li class="tab-header-and-content"><a href="#">Last Item</a>
+    <section>
+      <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.</p
+    </section>
+  </li>
+</ul>
+
+<script>
+  $(document).ready(function () {
+    $('.accordion-tabs').children('li').first().children('a').addClass('is-active')
+      .next().addClass('is-open').show();
+
+    $('.accordion-tabs').on('click', 'li > a', function(event) {
+      if (!$(this).hasClass('is-active')) {
+        event.preventDefault();
+        $('.accordion-tabs .is-open').removeClass('is-open').hide();
+        $(this).next().toggleClass('is-open').toggle();
+        $('.accordion-tabs').find('.is-active').removeClass('is-active');
+        $(this).addClass('is-active');
+      } else {
+        event.preventDefault();
+      }
+    });
+  });
+</script>
+
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;ul class=&quot;accordion-tabs&quot;&gt;
+  &lt;li class=&quot;tab-header-and-content&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;is-active&quot;&gt;Tab Item&lt;/a&gt;
+    &lt;section&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;tab-header-and-content&quot;&gt;&lt;a href=&quot;#&quot;&gt;Another Tab&lt;/a&gt;
+    &lt;section&gt;
+      &lt;p&gt;Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;tab-header-and-content&quot;&gt;&lt;a href=&quot;#&quot;&gt;Third&lt;/a&gt;
+    &lt;section&gt;
+      &lt;p&gt;Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.&lt;/p&gt;    
+    &lt;/section&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;tab-header-and-content&quot;&gt;&lt;a href=&quot;#&quot;&gt;Last Item&lt;/a&gt;
+    &lt;section&gt;
+      &lt;p&gt;Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.&lt;/p
+    &lt;/section&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+  $(document).ready(function () {
+    $('.accordion-tabs').children('li').first().children('a').addClass('is-active')
+      .next().addClass('is-open').show();
+
+    $('.accordion-tabs').on('click', 'li &gt; a', function(event) {
+      if (!$(this).hasClass('is-active')) {
+        event.preventDefault();
+        $('.accordion-tabs .is-open').removeClass('is-open').hide();
+        $(this).next().toggleClass('is-open').toggle();
+        $('.accordion-tabs').find('.is-active').removeClass('is-active');
+        $(this).addClass('is-active');
+      } else {
+        event.preventDefault();
+      }
+    });
+  });
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.accordion-tabs {
+  $tab-border-color: $base-border-color;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-content-background: lighten($light-gray, 10);
+  $tab-active-background: $tab-content-background;
+  $tab-inactive-color: $base-body-color;
+  $tab-inactive-hover-color: darken($light-gray, 5);
+  $tab-mode: $medium-screen;
+
+  @include clearfix;
+  @include fill-parent;
+  border: $tab-border;
+  border-radius: $base-border-radius;
+  margin-bottom: $base-line-height;
+
+  @include media($tab-mode) {
+    border: none;
+    position: relative;
+  }
+
+  li.tab-header-and-content {
+
+    @include media($tab-mode) {
+      display: inline;
+    }
+
+    &amp;:first-child a {
+      border-top-left-radius: $base-border-radius; 
+      border-top-right-radius: $base-border-radius; 
+      border-top: 0;
+    }
+
+    &amp;:last-child a {
+      border-bottom-left-radius: $base-border-radius; 
+      border-bottom-right-radius: $base-border-radius; 
+
+      @include media($tab-mode) {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  li.tab-header-and-content a {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    color: $dark-gray;
+    display: block;
+    font-weight: bold;
+    padding: $base-line-height/2 $gutter/2;
+
+    @include media($tab-mode) {
+      @include inline-block;
+      border-top: 0;
+      border-top-right-radius: $base-border-radius;
+      border-top-left-radius: $base-border-radius;
+    }
+
+    &amp;:hover {
+      color: $base-link-color;
+    }
+
+    &amp;:focus { 
+      outline: none; 
+    }
+
+    &amp;.is-active {
+      background-color: $tab-active-background;
+      border-bottom: 0;
+
+      @include media($tab-mode) {
+        background-color: $tab-active-background;
+        border: $tab-border;
+        border-bottom: 1px solid $tab-active-background;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  li.tab-header-and-content section {
+    padding: $base-line-height $gutter;
+    background: $tab-content-background;
+    display: none;
+    overflow: hidden;
+
+    @include media($tab-mode) {
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+      border: $tab-border;
+      float: left;
+      left: 0;
+      padding: $base-line-height/2 $gutter/2;
+
+      p {
+        @include columns(2);
+      }
+    }
+  }
+}</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="tables" class="refill">
+    <div class="line-behind-text"><h6>Tables</h6></div>
+    <table class="table-borders">
+  <thead>
+    <tr>
+      <th>Header Cell 1</th>
+      <th>Header Cell 2</th>
+      <th>Header Cell 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Row 1 Cell 1</td>
+      <td>Row 1 Cell 2</td>
+      <td><button>Confirm</button><button>Reject</button></td>
+    </tr>
+    <tr>
+      <td>Row 2 Cell 1</td>
+      <td>Row 2 Cell 2</td>
+      <td><button>Confirm</button><button>Reject</button></td>
+    </tr>
+    <tr>
+      <td>Row 3 Cell 1</td>
+      <td>Row 3 Cell 2</td>
+      <td><button>Confirm</button><button>Reject</button></td>
+    </tr>
+    <tr>
+      <td>Row 4 Cell 1</td>
+      <td>Row 4 Cell 2</td>
+      <td><button>Confirm</button><button>Reject</button></td>
+    </tr>
+  </tbody>
+</table>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;table class=&quot;table-borders&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Header Cell 1&lt;/th&gt;
+      &lt;th&gt;Header Cell 2&lt;/th&gt;
+      &lt;th&gt;Header Cell 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Row 1 Cell 1&lt;/td&gt;
+      &lt;td&gt;Row 1 Cell 2&lt;/td&gt;
+      &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Row 2 Cell 1&lt;/td&gt;
+      &lt;td&gt;Row 2 Cell 2&lt;/td&gt;
+      &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Row 3 Cell 1&lt;/td&gt;
+      &lt;td&gt;Row 3 Cell 2&lt;/td&gt;
+      &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Row 4 Cell 1&lt;/td&gt;
+      &lt;td&gt;Row 4 Cell 2&lt;/td&gt;
+      &lt;td&gt;&lt;button&gt;Confirm&lt;/button&gt;&lt;button&gt;Reject&lt;/button&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.table-borders {
+  $table-border-color: $base-border-color;
+  $table-border: 1px solid $table-border-color;
+  $table-background: lighten($table-border-color, 10);
+  $table-header-color: lighten($table-background, 10);
+  $table-hover-color: darken($table-background, 5);
+  $table-stripe-color: darken($table-background, 4);
+  $table-stripe-color-hover: darken($table-stripe-color, 5);
+  $table-padding: 0.5em;
+
+  border: $table-border;
+  border-left: 0px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: $base-border-radius;
+
+  tbody {
+    background-color: $table-background;
+    tr:hover &gt; td, tr:hover &gt; th {
+      background-color: $table-hover-color;
+    }
+    tr:nth-child(even) {
+      background-color: $table-stripe-color;
+      &amp;:hover &gt; td {
+        background-color: $table-stripe-color-hover;
+      }
+    }
+  }
+
+  thead:first-of-type {
+    tr:first-child &gt; th:first-child {
+      border-top-left-radius: $base-border-radius;
+    }
+
+    tr:first-child &gt; th:last-child {
+      border-top-right-radius: $base-border-radius;
+    }
+  }
+
+  tbody:last-child {
+    tr:last-child &gt; td:first-child {
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    tr:last-child &gt; td:last-child {
+      border-bottom-right-radius: $base-border-radius;
+    }
+  }
+
+  thead {
+    th {
+      background-color: $table-header-color;
+      padding: $table-padding;
+      border-left: 1px solid $table-border-color;
+      border-bottom: 0px;
+    }
+  }
+
+  tbody {
+    background-color: $table-background;
+
+    td {
+      padding: $table-padding;
+      border-left: 1px solid $table-border-color;
+      border-top: 1px solid $table-border-color;
+      border-bottom: 0px;
+
+      button {
+        @include button(simple, $table-background);
+        margin-right: 0.5em;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: .3em;
+        outline: none;
+
+        @include media($medium-screen) {
+          width: auto;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="vertical-tabs" class="refill">
+    <div class="line-behind-text"><h6>Vertical Tabs</h6></div>
+    <div class="vertical-tabs-container">
+  <div class="vertical-tabs">
+    <a href="#" class="js-vertical-tab vertical-tab is-active" rel="tab1">Item 1</a>
+    <a href="#" class="js-vertical-tab vertical-tab" rel="tab2">Item 2</a>
+    <a href="#" class="js-vertical-tab vertical-tab" rel="tab3">Item 3</a>
+    <a href="#" class="js-vertical-tab vertical-tab" rel="tab4">Item 4</a>
+  </div>
+
+  <div class="vertical-tab-content-container">
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="tab1">Item 1</a>
+    <div id="tab1" class="js-vertical-tab-content vertical-tab-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
+    </div>
+
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab2">Item 2</a>
+    <div id="tab2" class="js-vertical-tab-content vertical-tab-content">
+      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum.</p>
+    </div>
+
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab3">Item 3</a>
+    <div id="tab3" class="js-vertical-tab-content vertical-tab-content">
+      <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
+    </div>
+
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab4">Item 4</a>
+    <div id="tab4" class="js-vertical-tab-content vertical-tab-content">
+      <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(".js-vertical-tab-content").hide();
+  $(".js-vertical-tab-content:first").show();
+
+  /* if in tab mode */
+  $(".js-vertical-tab").click(function(event) {
+    event.preventDefault();
+
+    $(".js-vertical-tab-content").hide();
+    var activeTab = $(this).attr("rel");
+    $("#"+activeTab).show();
+
+    $(".js-vertical-tab").removeClass("is-active");
+    $(this).addClass("is-active");
+
+    $(".js-vertical-tab-accordion-heading").removeClass("is-active");
+    $(".js-vertical-tab-accordion-heading[rel^='"+activeTab+"']").addClass("is-active");
+  });
+
+  /* if in accordion mode */
+  $(".js-vertical-tab-accordion-heading").click(function(event) {
+    event.preventDefault()
+
+    $(".js-vertical-tab-content").hide();
+    var accordion_activeTab = $(this).attr("rel");
+    $("#"+accordion_activeTab).show();
+
+    $(".js-vertical-tab-accordion-heading").removeClass("is-active");
+    $(this).addClass("is-active");
+
+    $(".js-vertical-tab").removeClass("is-active");
+    $(".js-vertical-tab[rel^='"+accordion_activeTab+"']").addClass("is-active");
+  });
+</script>
+
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;vertical-tabs-container&quot;&gt;
+  &lt;div class=&quot;vertical-tabs&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-vertical-tab vertical-tab is-active&quot; rel=&quot;tab1&quot;&gt;Item 1&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-vertical-tab vertical-tab&quot; rel=&quot;tab2&quot;&gt;Item 2&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-vertical-tab vertical-tab&quot; rel=&quot;tab3&quot;&gt;Item 3&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-vertical-tab vertical-tab&quot; rel=&quot;tab4&quot;&gt;Item 4&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;vertical-tab-content-container&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active&quot; rel=&quot;tab1&quot;&gt;Item 1&lt;/a&gt;
+    &lt;div id=&quot;tab1&quot; class=&quot;js-vertical-tab-content vertical-tab-content&quot;&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;a href=&quot;&quot; class=&quot;js-vertical-tab-accordion-heading vertical-tab-accordion-heading&quot; rel=&quot;tab2&quot;&gt;Item 2&lt;/a&gt;
+    &lt;div id=&quot;tab2&quot; class=&quot;js-vertical-tab-content vertical-tab-content&quot;&gt;
+      &lt;p&gt;Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;a href=&quot;&quot; class=&quot;js-vertical-tab-accordion-heading vertical-tab-accordion-heading&quot; rel=&quot;tab3&quot;&gt;Item 3&lt;/a&gt;
+    &lt;div id=&quot;tab3&quot; class=&quot;js-vertical-tab-content vertical-tab-content&quot;&gt;
+      &lt;p&gt;Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;a href=&quot;&quot; class=&quot;js-vertical-tab-accordion-heading vertical-tab-accordion-heading&quot; rel=&quot;tab4&quot;&gt;Item 4&lt;/a&gt;
+    &lt;div id=&quot;tab4&quot; class=&quot;js-vertical-tab-content vertical-tab-content&quot;&gt;
+      &lt;p&gt;Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(&quot;.js-vertical-tab-content&quot;).hide();
+  $(&quot;.js-vertical-tab-content:first&quot;).show();
+
+  /* if in tab mode */
+  $(&quot;.js-vertical-tab&quot;).click(function(event) {
+    event.preventDefault();
+
+    $(&quot;.js-vertical-tab-content&quot;).hide();
+    var activeTab = $(this).attr(&quot;rel&quot;);
+    $(&quot;#&quot;+activeTab).show();
+
+    $(&quot;.js-vertical-tab&quot;).removeClass(&quot;is-active&quot;);
+    $(this).addClass(&quot;is-active&quot;);
+
+    $(&quot;.js-vertical-tab-accordion-heading&quot;).removeClass(&quot;is-active&quot;);
+    $(&quot;.js-vertical-tab-accordion-heading[rel^='&quot;+activeTab+&quot;']&quot;).addClass(&quot;is-active&quot;);
+  });
+
+  /* if in accordion mode */
+  $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
+    event.preventDefault()
+
+    $(&quot;.js-vertical-tab-content&quot;).hide();
+    var accordion_activeTab = $(this).attr(&quot;rel&quot;);
+    $(&quot;#&quot;+accordion_activeTab).show();
+
+    $(&quot;.js-vertical-tab-accordion-heading&quot;).removeClass(&quot;is-active&quot;);
+    $(this).addClass(&quot;is-active&quot;);
+
+    $(&quot;.js-vertical-tab&quot;).removeClass(&quot;is-active&quot;);
+    $(&quot;.js-vertical-tab[rel^='&quot;+accordion_activeTab+&quot;']&quot;).addClass(&quot;is-active&quot;);
+  });
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.vertical-tabs-container { // small screens: accordion
+  $tab-border-color: $base-border-color;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-border-radius: $base-border-radius;
+  $tab-content-background: lighten($tab-border-color, 10);
+  $tab-active-color: $tab-content-background;
+  $tab-inactive-color: $base-body-color;
+  $vertical-tabs-height: em(300);
+  $vertical-tab-mode: $medium-screen;
+
+  @include clearfix;
+  border-radius: $tab-border-radius;
+  border: $tab-border;
+  margin-bottom: $base-line-height;
+  overflow: hidden;
+
+  .vertical-tabs {
+    display: none;
+
+    @include media($vertical-tab-mode) {
+      background-color: $tab-inactive-color;
+      display: inline;
+      float: left;
+      height: $vertical-tabs-height;
+      width: 20%;
+    }
+  }
+
+  .vertical-tab {
+    @include media($vertical-tab-mode) {
+      border-bottom: $tab-border;
+      display: block;
+      font-weight: bold;
+      margin-right: -1px;
+      padding: $base-line-height/2 $gutter/2;
+
+      &amp;.is-active {
+        background-color: $tab-content-background;
+        margin-right: -1px;
+      }
+    }
+  }
+
+  .vertical-tab:focus {
+    outline: none; 
+  }
+
+  .vertical-tab-content-container {
+    display: block;
+    margin: 0 auto;
+
+    &amp; a:focus { 
+      outline: none; 
+    }
+
+    @include media($vertical-tab-mode) {
+      @include inline-block;
+      @include size(80% $vertical-tabs-height);
+      background-color: $tab-content-background;
+    }
+  }
+
+  .vertical-tab-content {
+    background-color: $tab-content-background;
+    padding: $base-line-height $gutter;
+
+    @include media($vertical-tab-mode) {
+      border: none;
+      display: none;
+    }
+  }
+
+  .vertical-tab-accordion-heading {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    padding: $base-line-height/2 $gutter/2;
+
+    &amp;:hover {
+      color: $base-accent-color;
+    }
+
+    &amp;:first-child {
+      border-top: none;
+    }
+
+    &amp;.is-active {
+      background: $tab-active-color;
+      border-bottom: none;
+    }
+
+    @include media($vertical-tab-mode) {
+      display: none;
+    }
+  }
+}</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="grid-item" class="refill">
+    <div class="line-behind-text"><h6>Grid Items</h6></div>
+    <div class="refill-centering"><div class="grid-items">
+  <a href="" class="grid-item">
+    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
+    <h1>Grid Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+  </a>
+  <a href="" class="grid-item grid-item-big grid-item-image">
+    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png" alt="">
+    <h1>Grid Item With an Image</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+  </a>
+  <a href="" class="grid-item grid-item-big">
+    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png" alt="">
+    <h1>Another Wide Item</h1>
+    <p>Lorem ipsum consectetur dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+  </a>
+  <a href="" class="grid-item">
+    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png" alt="">
+    <h1>Last Grid Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+  </a>
+    <a href="" class="grid-item">
+    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png" alt="">
+    <h1>Last Grid Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+  </a>
+    <a href="" class="grid-item">
+    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png" alt="">
+    <h1>A Grid Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+  </a>
+    <a href="" class="grid-item">
+    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
+    <h1>Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+  </a>
+</div>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;grid-items&quot;&gt;
+  &lt;a href=&quot;&quot; class=&quot;grid-item&quot;&gt;
+    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
+    &lt;h1&gt;Grid Item&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, elit. Rem, illum.&lt;/p&gt;
+  &lt;/a&gt;
+  &lt;a href=&quot;&quot; class=&quot;grid-item grid-item-big grid-item-image&quot;&gt;
+    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png&quot; alt=&quot;&quot;&gt;
+    &lt;h1&gt;Grid Item With an Image&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.&lt;/p&gt;
+  &lt;/a&gt;
+  &lt;a href=&quot;&quot; class=&quot;grid-item grid-item-big&quot;&gt;
+    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png&quot; alt=&quot;&quot;&gt;
+    &lt;h1&gt;Another Wide Item&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum consectetur dolor sit amet, consectetur adipisicing elit. Rem, illum.&lt;/p&gt;
+  &lt;/a&gt;
+  &lt;a href=&quot;&quot; class=&quot;grid-item&quot;&gt;
+    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png&quot; alt=&quot;&quot;&gt;
+    &lt;h1&gt;Last Grid Item&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, elit. Rem, illum.&lt;/p&gt;
+  &lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;grid-item&quot;&gt;
+    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png&quot; alt=&quot;&quot;&gt;
+    &lt;h1&gt;Last Grid Item&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, elit. Rem, illum.&lt;/p&gt;
+  &lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;grid-item&quot;&gt;
+    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png&quot; alt=&quot;&quot;&gt;
+    &lt;h1&gt;A Grid Item&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, elit. Rem, illum.&lt;/p&gt;
+  &lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;grid-item&quot;&gt;
+    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
+    &lt;h1&gt;Item&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, elit. Rem, illum.&lt;/p&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+.grid-items {
+  $grid-items-background: $base-body-color;
+  $grid-item-background: desaturate($base-accent-color, 30); 
+  $grid-item-colors: 
+    desaturate($base-accent-color, 30), 
+    #3581A5, 
+    #5FBEBE,
+    #98C79A,
+    #A7A891, 
+    #BDCC97,
+    #979EA0;
+  $grid-item-border-size: 9px;
+  $grid-item-border: $grid-item-border-size solid $grid-items-background;
+  $grid-item-columns: 4;
+  $grid-item-big-columns: 8;
+  $grid-item-color: white;
+  $grid-item-height: 14em;
+
+  @include clearfix;
+    
+  .grid-item {
+    @include transition (all 0.2s ease-in-out);
+    height: $grid-item-height;
+    background: $grid-item-background;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    padding: 2em;
+    border-top: 0;
+    border-bottom: $grid-item-border-size solid $grid-items-background;
+    border-left: $grid-item-border-size /2 solid $grid-items-background;
+    border-right: $grid-item-border-size /2 solid $grid-items-background;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-columns);
+    }
+
+    @for $i from 1 to 8 { // assign colors from $grid-item-colors list
+      &amp;:nth-child(#{$i}) {
+        $background-from-list: nth($grid-item-colors, $i);
+        background-color: $background-from-list;
+        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10);
+        &amp;:hover {
+          background-color: darken($background-from-list, 10);
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  .grid-item img {
+      display: block;
+      height: 3em;
+      margin: auto;
+      margin-bottom: 1em;
+    }
+
+  .grid-item h1 {
+      color: $grid-item-color;
+      font-size: 1.3em;
+      margin-bottom: .4em;
+    }
+
+  .grid-item p {
+      margin: auto;
+      color: transparentize($grid-item-color, .3);
+      @include media($medium-screen) {
+        max-width: 70%;
+      }
+    }
+
+  .grid-item-big {
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-big-columns);
+    }
+    p {
+      @include media($medium-screen) {
+        max-width: 60%;
+      }  
+    }
+  }
+
+  .grid-item-image {
+    background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
+    background-color: $grid-item-background;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+}
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div class="refills-wrapper">
+    <div id="footer" class="refill">
+      <div class="line-behind-text"><h6>Footers</h6></div>
+      <div class="refill-centering"><footer class="footer">
+  <div class="footer-logo">
+    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
+  </div>
+  <div class="footer-links">
+    <ul>
+      <li><h3>Content</h3></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="">Products</a></li>
+    </ul>
+    <ul>
+      <li><h3>Follow Us</h3></li>
+      <li><a href="">Facebook</a></li>
+      <li><a href="">Twitter</a></li>
+      <li><a href="">YouTube</a></li>
+    </ul>
+    <ul>
+      <li><h3>Legal</h3></li>
+      <li><a href="">Terms and Conditions</a></li>
+      <li><a href="">Privacy Policy</a></li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
+</footer>
+</div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;footer class=&quot;footer&quot;&gt;
+  &lt;div class=&quot;footer-logo&quot;&gt;
+    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;footer-links&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;h3&gt;Content&lt;/h3&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;h3&gt;Follow Us&lt;/h3&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;h3&gt;Legal&lt;/h3&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Terms and Conditions&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;hr&gt;
+
+  &lt;p&gt;Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.&lt;/p&gt;
+&lt;/footer&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.footer {
+  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, .6);
+  $footer-disclaimer-color: transparentize($footer-color, .6);
+
+  background: $footer-background;
+  padding: $base-line-height*2 $gutter;
+  width: 100%;
+
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 2em;
+
+    img {
+      height: 3em;
+    }
+  } 
+
+  .footer-links {
+    @include clearfix;
+    margin-bottom: $base-line-height;
+
+    @include media($medium-screen) {
+      @include shift(3);
+    }
+  }
+
+  ul {
+    margin-bottom: $base-line-height*2;
+
+    @include media($medium-screen) {
+      @include span-columns(3);
+      @include omega(3n);
+      @include clearfix;
+    }
+  }
+
+  li {
+    text-align: center;
+
+    @include media($medium-screen) {
+      text-align: left;
+    }
+  }
+
+  li a {
+    color: $footer-link-color;
+
+    &amp;:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  li h3 {
+    color: $footer-color;
+    font-size: 1em;
+    font-weight: 800;
+    margin-bottom: .4em;
+  }  
+
+  hr {
+    border: 1px solid transparentize($footer-disclaimer-color, .3);
+    margin: 0 auto $base-line-height;
+    width: 12em;
+  }
+
+  p {
+    color: $footer-disclaimer-color;
+    font-size: .9em;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 35em;
+    text-align: center;
+  }
+}
+</code></pre>
+</div>
+
+</div>
+      <div class="refill-centering"><footer class="footer-2">
+  <div class="footer-logo">
+    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
+  </div>
+    <ul>
+      <li><a href="">About</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="">Products</a></li>
+    </ul>
+
+    <div class="footer-secondary-links">
+      <ul>
+        <li><a href="">Terms and Conditions</a></li>
+        <li><a href="">Privacy Policy</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="">
+          <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/facebook-logo-circle.png" alt="">
+          </a></li>
+        <li><a href="">
+          <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/twitter-logo-circle.png" alt="">
+        </a></li>
+        <li><a href="">
+          <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/youtube-logo-circle.png" alt="">
+        </a></li>
+      </ul>
+    </div>
+</footer>
+</div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;footer class=&quot;footer-2&quot;&gt;
+  &lt;div class=&quot;footer-logo&quot;&gt;
+    &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;footer-secondary-links&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Terms and Conditions&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;ul class=&quot;footer-social&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;&quot;&gt;
+          &lt;img src=&quot;https://raw.githubusercontent.com/Magnus-G/Random/master/facebook-logo-circle.png&quot; alt=&quot;&quot;&gt;
+          &lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;&quot;&gt;
+          &lt;img src=&quot;https://raw.githubusercontent.com/Magnus-G/Random/master/twitter-logo-circle.png&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;&quot;&gt;
+          &lt;img src=&quot;https://raw.githubusercontent.com/Magnus-G/Random/master/youtube-logo-circle.png&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.footer-2 {
+  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, .6);
+  $footer-disclaimer-color: transparentize($footer-color, .6);
+
+  background: $footer-background;
+  padding: $base-line-height;
+  width: 100%;
+
+  .footer-logo {
+    margin-right: 1em;
+    margin-bottom: 1em;
+
+    @include media($large-screen) {
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+
+  .footer-logo img {
+    height: 1.6em;
+  } 
+
+  ul {
+    margin-bottom: 1em;
+    @include media($large-screen) {
+      float: left;
+      margin-left: 1em;
+      margin-bottom: 0;
+    }
+  }
+
+  ul li {
+    padding-right: 1em;
+    font-weight: 800;
+
+    @include media($large-screen) {
+      display: inline;
+      text-align: left;
+    }
+  }
+
+  ul li a {
+    color: $footer-link-color;
+
+    &amp;:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  .footer-secondary-links {
+    @include media($large-screen) {
+      float: right;
+    }
+
+    li {
+      font-size: .8em;
+      font-weight: 400;
+    }
+
+    ul.footer-social {
+      margin-top: 1em;
+
+      @include media($large-screen) {
+        float: right;
+        margin-top: 0;
+      }
+
+      li {
+        font-size: 1em;
+        display: inline;
+        padding-right: .5em;
+        margin-bottom: .7em;      
+      }
+
+      img {
+        opacity: .7;
+        height: 1.6em;
+        padding: 1px;
+
+        &amp;:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+</div>
+
+</div>
+    </div>
+  </div>
+
+  <h5>Components</h5>
+
+  <div id="sliding-menu" class="refill">
+    <div class="line-behind-text"><h6>Sliding Menu</h6></div>
+    <div class="refill-centering"><div>
+  <a class="js-menu-trigger menu-anchor">&#9776;</a>
+</div>
+
+<nav class="js-menu sliding-menu-content">
+  <ul>
+    <li><a href="#">Item 1</a></li>
+    <li><a href="#">Item 2</a></li>
+    <li><a href="#">Item 3</a></li>
+  </ul>
+</nav>
+
+<div class="js-menu-screen menu-screen">
+</div>
+
+<script>
+  $(document).ready(function(){
+
+    $('.js-menu-trigger').on('click touchstart', function(e){
+      $('.js-menu').toggleClass('is-visible');
+      $('.js-menu-screen').toggleClass('is-visible');
+      e.preventDefault();
+    });
+
+    $('.js-menu-screen').on('click touchstart', function(e){
+      $('.js-menu').toggleClass('is-visible');
+      $('.js-menu-screen').toggleClass('is-visible');
+      e.preventDefault();
+    });
+  });
+</script>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div&gt;
+  &lt;a class=&quot;js-menu-trigger menu-anchor&quot;&gt;&amp;#9776;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;nav class=&quot;js-menu sliding-menu-content&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;div class=&quot;js-menu-screen menu-screen&quot;&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(document).ready(function(){
+
+    $('.js-menu-trigger').on('click touchstart', function(e){
+      $('.js-menu').toggleClass('is-visible');
+      $('.js-menu-screen').toggleClass('is-visible');
+      e.preventDefault();
+    });
+
+    $('.js-menu-screen').on('click touchstart', function(e){
+      $('.js-menu').toggleClass('is-visible');
+      $('.js-menu-screen').toggleClass('is-visible');
+      e.preventDefault();
+    });
+  });
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">$sliding-menu-border-color: $dark-gray;
+$sliding-menu-background: lighten($sliding-menu-border-color, 5);
+$sliding-menu-color: #fff;
+$sliding-menu-border: 1px solid $sliding-menu-border-color;
+$sliding-menu-background-hover: $base-accent-color;
+$sliding-menu-color-hover: #fff;
+
+.menu-anchor {
+  @include button(simple, $base-body-color);
+  @include inline-block;
+  cursor: pointer;
+  font-size: $base-font-size;
+  margin-bottom: $base-line-height;
+  position: relative;
+}
+
+.sliding-menu-content {
+  @include position(fixed, 0px auto 0px 0px);
+  @include size(220px 100%);
+  @include transform(translateX(-220px));
+  @include transition(all .25s linear);
+  background: $sliding-menu-background;
+  z-index: 999999;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  li a {
+    border-bottom: $sliding-menu-border;
+    color: $sliding-menu-color;
+    display: block;
+    font-weight: bold;
+    padding: 1em;
+
+    &amp;:hover {
+      background-color: $sliding-menu-background-hover;
+      color: $sliding-menu-color-hover;
+    }
+  }
+
+  &amp;.is-visible {
+    @include transform(translateX(0));
+  }
+}
+
+.menu-screen {
+  @include position(fixed, 0px 0px 0px 0px);
+  @include transition;
+  background: $sliding-menu-border-color;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999998;
+
+  &amp;.is-visible {
+    opacity: .4;
+    visibility: visible;
+  }
+}
+
+// Based on code by Diego Eis
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="badges" class="refill">
+    <div class="line-behind-text"><h6>Badges</h6></div>
+    <div class="refill-centering"><div class="badges">
+	<span class="badge">4</span>
+	<span class="badge dark">4</span>
+	<span class="badge error">4</span>
+	<span class="badge notice">4</span>
+	<span class="badge success">4</span>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;badges&quot;&gt;
+	&lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
+	&lt;span class=&quot;badge dark&quot;&gt;4&lt;/span&gt;
+	&lt;span class=&quot;badge error&quot;&gt;4&lt;/span&gt;
+	&lt;span class=&quot;badge notice&quot;&gt;4&lt;/span&gt;
+	&lt;span class=&quot;badge success&quot;&gt;4&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.badges {
+  $badge-background: $medium-gray;
+  $badge-dark-color: $dark-gray;
+  $badge-error-color: $error-color;
+  $badge-notice-color: $notice-color;
+  $badge-success-color: $success-color;
+  $badge-font-color: #fff;
+  $badge-font-size: $base-font-size * .75;
+
+  display: block;
+  margin-bottom: $base-line-height;
+
+  .badge {
+    @include inline-block;
+    background: $badge-background;
+    border-radius: 2em;
+    color: $badge-font-color;
+    font-size: $badge-font-size;
+    font-weight: 600;
+    line-height: 1;
+    padding: .25em 1em;
+    text-align: center;
+
+    &amp;.dark {
+      background: $badge-dark-color;
+    }
+
+    &amp;.error {
+      background: $badge-error-color;
+      color: darken($badge-error-color, 60);
+    }
+
+    &amp;.notice {
+      background: $badge-notice-color;
+      color: darken($badge-error-color, 60);
+    }
+
+    &amp;.success {
+      background: $badge-success-color;
+      color: darken($badge-success-color, 60);
+    }
+  }
+}
+
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="breadcrumbs" class="refill">
+    <div class="line-behind-text"><h6>Breadcrumbs</h6></div>
+    <div class="refill-centering"><div class="breadcrumb">
+  <a href="#">One</a>
+  <a href="#">Two</a>
+  <a href="#">Three</a>
+  <a href="#">Four</a>
+  <a href="#">Five</a>
+  <a href="#">Six</a>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;breadcrumb&quot;&gt;
+  &lt;a href=&quot;#&quot;&gt;One&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Two&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Three&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Four&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Five&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Six&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.breadcrumb { 
+  $breadcrumb-border-color: $base-border-color;
+  $breadcrumb-border: 1px solid $breadcrumb-border-color;
+  $breadcrumb-height: $base-line-height * 1.5;
+  $breadcrumb-arrow-color: $breadcrumb-border-color;
+  $breadcrumb-background: $base-body-color;
+  $breadcrumb-inactive-hover-color: $breadcrumb-background;
+  $breadcrumb-color: $medium-gray;
+  $breadcrumb-color-hover: $base-accent-color;
+  $breadcrumb-color-active: $breadcrumb-color;
+
+  @include inline-block;
+  border-radius: $base-border-radius;
+  margin: 0;
+  padding: 0;
+  border-radius: $base-border-radius;
+  display: block;
+  margin-bottom: $base-line-height;
+
+  a {
+    @include inline-block;
+    background-color: $breadcrumb-background;
+    border: $breadcrumb-border;
+    color: $breadcrumb-color;
+    line-height: $breadcrumb-height;
+    margin-right: -5px;
+    font-size: .8em;
+    padding: 0 $breadcrumb-height/4 0 $breadcrumb-height/2;
+    position: relative;
+    text-decoration: none;
+
+    &amp;:first-child {
+      padding-left: $breadcrumb-height/2;
+      border-top-left-radius: $base-border-radius;
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    &amp;:last-child {
+      background-color: $breadcrumb-background;
+      color: $breadcrumb-color-active;
+      border-bottom-right-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      padding-right: $breadcrumb-height/2;
+    }
+
+    &amp;:hover {
+      color: $breadcrumb-color-hover;
+      background-color: $breadcrumb-inactive-hover-color;
+    }
+
+    &amp;:hover:after {
+      border-left-color: $breadcrumb-inactive-hover-color;;
+    }
+
+    &amp;:after,
+    &amp;:before {
+      @include position(absolute, 0px auto 0px 100%);
+      border-bottom: $breadcrumb-height/2 solid transparent;
+      border-left: $breadcrumb-height/4 solid transparent;
+      border-top: $breadcrumb-height/2 solid transparent;
+      content: '';
+      display: block;
+      margin: auto;
+      z-index: 2;
+    }
+
+    &amp;:last-child:after,
+    &amp;:last-child:before {
+       border: none;
+    }
+
+    &amp;:before {
+      border-left-color: $breadcrumb-arrow-color;
+      margin-left: 1px;
+      z-index: 1;
+    }
+    &amp;:after {
+      border-left-color: $breadcrumb-background;
+    }
+
+    @include media($medium-screen) {
+      font-size: 1em;
+      padding: 0 $breadcrumb-height/2 0 $breadcrumb-height/1.5;
+    }
+  }
+}
+
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="modal" class="refill">
+    <div class="line-behind-text"><h6>Modal</h6></div>
+    <div class="refill-centering"><div class="modal">
+  <label for="modal-1">
+    <div class="btn js-btn">Click for Modal</div>
+  </label>
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal-window">
+    <label class="modal-bg" for="modal-1"></label>
+    <div class="modal-inner">
+      <label class="modal-close" for="modal-1"></label>
+      <h1>Modal Title</h1>
+      <p class="intro">Intro text lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, nam, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi ullam. Officia, qui corporis nobis dolor temporibus minima.</p>
+      <p class="body">Body text lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('.modal').find('.js-btn').on('click', function() {
+      $(document.body).addClass('modal-open');
+    });
+
+    $('.modal-close').on('click', function() {
+      $(document.body).removeClass('modal-open');
+    })
+
+    $('.modal-bg').on('click', function() {
+      $(document.body).removeClass('modal-open');
+    })
+  })
+</script>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;modal&quot;&gt;
+  &lt;label for=&quot;modal-1&quot;&gt;
+    &lt;div class=&quot;btn js-btn&quot;&gt;Click for Modal&lt;/div&gt;
+  &lt;/label&gt;
+  &lt;input class=&quot;modal-state&quot; id=&quot;modal-1&quot; type=&quot;checkbox&quot; /&gt;
+  &lt;div class=&quot;modal-window&quot;&gt;
+    &lt;label class=&quot;modal-bg&quot; for=&quot;modal-1&quot;&gt;&lt;/label&gt;
+    &lt;div class=&quot;modal-inner&quot;&gt;
+      &lt;label class=&quot;modal-close&quot; for=&quot;modal-1&quot;&gt;&lt;/label&gt;
+      &lt;h1&gt;Modal Title&lt;/h1&gt;
+      &lt;p class=&quot;intro&quot;&gt;Intro text lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, nam, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi ullam. Officia, qui corporis nobis dolor temporibus minima.&lt;/p&gt;
+      &lt;p class=&quot;body&quot;&gt;Body text lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(document).ready(function () {
+    $('.modal').find('.js-btn').on('click', function() {
+      $(document.body).addClass('modal-open');
+    });
+
+    $('.modal-close').on('click', function() {
+      $(document.body).removeClass('modal-open');
+    })
+
+    $('.modal-bg').on('click', function() {
+      $(document.body).removeClass('modal-open');
+    })
+  })
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.modal {
+  $modal-padding: 3em;
+  $modal-close-color: $light-gray;
+  $modal-image-height: 135px;
+  $modal-image-width: $modal-image-height;
+
+  label {
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  label img {
+    $img-width: 300px;
+    border-radius: $img-width/2;
+    display: block;
+    max-width: $img-width;
+  }
+
+  input[type=&quot;checkbox&quot;] {
+    display: none;
+  }
+
+  .btn {
+    @include button(simple, $base-body-color);
+    font-size: $base-font-size;
+    margin-bottom: $base-line-height;
+  }
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  .modal-window { // overlay
+    @include transition(opacity .25s ease);
+    @include position(fixed, 0px 0px 0px 0px);
+    background: rgba(0,0,0, .85);
+    opacity: 0;
+    text-align: left;
+    visibility: hidden;
+    z-index: 99999999999;
+
+    .modal-bg {
+      @include position(absolute, 0px 0px 0px 0px);
+      cursor: pointer;
+    }
+  }
+
+  .modal-close {
+    @include position(fixed, ($modal-padding /2) ($modal-padding /2) 0 0);
+    @include size(0.5em);
+    cursor: pointer;
+
+    &amp;:after,
+    &amp;:before {
+      @include position(absolute, 0px 0 0 -50%);
+      @include transform(rotate(45deg));
+      @include size(.15em 1.5em);
+      background: $modal-close-color;
+      content: '';
+      display: block;
+      margin: -3px 0 0 -1px;
+    }
+
+    &amp;:hover:after,
+    &amp;:hover:before {
+      background: darken($modal-close-color, 10);
+    }
+
+    &amp;:before {
+      @include transform(rotate(-45deg));
+    }
+  }
+
+  .modal-inner {
+    @include transition(opacity .25s ease);
+    border-radius: $base-border-radius;
+    background: white;
+    margin: auto;
+    max-height: 95%;
+    overflow: auto;
+    overflow-y: scroll;
+    position: relative;
+    width: 95%;
+    padding: $modal-padding /2;
+    margin-top: .6em;
+    -webkit-overflow-scrolling: touch;
+
+    @include media($medium-screen) {
+      padding: $modal-padding;
+      width: 50%;
+      max-height: 60%;
+      margin-top: 10em;
+    }
+
+    h1 {
+      color: $base-font-color;
+      margin-bottom: .6em;
+      text-align: left;
+      text-transform: capitalize;
+    }
+
+    p {
+      font-size: $base-font-size;
+      max-width: 100% !important;
+      padding: 0;
+      text-align: left;
+
+      &amp;.intro {
+        color: $blue;
+        line-height: 1.6em;
+      }
+
+      &amp;.body { 
+        color: $base-font-color;
+        line-height: 1.45em;
+
+        @include media($medium-screen) {
+          @include columns(2 8em);
+        }
+      }
+    }
+
+    a.cta {
+      color: white;
+      display: inline-block;
+      margin-right: .5em;
+      margin-top: 1em;
+
+      &amp;:last-child {
+        padding: 0 2em;
+      }
+    }
+  }
+
+  .img-wrapper-modal {
+    @include size($modal-image-width $modal-image-height);
+    background-color: $light-gray;
+    border-radius: 190px;
+    display: block;
+    margin-bottom: 1em;
+
+    img {
+      @include size($modal-image-width $modal-image-height);
+      content: '';
+      display: block;
+      padding: 30px;
+    }
+  }
+
+  .modal-state:checked + .modal-window {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-state:checked + .modal-window .modal-inner {
+    top: 0;
+  }
+}
+
+
+
+// Based on code by Kasper Mikiewicz
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="hover-tile-animation" class="refill">
+    <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
+    <div class="refill-centering"><div class="hover-tile-outer">
+  <div class="hover-tile-container">
+    <div class="hover-tile hover-tile-visible">
+      Hover
+    </div>
+    <div class="hover-tile hover-tile-hidden">
+      <h4>Hidden Copy</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.</p>
+    </div>
+  </div>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;hover-tile-outer&quot;&gt;
+  &lt;div class=&quot;hover-tile-container&quot;&gt;
+    &lt;div class=&quot;hover-tile hover-tile-visible&quot;&gt;
+      Hover
+    &lt;/div&gt;
+    &lt;div class=&quot;hover-tile hover-tile-hidden&quot;&gt;
+      &lt;h4&gt;Hidden Copy&lt;/h4&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.hover-tile-outer {
+  $hover-tile-height: 10em;
+
+  background-position: bottom;
+  background-size: cover;
+  background: url(&quot;https://raw.github.com/Magnus-G/Random/master/mountains.png&quot;);
+  background-size: cover;
+  background-color: #BEB56E;
+  border: 1px solid $base-border-color;
+  height: $hover-tile-height;
+  margin-bottom: $base-line-height;
+  cursor: pointer;
+  
+  @include media($medium-screen) {
+    width: 40%;
+  }
+
+  .hover-tile-container {
+    height: $hover-tile-height;
+    overflow: hidden;
+  }
+
+  .hover-tile-container:hover &gt; .hover-tile {
+    @include transform(translate(0, -100%));
+  }
+
+  .hover-tile {
+    @include transition(all, .2s ease-in-out);
+    background:inherit;
+    color: white;
+    height:inherit;
+    padding: 1em 1.5em;
+  }
+
+  .hover-tile-visible {
+    color: transparentize(white, .3);
+    font-size: 2em;
+    font-weight: 200;  
+    padding-top: 2em;
+    text-align: center;
+  }
+
+  .hover-tile-hidden {
+    background: transparentize(black, .5);
+    h4 {
+      margin-bottom: .5em;
+    }
+    p {
+      color: transparentize(white, .3);
+    }
+  }
+}</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="accordion" class="refill">
+    <div class="line-behind-text"><h6>Accordion</h6></div>
+    <div class="refill-centering"><ul class="accordion">
+  <li>
+    <a href="#" class="js-accordion-trigger">Accordion Item</a>
+    <ul class="submenu">
+      <li>
+        <a href="">Sub Item 1</a>
+      </li>
+      <li>
+        <a href="">Sub Item 2</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="#" class="js-accordion-trigger">Another Item</a>
+    <ul class="submenu">
+      <li>
+        <a href="">Sub Item 1</a>
+      </li>
+      <li>
+        <a href="">Sub Item 2</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<script>
+  jQuery('.js-accordion-trigger') // find the trigger
+    .bind('click focus', function(){
+      jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
+      jQuery(this).parent().toggleClass('is-expanded');
+      event.preventDefault();
+  });
+</script>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;ul class=&quot;accordion&quot;&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-accordion-trigger&quot;&gt;Accordion Item&lt;/a&gt;
+    &lt;ul class=&quot;submenu&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Sub Item 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Sub Item 2&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-accordion-trigger&quot;&gt;Another Item&lt;/a&gt;
+    &lt;ul class=&quot;submenu&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Sub Item 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Sub Item 2&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+  jQuery('.js-accordion-trigger') // find the trigger
+    .bind('click focus', function(){
+      jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
+      jQuery(this).parent().toggleClass('is-expanded');
+      event.preventDefault();
+  });
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.accordion {
+  $accordion-menu-border-color: $base-border-color;
+  $accordion-menu-border: 1px solid $accordion-menu-border-color;
+  $accordion-menu-background: lighten($accordion-menu-border-color, 10);
+  $accordion-menu-hover: lighten($accordion-menu-background, 10);
+  $accordion-menu-sub-background: darken($accordion-menu-background, 5);
+  $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
+  $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
+  $accordion-menu-list-padding: $base-line-height/2 $gutter;
+  
+  background-color: $accordion-menu-background;
+  border: $accordion-menu-border;
+  margin-bottom: $base-line-height;
+
+  li {
+    border-bottom: $accordion-menu-border;
+
+    &gt; a {
+      padding: $accordion-menu-list-padding;
+      display: block;
+    }
+
+    &amp;:last-child {
+      border: none;
+    }
+
+    &amp;:hover {
+      background-color: $accordion-menu-hover;
+    }
+  }
+
+  ul.submenu {
+    display: none;
+
+    li {
+      background-color: $accordion-menu-sub-background;
+
+      &amp;:first-child {
+        border-top: $accordion-menu-border;
+        box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
+      }
+
+      &amp;:hover {
+        background-color: $accordion-menu-sub-hover;
+      }
+    }
+  }
+
+  .is-expanded {
+    display: block;
+    padding-bottom: 0;
+  }
+}
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="search-bar" class="refill">
+    <div class="line-behind-text"><h6>Search bar</h6></div>
+    <div class="refill-centering">  <div class="search-bar">
+    <div class="search-and-submit">
+      <input type="search" placeholder="Enter Search" />
+      <button type="submit">
+        <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon-black.png" alt="">
+      </button>
+    </div>
+  </div>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">  &lt;div class=&quot;search-bar&quot;&gt;
+    &lt;div class=&quot;search-and-submit&quot;&gt;
+      &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
+      &lt;button type=&quot;submit&quot;&gt;
+        &lt;img src=&quot;https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon-black.png&quot; alt=&quot;&quot;&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.search-bar {
+  $search-bar-border-color: $base-border-color;
+  $search-bar-border: 1px solid $search-bar-border-color;
+  $search-bar-background: lighten($search-bar-border-color, 10);
+
+  position: relative; 
+  display: inline-block;
+
+  input {
+    @include box-sizing(border-box);
+    display: block;
+  }
+
+  div.search-and-submit {
+    position: relative;
+
+    input[type=search] {
+      @include appearance(none);
+      width: 100%;
+      padding: .5em .8em;
+      font-size: .9em;
+      font-style: italic;
+      border-radius: $base-border-radius * 2;
+      margin: 0;
+    }
+
+    button[type=submit] {
+      @include button(simple, lighten($base-border-color, 10));
+      @include position(absolute, 0.3em 0.3em 0.3em 0);
+      outline: none;
+      padding: 5px 10px;
+
+      img {
+        height: 12px;
+        opacity: .7;
+      }
+    }
+  }
+}</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="switch" class="refill">
+    <div class="line-behind-text"><h6>Switch</h6></div>
+    <div class="refill-centering"><div class="switch-container">
+  <input type="checkbox" id="switch-toggle-1" name="switch-toggle" class="switch-checkbox" checked/>
+  <label class="switch-label" for="switch-toggle-1">
+    <div class="switch-inner"></div>
+    <div class="switch-toggle-switch"></div>
+  </label>
+</div>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;switch-container&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch-toggle-1&quot; name=&quot;switch-toggle&quot; class=&quot;switch-checkbox&quot; checked/&gt;
+  &lt;label class=&quot;switch-label&quot; for=&quot;switch-toggle-1&quot;&gt;
+    &lt;div class=&quot;switch-inner&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;switch-toggle-switch&quot;&gt;&lt;/div&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.switch-container {
+  $switch-container-width: 5em;
+  $switch-height: 2em;
+  $switch-width: 1em;
+  $switch-radius: 3px;
+  $switch-inner-margin: .2em;
+
+  @include user-select(none);
+  @include inline-block;
+  position: relative;
+  width: $switch-container-width;
+  margin-bottom: $base-line-height;
+
+  input.switch-checkbox {
+    display: none;
+
+    &amp;:checked + .switch-label .switch-inner {
+      margin-left: 0;
+    }
+
+    &amp;:checked + .switch-label .switch-toggle-switch {
+      right: 0;
+    }
+  }
+
+  label.switch-label {
+    border-radius: $switch-radius;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+
+    .switch-inner {
+      @include transition(opacity 0.3s ease);
+      margin-left: -100%;
+      width: 200%;
+
+      &amp;:before, &amp;:after {
+        @include box-sizing(border-box);
+        float: left;
+        height: $switch-height;
+        padding: 0;
+        width: 50%;
+      }
+
+      &amp;:before {
+        content: '';
+        background: $blue;
+      }
+
+      &amp;:after {
+        content: '';
+        background: #DDD;
+      }
+    }
+
+    .switch-toggle-switch {
+      @include position(absolute, 0px ($switch-container-width - $switch-width - $switch-inner-margin *2) 0px 0);
+      @include transition(all 0.3s ease-in 0s);
+      height: $switch-height - $switch-inner-margin *2;
+      width: $switch-width;
+      border-radius: $switch-radius / 2;
+      margin: $switch-inner-margin;
+      background: white;
+      box-shadow: 0 0 1px 2px rgba(0,0,0,0.1);
+    }
+  }
+}
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="image-gradient" class="refill">
+    <div class="line-behind-text"><h6>Image with gradient overlays</h6></div>
+    <div class="refill-centering">  <div class="image-gradient">
+    <div class="copy">
+    <p>Fixed height container</p>
+    </div>
+    <div class="overlay"></div>
+  </div>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">  &lt;div class=&quot;image-gradient&quot;&gt;
+    &lt;div class=&quot;copy&quot;&gt;
+    &lt;p&gt;Fixed height container&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.image-gradient {
+  $image-gradient-color-top: teal; 
+  $transparency-top: .6;
+  $image-gradient-color-bottom: green; 
+  $transparency-bottom: .6;
+  $vertical-angle: 180deg;
+
+  $image-gradient-color-left: red; 
+  $transparency-left: .9;
+  $image-gradient-color-right: yellow; 
+  $transparency-right: .8;
+  $horizontal-angle: 90deg;
+
+  background: url(https://raw.github.com/Magnus-G/Random/master/EmeraldLake.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 12em 0 12em 0;
+  position: relative;
+  width: 100%;
+  display: table;
+  margin-bottom: $base-line-height;
+
+  .copy {
+    position: absolute;
+    left: 50%;
+    margin: auto;
+    z-index: 999;
+    top: 40%;
+    text-align: center;
+
+    p {
+      padding: 1em 2em;
+      position: relative;
+      left: -50%;
+      color: white;
+      font-weight: 800;
+      background-color: transparentize(black, .6);
+    }
+  }
+
+  .overlay {
+    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
+      transparentize($image-gradient-color-bottom, $transparency-bottom));
+    display: block;
+    @include position(absolute, 0px 0px 0px 0px);
+
+    &amp;:after {
+      content: '';
+      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
+        transparentize($image-gradient-color-right, $transparency-right));
+      display: block;
+      @include position(absolute, 0px 0px 0px 0px);
+    }
+  }
+}
+</code></pre>
+</div>
+
+</div>
+    <div class="refill-centering"><div class="image-gradient-dynamic">
+  <img src="http://organicclimber.com/wp-content/uploads/2012/06/EmeraldLake.jpg" alt="">
+  <div class="copy">
+    <p>Dynamic height container</p>
+  </div>
+  <div class="overlay"></div>
+</div>
+</div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;image-gradient-dynamic&quot;&gt;
+  &lt;img src=&quot;http://organicclimber.com/wp-content/uploads/2012/06/EmeraldLake.jpg&quot; alt=&quot;&quot;&gt;
+  &lt;div class=&quot;copy&quot;&gt;
+    &lt;p&gt;Dynamic height container&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.image-gradient-dynamic {
+  $image-gradient-color-top: orange; 
+  $transparency-top: .6;
+  $image-gradient-color-bottom: teal; 
+  $transparency-bottom: .6;
+  $vertical-angle: 180deg;
+
+  $image-gradient-color-left: teal; 
+  $transparency-left: .8;
+  $image-gradient-color-right: yellow; 
+  $transparency-right: .8;
+  $horizontal-angle: 90deg;
+
+  position: relative;
+  line-height: 0;
+  width: 100%;
+  margin-bottom: $base-line-height;  
+
+  img {
+   width: 100%;
+   height: auto;
+   position: relative;
+   top: 0;
+   left: 0; 
+  }
+
+  .copy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    z-index: 999;
+    text-align: center;
+    @include transform(translate(-50%, -50%));
+
+    p {
+      line-height: 1.5em;
+      padding: 1em 2em;
+      position: relative;
+      color: white;
+      font-weight: 800;
+      background-color: transparentize(black, .6);
+    }
+  }
+
+  .overlay {
+    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
+      transparentize($image-gradient-color-bottom, $transparency-bottom));
+    display: block;
+    @include position(absolute, 0px 0px 0px 0px);
+
+    &amp;:after {
+      content: '';
+      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
+        transparentize($image-gradient-color-right, $transparency-right));
+      display: block;
+      @include position(absolute, 0px 0px 0px 0px);
+    }
+  }
+}
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="button-group" class="refill">
+    <div class="line-behind-text"><h6>Button Group</h6></div>
+    <div class="refill-centering"><div class="button-group">
+  <button class="active">Item</button>
+  <button>Button Group Item</button>
+  <button>Another Item</button>
+  <button>Last Item</button>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;button-group&quot;&gt;
+  &lt;button class=&quot;active&quot;&gt;Item&lt;/button&gt;
+  &lt;button&gt;Button Group Item&lt;/button&gt;
+  &lt;button&gt;Another Item&lt;/button&gt;
+  &lt;button&gt;Last Item&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.button-group {
+  $button-group-background: $base-body-color;
+  $button-group-color: lighten($base-font-color, 30);
+  $button-group-border-highlight: lighten($button-group-background, 15);
+  $button-group-active: $base-accent-color;
+
+  @include clearfix;
+  
+  button {
+    @include button(simple, $button-group-background);
+    font-weight: 400;
+    color: $button-group-color;
+    font-size: $base-font-size;
+    outline: none;
+    float: left;
+
+    &amp;.active {
+      @include button(simple, $button-group-active);
+      font-weight: 400;
+      font-size: $base-font-size;
+    }
+
+    &amp;:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &amp;:not(:first-child):not(:last-child) {
+      border-left: 1px solid $button-group-border-highlight;
+      border-radius: 0;
+    }
+    
+    &amp;:last-child {
+      border-bottom-left-radius: 0;
+      border-left: 1px solid $button-group-border-highlight;
+      border-top-left-radius: 0;
+    }
+  }
+}
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+
+  <div id="progress-bar" class="refill">
+    <div class="line-behind-text"><h6>Progress Bars</h6></div>
+    <div class="refill-centering"><div class="progress-bar">
+  <span class="meter" style="width: 60%"></span>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;progress-bar&quot;&gt;
+  &lt;span class=&quot;meter&quot; style=&quot;width: 60%&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.progress-bar {
+  $progress-border-color: $base-border-color;
+  $progress-border: 1px solid $progress-border-color;
+  $progress-meter-border-color: $base-accent-color;
+  $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
+  $progress-meter-color: $progress-meter-border-color;
+  $progress-background: darken($base-body-color, 5);
+  $progress-animation-duration: 0.7s;
+  $progress-height: 30px;
+
+  background-color: $progress-background;
+  border: $progress-border;
+  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
+  border-radius: $base-border-radius;
+  height: $progress-height;
+  margin: 0 auto;
+  padding: 2px;
+  width: 50%;
+
+  &gt; span.meter {
+    @include animation(progress $progress-animation-duration linear infinite);
+    @include box-sizing(border-box);
+    background-color: $progress-meter-color;
+    @include background-image(linear-gradient(-45deg, rgba(255,255,255, 0.15) 25%,
+                                                      transparent 25%,
+                                                      transparent 50%,
+                                                      rgba(255,255,255, 0.15) 50%,
+                                                      rgba(255,255,255, 0.15) 75%,
+                                                      transparent 75%));
+    background-size: 40px 40px;
+    background-repeat: repeat-x;
+    border: $progress-meter-border;
+    border-radius: $base-border-radius /1.5;
+    display: block;
+    height: 100%;
+    width: 60%;
+  }
+}
+
+@-webkit-keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+@-moz-keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+@-ms-keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+@-o-keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+@keyframes progress {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+</code></pre>
+</div>
+
+</div>
+    <div class="refill-centering"><div class="progress-bar-indication">
+  <span class="meter" style="width: 60%">
+    <p>60%</p>
+  </span>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;progress-bar-indication&quot;&gt;
+  &lt;span class=&quot;meter&quot; style=&quot;width: 60%&quot;&gt;
+    &lt;p&gt;60%&lt;/p&gt;
+  &lt;/span&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.progress-bar-indication {
+  $progress-border-color: $base-border-color;
+  $progress-border: 1px solid $progress-border-color;
+  $progress-meter-border-color: $base-accent-color;
+  $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
+  $progress-meter-color: $progress-meter-border-color;
+  $progress-background: darken($base-body-color, 5);
+  $progress-animation-duration: 0.7s;
+  $progress-color: white;
+
+  background-color: $progress-background;
+  border: $progress-border;
+  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
+  border-radius: $base-border-radius;
+  margin: 0 auto;
+  width: 50%;
+
+  &gt; span.meter {
+    @include box-sizing(border-box);
+    background-color: $progress-meter-color;
+    background-size: 40px 40px;
+    background-repeat: repeat-x;
+    border: $progress-meter-border;
+    border-radius: $base-border-radius /1.5;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    display: block;
+    height: 100%;
+    width: 60%;
+  }
+
+  p {
+    margin-bottom: 0;
+    padding: .1em .5em;
+    font-weight: 800;
+    color: $progress-color;    
+    text-shadow: 0 0 1px black;
+  }
+}
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+<script>
+  $('a.js-show-code').on('click', function(e){
+    $(this).hide();
+    $(this).siblings('.js-hide-code').css('display', 'inline-block');
+    $(this).parent().siblings('.snippet').show();
+    e.preventDefault();
+  })
+
+  $('a.js-hide-code').on('click', function(e) {
+    $(this).hide();
+    $(this).siblings('.js-show-code').css("display", "inline-block");
+    $(this).parent().siblings('.snippet').hide();
+    e.preventDefault();
+  });
+</script>
+
+<script>
+  $(document).ready( function() {
+    client = new ZeroClipboard($('.copy-source'), {moviePath: 'images/ZeroClipboard.swf'})
+    client.on('dataRequested', function(client, args) {
+      code = $(this).siblings('pre').text();
+      client.setText(code);
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function(){
+
+    $('.js-menu-trigger-refills').on('click touchstart', function(e){
+      $('.er_toc').toggleClass('is-visible');
+      $('.js-menu-screen-refills').toggleClass('is-visible');
+      e.preventDefault();
+    });
+
+    $('.js-menu-screen-refills').on('click touchstart', function(e){
+      $('.er_toc').toggleClass('is-visible');
+      $('.js-menu-screen-refills').toggleClass('is-visible');
+      e.preventDefault();
+    });
+  });
+</script>
+
+        <footer class="refills-footer">
+        <img src="https://raw.github.com/Magnus-G/Random/master/ralph-gray.png" alt="">
+          Refills is maintained and funded by <a href="http://thoughtbot.com">thoughtbot</a>. <br>Refills is Copyright © 2014 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+        </footer>
+      </section>
+    </section>
+  </body>
+  <script src="javascripts/all.js" type="text/javascript"></script>
+</html>
