@@ -21,6 +21,8 @@ $sliding-menu-color-hover: #fff;
   @include transition(all .25s linear);
   background: $sliding-menu-background;
   z-index: 999999;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   li a {
     border-bottom: $sliding-menu-border;

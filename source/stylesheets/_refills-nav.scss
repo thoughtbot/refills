@@ -46,7 +46,8 @@ section.inner-content {
   @include size(220px 100%);
   @include transform(translateX(-220px));
   @include transition(all .2s linear);
-  overflow: scroll;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   background: #1D3842;
   z-index: 999999;
 
