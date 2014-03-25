@@ -84,7 +84,8 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;header class=&quot;navigation&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;header class=&quot;navigation&quot;&gt;
   &lt;div class=&quot;menu-wrapper&quot;&gt;
     &lt;a href=&quot;&quot; class=&quot;logo&quot;&gt;
       &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
@@ -131,7 +132,7 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>header.navigation {
+  <pre><code class="language-scss">header.navigation {
   $navigation-background: $dark-gray;
   $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
@@ -183,7 +184,7 @@
       display: none;
     }
 
-    &:hover {
+    &amp;:hover {
       color: $navigation-color-hover;
     }
   }
@@ -234,7 +235,7 @@
       font-weight: 400;
       color: $navigation-color;
 
-      &:hover {
+      &amp;:hover {
         color: $navigation-color-hover;
       }
     }
@@ -255,7 +256,7 @@
         padding: .6em 1em;
         text-transform: uppercase;
 
-        &:hover {
+        &amp;:hover {
           background: lighten($navigation-nav-button-background, 10);
         }
       }
@@ -269,7 +270,7 @@
       @include position(absolute, 0px 76px 0 0);
       display: inline-block;
       line-height: 0 !important;
-      padding: 13px 30px; // this to get around Firefox/Opera line-height "bug"
+      padding: 13px 30px; // this to get around Firefox/Opera line-height &quot;bug&quot;
     }
   }
 
@@ -339,7 +340,8 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;hero&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;hero&quot;&gt;
 	&lt;div class=&quot;hero-inner&quot;&gt;
     &lt;a href=&quot;&quot; class=&quot;hero-logo&quot;&gt;&lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
 		&lt;div class=&quot;hero-copy&quot;&gt;
@@ -353,7 +355,7 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.hero {
+  <pre><code class="language-scss">.hero {
 	$hero-background: desaturate(darken($base-accent-color, 20), 30);	
 	$hero-color: white;
 
@@ -450,7 +452,8 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;bullets&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;bullets&quot;&gt;
   &lt;div class=&quot;bullet three-col-bullet&quot;&gt;
     &lt;div class=&quot;bullet-icon bullet-icon-1&quot;&gt;
       &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png&quot; alt=&quot;&quot;&gt;
@@ -483,13 +486,13 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.bullets {
+  <pre><code class="language-scss">.bullets {
   $icon-bullet-size: 3.5em;
 
   overflow: auto;
   margin-bottom: $base-line-height;
 
-  // change ".three-col-bullet" class to this for two bullet layout
+  // change &quot;.three-col-bullet&quot; class to this for two bullet layout
   .two-col-bullet {
     @include media($large-screen) {
       @include span-columns(6);
@@ -504,7 +507,7 @@
     }
   }
 
-  // change ".three-col-bullet" class to this for four bullet layout
+  // change &quot;.three-col-bullet&quot; class to this for four bullet layout
   .four-col-bullet {
     @include media($large-screen) {
       @include span-columns(3);
@@ -618,7 +621,8 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;cards&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;cards&quot;&gt;
   &lt;div class=&quot;card&quot;&gt;
     &lt;div class=&quot;card-image&quot;&gt;
       &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/mountains.png&quot; alt=&quot;&quot;&gt;
@@ -681,7 +685,7 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.cards {
+  <pre><code class="language-scss">.cards {
   @include clearfix;
 }
 
@@ -776,11 +780,11 @@
       line-height: 1.1em;
       padding: 0 .7em 0 .7em;
 
-      &:first-child {
+      &amp;:first-child {
         padding-left: 0;
       }
 
-      &:last-child {
+      &amp;:last-child {
         border-right: 0;
       }
 
@@ -793,7 +797,7 @@
     }
   }
 
-  &:hover {
+  &amp;:hover {
     background-color: $card-hover-background;
     
     .card-image img {
@@ -805,7 +809,7 @@
     }
   }
 
-  &:active {
+  &amp;:active {
     background-color: $card-background;
 
     .card-header {
@@ -869,7 +873,8 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;ul class=&quot;accordion-tabs&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;ul class=&quot;accordion-tabs&quot;&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;is-active&quot;&gt;Tab Item&lt;/a&gt;
     &lt;section&gt;
       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.&lt;/p&gt;
@@ -915,7 +920,7 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.accordion-tabs {
+  <pre><code class="language-scss">.accordion-tabs {
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
   $tab-content-background: lighten($light-gray, 10);
@@ -941,13 +946,13 @@
       display: inline;
     }
 
-    &:first-child a {
+    &amp;:first-child a {
       border-top-left-radius: $base-border-radius; 
       border-top-right-radius: $base-border-radius; 
       border-top: 0;
     }
 
-    &:last-child a {
+    &amp;:last-child a {
       border-bottom-left-radius: $base-border-radius; 
       border-bottom-right-radius: $base-border-radius; 
 
@@ -973,15 +978,15 @@
       border-top-left-radius: $base-border-radius;
     }
 
-    &:hover {
+    &amp;:hover {
       color: $base-link-color;
     }
 
-    &:focus { 
+    &amp;:focus { 
       outline: none; 
     }
 
-    &.is-active {
+    &amp;.is-active {
       background-color: $tab-active-background;
       border-bottom: 0;
 
@@ -1058,7 +1063,8 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;table class=&quot;table-borders&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;table class=&quot;table-borders&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Header Cell 1&lt;/th&gt;
@@ -1093,7 +1099,7 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.table-borders {
+  <pre><code class="language-scss">.table-borders {
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
   $table-background: lighten($table-border-color, 10);
@@ -1111,33 +1117,33 @@
 
   tbody {
     background-color: $table-background;
-    tr:hover > td, tr:hover > th {
+    tr:hover &gt; td, tr:hover &gt; th {
       background-color: $table-hover-color;
     }
     tr:nth-child(even) {
       background-color: $table-stripe-color;
-      &:hover > td {
+      &amp;:hover &gt; td {
         background-color: $table-stripe-color-hover;
       }
     }
   }
 
   thead:first-of-type {
-    tr:first-child > th:first-child {
+    tr:first-child &gt; th:first-child {
       border-top-left-radius: $base-border-radius;
     }
 
-    tr:first-child > th:last-child {
+    tr:first-child &gt; th:last-child {
       border-top-right-radius: $base-border-radius;
     }
   }
 
   tbody:last-child {
-    tr:last-child > td:first-child {
+    tr:last-child &gt; td:first-child {
       border-bottom-left-radius: $base-border-radius;
     }
 
-    tr:last-child > td:last-child {
+    tr:last-child &gt; td:last-child {
       border-bottom-right-radius: $base-border-radius;
     }
   }
@@ -1256,7 +1262,8 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;vertical-tabs-container&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;vertical-tabs-container&quot;&gt;
   &lt;div class=&quot;vertical-tabs&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;js-vertical-tab vertical-tab is-active&quot; rel=&quot;tab1&quot;&gt;Item 1&lt;/a&gt;
     &lt;a href=&quot;#&quot; class=&quot;js-vertical-tab vertical-tab&quot; rel=&quot;tab2&quot;&gt;Item 2&lt;/a&gt;
@@ -1326,7 +1333,7 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.vertical-tabs-container { // small screens: accordion
+  <pre><code class="language-scss">.vertical-tabs-container { // small screens: accordion
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
   $tab-border-radius: $base-border-radius;
@@ -1362,7 +1369,7 @@
       margin-right: -1px;
       padding: $base-line-height/2 $gutter/2;
 
-      &.is-active {
+      &amp;.is-active {
         background-color: $tab-content-background;
         margin-right: -1px;
       }
@@ -1377,7 +1384,7 @@
     display: block;
     margin: 0 auto;
 
-    & a:focus { 
+    &amp; a:focus { 
       outline: none; 
     }
 
@@ -1406,15 +1413,15 @@
     font-weight: bold;
     padding: $base-line-height/2 $gutter/2;
 
-    &:hover {
+    &amp;:hover {
       color: $base-accent-color;
     }
 
-    &:first-child {
+    &amp;:first-child {
       border-top: none;
     }
 
-    &.is-active {
+    &amp;.is-active {
       background: $tab-active-color;
       border-bottom: none;
     }
@@ -1475,7 +1482,8 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;grid-items&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;grid-items&quot;&gt;
   &lt;a href=&quot;&quot; class=&quot;grid-item&quot;&gt;
     &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
     &lt;h1&gt;Grid Item&lt;/h1&gt;
@@ -1517,7 +1525,7 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>@mixin grid-item-columns($columns) {
+  <pre><code class="language-scss">@mixin grid-item-columns($columns) {
   width: (100% / 12) * $columns;
 }
 
@@ -1562,11 +1570,11 @@
     }
 
     @for $i from 1 to 8 { // assign colors from $grid-item-colors list
-      &:nth-child(#{$i}) {
+      &amp;:nth-child(#{$i}) {
         $background-from-list: nth($grid-item-colors, $i);
         background-color: $background-from-list;
         box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10);
-        &:hover {
+        &amp;:hover {
           background-color: darken($background-from-list, 10);
           background-repeat: no-repeat;
           background-position: top;
@@ -1660,7 +1668,8 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;footer class=&quot;footer&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;footer class=&quot;footer&quot;&gt;
   &lt;div class=&quot;footer-logo&quot;&gt;
     &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
   &lt;/div&gt;
@@ -1693,7 +1702,7 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.footer {
+  <pre><code class="language-scss">.footer {
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, .6);
@@ -1742,7 +1751,7 @@
   li a {
     color: $footer-link-color;
 
-    &:hover {
+    &amp;:hover {
       color: transparentize($footer-color, 0);
     }
   }
@@ -1809,7 +1818,8 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;footer class=&quot;footer-2&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;footer class=&quot;footer-2&quot;&gt;
   &lt;div class=&quot;footer-logo&quot;&gt;
     &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
   &lt;/div&gt;
@@ -1843,7 +1853,7 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.footer-2 {
+  <pre><code class="language-scss">.footer-2 {
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, .6);
@@ -1889,7 +1899,7 @@
   ul li a {
     color: $footer-link-color;
 
-    &:hover {
+    &amp;:hover {
       color: transparentize($footer-color, 0);
     }
   }
@@ -1924,7 +1934,7 @@
         height: 1.6em;
         padding: 1px;
 
-        &:hover {
+        &amp;:hover {
           opacity: 1;
         }
       }
@@ -1980,7 +1990,8 @@
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div&gt;
   &lt;a class=&quot;js-menu-trigger menu-anchor&quot;&gt;&amp;#9776;&lt;/a&gt;
 &lt;/div&gt;
 
@@ -2016,7 +2027,7 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>$sliding-menu-border-color: $dark-gray;
+  <pre><code class="language-scss">$sliding-menu-border-color: $dark-gray;
 $sliding-menu-background: lighten($sliding-menu-border-color, 5);
 $sliding-menu-color: #fff;
 $sliding-menu-border: 1px solid $sliding-menu-border-color;
@@ -2047,13 +2058,13 @@ $sliding-menu-color-hover: #fff;
     font-weight: bold;
     padding: 1em;
 
-    &:hover {
+    &amp;:hover {
       background-color: $sliding-menu-background-hover;
       color: $sliding-menu-color-hover;
     }
   }
 
-  &.is-visible {
+  &amp;.is-visible {
     @include transform(translateX(0));
   }
 }
@@ -2066,7 +2077,7 @@ $sliding-menu-color-hover: #fff;
   visibility: hidden;
   z-index: 999998;
 
-  &.is-visible {
+  &amp;.is-visible {
     opacity: .4;
     visibility: visible;
   }
@@ -2094,7 +2105,8 @@ $sliding-menu-color-hover: #fff;
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;badges&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;badges&quot;&gt;
 	&lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
 	&lt;span class=&quot;badge dark&quot;&gt;4&lt;/span&gt;
 	&lt;span class=&quot;badge error&quot;&gt;4&lt;/span&gt;
@@ -2105,7 +2117,7 @@ $sliding-menu-color-hover: #fff;
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.badges {
+  <pre><code class="language-scss">.badges {
   $badge-background: $medium-gray;
   $badge-dark-color: $dark-gray;
   $badge-error-color: $error-color;
@@ -2128,21 +2140,21 @@ $sliding-menu-color-hover: #fff;
     padding: .25em 1em;
     text-align: center;
 
-    &.dark {
+    &amp;.dark {
       background: $badge-dark-color;
     }
 
-    &.error {
+    &amp;.error {
       background: $badge-error-color;
       color: darken($badge-error-color, 60);
     }
 
-    &.notice {
+    &amp;.notice {
       background: $badge-notice-color;
       color: darken($badge-error-color, 60);
     }
 
-    &.success {
+    &amp;.success {
       background: $badge-success-color;
       color: darken($badge-success-color, 60);
     }
@@ -2171,7 +2183,8 @@ $sliding-menu-color-hover: #fff;
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;breadcrumb&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;breadcrumb&quot;&gt;
   &lt;a href=&quot;#&quot;&gt;One&lt;/a&gt;
   &lt;a href=&quot;#&quot;&gt;Two&lt;/a&gt;
   &lt;a href=&quot;#&quot;&gt;Three&lt;/a&gt;
@@ -2183,7 +2196,7 @@ $sliding-menu-color-hover: #fff;
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.breadcrumb { 
+  <pre><code class="language-scss">.breadcrumb { 
   $breadcrumb-border-color: $base-border-color;
   $breadcrumb-border: 1px solid $breadcrumb-border-color;
   $breadcrumb-height: $base-line-height * 1.5;
@@ -2214,13 +2227,13 @@ $sliding-menu-color-hover: #fff;
     position: relative;
     text-decoration: none;
 
-    &:first-child {
+    &amp;:first-child {
       padding-left: $breadcrumb-height/2;
       border-top-left-radius: $base-border-radius;
       border-bottom-left-radius: $base-border-radius;
     }
 
-    &:last-child {
+    &amp;:last-child {
       background-color: $breadcrumb-background;
       color: $breadcrumb-color-active;
       border-bottom-right-radius: $base-border-radius;
@@ -2228,17 +2241,17 @@ $sliding-menu-color-hover: #fff;
       padding-right: $breadcrumb-height/2;
     }
 
-    &:hover {
+    &amp;:hover {
       color: $breadcrumb-color-hover;
       background-color: $breadcrumb-inactive-hover-color;
     }
 
-    &:hover:after {
+    &amp;:hover:after {
       border-left-color: $breadcrumb-inactive-hover-color;;
     }
 
-    &:after,
-    &:before {
+    &amp;:after,
+    &amp;:before {
       @include position(absolute, 0px auto 0px 100%);
       border-bottom: $breadcrumb-height/2 solid transparent;
       border-left: $breadcrumb-height/4 solid transparent;
@@ -2249,17 +2262,17 @@ $sliding-menu-color-hover: #fff;
       z-index: 2;
     }
 
-    &:last-child:after,
-    &:last-child:before {
+    &amp;:last-child:after,
+    &amp;:last-child:before {
        border: none;
     }
 
-    &:before {
+    &amp;:before {
       border-left-color: $breadcrumb-arrow-color;
       margin-left: 1px;
       z-index: 1;
     }
-    &:after {
+    &amp;:after {
       border-left-color: $breadcrumb-background;
     }
 
@@ -2316,7 +2329,8 @@ $sliding-menu-color-hover: #fff;
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;modal&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;modal&quot;&gt;
   &lt;label for=&quot;modal-1&quot;&gt;
     &lt;div class=&quot;btn js-btn&quot;&gt;Click for Modal&lt;/div&gt;
   &lt;/label&gt;
@@ -2352,7 +2366,7 @@ $sliding-menu-color-hover: #fff;
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.modal {
+  <pre><code class="language-scss">.modal {
   $modal-padding: 3em;
   $modal-close-color: $light-gray;
   $modal-image-height: 135px;
@@ -2370,7 +2384,7 @@ $sliding-menu-color-hover: #fff;
     max-width: $img-width;
   }
 
-  input[type="checkbox"] {
+  input[type=&quot;checkbox&quot;] {
     display: none;
   }
 
@@ -2404,8 +2418,8 @@ $sliding-menu-color-hover: #fff;
     @include size(0.5em);
     cursor: pointer;
 
-    &:after,
-    &:before {
+    &amp;:after,
+    &amp;:before {
       @include position(absolute, 0px 0 0 -50%);
       @include transform(rotate(45deg));
       @include size(.15em 1.5em);
@@ -2415,12 +2429,12 @@ $sliding-menu-color-hover: #fff;
       margin: -3px 0 0 -1px;
     }
 
-    &:hover:after,
-    &:hover:before {
+    &amp;:hover:after,
+    &amp;:hover:before {
       background: darken($modal-close-color, 10);
     }
 
-    &:before {
+    &amp;:before {
       @include transform(rotate(-45deg));
     }
   }
@@ -2432,9 +2446,12 @@ $sliding-menu-color-hover: #fff;
     margin: auto;
     max-height: 95%;
     overflow: auto;
+    overflow-y: scroll;
+    position: relative;
     width: 95%;
     padding: $modal-padding /2;
     margin-top: .6em;
+    -webkit-overflow-scrolling: touch;
 
     @include media($medium-screen) {
       padding: $modal-padding;
@@ -2456,12 +2473,12 @@ $sliding-menu-color-hover: #fff;
       padding: 0;
       text-align: left;
 
-      &.intro {
+      &amp;.intro {
         color: $blue;
         line-height: 1.6em;
       }
 
-      &.body { 
+      &amp;.body { 
         color: $base-font-color;
         line-height: 1.45em;
 
@@ -2477,7 +2494,7 @@ $sliding-menu-color-hover: #fff;
       margin-right: .5em;
       margin-top: 1em;
 
-      &:last-child {
+      &amp;:last-child {
         padding: 0 2em;
       }
     }
@@ -2536,7 +2553,8 @@ $sliding-menu-color-hover: #fff;
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;hover-tile-outer&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;hover-tile-outer&quot;&gt;
   &lt;div class=&quot;hover-tile-container&quot;&gt;
     &lt;div class=&quot;hover-tile hover-tile-visible&quot;&gt;
       Hover
@@ -2551,12 +2569,12 @@ $sliding-menu-color-hover: #fff;
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.hover-tile-outer {
+  <pre><code class="language-scss">.hover-tile-outer {
   $hover-tile-height: 10em;
 
   background-position: bottom;
   background-size: cover;
-  background: url("https://raw.github.com/Magnus-G/Random/master/mountains.png");
+  background: url(&quot;https://raw.github.com/Magnus-G/Random/master/mountains.png&quot;);
   background-size: cover;
   background-color: #BEB56E;
   border: 1px solid $base-border-color;
@@ -2573,7 +2591,7 @@ $sliding-menu-color-hover: #fff;
     overflow: hidden;
   }
 
-  .hover-tile-container:hover > .hover-tile {
+  .hover-tile-container:hover &gt; .hover-tile {
     @include transform(translate(0, -100%));
   }
 
@@ -2650,7 +2668,8 @@ $sliding-menu-color-hover: #fff;
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;ul class=&quot;accordion&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;ul class=&quot;accordion&quot;&gt;
   &lt;li&gt;
     &lt;a href=&quot;#&quot; class=&quot;js-accordion-trigger&quot;&gt;Accordion Item&lt;/a&gt;
     &lt;ul class=&quot;submenu&quot;&gt;
@@ -2688,7 +2707,7 @@ $sliding-menu-color-hover: #fff;
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.accordion {
+  <pre><code class="language-scss">.accordion {
   $accordion-menu-border-color: $base-border-color;
   $accordion-menu-border: 1px solid $accordion-menu-border-color;
   $accordion-menu-background: lighten($accordion-menu-border-color, 10);
@@ -2705,16 +2724,16 @@ $sliding-menu-color-hover: #fff;
   li {
     border-bottom: $accordion-menu-border;
 
-    > a {
+    &gt; a {
       padding: $accordion-menu-list-padding;
       display: block;
     }
 
-    &:last-child {
+    &amp;:last-child {
       border: none;
     }
 
-    &:hover {
+    &amp;:hover {
       background-color: $accordion-menu-hover;
     }
   }
@@ -2725,12 +2744,12 @@ $sliding-menu-color-hover: #fff;
     li {
       background-color: $accordion-menu-sub-background;
 
-      &:first-child {
+      &amp;:first-child {
         border-top: $accordion-menu-border;
         box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
       }
 
-      &:hover {
+      &amp;:hover {
         background-color: $accordion-menu-sub-hover;
       }
     }
@@ -2764,7 +2783,8 @@ $sliding-menu-color-hover: #fff;
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">  &lt;div class=&quot;search-bar&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">  &lt;div class=&quot;search-bar&quot;&gt;
     &lt;div class=&quot;search-and-submit&quot;&gt;
       &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
       &lt;button type=&quot;submit&quot;&gt;
@@ -2777,7 +2797,7 @@ $sliding-menu-color-hover: #fff;
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.search-bar {
+  <pre><code class="language-scss">.search-bar {
   $search-bar-border-color: $base-border-color;
   $search-bar-border: 1px solid $search-bar-border-color;
   $search-bar-background: lighten($search-bar-border-color, 10);
@@ -2837,7 +2857,8 @@ $sliding-menu-color-hover: #fff;
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;switch-container&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;switch-container&quot;&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;switch-toggle-1&quot; name=&quot;switch-toggle&quot; class=&quot;switch-checkbox&quot; checked/&gt;
   &lt;label class=&quot;switch-label&quot; for=&quot;switch-toggle-1&quot;&gt;
     &lt;div class=&quot;switch-inner&quot;&gt;&lt;/div&gt;
@@ -2849,7 +2870,7 @@ $sliding-menu-color-hover: #fff;
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.switch-container {
+  <pre><code class="language-scss">.switch-container {
   $switch-container-width: 5em;
   $switch-height: 2em;
   $switch-width: 1em;
@@ -2865,11 +2886,11 @@ $sliding-menu-color-hover: #fff;
   input.switch-checkbox {
     display: none;
 
-    &:checked + .switch-label .switch-inner {
+    &amp;:checked + .switch-label .switch-inner {
       margin-left: 0;
     }
 
-    &:checked + .switch-label .switch-toggle-switch {
+    &amp;:checked + .switch-label .switch-toggle-switch {
       right: 0;
     }
   }
@@ -2885,7 +2906,7 @@ $sliding-menu-color-hover: #fff;
       margin-left: -100%;
       width: 200%;
 
-      &:before, &:after {
+      &amp;:before, &amp;:after {
         @include box-sizing(border-box);
         float: left;
         height: $switch-height;
@@ -2893,12 +2914,12 @@ $sliding-menu-color-hover: #fff;
         width: 50%;
       }
 
-      &:before {
+      &amp;:before {
         content: '';
         background: $blue;
       }
 
-      &:after {
+      &amp;:after {
         content: '';
         background: #DDD;
       }
@@ -2937,7 +2958,8 @@ $sliding-menu-color-hover: #fff;
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">  &lt;div class=&quot;image-gradient&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">  &lt;div class=&quot;image-gradient&quot;&gt;
     &lt;div class=&quot;copy&quot;&gt;
     &lt;p&gt;Fixed height container&lt;/p&gt;
     &lt;/div&gt;
@@ -2948,7 +2970,7 @@ $sliding-menu-color-hover: #fff;
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.image-gradient {
+  <pre><code class="language-scss">.image-gradient {
   $image-gradient-color-top: teal; 
   $transparency-top: .6;
   $image-gradient-color-bottom: green; 
@@ -2960,12 +2982,12 @@ $sliding-menu-color-hover: #fff;
   $image-gradient-color-right: yellow; 
   $transparency-right: .8;
   $horizontal-angle: 90deg;
-  
+
   background: url(https://raw.github.com/Magnus-G/Random/master/EmeraldLake.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  padding: 12em;
+  padding: 12em 0 12em 0;
   position: relative;
   width: 100%;
   display: table;
@@ -2995,7 +3017,7 @@ $sliding-menu-color-hover: #fff;
     display: block;
     @include position(absolute, 0px 0px 0px 0px);
 
-    &:after {
+    &amp;:after {
       content: '';
       @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
         transparentize($image-gradient-color-right, $transparency-right));
@@ -3022,7 +3044,8 @@ $sliding-menu-color-hover: #fff;
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;image-gradient-dynamic&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;image-gradient-dynamic&quot;&gt;
   &lt;img src=&quot;http://organicclimber.com/wp-content/uploads/2012/06/EmeraldLake.jpg&quot; alt=&quot;&quot;&gt;
   &lt;div class=&quot;copy&quot;&gt;
     &lt;p&gt;Dynamic height container&lt;/p&gt;
@@ -3034,7 +3057,7 @@ $sliding-menu-color-hover: #fff;
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.image-gradient-dynamic {
+  <pre><code class="language-scss">.image-gradient-dynamic {
   $image-gradient-color-top: orange; 
   $transparency-top: .6;
   $image-gradient-color-bottom: teal; 
@@ -3062,17 +3085,17 @@ $sliding-menu-color-hover: #fff;
 
   .copy {
     position: absolute;
+    top: 50%;
     left: 50%;
     margin: auto;
     z-index: 999;
-    top: 40%;
     text-align: center;
+    @include transform(translate(-50%, -50%));
 
     p {
       line-height: 1.5em;
       padding: 1em 2em;
       position: relative;
-      left: -50%;
       color: white;
       font-weight: 800;
       background-color: transparentize(black, .6);
@@ -3085,7 +3108,7 @@ $sliding-menu-color-hover: #fff;
     display: block;
     @include position(absolute, 0px 0px 0px 0px);
 
-    &:after {
+    &amp;:after {
       content: '';
       @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
         transparentize($image-gradient-color-right, $transparency-right));
@@ -3093,7 +3116,8 @@ $sliding-menu-color-hover: #fff;
       @include position(absolute, 0px 0px 0px 0px);
     }
   }
-}</code></pre>
+}
+</code></pre>
 </div>
 
 </div>
@@ -3113,7 +3137,8 @@ $sliding-menu-color-hover: #fff;
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;button-group&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;button-group&quot;&gt;
   &lt;button class=&quot;active&quot;&gt;Item&lt;/button&gt;
   &lt;button&gt;Button Group Item&lt;/button&gt;
   &lt;button&gt;Another Item&lt;/button&gt;
@@ -3123,7 +3148,7 @@ $sliding-menu-color-hover: #fff;
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.button-group {
+  <pre><code class="language-scss">.button-group {
   $button-group-background: $base-body-color;
   $button-group-color: lighten($base-font-color, 30);
   $button-group-border-highlight: lighten($button-group-background, 15);
@@ -3139,23 +3164,23 @@ $sliding-menu-color-hover: #fff;
     outline: none;
     float: left;
 
-    &.active {
+    &amp;.active {
       @include button(simple, $button-group-active);
       font-weight: 400;
       font-size: $base-font-size;
     }
 
-    &:first-child {
+    &amp;:first-child {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
 
-    &:not(:first-child):not(:last-child) {
+    &amp;:not(:first-child):not(:last-child) {
       border-left: 1px solid $button-group-border-highlight;
       border-radius: 0;
     }
     
-    &:last-child {
+    &amp;:last-child {
       border-bottom-left-radius: 0;
       border-left: 1px solid $button-group-border-highlight;
       border-top-left-radius: 0;
@@ -3180,14 +3205,15 @@ $sliding-menu-color-hover: #fff;
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;progress-bar&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;progress-bar&quot;&gt;
   &lt;span class=&quot;meter&quot; style=&quot;width: 60%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.progress-bar {
+  <pre><code class="language-scss">.progress-bar {
   $progress-border-color: $base-border-color;
   $progress-border: 1px solid $progress-border-color;
   $progress-meter-border-color: $base-accent-color;
@@ -3206,7 +3232,7 @@ $sliding-menu-color-hover: #fff;
   padding: 2px;
   width: 50%;
 
-  > span.meter {
+  &gt; span.meter {
     @include animation(progress $progress-animation-duration linear infinite);
     @include box-sizing(border-box);
     background-color: $progress-meter-color;
@@ -3285,7 +3311,8 @@ $sliding-menu-color-hover: #fff;
 </div>
 
 <div class="snippet">
-  <a href="#" class="copy-source">Copy</a><pre><code class="language-markup">&lt;div class=&quot;progress-bar-indication&quot;&gt;
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;progress-bar-indication&quot;&gt;
   &lt;span class=&quot;meter&quot; style=&quot;width: 60%&quot;&gt;
     &lt;p&gt;60%&lt;/p&gt;
   &lt;/span&gt;
@@ -3294,7 +3321,7 @@ $sliding-menu-color-hover: #fff;
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class='language-scss'>.progress-bar-indication {
+  <pre><code class="language-scss">.progress-bar-indication {
   $progress-border-color: $base-border-color;
   $progress-border: 1px solid $progress-border-color;
   $progress-meter-border-color: $base-accent-color;
@@ -3311,7 +3338,7 @@ $sliding-menu-color-hover: #fff;
   margin: 0 auto;
   width: 50%;
 
-  > span.meter {
+  &gt; span.meter {
     @include box-sizing(border-box);
     background-color: $progress-meter-color;
     background-size: 40px 40px;
@@ -3381,6 +3408,7 @@ $sliding-menu-color-hover: #fff;
     });
   });
 </script>
+
         <footer class="refills-footer">
         <img src="https://raw.github.com/Magnus-G/Random/master/ralph-gray.png" alt="">
           Refills is maintained and funded by <a href="http://thoughtbot.com">thoughtbot</a>. <br>Refills is Copyright © 2014 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
