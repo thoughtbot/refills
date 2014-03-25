@@ -78,9 +78,12 @@
     margin: auto;
     max-height: 95%;
     overflow: auto;
+    overflow-y: scroll;
+    position: relative;
     width: 95%;
     padding: $modal-padding /2;
     margin-top: .6em;
+    -webkit-overflow-scrolling: touch;
 
     @include media($medium-screen) {
       padding: $modal-padding;
