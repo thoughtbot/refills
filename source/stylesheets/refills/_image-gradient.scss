@@ -10,12 +10,12 @@
   $image-gradient-color-right: yellow; 
   $transparency-right: .8;
   $horizontal-angle: 90deg;
-  
+
   background: url(https://raw.github.com/Magnus-G/Random/master/EmeraldLake.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  padding: 12em;
+  padding: 12em 0 12em 0;
   position: relative;
   width: 100%;
   display: table;
