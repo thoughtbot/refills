@@ -326,6 +326,7 @@ pre[class*="language-"] {
   height: 300px;
   border-top: 2px solid silver;
   background: #F8F8F8;
+  line-height: 1em;
 
   @include media($medium-screen) {
     // box-shadow: -2px 0 0 rgba(0,0,0,0.1);
