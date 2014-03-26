@@ -1,6 +1,6 @@
 # Refills
 
-## Prepackaged patterns and compontents, built ontop of Bourbon, Bitters, and Neat
+## Prepackaged patterns and components, built ontop of Bourbon, Bitters, and Neat
 
 
 [Bourbon](http://bourbon.io/) provides Sass mixins and eliminates vendor prefixes, for faster CSS coding.
