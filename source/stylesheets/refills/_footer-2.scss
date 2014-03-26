@@ -68,10 +68,13 @@
       }
 
       li {
+        float: left;
         font-size: 1em;
-        display: inline;
-        padding-right: .5em;
-        margin-bottom: .7em;      
+        padding-right: .7em;
+
+        &:last-child {
+          padding-right: 0;
+        }
       }
 
       img {
