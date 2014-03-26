@@ -4,15 +4,15 @@
   $button-group-border-highlight: lighten($button-group-background, 15);
   $button-group-active: $base-accent-color;
 
-  @include clearfix;
-  
   button {
     @include button(simple, $button-group-background);
     font-weight: 400;
     color: $button-group-color;
     font-size: $base-font-size;
     outline: none;
-    float: left;
+    width: 100%;
+    display: block;
+    border-top-width: 0;
 
     &.active {
       @include button(simple, $button-group-active);
@@ -21,19 +21,37 @@
     }
 
     &:first-child {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      @include border-bottom-radius(0);
+      border-top-width: 1px;
     }
 
     &:not(:first-child):not(:last-child) {
-      border-left: 1px solid $button-group-border-highlight;
       border-radius: 0;
     }
-    
+
     &:last-child {
-      border-bottom-left-radius: 0;
-      border-left: 1px solid $button-group-border-highlight;
-      border-top-left-radius: 0;
+      @include border-top-radius(0);
+    }
+
+    @include media($medium-screen) {
+      width: auto;
+      float: left;
+      border-top-width: 1px;
+
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 3px;
+      }
+
+      &:not(:first-child):not(:last-child) {
+        border-left: 1px solid $button-group-border-highlight;
+        border-radius: 0;
+      }
+
+      &:last-child {
+        border-left: 1px solid $button-group-border-highlight;
+        border-bottom-left-radius: 0;
+      }
     }
   }
 }
