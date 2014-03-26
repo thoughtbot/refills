@@ -10,11 +10,7 @@
   $breadcrumb-color-active: $breadcrumb-color;
 
   @include inline-block;
-  border-radius: $base-border-radius;
-  margin: 0;
-  padding: 0;
-  border-radius: $base-border-radius;
-  display: block;
+  text-align: left;
   margin-bottom: $base-line-height;
 
   a {
@@ -28,6 +24,7 @@
     padding: 0 $breadcrumb-height/4 0 $breadcrumb-height/2;
     position: relative;
     text-decoration: none;
+    margin-bottom: 2px;
 
     &:first-child {
       padding-left: $breadcrumb-height/2;
