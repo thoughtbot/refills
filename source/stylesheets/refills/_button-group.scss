@@ -4,12 +4,6 @@
   $button-group-border-highlight: lighten($button-group-background, 15);
   $button-group-active: $base-accent-color;
 
-  width: 100%;
-
-  @include media($large-screen) {
-    width: auto;
-  }
-
   button {
     @include button(simple, $button-group-background);
     font-weight: 400;
@@ -39,7 +33,7 @@
       @include border-top-radius(0);
     }
 
-    @include media($large-screen) {
+    @include media($medium-screen) {
       width: auto;
       float: left;
       border-top-width: 1px;
