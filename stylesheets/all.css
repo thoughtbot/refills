@@ -2234,16 +2234,18 @@ footer.refills-footer {
         margin-top: 0; } }
     /* line 70, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
     .footer-2 .footer-secondary-links ul.footer-social li {
+      float: left;
       font-size: 1em;
-      display: inline;
-      padding-right: .5em;
-      margin-bottom: .7em; }
-    /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+      padding-right: .7em; }
+      /* line 75, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+      .footer-2 .footer-secondary-links ul.footer-social li:last-child {
+        padding-right: 0; }
+    /* line 80, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
     .footer-2 .footer-secondary-links ul.footer-social img {
       opacity: .7;
       height: 1.6em;
       padding: 1px; }
-      /* line 82, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
+      /* line 85, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer-2.scss */
       .footer-2 .footer-secondary-links ul.footer-social img:hover {
         opacity: 1; }
 
