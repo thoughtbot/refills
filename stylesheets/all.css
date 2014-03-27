@@ -1603,7 +1603,8 @@ footer.refills-footer {
     padding: 1.5em 1.618em;
     background: #f7f7f7;
     display: none;
-    overflow: hidden; }
+    overflow: hidden;
+    width: 100%; }
     @media screen and (min-width: 40em) {
       /* line 80, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
       .accordion-tabs li.tab-header-and-content section {
@@ -1613,7 +1614,7 @@ footer.refills-footer {
         float: left;
         left: 0;
         padding: 0.75em 0.809em; }
-        /* line 94, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
+        /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
         .accordion-tabs li.tab-header-and-content section p {
           -webkit-columns: 2;
           -moz-columns: 2;
