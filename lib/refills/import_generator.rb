@@ -1,3 +1,5 @@
+require 'rails/generators'
+
 module Refills
   class ImportGenerator < Rails::Generators::Base
     desc 'Copy refills'
