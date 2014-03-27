@@ -2177,8 +2177,8 @@ $sliding-menu-color-hover: #fff;
   <a href="javascript:void(0)">Three</a>
   <a href="javascript:void(0)">Four</a>
   <a href="javascript:void(0)">Five</a>
-  <a href="javascript:void(0)">Six</a>
-</div></div>
+</div>
+</div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
@@ -2192,8 +2192,8 @@ $sliding-menu-color-hover: #fff;
   &lt;a href=&quot;javascript:void(0)&quot;&gt;Three&lt;/a&gt;
   &lt;a href=&quot;javascript:void(0)&quot;&gt;Four&lt;/a&gt;
   &lt;a href=&quot;javascript:void(0)&quot;&gt;Five&lt;/a&gt;
-  &lt;a href=&quot;javascript:void(0)&quot;&gt;Six&lt;/a&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
 </div>
 
 <div class="snippet">
@@ -2210,11 +2210,7 @@ $sliding-menu-color-hover: #fff;
   $breadcrumb-color-active: $breadcrumb-color;
 
   @include inline-block;
-  border-radius: $base-border-radius;
-  margin: 0;
-  padding: 0;
-  border-radius: $base-border-radius;
-  display: block;
+  text-align: left;
   margin-bottom: $base-line-height;
 
   a {
@@ -2228,6 +2224,7 @@ $sliding-menu-color-hover: #fff;
     padding: 0 $breadcrumb-height/4 0 $breadcrumb-height/2;
     position: relative;
     text-decoration: none;
+    margin-bottom: 2px;
 
     &amp;:first-child {
       padding-left: $breadcrumb-height/2;
