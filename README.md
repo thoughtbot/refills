@@ -63,7 +63,7 @@ You are more than welcome to submit any component or pattern you can't find in t
 * Try to use as little styling as possible. Use the styles that come with Bitters to keep everything consistent.
 * Put media queries inline, don't separate them since that will create a lot of repetitions of class names. If needed, for the sake of clarity, create a specific variable for a media query if a certain breakpoint changes the component/pattern drastically:
 
-      border-radius: $base-border-radius; 
+      $tab-mode: $medium-screen; 
 
       @include media($tab-mode) { // $tab-mode is the same as $medium-screen here
         border-radius: 0;
