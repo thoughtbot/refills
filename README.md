@@ -1,6 +1,6 @@
 # Refills
 
-## Prepackaged patterns and components, built ontop of Bourbon, Bitters, and Neat
+## Prepackaged patterns and components, built on top of Bourbon, Bitters, and Neat
 
 
 [Bourbon](http://bourbon.io/) provides Sass mixins and eliminates vendor prefixes, for faster CSS coding.
@@ -29,7 +29,7 @@ If a component/pattern has javascript it is placed in the HTML.erb file. Feel fr
 
 * Click the "Show Code" link under the component/pattern you want to copy to your project and use the "copy" buttons to get the code to your clipboard. 
 * If a component uses Javascript, that code will be included at the bottom of the HTML file.
-* Each component/pattern has a set of variables at the very top of its Scss file. These pull out the most important properties of the component/pattern to enable quick changes of color, size and general appearence. 
+* Each component/pattern has a set of variables at the very top of its Scss file. These pull out the most important properties of the component/pattern to enable quick changes of color, size and general appearance. 
 
 
 #### Using Refills with a Rails project
@@ -60,8 +60,8 @@ You are more than welcome to submit any component or pattern you can't find in t
 
 * All components/pattern should be fully responsive and follow the [Neat examples](http://neat.bourbon.io/examples/).
 * Avoid more than 2 levels of nesting for clarity and legibility of code.
-* Try to use as little styling as possible. Use the styles that come with Bitters to keep everthing consistent.
-* Put media queries inline, don't separate them since that will create a lot of repetitions of class names. If needed, for the sake of clarity, create a specific variable for a media query if a certaing brekpoint changes the component/pattern drastically:
+* Try to use as little styling as possible. Use the styles that come with Bitters to keep everything consistent.
+* Put media queries inline, don't separate them since that will create a lot of repetitions of class names. If needed, for the sake of clarity, create a specific variable for a media query if a certain breakpoint changes the component/pattern drastically:
 
       border-radius: $base-border-radius; 
 
