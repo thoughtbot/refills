@@ -126,7 +126,7 @@ $refills-anchor-color: #FF4286;
 body {
   background-color: $base-body-color; 
   min-width: 320px;
-  // -webkit-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .refills-header {
