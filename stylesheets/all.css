@@ -1117,8 +1117,9 @@ section.inner-content {
   *display: inline;
   *vertical-align: auto;
   cursor: pointer;
-  color: gray;
   border: 1px solid gray;
+  height: 50px;
+  width: 50px;
   padding: .7em 1em;
   border-radius: 50%;
   font-size: 1em;
@@ -1127,8 +1128,12 @@ section.inner-content {
   top: 1em;
   left: 1em;
   z-index: 9999; }
+  /* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  .refills-menu-anchor img {
+    height: 26px;
+    width: 30px; }
 
-/* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+/* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
 .refills-menu-screen {
   position: fixed;
   top: 0px;
@@ -1142,20 +1147,20 @@ section.inner-content {
   opacity: 0;
   visibility: hidden;
   z-index: 999998; }
-  /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  /* line 36, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .refills-menu-screen.is-visible {
     opacity: 0;
     visibility: visible; }
 
-/* line 36, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+/* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
 .er_toc_title {
   display: none; }
 
-/* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+/* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
 .er_toc_top {
   display: none; }
 
-/* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+/* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
 .er_toc {
   position: fixed;
   top: 0px;
@@ -1176,27 +1181,27 @@ section.inner-content {
   -webkit-overflow-scrolling: touch;
   background: #1D3842;
   z-index: 999999; }
-  /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  /* line 60, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .er_toc ul {
     padding: 1em; }
-  /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .er_toc ul li a {
     color: #dddddd;
     font-weight: 800;
     font-size: 1em; }
-    /* line 64, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+    /* line 70, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
     .er_toc ul li a:hover {
       color: #FFF;
       text-decoration: none; }
-  /* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .er_toc ul ul {
     margin-top: .5em;
     margin-bottom: 1em;
     padding: 0; }
-  /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  /* line 83, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .er_toc ul ul li a {
     font-weight: 200; }
-  /* line 81, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  /* line 87, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .er_toc.is-visible {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
