@@ -41,6 +41,16 @@ title: Refills
     <div class="refill-snippet"><%= snippets('cards') %></div>
   </div>
 
+  <div id="comment" class="refill">
+    <div class="line-behind-text"><h6>Comment</h6></div>
+    <div class="refill-centering">
+      <div class="refill-smaller">
+        <%= partial "comment" %>
+      </div>
+    </div>
+    <div class="refill-snippet"><%= snippets('comment') %></div>
+  </div>
+
   <div id="accordion-tabs" class="refill">
     <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
     <%= partial "accordion-tabs" %>
@@ -95,14 +105,6 @@ title: Refills
     <div class="refill-snippet"><%= snippets('breadcrumbs') %></div>
   </div>
 
-<!--
-  <div id="modal" class="refill">
-    <div class="line-behind-text"><h6>Modal</h6></div>
-    <div class="refill-centering"><%= partial "modal" %></div>
-    <div class="refill-snippet"><%= snippets('modal') %></div>
-  </div>
-
--->
   <div id="hover-tile-animation" class="refill">
     <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
     <div class="refill-centering"><%= partial "hover-tile-animation" %></div>

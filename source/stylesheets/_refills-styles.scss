@@ -393,3 +393,13 @@ footer.refills-footer {
     margin-bottom: 2em;
   }
 }
+
+///////////////////////// refill adjustments
+
+.refill-smaller {
+  @include media($medium-screen) {
+    width: 70%;
+  }
+}
+
+

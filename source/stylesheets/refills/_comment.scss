@@ -1,0 +1,60 @@
+.comment {
+  $comment-gutter: 1.4em;
+  $comment-image-padding: .7em;
+  $comment-image-width: 4em;
+  $comment-color: $base-font-color;
+  $comment-background: lighten($base-accent-color, 15);
+  $comment-detail-color: transparentize($comment-color, .5);
+  $comment-image-vert-alignment: top;
+
+  display: table;
+  width: 100%;
+  margin-bottom: $base-line-height;
+  padding-bottom: 1em;
+  border-bottom: 1px solid transparentize($comment-color, .9);
+
+  .comment-image,
+  .comment-content {
+    display: table-cell;
+    vertical-align: $comment-image-vert-alignment;
+  }
+
+  .comment-image {
+    padding-right: $comment-gutter;
+
+    > img {
+      width: $comment-image-width;
+      height: auto;
+      border-radius: $base-border-radius;
+      padding: $comment-image-padding;
+      background: $comment-background;
+      display: block;
+      max-width: none;
+    }
+
+    .comment-reverse-order & {
+      padding-right: 0;
+      padding-left: 10px;
+    }
+  }
+
+  .comment-content {
+    width: 100%;
+
+    h1 {
+      font-size: 1em;
+      margin-bottom: .5em;
+    }
+
+    p {
+      margin-bottom: .5em;
+    }
+
+    p.comment-detail {
+      font-style: italic;
+      font-size: .9em;
+      color: $comment-detail-color;
+    }
+  }
+}
+
