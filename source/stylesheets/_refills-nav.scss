@@ -7,8 +7,9 @@ section.inner-content {
 .refills-menu-anchor {
   @include inline-block;
   cursor: pointer;
-  color: gray;
   border: 1px solid gray;
+  height: 50px;
+  width: 50px;
   padding: .7em 1em;
   border-radius: 50%;
   font-size: $base-font-size;
@@ -17,6 +18,11 @@ section.inner-content {
   top: 1em;
   left: 1em;
   z-index: 9999;
+
+  img {
+    height: 26px;
+    width: 30px;
+  }
 }
 
 .refills-menu-screen {
