@@ -58,11 +58,13 @@ You are more than welcome to submit any component or pattern you can't find in t
 
 #### Scss
 
-* All components/pattern should be fully responsive and follow the [Neat examples](http://neat.bourbon.io/examples/).
-* Avoid more than 2 levels of nesting for clarity and legibility of code.
-* Try to use as little styling as possible. Use the styles that come with Bitters to keep everything consistent.
-* Put media queries inline, don't separate them since that will create a lot of repetitions of class names. If needed, for the sake of clarity, create a specific variable for a media query if a certain breakpoint changes the component/pattern drastically:
+All components/pattern should be fully responsive and follow the [Neat examples](http://neat.bourbon.io/examples/).
 
+Avoid more than 2 levels of nesting for clarity and legibility of code.
+
+Try to use as little styling as possible. Use the styles that come with Bitters to keep everything consistent.
+
+Put media queries inline, don't separate them since that will create a lot of repetitions of class names. If needed, for the sake of clarity, create a specific variable for a media query if a certain breakpoint changes the component/pattern drastically:
 
       $tab-mode: $medium-screen;
       
@@ -70,8 +72,9 @@ You are more than welcome to submit any component or pattern you can't find in t
         border-radius: 0;
       }
 
-* Create variables for any color or size that might appear in a refill, Especially if it appears more than once in the component/pattern.
-* Declare the variables inside of the component/pattern's class like below. Note that variables should be interdependent to enable quick restyling.
+Create variables for any color or size that might appear in a refill, Especially if it appears more than once in the component/pattern.
+
+Declare the variables inside of the component/pattern's class like below. Note that variables should be interdependent to enable quick restyling.
 
     .card {
       $card-border-color: $base-border-color;
