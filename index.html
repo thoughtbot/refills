@@ -1964,9 +1964,9 @@
 
 <nav class="js-menu sliding-menu-content">
   <ul>
-    <li><a href="#">Item 1</a></li>
-    <li><a href="#">Item 2</a></li>
-    <li><a href="#">Item 3</a></li>
+    <li><a href="javascript:void(0)">Item 1</a></li>
+    <li><a href="javascript:void(0)">Item 2</a></li>
+    <li><a href="javascript:void(0)">Item 3</a></li>
   </ul>
 </nav>
 
@@ -2003,9 +2003,9 @@
 
 &lt;nav class=&quot;js-menu sliding-menu-content&quot;&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
 
@@ -3349,6 +3349,86 @@ $sliding-menu-color-hover: #fff;
     font-weight: 800;
     color: $progress-color;    
     text-shadow: 0 0 1px black;
+  }
+}
+</code></pre>
+</div>
+
+</div>
+  </div>
+
+  <div id="tooltip" class="refill">
+    <div class="line-behind-text"><h6>Tooltip</h6></div>
+    <div class="refill-centering"><div class="tooltip-item">
+  Hover for Tooltip
+  <div class="tooltip">
+    <p>Tooltip text</p>
+  </div>
+</div></div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;tooltip-item&quot;&gt;
+  Hover for Tooltip
+  &lt;div class=&quot;tooltip&quot;&gt;
+    &lt;p&gt;Tooltip text&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.tooltip-item {
+  $tooltip-background: transparentize($dark-gray, 0.1);
+  $tooltip-color: white;
+  $tooltip-width: 10em;
+
+  border: 1px solid $base-border-color;
+  padding: .5em 1em;
+  border-radius: $base-border-radius;
+  position: relative;
+  margin-bottom: $base-line-height;
+
+  &amp;:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .tooltip {
+    @include position(absolute, 0 0 0 50%);
+    @include box-sizing(border-box);
+    @include transition (all 0.2s ease-in-out);
+    bottom: 130%;
+    background-color: $tooltip-background;
+    border-radius: $base-border-radius;
+    color: $tooltip-color;
+    font-size: .9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
+    line-height: 1.5em;
+    margin-left: -($tooltip-width/2);
+    opacity: 0;
+    padding: .5em 0;
+    text-align: center;
+    visibility: hidden;
+    min-width: $tooltip-width;
+    z-index: 10;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &amp;:after {
+      @include size(0);
+      @include position(absolute, 0 0 0 $tooltip-width/2);
+      border: 8px solid transparent;
+      border-top-color: $tooltip-background;
+      content: '';
+      pointer-events: none;
+      bottom: -15px;
+    }
   }
 }
 </code></pre>
