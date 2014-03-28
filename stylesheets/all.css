@@ -1230,8 +1230,7 @@ section.inner-content {
 /* line 126, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 body {
   background-color: white;
-  min-width: 320px;
-  -webkit-backface-visibility: hidden; }
+  min-width: 320px; }
 
 /* line 132, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 .refills-header {
