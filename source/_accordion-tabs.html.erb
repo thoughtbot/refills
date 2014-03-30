@@ -11,7 +11,7 @@
   </li>
   <li class="tab-header-and-content"><a href="#">Third</a>
     <section>
-      <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>    
+      <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
     </section>
   </li>
   <li class="tab-header-and-content"><a href="#">Last Item</a>
@@ -23,15 +23,17 @@
 
 <script>
   $(document).ready(function () {
-    $('.accordion-tabs').children('li').first().children('a').addClass('is-active')
-      .next().addClass('is-open').show();
+    $('.accordion-tabs').each(function(index) {
+      $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+    });
 
     $('.accordion-tabs').on('click', 'li > a', function(event) {
       if (!$(this).hasClass('is-active')) {
         event.preventDefault();
-        $('.accordion-tabs .is-open').removeClass('is-open').hide();
+        var accordionTabs = $(this).closest('.accordion-tabs')
+        accordionTabs.find('.is-open').removeClass('is-open').hide();
         $(this).next().toggleClass('is-open').toggle();
-        $('.accordion-tabs').find('.is-active').removeClass('is-active');
+        accordionTabs.find('.is-active').removeClass('is-active');
         $(this).addClass('is-active');
       } else {
         event.preventDefault();
