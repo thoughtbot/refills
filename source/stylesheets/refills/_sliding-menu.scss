@@ -5,7 +5,7 @@ $sliding-menu-border: 1px solid $sliding-menu-border-color;
 $sliding-menu-background-hover: $base-accent-color;
 $sliding-menu-color-hover: #fff;
 
-.menu-button {
+.sliding-menu-button {
   @include button(simple, $base-body-color);
   @include inline-block;
   cursor: pointer;
