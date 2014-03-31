@@ -35,7 +35,6 @@
 
   <h5>Patterns</h5>
 
-<!--
   <div id="navigation" class="refill">
     <div class="line-behind-text"><h6>Navigation</h6></div>
     <header class="navigation">
@@ -43,7 +42,7 @@
     <a href="javascript:void(0)" class="logo">
       <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
     </a>
-    <p class="menu-button" id="js-mobile-menu">MENU</p>
+    <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
     <div class="nav">
       <ul id="navigation-menu">
         <li><a href="javascript:void(0)">Products</a></li>
@@ -93,7 +92,7 @@
     &lt;a href=&quot;javascript:void(0)&quot; class=&quot;logo&quot;&gt;
       &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
     &lt;/a&gt;
-    &lt;p class=&quot;menu-button&quot; id=&quot;js-mobile-menu&quot;&gt;MENU&lt;/p&gt;
+    &lt;p class=&quot;navigation-menu-button&quot; id=&quot;js-mobile-menu&quot;&gt;MENU&lt;/p&gt;
     &lt;div class=&quot;nav&quot;&gt;
       &lt;ul id=&quot;navigation-menu&quot;&gt;
         &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
@@ -171,7 +170,7 @@
     }
   }
 
-  .menu-button {
+  .navigation-menu-button {
     color: $navigation-color;
     cursor: pointer;
     display: block;
@@ -324,7 +323,7 @@
 
 </div>
   </div>
--->
+
   <div id="hero" class="refill">
     <div class="line-behind-text"><h6>Hero Unit</h6>  </div>
     <div class="hero">
@@ -2292,7 +2291,7 @@
 
   <div id="sliding-menu" class="refill">
     <div class="line-behind-text"><h6>Sliding Menu</h6></div>
-    <div class="refill-centering"><button type="button" class="js-menu-trigger menu-button">
+    <div class="refill-centering"><button type="button" class="js-menu-trigger sliding-menu-button">
   <img src="images/menu.png" alt="">
 </button>
 
@@ -2330,7 +2329,7 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;js-menu-trigger menu-button&quot;&gt;
+  <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;js-menu-trigger sliding-menu-button&quot;&gt;
   &lt;img src=&quot;images/menu.png&quot; alt=&quot;&quot;&gt;
 &lt;/button&gt;
 
@@ -2372,7 +2371,7 @@ $sliding-menu-border: 1px solid $sliding-menu-border-color;
 $sliding-menu-background-hover: $base-accent-color;
 $sliding-menu-color-hover: #fff;
 
-.menu-button {
+.sliding-menu-button {
   @include button(simple, $base-body-color);
   @include inline-block;
   cursor: pointer;
