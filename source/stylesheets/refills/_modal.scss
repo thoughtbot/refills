@@ -1,5 +1,6 @@
 .modal {
   $modal-padding: 3em;
+  $modal-background: $base-body-color;
   $modal-close-color: $light-gray;
   $modal-image-height: 135px;
   $modal-image-width: $modal-image-height;
@@ -46,13 +47,14 @@
   }
 
   .modal-close {
-    @include position(fixed, ($modal-padding /2) ($modal-padding /2) 0 0);
-    @include size(0.5em);
+    @include position(absolute, ($modal-padding /2) ($modal-padding /2) 0 0);
+    @include size(1.5em);
     cursor: pointer;
+    background: $modal-background;
 
     &:after,
     &:before {
-      @include position(absolute, 0px 0 0 -50%);
+      @include position(absolute, 3px 3px 0 50%);
       @include transform(rotate(45deg));
       @include size(.15em 1.5em);
       background: $modal-close-color;
@@ -74,21 +76,24 @@
   .modal-inner {
     @include transition(opacity .25s ease);
     border-radius: $base-border-radius;
-    background: white;
+    background: $modal-background;
     margin: auto;
     max-height: 95%;
-    overflow: auto;
-    overflow-y: scroll;
     position: relative;
+    overflow: auto;
     width: 95%;
     padding: $modal-padding /2;
     margin-top: .6em;
-    -webkit-overflow-scrolling: touch;
 
     @include media($medium-screen) {
       padding: $modal-padding;
-      width: 50%;
+      width: 60%;
       max-height: 60%;
+      margin-top: 10em;
+    }
+
+    @include media($large-screen) {
+      width: 50%;
       margin-top: 10em;
     }
 
@@ -132,21 +137,6 @@
     }
   }
 
-  .img-wrapper-modal {
-    @include size($modal-image-width $modal-image-height);
-    background-color: $light-gray;
-    border-radius: 190px;
-    display: block;
-    margin-bottom: 1em;
-
-    img {
-      @include size($modal-image-width $modal-image-height);
-      content: '';
-      display: block;
-      padding: 30px;
-    }
-  }
-
   .modal-state:checked + .modal-window {
     opacity: 1;
     visibility: visible;
@@ -156,7 +146,5 @@
     top: 0;
   }
 }
-
-
 
 // Based on code by Kasper Mikiewicz
