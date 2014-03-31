@@ -2939,7 +2939,8 @@ header.navigation {
   cursor: pointer;
   font-size: 1em;
   margin-bottom: 1.5em;
-  position: relative; }
+  position: relative;
+  outline: none; }
   /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
   .menu-anchor:hover:not(:disabled) {
     box-shadow: inset 0 1px 0 0 white;
@@ -2956,8 +2957,11 @@ header.navigation {
   .menu-anchor:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
+  /* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
+  .menu-anchor img {
+    height: 1.3em; }
 
-/* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
+/* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
 .sliding-menu-content {
   position: fixed;
   top: 0px;
@@ -2978,18 +2982,18 @@ header.navigation {
   z-index: 999999;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
-  /* line 27, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
+  /* line 32, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
   .sliding-menu-content li a {
     border-bottom: 1px solid #333333;
     color: white;
     display: block;
     font-weight: bold;
     padding: 1em; }
-    /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
+    /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
     .sliding-menu-content li a:hover {
       background-color: #477dca;
       color: white; }
-  /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
+  /* line 45, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
   .sliding-menu-content.is-visible {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -2997,7 +3001,7 @@ header.navigation {
     -o-transform: translateX(0);
     transform: translateX(0); }
 
-/* line 45, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
+/* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
 .menu-screen {
   position: fixed;
   top: 0px;
@@ -3011,7 +3015,7 @@ header.navigation {
   opacity: 0;
   visibility: hidden;
   z-index: 999998; }
-  /* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
+  /* line 58, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
   .menu-screen.is-visible {
     opacity: .4;
     visibility: visible; }

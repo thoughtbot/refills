@@ -2092,9 +2092,9 @@
 
   <div id="sliding-menu" class="refill">
     <div class="line-behind-text"><h6>Sliding Menu</h6></div>
-    <div class="refill-centering"><div>
-  <a class="js-menu-trigger menu-anchor">&#9776;</a>
-</div>
+    <div class="refill-centering"><button type="button" class="js-menu-trigger menu-anchor">
+  <img src="images/menu.png" alt="">
+</button>
 
 <nav class="js-menu sliding-menu-content">
   <ul>
@@ -2104,8 +2104,7 @@
   </ul>
 </nav>
 
-<div class="js-menu-screen menu-screen">
-</div>
+<div class="js-menu-screen menu-screen"></div>
 
 <script>
   $(document).ready(function(){
@@ -2131,9 +2130,9 @@
 
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div&gt;
-  &lt;a class=&quot;js-menu-trigger menu-anchor&quot;&gt;&amp;#9776;&lt;/a&gt;
-&lt;/div&gt;
+  <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;js-menu-trigger menu-anchor&quot;&gt;
+  &lt;img src=&quot;images/menu.png&quot; alt=&quot;&quot;&gt;
+&lt;/button&gt;
 
 &lt;nav class=&quot;js-menu sliding-menu-content&quot;&gt;
   &lt;ul&gt;
@@ -2143,8 +2142,7 @@
   &lt;/ul&gt;
 &lt;/nav&gt;
 
-&lt;div class=&quot;js-menu-screen menu-screen&quot;&gt;
-&lt;/div&gt;
+&lt;div class=&quot;js-menu-screen menu-screen&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
   $(document).ready(function(){
@@ -2181,6 +2179,11 @@ $sliding-menu-color-hover: #fff;
   font-size: $base-font-size;
   margin-bottom: $base-line-height;
   position: relative;
+  outline: none;
+
+  img {
+    height: 1.3em;
+  }
 }
 
 .sliding-menu-content {
