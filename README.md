@@ -22,6 +22,8 @@ See examples and get the code snippets [here](http://thoughtbot.github.io/refill
 
 [Install Bitters](http://bitters.bourbon.io/)
 
+[Install jQuery](http://www.w3schools.com/jquery/jquery_install.asp) (if you are using any of the components/patterns that require Javascript. Javascript, when used, can be found at the bottom of the HTML file.)
+
 Click "Show Code" under the component/pattern you want in [Refills](http://thoughtbot.github.io/refills/) and paste it into your project. 
 If a component/pattern has javascript it is placed in the HTML.erb file. Feel free to place it somewhere else in your project.
 
