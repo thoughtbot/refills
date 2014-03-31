@@ -12,6 +12,11 @@ $sliding-menu-color-hover: #fff;
   font-size: $base-font-size;
   margin-bottom: $base-line-height;
   position: relative;
+  outline: none;
+
+  img {
+    height: 1.3em;
+  }
 }
 
 .sliding-menu-content {
