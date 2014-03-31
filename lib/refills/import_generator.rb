@@ -7,11 +7,17 @@ module Refills
     argument :snippet, type: :string, required: true
 
     def copy_html
-      copy_file "_#{snippet}.html.erb", "app/views/refills/_#{snippet}.html.erb"
+      copy_file "_#{snippet}.html.erb", "app/views/refills/_#{partial_name}.html.erb"
     end
 
     def copy_styles
-      copy_file "stylesheets/refills/_#{snippet}.scss", "app/assets/stylesheets/refills/_#{snippet}.scss"
+      copy_file "stylesheets/refills/_#{snippet}.scss", "app/assets/stylesheets/refills/_#{partial_name}.scss"
+    end
+
+    private
+
+    def partial_name
+      snippet.gsub(/-/, '_')
     end
   end
 end
