@@ -1,0 +1,42 @@
+.article-view {
+  font-family: 'Vollkorn', serif;
+
+  aside {
+    @include span-columns(4);
+    background: #F7F7F7;
+    height: 26em;
+  }
+  
+  article {
+    @include span-columns(8);
+    @include clearfix;
+    text-align: left;
+
+    .article-type {
+      font-family: 'Open Sans', sans-serif;
+      text-transform: uppercase;
+      background-color: $base-accent-color;
+      color: white;
+      font-size: .8em;
+      font-weight: 800;
+      padding: .1em .5em;
+      margin-bottom: 2em;
+      display: inline-block;
+      text-align: left;
+    }
+
+    h1 {
+      font-family: 'Vollkorn', serif;
+      font-size: 3em;
+      font-weight: 400;
+      margin-bottom: .4em;
+    }
+
+    h4 {
+      margin-bottom: 1em;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 500;
+      line-height: 1.5em;
+    }
+  }
+}

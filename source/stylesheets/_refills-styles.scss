@@ -284,7 +284,6 @@ h5 {
 
 .js-hide-code, 
 .js-show-code {
-  // background: #F5F2F0;
   border-top: 1px dashed #BEBCBC;
   color: #7E7A7A;
   text-transform: uppercase;
@@ -392,4 +391,98 @@ footer.refills-footer {
   }
 }
 
+///////////////
 
+.accordion-tabs-articles {
+  $tab-border-color: $base-border-color;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-content-background: $base-body-color;
+  $tab-active-background: $tab-content-background;
+  $tab-inactive-color: $base-body-color;
+  $tab-inactive-hover-color: darken($light-gray, 5);
+  $tab-mode: $medium-screen;
+
+  @include clearfix;
+  border: $tab-border;
+  border-radius: $base-border-radius;
+  margin-bottom: $base-line-height;
+
+  @include media($tab-mode) {
+    border: none;
+  }
+
+  li.tab-header-and-content {
+
+    @include media($tab-mode) {
+      display: inline;
+    }
+
+    &:first-child a {
+      border-top-left-radius: $base-border-radius; 
+      border-top-right-radius: $base-border-radius; 
+      border-top: 0;
+    }
+
+    &:last-child a {
+      border-bottom-left-radius: $base-border-radius; 
+      border-bottom-right-radius: $base-border-radius; 
+
+      @include media($tab-mode) {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  li.tab-header-and-content a.tab-link {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    color: $dark-gray;
+    display: block;
+    font-weight: 400;
+    padding: $base-line-height/2 $gutter;
+
+    @include media($tab-mode) {
+      @include inline-block;
+      border-top: 0;
+      border-top-right-radius: $base-border-radius;
+      border-top-left-radius: $base-border-radius;
+    }
+
+    &:hover {
+      color: $base-link-color;
+    }
+
+    &:focus { 
+      outline: none; 
+    }
+
+    &.is-active {
+      background-color: $tab-active-background;
+      border-bottom: 0;
+
+      @include media($tab-mode) {
+        background-color: $tab-active-background;
+        border: $tab-border;
+        border-bottom: 1px solid $tab-active-background;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  li.tab-header-and-content section {
+    padding: $base-line-height $gutter;
+    background: $tab-content-background;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+
+    @include media($tab-mode) {
+      border-top: $tab-border;
+      float: left;
+      left: 0;
+      padding: $base-line-height/2 $gutter/2;
+
+    }
+  }
+}

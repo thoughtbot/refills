@@ -35,6 +35,61 @@ title: Refills
     <div class="refill-snippet"><%= snippets('icon-bullet-points') %></div>
   </div>
 
+
+
+
+
+
+
+  <div id="article" class="refill">
+    <div class="line-behind-text"><h6>Article</h6></div>
+
+    <ul class="accordion-tabs-articles">
+      <li class="tab-header-and-content">
+        <a href="#" class="is-active tab-link">Tab Item</a>
+        <section>
+          <div class="refill-centering"><%= partial "article" %></div>
+          <div class="refill-snippet"><%= snippets('article') %></div>
+        </section>
+      </li>
+    </ul>
+
+    <script>
+      $(document).ready(function () {
+        $('.accordion-tabs-articles').each(function(index) {
+          $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+        });
+
+        $('.accordion-tabs-articles').on('click', 'li > a', function(event) {
+          if (!$(this).hasClass('is-active')) {
+            event.preventDefault();
+            var accordionTabs = $(this).closest('.accordion-tabs-articles')
+            accordionTabs.find('.is-open').removeClass('is-open').hide();
+
+            $(this).next().toggleClass('is-open').toggle();
+            accordionTabs.find('.is-active').removeClass('is-active');
+            $(this).addClass('is-active');
+          } else {
+            event.preventDefault();
+          }
+        });
+      });
+    </script>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div id="cards" class="refill">
     <div class="line-behind-text"><h6>Cards</h6></div>
     <div class="refill-centering"><%= partial "cards" %></div>
