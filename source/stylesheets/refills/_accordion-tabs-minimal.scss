@@ -22,13 +22,13 @@
       display: inline;
     }
 
-    &:first-child a {
+    &:first-child a.tab-link {
       border-top-left-radius: $base-border-radius; 
       border-top-right-radius: $base-border-radius; 
       border-top: 0;
     }
 
-    &:last-child a {
+    &:last-child a.tab-link {
       border-bottom-left-radius: $base-border-radius; 
       border-bottom-right-radius: $base-border-radius; 
 
@@ -39,7 +39,7 @@
     }
   }
 
-  li.tab-header-and-content a {
+  li.tab-header-and-content a.tab-link {
     background-color: $tab-inactive-color;
     border-top: $tab-border;
     color: $dark-gray;
