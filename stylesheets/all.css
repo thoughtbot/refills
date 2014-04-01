@@ -1559,21 +1559,21 @@ footer.refills-footer {
     .accordion-tabs li.tab-header-and-content {
       display: inline; } }
   /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
-  .accordion-tabs li.tab-header-and-content:first-child a {
+  .accordion-tabs li.tab-header-and-content:first-child a.tab-link {
     border-top-left-radius: 0.1875em;
     border-top-right-radius: 0.1875em;
     border-top: 0; }
   /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
-  .accordion-tabs li.tab-header-and-content:last-child a {
+  .accordion-tabs li.tab-header-and-content:last-child a.tab-link {
     border-bottom-left-radius: 0.1875em;
     border-bottom-right-radius: 0.1875em; }
     @media screen and (min-width: 40em) {
       /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
-      .accordion-tabs li.tab-header-and-content:last-child a {
+      .accordion-tabs li.tab-header-and-content:last-child a.tab-link {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0; } }
   /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
-  .accordion-tabs li.tab-header-and-content a {
+  .accordion-tabs li.tab-header-and-content a.tab-link {
     background-color: white;
     border-top: 1px solid #dddddd;
     color: #333333;
@@ -1582,7 +1582,7 @@ footer.refills-footer {
     padding: 0.75em 0.809em; }
     @media screen and (min-width: 40em) {
       /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
-      .accordion-tabs li.tab-header-and-content a {
+      .accordion-tabs li.tab-header-and-content a.tab-link {
         display: inline-block;
         vertical-align: baseline;
         zoom: 1;
@@ -1592,18 +1592,18 @@ footer.refills-footer {
         border-top-right-radius: 0.1875em;
         border-top-left-radius: 0.1875em; } }
     /* line 57, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
-    .accordion-tabs li.tab-header-and-content a:hover {
+    .accordion-tabs li.tab-header-and-content a.tab-link:hover {
       color: #477dca; }
     /* line 61, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
-    .accordion-tabs li.tab-header-and-content a:focus {
+    .accordion-tabs li.tab-header-and-content a.tab-link:focus {
       outline: none; }
     /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
-    .accordion-tabs li.tab-header-and-content a.is-active {
+    .accordion-tabs li.tab-header-and-content a.tab-link.is-active {
       background-color: #f7f7f7;
       border-bottom: 0; }
       @media screen and (min-width: 40em) {
         /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
-        .accordion-tabs li.tab-header-and-content a.is-active {
+        .accordion-tabs li.tab-header-and-content a.tab-link.is-active {
           background-color: #f7f7f7;
           border: 1px solid #dddddd;
           border-bottom: 1px solid #f7f7f7;
@@ -1652,21 +1652,21 @@ footer.refills-footer {
     .accordion-tabs-minimal li.tab-header-and-content {
       display: inline; } }
   /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-  .accordion-tabs-minimal li.tab-header-and-content:first-child a {
+  .accordion-tabs-minimal li.tab-header-and-content:first-child a.tab-link {
     border-top-left-radius: 0.1875em;
     border-top-right-radius: 0.1875em;
     border-top: 0; }
   /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-  .accordion-tabs-minimal li.tab-header-and-content:last-child a {
+  .accordion-tabs-minimal li.tab-header-and-content:last-child a.tab-link {
     border-bottom-left-radius: 0.1875em;
     border-bottom-right-radius: 0.1875em; }
     @media screen and (min-width: 40em) {
       /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-      .accordion-tabs-minimal li.tab-header-and-content:last-child a {
+      .accordion-tabs-minimal li.tab-header-and-content:last-child a.tab-link {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0; } }
   /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-  .accordion-tabs-minimal li.tab-header-and-content a {
+  .accordion-tabs-minimal li.tab-header-and-content a.tab-link {
     background-color: white;
     border-top: 1px solid #dddddd;
     color: #333333;
@@ -1675,7 +1675,7 @@ footer.refills-footer {
     padding: 0.75em 1.618em; }
     @media screen and (min-width: 40em) {
       /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-      .accordion-tabs-minimal li.tab-header-and-content a {
+      .accordion-tabs-minimal li.tab-header-and-content a.tab-link {
         display: inline-block;
         vertical-align: baseline;
         zoom: 1;
@@ -1685,18 +1685,18 @@ footer.refills-footer {
         border-top-right-radius: 0.1875em;
         border-top-left-radius: 0.1875em; } }
     /* line 57, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-    .accordion-tabs-minimal li.tab-header-and-content a:hover {
+    .accordion-tabs-minimal li.tab-header-and-content a.tab-link:hover {
       color: #477dca; }
     /* line 61, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-    .accordion-tabs-minimal li.tab-header-and-content a:focus {
+    .accordion-tabs-minimal li.tab-header-and-content a.tab-link:focus {
       outline: none; }
     /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-    .accordion-tabs-minimal li.tab-header-and-content a.is-active {
+    .accordion-tabs-minimal li.tab-header-and-content a.tab-link.is-active {
       background-color: white;
       border-bottom: 0; }
       @media screen and (min-width: 40em) {
         /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-        .accordion-tabs-minimal li.tab-header-and-content a.is-active {
+        .accordion-tabs-minimal li.tab-header-and-content a.tab-link.is-active {
           background-color: white;
           border: 1px solid #dddddd;
           border-bottom: 1px solid white;
