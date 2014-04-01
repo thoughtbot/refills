@@ -1701,20 +1701,7 @@ footer.refills-footer {
           border: 1px solid #dddddd;
           border-bottom: 1px solid white;
           margin-bottom: -1px; } }
-    /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-    .accordion-tabs-minimal li.tab-header-and-content a img {
-      height: 2em;
-      margin-bottom: -4px;
-      margin-right: .4em;
-      padding-top: 10px;
-      opacity: .2; }
-      @media screen and (min-width: 40em) {
-        /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-        .accordion-tabs-minimal li.tab-header-and-content a img {
-          display: block;
-          margin: auto;
-          margin-bottom: 5px; } }
-  /* line 91, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
+  /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
   .accordion-tabs-minimal li.tab-header-and-content section {
     padding: 1.5em 1.618em;
     background: white;
@@ -1722,13 +1709,13 @@ footer.refills-footer {
     overflow: hidden;
     width: 100%; }
     @media screen and (min-width: 40em) {
-      /* line 91, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
+      /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
       .accordion-tabs-minimal li.tab-header-and-content section {
         border-top: 1px solid #dddddd;
         float: left;
         left: 0;
         padding: 0.75em 0.809em; }
-        /* line 104, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
+        /* line 91, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
         .accordion-tabs-minimal li.tab-header-and-content section p {
           -webkit-columns: 2;
           -moz-columns: 2;
