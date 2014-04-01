@@ -46,10 +46,17 @@ title: Refills
 
     <ul class="accordion-tabs-articles">
       <li class="tab-header-and-content">
-        <a href="#" class="is-active tab-link">Tab Item</a>
+        <a href="#" class="is-active tab-link">A</a>
         <section>
-          <div class="refill-centering"><%= partial "article" %></div>
-          <div class="refill-snippet"><%= snippets('article') %></div>
+          <div class="refill-centering"><%= partial "article-open-vollkorn" %></div>
+          <div class="refill-snippet"><%= snippets('article-open-vollkorn') %></div>
+        </section>
+      </li>
+      <li class="tab-header-and-content">
+        <a href="#" class="tab-link">B</a>
+        <section>
+        <div class="refill-centering"><%= partial "article-2" %></div>
+        <div class="refill-snippet"><%= snippets('article-2') %></div>
         </section>
       </li>
     </ul>

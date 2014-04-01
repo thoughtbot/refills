@@ -1,0 +1,59 @@
+.article-2 {
+  
+  article {
+    @include clearfix;
+    text-align: left;
+
+    .article-type {
+      font-family: 'Open Sans', sans-serif;
+      text-transform: uppercase;
+      font-size: .7em;
+      font-weight: 800;
+      padding: .1em 0;
+      border-bottom: 2px solid;
+      margin-bottom: 2em;
+      display: inline-block;
+      text-align: left;
+    }
+
+    h1 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: .6em;
+    }
+
+    p.article-date {
+      color: transparentize($base-font-color, .6);
+      font-size: .9em;
+      font-style: italic;
+    }
+
+    h4 {
+      margin-bottom: .8em;
+      font-family: 'Vollkorn', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.8em;
+      line-height: 1.3em;
+    }
+
+    p.article-p {
+      @include columns(2);
+      font-family: 'Bentham', serif;
+    }
+    
+    span {
+      font-weight: 600;
+    }
+
+    hr {
+      width: 3em;
+    }
+
+    p.author {
+      font-family: 'Vollkorn', serif;     
+      font-style: italic;
+    }
+  }
+}

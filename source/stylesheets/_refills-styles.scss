@@ -417,13 +417,13 @@ footer.refills-footer {
       display: inline;
     }
 
-    &:first-child a {
+    &:first-child a.tab-link {
       border-top-left-radius: $base-border-radius; 
       border-top-right-radius: $base-border-radius; 
       border-top: 0;
     }
 
-    &:last-child a {
+    &:last-child a.tab-link {
       border-bottom-left-radius: $base-border-radius; 
       border-bottom-right-radius: $base-border-radius; 
 
@@ -482,7 +482,7 @@ footer.refills-footer {
       float: left;
       left: 0;
       padding: $base-line-height/2 $gutter/2;
-
+      padding-top: 3em;
     }
   }
 }
