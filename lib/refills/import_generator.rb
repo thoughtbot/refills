@@ -7,21 +7,30 @@ module Refills
     argument :snippet, type: :string, required: true
 
     def copy_html
-      copy_file view_template, views_directory
+      copy_file view_template, view_destination
     end
 
     def copy_styles
-      copy_file stylesheet_template, stylesheets_directory
+      copy_file stylesheet_template, stylesheet_destination
     end
 
     private
 
+    def stylesheet_destination
+      File.join(stylesheets_directory, stylesheet_name(snippet_name))
+    end
+
+
+    def view_destination
+      File.join(views_directory, view_name(snippet_name))
+    end
+
     def stylesheets_directory
-      File.join('app', 'assets', 'stylesheets', 'refills', view_name(snippet_name))
+      File.join('app', 'assets', 'stylesheets', 'refills')
     end
 
     def views_directory
-      File.join('app', 'views', 'refills', stylesheet_name(snippet_name))
+      File.join('app', 'views', 'refills')
     end
 
     def view_template
