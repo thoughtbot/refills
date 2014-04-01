@@ -20,7 +20,6 @@ module Refills
       File.join(stylesheets_directory, stylesheet_name(snippet_name))
     end
 
-
     def view_destination
       File.join(views_directory, view_name(snippet_name))
     end
