@@ -17,11 +17,11 @@ module Refills
     private
 
     def stylesheets_directory
-      File.join("app", "assets", "stylesheets", "refills", view_name(snippet_name))
+      File.join('app', 'assets', 'stylesheets', 'refills', view_name(snippet_name))
     end
 
     def views_directory
-      File.join("app", "views", "refills", stylesheet_name(snippet_name))
+      File.join('app', 'views', 'refills', stylesheet_name(snippet_name))
     end
 
     def view_template
@@ -29,7 +29,7 @@ module Refills
     end
 
     def stylesheet_template
-      File.join("stylesheets", "refills", stylesheet_name(snippet))
+      File.join('stylesheets', 'refills', stylesheet_name(snippet))
     end
 
     def view_name(name)
