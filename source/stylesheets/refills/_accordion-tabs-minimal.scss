@@ -73,19 +73,6 @@
         margin-bottom: -1px;
       }
     }
-
-    img {
-      height: 2em;
-      margin-bottom: -4px;
-      margin-right: .4em;
-      padding-top: 10px;
-      opacity: .2;
-      @include media($tab-mode) {
-        display: block;
-        margin: auto;
-        margin-bottom: 5px;
-      }
-    }
   }
 
   li.tab-header-and-content section {
