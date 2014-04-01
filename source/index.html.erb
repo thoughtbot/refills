@@ -44,9 +44,7 @@ title: Refills
   <div id="comment" class="refill">
     <div class="line-behind-text"><h6>Comments</h6></div>
     <div class="refill-centering">
-      <div class="refill-smaller">
-        <%= partial "comment" %>
-      </div>
+      <div class="refill-smaller"><%= partial "comment" %></div>
     </div>
     <div class="refill-snippet"><%= snippets('comment') %></div>
   </div>
@@ -63,6 +61,8 @@ title: Refills
     <div class="line-behind-text"><h6>Tables</h6></div>
     <%= partial "tables" %>
     <div class="refill-snippet"><%= snippets('tables') %></div>
+    <%= partial "tables-minimal" %>
+    <div class="refill-snippet"><%= snippets('tables-minimal') %></div>
   </div>
 
   <div id="vertical-tabs" class="refill">
