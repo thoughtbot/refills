@@ -8,14 +8,12 @@
   $tab-mode: $medium-screen;
 
   @include clearfix;
-  @include fill-parent;
   border: $tab-border;
   border-radius: $base-border-radius;
   margin-bottom: $base-line-height;
 
   @include media($tab-mode) {
     border: none;
-    position: relative;
   }
 
   li.tab-header-and-content {
