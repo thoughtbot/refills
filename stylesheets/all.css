@@ -3259,6 +3259,73 @@ header.navigation {
             width: auto;
             margin-bottom: 0; } }
 
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables-minimal.scss */
+.table-minimal {
+  border-collapse: separate;
+  border-spacing: 0; }
+  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables-minimal.scss */
+  .table-minimal tbody tr:hover > td, .table-minimal tbody tr:hover > th {
+    background-color: #fafafa; }
+  /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables-minimal.scss */
+  .table-minimal tbody tr:first-child td {
+    border-top: 2px solid #dddddd; }
+  /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables-minimal.scss */
+  .table-minimal thead th {
+    background-color: white;
+    padding: 0.5em;
+    border-bottom: 0px; }
+  /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables-minimal.scss */
+  .table-minimal tbody {
+    background-color: white; }
+    /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables-minimal.scss */
+    .table-minimal tbody td {
+      padding: 0.5em;
+      border-top: 1px solid #dddddd;
+      border-bottom: 0px; }
+      /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables-minimal.scss */
+      .table-minimal tbody td button {
+        border: 1px solid #dbdbdb;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 0 0 white;
+        color: #333333;
+        display: inline-block;
+        font-size: 11px;
+        font-weight: bold;
+        background-color: white;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e3e3e3));
+        background-image: -webkit-linear-gradient(white, #e3e3e3);
+        background-image: linear-gradient(white, #e3e3e3);
+        padding: 7px 18px;
+        text-decoration: none;
+        text-shadow: 0 1px 0 white;
+        background-clip: padding-box;
+        margin-right: 0.5em;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: .3em;
+        outline: none; }
+        /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        .table-minimal tbody td button:hover:not(:disabled) {
+          box-shadow: inset 0 1px 0 0 white;
+          cursor: pointer;
+          background-color: #f2f2f2;
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #dbdbdb));
+          background-image: -webkit-linear-gradient(#f2f2f2, #dbdbdb);
+          background-image: linear-gradient(#f2f2f2, #dbdbdb); }
+        /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        .table-minimal tbody td button:active:not(:disabled) {
+          border: 1px solid #dbdbdb;
+          box-shadow: inset 0 0 8px 4px #d4d4d4, inset 0 0 8px 4px #d4d4d4, 0 1px 1px 0 #eeeeee; }
+        /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        .table-minimal tbody td button:disabled {
+          opacity: 0.5;
+          cursor: not-allowed; }
+        @media screen and (min-width: 40em) {
+          /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tables-minimal.scss */
+          .table-minimal tbody td button {
+            width: auto;
+            margin-bottom: 0; } }
+
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
 .tooltip-item {
   border: 1px solid #dddddd;
