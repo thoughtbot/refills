@@ -388,13 +388,14 @@ footer.refills-footer {
 .refill-smaller {
   @include media($medium-screen) {
     width: 70%;
+    margin: auto;
   }
 }
 
 ///////////////
 
 .accordion-tabs-articles {
-  $tab-border-color: $base-border-color;
+  $tab-border-color: lighten($base-accent-color, 30);
   $tab-border: 1px solid $tab-border-color;
   $tab-content-background: $base-body-color;
   $tab-active-background: $tab-content-background;
@@ -437,7 +438,7 @@ footer.refills-footer {
   li.tab-header-and-content a.tab-link {
     background-color: $tab-inactive-color;
     border-top: $tab-border;
-    color: $dark-gray;
+    color: $tab-border-color;
     display: block;
     font-weight: 400;
     padding: $base-line-height/2 $gutter;

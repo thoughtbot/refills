@@ -42,21 +42,34 @@ title: Refills
 
 
   <div id="article" class="refill">
-    <div class="line-behind-text"><h6>Article</h6></div>
+    <div class="line-behind-text"><h6>Typographic Systems</h6></div>
 
     <ul class="accordion-tabs-articles">
       <li class="tab-header-and-content">
         <a href="#" class="is-active tab-link">A</a>
         <section>
-          <div class="refill-centering"><%= partial "article-open-vollkorn" %></div>
-          <div class="refill-snippet"><%= snippets('article-open-vollkorn') %></div>
+          <div class="refill-smaller">
+            <div class="refill-centering"><%= partial "article-1" %></div>
+          </div>
+          <div class="refill-snippet"><%= snippets('article-1') %></div>
         </section>
       </li>
       <li class="tab-header-and-content">
         <a href="#" class="tab-link">B</a>
         <section>
-        <div class="refill-centering"><%= partial "article-2" %></div>
-        <div class="refill-snippet"><%= snippets('article-2') %></div>
+          <div class="refill-smaller">
+            <div class="refill-centering"><%= partial "article-2" %></div>
+          </div>
+          <div class="refill-snippet"><%= snippets('article-2') %></div>
+        </section>
+      </li>
+      <li class="tab-header-and-content">
+        <a href="#" class="tab-link">C</a>
+        <section>
+          <div class="refill-smaller">
+            <div class="refill-centering"><%= partial "article-3" %></div>
+          </div>
+          <div class="refill-snippet"><%= snippets('article-3') %></div>
         </section>
       </li>
     </ul>
