@@ -396,7 +396,7 @@ footer.refills-footer {
 
 .accordion-tabs-articles {
   $tab-border-color: lighten($base-accent-color, 20);
-  $tab-border: 1px dashed $tab-border-color;
+  $tab-border: 1px solid $tab-border-color;
   $tab-content-background: $base-body-color;
   $tab-active-background: $tab-content-background;
   $tab-inactive-color: $base-body-color;
