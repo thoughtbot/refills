@@ -478,6 +478,10 @@ footer.refills-footer {
         left: 0;
         padding: $base-line-height/2 $gutter;
       }
+
+      .tab-content {
+        opacity: 0;
+      }
     }
  
     &.js-is-active {
@@ -503,9 +507,9 @@ footer.refills-footer {
         display: block;
 
         .tab-content {
-          -webkit-transform-style: preserve-3d; // stop webkit flicker
           @include animation-name(fadeInAccordionTabsArticles);
           @include animation-duration(1s);
+          opacity: 1;
         }
       }
     }
