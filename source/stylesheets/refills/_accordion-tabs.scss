@@ -16,7 +16,7 @@
     border: none;
   }
 
-  li.tab-header-and-content {
+  li.tab {
 
     @include media($tab-mode) {
       display: inline;
@@ -39,7 +39,7 @@
     }
   }
 
-  li.tab-header-and-content a.tab-link {
+  a.tab-link {
     background-color: $tab-inactive-color;
     border-top: $tab-border;
     color: $dark-gray;

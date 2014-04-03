@@ -1,11 +1,11 @@
-article.article-4 {
-  $sans-serif: 'Nunito', sans-serif;
-  $sans-serif-2: 'Varela Round', sans-serif;
+article.type-system-geometric {
+  $sans-serif: 'Questrial', sans-serif;
+  $serif: 'Sanchez', serif;
 
   @include clearfix;
   text-align: left;
 
-  .article-type {
+  .type {
     border-bottom: 1px solid;
     display: inline-block;
     font-family: $sans-serif;
@@ -18,14 +18,15 @@ article.article-4 {
   }
 
   h1 {
-    font-family: $sans-serif-2;
+    font-family: $serif;
     font-size: 2.6em;
-    // font-weight: 700;
+    font-weight: 700;
     margin-bottom: .5em;
   }
 
   h2 {
-    font-family: $sans-serif-2;
+    font-family: $serif;
+    font-style: italic;
     font-size: 1.4em;
     font-weight: 400;
     line-height: 1.3em;
@@ -33,17 +34,17 @@ article.article-4 {
   }
 
   h3 {
-    font-family: $sans-serif-2;
-    font-size: 1.2em;
+    font-family: $serif;
+    font-size: 1.4em;
     font-weight: 400;
     line-height: 1.3em;
     margin-bottom: .4em;
   }
 
-  p.article-date {
+  p.date {
     color: transparentize($base-font-color, .6);
-    font-family: $sans-serif;
-    // font-style: italic;
+    font-family: $serif;
+    font-style: italic;
     font-size: .9em;
     margin-bottom: .3em;
   }
@@ -52,7 +53,6 @@ article.article-4 {
     font-family: $sans-serif;
     line-height: 1.5em;
     font-size: 1.05em;
-    font-weight: 300;
     margin-bottom: 1.5em;
   }
   

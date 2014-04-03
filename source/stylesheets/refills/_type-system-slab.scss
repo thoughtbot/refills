@@ -1,11 +1,11 @@
-article.article-1 {
+article.type-system-slab {
   $sans-serif: 'Open Sans', sans-serif;
   $serif: 'Roboto Slab', serif;
 
   @include clearfix;
   text-align: left;
 
-  .article-type {
+  .type {
     border-bottom: 1px solid;
     display: inline-block;
     font-family: $sans-serif;
@@ -41,7 +41,7 @@ article.article-1 {
    margin-bottom: .5em; 
   }
 
-  p.article-date {
+  p.date {
     color: transparentize($base-font-color, .6);
     font-family: $serif;
     font-size: .8em;
