@@ -19,16 +19,24 @@ article.type-system-rounded {
 
   h1 {
     font-family: $sans-serif-2;
-    font-size: 2.6em;
+    font-size: 1.8em;
     margin-bottom: .5em;
+
+    @include media($medium-screen) {
+      font-size: 2.4em;
+    }
   }
 
   h2 {
     font-family: $sans-serif-2;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 400;
-    line-height: 1.3em;
+    line-height: 1.4em;
     margin-bottom: .9em;
+
+    @include media($medium-screen) {
+      font-size: 1.4em;
+    }
   }
 
   h3 {
@@ -48,7 +56,7 @@ article.type-system-rounded {
 
   p {
     font-family: $sans-serif;
-    line-height: 1.5em;
+    line-height: 1.4em;
     font-size: 1.05em;
     font-weight: 300;
     margin-bottom: 1.5em;
