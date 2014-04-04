@@ -556,6 +556,932 @@
 </div>
   </div>
 
+  <div id="type-system" class="refill">
+    <div class="line-behind-text"><h6>Typographic Systems</h6></div>
+      <div class="refill-smaller">
+        <ul class="accordion-tabs-type-systems">
+
+        <li class="tab js-is-active" data-role="tab">
+          <a href="#" class="tab-link-type-system" data-role="link">Serif</a>
+          <section>
+            <div class="tab-content">
+              <div class="refill-centering"><head>
+  <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'>
+</head>
+
+<article class="type-system-serif">
+  <p class="type">Article Type</p>
+<h1>Article Heading</h1>
+<h2>These override some of the styles specified in the Scss files "variables" and "typography" in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class "type-system-name".</h2>
+<p class="date">30 Mar 2014</p>
+<p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+  <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+</p>
+<h3>Subheading lorem</h3>
+<p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.</p>
+<hr>
+<p class="author">Author Name</p>
+
+</article>
+</div>
+              <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;head&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+
+&lt;article class=&quot;type-system-serif&quot;&gt;
+  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
+&lt;h1&gt;Article Heading&lt;/h1&gt;
+&lt;h2&gt;These override some of the styles specified in the Scss files &quot;variables&quot; and &quot;typography&quot; in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class &quot;type-system-name&quot;.&lt;/h2&gt;
+&lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3&gt;Subheading lorem&lt;/h3&gt;
+&lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
+
+&lt;/article&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">article.type-system-serif {
+  $serif: 'Lusitana', serif;
+  $serif-2: 'Merriweather', serif;
+  $sans-serif: 'Merriweather Sans', sans-serif;
+
+  @include clearfix;
+  text-align: left;
+
+  .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: .7em;
+    font-weight: 700;
+    margin-bottom: 2em;
+    padding: .3em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $serif;
+    font-size: 2.6em;
+    font-weight: 700;
+    margin-bottom: .5em;
+  }
+
+  h2 {
+    font-family: $serif-2;
+    font-style: italic;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin-bottom: .9em;
+  }
+
+  h3 {
+    font-family: $serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: .4em;
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $serif-2;
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: .3em;
+  }
+
+  p {
+    font-family: $serif-2;
+    line-height: 1.6em;
+    font-size: .9em;
+    margin-bottom: 1.5em;
+
+    span {
+      font-family: $sans-serif;
+      font-weight: 700;
+    }
+  }
+
+  a.read-more {
+    display: inline-block;
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      font-family: $serif;
+      font-style: normal;
+      position: absolute;
+      font-size: 1.5em;
+      top: -1px;
+      right: -12px;
+    }
+  }
+  
+  hr {
+    width: 3em;
+  }
+
+  p.author {
+    font-family: $serif-2;
+    font-style: italic;
+  }
+}
+</code></pre>
+</div>
+
+</div>
+            </div>
+          </section>
+        </li>
+
+        <li class="tab" data-role="tab">
+          <a href="#" class="tab-link-type-system" data-role="link">Sans</a>
+          <section>
+            <div class="tab-content">
+              <div class="refill-centering"><head>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200' rel='stylesheet' type='text/css'>
+</head>
+
+<article class="type-system-sans">
+  <p class="type">Article Type</p>
+<h1>Article Heading</h1>
+<h2>These override some of the styles specified in the Scss files "variables" and "typography" in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class "type-system-name".</h2>
+<p class="date">30 Mar 2014</p>
+<p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+  <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+</p>
+<h3>Subheading lorem</h3>
+<p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.</p>
+<hr>
+<p class="author">Author Name</p>
+
+</article>
+</div>
+              <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;head&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+
+&lt;article class=&quot;type-system-sans&quot;&gt;
+  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
+&lt;h1&gt;Article Heading&lt;/h1&gt;
+&lt;h2&gt;These override some of the styles specified in the Scss files &quot;variables&quot; and &quot;typography&quot; in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class &quot;type-system-name&quot;.&lt;/h2&gt;
+&lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3&gt;Subheading lorem&lt;/h3&gt;
+&lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
+
+&lt;/article&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">article.type-system-sans {
+  $sans-serif: 'PT Sans', sans-serif;
+  $sans-serif-2: 'Titillium Web', sans-serif;
+
+  @include clearfix;
+  text-align: left;
+
+  .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $sans-serif-2;
+    font-size: .7em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 2em;
+    padding: .1em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $sans-serif-2;
+    font-size: 2.4em;
+    font-weight: 600;
+    margin-bottom: .6em;
+  }
+
+  h2 {
+    font-family: $sans-serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: 1.2em;
+  }
+
+  h3 {
+   font-family: $sans-serif-2;
+   font-size: 1em;
+   font-weight: 700;
+   text-transform: uppercase;
+   line-height: 1.4em;
+   margin-bottom: .5em; 
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $sans-serif;
+    font-size: .8em;
+    margin-bottom: .5em;
+  }
+
+  p {
+    font-family: $sans-serif;
+    font-weight: 300;
+    letter-spacing: 1;
+    margin-bottom: 1.5em;
+
+    span {
+      font-family: $sans-serif;
+      font-weight: 600;
+      font-size: .8em;
+      text-transform: uppercase;
+    }
+  }
+
+  hr {
+    width: 3em;
+  }
+
+  a.read-more {
+    display: inline-block;
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      position: absolute;
+      font-size: 1.7em;
+      top: -2px;
+      right: -10px;
+    }
+  }
+
+  p.author {
+    font-family: $sans-serif;
+    font-style: italic;
+  }
+}
+</code></pre>
+</div>
+
+</div>
+            </div>
+          </section>
+        </li>
+
+        <li class="tab" data-role="tab">
+          <a href="#" class="tab-link-type-system" data-role="link">Slab</a>
+          <section>
+            <div class="tab-content">
+              <div class="refill-centering"><head>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
+</head>
+
+<article class="type-system-slab">
+  <p class="type">Article Type</p>
+<h1>Article Heading</h1>
+<h2>These override some of the styles specified in the Scss files "variables" and "typography" in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class "type-system-name".</h2>
+<p class="date">30 Mar 2014</p>
+<p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+  <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+</p>
+<h3>Subheading lorem</h3>
+<p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.</p>
+<hr>
+<p class="author">Author Name</p>
+
+</article>
+</div>
+              <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;head&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+
+&lt;article class=&quot;type-system-slab&quot;&gt;
+  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
+&lt;h1&gt;Article Heading&lt;/h1&gt;
+&lt;h2&gt;These override some of the styles specified in the Scss files &quot;variables&quot; and &quot;typography&quot; in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class &quot;type-system-name&quot;.&lt;/h2&gt;
+&lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3&gt;Subheading lorem&lt;/h3&gt;
+&lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
+
+&lt;/article&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">article.type-system-slab {
+  $sans-serif: 'Open Sans', sans-serif;
+  $serif: 'Roboto Slab', serif;
+
+  @include clearfix;
+  text-align: left;
+
+  .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: .7em;
+    font-weight: 600;
+    margin-bottom: 2em;
+    padding: .1em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $serif;
+    font-size: 2.4em;
+    font-weight: 400;
+    margin-bottom: .6em;
+  }
+
+  h2 {
+    font-family: $sans-serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: 1.2em;
+  }
+
+  h3 {
+   font-family: $serif;
+   font-size: 1em;
+   font-weight: 600;
+   text-transform: uppercase;
+   line-height: 1.4em;
+   margin-bottom: .5em; 
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $serif;
+    font-size: .8em;
+    margin-bottom: .5em;
+  }
+
+  p {
+    font-family: $serif;
+    font-weight: 300;
+    letter-spacing: 1;
+    margin-bottom: 1.5em;
+
+    span {
+      font-family: $sans-serif;
+      font-weight: 600;
+      font-size: .8em;
+      text-transform: uppercase;
+    }
+  }
+
+  a.read-more {
+    display: inline-block;
+    font-family: $serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      position: absolute;
+      font-size: 1.8em;
+      top: -2px;
+      right: -12px;
+    }
+  }
+
+  hr {
+    width: 3em;
+  }
+
+  p.author {
+    font-family: $serif;
+  }
+}
+</code></pre>
+</div>
+
+</div>
+            </div>
+          </section>
+        </li>
+
+        <li class="tab" data-role="tab">
+          <a href="#" class="tab-link-type-system" data-role="link">Rounded</a>
+          <section>
+            <div class="tab-content">
+              <div class="refill-centering"><head>
+  <link href='http://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+</head>
+
+<article class="type-system-rounded">
+  <p class="type">Article Type</p>
+<h1>Article Heading</h1>
+<h2>These override some of the styles specified in the Scss files "variables" and "typography" in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class "type-system-name".</h2>
+<p class="date">30 Mar 2014</p>
+<p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+  <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+</p>
+<h3>Subheading lorem</h3>
+<p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.</p>
+<hr>
+<p class="author">Author Name</p>
+
+</article>
+</div>
+              <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;head&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+
+&lt;article class=&quot;type-system-rounded&quot;&gt;
+  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
+&lt;h1&gt;Article Heading&lt;/h1&gt;
+&lt;h2&gt;These override some of the styles specified in the Scss files &quot;variables&quot; and &quot;typography&quot; in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class &quot;type-system-name&quot;.&lt;/h2&gt;
+&lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3&gt;Subheading lorem&lt;/h3&gt;
+&lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
+
+&lt;/article&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">article.type-system-rounded {
+  $sans-serif: 'Nunito', sans-serif;
+  $sans-serif-2: 'Varela Round', sans-serif;
+
+  @include clearfix;
+  text-align: left;
+
+  .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: .7em;
+    font-weight: 800;
+    margin-bottom: 2em;
+    padding: .3em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $sans-serif-2;
+    font-size: 2.6em;
+    margin-bottom: .5em;
+  }
+
+  h2 {
+    font-family: $sans-serif-2;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: .9em;
+  }
+
+  h3 {
+    font-family: $sans-serif-2;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: .4em;
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $sans-serif;
+    font-size: .9em;
+    margin-bottom: .3em;
+  }
+
+  p {
+    font-family: $sans-serif;
+    line-height: 1.5em;
+    font-size: 1.05em;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+
+    span {
+      font-family: $sans-serif-2;
+      text-transform: uppercase;
+      font-size: 0.8em;
+    }
+  }
+
+  a.read-more {
+    display: inline-block;
+    font-family: $sans-serif-2;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      position: absolute;
+      font-size: 1.5em;
+      top: -1px;
+      right: -12px;
+    }
+  }
+  
+  hr {
+    width: 3em;
+  }
+
+  p.author {
+    font-family: $sans-serif;
+  }
+}
+</code></pre>
+</div>
+
+</div>
+            </div>
+          </section>
+        </li>
+
+        <li class="tab" data-role="tab">
+          <a href="#" class="tab-link-type-system" data-role="link">Traditional</a>
+          <section>
+            <div class="tab-content">
+              <div class="refill-centering"><head>
+  <link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+<article class="type-system-traditional">
+  <p class="type">Article Type</p>
+<h1>Article Heading</h1>
+<h2>These override some of the styles specified in the Scss files "variables" and "typography" in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class "type-system-name".</h2>
+<p class="date">30 Mar 2014</p>
+<p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+  <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+</p>
+<h3>Subheading lorem</h3>
+<p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.</p>
+<hr>
+<p class="author">Author Name</p>
+
+</article>
+</div>
+              <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;head&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+
+&lt;article class=&quot;type-system-traditional&quot;&gt;
+  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
+&lt;h1&gt;Article Heading&lt;/h1&gt;
+&lt;h2&gt;These override some of the styles specified in the Scss files &quot;variables&quot; and &quot;typography&quot; in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class &quot;type-system-name&quot;.&lt;/h2&gt;
+&lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3&gt;Subheading lorem&lt;/h3&gt;
+&lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
+
+&lt;/article&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">article.type-system-traditional {
+  $sans-serif: 'Noto Sans', sans-serif;
+  $serif: 'Radley', serif;
+
+  @include clearfix;
+  text-align: left;
+
+  .type {
+    border-bottom: 2px solid;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: .7em;
+    font-weight: 800;
+    margin-bottom: 2em;
+    padding: .1em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $serif;
+    font-size: 2.6em;
+    font-weight: 700;
+    margin-bottom: .3em;
+  }
+
+  h2 {
+    font-family: $serif;
+    font-size: 1.6em;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.25em;
+    margin-bottom: .9em;
+  }
+
+  h3 {
+    font-family: $serif;
+    font-size: 1.4em;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: .4em;
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $serif;
+    font-style: italic;
+    margin-bottom: .3em;
+  }
+
+  p {
+    font-family: $sans-serif;
+    letter-spacing: 1;
+    margin-bottom: 1.5em;
+    line-height: 1.55em;
+
+    span {
+      font-family: $serif;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+  }
+  
+  a.read-more {
+    display: inline-block;
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      font-family: $sans-serif;
+      font-style: normal;
+      position: absolute;
+      font-size: 1.5em;
+      top: -1px;
+      right: -12px;
+    }
+  }
+
+  hr {
+    width: 3em;
+  }
+
+  p.author {
+    font-family: $serif;
+    font-size: 1.2em;
+    font-style: italic;
+  }
+}
+</code></pre>
+</div>
+
+</div>
+            </div>
+          </section>
+        </li>
+
+        <li class="tab" data-role="tab">
+          <a href="#" class="tab-link-type-system" data-role="link">Geometric</a>
+          <section>
+            <div class="tab-content">
+              <div class="refill-centering"><head>
+  <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+</head>
+
+<article class="type-system-geometric">
+  <p class="type">Article Type</p>
+<h1>Article Heading</h1>
+<h2>These override some of the styles specified in the Scss files "variables" and "typography" in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class "type-system-name".</h2>
+<p class="date">30 Mar 2014</p>
+<p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+  <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+</p>
+<h3>Subheading lorem</h3>
+<p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.</p>
+<hr>
+<p class="author">Author Name</p>
+
+</article>
+</div>
+              <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;head&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+
+&lt;article class=&quot;type-system-geometric&quot;&gt;
+  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
+&lt;h1&gt;Article Heading&lt;/h1&gt;
+&lt;h2&gt;These override some of the styles specified in the Scss files &quot;variables&quot; and &quot;typography&quot; in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class &quot;type-system-name&quot;.&lt;/h2&gt;
+&lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3&gt;Subheading lorem&lt;/h3&gt;
+&lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
+
+&lt;/article&gt;
+</code></pre>
+</div>
+
+<div class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">article.type-system-geometric {
+  $sans-serif: 'Questrial', sans-serif;
+  $serif: 'Sanchez', serif;
+
+  @include clearfix;
+  text-align: left;
+
+  .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: .7em;
+    font-weight: 800;
+    margin-bottom: 2em;
+    padding: .3em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $serif;
+    font-size: 2.6em;
+    font-weight: 700;
+    margin-bottom: .5em;
+  }
+
+  h2 {
+    font-family: $serif;
+    font-style: italic;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: .9em;
+  }
+
+  h3 {
+    font-family: $serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: .4em;
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $serif;
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: .3em;
+  }
+
+  p {
+    font-family: $sans-serif;
+    line-height: 1.5em;
+    font-size: 1.05em;
+    margin-bottom: 1.5em;
+  }
+
+  a.read-more {
+    display: inline-block;
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      font-family: $sans-serif;
+      font-style: normal;
+      position: absolute;
+      font-size: 1.5em;
+      top: -1px;
+      right: -12px;
+    }
+  }
+  
+  hr {
+    width: 3em;
+  }
+
+  p.author {
+    font-family: $sans-serif;
+  }
+}
+</code></pre>
+</div>
+
+</div>
+            </div>
+          </section>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
   <div id="cards" class="refill">
     <div class="line-behind-text"><h6>Cards</h6></div>
     <div class="refill-centering"><div class="cards">
@@ -951,22 +1877,26 @@
   <div id="accordion-tabs" class="refill">
     <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
     <ul class="accordion-tabs">
-  <li class="tab-header-and-content"><a href="#" class="is-active tab-link">Tab Item</a>
+  <li class="tab-header-and-content">
+    <a href="#" class="is-active tab-link">Tab Item</a>
     <section>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
     </section>
   </li>
-  <li class="tab-header-and-content"><a href="#" class="tab-link">Another Tab</a>
+  <li class="tab-header-and-content">
+    <a href="#" class="tab-link">Another Tab</a>
     <section>
       <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
     </section>
   </li>
-  <li class="tab-header-and-content"><a href="#" class="tab-link">Third</a>
+  <li class="tab-header-and-content">
+    <a href="#" class="tab-link">Third</a>
     <section>
       <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>    
     </section>
   </li>
-  <li class="tab-header-and-content"><a href="#" class="tab-link">Last Item</a>
+  <li class="tab-header-and-content">
+    <a href="#" class="tab-link">Last Item</a>
     <section>
       <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.</p
     </section>
@@ -1003,22 +1933,26 @@
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;ul class=&quot;accordion-tabs&quot;&gt;
-  &lt;li class=&quot;tab-header-and-content&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;is-active tab-link&quot;&gt;Tab Item&lt;/a&gt;
+  &lt;li class=&quot;tab-header-and-content&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;is-active tab-link&quot;&gt;Tab Item&lt;/a&gt;
     &lt;section&gt;
       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.&lt;/p&gt;
     &lt;/section&gt;
   &lt;/li&gt;
-  &lt;li class=&quot;tab-header-and-content&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tab-link&quot;&gt;Another Tab&lt;/a&gt;
+  &lt;li class=&quot;tab-header-and-content&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;tab-link&quot;&gt;Another Tab&lt;/a&gt;
     &lt;section&gt;
       &lt;p&gt;Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.&lt;/p&gt;
     &lt;/section&gt;
   &lt;/li&gt;
-  &lt;li class=&quot;tab-header-and-content&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tab-link&quot;&gt;Third&lt;/a&gt;
+  &lt;li class=&quot;tab-header-and-content&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;tab-link&quot;&gt;Third&lt;/a&gt;
     &lt;section&gt;
       &lt;p&gt;Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.&lt;/p&gt;    
     &lt;/section&gt;
   &lt;/li&gt;
-  &lt;li class=&quot;tab-header-and-content&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tab-link&quot;&gt;Last Item&lt;/a&gt;
+  &lt;li class=&quot;tab-header-and-content&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;tab-link&quot;&gt;Last Item&lt;/a&gt;
     &lt;section&gt;
       &lt;p&gt;Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.&lt;/p
     &lt;/section&gt;
@@ -1148,7 +2082,8 @@
       }
     }
   }
-}</code></pre>
+}
+</code></pre>
 </div>
 
 </div>
@@ -4085,6 +5020,28 @@ $sliding-menu-color-hover: #fff;
 </div>
   </div>
 </div>
+
+<!-- for the type-system tabs -->
+<script>
+  var $tabs, $toggles, ACTIVE_CLASS;
+
+  ACTIVE_CLASS = 'js-is-active';
+
+  $tabs = $("[data-role='tab']");
+
+  $toggles = $tabs.find("[data-role='link']");
+
+  $toggles.on('click', function(event) {
+    var $tab, $toggle;
+    event.preventDefault();
+    $toggle = $(this);
+    $tab = $toggle.closest($tabs);
+    if (!$tab.hasClass(ACTIVE_CLASS)) {
+      $tabs.removeClass(ACTIVE_CLASS);
+      return $tab.addClass(ACTIVE_CLASS);
+    }
+  });
+</script>
 
 <script>
   $('a.js-show-code').on('click', function(e){
