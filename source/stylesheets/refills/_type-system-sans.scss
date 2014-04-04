@@ -1,6 +1,6 @@
 article.type-system-sans {
   $sans-serif: 'PT Sans', sans-serif;
-  $serif: 'Roboto Slab', serif;
+  $sans-serif-2: 'Titillium Web', sans-serif;
 
   @include clearfix;
   text-align: left;
@@ -8,9 +8,10 @@ article.type-system-sans {
   .type {
     border-bottom: 1px solid;
     display: inline-block;
-    font-family: $sans-serif;
+    font-family: $sans-serif-2;
     font-size: .7em;
-    font-weight: 600;
+    font-weight: 900;
+    letter-spacing: 1px;
     margin-bottom: 2em;
     padding: .1em 0;
     text-align: left;
@@ -18,9 +19,9 @@ article.type-system-sans {
   }
 
   h1 {
-    font-family: $sans-serif;
+    font-family: $sans-serif-2;
     font-size: 2.4em;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: .6em;
   }
 
@@ -33,9 +34,9 @@ article.type-system-sans {
   }
 
   h3 {
-   font-family: $sans-serif;
+   font-family: $sans-serif-2;
    font-size: 1em;
-   font-weight: 600;
+   font-weight: 700;
    text-transform: uppercase;
    line-height: 1.4em;
    margin-bottom: .5em; 
@@ -66,7 +67,25 @@ article.type-system-sans {
     width: 3em;
   }
 
+  a.read-more {
+    display: inline-block;
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      position: absolute;
+      font-size: 1.7em;
+      top: -2px;
+      right: -10px;
+    }
+  }
+
   p.author {
     font-family: $sans-serif;
+    font-style: italic;
   }
 }

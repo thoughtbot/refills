@@ -62,6 +62,23 @@ article.type-system-slab {
     }
   }
 
+  a.read-more {
+    display: inline-block;
+    font-family: $serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      position: absolute;
+      font-size: 1.8em;
+      top: -2px;
+      right: -12px;
+    }
+  }
+
   hr {
     width: 3em;
   }

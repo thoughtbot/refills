@@ -386,7 +386,7 @@ footer.refills-footer {
 ///////////////////////// refill adjustments
 
 .refill-smaller {
-  @include media($medium-screen) {
+  @include media($large-screen) {
     width: 70%;
     margin: auto;
   }
@@ -437,11 +437,12 @@ footer.refills-footer {
       }
     }
  
-    .tab-link {
+    .tab-link-type-system {
       background-color: transparent;
       border-bottom: 1px solid $tab-border-color;
       color: $dark-gray;
       display: block;
+      font-size: .9em;
       letter-spacing: .6px;
       font-weight: 200;
       padding: $base-line-height/2 $gutter/2;
@@ -491,7 +492,7 @@ footer.refills-footer {
         border-bottom: 0;
       }
 
-      .tab-link {
+      .tab-link-type-system {
         background-color: $tab-active-background;
         border-bottom: 0;
  
