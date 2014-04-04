@@ -35,6 +35,75 @@ title: Refills
     <div class="refill-snippet"><%= snippets('icon-bullet-points') %></div>
   </div>
 
+  <div id="type-system" class="refill">
+    <div class="line-behind-text"><h6>Typographic Systems</h6></div>
+      <div class="refill-smaller">
+        <ul class="accordion-tabs-type-systems">
+
+        <li class="tab js-is-active" data-role="tab">
+          <a href="#" class="tab-link-type-system" data-role="link">Serif</a>
+          <section>
+            <div class="tab-content">
+              <div class="refill-centering"><%= partial "type-system-serif" %></div>
+              <div class="refill-snippet"><%= snippets('type-system-serif') %></div>
+            </div>
+          </section>
+        </li>
+
+        <li class="tab" data-role="tab">
+          <a href="#" class="tab-link-type-system" data-role="link">Sans</a>
+          <section>
+            <div class="tab-content">
+              <div class="refill-centering"><%= partial "type-system-sans" %></div>
+              <div class="refill-snippet"><%= snippets('type-system-sans') %></div>
+            </div>
+          </section>
+        </li>
+
+        <li class="tab" data-role="tab">
+          <a href="#" class="tab-link-type-system" data-role="link">Slab</a>
+          <section>
+            <div class="tab-content">
+              <div class="refill-centering"><%= partial "type-system-slab" %></div>
+              <div class="refill-snippet"><%= snippets('type-system-slab') %></div>
+            </div>
+          </section>
+        </li>
+
+        <li class="tab" data-role="tab">
+          <a href="#" class="tab-link-type-system" data-role="link">Rounded</a>
+          <section>
+            <div class="tab-content">
+              <div class="refill-centering"><%= partial "type-system-rounded" %></div>
+              <div class="refill-snippet"><%= snippets('type-system-rounded') %></div>
+            </div>
+          </section>
+        </li>
+
+        <li class="tab" data-role="tab">
+          <a href="#" class="tab-link-type-system" data-role="link">Traditional</a>
+          <section>
+            <div class="tab-content">
+              <div class="refill-centering"><%= partial "type-system-traditional" %></div>
+              <div class="refill-snippet"><%= snippets('type-system-traditional') %></div>
+            </div>
+          </section>
+        </li>
+
+        <li class="tab" data-role="tab">
+          <a href="#" class="tab-link-type-system" data-role="link">Geometric</a>
+          <section>
+            <div class="tab-content">
+              <div class="refill-centering"><%= partial "type-system-geometric" %></div>
+              <div class="refill-snippet"><%= snippets('type-system-geometric') %></div>
+            </div>
+          </section>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
   <div id="cards" class="refill">
     <div class="line-behind-text"><h6>Cards</h6></div>
     <div class="refill-centering"><%= partial "cards" %></div>
@@ -168,6 +237,28 @@ title: Refills
     <div class="refill-snippet"><%= snippets('tooltip') %></div>
   </div>
 </div>
+
+<!-- for the type-system tabs -->
+<script>
+  var $tabs, $toggles, ACTIVE_CLASS;
+
+  ACTIVE_CLASS = 'js-is-active';
+
+  $tabs = $("[data-role='tab']");
+
+  $toggles = $tabs.find("[data-role='link']");
+
+  $toggles.on('click', function(event) {
+    var $tab, $toggle;
+    event.preventDefault();
+    $toggle = $(this);
+    $tab = $toggle.closest($tabs);
+    if (!$tab.hasClass(ACTIVE_CLASS)) {
+      $tabs.removeClass(ACTIVE_CLASS);
+      return $tab.addClass(ACTIVE_CLASS);
+    }
+  });
+</script>
 
 <script>
   $('a.js-show-code').on('click', function(e){
