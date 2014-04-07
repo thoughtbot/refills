@@ -1,3 +1,5 @@
+require 'rails/generators'
+
 module Refills
   class ListGenerator < Rails::Generators::Base
     desc 'List refills'
