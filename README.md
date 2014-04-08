@@ -22,6 +22,15 @@ See examples and get the code snippets [here](http://thoughtbot.github.io/refill
 
 [Install Bitters](http://bitters.bourbon.io/)
 
+
+Make sure the following lines in "_bitters.scss" are uncommented:
+
+```scss
+@import "neat-helpers"; // or "neat/neat-helpers" when not in Rails
+@import "grid-settings";
+```
+
+
 [Install jQuery](http://www.w3schools.com/jquery/jquery_install.asp) (if you are using any of the components/patterns that require Javascript. Javascript, when used, can be found at the bottom of the HTML file.)
 
 Click "Show Code" under the component/pattern you want in [Refills](http://thoughtbot.github.io/refills/) and paste it into your project. 
