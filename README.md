@@ -59,6 +59,15 @@ Lists all the available snippets
 Copies partials to `app/views/refills` and stylesheets to
 `app/assets/stylesheets/refills`
 
+#### Using Refills without Rails
+
+To use Refills without Rails, add these to your `application.css.scss`:
+
+    @import 'bourbon';
+    @import 'neat';
+    @import 'bitters/bitters';
+    @import 'bitters/grid-settings'; # Refills relies on Bitters' grid settings for its media queries.
+
 # Submitting components or patterns
 
 You are more than welcome to submit any component or pattern you can't find in the library, or feel free to send requests for content you'd like to see. When submitting a pull request, please think of these style guides:
