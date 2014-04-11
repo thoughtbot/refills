@@ -4230,7 +4230,6 @@ $sliding-menu-color-hover: #fff;
 </div>
   </div>
 
-<!--
   <div id="accordion" class="refill">
     <div class="line-behind-text"><h6>Accordion</h6></div>
     <div class="refill-centering"><ul class="accordion">
@@ -4260,8 +4259,8 @@ $sliding-menu-color-hover: #fff;
 
 <script>
   jQuery('.js-accordion-trigger') // find the trigger
-    .bind('click focus', function(){
-      jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
+    .bind('click', function(){
+      jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
       jQuery(this).parent().toggleClass('is-expanded');
       event.preventDefault();
   });
@@ -4301,8 +4300,8 @@ $sliding-menu-color-hover: #fff;
 
 &lt;script&gt;
   jQuery('.js-accordion-trigger') // find the trigger
-    .bind('click focus', function(){
-      jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
+    .bind('click', function(){
+      jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
       jQuery(this).parent().toggleClass('is-expanded');
       event.preventDefault();
   });
@@ -4371,7 +4370,6 @@ $sliding-menu-color-hover: #fff;
 </div>
   </div>
 
--->
   <div id="search-bar" class="refill">
     <div class="line-behind-text"><h6>Search bar</h6></div>
     <div class="refill-centering">  <div class="search-bar">
