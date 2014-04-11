@@ -8,6 +8,7 @@ header.navigation {
   $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
   $navigation-search-background: lighten($navigation-background, 5);
   $navigation-search-border: 1px solid darken($navigation-background, 5);
+  $navigation-active-link-color: transparentize(white, 0.5);
 
   background-color: $navigation-background;
   border-bottom: 1px solid darken($navigation-background, 10);
@@ -180,5 +181,10 @@ header.navigation {
         }
       }
     }
+  }
+
+  .active-nav-item a {
+    padding-bottom: 3px;
+    border-bottom: 1px solid $navigation-active-link-color;
   }
 }

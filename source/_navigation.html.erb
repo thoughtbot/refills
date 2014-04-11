@@ -6,8 +6,14 @@
     <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
     <div class="nav">
       <ul id="navigation-menu">
-        <li><a href="javascript:void(0)">Products</a></li>
-        <li><a href="javascript:void(0)">About Us</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
+        <li class="nav-link"><a href="javascript:void(0)" class="more">More</a>
+          <ul class="submenu">
+            <li><a href="javascript:void(0)" class="parent">Submenu Item</a></li>
+            <li><a href="javascript:void(0)" class="parent">Another Item</a></li>
+          </ul>
+        </li>
         <li><a href="javascript:void(0)">Contact</a></li>
         <li class="navigation-search-bar">
           <div class="search-bar">
@@ -38,5 +44,44 @@
         }
       });
     });
+
+    // underline under the active nav item
+    $(".nav .nav-link").click(function() {
+      $(".nav .nav-link").each(function() {
+        $(this).removeClass("active-nav-item");
+      });
+      $(this).addClass("active-nav-item"); 
+    });
+
+
   });
 </script>
+<!-- 
+<script>
+
+    // underline under the active nav item
+    $(".nav .link").click(function() {
+      $(".nav .link").each(function() {
+        $(this).removeClass("active-nav-item");
+      });
+      $(this).addClass("active-nav-item"); 
+    });
+
+
+    // phone size screen
+    // show menu on click
+    $(".phone-menu").click(function(e) {
+      e.preventDefault();
+      $(".nav").toggle();
+    });
+
+    // make menu go away if in phone size
+    var viewportWidth  = document.documentElement.clientWidth
+    if (viewportWidth < 920) {
+      $(".nav li").click(function(e) {
+        if ($(".submenu").css("display", "block")) {
+          $(".nav").toggle();  
+        }
+      });
+    }
+ -->
