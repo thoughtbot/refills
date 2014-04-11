@@ -8,25 +8,29 @@
       <ul id="navigation-menu">
         <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
         <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
-        <li class="nav-link"><a href="javascript:void(0)" class="more">More</a>
+        <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+        <li class="nav-link more"><a href="javascript:void(0)">More</a>
           <ul class="submenu">
-            <li><a href="javascript:void(0)" class="parent">Submenu Item</a></li>
-            <li><a href="javascript:void(0)" class="parent">Another Item</a></li>
+            <li><a href="javascript:void(0)">Submenu Item</a></li>
+            <li><a href="javascript:void(0)">Another Item</a></li>
           </ul>
         </li>
-        <li><a href="javascript:void(0)">Contact</a></li>
-        <li class="navigation-search-bar">
-          <div class="search-bar">
-            <div class="search-and-submit">
-              <input type="search" placeholder="Enter Search" />
-              <button type="submit">
-                <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon.png" alt="">
-              </button>
-            </div>
-          </div>
-        </li>
-        <li class="sign-up"><a href="javascript:void(0)">Sign Up</a></li>
+        
       </ul>
+    </div>
+    <div class="navigation-tools">
+      <div class="search-bar">
+        <div class="search-and-submit">
+          <input type="search" placeholder="Enter Search" />
+          <button type="submit">
+            <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon.png" alt="">
+          </button>
+        </div>
+      </div>
+
+      <div class="sign-up">
+        <a href="javascript:void(0)">Sign Up</a>
+      </div>
     </div>
   </div>
 </header>
@@ -51,37 +55,7 @@
         $(this).removeClass("active-nav-item");
       });
       $(this).addClass("active-nav-item"); 
+      $(".nav .more").removeClass("active-nav-item");
     });
-
-
   });
 </script>
-<!-- 
-<script>
-
-    // underline under the active nav item
-    $(".nav .link").click(function() {
-      $(".nav .link").each(function() {
-        $(this).removeClass("active-nav-item");
-      });
-      $(this).addClass("active-nav-item"); 
-    });
-
-
-    // phone size screen
-    // show menu on click
-    $(".phone-menu").click(function(e) {
-      e.preventDefault();
-      $(".nav").toggle();
-    });
-
-    // make menu go away if in phone size
-    var viewportWidth  = document.documentElement.clientWidth
-    if (viewportWidth < 920) {
-      $(".nav li").click(function(e) {
-        if ($(".submenu").css("display", "block")) {
-          $(".nav").toggle();  
-        }
-      });
-    }
- -->

@@ -1,4 +1,5 @@
 header.navigation {
+  $navigation-padding: 1em;
   $navigation-background: $dark-gray;
   $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
@@ -9,6 +10,9 @@ header.navigation {
   $navigation-search-background: lighten($navigation-background, 5);
   $navigation-search-border: 1px solid darken($navigation-background, 5);
   $navigation-active-link-color: transparentize(white, 0.5);
+  $navigation-submenu-padding: 1em;
+
+  $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
   border-bottom: 1px solid darken($navigation-background, 10);
@@ -26,7 +30,7 @@ header.navigation {
   .logo {
     float: left;    
     max-height: $navigation-height;
-    padding-left: 1em;
+    padding-left: $navigation-padding;
     padding-right: 2em;
 
     img {
@@ -47,7 +51,7 @@ header.navigation {
     padding-right: 1em;
     text-transform: uppercase;
 
-    @include media ($large-screen) {
+    @include media ($horizontal-bar-mode) {
       display: none;
     }
 
@@ -57,7 +61,7 @@ header.navigation {
   }
 
   .nav {
-    @include media ($large-screen) {
+    @include media ($horizontal-bar-mode) {
       float: left;
     }
   }
@@ -67,12 +71,12 @@ header.navigation {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     display: none;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: visible;
     padding: 0;
     width: 100%;
     z-index: 9999;
 
-    @include media ($large-screen) {
+    @include media ($horizontal-bar-mode) {
       display: inline;
       margin: 0;
       padding: 0;
@@ -89,7 +93,7 @@ header.navigation {
     width: 100%;
     z-index: 9999;
 
-    @include media ($large-screen) {
+    @include media ($horizontal-bar-mode) {
       background: transparent;
       display: inline;
       line-height: $navigation-height;
@@ -108,12 +112,85 @@ header.navigation {
     }
   }
 
-  .sign-up {
-    @include media ($large-screen) {
-      @include position(absolute, 0px 0px 0 0);
-      padding-right: 1em;
+  .active-nav-item a {
+    padding-bottom: 3px;
+    border-bottom: 1px solid $navigation-active-link-color;
+  }
+
+  li.more {
+    padding-right: 0;
+
+    &:hover .submenu {
+      display: block;
+    }
+
+    @include media($horizontal-bar-mode) {
+      position: relative;
+      padding-right: .8em;
+    }
+  }
+
+  li.more a {
+    padding-right: .8em;
+  }
+
+  .submenu {
+    display: none;
+
+    @include media($horizontal-bar-mode) {
+      position: absolute;
+      top: 1em;
+      left: -$navigation-submenu-padding;
+    }
+
+    li {
+      display: block;
+      padding-right: 0;
+
+      @include media($horizontal-bar-mode) {
+        line-height: $navigation-height /1.3;
+
+        &:first-child a {
+          padding-top: 1em;
+        }
+        &:last-child a {
+          border-bottom-left-radius: $base-border-radius;
+          border-bottom-right-radius: $base-border-radius;
+          padding-bottom: .7em;
+        }
+      }
 
       a {
+        text-align: right;
+        background-color: darken($navigation-background, 3);
+        width: 100%;
+        display: inline-block;
+
+        @include media($horizontal-bar-mode) {
+          width: 12em;
+          background-color: $navigation-background;
+          text-align: left;
+          padding-left: $navigation-submenu-padding;
+        }
+      }
+    }
+  }
+
+  .navigation-tools {
+    padding-right: $navigation-padding;
+    // line-height: $navigation-height;
+    float: right;
+  }
+
+  .sign-up {
+    // float: right;
+    display: inline;
+
+    a {
+      // display: none;
+
+      @include media ($horizontal-bar-mode) {
+        
         @include transition (all 0.2s ease-in-out);
         background: $navigation-nav-button-background;
         border-radius: $base-border-radius; 
@@ -130,61 +207,51 @@ header.navigation {
     }
   }
 
-  li.navigation-search-bar {
-    display: none;
-
-    @include media($large-screen) {
-      @include position(absolute, 0px 76px 0 0);
-      display: inline-block;
-      line-height: 0 !important;
-      padding: 13px 30px; // this to get around Firefox/Opera line-height "bug"
-    }
-  }
-
   .search-bar {
     $search-bar-border-color: $base-border-color;
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10);
 
-    width: 19em;
-    position: relative; 
-    display: inline-block;
+    display: none;
+    padding: 13px 5px; 
+    // this to get around Firefox/Opera line-height "bug"
+    
+    @include media($horizontal-bar-mode) {
+      width: 16em;
+      position: relative; 
+      display: inline-block;
 
-    input {
-      @include box-sizing(border-box);
-      display: block;
-    }
-
-    .search-and-submit {
-      position: relative;
-
-      input[type=search] {
-        background: $navigation-search-background;
-        border: $navigation-search-border;
-        padding: .6em .8em;
-        font-size: .9em;
-        font-style: italic;
-        color: $navigation-color;
-        border-radius: $base-border-radius * 2;
-        margin: 0;
+      input {
+        @include box-sizing(border-box);
+        display: block;
       }
 
-      button[type=submit] {
-        @include button(simple, lighten($navigation-search-background, 10));
-        @include position(absolute, 0.3em 0.3em 0.3em 0);
-        outline: none;
-        padding: 5px 15px;
+      .search-and-submit {
+        position: relative;
 
-        img {
-          height: 12px;
-          opacity: .7;
+        input[type=search] {
+          background: $navigation-search-background;
+          border: $navigation-search-border;
+          padding: .6em .8em;
+          font-size: .9em;
+          font-style: italic;
+          color: $navigation-color;
+          border-radius: $base-border-radius * 2;
+          margin: 0;
+        }
+
+        button[type=submit] {
+          @include button(simple, lighten($navigation-search-background, 10));
+          @include position(absolute, 0.3em 0.3em 0.3em 0);
+          outline: none;
+          padding: 5px 15px;
+
+          img {
+            height: 12px;
+            opacity: .7;
+          }
         }
       }
     }
-  }
-
-  .active-nav-item a {
-    padding-bottom: 3px;
-    border-bottom: 1px solid $navigation-active-link-color;
   }
 }
