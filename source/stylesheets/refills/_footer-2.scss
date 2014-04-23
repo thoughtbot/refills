@@ -1,3 +1,11 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 100px; /* bottom = footer height */
+}
+
 .footer-2 {
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
   $footer-color: white;
@@ -6,6 +14,11 @@
 
   background: $footer-background;
   padding: $base-line-height;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
   width: 100%;
 
   .footer-logo {
