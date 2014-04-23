@@ -23,7 +23,7 @@ header.navigation {
   }
 
   .logo {
-    float: left;    
+    float: left;
     max-height: $navigation-height;
     padding-left: 1em;
     padding-right: 2em;
@@ -61,7 +61,7 @@ header.navigation {
     }
   }
 
-  ul#navigation-menu {    
+  ul#navigation-menu {
     clear: both;
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     display: none;
@@ -109,15 +109,15 @@ header.navigation {
 
   .sign-up {
     @include media ($large-screen) {
-      @include position(absolute, 0px 0px 0 0);
+      @include position(absolute, 0px 0px null null);
       padding-right: 1em;
 
       a {
         @include transition (all 0.2s ease-in-out);
         background: $navigation-nav-button-background;
-        border-radius: $base-border-radius; 
+        border-radius: $base-border-radius;
         color: white;
-        font-size: .8em;  
+        font-size: .8em;
         font-weight: 800;
         padding: .6em 1em;
         text-transform: uppercase;
@@ -133,7 +133,7 @@ header.navigation {
     display: none;
 
     @include media($large-screen) {
-      @include position(absolute, 0px 76px 0 0);
+      @include position(absolute, 0px 76px null null);
       display: inline-block;
       line-height: 0 !important;
       padding: 13px 30px; // this to get around Firefox/Opera line-height "bug"
@@ -146,7 +146,7 @@ header.navigation {
     $search-bar-background: lighten($search-bar-border-color, 10);
 
     width: 19em;
-    position: relative; 
+    position: relative;
     display: inline-block;
 
     input {
@@ -170,7 +170,7 @@ header.navigation {
 
       button[type=submit] {
         @include button(simple, lighten($navigation-search-background, 10));
-        @include position(absolute, 0.3em 0.3em 0.3em 0);
+        @include position(absolute, 0.3em 0.3em 0.3em null);
         outline: none;
         padding: 5px 15px;
 
