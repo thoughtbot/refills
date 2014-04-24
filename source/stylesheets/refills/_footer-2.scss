@@ -1,9 +1,11 @@
+$footer-height: 100px;
+
 html {
     position: relative;
     min-height: 100%;
 }
 body {
-    margin: 0 0 100px; /* bottom = footer height */
+    margin: 0 0 $footer-height;
 }
 
 .footer-2 {
@@ -18,8 +20,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 100px;
-  width: 100%;
+  height: $footer-height;
 
   .footer-logo {
     margin-right: 1em;
