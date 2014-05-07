@@ -1,67 +1,71 @@
-.switch-container {
-  $switch-container-width: 5em;
-  $switch-height: 2em;
-  $switch-width: 1em;
-  $switch-radius: 3px;
-  $switch-inner-margin: .2em;
-
-  @include user-select(none);
-  @include inline-block;
-  position: relative;
-  width: $switch-container-width;
-  margin-bottom: $base-line-height;
-
-  input.switch-checkbox {
-    display: none;
-
-    &:checked + .switch-label .switch-inner {
-      margin-left: 0;
-    }
-
-    &:checked + .switch-label .switch-toggle-switch {
-      right: 0;
-    }
-  }
-
-  label.switch-label {
-    border-radius: $switch-radius;
+.label-switch {
+    display: inline-block;
+    vertical-align: middle;
+    width: 52px;
+    border-radius: 16px;
+    .border-box();
+    height: 32px;
+    position: relative;
     cursor: pointer;
-    display: block;
-    overflow: hidden;
-
-    .switch-inner {
-      @include transition(opacity 0.3s ease);
-      margin-left: -100%;
-      width: 200%;
-
-      &:before, &:after {
-        @include box-sizing(border-box);
-        float: left;
-        height: $switch-height;
-        padding: 0;
-        width: 50%;
-      }
-
-      &:before {
-        content: '';
-        background: $blue;
-      }
-
-      &:after {
-        content: '';
-        background: #DDD;
-      }
+    .align-self(center);
+    input[type="checkbox"] {
+        display: none;
+        &+ .checkbox {
+            width: 52px; 
+            border-radius: 16px;
+            .border-box();
+            height: 32px;
+            background: #e5e5e5;
+            z-index: 0;
+            margin: 0;
+            padding: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            border:none;
+            cursor: pointer;
+            position: relative;
+            .transition(300ms);
+            &:before {
+                content:' ';
+                position: absolute;
+                left: 2px;
+                top: 2px;
+                width: 48px;
+                border-radius: 16px;
+                .border-box();
+                height: 28px;
+                background: #fff;
+                z-index: 1;
+                .transition(300ms);
+                .transform(scale(1));
+            }
+            &:after {
+                content:' ';
+                height: 28px;
+                width: 28px;
+                border-radius: 28px;
+                background: #fff;
+                position: absolute;
+                z-index: 2;
+                top: 2px;
+                left: 2px;
+                .box-shadow(0 2px 5px rgba(0,0,0,0.4));
+                .translate3d(0,0,0);
+                .transition(300ms);
+            }
+        }
+        &:checked {
+            &+ .checkbox {
+                background: #4cd964;
+                &:before {
+                    .transform(scale(0));
+                }
+                &:after {
+                    left: 22px;
+                }
+            }
+        }
     }
-
-    .switch-toggle-switch {
-      @include position(absolute, 0px ($switch-container-width - $switch-width - $switch-inner-margin *2) 0px 0);
-      @include transition(all 0.3s ease-in 0s);
-      height: $switch-height - $switch-inner-margin *2;
-      width: $switch-width;
-      border-radius: $switch-radius / 2;
-      margin: $switch-inner-margin;
-      background: white;
-      box-shadow: 0 0 1px 2px rgba(0,0,0,0.1);
-    }
-  }
 }
