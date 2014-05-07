@@ -26,7 +26,7 @@
             border:none;
             cursor: pointer;
             position: relative;
-            .transition(300ms);
+            @include transition(opacity 0.3s ease);
             &:before {
                 content:' ';
                 position: absolute;
@@ -38,7 +38,7 @@
                 height: 28px;
                 background: #fff;
                 z-index: 1;
-                .transition(300ms);
+                @include transition(opacity 0.3s ease);
                 .transform(scale(1));
             }
             &:after {
@@ -52,8 +52,7 @@
                 top: 2px;
                 left: 2px;
                 .box-shadow(0 2px 5px rgba(0,0,0,0.4));
-                .translate3d(0,0,0);
-                .transition(300ms);
+                @include transition(opacity 0.3s ease);
             }
         }
         &:checked {
