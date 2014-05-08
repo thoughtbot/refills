@@ -3,30 +3,26 @@
     vertical-align: middle;
     width: 52px;
     border-radius: 16px;
-    .border-box();
+    @include box-sizing(border-box);
     height: 32px;
     position: relative;
     cursor: pointer;
-    .align-self(center);
+    align-self: center;
     input[type="checkbox"] {
         display: none;
         &+ .checkbox {
             width: 52px; 
             border-radius: 16px;
-            .border-box();
+            @include box-sizing(border-box);
             height: 32px;
             background: #e5e5e5;
             z-index: 0;
             margin: 0;
             padding: 0;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            -ms-appearance: none;
-            appearance: none;
             border:none;
             cursor: pointer;
             position: relative;
-            @include transition(opacity 0.3s ease);
+            @include transition(all 0.3s ease);
             &:before {
                 content:' ';
                 position: absolute;
@@ -34,11 +30,11 @@
                 top: 2px;
                 width: 48px;
                 border-radius: 16px;
-                .border-box();
+                @include box-sizing(border-box);
                 height: 28px;
                 background: #fff;
                 z-index: 1;
-                @include transition(opacity 0.3s ease);
+                @include transition(all 0.3s ease);
                 @include transform(scale(1));
             }
             &:after {
@@ -51,8 +47,8 @@
                 z-index: 2;
                 top: 2px;
                 left: 2px;
-                .box-shadow(0 2px 5px rgba(0,0,0,0.4));
-                @include transition(opacity 0.3s ease);
+                @include box-shadow(0 2px 5px rgba(0,0,0,0.4));
+                @include transition(all 0.3s ease);
             }
         }
         &:checked {
