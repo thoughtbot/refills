@@ -45,21 +45,28 @@
     <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
     <div class="nav">
       <ul id="navigation-menu">
-        <li><a href="javascript:void(0)">Products</a></li>
-        <li><a href="javascript:void(0)">About Us</a></li>
-        <li><a href="javascript:void(0)">Contact</a></li>
-        <li class="navigation-search-bar">
-          <div class="search-bar">
-            <div class="search-and-submit">
-              <input type="search" placeholder="Enter Search" />
-              <button type="submit">
-                <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon.png" alt="">
-              </button>
-            </div>
-          </div>
+        <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+        <li class="nav-link more"><a href="javascript:void(0)">More</a>
+          <ul class="submenu">
+            <li><a href="javascript:void(0)">Submenu Item</a></li>
+            <li><a href="javascript:void(0)">Another Item</a></li>
+          </ul>
         </li>
-        <li class="sign-up"><a href="javascript:void(0)">Sign Up</a></li>
+        
       </ul>
+    </div>
+    <div class="navigation-tools">
+      <div class="search-bar">
+        <div class="search-and-submit">
+          <input type="search" placeholder="Enter Search" />
+          <button type="submit">
+            <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon.png" alt="">
+          </button>
+        </div>
+      </div>
+      <a href="javascript:void(0)" class="sign-up">Sign Up</a>
     </div>
   </div>
 </header>
@@ -68,6 +75,7 @@
   $(function() {
     var menu = $('#navigation-menu');
     var menuToggle = $('#js-mobile-menu');
+    var signUp = $('.sign-up');
 
     $(menuToggle).on('click', function(e) {
       e.preventDefault();
@@ -76,6 +84,15 @@
           menu.removeAttr('style');
         }
       });
+    });
+
+    // underline under the active nav item
+    $(".nav .nav-link").click(function() {
+      $(".nav .nav-link").each(function() {
+        $(this).removeClass("active-nav-item");
+      });
+      $(this).addClass("active-nav-item"); 
+      $(".nav .more").removeClass("active-nav-item");
     });
   });
 </script>
@@ -95,21 +112,28 @@
     &lt;p class=&quot;navigation-menu-button&quot; id=&quot;js-mobile-menu&quot;&gt;MENU&lt;/p&gt;
     &lt;div class=&quot;nav&quot;&gt;
       &lt;ul id=&quot;navigation-menu&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;navigation-search-bar&quot;&gt;
-          &lt;div class=&quot;search-bar&quot;&gt;
-            &lt;div class=&quot;search-and-submit&quot;&gt;
-              &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
-              &lt;button type=&quot;submit&quot;&gt;
-                &lt;img src=&quot;https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon.png&quot; alt=&quot;&quot;&gt;
-              &lt;/button&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
+        &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-link more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;More&lt;/a&gt;
+          &lt;ul class=&quot;submenu&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Submenu Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another Item&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
         &lt;/li&gt;
-        &lt;li class=&quot;sign-up&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sign Up&lt;/a&gt;&lt;/li&gt;
+        
       &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;navigation-tools&quot;&gt;
+      &lt;div class=&quot;search-bar&quot;&gt;
+        &lt;div class=&quot;search-and-submit&quot;&gt;
+          &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
+          &lt;button type=&quot;submit&quot;&gt;
+            &lt;img src=&quot;https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon.png&quot; alt=&quot;&quot;&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;a href=&quot;javascript:void(0)&quot; class=&quot;sign-up&quot;&gt;Sign Up&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/header&gt;
@@ -118,6 +142,7 @@
   $(function() {
     var menu = $('#navigation-menu');
     var menuToggle = $('#js-mobile-menu');
+    var signUp = $('.sign-up');
 
     $(menuToggle).on('click', function(e) {
       e.preventDefault();
@@ -127,6 +152,15 @@
         }
       });
     });
+
+    // underline under the active nav item
+    $(&quot;.nav .nav-link&quot;).click(function() {
+      $(&quot;.nav .nav-link&quot;).each(function() {
+        $(this).removeClass(&quot;active-nav-item&quot;);
+      });
+      $(this).addClass(&quot;active-nav-item&quot;); 
+      $(&quot;.nav .more&quot;).removeClass(&quot;active-nav-item&quot;);
+    });
   });
 &lt;/script&gt;
 </code></pre>
@@ -135,6 +169,7 @@
 <div class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">header.navigation {
+  $navigation-padding: 1em;
   $navigation-background: $dark-gray;
   $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
@@ -144,6 +179,9 @@
   $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
   $navigation-search-background: lighten($navigation-background, 5);
   $navigation-search-border: 1px solid darken($navigation-background, 5);
+  $navigation-active-link-color: transparentize(white, 0.5);
+  $navigation-submenu-padding: 1em;
+  $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
   border-bottom: 1px solid darken($navigation-background, 10);
@@ -154,6 +192,7 @@
 
   .menu-wrapper {
     @include outer-container;
+    @include clearfix;
     position: relative;
     z-index: 9999;
   }
@@ -161,7 +200,7 @@
   .logo {
     float: left;    
     max-height: $navigation-height;
-    padding-left: 1em;
+    padding-left: $navigation-padding;
     padding-right: 2em;
 
     img {
@@ -182,7 +221,7 @@
     padding-right: 1em;
     text-transform: uppercase;
 
-    @include media ($large-screen) {
+    @include media ($horizontal-bar-mode) {
       display: none;
     }
 
@@ -192,7 +231,9 @@
   }
 
   .nav {
-    @include media ($large-screen) {
+    z-index: 9999999;
+    float: none;
+    @include media ($horizontal-bar-mode) {
       float: left;
     }
   }
@@ -202,12 +243,12 @@
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     display: none;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: visible;
     padding: 0;
     width: 100%;
     z-index: 9999;
 
-    @include media ($large-screen) {
+    @include media ($horizontal-bar-mode) {
       display: inline;
       margin: 0;
       padding: 0;
@@ -224,7 +265,7 @@
     width: 100%;
     z-index: 9999;
 
-    @include media ($large-screen) {
+    @include media ($horizontal-bar-mode) {
       background: transparent;
       display: inline;
       line-height: $navigation-height;
@@ -243,36 +284,100 @@
     }
   }
 
-  .sign-up {
-    @include media ($large-screen) {
-      @include position(absolute, 0px 0px 0 0);
-      padding-right: 1em;
+  .active-nav-item a {
+    padding-bottom: 3px;
+    border-bottom: 1px solid $navigation-active-link-color;
+  }
+
+  li.more {
+    padding-right: 0;
+
+    &amp;:hover .submenu {
+      display: block;
+    }
+
+    @include media($horizontal-bar-mode) {
+      position: relative;
+      padding-right: .8em;
+    }
+  }
+
+  li.more a {
+    padding-right: .8em;
+  }
+
+  .submenu {
+    display: none;
+
+    @include media($horizontal-bar-mode) {
+      position: absolute;
+      top: 1em;
+      left: -$navigation-submenu-padding;
+    }
+
+    li {
+      display: block;
+      padding-right: 0;
+
+      @include media($horizontal-bar-mode) {
+        line-height: $navigation-height /1.3;
+
+        &amp;:first-child a {
+          padding-top: 1em;
+        }
+        &amp;:last-child a {
+          border-bottom-left-radius: $base-border-radius;
+          border-bottom-right-radius: $base-border-radius;
+          padding-bottom: .7em;
+        }
+      }
 
       a {
-        @include transition (all 0.2s ease-in-out);
-        background: $navigation-nav-button-background;
-        border-radius: $base-border-radius; 
-        color: white;
-        font-size: .8em;  
-        font-weight: 800;
-        padding: .6em 1em;
-        text-transform: uppercase;
+        text-align: right;
+        background-color: darken($navigation-background, 3);
+        width: 100%;
+        display: inline-block;
 
-        &amp;:hover {
-          background: lighten($navigation-nav-button-background, 10);
+        @include media($horizontal-bar-mode) {
+          width: 12em;
+          background-color: $navigation-background;
+          text-align: left;
+          padding-left: $navigation-submenu-padding;
         }
       }
     }
   }
 
-  li.navigation-search-bar {
-    display: none;
+  .navigation-tools {
+    @include clearfix;
+    display: block;
+    padding-right: $navigation-padding;
+    padding-left: $navigation-padding;
+    clear: both;
+    background: #505050;
 
     @include media($large-screen) {
-      @include position(absolute, 0px 76px 0 0);
-      display: inline-block;
-      line-height: 0 !important;
-      padding: 13px 30px; // this to get around Firefox/Opera line-height &quot;bug&quot;
+      background: transparent;
+      float: right;
+      clear: none;
+    }
+  }
+
+  a.sign-up {
+    margin-top: 13px;
+    float: right;
+    @include transition (all 0.2s ease-in-out);
+    display: inline;
+    background: $navigation-nav-button-background;
+    border-radius: $base-border-radius; 
+    color: white;
+    font-size: .8em;  
+    font-weight: 800;
+    padding: .4em 1em;
+    text-transform: uppercase;
+
+    &amp;:hover {
+      background: lighten($navigation-nav-button-background, 10);
     }
   }
 
@@ -281,15 +386,8 @@
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10);
 
-    width: 19em;
-    position: relative; 
-    display: inline-block;
-
-    input {
-      @include box-sizing(border-box);
-      display: block;
-    }
-
+    padding: 13px 5px; 
+    float: left;
     .search-and-submit {
       position: relative;
 
@@ -314,6 +412,17 @@
           height: 12px;
           opacity: .7;
         }
+      }
+    }
+
+    @include media($horizontal-bar-mode) {
+      width: 16em;
+      position: relative; 
+      display: inline-block;
+
+      input {
+        @include box-sizing(border-box);
+        display: block;
       }
     }
   }
@@ -1809,7 +1918,7 @@
   <div class="comment-content">
     <h1>First Comment Title or Author</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.</p>
-    <p class="comment-detail">Date or details about this post</h2>
+    <p class="comment-detail">Date or details about this post</p>
   </div>
 </div>
 
@@ -1820,9 +1929,10 @@
   <div class="comment-content">
     <h1>Another One</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.</p>
-    <p class="comment-detail">Date or details about this post</h2>
+    <p class="comment-detail">Date or details about this post</p>
   </div>
-</div></div>
+</div>
+</div>
     </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
@@ -1838,7 +1948,7 @@
   &lt;div class=&quot;comment-content&quot;&gt;
     &lt;h1&gt;First Comment Title or Author&lt;/h1&gt;
     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.&lt;/p&gt;
-    &lt;p class=&quot;comment-detail&quot;&gt;Date or details about this post&lt;/h2&gt;
+    &lt;p class=&quot;comment-detail&quot;&gt;Date or details about this post&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1849,9 +1959,10 @@
   &lt;div class=&quot;comment-content&quot;&gt;
     &lt;h1&gt;Another One&lt;/h1&gt;
     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.&lt;/p&gt;
-    &lt;p class=&quot;comment-detail&quot;&gt;Date or details about this post&lt;/h2&gt;
+    &lt;p class=&quot;comment-detail&quot;&gt;Date or details about this post&lt;/p&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
 </div>
 
 <div class="snippet">
