@@ -13,5 +13,9 @@ module Refills
     def copy_styles
       copy_file "stylesheets/refills/_#{snippet}.scss", "app/assets/stylesheets/refills/_#{snippet}.scss"
     end
+
+    def copy_javascripts
+      copy_file "javascripts/refills/_#{snippet}.js", "app/assets/javascripts/refills/_#{snippet}.js"
+    end
   end
 end

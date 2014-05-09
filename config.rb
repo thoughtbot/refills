@@ -1,4 +1,6 @@
 require 'erubis'
+require 'lib/snippet_helpers'
+
 ###
 # Compass
 ###
@@ -56,26 +58,8 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-helpers do
-  def snippets(snippet_name)
-    partial 'snippets', locals: { snippet_name: snippet_name }
-  end
 
-  def html_snippet(partial_name)
-    snippet = partial(partial_name)
-
-    partial 'snippet', locals: { snippet: snippet, language: 'markup' }
-  end
-
-  def stylesheet_snippet(snippet_name)
-    source_dir = File.expand_path('../source', __FILE__)
-    snippet_filename = "_#{snippet_name}.scss"
-    snippet_path = File.join(source_dir, 'stylesheets', 'refills', snippet_filename)
-    snippet = File.read(snippet_path)
-
-    partial 'snippet', locals: { snippet: snippet, language: 'scss' }
-  end
-end
+helpers SnippetHelpers
 
 ready do
   sprockets.append_path 'vendor/stylesheets'

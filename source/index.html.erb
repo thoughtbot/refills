@@ -8,7 +8,7 @@ title: Refills
   <p>Managed by <a href="http://www.thoughtbot.com">thoughtbot</a>, instructions at <a href="https://github.com/thoughtbot/refills">Github</a></p>
 </div>
 
-<div id="example1" class="refills-wrapper">
+<div id="example1">
 
   <a class="js-menu-trigger-refills refills-menu-anchor">
     <img src="images/menu.png" alt="">
@@ -18,223 +18,278 @@ title: Refills
   <h5>Patterns</h5>
 
   <div id="navigation" class="refill">
-    <div class="line-behind-text"><h6>Navigation</h6></div>
-    <%= partial "navigation" %>
-    <div class="refill-snippet"><%= snippets('navigation') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Navigation</h6></div>
+      <%= partial "navigation" %>
+    </div>
+    <div class="refill-snippet"><%= code_for('navigation') %></div>
   </div>
 
   <div id="hero" class="refill">
-    <div class="line-behind-text"><h6>Hero Unit</h6>  </div>
-    <%= partial "hero" %>
-    <div class="refill-snippet"><%= snippets('hero') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Hero Unit</h6>  </div>
+      <%= partial "hero" %>
+    </div>
+    <div class="refill-snippet"><%= code_for('hero') %></div>
   </div>
 
   <div id="icon-bullet-points" class="refill">
-    <div class="line-behind-text"><h6>Icon Bullet Points</h6></div>
-    <%= partial "icon-bullet-points" %>
-    <div class="refill-snippet"><%= snippets('icon-bullet-points') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Icon Bullet Points</h6></div>
+      <%= partial "icon-bullet-points" %>
+    </div>
+    <div class="refill-snippet"><%= code_for('icon-bullet-points') %></div>
   </div>
 
   <div id="type-systems" class="refill">
-    <div class="line-behind-text"><h6>Typographic Systems</h6></div>
-      <div class="refill-smaller">
-        <ul class="accordion-tabs-type-systems">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Typographic Systems</h6></div>
+        <div class="refill-smaller">
+          <ul class="accordion-tabs-type-systems">
 
-        <li class="tab js-is-active" data-role="tab">
-          <a href="#" class="tab-link-type-system" data-role="link">Serif</a>
-          <section>
-            <div class="tab-content">
-              <div class="refill-centering"><%= partial "type-system-serif" %></div>
-              <div class="refill-snippet"><%= snippets('type-system-serif') %></div>
-            </div>
-          </section>
-        </li>
+          <li class="tab js-is-active" data-role="tab">
+            <a href="#" class="tab-link-type-system" data-role="link">Serif</a>
+            <section>
+              <div class="tab-content">
+                <div class="refill-centering"><%= partial "type-system-serif" %></div>
+                <div class="refill-snippet"><%= code_for('type-system-serif') %></div>
+              </div>
+            </section>
+          </li>
 
-        <li class="tab" data-role="tab">
-          <a href="#" class="tab-link-type-system" data-role="link">Sans</a>
-          <section>
-            <div class="tab-content">
-              <div class="refill-centering"><%= partial "type-system-sans" %></div>
-              <div class="refill-snippet"><%= snippets('type-system-sans') %></div>
-            </div>
-          </section>
-        </li>
+          <li class="tab" data-role="tab">
+            <a href="#" class="tab-link-type-system" data-role="link">Sans</a>
+            <section>
+              <div class="tab-content">
+                <div class="refill-centering"><%= partial "type-system-sans" %></div>
+                <div class="refill-snippet"><%= code_for('type-system-sans') %></div>
+              </div>
+            </section>
+          </li>
 
-        <li class="tab" data-role="tab">
-          <a href="#" class="tab-link-type-system" data-role="link">Slab</a>
-          <section>
-            <div class="tab-content">
-              <div class="refill-centering"><%= partial "type-system-slab" %></div>
-              <div class="refill-snippet"><%= snippets('type-system-slab') %></div>
-            </div>
-          </section>
-        </li>
+          <li class="tab" data-role="tab">
+            <a href="#" class="tab-link-type-system" data-role="link">Slab</a>
+            <section>
+              <div class="tab-content">
+                <div class="refill-centering"><%= partial "type-system-slab" %></div>
+                <div class="refill-snippet"><%= code_for('type-system-slab') %></div>
+              </div>
+            </section>
+          </li>
 
-        <li class="tab" data-role="tab">
-          <a href="#" class="tab-link-type-system" data-role="link">Rounded</a>
-          <section>
-            <div class="tab-content">
-              <div class="refill-centering"><%= partial "type-system-rounded" %></div>
-              <div class="refill-snippet"><%= snippets('type-system-rounded') %></div>
-            </div>
-          </section>
-        </li>
+          <li class="tab" data-role="tab">
+            <a href="#" class="tab-link-type-system" data-role="link">Rounded</a>
+            <section>
+              <div class="tab-content">
+                <div class="refill-centering"><%= partial "type-system-rounded" %></div>
+                <div class="refill-snippet"><%= code_for('type-system-rounded') %></div>
+              </div>
+            </section>
+          </li>
 
-        <li class="tab" data-role="tab">
-          <a href="#" class="tab-link-type-system" data-role="link">Traditional</a>
-          <section>
-            <div class="tab-content">
-              <div class="refill-centering"><%= partial "type-system-traditional" %></div>
-              <div class="refill-snippet"><%= snippets('type-system-traditional') %></div>
-            </div>
-          </section>
-        </li>
+          <li class="tab" data-role="tab">
+            <a href="#" class="tab-link-type-system" data-role="link">Traditional</a>
+            <section>
+              <div class="tab-content">
+                <div class="refill-centering"><%= partial "type-system-traditional" %></div>
+                <div class="refill-snippet"><%= code_for('type-system-traditional') %></div>
+              </div>
+            </section>
+          </li>
 
-        <li class="tab" data-role="tab">
-          <a href="#" class="tab-link-type-system" data-role="link">Geometric</a>
-          <section>
-            <div class="tab-content">
-              <div class="refill-centering"><%= partial "type-system-geometric" %></div>
-              <div class="refill-snippet"><%= snippets('type-system-geometric') %></div>
-            </div>
-          </section>
-        </li>
-
-      </ul>
+          <li class="tab" data-role="tab">
+            <a href="#" class="tab-link-type-system" data-role="link">Geometric</a>
+            <section>
+              <div class="tab-content">
+                <div class="refill-centering"><%= partial "type-system-geometric" %></div>
+                <div class="refill-snippet"><%= code_for('type-system-geometric') %></div>
+              </div>
+            </section>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
   <div id="cards" class="refill">
-    <div class="line-behind-text"><h6>Cards</h6></div>
-    <div class="refill-centering"><%= partial "cards" %></div>
-    <div class="refill-snippet"><%= snippets('cards') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Cards</h6></div>
+      <div class="refill-centering"><%= partial "cards" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('cards') %></div>
   </div>
 
   <div id="comment" class="refill">
-    <div class="line-behind-text"><h6>Comments</h6></div>
-    <div class="refill-centering">
-      <div class="refill-smaller"><%= partial "comment" %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Comments</h6></div>
+      <div class="refill-centering">
+        <div class="refill-smaller"><%= partial "comment" %></div>
+      </div>
     </div>
-    <div class="refill-snippet"><%= snippets('comment') %></div>
+    <div class="refill-snippet"><%= code_for('comment') %></div>
   </div>
 
   <div id="accordion-tabs" class="refill">
     <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
-    <%= partial "accordion-tabs" %>
-    <div class="refill-snippet"><%= snippets('accordion-tabs') %></div>
-    <%= partial "accordion-tabs-minimal" %>
-    <div class="refill-snippet"><%= snippets('accordion-tabs-minimal') %></div>
+    <div class="refills-wrapper">
+      <%= partial "accordion-tabs" %>
+    </div>
+    <div class="refill-snippet"><%= code_for('accordion-tabs') %></div>
+    <div class="refills-wrapper">
+      <%= partial "accordion-tabs-minimal" %>
+    </div>
+    <div class="refill-snippet"><%= code_for('accordion-tabs-minimal') %></div>
   </div>
 
   <div id="tables" class="refill">
-    <div class="line-behind-text"><h6>Tables</h6></div>
-    <%= partial "tables" %>
-    <div class="refill-snippet"><%= snippets('tables') %></div>
-    <%= partial "tables-minimal" %>
-    <div class="refill-snippet"><%= snippets('tables-minimal') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Tables</h6></div>
+      <%= partial "tables" %>
+    </div>
+    <div class="refill-snippet"><%= code_for('tables') %></div>
+    <div class="refills-wrapper">
+      <%= partial "tables-minimal" %>
+    </div>
+    <div class="refill-snippet"><%= code_for('tables-minimal') %></div>
   </div>
 
   <div id="vertical-tabs" class="refill">
-    <div class="line-behind-text"><h6>Vertical Tabs</h6></div>
-    <%= partial "vertical-tabs" %>
-    <div class="refill-snippet"><%= snippets('vertical-tabs') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Vertical Tabs</h6></div> 
+      <%= partial "vertical-tabs" %>
+    </div>
+    <div class="refill-snippet"><%= code_for('vertical-tabs') %></div>
   </div>
 
   <div id="grid-items" class="refill">
-    <div class="line-behind-text"><h6>Grid Items</h6></div>
-    <div class="refill-centering"><%= partial "grid-items" %></div>
-    <div class="refill-snippet"><%= snippets('grid-items') %></div>
-    <div class="refill-centering"><%= partial "grid-items-lines" %></div>
-    <div class="refill-snippet"><%= snippets('grid-items-lines') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Grid Items</h6></div>
+      <div class="refill-centering"><%= partial "grid-items" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('grid-items') %></div>
+    <div class="refills-wrapper">
+      <div class="refill-centering"><%= partial "grid-items-lines" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('grid-items-lines') %></div>
   </div>
 
-  <div class="refills-wrapper">
     <div id="footer" class="refill">
-      <div class="line-behind-text"><h6>Footers</h6></div>
-      <div class="refill-centering"><%= partial "footer" %></div>
-      <div class="refill-snippet"><%= snippets('footer') %></div>
-      <div class="refill-centering"><%= partial "footer-2" %></div>
-      <div class="refill-snippet"><%= snippets('footer-2') %></div>
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Footers</h6></div>
+        <div class="refill-centering"><%= partial "footer" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('footer') %></div>
+      <div class="refills-wrapper">
+        <div class="refill-centering"><%= partial "footer-2" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('footer-2') %></div>
     </div>
-  </div>
 
   <h5>Components</h5>
 
   <div id="modal" class="refill">
-    <div class="line-behind-text"><h6>Modal</h6></div>
-    <div class="refill-centering"><%= partial "modal" %></div>
-    <div class="refill-snippet"><%= snippets('modal') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Modal</h6></div>
+      <div class="refill-centering"><%= partial "modal" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('modal') %></div>
   </div>
 
   <div id="sliding-menu" class="refill">
-    <div class="line-behind-text"><h6>Sliding Menu</h6></div>
-    <div class="refill-centering"><%= partial "sliding-menu" %></div>
-    <div class="refill-snippet"><%= snippets('sliding-menu') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Sliding Menu</h6></div>
+      <div class="refill-centering"><%= partial "sliding-menu" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('sliding-menu') %></div>
   </div>
 
   <div id="badges" class="refill">
-    <div class="line-behind-text"><h6>Badges</h6></div>
-    <div class="refill-centering"><%= partial "badges" %></div>
-    <div class="refill-snippet"><%= snippets('badges') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Badges</h6></div>
+      <div class="refill-centering"><%= partial "badges" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('badges') %></div>
   </div>
 
   <div id="breadcrumbs" class="refill">
-    <div class="line-behind-text"><h6>Breadcrumbs</h6></div>
-    <div class="refill-centering"><%= partial "breadcrumbs" %></div>
-    <div class="refill-snippet"><%= snippets('breadcrumbs') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Breadcrumbs</h6></div>
+      <div class="refill-centering"><%= partial "breadcrumbs" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('breadcrumbs') %></div>
   </div>
 
   <div id="hover-tile-animation" class="refill">
-    <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
-    <div class="refill-centering"><%= partial "hover-tile-animation" %></div>
-    <div class="refill-snippet"><%= snippets('hover-tile-animation') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
+      <div class="refill-centering"><%= partial "hover-tile-animation" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('hover-tile-animation') %></div>
   </div>
 
   <div id="accordion" class="refill">
-    <div class="line-behind-text"><h6>Accordion</h6></div>
-    <div class="refill-centering"><%= partial "accordion" %></div>
-    <div class="refill-snippet"><%= snippets('accordion') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Accordion</h6></div>
+      <div class="refill-centering"><%= partial "accordion" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('accordion') %></div>
   </div>
 
   <div id="search-bar" class="refill">
-    <div class="line-behind-text"><h6>Search bar</h6></div>
-    <div class="refill-centering"><%= partial "search-bar" %></div>
-    <div class="refill-snippet"><%= snippets('search-bar') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Search bar</h6></div>
+      <div class="refill-centering"><%= partial "search-bar" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('search-bar') %></div>
   </div>
 
   <div id="switch" class="refill">
-    <div class="line-behind-text"><h6>Switch</h6></div>
-    <div class="refill-centering"><%= partial "switch" %></div>
-    <div class="refill-snippet"><%= snippets('switch') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Switch</h6></div>
+      <div class="refill-centering"><%= partial "switch" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('switch') %></div>
   </div>
 
   <div id="image-gradient" class="refill">
-    <div class="line-behind-text"><h6>Image with gradient overlays</h6></div>
-    <div class="refill-centering"><%= partial "image-gradient" %></div>
-    <div class="refill-snippet"><%= snippets('image-gradient') %></div>
-    <div class="refill-centering"><%= partial "image-gradient-dynamic" %></div>
-    <div class="refill-snippet"><%= snippets('image-gradient-dynamic') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Image with gradient overlays</h6></div>
+      <div class="refill-centering"><%= partial "image-gradient" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('image-gradient') %></div>
+    <div class="refills-wrapper">
+      <div class="refill-centering"><%= partial "image-gradient-dynamic" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('image-gradient-dynamic') %></div>
   </div>
 
   <div id="button-group" class="refill">
-    <div class="line-behind-text"><h6>Button Group</h6></div>
-    <div class="refill-centering"><%= partial "button-group" %></div>
-    <div class="refill-snippet"><%= snippets('button-group') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Button Group</h6></div>
+      <div class="refill-centering"><%= partial "button-group" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('button-group') %></div>
   </div>
 
 
   <div id="progress-bar" class="refill">
-    <div class="line-behind-text"><h6>Progress Bars</h6></div>
-    <div class="refill-centering"><%= partial "progress-bar" %></div>
-    <div class="refill-snippet"><%= snippets('progress-bar') %></div>
-    <div class="refill-centering"><%= partial "progress-bar-indication" %></div>
-    <div class="refill-snippet"><%= snippets('progress-bar-indication') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Progress Bars</h6></div>
+      <div class="refill-centering"><%= partial "progress-bar" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('progress-bar') %></div>
+    <div class="refills-wrapper">
+      <div class="refill-centering"><%= partial "progress-bar-indication" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('progress-bar-indication') %></div>
   </div>
 
   <div id="tooltip" class="refill">
-    <div class="line-behind-text"><h6>Tooltip</h6></div>
-    <div class="refill-centering"><%= partial "tooltip" %></div>
-    <div class="refill-snippet"><%= snippets('tooltip') %></div>
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Tooltip</h6></div>
+      <div class="refill-centering"><%= partial "tooltip" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for('tooltip') %></div>
   </div>
 </div>
 
@@ -264,14 +319,14 @@ title: Refills
   $('a.js-show-code').on('click', function(e){
     $(this).hide();
     $(this).siblings('.js-hide-code').css('display', 'inline-block');
-    $(this).parent().siblings('.snippet').show();
+    $(this).parent().siblings('.snippets-table').show();
     e.preventDefault();
   })
 
   $('a.js-hide-code').on('click', function(e) {
     $(this).hide();
     $(this).siblings('.js-show-code').css("display", "inline-block");
-    $(this).parent().siblings('.snippet').hide();
+    $(this).parent().siblings('.snippets-table').hide();
     e.preventDefault();
   });
 </script>
