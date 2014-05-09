@@ -3,6 +3,6 @@
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<%= html_snippet snippet_name %>
-<%= javascript_snippet snippet_name %>
-<%= stylesheet_snippet snippet_name %>
+<%= snippet snippet_name, :markup %>
+<%= snippet snippet_name, :javascript %>
+<%= snippet snippet_name, :scss %>
