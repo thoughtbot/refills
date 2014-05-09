@@ -27,10 +27,8 @@
           </button>
         </div>
       </div>
-
-      <div class="sign-up">
-        <a href="javascript:void(0)">Sign Up</a>
-      </div>
+      <a href="javascript:void(0)" class="sign-up">Sign Up</a>
+      <div class="clearfix"></div>
     </div>
   </div>
 </header>
@@ -39,6 +37,7 @@
   $(function() {
     var menu = $('#navigation-menu');
     var menuToggle = $('#js-mobile-menu');
+    var signUp = $('.sign-up');
 
     $(menuToggle).on('click', function(e) {
       e.preventDefault();

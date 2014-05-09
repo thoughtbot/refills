@@ -23,6 +23,7 @@ header.navigation {
 
   .menu-wrapper {
     @include outer-container;
+    @include clearfix;
     position: relative;
     z-index: 9999;
   }
@@ -61,6 +62,8 @@ header.navigation {
   }
 
   .nav {
+    z-index: 9999999;
+    float: none;
     @include media ($horizontal-bar-mode) {
       float: left;
     }
@@ -177,33 +180,34 @@ header.navigation {
   }
 
   .navigation-tools {
+    display: block;
     padding-right: $navigation-padding;
-    // line-height: $navigation-height;
-    float: right;
+    padding-left: $navigation-padding;
+    clear: both;
+    background: #505050;
+
+    @include media($large-screen) {
+      background: transparent;
+      float: right;
+      clear: none;
+    }
   }
 
-  .sign-up {
-    // float: right;
+  a.sign-up {
+    margin-top: 13px;
+    float: right;
+    @include transition (all 0.2s ease-in-out);
     display: inline;
+    background: $navigation-nav-button-background;
+    border-radius: $base-border-radius; 
+    color: white;
+    font-size: .8em;  
+    font-weight: 800;
+    padding: .4em 1em;
+    text-transform: uppercase;
 
-    a {
-      // display: none;
-
-      @include media ($horizontal-bar-mode) {
-        
-        @include transition (all 0.2s ease-in-out);
-        background: $navigation-nav-button-background;
-        border-radius: $base-border-radius; 
-        color: white;
-        font-size: .8em;  
-        font-weight: 800;
-        padding: .6em 1em;
-        text-transform: uppercase;
-
-        &:hover {
-          background: lighten($navigation-nav-button-background, 10);
-        }
-      }
+    &:hover {
+      background: lighten($navigation-nav-button-background, 10);
     }
   }
 
@@ -212,10 +216,35 @@ header.navigation {
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10);
 
-    display: none;
     padding: 13px 5px; 
-    // this to get around Firefox/Opera line-height "bug"
-    
+    float: left;
+    .search-and-submit {
+      position: relative;
+
+      input[type=search] {
+        background: $navigation-search-background;
+        border: $navigation-search-border;
+        padding: .6em .8em;
+        font-size: .9em;
+        font-style: italic;
+        color: $navigation-color;
+        border-radius: $base-border-radius * 2;
+        margin: 0;
+      }
+
+      button[type=submit] {
+        @include button(simple, lighten($navigation-search-background, 10));
+        @include position(absolute, 0.3em 0.3em 0.3em 0);
+        outline: none;
+        padding: 5px 15px;
+
+        img {
+          height: 12px;
+          opacity: .7;
+        }
+      }
+    }
+
     @include media($horizontal-bar-mode) {
       width: 16em;
       position: relative; 
@@ -225,33 +254,10 @@ header.navigation {
         @include box-sizing(border-box);
         display: block;
       }
-
-      .search-and-submit {
-        position: relative;
-
-        input[type=search] {
-          background: $navigation-search-background;
-          border: $navigation-search-border;
-          padding: .6em .8em;
-          font-size: .9em;
-          font-style: italic;
-          color: $navigation-color;
-          border-radius: $base-border-radius * 2;
-          margin: 0;
-        }
-
-        button[type=submit] {
-          @include button(simple, lighten($navigation-search-background, 10));
-          @include position(absolute, 0.3em 0.3em 0.3em 0);
-          outline: none;
-          padding: 5px 15px;
-
-          img {
-            height: 12px;
-            opacity: .7;
-          }
-        }
-      }
     }
   }
+}
+
+.clearfix {
+  clear: both;
 }
