@@ -21,7 +21,7 @@
     }
 
     &:first-child {
-      @include border-bottom-radius(0);
+      @include border-right-radius(0);
       border-top-width: 1px;
     }
 
@@ -30,7 +30,7 @@
     }
 
     &:last-child {
-      @include border-top-radius(0);
+      @include border-left-radius(0);
     }
 
     @include media($medium-screen) {
