@@ -234,7 +234,7 @@ header.navigation {
 
       button[type=submit] {
         @include button(simple, lighten($navigation-search-background, 10));
-        @include position(absolute, 0.3em 0.3em 0.3em 0);
+        @include position(absolute, 0.3em 0.3em 0.3em null);
         outline: none;
         padding: 5px 15px;
 
