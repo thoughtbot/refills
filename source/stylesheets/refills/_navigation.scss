@@ -99,7 +99,6 @@ header.navigation {
       background: transparent;
       display: inline;
       line-height: $navigation-height;
-      padding-right: 2em;
       text-decoration: none;
       width: auto;
     }
@@ -107,6 +106,8 @@ header.navigation {
     a {
       font-weight: 400;
       color: $navigation-color;
+      display: inline-block;
+      padding-right: 1em;
 
       &:hover {
         color: $navigation-color-hover;
