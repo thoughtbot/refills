@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
   var menu = $('#navigation-menu');
   var menuToggle = $('#js-mobile-menu');
   var signUp = $('.sign-up');
@@ -17,7 +17,7 @@ $(function() {
     $(".nav .nav-link").each(function() {
       $(this).removeClass("active-nav-item");
     });
-    $(this).addClass("active-nav-item"); 
+    $(this).addClass("active-nav-item");
     $(".nav .more").removeClass("active-nav-item");
   });
 });
