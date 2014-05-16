@@ -21,22 +21,23 @@ module SnippetHelpers
   end
 
   def snippets_for(name)
-    SNIPPET_LANGUAGES.keys.map do |language|
-      path = snippet_path(name, language)
-
-      if File.exists?(path)
-        partial 'snippet', locals: {
-          snippet: File.read(path),
-          language: language,
-        }
-      end
+    SNIPPET_LANGUAGES.map do |language, properties|
+      snippet snippet_path(name, properties), language
     end.join("\n")
   end
 
   private
 
-  def snippet_path(snippet_name, snippet_language)
-    language_properties = SNIPPET_LANGUAGES.fetch(snippet_language)
+  def snippet(path, language)
+    if File.exists?(path)
+      partial 'snippet', locals: {
+        snippet: File.read(path),
+        language: language,
+      }
+    end
+  end
+
+  def snippet_path(snippet_name, language_properties)
     snippet_filename = "_#{snippet_name}.#{language_properties[:extension]}"
 
     File.join(*language_properties[:path_segments], snippet_filename)
