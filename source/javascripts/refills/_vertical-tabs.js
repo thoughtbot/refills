@@ -18,15 +18,15 @@ $(".js-vertical-tab").click(function(event) {
 
 /* if in accordion mode */
 $(".js-vertical-tab-accordion-heading").click(function(event) {
-  event.preventDefault()
+  event.preventDefault();
 
   $(".js-vertical-tab-content").hide();
-var accordion_activeTab = $(this).attr("rel");
-$("#"+accordion_activeTab).show();
+  var accordion_activeTab = $(this).attr("rel");
+  $("#"+accordion_activeTab).show();
 
-$(".js-vertical-tab-accordion-heading").removeClass("is-active");
-$(this).addClass("is-active");
+  $(".js-vertical-tab-accordion-heading").removeClass("is-active");
+  $(this).addClass("is-active");
 
-$(".js-vertical-tab").removeClass("is-active");
-$(".js-vertical-tab[rel^='"+accordion_activeTab+"']").addClass("is-active");
+  $(".js-vertical-tab").removeClass("is-active");
+  $(".js-vertical-tab[rel^='"+accordion_activeTab+"']").addClass("is-active");
 });
