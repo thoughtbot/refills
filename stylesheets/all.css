@@ -2477,7 +2477,7 @@ header.navigation {
     *zoom: 1;
     display: block;
     padding-right: 1em;
-    padding-left: 1em;
+    padding-left: 0.5em;
     clear: both;
     background: #505050; }
     /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
