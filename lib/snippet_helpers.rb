@@ -20,6 +20,8 @@ module SnippetHelpers
     partial 'code', locals: { snippets: snippets_for(snippet_name) }
   end
 
+  private_constant :SOURCE_DIR, :SNIPPET_LANGUAGES
+
   private
 
   def snippets_for(name)
