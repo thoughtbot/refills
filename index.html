@@ -5108,9 +5108,10 @@ $sliding-menu-color-hover: #fff;
     <div class="refill-centering"><div class="tooltip-item">
   Hover for Tooltip
   <div class="tooltip">
-    <p>Tooltip text</p>
+    <p>Tooltip text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, deserunt, reprehenderit, dicta, nesciunt pariatur non laboriosam mollitia inventore temporibus ut provident facilis amet placeat consequuntur nam natus quae quos optio.</p>
   </div>
-</div></div>
+</div>
+</div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
@@ -5121,9 +5122,10 @@ $sliding-menu-color-hover: #fff;
   <pre><code class="language-markup">&lt;div class=&quot;tooltip-item&quot;&gt;
   Hover for Tooltip
   &lt;div class=&quot;tooltip&quot;&gt;
-    &lt;p&gt;Tooltip text&lt;/p&gt;
+    &lt;p&gt;Tooltip text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, deserunt, reprehenderit, dicta, nesciunt pariatur non laboriosam mollitia inventore temporibus ut provident facilis amet placeat consequuntur nam natus quae quos optio.&lt;/p&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
 </div>
 
 <div class="snippet">
@@ -5131,7 +5133,8 @@ $sliding-menu-color-hover: #fff;
   <pre><code class="language-scss">.tooltip-item {
   $tooltip-background: transparentize($dark-gray, 0.1);
   $tooltip-color: white;
-  $tooltip-width: 10em;
+  $tooltip-width: 16em;
+  $tooltip-arrow-width: 8px;
 
   border: 1px solid $base-border-color;
   padding: .5em 1em;
@@ -5156,7 +5159,7 @@ $sliding-menu-color-hover: #fff;
     line-height: 1.5em;
     margin-left: -($tooltip-width/2);
     opacity: 0;
-    padding: .5em 0;
+    padding: 1em;
     text-align: center;
     visibility: hidden;
     min-width: $tooltip-width;
@@ -5167,13 +5170,13 @@ $sliding-menu-color-hover: #fff;
     }
 
     &amp;:after {
-      @include size(0);
-      @include position(absolute, 0 0 0 $tooltip-width/2);
-      border: 8px solid transparent;
+      @include position(absolute, 0 0 0 50%);
+      margin-left: -$tooltip-arrow-width;
+      border: $tooltip-arrow-width solid transparent;
       border-top-color: $tooltip-background;
       content: '';
       pointer-events: none;
-      bottom: -15px;
+      bottom: -$tooltip-arrow-width*2;
     }
   }
 }
