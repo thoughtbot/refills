@@ -2,17 +2,17 @@ module SnippetHelpers
   SOURCE_DIR = File.expand_path('../../source', __FILE__)
 
   SNIPPET_LANGUAGES = {
-    javascript: {
-      path_segments: [SOURCE_DIR, 'javascripts', 'refills'],
-      extension: 'js',
+    markup: {
+      path_segments: [SOURCE_DIR],
+      extension: 'html.erb',
     },
     scss: {
       path_segments: [SOURCE_DIR, 'stylesheets', 'refills'],
       extension: 'scss',
     },
-    markup: {
-      path_segments: [SOURCE_DIR],
-      extension: 'html.erb',
+    javascript: {
+      path_segments: [SOURCE_DIR, 'javascripts', 'refills'],
+      extension: 'js',
     },
   }
 
