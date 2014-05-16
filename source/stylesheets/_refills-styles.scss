@@ -344,18 +344,23 @@ pre[class*="language-"] {
   }
 }
 
-.snippet {
+.snippets-table {
   display: none;
 
+  td {
+    border-bottom: 0;
+  }
+}
+
+.snippet {
+
   @include media($medium-screen) {
-    width: 50%;
-    float: left;
     margin-bottom: 2em;
   }
 
   code {
     max-height: em(400);
-    font-size: .7em;
+    font-size: .6em;
     line-height: 1.4em;
     overflow: scroll;
   }

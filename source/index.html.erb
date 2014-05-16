@@ -264,14 +264,14 @@ title: Refills
   $('a.js-show-code').on('click', function(e){
     $(this).hide();
     $(this).siblings('.js-hide-code').css('display', 'inline-block');
-    $(this).parent().siblings('.snippet').show();
+    $(this).parent().siblings('.snippets-table').show();
     e.preventDefault();
   })
 
   $('a.js-hide-code').on('click', function(e) {
     $(this).hide();
     $(this).siblings('.js-show-code').css("display", "inline-block");
-    $(this).parent().siblings('.snippet').hide();
+    $(this).parent().siblings('.snippets-table').hide();
     e.preventDefault();
   });
 </script>
