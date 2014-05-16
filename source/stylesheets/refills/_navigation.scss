@@ -203,8 +203,12 @@ header.navigation {
     color: white;
     font-size: .8em;  
     font-weight: 800;
-    padding: .4em 1em;
     text-transform: uppercase;
+    padding: .4em .5em;
+
+    @include media($large-screen) {
+      padding: .4em 1em;
+    }
 
     &:hover {
       background: lighten($navigation-nav-button-background, 10);
