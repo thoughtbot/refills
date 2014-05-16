@@ -17,16 +17,16 @@ module SnippetHelpers
   }
 
   def code_for(snippet_name)
-    partial 'code', locals: { snippet_name: snippet_name }
+    partial 'code', locals: { snippets: snippets_for(snippet_name) }
   end
+
+  private
 
   def snippets_for(name)
     SNIPPET_LANGUAGES.map do |language, properties|
       snippet snippet_path(name, properties), language
     end.join("\n")
   end
-
-  private
 
   def snippet(path, language)
     if File.exists?(path)
