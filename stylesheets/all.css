@@ -2506,19 +2506,23 @@ header.navigation {
     color: white;
     font-size: .8em;
     font-weight: 800;
-    padding: .4em 1em;
-    text-transform: uppercase; }
-    /* line 209, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    text-transform: uppercase;
+    padding: .4em .5em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 196, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      header.navigation a.sign-up {
+        padding: .4em 1em; } }
+    /* line 213, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation a.sign-up:hover {
       background: #6f99d5; }
-  /* line 214, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 218, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation .search-bar {
     padding: 13px 5px;
     float: left; }
-    /* line 221, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 225, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation .search-bar .search-and-submit {
       position: relative; }
-      /* line 224, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 228, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .search-bar .search-and-submit input[type=search] {
         background: #404040;
         border: 1px solid #262626;
@@ -2528,7 +2532,7 @@ header.navigation {
         color: rgba(255, 255, 255, 0.7);
         border-radius: 0.375em;
         margin: 0; }
-      /* line 235, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 239, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .search-bar .search-and-submit button[type=submit] {
         border: 1px solid #363636;
         border-radius: 3px;
@@ -2567,17 +2571,17 @@ header.navigation {
         header.navigation .search-bar .search-and-submit button[type=submit]:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
-        /* line 241, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 245, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation .search-bar .search-and-submit button[type=submit] img {
           height: 12px;
           opacity: .7; }
     @media screen and (min-width: 53.75em) {
-      /* line 214, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 218, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .search-bar {
         width: 16em;
         position: relative;
         display: inline-block; }
-        /* line 253, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 257, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation .search-bar input {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
