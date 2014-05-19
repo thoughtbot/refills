@@ -7,7 +7,7 @@ module Refills
     argument :snippet, type: :string, required: true
 
     def copy_html
-      copy_file view_template, view_destination
+      copy_file view_name(snippet), view_destination
     end
 
     def copy_styles
@@ -17,23 +17,11 @@ module Refills
     private
 
     def stylesheet_destination
-      File.join(stylesheets_directory, stylesheet_name(snippet_name))
+      File.join('app', 'assets', 'stylesheets', 'refills', stylesheet_name(snippet_name))
     end
 
     def view_destination
-      File.join(views_directory, view_name(snippet_name))
-    end
-
-    def stylesheets_directory
-      File.join('app', 'assets', 'stylesheets', 'refills')
-    end
-
-    def views_directory
-      File.join('app', 'views', 'refills')
-    end
-
-    def view_template
-      File.join(view_name(snippet))
+      File.join('app', 'views', 'refills', view_name(snippet_name))
     end
 
     def stylesheet_template
@@ -49,7 +37,7 @@ module Refills
     end
 
     def snippet_name
-      snippet.gsub(/-/, '_')
+      snippet.underscore
     end
   end
 end
