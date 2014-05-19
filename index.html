@@ -26,7 +26,7 @@
   <p>Managed by <a href="http://www.thoughtbot.com">thoughtbot</a>, instructions at <a href="https://github.com/thoughtbot/refills">Github</a></p>
 </div>
 
-<div id="example1" class="refills-wrapper">
+<div id="example1">
 
   <a class="js-menu-trigger-refills refills-menu-anchor">
     <img src="images/menu.png" alt="">
@@ -36,8 +36,9 @@
   <h5>Patterns</h5>
 
   <div id="navigation" class="refill">
-    <div class="line-behind-text"><h6>Navigation</h6></div>
-    <header class="navigation">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Navigation</h6></div>
+      <header class="navigation">
   <div class="menu-wrapper">
     <a href="javascript:void(0)" class="logo">
       <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
@@ -54,7 +55,6 @@
             <li><a href="javascript:void(0)">Another Item</a></li>
           </ul>
         </li>
-        
       </ul>
     </div>
     <div class="navigation-tools">
@@ -71,38 +71,15 @@
   </div>
 </header>
 
-<script>
-  $(function() {
-    var menu = $('#navigation-menu');
-    var menuToggle = $('#js-mobile-menu');
-    var signUp = $('.sign-up');
-
-    $(menuToggle).on('click', function(e) {
-      e.preventDefault();
-      menu.slideToggle(function(){
-        if(menu.is(':hidden')) {
-          menu.removeAttr('style');
-        }
-      });
-    });
-
-    // underline under the active nav item
-    $(".nav .nav-link").click(function() {
-      $(".nav .nav-link").each(function() {
-        $(this).removeClass("active-nav-item");
-      });
-      $(this).addClass("active-nav-item"); 
-      $(".nav .more").removeClass("active-nav-item");
-    });
-  });
-</script>
-
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;header class=&quot;navigation&quot;&gt;
   &lt;div class=&quot;menu-wrapper&quot;&gt;
@@ -121,7 +98,6 @@
             &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another Item&lt;/a&gt;&lt;/li&gt;
           &lt;/ul&gt;
         &lt;/li&gt;
-        
       &lt;/ul&gt;
     &lt;/div&gt;
     &lt;div class=&quot;navigation-tools&quot;&gt;
@@ -137,36 +113,10 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/header&gt;
-
-&lt;script&gt;
-  $(function() {
-    var menu = $('#navigation-menu');
-    var menuToggle = $('#js-mobile-menu');
-    var signUp = $('.sign-up');
-
-    $(menuToggle).on('click', function(e) {
-      e.preventDefault();
-      menu.slideToggle(function(){
-        if(menu.is(':hidden')) {
-          menu.removeAttr('style');
-        }
-      });
-    });
-
-    // underline under the active nav item
-    $(&quot;.nav .nav-link&quot;).click(function() {
-      $(&quot;.nav .nav-link&quot;).each(function() {
-        $(this).removeClass(&quot;active-nav-item&quot;);
-      });
-      $(this).addClass(&quot;active-nav-item&quot;); 
-      $(&quot;.nav .more&quot;).removeClass(&quot;active-nav-item&quot;);
-    });
-  });
-&lt;/script&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">header.navigation {
   $navigation-padding: 1em;
@@ -432,14 +382,45 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-javascript">$(document).ready(function() {
+  var menu = $('#navigation-menu');
+  var menuToggle = $('#js-mobile-menu');
+  var signUp = $('.sign-up');
+
+  $(menuToggle).on('click', function(e) {
+    e.preventDefault();
+    menu.slideToggle(function(){
+      if(menu.is(':hidden')) {
+        menu.removeAttr('style');
+      }
+    });
+  });
+
+  // underline under the active nav item
+  $(&quot;.nav .nav-link&quot;).click(function() {
+    $(&quot;.nav .nav-link&quot;).each(function() {
+      $(this).removeClass(&quot;active-nav-item&quot;);
+    });
+    $(this).addClass(&quot;active-nav-item&quot;);
+    $(&quot;.nav .more&quot;).removeClass(&quot;active-nav-item&quot;);
+  });
+});
+</code></pre>
+</td>
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="hero" class="refill">
-    <div class="line-behind-text"><h6>Hero Unit</h6>  </div>
-    <div class="hero">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Hero Unit</h6>  </div>
+      <div class="hero">
 	<div class="hero-inner">
     <a href="" class="hero-logo"><img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt=""></a>
 		<div class="hero-copy">
@@ -449,12 +430,15 @@
     <button>Learn More</button>
 	</div>
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;hero&quot;&gt;
 	&lt;div class=&quot;hero-inner&quot;&gt;
@@ -466,9 +450,9 @@
     &lt;button&gt;Learn More&lt;/button&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.hero {
 	$hero-background: desaturate(darken($base-accent-color, 20), 30);	
@@ -525,14 +509,18 @@
 		}
 	}
 }</code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="icon-bullet-points" class="refill">
-    <div class="line-behind-text"><h6>Icon Bullet Points</h6></div>
-    <div class="bullets">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Icon Bullet Points</h6></div>
+      <div class="bullets">
   <div class="bullet three-col-bullet">
     <div class="bullet-icon bullet-icon-1">
       <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png" alt="">
@@ -561,12 +549,15 @@
     </div>
   </div> 
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;bullets&quot;&gt;
   &lt;div class=&quot;bullet three-col-bullet&quot;&gt;
@@ -597,9 +588,9 @@
     &lt;/div&gt;
   &lt;/div&gt; 
 &lt;/div&gt;</code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.bullets {
   $icon-bullet-size: 3.5em;
@@ -664,21 +655,25 @@
     display: inline-block;
   }
 }</code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="type-systems" class="refill">
-    <div class="line-behind-text"><h6>Typographic Systems</h6></div>
-      <div class="refill-smaller">
-        <ul class="accordion-tabs-type-systems">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Typographic Systems</h6></div>
+        <div class="refill-smaller">
+          <ul class="accordion-tabs-type-systems">
 
-        <li class="tab js-is-active" data-role="tab">
-          <a href="#" class="tab-link-type-system" data-role="link">Serif</a>
-          <section>
-            <div class="tab-content">
-              <div class="refill-centering"><head>
+          <li class="tab js-is-active" data-role="tab">
+            <a href="#" class="tab-link-type-system" data-role="link">Serif</a>
+            <section>
+              <div class="tab-content">
+                <div class="refill-centering"><head>
   <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'>
@@ -699,12 +694,14 @@
 
 </article>
 </div>
-              <div class="refill-snippet"><div class="refill-control">
+                <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;head&gt;
   &lt;link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'&gt;
@@ -713,23 +710,12 @@
 &lt;/head&gt;
 
 &lt;article class=&quot;type-system-serif&quot;&gt;
-  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
-&lt;h1&gt;Article Heading&lt;/h1&gt;
-&lt;h2&gt;These override some of the styles specified in the Scss files &quot;variables&quot; and &quot;typography&quot; in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class &quot;type-system-name&quot;.&lt;/h2&gt;
-&lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
-&lt;/p&gt;
-&lt;h3&gt;Subheading lorem&lt;/h3&gt;
-&lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
-
+  &lt;%= partial &quot;type-system-content&quot; %&gt;
 &lt;/article&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">article.type-system-serif {
   $serif: 'Lusitana', serif;
@@ -832,18 +818,21 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
-</div>
-            </div>
-          </section>
-        </li>
 
-        <li class="tab" data-role="tab">
-          <a href="#" class="tab-link-type-system" data-role="link">Sans</a>
-          <section>
-            <div class="tab-content">
-              <div class="refill-centering"><head>
+  </tr>
+</table>
+</div>
+              </div>
+            </section>
+          </li>
+
+          <li class="tab" data-role="tab">
+            <a href="#" class="tab-link-type-system" data-role="link">Sans</a>
+            <section>
+              <div class="tab-content">
+                <div class="refill-centering"><head>
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200' rel='stylesheet' type='text/css'>
 </head>
@@ -863,12 +852,14 @@
 
 </article>
 </div>
-              <div class="refill-snippet"><div class="refill-control">
+                <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;head&gt;
   &lt;link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'&gt;
@@ -876,23 +867,12 @@
 &lt;/head&gt;
 
 &lt;article class=&quot;type-system-sans&quot;&gt;
-  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
-&lt;h1&gt;Article Heading&lt;/h1&gt;
-&lt;h2&gt;These override some of the styles specified in the Scss files &quot;variables&quot; and &quot;typography&quot; in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class &quot;type-system-name&quot;.&lt;/h2&gt;
-&lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
-&lt;/p&gt;
-&lt;h3&gt;Subheading lorem&lt;/h3&gt;
-&lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
-
+  &lt;%= partial &quot;type-system-content&quot; %&gt;
 &lt;/article&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">article.type-system-sans {
   $sans-serif: 'PT Sans', sans-serif;
@@ -994,18 +974,21 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
-</div>
-            </div>
-          </section>
-        </li>
 
-        <li class="tab" data-role="tab">
-          <a href="#" class="tab-link-type-system" data-role="link">Slab</a>
-          <section>
-            <div class="tab-content">
-              <div class="refill-centering"><head>
+  </tr>
+</table>
+</div>
+              </div>
+            </section>
+          </li>
+
+          <li class="tab" data-role="tab">
+            <a href="#" class="tab-link-type-system" data-role="link">Slab</a>
+            <section>
+              <div class="tab-content">
+                <div class="refill-centering"><head>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
 </head>
@@ -1025,12 +1008,14 @@
 
 </article>
 </div>
-              <div class="refill-snippet"><div class="refill-control">
+                <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;head&gt;
   &lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'&gt;
@@ -1038,23 +1023,12 @@
 &lt;/head&gt;
 
 &lt;article class=&quot;type-system-slab&quot;&gt;
-  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
-&lt;h1&gt;Article Heading&lt;/h1&gt;
-&lt;h2&gt;These override some of the styles specified in the Scss files &quot;variables&quot; and &quot;typography&quot; in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class &quot;type-system-name&quot;.&lt;/h2&gt;
-&lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
-&lt;/p&gt;
-&lt;h3&gt;Subheading lorem&lt;/h3&gt;
-&lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
-
+  &lt;%= partial &quot;type-system-content&quot; %&gt;
 &lt;/article&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">article.type-system-slab {
   $sans-serif: 'Open Sans', sans-serif;
@@ -1154,18 +1128,21 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
-</div>
-            </div>
-          </section>
-        </li>
 
-        <li class="tab" data-role="tab">
-          <a href="#" class="tab-link-type-system" data-role="link">Rounded</a>
-          <section>
-            <div class="tab-content">
-              <div class="refill-centering"><head>
+  </tr>
+</table>
+</div>
+              </div>
+            </section>
+          </li>
+
+          <li class="tab" data-role="tab">
+            <a href="#" class="tab-link-type-system" data-role="link">Rounded</a>
+            <section>
+              <div class="tab-content">
+                <div class="refill-centering"><head>
   <link href='http://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 </head>
@@ -1185,12 +1162,14 @@
 
 </article>
 </div>
-              <div class="refill-snippet"><div class="refill-control">
+                <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;head&gt;
   &lt;link href='http://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'&gt;
@@ -1198,23 +1177,12 @@
 &lt;/head&gt;
 
 &lt;article class=&quot;type-system-rounded&quot;&gt;
-  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
-&lt;h1&gt;Article Heading&lt;/h1&gt;
-&lt;h2&gt;These override some of the styles specified in the Scss files &quot;variables&quot; and &quot;typography&quot; in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class &quot;type-system-name&quot;.&lt;/h2&gt;
-&lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
-&lt;/p&gt;
-&lt;h3&gt;Subheading lorem&lt;/h3&gt;
-&lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
-
+  &lt;%= partial &quot;type-system-content&quot; %&gt;
 &lt;/article&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">article.type-system-rounded {
   $sans-serif: 'Nunito', sans-serif;
@@ -1312,18 +1280,21 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
-</div>
-            </div>
-          </section>
-        </li>
 
-        <li class="tab" data-role="tab">
-          <a href="#" class="tab-link-type-system" data-role="link">Traditional</a>
-          <section>
-            <div class="tab-content">
-              <div class="refill-centering"><head>
+  </tr>
+</table>
+</div>
+              </div>
+            </section>
+          </li>
+
+          <li class="tab" data-role="tab">
+            <a href="#" class="tab-link-type-system" data-role="link">Traditional</a>
+            <section>
+              <div class="tab-content">
+                <div class="refill-centering"><head>
   <link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 </head>
@@ -1343,12 +1314,14 @@
 
 </article>
 </div>
-              <div class="refill-snippet"><div class="refill-control">
+                <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;head&gt;
   &lt;link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'&gt;
@@ -1356,23 +1329,12 @@
 &lt;/head&gt;
 
 &lt;article class=&quot;type-system-traditional&quot;&gt;
-  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
-&lt;h1&gt;Article Heading&lt;/h1&gt;
-&lt;h2&gt;These override some of the styles specified in the Scss files &quot;variables&quot; and &quot;typography&quot; in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class &quot;type-system-name&quot;.&lt;/h2&gt;
-&lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
-&lt;/p&gt;
-&lt;h3&gt;Subheading lorem&lt;/h3&gt;
-&lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
-
+  &lt;%= partial &quot;type-system-content&quot; %&gt;
 &lt;/article&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">article.type-system-traditional {
   $sans-serif: 'Noto Sans', sans-serif;
@@ -1476,18 +1438,21 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
-</div>
-            </div>
-          </section>
-        </li>
 
-        <li class="tab" data-role="tab">
-          <a href="#" class="tab-link-type-system" data-role="link">Geometric</a>
-          <section>
-            <div class="tab-content">
-              <div class="refill-centering"><head>
+  </tr>
+</table>
+</div>
+              </div>
+            </section>
+          </li>
+
+          <li class="tab" data-role="tab">
+            <a href="#" class="tab-link-type-system" data-role="link">Geometric</a>
+            <section>
+              <div class="tab-content">
+                <div class="refill-centering"><head>
   <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
 </head>
@@ -1507,12 +1472,14 @@
 
 </article>
 </div>
-              <div class="refill-snippet"><div class="refill-control">
+                <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;head&gt;
   &lt;link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'&gt;
@@ -1520,23 +1487,12 @@
 &lt;/head&gt;
 
 &lt;article class=&quot;type-system-geometric&quot;&gt;
-  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
-&lt;h1&gt;Article Heading&lt;/h1&gt;
-&lt;h2&gt;These override some of the styles specified in the Scss files &quot;variables&quot; and &quot;typography&quot; in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class &quot;type-system-name&quot;.&lt;/h2&gt;
-&lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
-&lt;/p&gt;
-&lt;h3&gt;Subheading lorem&lt;/h3&gt;
-&lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit!  Accusamus.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
-
+  &lt;%= partial &quot;type-system-content&quot; %&gt;
 &lt;/article&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">article.type-system-geometric {
   $sans-serif: 'Questrial', sans-serif;
@@ -1632,20 +1588,24 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
-</div>
-            </div>
-          </section>
-        </li>
 
-      </ul>
+  </tr>
+</table>
+</div>
+              </div>
+            </section>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
   <div id="cards" class="refill">
-    <div class="line-behind-text"><h6>Cards</h6></div>
-    <div class="refill-centering"><div class="cards">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Cards</h6></div>
+      <div class="refill-centering"><div class="cards">
   <div class="card">
     <div class="card-image">
       <img src="https://raw.github.com/Magnus-G/Random/master/mountains.png" alt="">
@@ -1704,12 +1664,15 @@
     </div>
   </div>
 </div></div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;cards&quot;&gt;
   &lt;div class=&quot;card&quot;&gt;
@@ -1770,9 +1733,9 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.cards {
   @include clearfix;
@@ -1907,15 +1870,19 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="comment" class="refill">
-    <div class="line-behind-text"><h6>Comments</h6></div>
-    <div class="refill-centering">
-      <div class="refill-smaller"><div class="comment">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Comments</h6></div>
+      <div class="refill-centering">
+        <div class="refill-smaller"><div class="comment">
   <div class="comment-image">
     <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
   </div>
@@ -1937,13 +1904,16 @@
   </div>
 </div>
 </div>
+      </div>
     </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;comment&quot;&gt;
   &lt;div class=&quot;comment-image&quot;&gt;
@@ -1967,9 +1937,9 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.comment {
   $comment-gutter: 1.4em;
@@ -2032,14 +2002,18 @@
 }
 
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="accordion-tabs" class="refill">
     <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
-    <ul class="accordion-tabs">
+    <div class="refills-wrapper">
+      <ul class="accordion-tabs">
   <li class="tab-header-and-content">
     <a href="#" class="is-active tab-link">Tab Item</a>
     <section>
@@ -2066,34 +2040,15 @@
   </li>
 </ul>
 
-<script>
-  $(document).ready(function () {
-    $('.accordion-tabs').each(function(index) {
-      $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
-    });
-
-    $('.accordion-tabs').on('click', 'li > a', function(event) {
-      if (!$(this).hasClass('is-active')) {
-        event.preventDefault();
-        var accordionTabs = $(this).closest('.accordion-tabs')
-        accordionTabs.find('.is-open').removeClass('is-open').hide();
-
-        $(this).next().toggleClass('is-open').toggle();
-        accordionTabs.find('.is-active').removeClass('is-active');
-        $(this).addClass('is-active');
-      } else {
-        event.preventDefault();
-      }
-    });
-  });
-</script>
-
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;ul class=&quot;accordion-tabs&quot;&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;
@@ -2121,32 +2076,10 @@
     &lt;/section&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;script&gt;
-  $(document).ready(function () {
-    $('.accordion-tabs').each(function(index) {
-      $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
-    });
-
-    $('.accordion-tabs').on('click', 'li &gt; a', function(event) {
-      if (!$(this).hasClass('is-active')) {
-        event.preventDefault();
-        var accordionTabs = $(this).closest('.accordion-tabs')
-        accordionTabs.find('.is-open').removeClass('is-open').hide();
-
-        $(this).next().toggleClass('is-open').toggle();
-        accordionTabs.find('.is-active').removeClass('is-active');
-        $(this).addClass('is-active');
-      } else {
-        event.preventDefault();
-      }
-    });
-  });
-&lt;/script&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.accordion-tabs {
   $tab-border-color: $base-border-color;
@@ -2247,10 +2180,37 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-javascript">$(document).ready(function () {
+  $('.accordion-tabs').each(function(index) {
+    $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+  });
+
+  $('.accordion-tabs').on('click', 'li &gt; a', function(event) {
+    if (!$(this).hasClass('is-active')) {
+      event.preventDefault();
+      var accordionTabs = $(this).closest('.accordion-tabs')
+      accordionTabs.find('.is-open').removeClass('is-open').hide();
+
+      $(this).next().toggleClass('is-open').toggle();
+      accordionTabs.find('.is-active').removeClass('is-active');
+      $(this).addClass('is-active');
+    } else {
+      event.preventDefault();
+    }
+  });
+});
+</code></pre>
+</td>
+
+  </tr>
+</table>
 </div>
-    <ul class="accordion-tabs-minimal">
+    <div class="refills-wrapper">
+      <ul class="accordion-tabs-minimal">
   <li class="tab-header-and-content">
     <a href="#" class="tab-link is-active">Tab Item</a>
     <section>
@@ -2277,34 +2237,15 @@
   </li>
 </ul>
 
-<script>
-  $(document).ready(function () {
-    $('.accordion-tabs-minimal').each(function(index) {
-      $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
-    });
-
-    $('.accordion-tabs-minimal').on('click', 'li > a', function(event) {
-      if (!$(this).hasClass('is-active')) {
-        event.preventDefault();
-        var accordionTabs = $(this).closest('.accordion-tabs-minimal')
-        accordionTabs.find('.is-open').removeClass('is-open').hide();
-
-        $(this).next().toggleClass('is-open').toggle();
-        accordionTabs.find('.is-active').removeClass('is-active');
-        $(this).addClass('is-active');
-      } else {
-        event.preventDefault();
-      }
-    });
-  });
-</script>
-
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;ul class=&quot;accordion-tabs-minimal&quot;&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;
@@ -2332,32 +2273,10 @@
     &lt;/section&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;script&gt;
-  $(document).ready(function () {
-    $('.accordion-tabs-minimal').each(function(index) {
-      $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
-    });
-
-    $('.accordion-tabs-minimal').on('click', 'li &gt; a', function(event) {
-      if (!$(this).hasClass('is-active')) {
-        event.preventDefault();
-        var accordionTabs = $(this).closest('.accordion-tabs-minimal')
-        accordionTabs.find('.is-open').removeClass('is-open').hide();
-
-        $(this).next().toggleClass('is-open').toggle();
-        accordionTabs.find('.is-active').removeClass('is-active');
-        $(this).addClass('is-active');
-      } else {
-        event.preventDefault();
-      }
-    });
-  });
-&lt;/script&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.accordion-tabs-minimal {
   $tab-border-color: $base-border-color;
@@ -2456,14 +2375,41 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-javascript">$(document).ready(function () {
+  $('.accordion-tabs-minimal').each(function(index) {
+    $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+  });
+
+  $('.accordion-tabs-minimal').on('click', 'li &gt; a', function(event) {
+    if (!$(this).hasClass('is-active')) {
+      event.preventDefault();
+      var accordionTabs = $(this).closest('.accordion-tabs-minimal')
+      accordionTabs.find('.is-open').removeClass('is-open').hide();
+
+      $(this).next().toggleClass('is-open').toggle();
+      accordionTabs.find('.is-active').removeClass('is-active');
+      $(this).addClass('is-active');
+    } else {
+      event.preventDefault();
+    }
+  });
+});
+</code></pre>
+</td>
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="tables" class="refill">
-    <div class="line-behind-text"><h6>Tables</h6></div>
-    <table class="table-borders">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Tables</h6></div>
+      <table class="table-borders">
   <thead>
     <tr>
       <th>Header Cell 1</th>
@@ -2494,12 +2440,15 @@
     </tr>
   </tbody>
 </table>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;table class=&quot;table-borders&quot;&gt;
   &lt;thead&gt;
@@ -2532,9 +2481,9 @@
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.table-borders {
   $table-border-color: $base-border-color;
@@ -2620,10 +2569,14 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
-    <table class="table-minimal">
+    <div class="refills-wrapper">
+      <table class="table-minimal">
   <thead>
     <tr>
       <th>Header Cell 1</th>
@@ -2654,12 +2607,15 @@
     </tr>
   </tbody>
 </table>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;table class=&quot;table-minimal&quot;&gt;
   &lt;thead&gt;
@@ -2692,9 +2648,9 @@
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.table-minimal {
   $table-border-color: $base-border-color;
@@ -2751,14 +2707,18 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="vertical-tabs" class="refill">
-    <div class="line-behind-text"><h6>Vertical Tabs</h6></div>
-    <div class="vertical-tabs-container">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Vertical Tabs</h6></div> 
+      <div class="vertical-tabs-container">
   <div class="vertical-tabs">
     <a href="#" class="js-vertical-tab vertical-tab is-active" rel="tab1">Item 1</a>
     <a href="#" class="js-vertical-tab vertical-tab" rel="tab2">Item 2</a>
@@ -2789,47 +2749,15 @@
   </div>
 </div>
 
-<script>
-  $(".js-vertical-tab-content").hide();
-  $(".js-vertical-tab-content:first").show();
-
-  /* if in tab mode */
-  $(".js-vertical-tab").click(function(event) {
-    event.preventDefault();
-
-    $(".js-vertical-tab-content").hide();
-    var activeTab = $(this).attr("rel");
-    $("#"+activeTab).show();
-
-    $(".js-vertical-tab").removeClass("is-active");
-    $(this).addClass("is-active");
-
-    $(".js-vertical-tab-accordion-heading").removeClass("is-active");
-    $(".js-vertical-tab-accordion-heading[rel^='"+activeTab+"']").addClass("is-active");
-  });
-
-  /* if in accordion mode */
-  $(".js-vertical-tab-accordion-heading").click(function(event) {
-    event.preventDefault()
-
-    $(".js-vertical-tab-content").hide();
-    var accordion_activeTab = $(this).attr("rel");
-    $("#"+accordion_activeTab).show();
-
-    $(".js-vertical-tab-accordion-heading").removeClass("is-active");
-    $(this).addClass("is-active");
-
-    $(".js-vertical-tab").removeClass("is-active");
-    $(".js-vertical-tab[rel^='"+accordion_activeTab+"']").addClass("is-active");
-  });
-</script>
-
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;vertical-tabs-container&quot;&gt;
   &lt;div class=&quot;vertical-tabs&quot;&gt;
@@ -2861,45 +2789,10 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;script&gt;
-  $(&quot;.js-vertical-tab-content&quot;).hide();
-  $(&quot;.js-vertical-tab-content:first&quot;).show();
-
-  /* if in tab mode */
-  $(&quot;.js-vertical-tab&quot;).click(function(event) {
-    event.preventDefault();
-
-    $(&quot;.js-vertical-tab-content&quot;).hide();
-    var activeTab = $(this).attr(&quot;rel&quot;);
-    $(&quot;#&quot;+activeTab).show();
-
-    $(&quot;.js-vertical-tab&quot;).removeClass(&quot;is-active&quot;);
-    $(this).addClass(&quot;is-active&quot;);
-
-    $(&quot;.js-vertical-tab-accordion-heading&quot;).removeClass(&quot;is-active&quot;);
-    $(&quot;.js-vertical-tab-accordion-heading[rel^='&quot;+activeTab+&quot;']&quot;).addClass(&quot;is-active&quot;);
-  });
-
-  /* if in accordion mode */
-  $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
-    event.preventDefault()
-
-    $(&quot;.js-vertical-tab-content&quot;).hide();
-    var accordion_activeTab = $(this).attr(&quot;rel&quot;);
-    $(&quot;#&quot;+accordion_activeTab).show();
-
-    $(&quot;.js-vertical-tab-accordion-heading&quot;).removeClass(&quot;is-active&quot;);
-    $(this).addClass(&quot;is-active&quot;);
-
-    $(&quot;.js-vertical-tab&quot;).removeClass(&quot;is-active&quot;);
-    $(&quot;.js-vertical-tab[rel^='&quot;+accordion_activeTab+&quot;']&quot;).addClass(&quot;is-active&quot;);
-  });
-&lt;/script&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.vertical-tabs-container { // small screens: accordion
   $tab-border-color: $base-border-color;
@@ -3002,14 +2895,54 @@
 
 // Based on code by Jett Miller jettmiller.net
 </code></pre>
-</div>
+</td>
 
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-javascript">$(&quot;.js-vertical-tab-content&quot;).hide();
+$(&quot;.js-vertical-tab-content:first&quot;).show();
+
+/* if in tab mode */
+$(&quot;.js-vertical-tab&quot;).click(function(event) {
+  event.preventDefault();
+
+  $(&quot;.js-vertical-tab-content&quot;).hide();
+  var activeTab = $(this).attr(&quot;rel&quot;);
+  $(&quot;#&quot;+activeTab).show();
+
+  $(&quot;.js-vertical-tab&quot;).removeClass(&quot;is-active&quot;);
+  $(this).addClass(&quot;is-active&quot;);
+
+  $(&quot;.js-vertical-tab-accordion-heading&quot;).removeClass(&quot;is-active&quot;);
+  $(&quot;.js-vertical-tab-accordion-heading[rel^='&quot;+activeTab+&quot;']&quot;).addClass(&quot;is-active&quot;);
+});
+
+/* if in accordion mode */
+$(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
+  event.preventDefault();
+
+  $(&quot;.js-vertical-tab-content&quot;).hide();
+  var accordion_activeTab = $(this).attr(&quot;rel&quot;);
+  $(&quot;#&quot;+accordion_activeTab).show();
+
+  $(&quot;.js-vertical-tab-accordion-heading&quot;).removeClass(&quot;is-active&quot;);
+  $(this).addClass(&quot;is-active&quot;);
+
+  $(&quot;.js-vertical-tab&quot;).removeClass(&quot;is-active&quot;);
+  $(&quot;.js-vertical-tab[rel^='&quot;+accordion_activeTab+&quot;']&quot;).addClass(&quot;is-active&quot;);
+});
+</code></pre>
+</td>
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="grid-items" class="refill">
-    <div class="line-behind-text"><h6>Grid Items</h6></div>
-    <div class="refill-centering"><div class="grid-items">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Grid Items</h6></div>
+      <div class="refill-centering"><div class="grid-items">
   <a href="javascript:void(0)" class="grid-item">
     <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
     <h1>Grid Item</h1>
@@ -3047,12 +2980,15 @@
   </a>
 </div>
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;grid-items&quot;&gt;
   &lt;a href=&quot;javascript:void(0)&quot; class=&quot;grid-item&quot;&gt;
@@ -3092,9 +3028,9 @@
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">@mixin grid-item-columns($columns) {
   width: (100% / 12) * $columns;
@@ -3194,10 +3130,14 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
-    <div class="refill-centering"><div class="grid-items-lines">
+    <div class="refills-wrapper">
+      <div class="refill-centering"><div class="grid-items-lines">
   <a href="javascript:void(0)" class="grid-item">
     <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1_dark.png" alt="">
     <h1>Grid Item</h1>
@@ -3242,12 +3182,15 @@
   <div class="bottom-cover"></div>
 </div>
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;grid-items-lines&quot;&gt;
   &lt;a href=&quot;javascript:void(0)&quot; class=&quot;grid-item&quot;&gt;
@@ -3294,9 +3237,9 @@
   &lt;div class=&quot;bottom-cover&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">@mixin grid-item-columns($columns) {
   width: (100% / 12) * $columns;
@@ -3385,15 +3328,18 @@
 }
 
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
-  <div class="refills-wrapper">
     <div id="footer" class="refill">
-      <div class="line-behind-text"><h6>Footers</h6></div>
-      <div class="refill-centering"><footer class="footer">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Footers</h6></div>
+        <div class="refill-centering"><footer class="footer">
   <div class="footer-logo">
     <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
   </div>
@@ -3422,12 +3368,15 @@
   <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
 </footer>
 </div>
+      </div>
       <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;footer class=&quot;footer&quot;&gt;
   &lt;div class=&quot;footer-logo&quot;&gt;
@@ -3458,9 +3407,9 @@
   &lt;p&gt;Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.&lt;/p&gt;
 &lt;/footer&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.footer {
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
@@ -3539,10 +3488,14 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
-      <div class="refill-centering"><footer class="footer-2">
+      <div class="refills-wrapper">
+        <div class="refill-centering"><footer class="footer-2">
   <div class="footer-logo">
     <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
   </div>
@@ -3572,12 +3525,15 @@
     </div>
 </footer>
 </div>
+      </div>
       <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;footer class=&quot;footer-2&quot;&gt;
   &lt;div class=&quot;footer-logo&quot;&gt;
@@ -3609,9 +3565,9 @@
     &lt;/div&gt;
 &lt;/footer&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.footer-2 {
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
@@ -3705,17 +3661,20 @@
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
     </div>
-  </div>
 
   <h5>Components</h5>
 
   <div id="modal" class="refill">
-    <div class="line-behind-text"><h6>Modal</h6></div>
-    <div class="refill-centering"><div class="modal">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Modal</h6></div>
+      <div class="refill-centering"><div class="modal">
   <label for="modal-1">
     <div class="btn js-btn">Click for Modal</div>
   </label>
@@ -3730,12 +3689,15 @@
   </div>
 </div>
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;modal&quot;&gt;
   &lt;label for=&quot;modal-1&quot;&gt;
@@ -3752,9 +3714,9 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.modal {
   $modal-padding: 3em;
@@ -3907,14 +3869,18 @@
 
 // Based on code by Kasper Mikiewicz
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="sliding-menu" class="refill">
-    <div class="line-behind-text"><h6>Sliding Menu</h6></div>
-    <div class="refill-centering"><button type="button" class="js-menu-trigger sliding-menu-button">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Sliding Menu</h6></div>
+      <div class="refill-centering"><button type="button" class="js-menu-trigger sliding-menu-button">
   <img src="images/menu.png" alt="">
 </button>
 
@@ -3927,30 +3893,16 @@
 </nav>
 
 <div class="js-menu-screen menu-screen"></div>
-
-<script>
-  $(document).ready(function(){
-
-    $('.js-menu-trigger').on('click touchstart', function(e){
-      $('.js-menu').toggleClass('is-visible');
-      $('.js-menu-screen').toggleClass('is-visible');
-      e.preventDefault();
-    });
-
-    $('.js-menu-screen').on('click touchstart', function(e){
-      $('.js-menu').toggleClass('is-visible');
-      $('.js-menu-screen').toggleClass('is-visible');
-      e.preventDefault();
-    });
-  });
-</script>
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;js-menu-trigger sliding-menu-button&quot;&gt;
   &lt;img src=&quot;images/menu.png&quot; alt=&quot;&quot;&gt;
@@ -3965,27 +3917,10 @@
 &lt;/nav&gt;
 
 &lt;div class=&quot;js-menu-screen menu-screen&quot;&gt;&lt;/div&gt;
-
-&lt;script&gt;
-  $(document).ready(function(){
-
-    $('.js-menu-trigger').on('click touchstart', function(e){
-      $('.js-menu').toggleClass('is-visible');
-      $('.js-menu-screen').toggleClass('is-visible');
-      e.preventDefault();
-    });
-
-    $('.js-menu-screen').on('click touchstart', function(e){
-      $('.js-menu').toggleClass('is-visible');
-      $('.js-menu-screen').toggleClass('is-visible');
-      e.preventDefault();
-    });
-  });
-&lt;/script&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">$sliding-menu-border-color: $dark-gray;
 $sliding-menu-background: lighten($sliding-menu-border-color, 5);
@@ -4052,26 +3987,50 @@ $sliding-menu-color-hover: #fff;
 
 // Based on code by Diego Eis
 </code></pre>
-</div>
+</td>
 
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-javascript">$(document).ready(function(){
+  $('.js-menu-trigger').on('click touchstart', function(e){
+    $('.js-menu').toggleClass('is-visible');
+    $('.js-menu-screen').toggleClass('is-visible');
+    e.preventDefault();
+  });
+
+  $('.js-menu-screen').on('click touchstart', function(e){
+    $('.js-menu').toggleClass('is-visible');
+    $('.js-menu-screen').toggleClass('is-visible');
+    e.preventDefault();
+  });
+});
+</code></pre>
+</td>
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="badges" class="refill">
-    <div class="line-behind-text"><h6>Badges</h6></div>
-    <div class="refill-centering"><div class="badges">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Badges</h6></div>
+      <div class="refill-centering"><div class="badges">
 	<span class="badge">4</span>
 	<span class="badge dark">4</span>
 	<span class="badge error">4</span>
 	<span class="badge notice">4</span>
 	<span class="badge success">4</span>
 </div></div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;badges&quot;&gt;
 	&lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
@@ -4080,9 +4039,9 @@ $sliding-menu-color-hover: #fff;
 	&lt;span class=&quot;badge notice&quot;&gt;4&lt;/span&gt;
 	&lt;span class=&quot;badge success&quot;&gt;4&lt;/span&gt;
 &lt;/div&gt;</code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.badges {
   $badge-background: $medium-gray;
@@ -4129,14 +4088,18 @@ $sliding-menu-color-hover: #fff;
 }
 
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="breadcrumbs" class="refill">
-    <div class="line-behind-text"><h6>Breadcrumbs</h6></div>
-    <div class="refill-centering"><div class="breadcrumb">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Breadcrumbs</h6></div>
+      <div class="refill-centering"><div class="breadcrumb">
   <a href="javascript:void(0)">One</a>
   <a href="javascript:void(0)">Two</a>
   <a href="javascript:void(0)">Three</a>
@@ -4144,12 +4107,15 @@ $sliding-menu-color-hover: #fff;
   <a href="javascript:void(0)">Five</a>
 </div>
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;breadcrumb&quot;&gt;
   &lt;a href=&quot;javascript:void(0)&quot;&gt;One&lt;/a&gt;
@@ -4159,9 +4125,9 @@ $sliding-menu-color-hover: #fff;
   &lt;a href=&quot;javascript:void(0)&quot;&gt;Five&lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.breadcrumb { 
   $breadcrumb-border-color: $base-border-color;
@@ -4248,14 +4214,18 @@ $sliding-menu-color-hover: #fff;
 }
 
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="hover-tile-animation" class="refill">
-    <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
-    <div class="refill-centering"><div class="hover-tile-outer">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
+      <div class="refill-centering"><div class="hover-tile-outer">
   <div class="hover-tile-container">
     <div class="hover-tile hover-tile-visible">
       Hover
@@ -4266,12 +4236,15 @@ $sliding-menu-color-hover: #fff;
     </div>
   </div>
 </div></div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;hover-tile-outer&quot;&gt;
   &lt;div class=&quot;hover-tile-container&quot;&gt;
@@ -4284,9 +4257,9 @@ $sliding-menu-color-hover: #fff;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.hover-tile-outer {
   $hover-tile-height: 10em;
@@ -4340,14 +4313,18 @@ $sliding-menu-color-hover: #fff;
     }
   }
 }</code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="accordion" class="refill">
-    <div class="line-behind-text"><h6>Accordion</h6></div>
-    <div class="refill-centering"><ul class="accordion">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Accordion</h6></div>
+      <div class="refill-centering"><ul class="accordion">
   <li>
     <a href="javascript:void(0)" class="js-accordion-trigger">Accordion Item</a>
     <ul class="submenu">
@@ -4371,22 +4348,16 @@ $sliding-menu-color-hover: #fff;
     </ul>
   </li>
 </ul>
-
-<script>
-  jQuery('.js-accordion-trigger') // find the trigger
-    .bind('click', function(){
-      jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
-      jQuery(this).parent().toggleClass('is-expanded');
-      event.preventDefault();
-  });
-</script>
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;ul class=&quot;accordion&quot;&gt;
   &lt;li&gt;
@@ -4412,19 +4383,10 @@ $sliding-menu-color-hover: #fff;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;script&gt;
-  jQuery('.js-accordion-trigger') // find the trigger
-    .bind('click', function(){
-      jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
-      jQuery(this).parent().toggleClass('is-expanded');
-      event.preventDefault();
-  });
-&lt;/script&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.accordion {
   $accordion-menu-border-color: $base-border-color;
@@ -4480,14 +4442,27 @@ $sliding-menu-color-hover: #fff;
   }
 }
 </code></pre>
-</div>
+</td>
 
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-javascript">$('.js-accordion-trigger').bind('click', function(){
+  jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
+  jQuery(this).parent().toggleClass('is-expanded');
+  event.preventDefault();
+});
+</code></pre>
+</td>
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="search-bar" class="refill">
-    <div class="line-behind-text"><h6>Search bar</h6></div>
-    <div class="refill-centering">  <div class="search-bar">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Search bar</h6></div>
+      <div class="refill-centering">  <div class="search-bar">
     <div class="search-and-submit">
       <input type="search" placeholder="Enter Search" />
       <button type="submit">
@@ -4496,12 +4471,15 @@ $sliding-menu-color-hover: #fff;
     </div>
   </div>
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">  &lt;div class=&quot;search-bar&quot;&gt;
     &lt;div class=&quot;search-and-submit&quot;&gt;
@@ -4512,9 +4490,9 @@ $sliding-menu-color-hover: #fff;
     &lt;/div&gt;
   &lt;/div&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.search-bar {
   $search-bar-border-color: $base-border-color;
@@ -4555,14 +4533,18 @@ $sliding-menu-color-hover: #fff;
     }
   }
 }</code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="switch" class="refill">
-    <div class="line-behind-text"><h6>Switch</h6></div>
-    <div class="refill-centering"><div class="switch-container">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Switch</h6></div>
+      <div class="refill-centering"><div class="switch-container">
   <input type="checkbox" id="switch-toggle-1" name="switch-toggle" class="switch-checkbox" checked/>
   <label class="switch-label" for="switch-toggle-1">
     <div class="switch-inner"></div>
@@ -4570,12 +4552,15 @@ $sliding-menu-color-hover: #fff;
   </label>
 </div>
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;switch-container&quot;&gt;
   &lt;input type=&quot;checkbox&quot; id=&quot;switch-toggle-1&quot; name=&quot;switch-toggle&quot; class=&quot;switch-checkbox&quot; checked/&gt;
@@ -4585,9 +4570,9 @@ $sliding-menu-color-hover: #fff;
   &lt;/label&gt;
 &lt;/div&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.switch-container {
   $switch-container-width: 5em;
@@ -4657,26 +4642,33 @@ $sliding-menu-color-hover: #fff;
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="image-gradient" class="refill">
-    <div class="line-behind-text"><h6>Image with gradient overlays</h6></div>
-    <div class="refill-centering">  <div class="image-gradient">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Image with gradient overlays</h6></div>
+      <div class="refill-centering">  <div class="image-gradient">
     <div class="copy">
     <p>Fixed height container</p>
     </div>
     <div class="overlay"></div>
   </div>
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">  &lt;div class=&quot;image-gradient&quot;&gt;
     &lt;div class=&quot;copy&quot;&gt;
@@ -4685,9 +4677,9 @@ $sliding-menu-color-hover: #fff;
     &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
   &lt;/div&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.image-gradient {
   $image-gradient-color-top: teal; 
@@ -4746,10 +4738,14 @@ $sliding-menu-color-hover: #fff;
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
-    <div class="refill-centering"><div class="image-gradient-dynamic">
+    <div class="refills-wrapper">
+      <div class="refill-centering"><div class="image-gradient-dynamic">
   <img src="http://organicclimber.com/wp-content/uploads/2012/06/EmeraldLake.jpg" alt="">
   <div class="copy">
     <p>Dynamic height container</p>
@@ -4757,12 +4753,15 @@ $sliding-menu-color-hover: #fff;
   <div class="overlay"></div>
 </div>
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;image-gradient-dynamic&quot;&gt;
   &lt;img src=&quot;http://organicclimber.com/wp-content/uploads/2012/06/EmeraldLake.jpg&quot; alt=&quot;&quot;&gt;
@@ -4772,9 +4771,9 @@ $sliding-menu-color-hover: #fff;
   &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.image-gradient-dynamic {
   $image-gradient-color-top: orange; 
@@ -4837,25 +4836,32 @@ $sliding-menu-color-hover: #fff;
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="button-group" class="refill">
-    <div class="line-behind-text"><h6>Button Group</h6></div>
-    <div class="refill-centering"><div class="button-group">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Button Group</h6></div>
+      <div class="refill-centering"><div class="button-group">
   <button class="active">Item</button>
   <button>Button Group Item</button>
   <button>Another Item</button>
   <button>Last Item</button>
 </div></div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;button-group&quot;&gt;
   &lt;button class=&quot;active&quot;&gt;Item&lt;/button&gt;
@@ -4863,9 +4869,9 @@ $sliding-menu-color-hover: #fff;
   &lt;button&gt;Another Item&lt;/button&gt;
   &lt;button&gt;Last Item&lt;/button&gt;
 &lt;/div&gt;</code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.button-group {
   $button-group-background: $base-body-color;
@@ -4925,30 +4931,37 @@ $sliding-menu-color-hover: #fff;
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
 
   <div id="progress-bar" class="refill">
-    <div class="line-behind-text"><h6>Progress Bars</h6></div>
-    <div class="refill-centering"><div class="progress-bar">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Progress Bars</h6></div>
+      <div class="refill-centering"><div class="progress-bar">
   <span class="meter" style="width: 60%"></span>
 </div></div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;progress-bar&quot;&gt;
   &lt;span class=&quot;meter&quot; style=&quot;width: 60%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.progress-bar {
   $progress-border-color: $base-border-color;
@@ -5034,29 +5047,36 @@ $sliding-menu-color-hover: #fff;
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
-    <div class="refill-centering"><div class="progress-bar-indication">
+    <div class="refills-wrapper">
+      <div class="refill-centering"><div class="progress-bar-indication">
   <span class="meter" style="width: 60%">
     <p>60%</p>
   </span>
 </div></div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;progress-bar-indication&quot;&gt;
   &lt;span class=&quot;meter&quot; style=&quot;width: 60%&quot;&gt;
     &lt;p&gt;60%&lt;/p&gt;
   &lt;/span&gt;
 &lt;/div&gt;</code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.progress-bar-indication {
   $progress-border-color: $base-border-color;
@@ -5098,26 +5118,33 @@ $sliding-menu-color-hover: #fff;
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 
   <div id="tooltip" class="refill">
-    <div class="line-behind-text"><h6>Tooltip</h6></div>
-    <div class="refill-centering"><div class="tooltip-item">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Tooltip</h6></div>
+      <div class="refill-centering"><div class="tooltip-item">
   Hover for Tooltip
   <div class="tooltip">
     <p>Tooltip text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, deserunt, reprehenderit, dicta, nesciunt pariatur non laboriosam mollitia inventore temporibus ut provident facilis amet placeat consequuntur nam natus quae quos optio.</p>
   </div>
 </div>
 </div>
+    </div>
     <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
 
-<div class="snippet">
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;tooltip-item&quot;&gt;
   Hover for Tooltip
@@ -5126,9 +5153,9 @@ $sliding-menu-color-hover: #fff;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-</div>
+</td>
 
-<div class="snippet">
+<td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.tooltip-item {
   $tooltip-background: transparentize($dark-gray, 0.1);
@@ -5181,8 +5208,11 @@ $sliding-menu-color-hover: #fff;
   }
 }
 </code></pre>
-</div>
+</td>
 
+
+  </tr>
+</table>
 </div>
   </div>
 </div>
@@ -5213,14 +5243,14 @@ $sliding-menu-color-hover: #fff;
   $('a.js-show-code').on('click', function(e){
     $(this).hide();
     $(this).siblings('.js-hide-code').css('display', 'inline-block');
-    $(this).parent().siblings('.snippet').show();
+    $(this).parent().siblings('.snippets-table').show();
     e.preventDefault();
   })
 
   $('a.js-hide-code').on('click', function(e) {
     $(this).hide();
     $(this).siblings('.js-show-code').css("display", "inline-block");
-    $(this).parent().siblings('.snippet').hide();
+    $(this).parent().siblings('.snippets-table').hide();
     e.preventDefault();
   });
 </script>
