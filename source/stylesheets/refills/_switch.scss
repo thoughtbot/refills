@@ -1,20 +1,27 @@
 .label-switch {
+    $switch-container-width: 52px;
+    $switch-height: 32px;
+    $switch-radius: $switch-height / 2;
+    $knob-radius: 28px;
+
     display: inline-block;
     vertical-align: middle;
-    width: 52px;
-    border-radius: 16px;
+    width: $switch-container-width;
+    border-radius: $switch-radius;
     @include box-sizing(border-box);
-    height: 32px;
+    height: $switch-height;
     position: relative;
     cursor: pointer;
     align-self: center;
+
     input[type="checkbox"] {
         display: none;
-        &+ .checkbox {
-            width: 52px; 
-            border-radius: 16px;
+
+        + .checkbox {
+            width: $switch-container-width;
+            border-radius: $switch-radius;
             @include box-sizing(border-box);
-            height: 32px;
+            height: $switch-height;
             background: #e5e5e5;
             z-index: 0;
             margin: 0;
@@ -23,40 +30,42 @@
             cursor: pointer;
             position: relative;
             @include transition(all 0.3s ease);
+
             &:before {
                 content:' ';
-                position: absolute;
-                left: 2px;
-                top: 2px;
+                @include position(absolute, 2px 0 0 2px);
                 width: 48px;
-                border-radius: 16px;
+                border-radius: $switch-radius;
                 @include box-sizing(border-box);
-                height: 28px;
+                height: $knob-radius;
                 background: #fff;
                 z-index: 1;
                 @include transition(all 0.3s ease);
                 @include transform(scale(1));
             }
+
             &:after {
                 content:' ';
-                height: 28px;
-                width: 28px;
-                border-radius: 28px;
+                height: $knob-radius;
+                width: $knob-radius;
+                border-radius: $knob-radius;
                 background: #fff;
-                position: absolute;
+                @include position(absolute, 2px 0 0 2px);
                 z-index: 2;
-                top: 2px;
-                left: 2px;
                 @include box-shadow(0 2px 5px rgba(0,0,0,0.4));
                 @include transition(all 0.3s ease);
             }
         }
+
         &:checked {
-            &+ .checkbox {
+
+            + .checkbox {
                 background: #4cd964;
+
                 &:before {
                     @include transform(scale(0));
                 }
+
                 &:after {
                     left: 22px;
                 }
