@@ -1,3 +1,11 @@
+// Uncomment this and the lines below to make the footer sticky to the bottom of the screen:
+// html {
+//     position: relative;
+//     min-height: 100%;
+// }
+
+$footer-height: 100px;
+
 .footer-2 {
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
   $footer-color: white;
@@ -7,6 +15,12 @@
   background: $footer-background;
   padding: $base-line-height;
   width: 100%;
+  display: inline-block;
+
+  // Uncomment to make the footer sticky to the bottom of the screen:
+  // position: absolute;
+  // left: 0;
+  // bottom: 0;
 
   .footer-logo {
     margin-right: 1em;
