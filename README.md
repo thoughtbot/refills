@@ -16,7 +16,10 @@ See examples and get the code snippets [here](http://thoughtbot.github.io/refill
 
 # Installing Dependencies
 
-[Install Bourbon](http://bourbon.io/)
+[Install Bourbon](http://bourbon.io/). Make sure to install version 3.2.0. 
+```
+gem install bourbon -v 3.2.0
+```
 
 [Install Neat](http://neat.bourbon.io/)
 
