@@ -15,7 +15,9 @@ module Refills
     end
 
     def copy_javascripts
-      copy_file javascript_template, javascript_destination
+      if File.exist? File.join(ImportGenerator.source_root, javascript_template)
+        copy_file javascript_template, javascript_destination
+      end
     end
 
     private
