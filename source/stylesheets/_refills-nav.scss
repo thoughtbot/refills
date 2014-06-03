@@ -15,14 +15,26 @@ section.inner-content {
   font-size: $base-font-size;
   margin-bottom: $base-line-height;
   position: fixed;
-  top: 1em;
+  top: 4.5em;
   left: 1em;
   z-index: 9999;
+
+  &.fixedsticky-on {
+    margin-top: -3.5em;
+  }
+
+  &.fixedsticky-off {
+    position: fixed;
+  }
 
   img {
     height: 26px;
     width: 30px;
   }
+}
+
+.fixedsticky-dummy {
+  height: 0 !important;
 }
 
 .refills-menu-screen {
@@ -61,7 +73,7 @@ section.inner-content {
     padding: 1em;
   }
 
-  ul li {    
+  ul li {
     a {
       color: $light-gray;
       font-weight: 800;
@@ -83,9 +95,8 @@ section.inner-content {
   ul ul li a {
     font-weight: 200;
   }
-  
+
   &.is-visible {
     @include transform(translateX(0));
   }
 }
-  
