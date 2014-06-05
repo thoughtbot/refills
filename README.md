@@ -1,40 +1,37 @@
 # Refills
 
-## Prepackaged patterns and components, built on top of Bourbon, Bitters, and Neat
+## Prepackaged patterns and components, built on top of Bourbon, Bitters and Neat
 
+[Bourbon](http://bourbon.io) provides Sass mixins and eliminates vendor prefixes, for faster CSS coding.
 
-[Bourbon](http://bourbon.io/) provides Sass mixins and eliminates vendor prefixes, for faster CSS coding.
+[Neat](http://neat.bourbon.io) provides a lightweight grid framework.
 
-[Neat](http://neat.bourbon.io/) provides a lightweight grid framework.
+[Bitters](http://bitters.bourbon.io) provides basic variables and structure to a Bourbon/Neat project.
 
-[Bitters](http://bitters.bourbon.io/) provides basic variables and structure to a Bourbon/Neat project.
+[Refills](http://refills.bourbon.io) provides “copy-paste” components and patterns based on Bourbon, Neat and Bitters.
 
-[Refills](http://thoughtbot.github.io/refills/) provides "copy-paste" components and patterns based on Bourbon, Neat and Bitters.
-
-
-See examples and get the code snippets [here](http://thoughtbot.github.io/refills/)
+See examples and get the code snippets [here](http://refills.bourbon.io)
 
 # Installing Dependencies
 
-[Install Bourbon](http://bourbon.io/). Make sure to install version 3.2.0 if you are using e.g. Middleman. 
+[Install Bourbon](http://bourbon.io). Make sure to install version 3.2.0 if you are using e.g. Middleman.
 
-[Install Neat](http://neat.bourbon.io/)
+[Install Neat](http://neat.bourbon.io)
 
-[Install Bitters](http://bitters.bourbon.io/)
+[Install Bitters](http://bitters.bourbon.io)
 
-[Install jQuery](http://www.w3schools.com/jquery/jquery_install.asp) (if you are using any of the components/patterns that require Javascript. Javascript, when used, can be found at the bottom of the HTML file.)
+[Install jQuery](http://jquery.com) if you are using any of the components/patterns that require JavaScript. JavaScript, when used, can be found at the bottom of the HTML file.
 
-Click "Show Code" under the component/pattern you want in [Refills](http://thoughtbot.github.io/refills/) and paste it into your project. 
-If a component/pattern has javascript it is placed in the HTML.erb file. Feel free to place it somewhere else in your project.
+If a component/pattern has JavaScript it is placed in the HTML.erb file. Feel free to place it somewhere else in your project.
 
 # Using Refills
 
-* Click the "Show Code" link under the component/pattern you want to copy to your project and use the "copy" buttons to get the code to your clipboard. 
-* If a component uses Javascript, that code will be included at the bottom of the HTML file.
-* Each component/pattern has a set of variables at the very top of its Scss file. These pull out the most important properties of the component/pattern to enable quick changes of color, size and general appearance. 
-
+* Click the “Show Code” link under the component/pattern you want from [Refills](http://refills.bourbon.io) to copy to your project and use the “copy” buttons to get the code to your clipboard.
+* If a component uses JavaScript, that code will be included at the bottom of the HTML file.
+* Each component/pattern has a set of variables at the very top of its Scss file. These pull out the most important properties of the component/pattern to enable quick changes of color, size and general appearance.
 
 #### Using Refills with a Rails project
+
 Refills can be used by simply copy-pasting components/patterns from the site but if you prefer adding them via rake tasks, follow these steps:
 
 Add gem to your Gemfile
@@ -52,7 +49,7 @@ Copies partials to `app/views/refills` and stylesheets to
 
 # Submitting components or patterns
 
-You are more than welcome to submit any component or pattern you can't find in the library, or feel free to send requests for content you'd like to see. When submitting a pull request, please think of these style guides:
+You are more than welcome to submit any component or pattern you can’t find in the library, or feel free to send requests for content you’d like to see. When submitting a pull request, please think of these style guides:
 
 #### HTML.erb
 
@@ -60,29 +57,33 @@ You are more than welcome to submit any component or pattern you can't find in t
 
 #### Scss
 
-All components/pattern should be fully responsive and follow the [Neat examples](http://neat.bourbon.io/examples/).
+All components/pattern should be fully responsive and follow the [Neat examples](http://neat.bourbon.io/examples).
 
 Avoid more than 2 levels of nesting for clarity and legibility of code.
 
 Try to use as little styling as possible. Use the styles that come with Bitters to keep everything consistent.
 
-Put media queries inline, don't separate them since that will create a lot of repetitions of class names. If needed, for the sake of clarity, create a specific variable for a media query if a certain breakpoint changes the component/pattern drastically:
+Put media queries inline, don’t separate them since that will create a lot of repetitions of class names. If needed, for the sake of clarity, create a specific variable for a media query if a certain breakpoint changes the component/pattern drastically:
 
-      $tab-mode: $medium-screen;
-      
-      @include media($tab-mode) { // $tab-mode is the same as $medium-screen here
-        border-radius: 0;
-      }
+```scss
+$tab-mode: $medium-screen;
 
-Create variables for any color or size that might appear in a refill, Especially if it appears more than once in the component/pattern.
+@include media($tab-mode) { // $tab-mode is the same as $medium-screen here
+  border-radius: 0;
+}
+```
 
-Declare the variables inside of the component/pattern's class like below. Note that variables should be interdependent to enable quick restyling.
+Create variables for any color or size that might appear in a refill, especially if it appears more than once in the component/pattern.
 
-    .card {
-      $card-border-color: $base-border-color;
-      $card-border: 1px solid $card-border-color;
-      $card-background: lighten($card-border-color, 10);
-      ...
+Declare the variables inside of the component/pattern’s class like below. Note that variables should be interdependent to enable quick restyling.
+
+```scss
+.card {
+  $card-border-color: $base-border-color;
+  $card-border: 1px solid $card-border-color;
+  $card-background: lighten($card-border-color, 10);
+  &hellip;
+```
 
 # Credits
 
@@ -92,4 +93,4 @@ Refills is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/comm
 
 # License
 
-Refills is Copyright © 2014 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+Refills is Copyright © 2014 thoughtbot. It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.txt) file.

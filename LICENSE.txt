@@ -1,4 +1,4 @@
-Copyright (c) 2013 Joël Quenneville
+Copyright (c) 2014 thoughtbot, inc.
 
 MIT License
 
