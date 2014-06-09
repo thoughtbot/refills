@@ -7,7 +7,7 @@ section.inner-content {
 .refills-menu-anchor {
   @include inline-block;
   cursor: pointer;
-  border: 1px solid gray;
+  border: 1px solid darken(desaturate($logo-color, 50), 15);;
   height: 50px;
   width: 50px;
   padding: .7em 1em;
@@ -54,7 +54,7 @@ section.inner-content {
   @include transition(all .2s linear);
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  background: #1D3842;
+  background: black;
   z-index: 999999;
 
   ul {
@@ -63,7 +63,7 @@ section.inner-content {
 
   ul li {    
     a {
-      color: $light-gray;
+      color: white;
       font-weight: 800;
       font-size: $base-font-size;
 
