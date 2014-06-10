@@ -1,67 +1,77 @@
-.switch-container {
-  $switch-container-width: 5em;
-  $switch-height: 2em;
-  $switch-width: 1em;
-  $switch-radius: 3px;
-  $switch-inner-margin: .2em;
+.label-switch {
+  $switch-width: 52px;
+  $switch-padding: 2px;
+  $switch-height: 32px;
+  $switch-radius: $switch-height;
+  $knob-height: $switch-height - ($switch-padding * 2);
+  $knob-width: $knob-height;
+  $knob-radius: $switch-height - ($switch-padding * 2);
 
-  @include user-select(none);
-  @include inline-block;
+  align-self: center;
+  border-radius: $switch-radius;
+  cursor: pointer;
+  display: inline-block;
+  height: $switch-height;
   position: relative;
-  width: $switch-container-width;
-  margin-bottom: $base-line-height;
+  vertical-align: middle;
+  width: $switch-width;
+  @include box-sizing(border-box);
 
-  input.switch-checkbox {
+  input[type="checkbox"] {
     display: none;
 
-    &:checked + .switch-label .switch-inner {
-      margin-left: 0;
+  + .checkbox {
+    background: #e5e5e5;
+    border: none;
+    border-radius: $switch-radius;
+    cursor: pointer;
+    height: $switch-height;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: $switch-width;
+    z-index: 0;
+    @include box-sizing(border-box);
+    @include transition(all 0.3s ease);
+
+    &:before {
+      background: white;
+      border-radius: $switch-radius;
+      content: ' ';
+      height: $knob-radius;
+      width: $switch-width - ($switch-padding * 2);
+      z-index: 1;
+      @include box-sizing(border-box);
+      @include position(absolute, 2px 0 0 2px);
+      @include transition(all 0.3s ease);
+      @include transform(scale(1));
     }
 
-    &:checked + .switch-label .switch-toggle-switch {
-      right: 0;
+    &:after {
+      background: white;
+      border-radius: $knob-radius;
+      content: ' ';
+      height: $knob-height;
+      width: $knob-width;
+      z-index: 2;
+      @include box-shadow(0 2px 5px rgba(0,0,0,0.4));
+      @include position(absolute, 2px 0 0 2px);
+      @include transition(all 0.3s ease);
     }
   }
 
-  label.switch-label {
-    border-radius: $switch-radius;
-    cursor: pointer;
-    display: block;
-    overflow: hidden;
+  &:checked {
+    + .checkbox {
+      background: $blue;
+        
+        &:before {
+          @include transform(scale(0));
+        }
 
-    .switch-inner {
-      @include transition(opacity 0.3s ease);
-      margin-left: -100%;
-      width: 200%;
-
-      &:before, &:after {
-        @include box-sizing(border-box);
-        float: left;
-        height: $switch-height;
-        padding: 0;
-        width: 50%;
+        &:after {
+          left: $switch-width - $knob-width - ($switch-padding);
+        }
       }
-
-      &:before {
-        content: '';
-        background: $blue;
-      }
-
-      &:after {
-        content: '';
-        background: #DDD;
-      }
-    }
-
-    .switch-toggle-switch {
-      @include position(absolute, 0px ($switch-container-width - $switch-width - $switch-inner-margin *2) 0px 0);
-      @include transition(all 0.3s ease-in 0s);
-      height: $switch-height - $switch-inner-margin *2;
-      width: $switch-width;
-      border-radius: $switch-radius / 2;
-      margin: $switch-inner-margin;
-      background: white;
-      box-shadow: 0 0 1px 2px rgba(0,0,0,0.1);
     }
   }
 }
