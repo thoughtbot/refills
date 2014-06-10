@@ -75,7 +75,7 @@
     }
   }
 
-  li.tab-header-and-content section {
+  li.tab-header-and-content .tab-content {
     padding: $base-line-height $gutter;
     background: $tab-content-background;
     display: none;
