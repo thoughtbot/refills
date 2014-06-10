@@ -31,14 +31,27 @@ article.type-system-traditional {
   h2 {
     font-family: $serif;
     font-size: 1.3em;
-    font-style: italic;
     font-weight: 400;
     line-height: 1.25em;
     margin-bottom: .9em;
 
     @include media($medium-screen) {
-      font-size: 1.6em;
+      font-size: 1.5em;
     }
+  }
+
+  code {
+    white-space: nowrap;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: $base-border-radius * 1.5;
+    padding: .1em .4em;
+    font-size: .75em;
+    font-style: normal;
+  }
+
+  h2 code {
+    font-size: .65em;
   }
 
   h3 {

@@ -32,12 +32,22 @@ article.type-system-slab {
     font-family: $sans-serif;
     font-size: 1.1em;
     font-weight: 400;
-    line-height: 1.4em;
+    line-height: 1.5em;
     margin-bottom: 1.2em;
 
     @include media($medium-screen) {
-      font-size: 1.4em;
+      font-size: 1.3em;
     }
+  }
+
+  code {
+    white-space: nowrap;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: $base-border-radius * 1.5;
+    padding: .1em .4em;
+    font-size: .8em;
+    font-style: normal;
   }
 
   h3 {
