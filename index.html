@@ -221,14 +221,18 @@
       background: transparent;
       display: inline;
       line-height: $navigation-height;
-      padding-right: 2em;
       text-decoration: none;
       width: auto;
     }
 
     a {
       font-weight: 400;
+      display: inline-block;
       color: $navigation-color;
+
+      @include media ($horizontal-bar-mode) {
+        padding-right: 1em;
+      }
 
       &amp;:hover {
         color: $navigation-color-hover;
