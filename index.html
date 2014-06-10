@@ -364,9 +364,13 @@
 
       button[type=submit] {
         @include button(simple, lighten($navigation-search-background, 10));
-        @include position(absolute, 0.3em 0.3em 0.3em 0);
+        position: absolute;
+        top: 0.3em;
+        right: 0.3em;
+        bottom: 0.3em;
+        left: auto;
         outline: none;
-        padding: 5px 15px;
+        padding: 0 15px;
 
         img {
           height: 12px;
@@ -2089,27 +2093,27 @@
       <ul class="accordion-tabs">
   <li class="tab-header-and-content">
     <a href="#" class="is-active tab-link">Tab Item</a>
-    <section>
+    <div class="tab-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
-    </section>
+    </div>
   </li>
   <li class="tab-header-and-content">
     <a href="#" class="tab-link">Another Tab</a>
-    <section>
+    <div class="tab-content">
       <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
-    </section>
+    </div>
   </li>
   <li class="tab-header-and-content">
     <a href="#" class="tab-link">Third</a>
-    <section>
+    <div class="tab-content">
       <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>    
-    </section>
+    </div>
   </li>
   <li class="tab-header-and-content">
     <a href="#" class="tab-link">Last Item</a>
-    <section>
+    <div class="tab-content">
       <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.</p
-    </section>
+    </div>
   </li>
 </ul>
 
@@ -2126,27 +2130,27 @@
   <pre><code class="language-markup">&lt;ul class=&quot;accordion-tabs&quot;&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;is-active tab-link&quot;&gt;Tab Item&lt;/a&gt;
-    &lt;section&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.&lt;/p&gt;
-    &lt;/section&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;tab-link&quot;&gt;Another Tab&lt;/a&gt;
-    &lt;section&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
       &lt;p&gt;Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.&lt;/p&gt;
-    &lt;/section&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;tab-link&quot;&gt;Third&lt;/a&gt;
-    &lt;section&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
       &lt;p&gt;Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.&lt;/p&gt;    
-    &lt;/section&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;tab-link&quot;&gt;Last Item&lt;/a&gt;
-    &lt;section&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
       &lt;p&gt;Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.&lt;/p
-    &lt;/section&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
@@ -2231,7 +2235,7 @@
     }
   }
 
-  li.tab-header-and-content section {
+  li.tab-header-and-content .tab-content {
     padding: $base-line-height $gutter;
     background: $tab-content-background;
     display: none;
@@ -2286,27 +2290,27 @@
       <ul class="accordion-tabs-minimal">
   <li class="tab-header-and-content">
     <a href="#" class="tab-link is-active">Tab Item</a>
-    <section>
+    <div class="tab-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
-    </section>
+    </div>
   </li>
   <li class="tab-header-and-content">
     <a href="#" class="tab-link">Another Tab</a>
-    <section>
+    <div class="tab-content">
       <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
-    </section>
+    </div>
   </li>
   <li class="tab-header-and-content">
     <a href="#" class="tab-link">Third</a>
-    <section>
+    <div class="tab-content">
       <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>    
-    </section>
+    </div>
   </li>
   <li class="tab-header-and-content">
     <a href="#" class="tab-link">Last Item</a>
-    <section>
+    <div class="tab-content">
       <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.</p
-    </section>
+    </div>
   </li>
 </ul>
 
@@ -2323,27 +2327,27 @@
   <pre><code class="language-markup">&lt;ul class=&quot;accordion-tabs-minimal&quot;&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;tab-link is-active&quot;&gt;Tab Item&lt;/a&gt;
-    &lt;section&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.&lt;/p&gt;
-    &lt;/section&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;tab-link&quot;&gt;Another Tab&lt;/a&gt;
-    &lt;section&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
       &lt;p&gt;Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.&lt;/p&gt;
-    &lt;/section&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;tab-link&quot;&gt;Third&lt;/a&gt;
-    &lt;section&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
       &lt;p&gt;Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.&lt;/p&gt;    
-    &lt;/section&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;tab-link&quot;&gt;Last Item&lt;/a&gt;
-    &lt;section&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
       &lt;p&gt;Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.&lt;/p
-    &lt;/section&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
@@ -2428,7 +2432,7 @@
     }
   }
 
-  li.tab-header-and-content section {
+  li.tab-header-and-content .tab-content {
     padding: $base-line-height $gutter;
     background: $tab-content-background;
     display: none;

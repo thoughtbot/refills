@@ -1390,7 +1390,7 @@ section.inner-content {
           border-bottom: 1px solid #f7f7f7;
           margin-bottom: -1px; } }
   /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
-  .accordion-tabs li.tab-header-and-content section {
+  .accordion-tabs li.tab-header-and-content .tab-content {
     padding: 1.5em 1.618em;
     background: #f7f7f7;
     display: none;
@@ -1398,7 +1398,7 @@ section.inner-content {
     width: 100%; }
     @media screen and (min-width: 40em) {
       /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
-      .accordion-tabs li.tab-header-and-content section {
+      .accordion-tabs li.tab-header-and-content .tab-content {
         border-bottom-left-radius: 0.1875em;
         border-bottom-right-radius: 0.1875em;
         border: 1px solid #dddddd;
@@ -1406,7 +1406,7 @@ section.inner-content {
         left: 0;
         padding: 0.75em 0.809em; }
         /* line 93, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
-        .accordion-tabs li.tab-header-and-content section p {
+        .accordion-tabs li.tab-header-and-content .tab-content p {
           -webkit-columns: 2;
           -moz-columns: 2;
           columns: 2; } }
@@ -1483,7 +1483,7 @@ section.inner-content {
           border-bottom: 1px solid white;
           margin-bottom: -1px; } }
   /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-  .accordion-tabs-minimal li.tab-header-and-content section {
+  .accordion-tabs-minimal li.tab-header-and-content .tab-content {
     padding: 1.5em 1.618em;
     background: white;
     display: none;
@@ -1491,13 +1491,13 @@ section.inner-content {
     width: 100%; }
     @media screen and (min-width: 40em) {
       /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-      .accordion-tabs-minimal li.tab-header-and-content section {
+      .accordion-tabs-minimal li.tab-header-and-content .tab-content {
         border-top: 1px solid #dddddd;
         float: left;
         left: 0;
         padding: 0.75em 0.809em; }
         /* line 91, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
-        .accordion-tabs-minimal li.tab-header-and-content section p {
+        .accordion-tabs-minimal li.tab-header-and-content .tab-content p {
           -webkit-columns: 2;
           -moz-columns: 2;
           columns: 2; } }
@@ -2538,8 +2538,9 @@ header.navigation {
         top: 0.3em;
         right: 0.3em;
         bottom: 0.3em;
+        left: auto;
         outline: none;
-        padding: 5px 15px; }
+        padding: 0 15px; }
         /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
         header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled) {
           box-shadow: inset 0 1px 0 0 #666666;
@@ -2556,7 +2557,7 @@ header.navigation {
         header.navigation .search-bar .search-and-submit button[type=submit]:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
-        /* line 249, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 253, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation .search-bar .search-and-submit button[type=submit] img {
           height: 12px;
           opacity: .7; }
@@ -2566,7 +2567,7 @@ header.navigation {
         width: 16em;
         position: relative;
         display: inline-block; }
-        /* line 261, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 265, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation .search-bar input {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
