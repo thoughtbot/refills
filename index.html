@@ -11,16 +11,31 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Refills</title>
-    <link rel="shortcut icon" href="favicon.ico" />    
+    <link rel="shortcut icon" href="favicon.ico" />
     <link href="stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type='text/javascript' src='javascripts/jquery.erToc.js'></script>
   </head>
-  
+
   <body class="index">
+    <nav class="bourbon">
+      <ul>
+        <li><a href="http://bourbon.io" class="bourbon">Bourbon</a></li>
+        <li><a href="http://neat.bourbon.io" class="neat">Neat</a></li>
+        <li><a href="http://bitters.bourbon.io" class="bitters">Bitters</a></li>
+        <li><a href="http://refills.bourbon.io" class="refills current">Refills</a></li>
+      </ul>
+      <h1>Maintained by the design team at <a href="http://thoughtbot.com">thoughtbot</a></h1>
+    </nav>
+
     <section class="container">
       <section class="inner-content">
-        <div class="refills-header">
+        <a class="js-menu-trigger-refills refills-menu-anchor fixedsticky">
+  <img src="images/menu.png" alt="">
+</a>
+<div class="js-menu-screen-refills refills-menu-screen"></div>
+
+<div class="refills-header">
   <div class="refills-logo">
     <img src="images/refills-logo.svg" alt="">
   </div>
@@ -29,11 +44,6 @@
 </div>
 
 <div id="example1">
-
-  <a class="js-menu-trigger-refills refills-menu-anchor">
-    <img src="images/menu.png" alt="">
-  </a>
-  <div class="js-menu-screen-refills refills-menu-screen"></div>
 
   <h5>Patterns</h5>
 
@@ -2801,7 +2811,7 @@
 
   <div id="vertical-tabs" class="refill">
     <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Vertical Tabs</h6></div> 
+      <div class="line-behind-text"><h6>Vertical Tabs</h6></div>
       <div class="vertical-tabs-container">
   <div class="vertical-tabs">
     <a href="#" class="js-vertical-tab vertical-tab is-active" rel="tab1">Item 1</a>

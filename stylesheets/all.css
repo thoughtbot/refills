@@ -756,6 +756,148 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help; }
 
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/fixedsticky.css */
+.fixedsticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky; }
+
+/* When position: sticky is supported but native behavior is ignored */
+/* line 10, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/fixedsticky.css */
+.fixedsticky-withoutfixedfixed .fixedsticky-off,
+.fixed-supported .fixedsticky-off {
+  position: static; }
+
+/* line 14, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/fixedsticky.css */
+.fixedsticky-withoutfixedfixed .fixedsticky-on,
+.fixed-supported .fixedsticky-on {
+  position: fixed; }
+
+/* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/fixedsticky.css */
+.fixedsticky-dummy {
+  display: none; }
+
+/* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/fixedsticky.css */
+.fixedsticky-on + .fixedsticky-dummy {
+  display: block; }
+
+/* line 3, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+nav.bourbon {
+  *zoom: 1;
+  background-color: #5b5e63;
+  padding: 0 2em 0 1em; }
+  /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
+  nav.bourbon:before, nav.bourbon:after {
+    content: " ";
+    display: table; }
+  /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
+  nav.bourbon:after {
+    clear: both; }
+  @media screen and (max-width: 31.875em) {
+    /* line 3, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+    nav.bourbon {
+      padding: 0; } }
+  /* line 12, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+  nav.bourbon ul {
+    text-align: center; }
+    @media screen and (min-width: 56.3125em) {
+      /* line 12, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+      nav.bourbon ul {
+        float: left;
+        text-align: left; } }
+  /* line 21, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+  nav.bourbon li {
+    display: inline-block; }
+  /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+  nav.bourbon a {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    padding: 1em 1em 1em 3em; }
+    @media screen and (max-width: 32.1875em) {
+      /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+      nav.bourbon a {
+        padding: .75em .5em;
+        text-align: center; } }
+    @media screen and (max-width: 56.25em) {
+      /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+      nav.bourbon a {
+        display: block; } }
+    /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+    nav.bourbon a:hover {
+      background-color: #434548;
+      color: #fff; }
+    /* line 47, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+    nav.bourbon a.current {
+      background-color: #4f5156; }
+    /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+    nav.bourbon a.bourbon {
+      background-image: url("/images/bourbon-nav/bourbon.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+        /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+        nav.bourbon a.bourbon {
+          background-image: url("/images/bourbon-nav/bourbon@2x.png");
+          background-size: 20%; } }
+      @media screen and (max-width: 32.1875em) {
+        /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+        nav.bourbon a.bourbon {
+          background-image: none; } }
+    /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+    nav.bourbon a.neat {
+      background-image: url("/images/bourbon-nav/neat.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+        /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+        nav.bourbon a.neat {
+          background-image: url("/images/bourbon-nav/neat@2x.png");
+          background-size: 20%; } }
+      @media screen and (max-width: 32.1875em) {
+        /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+        nav.bourbon a.neat {
+          background-image: none; } }
+    /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+    nav.bourbon a.bitters {
+      background-image: url("/images/bourbon-nav/bitters.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+        /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+        nav.bourbon a.bitters {
+          background-image: url("/images/bourbon-nav/bitters@2x.png");
+          background-size: 20%; } }
+      @media screen and (max-width: 32.1875em) {
+        /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+        nav.bourbon a.bitters {
+          background-image: none; } }
+    /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+    nav.bourbon a.refills {
+      background-image: url("/images/bourbon-nav/refills.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+        /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+        nav.bourbon a.refills {
+          background-image: url("/images/bourbon-nav/refills@2x.png");
+          background-size: 20%; } }
+      @media screen and (max-width: 32.1875em) {
+        /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+        nav.bourbon a.refills {
+          background-image: none; } }
+  /* line 69, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+  nav.bourbon h1 {
+    color: rgba(255, 255, 255, 0.6);
+    float: right;
+    font-size: 1em; }
+    @media screen and (max-width: 56.25em) {
+      /* line 69, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+      nav.bourbon h1 {
+        display: none; } }
+    /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+    nav.bourbon h1 a {
+      padding: 1em 0; }
+      /* line 81, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
+      nav.bourbon h1 a:hover {
+        background-color: transparent; }
+
 /* line 10, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 body {
   background-color: white;
@@ -1198,15 +1340,25 @@ section.inner-content {
   font-size: 1em;
   margin-bottom: 1.5em;
   position: fixed;
-  top: 1em;
+  top: 4.5em;
   left: 1em;
   z-index: 9999; }
   /* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  .refills-menu-anchor.fixedsticky-on {
+    margin-top: -3.5em; }
+  /* line 26, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  .refills-menu-anchor.fixedsticky-off {
+    position: fixed; }
+  /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .refills-menu-anchor img {
     height: 26px;
     width: 30px; }
 
-/* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+/* line 36, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+.fixedsticky-dummy {
+  height: 0 !important; }
+
+/* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
 .refills-menu-screen {
   position: fixed;
   top: 0px;
@@ -1220,20 +1372,20 @@ section.inner-content {
   opacity: 0;
   visibility: hidden;
   z-index: 999998; }
-  /* line 36, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  /* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .refills-menu-screen.is-visible {
     opacity: 0;
     visibility: visible; }
 
-/* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+/* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
 .er_toc_title {
   display: none; }
 
-/* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+/* line 58, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
 .er_toc_top {
   display: none; }
 
-/* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+/* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
 .er_toc {
   position: fixed;
   top: 0px;
@@ -1254,27 +1406,27 @@ section.inner-content {
   -webkit-overflow-scrolling: touch;
   background: black;
   z-index: 999999; }
-  /* line 60, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  /* line 72, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .er_toc ul {
     padding: 1em; }
-  /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .er_toc ul li a {
     color: white;
     font-weight: 800;
     font-size: 1em; }
-    /* line 70, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+    /* line 82, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
     .er_toc ul li a:hover {
       color: #FFF;
       text-decoration: none; }
-  /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  /* line 89, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .er_toc ul ul {
     margin-top: .5em;
     margin-bottom: 1em;
     padding: 0; }
-  /* line 83, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .er_toc ul ul li a {
     font-weight: 200; }
-  /* line 87, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
+  /* line 99, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .er_toc.is-visible {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
