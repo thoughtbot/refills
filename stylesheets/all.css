@@ -3766,13 +3766,22 @@ article.type-system-slab {
     font-family: "Open Sans", sans-serif;
     font-size: 1.1em;
     font-weight: 400;
-    line-height: 1.4em;
+    line-height: 1.5em;
     margin-bottom: 1.2em; }
     @media screen and (min-width: 40em) {
       /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
       article.type-system-slab h2 {
-        font-size: 1.4em; } }
+        font-size: 1.3em; } }
   /* line 43, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
+  article.type-system-slab code {
+    white-space: nowrap;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: 0.28125em;
+    padding: .1em .4em;
+    font-size: .8em;
+    font-style: normal; }
+  /* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
   article.type-system-slab h3 {
     font-family: "Roboto Slab", serif;
     font-size: 1em;
@@ -3780,25 +3789,25 @@ article.type-system-slab {
     text-transform: uppercase;
     line-height: 1.4em;
     margin-bottom: .5em; }
-  /* line 52, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
+  /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
   article.type-system-slab p.date {
     color: rgba(51, 51, 51, 0.4);
     font-family: "Roboto Slab", serif;
     font-size: .8em;
     margin-bottom: .5em; }
-  /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
+  /* line 69, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
   article.type-system-slab p {
     font-family: "Roboto Slab", serif;
     font-weight: 300;
     letter-spacing: 1;
     margin-bottom: 1.5em; }
-    /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
+    /* line 75, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
     article.type-system-slab p span {
       font-family: "Open Sans", sans-serif;
       font-weight: 600;
       font-size: .8em;
       text-transform: uppercase; }
-  /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
+  /* line 83, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
   article.type-system-slab a.read-more {
     display: inline-block;
     font-family: "Roboto Slab", serif;
@@ -3807,16 +3816,16 @@ article.type-system-slab {
     text-transform: uppercase;
     margin-left: .2em;
     position: relative; }
-    /* line 82, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
+    /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
     article.type-system-slab a.read-more span {
       position: absolute;
       font-size: 1.8em;
       top: -2px;
       right: -12px; }
-  /* line 90, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
+  /* line 100, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
   article.type-system-slab hr {
     width: 3em; }
-  /* line 94, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
+  /* line 104, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
   article.type-system-slab p.author {
     font-family: "Roboto Slab", serif; }
 
@@ -3856,15 +3865,26 @@ article.type-system-traditional {
   article.type-system-traditional h2 {
     font-family: "Radley", serif;
     font-size: 1.3em;
-    font-style: italic;
     font-weight: 400;
     line-height: 1.25em;
     margin-bottom: .9em; }
     @media screen and (min-width: 40em) {
       /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
       article.type-system-traditional h2 {
-        font-size: 1.6em; } }
-  /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
+        font-size: 1.5em; } }
+  /* line 43, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
+  article.type-system-traditional code {
+    white-space: nowrap;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: 0.28125em;
+    padding: .1em .4em;
+    font-size: .75em;
+    font-style: normal; }
+  /* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
+  article.type-system-traditional h2 code {
+    font-size: .65em; }
+  /* line 57, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
   article.type-system-traditional h3 {
     font-family: "Radley", serif;
     font-size: 1.4em;
@@ -3872,24 +3892,24 @@ article.type-system-traditional {
     font-weight: 400;
     line-height: 1.3em;
     margin-bottom: .4em; }
-  /* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
+  /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
   article.type-system-traditional p.date {
     color: rgba(51, 51, 51, 0.4);
     font-family: "Radley", serif;
     font-style: italic;
     margin-bottom: .3em; }
-  /* line 60, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
+  /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
   article.type-system-traditional p {
     font-family: "Noto Sans", sans-serif;
     letter-spacing: 1;
     margin-bottom: 1.5em;
     line-height: 1.55em; }
-    /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
+    /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
     article.type-system-traditional p span {
       font-family: "Radley", serif;
       font-size: 1.2em;
       font-style: italic; }
-  /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
+  /* line 86, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
   article.type-system-traditional a.read-more {
     display: inline-block;
     font-family: "Noto Sans", sans-serif;
@@ -3898,7 +3918,7 @@ article.type-system-traditional {
     text-transform: uppercase;
     margin-left: .2em;
     position: relative; }
-    /* line 82, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
+    /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
     article.type-system-traditional a.read-more span {
       font-family: "Noto Sans", sans-serif;
       font-style: normal;
@@ -3906,10 +3926,10 @@ article.type-system-traditional {
       font-size: 1.5em;
       top: -1px;
       right: -12px; }
-  /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
+  /* line 105, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
   article.type-system-traditional hr {
     width: 3em; }
-  /* line 96, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
+  /* line 109, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
   article.type-system-traditional p.author {
     font-family: "Radley", serif;
     font-size: 1.2em;
@@ -3960,26 +3980,35 @@ article.type-system-geometric {
       article.type-system-geometric h2 {
         font-size: 1.3em; } }
   /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
+  article.type-system-geometric code {
+    white-space: nowrap;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: 0.28125em;
+    padding: .1em .4em;
+    font-size: .7em;
+    font-style: normal; }
+  /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
   article.type-system-geometric h3 {
     font-family: "Sanchez", serif;
     font-size: 1.4em;
     font-weight: 400;
     line-height: 1.3em;
     margin-bottom: .4em; }
-  /* line 52, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
+  /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
   article.type-system-geometric p.date {
     color: rgba(51, 51, 51, 0.4);
     font-family: "Sanchez", serif;
     font-style: italic;
     font-size: .9em;
     margin-bottom: .3em; }
-  /* line 60, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
+  /* line 70, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
   article.type-system-geometric p {
     font-family: "Questrial", sans-serif;
     line-height: 1.5em;
     font-size: 1.05em;
     margin-bottom: 1.5em; }
-  /* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
+  /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
   article.type-system-geometric a.read-more {
     display: inline-block;
     font-family: "Questrial", sans-serif;
@@ -3988,7 +4017,7 @@ article.type-system-geometric {
     text-transform: uppercase;
     margin-left: .2em;
     position: relative; }
-    /* line 76, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
+    /* line 86, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
     article.type-system-geometric a.read-more span {
       font-family: "Questrial", sans-serif;
       font-style: normal;
@@ -3996,10 +4025,10 @@ article.type-system-geometric {
       font-size: 1.5em;
       top: -1px;
       right: -12px; }
-  /* line 86, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
+  /* line 96, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
   article.type-system-geometric hr {
     width: 3em; }
-  /* line 90, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
+  /* line 100, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
   article.type-system-geometric p.author {
     font-family: "Questrial", sans-serif; }
 
@@ -4046,31 +4075,41 @@ article.type-system-rounded {
       article.type-system-rounded h2 {
         font-size: 1.4em; } }
   /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
+  article.type-system-rounded code {
+    white-space: nowrap;
+    font-family: monaco;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: 0.28125em;
+    padding: .1em .4em;
+    font-size: .7em;
+    font-style: normal; }
+  /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
   article.type-system-rounded h3 {
     font-family: "Varela Round", sans-serif;
     font-size: 1.2em;
     font-weight: 400;
     line-height: 1.3em;
     margin-bottom: .4em; }
-  /* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
+  /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
   article.type-system-rounded p.date {
     color: rgba(51, 51, 51, 0.4);
     font-family: "Nunito", sans-serif;
     font-size: .9em;
     margin-bottom: .3em; }
-  /* line 57, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
+  /* line 69, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
   article.type-system-rounded p {
     font-family: "Nunito", sans-serif;
     line-height: 1.4em;
     font-size: 1.05em;
     font-weight: 300;
     margin-bottom: 1.5em; }
-    /* line 64, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
+    /* line 76, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
     article.type-system-rounded p span {
       font-family: "Varela Round", sans-serif;
       text-transform: uppercase;
       font-size: 0.8em; }
-  /* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
+  /* line 83, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
   article.type-system-rounded a.read-more {
     display: inline-block;
     font-family: "Varela Round", sans-serif;
@@ -4079,16 +4118,16 @@ article.type-system-rounded {
     text-transform: uppercase;
     margin-left: .2em;
     position: relative; }
-    /* line 80, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
+    /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
     article.type-system-rounded a.read-more span {
       position: absolute;
       font-size: 1.5em;
       top: -1px;
       right: -12px; }
-  /* line 88, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
+  /* line 100, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
   article.type-system-rounded hr {
     width: 3em; }
-  /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
+  /* line 104, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
   article.type-system-rounded p.author {
     font-family: "Nunito", sans-serif; }
 
@@ -4137,6 +4176,16 @@ article.type-system-sans {
       article.type-system-sans h2 {
         font-size: 1.4em; } }
   /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
+  article.type-system-sans code {
+    white-space: nowrap;
+    font-family: monaco;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: 0.28125em;
+    padding: .1em .4em;
+    font-size: .65em;
+    font-style: normal; }
+  /* line 55, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
   article.type-system-sans h3 {
     font-family: "Titillium Web", sans-serif;
     font-size: 1em;
@@ -4144,28 +4193,28 @@ article.type-system-sans {
     text-transform: uppercase;
     line-height: 1.4em;
     margin-bottom: .5em; }
-  /* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
+  /* line 64, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
   article.type-system-sans p.date {
     color: rgba(51, 51, 51, 0.4);
     font-family: "PT Sans", sans-serif;
     font-size: .8em;
     margin-bottom: .5em; }
-  /* line 60, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
+  /* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
   article.type-system-sans p {
     font-family: "PT Sans", sans-serif;
     font-weight: 300;
     letter-spacing: 1;
     margin-bottom: 1.5em; }
-    /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
+    /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
     article.type-system-sans p span {
       font-family: "PT Sans", sans-serif;
       font-weight: 600;
       font-size: .8em;
       text-transform: uppercase; }
-  /* line 74, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
+  /* line 85, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
   article.type-system-sans hr {
     width: 3em; }
-  /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
+  /* line 89, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
   article.type-system-sans a.read-more {
     display: inline-block;
     font-family: "PT Sans", sans-serif;
@@ -4174,13 +4223,13 @@ article.type-system-sans {
     text-transform: uppercase;
     margin-left: .2em;
     position: relative; }
-    /* line 87, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
+    /* line 98, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
     article.type-system-sans a.read-more span {
       position: absolute;
       font-size: 1.7em;
       top: -2px;
       right: -10px; }
-  /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
+  /* line 106, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
   article.type-system-sans p.author {
     font-family: "PT Sans", sans-serif;
     font-style: italic; }
@@ -4230,30 +4279,40 @@ article.type-system-serif {
       article.type-system-serif h2 {
         font-size: 1.2em; } }
   /* line 45, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
+  article.type-system-serif code {
+    white-space: nowrap;
+    font-family: monaco;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: 0.28125em;
+    padding: .1em .4em;
+    font-size: .75em;
+    font-style: normal; }
+  /* line 56, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
   article.type-system-serif h3 {
     font-family: "Lusitana", serif;
     font-size: 1.4em;
     font-weight: 400;
     line-height: 1.3em;
     margin-bottom: .4em; }
-  /* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
+  /* line 64, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
   article.type-system-serif p.date {
     color: rgba(51, 51, 51, 0.4);
     font-family: "Merriweather", serif;
     font-style: italic;
     font-size: .9em;
     margin-bottom: .3em; }
-  /* line 61, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
+  /* line 72, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
   article.type-system-serif p {
     font-family: "Merriweather", serif;
     line-height: 1.6em;
     font-size: .9em;
     margin-bottom: 1.5em; }
-    /* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
+    /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
     article.type-system-serif p span {
       font-family: "Merriweather Sans", sans-serif;
       font-weight: 700; }
-  /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
+  /* line 84, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
   article.type-system-serif a.read-more {
     display: inline-block;
     font-family: "Merriweather Sans", sans-serif;
@@ -4262,7 +4321,7 @@ article.type-system-serif {
     text-transform: uppercase;
     margin-left: .2em;
     position: relative; }
-    /* line 82, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
+    /* line 93, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
     article.type-system-serif a.read-more span {
       font-family: "Lusitana", serif;
       font-style: normal;
@@ -4270,10 +4329,10 @@ article.type-system-serif {
       font-size: 1.5em;
       top: -1px;
       right: -12px; }
-  /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
+  /* line 103, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
   article.type-system-serif hr {
     width: 3em; }
-  /* line 96, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
+  /* line 107, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
   article.type-system-serif p.author {
     font-family: "Merriweather", serif;
     font-style: italic; }
