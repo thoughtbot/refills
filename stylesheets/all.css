@@ -2017,7 +2017,7 @@ section.inner-content {
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hero.scss */
 .hero {
-  background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
+  background: url(/images/lake-transparent.png);
   background-color: #40526b;
   background-repeat: no-repeat;
   background-position: top;
@@ -2576,7 +2576,7 @@ header.navigation {
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient.scss */
 .image-gradient {
-  background: url(https://raw.github.com/Magnus-G/Random/master/EmeraldLake.jpg);
+  background: url(/images/EmeraldLake.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -3352,7 +3352,7 @@ header.navigation {
 .hover-tile-outer {
   background-position: bottom;
   background-size: cover;
-  background: url("https://raw.github.com/Magnus-G/Random/master/mountains.png");
+  background: url("/images/mountains.png");
   background-size: cover;
   background-color: #BEB56E;
   border: 1px solid #dddddd;
@@ -3611,7 +3611,7 @@ header.navigation {
       max-width: 60%; } }
   /* line 90, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-items.scss */
   .grid-items .grid-item-image {
-    background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
+    background: url(/images/lake-transparent.png);
     background-color: #6b83a6;
     background-repeat: no-repeat;
     background-position: top;
