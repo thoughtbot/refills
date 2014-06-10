@@ -3498,7 +3498,12 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
 </table>
 </div>
       <div class="refills-wrapper">
-        <div class="refill-centering"><footer class="footer-2">
+        <div class="refill-centering"><!--<div class="wrapper-for-content-outside-of-footer">
+   Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
+  <div class="push"></div>
+</div>-->
+
+<footer class="footer-2">
   <div class="footer-logo">
     <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
   </div>
@@ -3538,7 +3543,12 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
   <tr>
     <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;footer class=&quot;footer-2&quot;&gt;
+  <pre><code class="language-markup">&lt;!--&lt;div class=&quot;wrapper-for-content-outside-of-footer&quot;&gt;
+   Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
+  &lt;div class=&quot;push&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;--&gt;
+
+&lt;footer class=&quot;footer-2&quot;&gt;
   &lt;div class=&quot;footer-logo&quot;&gt;
     &lt;img src=&quot;https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
   &lt;/div&gt;
@@ -3572,7 +3582,28 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.footer-2 {
+  <pre><code class="language-scss">// Uncomment this for a sticky footer.
+//
+// .wrapper-for-content-outside-of-footer {
+//   min-height: 100%;
+//   height: auto !important;
+//   height: 100%;
+//   margin: 0 auto -4em;
+// }
+
+// html, body {
+//  height: 100%;
+// }
+
+// .footer-2, .push {
+//   height: 17em;
+
+//   @include media($large-screen) {
+//     height: 4em;
+//   }
+// }
+
+.footer-2 {
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, .6);
