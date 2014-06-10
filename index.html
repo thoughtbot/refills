@@ -4577,13 +4577,10 @@ $sliding-menu-color-hover: #fff;
   <div id="switch" class="refill">
     <div class="refills-wrapper">
       <div class="line-behind-text"><h6>Switch</h6></div>
-      <div class="refill-centering"><div class="switch-container">
-  <input type="checkbox" id="switch-toggle-1" name="switch-toggle" class="switch-checkbox" checked/>
-  <label class="switch-label" for="switch-toggle-1">
-    <div class="switch-inner"></div>
-    <div class="switch-toggle-switch"></div>
-  </label>
-</div>
+      <div class="refill-centering"><label class="label-switch">
+  <input type="checkbox" />
+  <div class="checkbox"></div>
+</label>
 </div>
     </div>
     <div class="refill-snippet"><div class="refill-control">
@@ -4595,82 +4592,89 @@ $sliding-menu-color-hover: #fff;
   <tr>
     <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;switch-container&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; id=&quot;switch-toggle-1&quot; name=&quot;switch-toggle&quot; class=&quot;switch-checkbox&quot; checked/&gt;
-  &lt;label class=&quot;switch-label&quot; for=&quot;switch-toggle-1&quot;&gt;
-    &lt;div class=&quot;switch-inner&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;switch-toggle-switch&quot;&gt;&lt;/div&gt;
-  &lt;/label&gt;
-&lt;/div&gt;
+  <pre><code class="language-markup">&lt;label class=&quot;label-switch&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; /&gt;
+  &lt;div class=&quot;checkbox&quot;&gt;&lt;/div&gt;
+&lt;/label&gt;
 </code></pre>
 </td>
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.switch-container {
-  $switch-container-width: 5em;
-  $switch-height: 2em;
-  $switch-width: 1em;
-  $switch-radius: 3px;
-  $switch-inner-margin: .2em;
+  <pre><code class="language-scss">.label-switch {
+  $switch-width: 52px;
+  $switch-padding: 2px;
+  $switch-height: 32px;
+  $switch-radius: $switch-height;
+  $knob-height: $switch-height - ($switch-padding * 2);
+  $knob-width: $knob-height;
+  $knob-radius: $switch-height - ($switch-padding * 2);
 
-  @include user-select(none);
-  @include inline-block;
+  align-self: center;
+  border-radius: $switch-radius;
+  cursor: pointer;
+  display: inline-block;
+  height: $switch-height;
   position: relative;
-  width: $switch-container-width;
-  margin-bottom: $base-line-height;
+  vertical-align: middle;
+  width: $switch-width;
+  @include box-sizing(border-box);
 
-  input.switch-checkbox {
+  input[type=&quot;checkbox&quot;] {
     display: none;
 
-    &amp;:checked + .switch-label .switch-inner {
-      margin-left: 0;
+  + .checkbox {
+    background: #e5e5e5;
+    border: none;
+    border-radius: $switch-radius;
+    cursor: pointer;
+    height: $switch-height;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: $switch-width;
+    z-index: 0;
+    @include box-sizing(border-box);
+    @include transition(all 0.3s ease);
+
+    &amp;:before {
+      background: white;
+      border-radius: $switch-radius;
+      content: ' ';
+      height: $knob-radius;
+      width: $switch-width - ($switch-padding * 2);
+      z-index: 1;
+      @include box-sizing(border-box);
+      @include position(absolute, 2px 0 0 2px);
+      @include transition(all 0.3s ease);
+      @include transform(scale(1));
     }
 
-    &amp;:checked + .switch-label .switch-toggle-switch {
-      right: 0;
+    &amp;:after {
+      background: white;
+      border-radius: $knob-radius;
+      content: ' ';
+      height: $knob-height;
+      width: $knob-width;
+      z-index: 2;
+      @include box-shadow(0 2px 5px rgba(0,0,0,0.4));
+      @include position(absolute, 2px 0 0 2px);
+      @include transition(all 0.3s ease);
     }
   }
 
-  label.switch-label {
-    border-radius: $switch-radius;
-    cursor: pointer;
-    display: block;
-    overflow: hidden;
+  &amp;:checked {
+    + .checkbox {
+      background: $blue;
+        
+        &amp;:before {
+          @include transform(scale(0));
+        }
 
-    .switch-inner {
-      @include transition(opacity 0.3s ease);
-      margin-left: -100%;
-      width: 200%;
-
-      &amp;:before, &amp;:after {
-        @include box-sizing(border-box);
-        float: left;
-        height: $switch-height;
-        padding: 0;
-        width: 50%;
+        &amp;:after {
+          left: $switch-width - $knob-width - ($switch-padding);
+        }
       }
-
-      &amp;:before {
-        content: '';
-        background: $blue;
-      }
-
-      &amp;:after {
-        content: '';
-        background: #DDD;
-      }
-    }
-
-    .switch-toggle-switch {
-      @include position(absolute, 0px ($switch-container-width - $switch-width - $switch-inner-margin *2) 0px 0);
-      @include transition(all 0.3s ease-in 0s);
-      height: $switch-height - $switch-inner-margin *2;
-      width: $switch-width;
-      border-radius: $switch-radius / 2;
-      margin: $switch-inner-margin;
-      background: white;
-      box-shadow: 0 0 1px 2px rgba(0,0,0,0.1);
     }
   }
 }
