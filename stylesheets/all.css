@@ -3886,6 +3886,44 @@ header.navigation {
       font-size: .9em;
       color: rgba(51, 51, 51, 0.5); }
 
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_pagination.scss */
+.pagination {
+  text-align: center; }
+  /* line 10, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_pagination.scss */
+  .pagination ul {
+    display: inline;
+    text-align: center; }
+    /* line 14, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_pagination.scss */
+    .pagination ul li {
+      display: inline; }
+    /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_pagination.scss */
+    .pagination ul ul li {
+      display: none; }
+      /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_pagination.scss */
+      .pagination ul ul li:nth-child(1), .pagination ul ul li:nth-child(2), .pagination ul ul li:nth-child(3) {
+        display: inline; }
+      @media screen and (min-width: 53.75em) {
+        /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_pagination.scss */
+        .pagination ul ul li {
+          display: inline; } }
+    /* line 32, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_pagination.scss */
+    .pagination ul li a {
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      background: #f7f7f7;
+      border-radius: 0.1875em;
+      border: 1px solid #dddddd;
+      color: #333333;
+      padding: 0.375em 0.809em; }
+      /* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_pagination.scss */
+      .pagination ul li a:hover, .pagination ul li a:focus {
+        background: white;
+        color: #477dca; }
+      /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_pagination.scss */
+      .pagination ul li a:active {
+        background: #f7f7f7; }
+
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
 article.type-system-slab {
   *zoom: 1;

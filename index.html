@@ -2109,8 +2109,8 @@
   </div>
 
   <div id="accordion-tabs" class="refill">
-    <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
     <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
       <ul class="accordion-tabs">
   <li class="tab-header-and-content">
     <a href="#" class="is-active tab-link">Tab Item</a>
@@ -3799,6 +3799,119 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
     </div>
 
   <h5>Components</h5>
+
+  <div id="pagination" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Pagination</h6></div>
+      <div class="pagination">
+  <ul>
+    <li class="page-prev"><a href="javascript:void(0)">Prev</a></li>
+    <li>
+      <ul>
+        <li><a href="javascript:void(0)">1</a></li>
+        <li><a href="javascript:void(0)">2</a></li>
+        <li><a href="javascript:void(0)">3</a></li>
+        <li><a href="javascript:void(0)">4</a></li>
+        <li><a href="javascript:void(0)">5</a></li>
+        <li><a href="javascript:void(0)">6</a></li>
+        <li><a href="javascript:void(0)">7</a></li>
+      </ul>
+    </li>
+    <li class="page-next"><a href="javascript:void(0)">Next</a></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;pagination&quot;&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;page-prev&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Prev&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;6&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;7&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;page-next&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.pagination {
+  $pagination-border-color: $base-border-color;
+  $pagination-border: 1px solid $pagination-border-color;
+  $pagination-background: lighten($pagination-border-color, 10);
+  $pagination-hover-background: lighten($pagination-background, 5);
+  $pagination-color: $base-font-color;
+
+  text-align: center;
+
+  ul {
+    display: inline;
+    text-align: center;
+
+    li {
+      display: inline;
+    }
+
+    ul li {
+      display: none;
+      
+      &amp;:nth-child(1),
+      &amp;:nth-child(2),
+      &amp;:nth-child(3) {
+        display: inline;
+      }
+
+      @include media($large-screen) {
+        display: inline;
+      }
+    }
+
+    li a {
+      @include transition (all 0.2s ease-in-out);
+      background: $pagination-background;
+      border-radius: $base-border-radius;
+      border: $pagination-border;
+      color: $pagination-color;
+      padding: $base-line-height/4 $gutter/2;
+
+      &amp;:hover,
+      &amp;:focus {
+        background: $pagination-hover-background;
+        color: $base-link-color;
+      }
+
+      &amp;:active {
+        background: $pagination-background;
+      }
+    }
+  }
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+  </div>
 
   <div id="modal" class="refill">
     <div class="refills-wrapper">
