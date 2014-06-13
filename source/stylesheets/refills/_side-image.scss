@@ -61,4 +61,5 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
     font-size: $base-font-size;
     outline: none;
   }
+  @include reset-display();
 }

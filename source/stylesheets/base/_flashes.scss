@@ -1,3 +1,7 @@
+%flash-alert {
+  @include flash($alert-color);
+}
+
 %flash-error {
   @include flash($error-color);
 }
