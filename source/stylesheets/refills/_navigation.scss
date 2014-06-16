@@ -11,6 +11,7 @@ header.navigation {
   $navigation-search-border: 1px solid darken($navigation-background, 5);
   $navigation-active-link-color: transparentize(white, 0.5);
   $navigation-submenu-padding: 1em;
+  $navigation-submenu-width: 12em;
   $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
@@ -85,6 +86,8 @@ header.navigation {
     }
   }
 
+  // The nav items
+
   ul li {
     background: $navigation-background;
     display: block;
@@ -123,10 +126,53 @@ header.navigation {
     border-bottom: 1px solid $navigation-active-link-color;
   }
 
+  // Sub menus
+
+  li.more.nav-link {
+    > ul > li:first-child a  {
+      padding-top: 1em;
+    }
+
+    a {
+      margin-right: $navigation-submenu-padding;
+    }
+
+    > a {
+      padding-right: 0.6em;
+    }
+
+    > a:after {
+      content: '▾';
+      position: absolute;
+      right: -.4em;
+      color: $navigation-color;
+    }
+  }
+
   li.more {
     padding-right: 0;
+    overflow: visible;
 
-    &:hover .submenu {
+    a {
+      padding-right: .8em;
+    }
+
+    > a {
+      position: relative;
+      padding-right: 1.6em;
+
+      @include media($large-screen) {
+        margin-right: $navigation-submenu-padding;
+      }
+
+      &:after {
+        content: '⟩';
+        position: absolute;
+        right: $navigation-submenu-padding / 2;
+      }      
+    }
+
+    &:hover > .submenu {
       display: block;
     }
 
@@ -136,11 +182,7 @@ header.navigation {
     }
   }
 
-  li.more a {
-    padding-right: .8em;
-  }
-
-  .submenu {
+  ul.submenu {
     display: none;
 
     @include media($horizontal-bar-mode) {
@@ -149,17 +191,26 @@ header.navigation {
       left: -$navigation-submenu-padding;
     }
 
+    .submenu {
+      @include media($horizontal-bar-mode) {
+        left: $navigation-submenu-width - .2em;
+        top: 0;
+      }
+    }
+
     li {
       display: block;
       padding-right: 0;
 
       @include media($horizontal-bar-mode) {
-        line-height: $navigation-height /1.3;
+        line-height: $navigation-height / 1.3;
 
-        &:first-child a {
-          padding-top: 1em;
+        &:first-child > a {
+          border-top-left-radius: $base-border-radius;
+          border-top-right-radius: $base-border-radius;
         }
-        &:last-child a {
+
+        &:last-child > a {
           border-bottom-left-radius: $base-border-radius;
           border-bottom-right-radius: $base-border-radius;
           padding-bottom: .7em;
@@ -173,7 +224,7 @@ header.navigation {
         display: inline-block;
 
         @include media($horizontal-bar-mode) {
-          width: 12em;
+          width: $navigation-submenu-width;
           background-color: $navigation-background;
           text-align: left;
           padding-left: $navigation-submenu-padding;
@@ -181,6 +232,8 @@ header.navigation {
       }
     }
   }
+
+  // Elements on the far right
 
   .navigation-tools {
     @include clearfix;
@@ -218,6 +271,8 @@ header.navigation {
       background: lighten($navigation-nav-button-background, 10);
     }
   }
+
+  // Search bar
 
   .search-bar {
     $search-bar-border-color: $base-border-color;
