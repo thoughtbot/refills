@@ -15,10 +15,16 @@ module Refills
     end
 
     def copy_javascripts
-      copy_file "javascripts/refills/_#{snippet}.js", "app/assets/javascripts/refills/_#{snippet}.js"
+      if File.exist? File.join(ImportGenerator.source_root, javascript_template)
+        copy_file javascript_template, javascript_destination
+      end
     end
 
     private
+
+    def javascript_destination
+      File.join('app', 'assets', 'javascripts', 'refills', javascript_name(snippet_name))
+    end
 
     def stylesheet_destination
       File.join('app', 'assets', 'stylesheets', 'refills', stylesheet_name(snippet_name))
@@ -32,12 +38,20 @@ module Refills
       File.join('stylesheets', 'refills', stylesheet_name(snippet))
     end
 
+    def javascript_template
+      File.join('javascripts', 'refills', javascript_name(snippet))
+    end
+
     def view_name(name)
       "_#{name}.html.erb"
     end
 
     def stylesheet_name(name)
       "_#{name}.scss"
+    end
+
+    def javascript_name(name)
+      "_#{name}.js"
     end
 
     def snippet_name
