@@ -54,7 +54,7 @@
       height: $knob-height;
       width: $knob-width;
       z-index: 2;
-      @include box-shadow(0 2px 5px rgba(0,0,0,0.4));
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
       @include position(absolute, 2px 0 0 2px);
       @include transition(all 0.3s ease);
     }
