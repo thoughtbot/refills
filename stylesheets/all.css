@@ -4061,6 +4061,109 @@ header.navigation {
   width: 100%;
   z-index: 999; }
 
+/* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_side-image.scss */
+.side-image {
+  background: #F9F9F9; }
+  @media screen and (min-width: 53.75em) {
+    /* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_side-image.scss */
+    .side-image {
+      *zoom: 1;
+      display: table;
+      width: 100%;
+      table-layout: fixed; }
+      /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
+      .side-image:before, .side-image:after {
+        content: " ";
+        display: table; }
+      /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
+      .side-image:after {
+        clear: both; } }
+  /* line 12, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_side-image.scss */
+  .side-image .images-wrapper {
+    background-color: #b5ebeb;
+    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), -webkit-linear-gradient( #b5ebeb, #5dac5d), no-repeat #b5ebeb scroll;
+    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), linear-gradient( #b5ebeb, #5dac5d), no-repeat #b5ebeb scroll;
+    background-color: #b5ebeb;
+    border-bottom: 1px solid rgba(38, 74, 38, 0.2);
+    background-size: cover;
+    display: block;
+    min-height: 12em;
+    padding: 3em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 12, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_side-image.scss */
+      .side-image .images-wrapper {
+        display: table-cell;
+        padding-right: 1.76824%;
+        width: 33.5298%;
+        background-position: bottom;
+        background-size: cover;
+        border-right: 1px solid rgba(38, 74, 38, 0.2); } }
+  /* line 29, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_side-image.scss */
+  .side-image .content {
+    display: table-cell;
+    padding-right: 2.16118%;
+    width: 102.16118%;
+    padding: 1em 1em 4em 1em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 29, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_side-image.scss */
+      .side-image .content {
+        display: table-cell;
+        padding-right: 2.06295%;
+        width: 67.94373%;
+        padding: 4em 4em 8em 4em; } }
+  /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_side-image.scss */
+  .side-image .content h1 {
+    margin-bottom: .9em; }
+  /* line 43, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_side-image.scss */
+  .side-image .content h4 {
+    background: #5dac5d;
+    color: white;
+    display: inline-block;
+    font-size: .75em;
+    font-weight: 800;
+    margin-bottom: 1.3em;
+    padding: 3px 8px;
+    text-transform: uppercase; }
+  /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_side-image.scss */
+  .side-image .content p {
+    color: gray;
+    margin-bottom: 3em; }
+  /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_side-image.scss */
+  .side-image .content button {
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 white;
+    color: #333333;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: white;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e3e3e3));
+    background-image: -webkit-linear-gradient(white, #e3e3e3);
+    background-image: linear-gradient(white, #e3e3e3);
+    padding: 7px 18px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 white;
+    background-clip: padding-box;
+    font-size: 1em;
+    outline: none; }
+    /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    .side-image .content button:hover:not(:disabled) {
+      box-shadow: inset 0 1px 0 0 white;
+      cursor: pointer;
+      background-color: #f2f2f2;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #dbdbdb));
+      background-image: -webkit-linear-gradient(#f2f2f2, #dbdbdb);
+      background-image: linear-gradient(#f2f2f2, #dbdbdb); }
+    /* line 95, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    .side-image .content button:active:not(:disabled) {
+      border: 1px solid #dbdbdb;
+      box-shadow: inset 0 0 8px 4px #d4d4d4, inset 0 0 8px 4px #d4d4d4, 0 1px 1px 0 #eeeeee; }
+    /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    .side-image .content button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed; }
+
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
 article.type-system-slab {
   *zoom: 1;
