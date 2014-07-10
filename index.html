@@ -530,7 +530,7 @@
 " alt=""></a>
 		<div class="hero-copy">
 			<h1>Short description of Product</h1>
-			<p>A few reasons why this product is worth using, who is it for and why do they need it.</p>	
+			<p>A few reasons why this product is worth using, who it's for and why they need it.</p>	
 		</div>
     <button>Learn More</button>
 	</div>
@@ -552,7 +552,7 @@
 &quot; alt=&quot;&quot;&gt;&lt;/a&gt;
 		&lt;div class=&quot;hero-copy&quot;&gt;
 			&lt;h1&gt;Short description of Product&lt;/h1&gt;
-			&lt;p&gt;A few reasons why this product is worth using, who is it for and why do they need it.&lt;/p&gt;	
+			&lt;p&gt;A few reasons why this product is worth using, who it's for and why they need it.&lt;/p&gt;	
 		&lt;/div&gt;
     &lt;button&gt;Learn More&lt;/button&gt;
 	&lt;/div&gt;
@@ -563,59 +563,64 @@
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.hero {
-	$hero-background: desaturate(darken($base-accent-color, 20), 30);	
-	$hero-color: white;
+  $hero-background-top: darken($base-accent-color, 25); 
+  $hero-background-bottom: adjust-hue($hero-background-top, -70);
+  $hero-color: white;
+  $gradient-angle: 10deg;
+  $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
 
-	background: url(/images/lake-transparent.png);
-	background-color: $hero-background;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	padding-bottom: 4em;
+  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
 
-	.hero-logo img {
-		height: 3em;
-		margin-bottom: 1em;
-	}
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding-bottom: 4em;
 
-	.hero-inner {
-		@include outer-container;
-		@include clearfix;
-		padding: 3em;
-		margin: auto;
-		text-align: center;
-		color: $hero-color;
+  .hero-logo img {
+    height: 3em;
+    margin-bottom: 2.5em;
+  }
 
-		button {
-			@include button(simple, $base-accent-color);
-			font-size: $base-font-size;
-			outline: none;
-		}
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    padding: 3em;
+    margin: auto;
+    text-align: center;
+    color: $hero-color;
 
-		.hero-copy {
-			text-align: center;
-			
-			h1 {
-				font-size: 1.4em;
-				margin-bottom: .2em;
+    button {
+      @include button(simple, $base-body-color);
+      font-size: $base-font-size;
+      outline: none;
+    }
 
-				@include media($large-screen) {
-					font-size: 1.8em;
-				}
-			}
+    .hero-copy {
+      text-align: center;
+      
+      h1 {
+        font-size: 1.6em;
+        margin-bottom: .5em;
 
-			p {
-				margin: auto;
-				margin-bottom: 3em;	
-				font-weight: 200;
+        @include media($large-screen) {
+          font-size: 1.8em;
+        }
+      }
 
-				@include media($large-screen) {
-					font-size: 1.2em;
-					max-width: 40%;
-				}
-			}
-		}
-	}
+      p {
+        font-family: $serif;
+        margin: auto;
+        margin-bottom: 3em; 
+        font-weight: 200;
+        line-height: 1.4em;
+
+        @include media($large-screen) {
+          font-size: 1.1em;
+          max-width: 40%;
+        }
+      }
+    }
+  }
 }
 </code></pre>
 </td>
@@ -5377,104 +5382,12 @@ $sliding-menu-color-hover: #fff;
   <div id="image-gradient" class="refill">
     <div class="refills-wrapper">
       <div class="line-behind-text"><h6>Image with gradient overlays</h6></div>
-      <div class="refill-centering">  <div class="image-gradient">
-    <div class="copy">
-    <p>Fixed height container</p>
-    </div>
-    <div class="overlay"></div>
-  </div>
-</div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">  &lt;div class=&quot;image-gradient&quot;&gt;
-    &lt;div class=&quot;copy&quot;&gt;
-    &lt;p&gt;Fixed height container&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.image-gradient {
-  $image-gradient-color-top: teal; 
-  $transparency-top: .6;
-  $image-gradient-color-bottom: green; 
-  $transparency-bottom: .6;
-  $vertical-angle: 180deg;
-
-  $image-gradient-color-left: red; 
-  $transparency-left: .9;
-  $image-gradient-color-right: yellow; 
-  $transparency-right: .8;
-  $horizontal-angle: 90deg;
-
-  background: url(/images/EmeraldLake.jpg);
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  padding: 12em 0 12em 0;
-  position: relative;
-  width: 100%;
-  display: table;
-  margin-bottom: $base-line-height;
-
-  .copy {
-    position: absolute;
-    left: 50%;
-    margin: auto;
-    z-index: 999;
-    top: 40%;
-    text-align: center;
-
-    p {
-      padding: 1em 2em;
-      position: relative;
-      left: -50%;
-      color: white;
-      font-weight: 800;
-      background-color: transparentize(black, .6);
-    }
-  }
-
-  .overlay {
-    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
-      transparentize($image-gradient-color-bottom, $transparency-bottom));
-    display: block;
-    @include position(absolute, 0px 0px 0px 0px);
-
-    &amp;:after {
-      content: '';
-      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
-        transparentize($image-gradient-color-right, $transparency-right));
-      display: block;
-      @include position(absolute, 0px 0px 0px 0px);
-    }
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-    <div class="refills-wrapper">
       <div class="refill-centering"><div class="image-gradient-dynamic">
-  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/EmeraldLake.jpg" alt="">
+  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+  <div class="overlay"></div>
   <div class="copy">
     <p>Dynamic height container</p>
   </div>
-  <div class="overlay"></div>
 </div>
 </div>
     </div>
@@ -5488,11 +5401,11 @@ $sliding-menu-color-hover: #fff;
     <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;image-gradient-dynamic&quot;&gt;
-  &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/EmeraldLake.jpg&quot; alt=&quot;&quot;&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot; alt=&quot;&quot;&gt;
+  &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;copy&quot;&gt;
     &lt;p&gt;Dynamic height container&lt;/p&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 </td>
@@ -5500,11 +5413,11 @@ $sliding-menu-color-hover: #fff;
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.image-gradient-dynamic {
-  $image-gradient-color-top: orange; 
-  $transparency-top: .6;
-  $image-gradient-color-bottom: teal; 
+  $image-gradient-color-top: red; 
+  $transparency-top: .9;
+  $image-gradient-color-bottom: green; 
   $transparency-bottom: .6;
-  $vertical-angle: 180deg;
+  $vertical-angle: 0deg;
 
   $image-gradient-color-left: teal; 
   $transparency-left: .8;
@@ -5540,7 +5453,6 @@ $sliding-menu-color-hover: #fff;
       position: relative;
       color: white;
       font-weight: 800;
-      background-color: transparentize(black, .6);
     }
   }
 
