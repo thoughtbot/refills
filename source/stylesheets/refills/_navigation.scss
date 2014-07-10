@@ -184,6 +184,7 @@ header.navigation {
 
   ul.submenu {
     display: none;
+    padding-left: 0;
 
     @include media($horizontal-bar-mode) {
       position: absolute;
@@ -293,6 +294,10 @@ header.navigation {
         color: $navigation-color;
         border-radius: $base-border-radius * 2;
         margin: 0;
+
+        @include media($large-screen) {
+          width: 100%;
+        }
       }
 
       button[type=submit] {
