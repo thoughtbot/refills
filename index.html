@@ -65,6 +65,18 @@
           <ul class="submenu">
             <li><a href="javascript:void(0)">Submenu Item</a></li>
             <li><a href="javascript:void(0)">Another Item</a></li>
+            <li class="more"><a href="javascript:void(0)">Item with submenu</a>
+              <ul class="submenu">
+                <li><a href="javascript:void(0)">Sub-submenu Item</a></li>
+                <li><a href="javascript:void(0)">Another Item</a></li>
+              </ul>
+            </li>
+            <li class="more"><a href="javascript:void(0)">Another submenu</a>
+              <ul class="submenu">
+                <li><a href="javascript:void(0)">Sub-submenu</a></li>
+                <li><a href="javascript:void(0)">An Item</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -108,6 +120,18 @@
           &lt;ul class=&quot;submenu&quot;&gt;
             &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Submenu Item&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Item with submenu&lt;/a&gt;
+              &lt;ul class=&quot;submenu&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sub-submenu Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another Item&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another submenu&lt;/a&gt;
+              &lt;ul class=&quot;submenu&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sub-submenu&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;An Item&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
           &lt;/ul&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
@@ -143,6 +167,7 @@
   $navigation-search-border: 1px solid darken($navigation-background, 5);
   $navigation-active-link-color: transparentize(white, 0.5);
   $navigation-submenu-padding: 1em;
+  $navigation-submenu-width: 12em;
   $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
@@ -217,6 +242,8 @@
     }
   }
 
+  // The nav items
+
   ul li {
     background: $navigation-background;
     display: block;
@@ -255,10 +282,53 @@
     border-bottom: 1px solid $navigation-active-link-color;
   }
 
+  // Sub menus
+
+  li.more.nav-link {
+    &gt; ul &gt; li:first-child a  {
+      padding-top: 1em;
+    }
+
+    a {
+      margin-right: $navigation-submenu-padding;
+    }
+
+    &gt; a {
+      padding-right: 0.6em;
+    }
+
+    &gt; a:after {
+      content: '▾';
+      position: absolute;
+      right: -.4em;
+      color: $navigation-color;
+    }
+  }
+
   li.more {
     padding-right: 0;
+    overflow: visible;
 
-    &amp;:hover .submenu {
+    a {
+      padding-right: .8em;
+    }
+
+    &gt; a {
+      position: relative;
+      padding-right: 1.6em;
+
+      @include media($large-screen) {
+        margin-right: $navigation-submenu-padding;
+      }
+
+      &amp;:after {
+        content: '⟩';
+        position: absolute;
+        right: $navigation-submenu-padding / 2;
+      }      
+    }
+
+    &amp;:hover &gt; .submenu {
       display: block;
     }
 
@@ -268,11 +338,7 @@
     }
   }
 
-  li.more a {
-    padding-right: .8em;
-  }
-
-  .submenu {
+  ul.submenu {
     display: none;
 
     @include media($horizontal-bar-mode) {
@@ -281,17 +347,26 @@
       left: -$navigation-submenu-padding;
     }
 
+    .submenu {
+      @include media($horizontal-bar-mode) {
+        left: $navigation-submenu-width - .2em;
+        top: 0;
+      }
+    }
+
     li {
       display: block;
       padding-right: 0;
 
       @include media($horizontal-bar-mode) {
-        line-height: $navigation-height /1.3;
+        line-height: $navigation-height / 1.3;
 
-        &amp;:first-child a {
-          padding-top: 1em;
+        &amp;:first-child &gt; a {
+          border-top-left-radius: $base-border-radius;
+          border-top-right-radius: $base-border-radius;
         }
-        &amp;:last-child a {
+
+        &amp;:last-child &gt; a {
           border-bottom-left-radius: $base-border-radius;
           border-bottom-right-radius: $base-border-radius;
           padding-bottom: .7em;
@@ -305,7 +380,7 @@
         display: inline-block;
 
         @include media($horizontal-bar-mode) {
-          width: 12em;
+          width: $navigation-submenu-width;
           background-color: $navigation-background;
           text-align: left;
           padding-left: $navigation-submenu-padding;
@@ -313,6 +388,8 @@
       }
     }
   }
+
+  // Elements on the far right
 
   .navigation-tools {
     @include clearfix;
@@ -350,6 +427,8 @@
       background: lighten($navigation-nav-button-background, 10);
     }
   }
+
+  // Search bar
 
   .search-bar {
     $search-bar-border-color: $base-border-color;
