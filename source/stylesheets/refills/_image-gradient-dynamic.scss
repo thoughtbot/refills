@@ -1,9 +1,9 @@
 .image-gradient-dynamic {
-  $image-gradient-color-top: orange; 
-  $transparency-top: .6;
-  $image-gradient-color-bottom: teal; 
+  $image-gradient-color-top: red; 
+  $transparency-top: .9;
+  $image-gradient-color-bottom: green; 
   $transparency-bottom: .6;
-  $vertical-angle: 180deg;
+  $vertical-angle: 0deg;
 
   $image-gradient-color-left: teal; 
   $transparency-left: .8;
@@ -39,7 +39,6 @@
       position: relative;
       color: white;
       font-weight: 800;
-      background-color: transparentize(black, .6);
     }
   }
 
