@@ -1,0 +1,21 @@
+.video {
+  margin: auto;
+
+  @include media($large-screen) {
+    width: 50%;
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+  height: 0;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
