@@ -3359,11 +3359,11 @@ header.navigation {
   border-radius: 0.1875em;
   position: relative;
   margin-bottom: 1.5em; }
-  /* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
+  /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
   .tooltip-item:hover .tooltip {
     opacity: 1;
     visibility: visible; }
-  /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
+  /* line 21, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
   .tooltip-item .tooltip {
     position: absolute;
     left: 50%;
@@ -3373,32 +3373,36 @@ header.navigation {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    bottom: 130%;
-    background-color: rgba(51, 51, 51, 0.9);
+    bottom: 140%;
+    background-color: white;
     border-radius: 0.1875em;
-    color: white;
+    color: #333333;
     font-size: .9em;
     line-height: 1.5em;
     margin-left: -8em;
     opacity: 0;
     padding: 1em;
+    box-shadow: 0 2px 2px silver;
     text-align: center;
     visibility: hidden;
     min-width: 16em;
-    z-index: 10; }
-    /* line 36, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
+    z-index: 10;
+    font-family: "Lusitana", serif; }
+    /* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
     .tooltip-item .tooltip p {
       margin-bottom: 0; }
-    /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
+    /* line 45, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
     .tooltip-item .tooltip:after {
       position: absolute;
-      left: 50%;
+      left: 46%;
       margin-left: -8px;
       border: 8px solid transparent;
-      border-top-color: rgba(51, 51, 51, 0.9);
-      content: '';
+      color: white;
+      content: '▼';
+      text-shadow: 0 2px 2px silver;
+      font-size: 1.4em;
       pointer-events: none;
-      bottom: -16px; }
+      bottom: -27.2px; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
 .vertical-tabs-container {
