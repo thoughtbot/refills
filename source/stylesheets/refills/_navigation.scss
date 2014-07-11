@@ -16,14 +16,13 @@ header.navigation {
 
   background-color: $navigation-background;
   border-bottom: 1px solid darken($navigation-background, 10);
-  font-family: $sans-serif;
   height: $navigation-height;
   width: 100%;
   z-index: 999;
 
-  .menu-wrapper {
-    @include outer-container;
+  .navigation-wrapper {
     @include clearfix;
+    @include outer-container;
     position: relative;
     z-index: 9999;
   }
@@ -40,9 +39,10 @@ header.navigation {
     }
   }
 
+  // Mobile view
+
   .navigation-menu-button {
     color: $navigation-color;
-    cursor: pointer;
     display: block;
     float: right;
     font-family: $sans-serif;
@@ -61,6 +61,8 @@ header.navigation {
     }
   }
 
+  // Nav menu
+
   .nav {
     z-index: 9999999;
     float: none;
@@ -70,8 +72,8 @@ header.navigation {
   }
 
   ul#navigation-menu {    
-    clear: both;
     -webkit-transform-style: preserve-3d; // stop webkit flicker
+    clear: both;
     display: none;
     margin: 0 auto;
     overflow: visible;
@@ -107,9 +109,9 @@ header.navigation {
     }
 
     a {
-      font-weight: 400;
-      display: inline-block;
       color: $navigation-color;
+      display: inline-block;
+      font-weight: 400;
 
       @include media ($horizontal-bar-mode) {
         padding-right: 1em;
@@ -122,8 +124,8 @@ header.navigation {
   }
 
   .active-nav-item a {
-    padding-bottom: 3px;
     border-bottom: 1px solid $navigation-active-link-color;
+    padding-bottom: 3px;
   }
 
   // Sub menus
@@ -142,24 +144,23 @@ header.navigation {
     }
 
     > a:after {
-      content: '▾';
-      position: absolute;
-      right: -.4em;
+      @include position(absolute, auto -.4em auto auto);
+      content: '\25BE';
       color: $navigation-color;
     }
   }
 
   li.more {
-    padding-right: 0;
     overflow: visible;
+    padding-right: 0;
 
     a {
       padding-right: .8em;
     }
 
     > a {
-      position: relative;
       padding-right: 1.6em;
+      position: relative;
 
       @include media($large-screen) {
         margin-right: $navigation-submenu-padding;
@@ -177,8 +178,8 @@ header.navigation {
     }
 
     @include media($horizontal-bar-mode) {
-      position: relative;
       padding-right: .8em;
+      position: relative;
     }
   }
 
@@ -187,9 +188,9 @@ header.navigation {
     padding-left: 0;
 
     @include media($horizontal-bar-mode) {
-      position: absolute;
-      top: 1em;
       left: -$navigation-submenu-padding;
+      position: absolute;
+      top: 1.5em;
     }
 
     .submenu {
@@ -219,16 +220,16 @@ header.navigation {
       }
 
       a {
-        text-align: right;
         background-color: darken($navigation-background, 3);
-        width: 100%;
         display: inline-block;
+        text-align: right;
+        width: 100%;
 
         @include media($horizontal-bar-mode) {
-          width: $navigation-submenu-width;
           background-color: $navigation-background;
-          text-align: left;
           padding-left: $navigation-submenu-padding;
+          text-align: left;
+          width: $navigation-submenu-width;
         }
       }
     }
