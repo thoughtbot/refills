@@ -4158,6 +4158,28 @@ header.navigation {
       opacity: 0.5;
       cursor: not-allowed; }
 
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_video.scss */
+.video {
+  margin: auto; }
+  @media screen and (min-width: 53.75em) {
+    /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_video.scss */
+    .video {
+      width: 50%; } }
+
+/* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_video.scss */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0; }
+
+/* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_video.scss */
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
 article.type-system-slab {
   *zoom: 1;

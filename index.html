@@ -5859,6 +5859,65 @@ $sliding-menu-color-hover: #fff;
 </div>
   </div>
 
+  <div id="video" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Responsive Video Embed</h6></div>
+      <div class="video">
+  <div class="video-wrapper">
+      <iframe src="http://www.youtube.com/embed/8ItNE_DX6Cc?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;video&quot;&gt;
+  &lt;div class=&quot;video-wrapper&quot;&gt;
+      &lt;iframe src=&quot;http://www.youtube.com/embed/8ItNE_DX6Cc?showinfo=0&amp;iv_load_policy=3&amp;controls=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.video {
+  margin: auto;
+
+  @include media($large-screen) {
+    width: 50%;
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+  height: 0;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+  </div>
+  
 </div>
 
 <!-- for the type-system tabs -->
