@@ -1796,6 +1796,20 @@ $(document).ready(function () {
     }
   });
 });
+$(document).ready(function() {
+  var menu = $('.centered-navigation-menu');
+  var menuToggle = $('.centered-navigation-menu-button');
+  var signUp = $('.sign-up');
+
+  $(menuToggle).on('click', function(e) {
+    e.preventDefault();
+    menu.slideToggle(function(){
+      if(menu.is(':hidden')) {
+        menu.removeAttr('style');
+      }
+    });
+  });
+});
 (function($) {
   $.fn.clickToggle = function(func1, func2) {
     var funcs = [func1, func2];
