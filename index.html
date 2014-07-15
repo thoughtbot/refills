@@ -12,7 +12,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Refills</title>
     <link rel="shortcut icon" href="favicon.ico" />
-    <link href="stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type='text/javascript' src='javascripts/jquery.erToc.js'></script>
   </head>
@@ -1249,10 +1249,336 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
     font-size: $base-font-size;
     outline: none;
   }
+  @include reset-display();
 }
 </code></pre>
 </td>
 
+
+  </tr>
+</table>
+</div>
+  </div>
+
+  <div id="search-tools" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Search Tools</h6></div>
+      <div class="search-tools">
+  <div class="filter">
+    <label>Colors</label>
+    <div>
+      <ol>
+        <li>
+          <input id="red" type="checkbox">
+          <label for="red">Red</label>
+        </li>
+        <li>
+          <input id="green" type="checkbox">
+          <label for="green">Green</label>
+        </li>
+        <li>
+          <input id="blue" type="checkbox">
+          <label for="blue">Blue</label>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="filter">
+    <label>Sizes</label>
+    <div>
+      <ol>
+        <li>
+          <input id="small" type="checkbox">
+          <label for="small">Small</label>
+        </li>
+        <li>
+          <input id="medium" type="checkbox">
+          <label for="medium">Medium</label>
+        </li>
+        <li>
+          <input id="large" type="checkbox">
+          <label for="large">Large</label>
+        </li>
+      </ol>
+    </div>
+  </div>
+    <div class="filter">
+    <label>Lengths</label>
+    <div>
+      <ol>
+        <li>
+          <input id="short" type="checkbox">
+          <label for="short">Short</label>
+        </li>
+        <li>
+          <input id="long" type="checkbox">
+          <label for="long">Long</label>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="trigger">
+    <button>Update</button>
+  </div>
+</div>
+
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;search-tools&quot;&gt;
+  &lt;div class=&quot;filter&quot;&gt;
+    &lt;label&gt;Colors&lt;/label&gt;
+    &lt;div&gt;
+      &lt;ol&gt;
+        &lt;li&gt;
+          &lt;input id=&quot;red&quot; type=&quot;checkbox&quot;&gt;
+          &lt;label for=&quot;red&quot;&gt;Red&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;input id=&quot;green&quot; type=&quot;checkbox&quot;&gt;
+          &lt;label for=&quot;green&quot;&gt;Green&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;input id=&quot;blue&quot; type=&quot;checkbox&quot;&gt;
+          &lt;label for=&quot;blue&quot;&gt;Blue&lt;/label&gt;
+        &lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;filter&quot;&gt;
+    &lt;label&gt;Sizes&lt;/label&gt;
+    &lt;div&gt;
+      &lt;ol&gt;
+        &lt;li&gt;
+          &lt;input id=&quot;small&quot; type=&quot;checkbox&quot;&gt;
+          &lt;label for=&quot;small&quot;&gt;Small&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;input id=&quot;medium&quot; type=&quot;checkbox&quot;&gt;
+          &lt;label for=&quot;medium&quot;&gt;Medium&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;input id=&quot;large&quot; type=&quot;checkbox&quot;&gt;
+          &lt;label for=&quot;large&quot;&gt;Large&lt;/label&gt;
+        &lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    &lt;div class=&quot;filter&quot;&gt;
+    &lt;label&gt;Lengths&lt;/label&gt;
+    &lt;div&gt;
+      &lt;ol&gt;
+        &lt;li&gt;
+          &lt;input id=&quot;short&quot; type=&quot;checkbox&quot;&gt;
+          &lt;label for=&quot;short&quot;&gt;Short&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;input id=&quot;long&quot; type=&quot;checkbox&quot;&gt;
+          &lt;label for=&quot;long&quot;&gt;Long&lt;/label&gt;
+        &lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;trigger&quot;&gt;
+    &lt;button&gt;Update&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.search-tools {
+  $search-tools-border-color: $base-border-color;
+  $search-tools-background: lighten($search-tools-border-color, 10);
+
+  @include clearfix;
+  border: 1px solid $search-tools-border-color;
+  background: $search-tools-background;
+  padding: $gutter / 2;
+  border-radius: $base-border-radius;
+
+  .filter {
+    margin-bottom: 1em;
+
+    @include media($large-screen) {
+      @include span-columns(3.5);
+      margin-bottom: 0;
+    }
+
+    &gt; div {
+      @extend input[type=&quot;text&quot;];
+      position: relative;
+
+      label {
+        font-weight: 400;
+        cursor: pointer;
+        margin-bottom: 0;
+      }
+    }
+
+    ol label {
+      display: inline;
+    }
+
+    button {
+      @include button(simple, lighten($search-tools-background, 10));
+      @include position(absolute, 5px 5px auto auto);
+      font-size: .7em;
+    }
+
+    .hide-options {
+      margin-bottom: 0;
+
+      ol, button {
+        display: none;
+      }
+    }
+  }
+
+  .trigger {
+    width: 100%;
+
+    @include media($large-screen) {
+      @include span-columns(1.5);
+    }
+
+    button {
+      width: 100%;
+      margin-top: 1em;
+      padding-top: .7em;
+      padding-bottom: .7em;
+
+      @include media($large-screen) {
+        margin-top: 1.95em;
+      }
+    }
+  }
+}
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-javascript">var Filter = (function() {
+  function Filter(element) {
+    this._element = $(element);
+    this._optionsContainer = this._element.find(this.constructor.optionsContainerSelector);
+  }
+
+  Filter.selector = '.filter';
+  Filter.optionsContainerSelector = '&gt; div';
+  Filter.hideOptionsClass = 'hide-options';
+
+  Filter.enhance = function() {
+    var klass = this;
+
+    return $(klass.selector).each(function() {
+      return new klass(this).enhance();
+    });
+  };
+
+  Filter.prototype.enhance = function() {
+    this._buildUI();
+    this._bindEvents();
+  };
+
+  Filter.prototype._buildUI = function() {
+    this._summaryElement = $('&lt;label&gt;&lt;/label&gt;').
+      addClass('summary').
+      attr('data-role', 'summary').
+      prependTo(this._optionsContainer);
+
+    this._clearSelectionButton = $('&lt;button&gt;&lt;/button&gt;').
+      text('Clear').
+      attr('type', 'button').
+      insertAfter(this._summaryElement);
+
+    this._optionsContainer.addClass(this.constructor.hideOptionsClass);
+    this._updateSummary();
+  };
+
+  Filter.prototype._bindEvents = function() {
+    var self = this;
+
+    this._summaryElement.click(function() {
+      self._toggleOptions();
+    });
+
+    this._clearSelectionButton.click(function() {
+      self._clearSelection();
+    });
+
+    this._checkboxes().change(function() {
+      self._updateSummary();
+    });
+
+    $('body').click(function(e) {
+      var inFilter = $(e.target).closest(self.constructor.selector).length &gt; 0;
+
+      if (!inFilter) {
+        self._allOptionsContainers().addClass(self.constructor.hideOptionsClass);
+      }
+    });
+  };
+
+  Filter.prototype._toggleOptions = function() {
+    this._allOptionsContainers().
+      not(this._optionsContainer).
+      addClass(this.constructor.hideOptionsClass);
+
+    this._optionsContainer.toggleClass(this.constructor.hideOptionsClass);
+  };
+
+  Filter.prototype._updateSummary = function() {
+    var summary = 'All';
+    var checked = this._checkboxes().filter(':checked');
+
+    if (checked.length &gt; 0) {
+      summary = this._labelsFor(checked).join(', ');
+    }
+
+    this._summaryElement.text(summary);
+  };
+
+  Filter.prototype._clearSelection = function() {
+    this._checkboxes().each(function() {
+      $(this).prop('checked', false);
+    });
+
+    this._updateSummary();
+  };
+
+  Filter.prototype._checkboxes = function() {
+    return this._element.find(':checkbox');
+  };
+
+  Filter.prototype._labelsFor = function(inputs) {
+    return inputs.map(function() {
+      var id = $(this).attr('id');
+      return $(&quot;label[for='&quot; + id + &quot;']&quot;).text();
+    }).get();
+  };
+
+  Filter.prototype._allOptionsContainers = function() {
+    return $(this.constructor.selector + &quot; &quot; + this.constructor.optionsContainerSelector);
+  };
+
+  return Filter;
+})();
+
+$(function() {
+  Filter.enhance();
+});
+</code></pre>
+</td>
 
   </tr>
 </table>
