@@ -2635,7 +2635,7 @@ header.navigation {
         clear: none; } }
   /* line 255, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation a.sign-up {
-    margin-top: 13px;
+    margin-top: 1.2em;
     float: right;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -2651,13 +2651,13 @@ header.navigation {
     @media screen and (min-width: 53.75em) {
       /* line 255, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation a.sign-up {
-        padding: .4em 1em; } }
+        padding: .5em 1em; } }
     /* line 272, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation a.sign-up:hover {
       background: #6f99d5; }
   /* line 279, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation .search-bar {
-    padding: 13px 5px;
+    padding: .85em .6em;
     float: left; }
     /* line 286, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation .search-bar .search-and-submit {
