@@ -1,42 +1,36 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Lusitana' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
-
     <meta charset="utf-8">
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Middleman" %></title>
-    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="description" content="Refills are prepackaged patterns and components, built on top of Bourbon, Bitters and Neat.">
+    <title><%= current_page.data.title %></title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800">
     <%= stylesheet_link_tag "all" %>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type='text/javascript' src='javascripts/jquery.erToc.js'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="javascripts/jquery.erToc.js"></script>
   </head>
-
   <body class="<%= page_classes %>">
     <nav class="bourbon">
       <ul>
-        <li><a href="http://bourbon.io" class="bourbon">Bourbon</a></li>
-        <li><a href="http://neat.bourbon.io" class="neat">Neat</a></li>
-        <li><a href="http://bitters.bourbon.io" class="bitters">Bitters</a></li>
-        <li><a href="http://refills.bourbon.io" class="refills current">Refills</a></li>
+        <li><a href="//bourbon.io" class="bourbon">Bourbon</a></li>
+        <li><a href="//neat.bourbon.io" class="neat">Neat</a></li>
+        <li><a href="//bitters.bourbon.io" class="bitters">Bitters</a></li>
+        <li><a href="//refills.bourbon.io" class="refills current">Refills</a></li>
       </ul>
-      <h1>Maintained by the design team at <a href="http://thoughtbot.com">thoughtbot</a></h1>
+      <h1>Maintained by the design team at <a href="//thoughtbot.com">thoughtbot</a></h1>
     </nav>
-
     <section class="container">
       <section class="inner-content">
         <%= yield %>
         <footer class="refills-footer">
-        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/ralph-gray.png" alt="">
-          Refills is maintained and funded by <a href="http://thoughtbot.com">thoughtbot</a>. <br>Refills is Copyright © 2014 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+        <img src="//raw.githubusercontent.com/thoughtbot/refills/master/source/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
+          <p>Refills is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>.</p>
+          <p>Copyright &copy; 2014 <a href="//thoughtbot.com">thoughtbot, inc</a>. Refills is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/refills/blob/master/LICENSE.md">license</a>.</p>
         </footer>
       </section>
     </section>
   </body>
-  <%= javascript_include_tag  "all" %>
+  <%= javascript_include_tag "all" %>
 </html>
