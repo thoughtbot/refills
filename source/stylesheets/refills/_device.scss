@@ -10,7 +10,7 @@ $device-background-top: #162C4C;
 $device-background-bottom: #0A120D;
 $gradient-angle: 10deg;
 $device-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
-$device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/d7940e2479dd08880b52586df0ed3cfaf0723345/source/cosmin_capitanu_screen.jpg';
+$device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg';
 
 .device-background {
   @include background(url($device-image), linear-gradient($gradient-angle, $device-background-bottom, $device-background-top), no-repeat $device-background-top scroll);
