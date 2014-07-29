@@ -4601,7 +4601,7 @@ iframe {
       .device .screen {
         width: 14em;
         height: 25em;
-        background-image: url("https://raw.githubusercontent.com/thoughtbot/refills/d7940e2479dd08880b52586df0ed3cfaf0723345/source/cosmin_capitanu_screen.jpg");
+        background-image: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg");
         background-size: cover;
         box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.5);
         margin: auto;
