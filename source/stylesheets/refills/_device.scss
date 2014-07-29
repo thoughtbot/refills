@@ -57,7 +57,7 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
       perspective(800px) 
       translateX(0px) 
       translateY(-100px) 
-      translateZ(0px) 
+      translateZ(50px) 
       rotateX(0deg) 
       rotateY(-20deg) 
       rotateZ(-0deg));
@@ -75,6 +75,7 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
       7px 0px $device-backside-background,
       10px 0px $device-backside-background,
       13px 0px $device-backside-background;
+      z-index: 99999;
 
     .screen {
       @include size($device-screen-width $device-screen-height);
