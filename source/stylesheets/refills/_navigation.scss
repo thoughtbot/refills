@@ -167,7 +167,8 @@ header.navigation {
       }
 
       &:after {
-        content: '\276D';
+        content: '›';
+        font-size: 1.2em;
         position: absolute;
         right: $navigation-submenu-padding / 2;
       }      
