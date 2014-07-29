@@ -2603,7 +2603,7 @@ header.navigation {
           margin-right: 1em; } }
       /* line 169, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation li.more > a:after {
-        content: '\276d';
+        content: '\276D';
         position: absolute;
         right: 0.5em; }
     /* line 176, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
