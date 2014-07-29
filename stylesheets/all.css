@@ -2603,7 +2603,7 @@ header.navigation {
           margin-right: 1em; } }
       /* line 169, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation li.more > a:after {
-        content: '⟩';
+        content: '\276d';
         position: absolute;
         right: 0.5em; }
     /* line 176, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
@@ -4346,7 +4346,7 @@ iframe {
           margin-right: 1em; } }
       /* line 176, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
       .centered-navigation li.more > a:after {
-        content: '⟩';
+        content: '\276d';
         position: absolute;
         right: 0.5em; }
     /* line 183, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
