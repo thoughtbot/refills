@@ -4585,11 +4585,11 @@ iframe {
   @media screen and (min-width: 53.75em) {
     /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_device.scss */
     .device {
-      -webkit-transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(0px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
-      -moz-transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(0px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
-      -ms-transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(0px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
-      -o-transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(0px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
-      transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(0px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
+      -webkit-transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(50px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
+      -moz-transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(50px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
+      -ms-transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(50px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
+      -o-transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(50px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
+      transform: perspective(800px) translateX(0px) translateY(-100px) translateZ(50px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg);
       display: block;
       float: right;
       margin-bottom: -12em;
@@ -4598,8 +4598,9 @@ iframe {
       width: 14.8em;
       border-radius: 2em;
       background: #1a1a1a;
-      box-shadow: 1px 0px #343434, 4px 0px #060606, 7px 0px black, 10px 0px black, 13px 0px black; }
-      /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_device.scss */
+      box-shadow: 1px 0px #343434, 4px 0px #060606, 7px 0px black, 10px 0px black, 13px 0px black;
+      z-index: 99999; }
+      /* line 80, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_device.scss */
       .device .screen {
         width: 14em;
         height: 25em;
