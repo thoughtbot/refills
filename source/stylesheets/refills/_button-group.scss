@@ -1,5 +1,5 @@
 .button-group {
-  $button-group-background: $base-body-color;
+  $button-group-background: $base-background-color;
   $button-group-color: lighten($base-font-color, 30);
   $button-group-border-highlight: lighten($button-group-background, 15);
   $button-group-active: $base-accent-color;

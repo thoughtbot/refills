@@ -1,5 +1,5 @@
 $refills-color: lighten(desaturate(teal, 60), 40);
-$base-body-color: white;
+$base-background-color: white;
 $refills-nav-height: 60px;
 $logo-color: #93E9BE;
 $refills-anchor-color: #F55481;
@@ -8,7 +8,7 @@ $hero-background: lighten(desaturate($logo-color, 25), 10);
 $serif: 'Lusitana', serif;
 
 body {
-  background-color: $base-body-color; 
+  background-color: $base-background-color; 
   min-width: 320px;
   -webkit-backface-visibility: hidden;
 }
@@ -293,7 +293,7 @@ footer.refills-footer {
   $tab-border: 1px solid $tab-border-color;
   $tab-content-background: lighten($light-gray, 15);
   $tab-active-background: $tab-content-background;
-  $tab-inactive-color: $base-body-color;
+  $tab-inactive-color: $base-background-color;
   $tab-inactive-hover-color: darken($light-gray, 5);
   $tab-mode: $medium-screen;
 

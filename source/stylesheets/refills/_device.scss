@@ -20,7 +20,7 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
   height: 20em;
 
   button {
-    @include button(simple, $base-body-color);
+    @include button(simple, $base-background-color);
     font-size: $base-font-size;
     outline: none;
   }

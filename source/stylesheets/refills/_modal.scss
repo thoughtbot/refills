@@ -1,6 +1,6 @@
 .modal {
   $modal-padding: 3em;
-  $modal-background: $base-body-color;
+  $modal-background: $base-background-color;
   $modal-close-color: $light-gray;
   $modal-image-height: 135px;
   $modal-image-width: $modal-image-height;
@@ -22,7 +22,7 @@
   }
 
   .btn {
-    @include button(simple, $base-body-color);
+    @include button(simple, $base-background-color);
     font-size: $base-font-size;
     margin-bottom: $base-line-height;
   }

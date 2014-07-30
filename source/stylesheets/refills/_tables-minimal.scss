@@ -1,7 +1,7 @@
 .table-minimal {
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
-  $table-background: $base-body-color;
+  $table-background: $base-background-color;
   $table-header-color: lighten($table-background, 10);
   $table-hover-color: darken($table-background, 2);
   $table-stripe-color: darken($table-background, 4);

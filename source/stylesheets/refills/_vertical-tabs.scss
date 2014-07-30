@@ -4,7 +4,7 @@
   $tab-border-radius: $base-border-radius;
   $tab-content-background: lighten($tab-border-color, 10);
   $tab-active-color: $tab-content-background;
-  $tab-inactive-color: $base-body-color;
+  $tab-inactive-color: $base-background-color;
   $vertical-tabs-height: em(300);
   $vertical-tab-mode: $medium-screen;
 

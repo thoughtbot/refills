@@ -1,9 +1,9 @@
 .accordion-tabs-minimal {
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
-  $tab-content-background: $base-body-color;
+  $tab-content-background: $base-background-color;
   $tab-active-background: $tab-content-background;
-  $tab-inactive-color: $base-body-color;
+  $tab-inactive-color: $base-background-color;
   $tab-inactive-hover-color: darken($light-gray, 5);
   $tab-mode: $medium-screen;
 

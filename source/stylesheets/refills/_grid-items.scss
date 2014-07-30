@@ -3,7 +3,7 @@
 }
 
 .grid-items {
-  $grid-items-background: $base-body-color;
+  $grid-items-background: $base-background-color;
   $grid-item-background: desaturate($base-accent-color, 30); 
   $grid-item-colors: 
     desaturate($base-accent-color, 30), 

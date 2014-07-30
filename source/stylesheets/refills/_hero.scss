@@ -26,7 +26,7 @@
     color: $hero-color;
 
     button {
-      @include button(simple, $base-body-color);
+      @include button(simple, $base-background-color);
       font-size: $base-font-size;
       outline: none;
     }
