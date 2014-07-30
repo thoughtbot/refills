@@ -1,57 +1,81 @@
 .button-group {
   $button-group-background: $base-background-color;
   $button-group-color: lighten($base-font-color, 30);
-  $button-group-border-highlight: lighten($button-group-background, 15);
-  $button-group-active: $base-accent-color;
+  $button-group-border: 1px solid silver;
+  $button-group-inner-border: 1px solid lighten(silver, 18);
+  $button-group-background-checked: $base-accent-color;
+  $button-group-color-checked: white;
+  $button-group-border-checked: darken($button-group-background-checked, 15);
 
-  button {
-    @include button(simple, $button-group-background);
-    font-weight: 400;
-    color: $button-group-color;
-    font-size: $base-font-size;
-    outline: none;
-    width: 100%;
-    display: block;
-    border-top-width: 0;
+  input {
+    display: none;
+  }
 
-    &.active {
-      @include button(simple, $button-group-active);
-      font-weight: 400;
-      font-size: $base-font-size;
-    }
+  label {
+    margin-bottom: 0;
 
-    &:first-child {
-      @include border-bottom-radius(0);
-      border-top-width: 1px;
-    }
-
-    &:not(:first-child):not(:last-child) {
-      border-radius: 0;
-    }
-
-    &:last-child {
-      @include border-top-radius(0);
-    }
-
-    @include media($medium-screen) {
-      width: auto;
+    @include media($large-screen) {
       float: left;
-      border-top-width: 1px;
+    }
 
-      &:first-child {
+    .button-group-item {
+      background: $button-group-background;
+      border-left: $button-group-border;
+      border-radius: 0;
+      border-right: $button-group-border;
+      color: $button-group-color;
+      cursor: pointer;
+      display: inline-block;
+      font-size: $base-font-size;
+      font-weight: normal;
+      line-height: 1;
+      padding: .75em 1em;
+      width: 100%;
+
+      @include media($large-screen) {
+        border-bottom: $button-group-border;
+        border-left: 0;
+        border-right: $button-group-inner-border;
+        border-top: $button-group-border;
+        width: auto;
+      }
+
+      &:hover {
+        background-color: darken($button-group-background, 3);
+      }
+    }
+
+    &:first-child .button-group-item {
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      border-top: $button-group-border;
+
+      @include media($large-screen) {
+        border-bottom-left-radius: $base-border-radius;
+        border-left: $button-group-border;
+        border-top-left-radius: $base-border-radius;
         border-top-right-radius: 0;
-        border-bottom-left-radius: 3px;
       }
+    }
 
-      &:not(:first-child):not(:last-child) {
-        border-left: 1px solid $button-group-border-highlight;
-        border-radius: 0;
-      }
+    &:last-child .button-group-item {
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+      border-bottom: $button-group-border;
 
-      &:last-child {
-        border-left: 1px solid $button-group-border-highlight;
+      @include media($large-screen) {
         border-bottom-left-radius: 0;
+        border-bottom-right-radius: $base-border-radius;
+        border-right: $button-group-border;
+        border-top-right-radius: $base-border-radius;
       }
+    }
+
+    input:checked + .button-group-item {
+      background: $button-group-background-checked;
+      border: 1px solid $button-group-border-checked;
+      box-shadow: inset 0 1px 2px darken($button-group-background-checked, 10);
+      color: $button-group-color-checked;
     }
   }
 }
