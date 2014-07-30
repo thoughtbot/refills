@@ -951,7 +951,7 @@
     color: $hero-color;
 
     button {
-      @include button(simple, $base-body-color);
+      @include button(simple, $base-background-color);
       font-size: $base-font-size;
       outline: none;
     }
@@ -1203,7 +1203,7 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
   height: 20em;
 
   button {
-    @include button(simple, $base-body-color);
+    @include button(simple, $base-background-color);
     font-size: $base-font-size;
     outline: none;
   }
@@ -2934,7 +2934,7 @@ $(function() {
   border: $card-border;
   margin-bottom: $base-line-height;
   cursor: pointer;
-  box-shadow: 0 2px 4px darken($base-body-color, 10);
+  box-shadow: 0 2px 4px darken($base-background-color, 10);
   position: relative;
 
   @include media($large-screen) {
@@ -3137,9 +3137,9 @@ $browser-circle-size: .5em;
 $browser-circle-margin: ($browser-top-bar-height - $browser-circle-size) / 2;
 $browser-top-bar-background: lighten(#DFDFDF, 5);
 $browser-border: 0px;
-$browser-background: $base-body-color;
+$browser-background: $base-background-color;
 $browser-content-background-1: #F0F0F0;
-$browser-content-background-2: $base-body-color;
+$browser-content-background-2: $base-background-color;
 $browser-content-background-3: #F0F0F0;
 
 .browsers {
@@ -3265,7 +3265,7 @@ $browser-content-background-3: #F0F0F0;
 //////////////////////////////////////////////
 
 .cover {
-  background: $base-body-color;
+  background: $base-background-color;
   border-top: 1px solid #E6E6E6;
   height: 3.2em;
   margin-top: -1em;
@@ -3490,7 +3490,7 @@ $browser-content-background-3: #F0F0F0;
   $tab-border: 1px solid $tab-border-color;
   $tab-content-background: lighten($light-gray, 10);
   $tab-active-background: $tab-content-background;
-  $tab-inactive-color: $base-body-color;
+  $tab-inactive-color: $base-background-color;
   $tab-inactive-hover-color: darken($light-gray, 5);
   $tab-mode: $medium-screen;
 
@@ -3685,9 +3685,9 @@ $browser-content-background-3: #F0F0F0;
   <pre><code class="language-scss">.accordion-tabs-minimal {
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
-  $tab-content-background: $base-body-color;
+  $tab-content-background: $base-background-color;
   $tab-active-background: $tab-content-background;
-  $tab-inactive-color: $base-body-color;
+  $tab-inactive-color: $base-background-color;
   $tab-inactive-hover-color: darken($light-gray, 5);
   $tab-mode: $medium-screen;
 
@@ -4059,7 +4059,7 @@ $browser-content-background-3: #F0F0F0;
   <pre><code class="language-scss">.table-minimal {
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
-  $table-background: $base-body-color;
+  $table-background: $base-background-color;
   $table-header-color: lighten($table-background, 10);
   $table-hover-color: darken($table-background, 2);
   $table-stripe-color: darken($table-background, 4);
@@ -4204,7 +4204,7 @@ $browser-content-background-3: #F0F0F0;
   $tab-border-radius: $base-border-radius;
   $tab-content-background: lighten($tab-border-color, 10);
   $tab-active-color: $tab-content-background;
-  $tab-inactive-color: $base-body-color;
+  $tab-inactive-color: $base-background-color;
   $vertical-tabs-height: em(300);
   $vertical-tab-mode: $medium-screen;
 
@@ -4441,7 +4441,7 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
 }
 
 .grid-items {
-  $grid-items-background: $base-body-color;
+  $grid-items-background: $base-background-color;
   $grid-item-background: desaturate($base-accent-color, 30); 
   $grid-item-colors: 
     desaturate($base-accent-color, 30), 
@@ -4650,8 +4650,8 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
 }
 
 .grid-items-lines {
-  $grid-items-background: $base-body-color;
-  $grid-item-background: $base-body-color;
+  $grid-items-background: $base-background-color;
+  $grid-item-background: $base-background-color;
   $grid-item-border: 1px solid transparentize($base-font-color, .8); 
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
@@ -5268,7 +5268,7 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.modal {
   $modal-padding: 3em;
-  $modal-background: $base-body-color;
+  $modal-background: $base-background-color;
   $modal-close-color: $light-gray;
   $modal-image-height: 135px;
   $modal-image-width: $modal-image-height;
@@ -5290,7 +5290,7 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
   }
 
   .btn {
-    @include button(simple, $base-body-color);
+    @include button(simple, $base-background-color);
     font-size: $base-font-size;
     margin-bottom: $base-line-height;
   }
@@ -5478,7 +5478,7 @@ $sliding-menu-background-hover: $base-accent-color;
 $sliding-menu-color-hover: #fff;
 
 .sliding-menu-button {
-  @include button(simple, $base-body-color);
+  @include button(simple, $base-background-color);
   @include inline-block;
   cursor: pointer;
   font-size: $base-font-size;
@@ -5682,7 +5682,7 @@ $sliding-menu-color-hover: #fff;
   $breadcrumb-border: 1px solid $breadcrumb-border-color;
   $breadcrumb-height: $base-line-height * 1.5;
   $breadcrumb-arrow-color: $breadcrumb-border-color;
-  $breadcrumb-background: $base-body-color;
+  $breadcrumb-background: $base-background-color;
   $breadcrumb-inactive-hover-color: $breadcrumb-background;
   $breadcrumb-color: $medium-gray;
   $breadcrumb-color-hover: $base-accent-color;
@@ -6334,7 +6334,7 @@ $sliding-menu-color-hover: #fff;
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.button-group {
-  $button-group-background: $base-body-color;
+  $button-group-background: $base-background-color;
   $button-group-color: lighten($base-font-color, 30);
   $button-group-border-highlight: lighten($button-group-background, 15);
   $button-group-active: $base-accent-color;
@@ -6429,7 +6429,7 @@ $sliding-menu-color-hover: #fff;
   $progress-meter-border-color: $base-accent-color;
   $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
   $progress-meter-color: $progress-meter-border-color;
-  $progress-background: darken($base-body-color, 5);
+  $progress-background: darken($base-background-color, 5);
   $progress-animation-duration: 0.7s;
   $progress-height: 30px;
 
@@ -6544,7 +6544,7 @@ $sliding-menu-color-hover: #fff;
   $progress-meter-border-color: $base-accent-color;
   $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
   $progress-meter-color: $progress-meter-border-color;
-  $progress-background: darken($base-body-color, 5);
+  $progress-background: darken($base-background-color, 5);
   $progress-animation-duration: 0.7s;
   $progress-color: white;
 
