@@ -2528,99 +2528,106 @@ header.navigation {
   header.navigation .active-nav-item a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding-bottom: 3px; }
-  /* line 134, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-  header.navigation li.more.nav-link > ul > li:first-child a {
-    padding-top: 1em; }
-  /* line 138, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-  header.navigation li.more.nav-link a {
-    margin-right: 1em; }
-  /* line 142, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-  header.navigation li.more.nav-link > a {
-    padding-right: 0.6em; }
-  /* line 146, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-  header.navigation li.more.nav-link > a:after {
-    position: absolute;
-    top: auto;
-    right: -0.4em;
-    bottom: auto;
-    left: auto;
-    content: '\25BE';
-    color: rgba(255, 255, 255, 0.7); }
-  /* line 153, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 133, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  header.navigation li.more.nav-link {
+    padding-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      /* line 133, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      header.navigation li.more.nav-link {
+        padding-right: 1em; } }
+    /* line 140, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    header.navigation li.more.nav-link > ul > li:first-child a {
+      padding-top: 1em; }
+    /* line 144, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    header.navigation li.more.nav-link a {
+      margin-right: 1em; }
+    /* line 148, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    header.navigation li.more.nav-link > a {
+      padding-right: 0.6em; }
+    /* line 152, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    header.navigation li.more.nav-link > a:after {
+      position: absolute;
+      top: auto;
+      right: -0.4em;
+      bottom: auto;
+      left: auto;
+      content: '\25BE';
+      color: rgba(255, 255, 255, 0.7); }
+  /* line 159, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation li.more {
     overflow: visible;
     padding-right: 0; }
-    /* line 157, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 163, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation li.more a {
       padding-right: .8em; }
-    /* line 161, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 167, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation li.more > a {
       padding-right: 1.6em;
       position: relative; }
       @media screen and (min-width: 53.75em) {
-        /* line 161, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 167, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation li.more > a {
           margin-right: 1em; } }
-      /* line 169, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 175, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation li.more > a:after {
         content: '›';
         font-size: 1.2em;
         position: absolute;
         right: 0.5em; }
-    /* line 177, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 183, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation li.more:hover > .submenu {
       display: block; }
     @media screen and (min-width: 53.75em) {
-      /* line 153, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 159, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation li.more {
         padding-right: .8em;
         position: relative; } }
-  /* line 187, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 193, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation ul.submenu {
     display: none;
     padding-left: 0; }
     @media screen and (min-width: 53.75em) {
-      /* line 187, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 193, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation ul.submenu {
         left: -1em;
         position: absolute;
         top: 1.5em; } }
     @media screen and (min-width: 53.75em) {
-      /* line 197, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 203, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation ul.submenu .submenu {
         left: 11.8em;
         top: 0; } }
-    /* line 204, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 210, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation ul.submenu li {
       display: block;
       padding-right: 0; }
       @media screen and (min-width: 53.75em) {
-        /* line 204, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 210, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation ul.submenu li {
           line-height: 46.15385px; }
-          /* line 211, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+          /* line 217, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
           header.navigation ul.submenu li:first-child > a {
             border-top-left-radius: 0.1875em;
             border-top-right-radius: 0.1875em; }
-          /* line 216, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+          /* line 222, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
           header.navigation ul.submenu li:last-child > a {
             border-bottom-left-radius: 0.1875em;
             border-bottom-right-radius: 0.1875em;
             padding-bottom: .7em; } }
-      /* line 223, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 229, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation ul.submenu li a {
         background-color: #2b2b2b;
         display: inline-block;
         text-align: right;
         width: 100%; }
         @media screen and (min-width: 53.75em) {
-          /* line 223, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+          /* line 229, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
           header.navigation ul.submenu li a {
             background-color: #333333;
             padding-left: 1em;
             text-align: left;
             width: 12em; } }
-  /* line 241, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 247, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation .navigation-tools {
     *zoom: 1;
     display: block;
@@ -2636,12 +2643,12 @@ header.navigation {
     header.navigation .navigation-tools:after {
       clear: both; }
     @media screen and (min-width: 53.75em) {
-      /* line 241, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 247, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .navigation-tools {
         background: transparent;
         float: right;
         clear: none; } }
-  /* line 256, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 262, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation a.sign-up {
     margin-top: 1.2em;
     float: right;
@@ -2657,20 +2664,20 @@ header.navigation {
     text-transform: uppercase;
     padding: .4em .5em; }
     @media screen and (min-width: 53.75em) {
-      /* line 256, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 262, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation a.sign-up {
         padding: .5em 1em; } }
-    /* line 273, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 279, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation a.sign-up:hover {
       background: #6f99d5; }
-  /* line 280, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 286, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation .search-bar {
     padding: .85em .6em;
     float: left; }
-    /* line 287, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 293, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation .search-bar .search-and-submit {
       position: relative; }
-      /* line 290, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 296, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .search-bar .search-and-submit input[type=search] {
         background: #404040;
         border: 1px solid #262626;
@@ -2681,10 +2688,10 @@ header.navigation {
         border-radius: 0.375em;
         margin: 0; }
         @media screen and (min-width: 53.75em) {
-          /* line 290, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+          /* line 296, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
           header.navigation .search-bar .search-and-submit input[type=search] {
             width: 100%; } }
-      /* line 305, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 311, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .search-bar .search-and-submit button[type=submit] {
         border: 1px solid #363636;
         border-radius: 3px;
@@ -2724,17 +2731,17 @@ header.navigation {
         header.navigation .search-bar .search-and-submit button[type=submit]:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
-        /* line 315, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 321, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation .search-bar .search-and-submit button[type=submit] img {
           height: 12px;
           opacity: .7; }
     @media screen and (min-width: 53.75em) {
-      /* line 280, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 286, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .search-bar {
         width: 16em;
         position: relative;
         display: inline-block; }
-        /* line 327, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 333, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation .search-bar input {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;

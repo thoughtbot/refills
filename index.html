@@ -280,6 +280,12 @@
   // Sub menus
 
   li.more.nav-link {
+    padding-right: 0;
+
+    @include media($large-screen) {
+      padding-right: $navigation-submenu-padding;
+    }
+
     &gt; ul &gt; li:first-child a  {
       padding-top: 1em;
     }
