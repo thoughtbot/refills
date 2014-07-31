@@ -239,7 +239,7 @@
 
   // The nav items
 
-  ul li {
+  ul li.nav-link {
     background: $navigation-background;
     display: block;
     line-height: $navigation-height;
@@ -528,7 +528,7 @@
       <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
       <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
       <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
-      <li class="logo">
+      <li class="nav-link logo">
         <a href="javascript:void(0)" class="logo">
           <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="">
         </a>
@@ -552,7 +552,7 @@
           </li>
         </ul>
       </li>
-      <li><a href="javascript:void(0)">Sign up</a></li>
+      <li class="nav-link"><a href="javascript:void(0)">Sign up</a></li>
     </ul>
   </div>
 </header>
@@ -577,7 +577,7 @@
       &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
       &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
       &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;logo&quot;&gt;
+      &lt;li class=&quot;nav-link logo&quot;&gt;
         &lt;a href=&quot;javascript:void(0)&quot; class=&quot;logo&quot;&gt;
           &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png&quot; alt=&quot;&quot;&gt;
         &lt;/a&gt;
@@ -601,7 +601,7 @@
           &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sign up&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sign up&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/header&gt;
@@ -701,7 +701,7 @@
     }
   }
 
-  ul li {
+  ul li.nav-link {
     background: $centered-navigation-background;
     display: block;
     line-height: $centered-navigation-height;
@@ -732,7 +732,7 @@
     }
   }
 
-  li.logo {
+  li.logo.nav-link {
     display: none;
     line-height: 0;
 
@@ -750,6 +750,12 @@
   // Sub menus
 
   li.more.nav-link {
+    padding-right: 0;
+
+    @include media($large-screen) {
+      padding-right: $centered-navigation-submenu-padding;
+    }
+
     &gt; ul &gt; li:first-child a  {
       padding-top: 1em;
     }
@@ -6443,6 +6449,198 @@ $sliding-menu-color-hover: #fff;
 </code></pre>
 </td>
 
+
+  </tr>
+</table>
+</div>
+  </div>
+
+  <div id="dropdown" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Dropdown</h6></div>
+      <div class="dropdown">
+  <div class="dropdown-container">
+    <p class="dropdown-description">Description</p>
+    <p class="dropdown-button">Click to Select</p>
+    <ul class="menu">
+      <li>Dropdown Menu Item</li>
+      <li>Another Item</li>
+      <li>Item Three</li>
+      <li>The Last One</li>
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;div class=&quot;dropdown-container&quot;&gt;
+    &lt;p class=&quot;dropdown-description&quot;&gt;Description&lt;/p&gt;
+    &lt;p class=&quot;dropdown-button&quot;&gt;Click to Select&lt;/p&gt;
+    &lt;ul class=&quot;menu&quot;&gt;
+      &lt;li&gt;Dropdown Menu Item&lt;/li&gt;
+      &lt;li&gt;Another Item&lt;/li&gt;
+      &lt;li&gt;Item Three&lt;/li&gt;
+      &lt;li&gt;The Last One&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">$dropdown-color: $base-font-color;
+$dropdown-description-color: lighten($dropdown-color, 40);
+$dropdown-border: 1px solid silver;
+$dropdown-background: $base-background-color;
+$dropdown-background-hover: darken($dropdown-background, 3);
+$dropdown-inner-border: 1px solid silver;
+$dropdown-height: 40px;
+$dropdown-padding: 1em;
+$dropdown-distance-from-menu: 50px;
+$dropdown-arrow-top-distance: 0;
+
+.dropdown {
+  text-align: center;
+}
+
+.dropdown-container {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-description {
+  background: $dropdown-background;
+  border-bottom-left-radius: $base-border-radius;
+  border-bottom: $dropdown-border;
+  border-left: $dropdown-border;
+  border-top-left-radius: $base-border-radius;
+  border-top: $dropdown-border;
+  color: $dropdown-description-color;
+  float: left;
+  font-size: .7em;
+  line-height: $dropdown-height;
+  margin-bottom: 0;
+  padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
+
+  @include media($large-screen) {
+    font-size: 1em;
+  }
+}
+
+.dropdown-button {
+  background: $dropdown-background;
+  border-bottom-right-radius: $base-border-radius;
+  border-top-right-radius: $base-border-radius;
+  border-top: $dropdown-border;
+  border-right: $dropdown-border;
+  border-bottom: $dropdown-border;
+  cursor: pointer;
+  float: right;
+  font-size: .7em;
+  font-weight: 800;
+  line-height: $dropdown-height;
+  margin-bottom: 0;
+  padding: 0 ($dropdown-padding * 3.5) 0 ($dropdown-padding / 2);
+  position: relative;
+
+  @include media($large-screen) {
+    font-size: 1em;
+    padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+  }
+}
+
+.dropdown-button:hover{
+  background-color: $dropdown-background-hover;
+}
+
+.dropdown-button:after {
+  color: $base-font-color;
+  content: &quot;\25BE&quot;;
+  display: block;
+  position: absolute;
+  right: $dropdown-padding;
+  top: $dropdown-arrow-top-distance;
+}
+
+.menu {
+  @include transition (all 0.2s ease-in-out);
+  background: $dropdown-background;
+  border-radius: $base-border-radius;
+  border: $dropdown-border;
+  box-shadow: 0 2px 2px transparentize(black, .8);
+  color: $dropdown-color;
+  cursor: pointer;
+  display: none;
+  overflow: show;
+  position: absolute;
+  right: 0;
+  top: $dropdown-distance-from-menu;
+  width: 228px;
+  z-index: 99999;
+
+  &amp;:before {
+    @include position(absolute, 0 1em 0 0);
+    color: $dropdown-background;
+    content: &quot;\25b2&quot;;
+    font-size: 1.4em;
+    pointer-events: none;
+    text-shadow: 0 -2px 2px transparentize(black, .7);
+    top: -1em;
+  }
+}
+
+.menu li {
+  border-bottom: $dropdown-inner-border;
+  color: $dropdown-color; 
+  padding: $dropdown-padding / 2;
+}
+
+.menu li:hover {
+  background: $dropdown-background-hover;
+}
+
+.menu li:first-child {
+  border-top-left-radius: $base-border-radius;
+  border-top-right-radius: $base-border-radius;
+}
+
+.menu li:last-child {
+  border: none;
+  border-bottom-left-radius: $base-border-radius;
+  border-bottom-right-radius: $base-border-radius;
+}
+
+.show-menu {
+  display: block;
+}
+
+// Inspired by code by www.HUSAMUI.com
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-javascript">$(document).ready(function(){
+  $(&quot;.dropdown-button&quot;).click(function(){
+    $(&quot;.menu&quot;).toggleClass(&quot;show-menu&quot;);
+    $(&quot;.menu &gt; li&quot;).click(function(){
+      $(&quot;.dropdown-button&quot;).html($(this).html());
+      $(&quot;.menu&quot;).removeClass(&quot;show-menu&quot;);
+    });
+  });  
+});
+</code></pre>
+</td>
 
   </tr>
 </table>
