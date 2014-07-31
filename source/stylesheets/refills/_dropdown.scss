@@ -1,0 +1,127 @@
+$dropdown-color: $base-font-color;
+$dropdown-description-color: lighten($dropdown-color, 40);
+$dropdown-border: 1px solid silver;
+$dropdown-background: $base-background-color;
+$dropdown-background-hover: darken($dropdown-background, 3);
+$dropdown-inner-border: 1px solid silver;
+$dropdown-height: 40px;
+$dropdown-padding: 1em;
+$dropdown-distance-from-menu: 50px;
+$dropdown-arrow-top-distance: 0;
+
+.dropdown {
+  text-align: center;
+}
+
+.dropdown-container {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-description {
+  background: $dropdown-background;
+  border-bottom-left-radius: $base-border-radius;
+  border-bottom: $dropdown-border;
+  border-left: $dropdown-border;
+  border-top-left-radius: $base-border-radius;
+  border-top: $dropdown-border;
+  color: $dropdown-description-color;
+  float: left;
+  font-size: .7em;
+  line-height: $dropdown-height;
+  margin-bottom: 0;
+  padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
+
+  @include media($large-screen) {
+    font-size: 1em;
+  }
+}
+
+.dropdown-button {
+  background: $dropdown-background;
+  border-bottom-right-radius: $base-border-radius;
+  border-top-right-radius: $base-border-radius;
+  border-top: $dropdown-border;
+  border-right: $dropdown-border;
+  border-bottom: $dropdown-border;
+  cursor: pointer;
+  float: right;
+  font-size: .7em;
+  font-weight: 800;
+  line-height: $dropdown-height;
+  margin-bottom: 0;
+  padding: 0 ($dropdown-padding * 3.5) 0 ($dropdown-padding / 2);
+  position: relative;
+
+  @include media($large-screen) {
+    font-size: 1em;
+    padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+  }
+}
+
+.dropdown-button:hover{
+  background-color: $dropdown-background-hover;
+}
+
+.dropdown-button:after {
+  color: $base-font-color;
+  content: "\25BE";
+  display: block;
+  position: absolute;
+  right: $dropdown-padding;
+  top: $dropdown-arrow-top-distance;
+}
+
+.menu {
+  @include transition (all 0.2s ease-in-out);
+  background: $dropdown-background;
+  border-radius: $base-border-radius;
+  border: $dropdown-border;
+  box-shadow: 0 2px 2px transparentize(black, .8);
+  color: $dropdown-color;
+  cursor: pointer;
+  display: none;
+  overflow: show;
+  position: absolute;
+  right: 0;
+  top: $dropdown-distance-from-menu;
+  width: 228px;
+  z-index: 99999;
+
+  &:before {
+    @include position(absolute, 0 1em 0 0);
+    color: $dropdown-background;
+    content: "\25b2";
+    font-size: 1.4em;
+    pointer-events: none;
+    text-shadow: 0 -2px 2px transparentize(black, .7);
+    top: -1em;
+  }
+}
+
+.menu li {
+  border-bottom: $dropdown-inner-border;
+  color: $dropdown-color; 
+  padding: $dropdown-padding / 2;
+}
+
+.menu li:hover {
+  background: $dropdown-background-hover;
+}
+
+.menu li:first-child {
+  border-top-left-radius: $base-border-radius;
+  border-top-right-radius: $base-border-radius;
+}
+
+.menu li:last-child {
+  border: none;
+  border-bottom-left-radius: $base-border-radius;
+  border-bottom-right-radius: $base-border-radius;
+}
+
+.show-menu {
+  display: block;
+}
+
+// Inspired by code by www.HUSAMUI.com

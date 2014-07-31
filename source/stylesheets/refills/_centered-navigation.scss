@@ -89,7 +89,7 @@
     }
   }
 
-  ul li {
+  ul li.nav-link {
     background: $centered-navigation-background;
     display: block;
     line-height: $centered-navigation-height;
@@ -120,7 +120,7 @@
     }
   }
 
-  li.logo {
+  li.logo.nav-link {
     display: none;
     line-height: 0;
 
@@ -138,6 +138,12 @@
   // Sub menus
 
   li.more.nav-link {
+    padding-right: 0;
+
+    @include media($large-screen) {
+      padding-right: $centered-navigation-submenu-padding;
+    }
+
     > ul > li:first-child a  {
       padding-top: 1em;
     }
