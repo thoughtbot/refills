@@ -1,0 +1,182 @@
+@mixin texture($gradient-angle, $bg-color-1, $bg-color-2, $texture-number, $inverted) { $texture-list: 
+  "paper.png"             // Fabric and paper
+  "rice_paper.png"
+  "noise_lines.png"
+  "fabric_plaid.png"
+  "first_aid_kit.png"
+  "texturetastic_gray.png"
+  "lil_fiber.png"
+  "tex2res5.png"
+  "skin_side_up.png"
+  "light_noise_diagonal.png"
+  "chruch.png"
+  "45degreee_fabric.png"
+  "bgnoise_lg.png"
+  "little_pluses.png"
+  "squairy_light.png"
+  "white_texture.png"
+  "binding_light.png"
+  "double_lined.png"      // Grid, mesh and squares
+  "grid.png"
+  "absurdidad.png"
+  "grid_noise.png"
+  "fancy_deboss.png"
+  "graphy.png"
+  "noise_pattern_with_crosslines.png"
+  "old_mathematics.png"
+  "ps_neutral.png"
+  "subtle_freckles.png"
+  "wavegrid.png"
+  "az_subtle.png"
+  "tiny_grid.png"
+  "wavegrid.png"
+  "gridme.png"
+  "noisy_grid.png"
+  "subtlenet2.png"
+  "white_carbon.png"
+  "lghtmesh.png"
+  "p5.png"                 // Dots
+  "worn_dots.png"
+  "subtle_dots.png"
+  "brillant.png"
+  "farmer.png"
+  "retina_dust.png"        // Lines
+  "pinstripe.png"
+  "line_horizontal1.png"
+  "line_horizontal2.png"
+  "linen.png" 
+  "vintage_speckles.png"   // Patina and irregular
+  "subtle_grunge.png"
+  "old_wall.png"
+  "brushed.png"
+  "stucco.png"
+  "mooning.png"
+  "husk.png"
+  "concrete_wall_2.png"
+  "noisy.png"
+  "concrete_wall_3.png"
+  "subtle_surface.png"
+  "dust.png"
+  "light_alu.png"
+  "corrugation.png" 
+  "kindajean.png"           // Diagonal
+  "line_diagonal1.png"
+  "line_diagonal2.png"
+  "groovepaper.png"
+  "brushed_alu.png"
+  "rough_diagonal.png"
+  "diagonal-noise.png"
+  "cross_scratches.png"
+  "striped_lens.png"
+  "debut_light.png"
+  "diagonal_waves.png"    // Special
+  "honey_im_subtle.png"
+  "pw_maze_white.png"
+  "subtle_zebra_3d.png"
+  "white_wave.png"
+  "circles.png"
+  "crosses.png"
+  "grilled.png"
+  "pw_pattern.png"
+  "struckaxiom.png"
+  "vichy.png"
+  "wavecut.png"
+  "whitey.png"
+  "cream_pixels.png"
+  "grey.png"
+  "shinedotted.png"
+  "stacked_circles.png"
+  "noisy_grid_simple.png";
+
+  @if ($inverted == 1) {
+    @include background(url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/#{nth($texture-list, $texture-number)}"), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), $bg-color-1 scroll);                        
+  }
+
+  @else {
+    @include background(url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/#{nth($texture-list, $texture-number)}"), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), $bg-color-1 scroll);
+  }
+}
+
+.texture-examples {
+  @include clearfix;
+  border-radius: $base-border-radius * 2;
+  border: 1px solid silver;
+  margin-bottom: 3em;
+  padding: 1em;
+
+  .texture-examples-container {
+    @include clearfix;
+  }
+
+  h3 {
+    color: #CDCDCD;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    color: gray;
+    font-size: .8em;
+    font-weight: 200;
+    line-height: 2.2em;
+    padding-left: .5em;
+    text-align: center;
+  }
+
+  .instructions {
+    clear: both;
+    display: block;
+    padding-top: 2em;
+    text-align: center;    
+  }
+
+  b {
+    font-weight: 800;
+  }
+
+  p {
+    color: #909090;
+    font-size: .9em;
+    margin: 1em auto 1em auto;
+    max-width: 74%;
+  }
+}
+
+.examples {
+  height: 2.5em;
+  width: 100%;
+}
+
+.example-normal {
+  border-bottom-left-radius: $base-border-radius * 2;
+  border-top-left-radius: $base-border-radius * 2;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+.example-inverted {
+  border-bottom-right-radius: $base-border-radius * 2;
+  border-top-right-radius: $base-border-radius * 2;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+@for $i from 1 through 88 {
+  .texture-#{$i} {
+    float: left;
+    margin-bottom: 1em;
+    margin: 0 0.95% 1em 0.95%;
+    width: 14.7%;
+
+    .example-normal {
+      @include texture(180deg, lighten(#DDF0EF, 1), darken(#DDF0EF, 10), $i, 0); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
+    }
+    .example-inverted {
+      @include texture(180deg, lighten(#DDF0EF, 1), darken(#DDF0EF, 10), $i, 1); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
+    }
+  }
+}
