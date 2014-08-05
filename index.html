@@ -5118,6 +5118,186 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
 
   <h5>Components</h5>
 
+  <div id="textures" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Textures</h6></div>
+      <div class="texture-examples">
+  <div class="texture-examples-container">
+    <h3>Legend</h3>
+
+    <script>
+      for (i = 1; i < 89; i++) {
+        document.write('<div class="texture-' + i + '">')
+          document.write('<h4>' + i + '</h4>')
+          document.write('<div class="examples">')
+            document.write('<div class="example-normal"></div>')
+            document.write('<div class="example-inverted"></div>')
+          document.write('</div>')
+        document.write('</div>')
+      }
+    </script>
+
+    <div class="instructions">
+      <b>Instructions</b>
+      <p>Each texture has two versions, shown in each box in the pattern; a normal version and an inverted one. Some versions work better on dark backgrounds, some on light. Switch between the two by changing between 0 and 1 for the final argument passed in the @include.</p>
+      <p>The mixin can change background color – or gradient colors – for the texture, along with gradient angle.</p>
+      <p>The two squares below is what will be rendered if you copy-paste the code. Use the numbers in the legend above to switch textures in the code. This is done by changing the texture number in the @include for .texture-normal or .texture-inverted. The default selection is texture number 67. Most of these textures are from <a href="http://subtlepatterns.com/">subtlepatterns.com</a></p>
+    </div>
+  </div>
+</div>
+
+      <div class="texture">
+  <div class="texture-normal"></div>
+  <div class="texture-inverted"></div>
+</div>
+
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;texture&quot;&gt;
+  &lt;div class=&quot;texture-normal&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;texture-inverted&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">@mixin texture($gradient-angle, $bg-color-1, $bg-color-2, $texture-number, $inverted) { $texture-list: 
+  &quot;paper.png&quot;             // Fabric and paper
+  &quot;rice_paper.png&quot;
+  &quot;noise_lines.png&quot;
+  &quot;fabric_plaid.png&quot;
+  &quot;first_aid_kit.png&quot;
+  &quot;texturetastic_gray.png&quot;
+  &quot;lil_fiber.png&quot;
+  &quot;tex2res5.png&quot;
+  &quot;skin_side_up.png&quot;
+  &quot;light_noise_diagonal.png&quot;
+  &quot;chruch.png&quot;
+  &quot;45degreee_fabric.png&quot;
+  &quot;bgnoise_lg.png&quot;
+  &quot;little_pluses.png&quot;
+  &quot;squairy_light.png&quot;
+  &quot;white_texture.png&quot;
+  &quot;binding_light.png&quot;
+  &quot;double_lined.png&quot;      // Grid, mesh and squares
+  &quot;grid.png&quot;
+  &quot;absurdidad.png&quot;
+  &quot;grid_noise.png&quot;
+  &quot;fancy_deboss.png&quot;
+  &quot;graphy.png&quot;
+  &quot;noise_pattern_with_crosslines.png&quot;
+  &quot;old_mathematics.png&quot;
+  &quot;ps_neutral.png&quot;
+  &quot;subtle_freckles.png&quot;
+  &quot;wavegrid.png&quot;
+  &quot;az_subtle.png&quot;
+  &quot;tiny_grid.png&quot;
+  &quot;wavegrid.png&quot;
+  &quot;gridme.png&quot;
+  &quot;noisy_grid.png&quot;
+  &quot;subtlenet2.png&quot;
+  &quot;white_carbon.png&quot;
+  &quot;lghtmesh.png&quot;
+  &quot;p5.png&quot;                 // Dots
+  &quot;worn_dots.png&quot;
+  &quot;subtle_dots.png&quot;
+  &quot;brillant.png&quot;
+  &quot;farmer.png&quot;
+  &quot;retina_dust.png&quot;        // Lines
+  &quot;pinstripe.png&quot;
+  &quot;line_horizontal1.png&quot;
+  &quot;line_horizontal2.png&quot;
+  &quot;linen.png&quot; 
+  &quot;vintage_speckles.png&quot;   // Patina and irregular
+  &quot;subtle_grunge.png&quot;
+  &quot;old_wall.png&quot;
+  &quot;brushed.png&quot;
+  &quot;stucco.png&quot;
+  &quot;mooning.png&quot;
+  &quot;husk.png&quot;
+  &quot;concrete_wall_2.png&quot;
+  &quot;noisy.png&quot;
+  &quot;concrete_wall_3.png&quot;
+  &quot;subtle_surface.png&quot;
+  &quot;dust.png&quot;
+  &quot;light_alu.png&quot;
+  &quot;corrugation.png&quot; 
+  &quot;kindajean.png&quot;           // Diagonal
+  &quot;line_diagonal1.png&quot;
+  &quot;line_diagonal2.png&quot;
+  &quot;groovepaper.png&quot;
+  &quot;brushed_alu.png&quot;
+  &quot;rough_diagonal.png&quot;
+  &quot;diagonal-noise.png&quot;
+  &quot;cross_scratches.png&quot;
+  &quot;striped_lens.png&quot;
+  &quot;debut_light.png&quot;
+  &quot;diagonal_waves.png&quot;    // Special
+  &quot;honey_im_subtle.png&quot;
+  &quot;pw_maze_white.png&quot;
+  &quot;subtle_zebra_3d.png&quot;
+  &quot;white_wave.png&quot;
+  &quot;circles.png&quot;
+  &quot;crosses.png&quot;
+  &quot;grilled.png&quot;
+  &quot;pw_pattern.png&quot;
+  &quot;struckaxiom.png&quot;
+  &quot;vichy.png&quot;
+  &quot;wavecut.png&quot;
+  &quot;whitey.png&quot;
+  &quot;cream_pixels.png&quot;
+  &quot;grey.png&quot;
+  &quot;shinedotted.png&quot;
+  &quot;stacked_circles.png&quot;
+  &quot;noisy_grid_simple.png&quot;;
+
+  @if ($inverted == 1) {
+    @include background(url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/#{nth($texture-list, $texture-number)}&quot;), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), $bg-color-1 scroll);
+  }
+
+  @else {
+    @include background(url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/#{nth($texture-list, $texture-number)}&quot;), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), $bg-color-1 scroll);
+  }
+}
+
+// The mixin above should preferably be in a file of its own. Below is the code for the object that has the texture.
+
+.texture {
+  height: 5em;
+  width: 100%;
+}
+
+.texture-normal {
+  @include texture(180deg, lighten(#DDF0EF, 1), darken(#DDF0EF, 10), 67, 1); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
+  float: left;
+  height: 5em;
+  width: 50%;
+}
+
+.texture-inverted {
+  @include texture(180deg, lighten(#DDF0EF, 1), darken(#DDF0EF, 10), 67, 0); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
+  float: left;
+  height: 5em;
+  width: 50%;
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+  </div>
+
   <div id="pagination" class="refill">
     <div class="refills-wrapper">
       <div class="line-behind-text"><h6>Pagination</h6></div>
