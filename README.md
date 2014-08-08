@@ -89,7 +89,9 @@ Declare the variables inside of the component/pattern’s class like below. Note
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
 
-Refills is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community). Whenever a code snippet is borrowed or inspired by existing code, we try to credit the original developer/designer in our source code. Let us know if you think we have missed to do this.
+Refills is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Whenever a code snippet is borrowed or inspired by existing code, we try to credit the original developer/designer in our source code. Let us know if you think we have missed to do this.
+
+Tweet your questions or suggestions to [@bourbonsass](https://twitter.com/bourbonsass) and while you’re at it follow us too.
 
 # License
 
