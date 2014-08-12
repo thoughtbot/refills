@@ -8,7 +8,7 @@ $refills-highlight-color: #BBB295;
 $narrow-sans: 'Oswald', sans-serif;
 $white-shadow: 0 1px 1px transparentize(white, .6);
 
-$serif: 'Lusitana', serif;
+$refills-serif: 'Lusitana', serif;
 
 @mixin refills-inset {
   background: darken($hero-background, 2);
