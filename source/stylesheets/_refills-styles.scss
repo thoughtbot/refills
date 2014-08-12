@@ -5,7 +5,7 @@ $logo-color: #93E9BE;
 $refills-anchor-color: #F55481;
 $hero-background: lighten(desaturate($logo-color, 25), 10);
 
-$serif: 'Lusitana', serif;
+$refills-serif: 'Lusitana', serif;
 
 body {
   background-color: $base-background-color; 
@@ -46,14 +46,14 @@ body {
     font-size: 1.8em;
     text-align: center;
     font-weight: 100;
-    font-family: $serif;
+    font-family: $refills-serif;
     margin: 0 0 $base-line-height*.25;
     margin: auto; 
     max-width: 90%;
     margin-bottom: 1em;
 
     @include media($medium-screen) {
-      font-size: 3em;
+      font-size: 2.8em;
       max-width: 90%;
       margin-bottom: 1em;
     }
@@ -80,7 +80,7 @@ body {
   }
 
   p {
-    font-family: $serif;
+    font-family: $refills-serif;
     color: darken(desaturate($logo-color, 50), 15);
     display: inline;
     padding-top: 1em;
