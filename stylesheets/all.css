@@ -4709,8 +4709,8 @@ iframe {
 /* line 107, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_textures.scss */
 .texture-normal {
   background-color: #e1f2f1;
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/diagonal-noise.png"), -webkit-linear-gradient(-450deg, #e1f2f1, #bae0de), #e1f2f1 scroll;
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/diagonal-noise.png"), linear-gradient(180deg, #e1f2f1, #bae0de), #e1f2f1 scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/diagonal-noise.png"), -webkit-linear-gradient(-450deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/diagonal-noise.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
   float: left;
   height: 5em;
   width: 50%; }
@@ -4718,8 +4718,8 @@ iframe {
 /* line 114, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_textures.scss */
 .texture-inverted {
   background-color: #e1f2f1;
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/diagonal-noise.png"), -webkit-linear-gradient(-450deg, #e1f2f1, #bae0de), #e1f2f1 scroll;
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/diagonal-noise.png"), linear-gradient(180deg, #e1f2f1, #bae0de), #e1f2f1 scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/diagonal-noise.png"), -webkit-linear-gradient(-450deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/diagonal-noise.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
   float: left;
   height: 5em;
   width: 50%; }
