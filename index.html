@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800">
     <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="javascripts/jquery.erToc.js"></script>
+    <script src="/javascripts/jquery.erToc.js"></script>
   </head>
   <body class="index">
     <nav class="bourbon">
@@ -23,27 +23,33 @@
     </nav>
     <section class="container">
       <section class="inner-content">
-        <a class="js-menu-trigger-refills refills-menu-anchor fixedsticky">
-  <img src="images/menu.png" alt="">
-</a>
-<div class="js-menu-screen-refills refills-menu-screen"></div>
+        <div class="refills-patterns">
+  <a class="js-menu-trigger-refills refills-menu-anchor fixedsticky">
+    <img src="/images/menu.png" alt="Menu icon">
+  </a>
+  <div class="js-menu-screen-refills refills-menu-screen"></div>
 
-<div class="refills-header">
+  <div class="refills-header">
   <div class="refills-logo">
-    <img src="images/refills-logo.svg" alt="">
+    <img src="/images/refills-logo.svg" alt="Refills logo">
   </div>
   <h2><span>Refills</span> are prepackaged patterns and components, built on top of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://bitters.bourbon.io/">Bitters</a>, and <a href="http://neat.bourbon.io/">Neat</a>.</h2>
-  <p>Managed by <a href="http://www.thoughtbot.com">thoughtbot</a>, instructions at <a href="https://github.com/thoughtbot/refills">Github</a></p>
+  <p>Managed by <a href="http://www.thoughtbot.com">thoughtbot</a>, instructions at <a href="https://github.com/thoughtbot/refills">GitHub</a></p>
 </div>
 
-<div id="example1">
+  <ul class="refills-menu">
+  <li class="menu-item patterns"><a href="./">Patterns</a></li>
+  <li class="menu-item components"><a href="components/">Components</a></li>
+  <li class="menu-item type-systems"><a href="type-systems/">Type Systems</a></li>
+</ul>
 
-  <h5>Patterns</h5>
 
-  <div id="navigation" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Navigation</h6></div>
-      <header class="navigation">
+  <div id="example">
+
+    <div id="navigation" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Navigation</h6></div>
+        <header class="navigation">
   <div class="navigation-wrapper">
     <a href="javascript:void(0)" class="logo">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
@@ -88,8 +94,8 @@
   </div>
 </header>
 
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -520,11 +526,11 @@
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
-  <div id="centered-navigation" class="refill">
-    <div class="refills-wrapper">
-      <header class="centered-navigation">
+    <div id="centered-navigation" class="refill">
+      <div class="refills-wrapper">
+        <header class="centered-navigation">
   <div class="centered-navigation-wrapper">
     <a href="javascript:void(0)" class="mobile-logo">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="">
@@ -563,8 +569,8 @@
   </div>
 </header>
 
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -892,12 +898,12 @@
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
-  <div id="hero" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Hero Unit</h6>  </div>
-      <div class="hero">
+    <div id="hero" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Hero Unit</h6></div>
+        <div class="hero">
 	<div class="hero-inner">
     <a href="" class="hero-logo"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png
 " alt=""></a>
@@ -909,8 +915,8 @@
 	</div>
 </div>
 
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -1002,12 +1008,12 @@
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
-  <div id="icon-bullet-points" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Icon Bullet Points</h6></div>
-      <div class="bullets">
+    <div id="icon-bullet-points" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Icon Bullet Points</h6></div>
+        <div class="bullets">
   <div class="bullet three-col-bullet">
     <div class="bullet-icon bullet-icon-1">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png
@@ -1038,8 +1044,8 @@
   </div> 
 </div>
 
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -1152,12 +1158,12 @@
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
-  <div id="device" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Device</h6></div>
-      <div class="device-background">
+    <div id="device" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Device</h6></div>
+        <div class="device-background">
   <div class="device-text">
     <h4>Text about App or Device</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, recusandae? Deserunt repellendus.</p>
@@ -1168,8 +1174,8 @@
   </div>
 </div>
 
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -1289,12 +1295,12 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
-  <div id="side-image" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Side Image</h6></div>
-      <div class="side-image">
+    <div id="side-image" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Side Image</h6></div>
+        <div class="side-image">
   <div class="images-wrapper"></div>
     <div class="content">
     <h4>Topic Name</h4>
@@ -1305,8 +1311,8 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
   </div>
 </div>
 
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -1402,12 +1408,12 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
-  <div id="search-tools" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Search Tools</h6></div>
-      <div class="search-tools">
+    <div id="search-tools" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Search Tools</h6></div>
+        <div class="search-tools">
   <div class="filter">
     <label>Colors</label>
     <div>
@@ -1466,8 +1472,8 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
   </div>
 </div>
 
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -1727,1072 +1733,14 @@ $(function() {
   </tr>
 </table>
 </div>
-  </div>
-
-  <div id="type-systems" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Typographic Systems</h6></div>
-        <div class="refill-smaller">
-          <ul class="accordion-tabs-type-systems">
-
-          <li class="tab js-is-active" data-role="tab">
-            <a href="#" class="tab-link-type-system" data-role="link">Serif</a>
-            <section>
-              <div class="tab-content">
-                <div class="refill-centering"><head>
-  <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'>
-</head>
-
-<article class="type-system-serif">
-  <p class="type">Article Type</p>
-  <h1>Article Heading</h1>
-  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
-  <p class="date">30 Mar 2014</p>
-  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
-  </p>
-  <h3>Subheading lorem</h3>
-  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
-  <hr>
-  <p class="author">Author Name</p>
-</article>
-</div>
-                <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;head&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'&gt;
-&lt;/head&gt;
-
-&lt;article class=&quot;type-system-serif&quot;&gt;
-  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
-  &lt;h1&gt;Article Heading&lt;/h1&gt;
-  &lt;h2&gt;These override some of the styles specified in the &lt;code&gt;_variables.scss&lt;/code&gt; and &lt;code&gt;_typography.scss&lt;/code&gt; partials in &lt;a href=&quot;//bitters.bourbon.io&quot;&gt;Bitters&lt;/a&gt;. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&amp;rsquo;t need the wrapping class &lt;code&gt;.type-system-name&lt;/code&gt;.&lt;/h2&gt;
-  &lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
-  &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
-  &lt;/p&gt;
-  &lt;h3&gt;Subheading lorem&lt;/h3&gt;
-  &lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.&lt;/p&gt;
-  &lt;hr&gt;
-  &lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
-&lt;/article&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">article.type-system-serif {
-  $serif: 'Lusitana', serif;
-  $serif-2: 'Merriweather', serif;
-  $sans-serif: 'Merriweather Sans', sans-serif;
-
-  @include clearfix;
-  text-align: left;
-
-  .type {
-    border-bottom: 1px solid;
-    display: inline-block;
-    font-family: $sans-serif;
-    font-size: .7em;
-    font-weight: 700;
-    margin-bottom: 2em;
-    padding: .3em 0;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    font-family: $serif;
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: .5em;
-
-    @include media($medium-screen) {
-      font-size: 2.6em;
-    }
-  }
-
-  h2 {
-    font-family: $serif-2;
-    font-style: italic;
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.6em;
-    margin-bottom: .9em;
-
-    @include media($medium-screen) {
-      font-size: 1.2em;
-    }
-  }
-
-  code {
-    white-space: nowrap;
-    font-family: monaco;
-    background: #F7F7F7;
-    border: 1px solid #E0E0E0;
-    border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
-    font-size: .75em;
-    font-style: normal;
-  }
-
-  h3 {
-    font-family: $serif;
-    font-size: 1.4em;
-    font-weight: 400;
-    line-height: 1.3em;
-    margin-bottom: .4em;
-  }
-
-  p.date {
-    color: transparentize($base-font-color, .6);
-    font-family: $serif-2;
-    font-style: italic;
-    font-size: .9em;
-    margin-bottom: .3em;
-  }
-
-  p {
-    font-family: $serif-2;
-    line-height: 1.6em;
-    font-size: .9em;
-    margin-bottom: 1.5em;
-
-    span {
-      font-family: $sans-serif;
-      font-weight: 700;
-    }
-  }
-
-  a.read-more {
-    display: inline-block;
-    font-family: $sans-serif;
-    font-weight: 700;
-    font-size: .8em;
-    text-transform: uppercase;
-    margin-left: .2em;
-    position: relative;
-
-    span {
-      font-family: $serif;
-      font-style: normal;
-      position: absolute;
-      font-size: 1.5em;
-      top: -1px;
-      right: -12px;
-    }
-  }
-  
-  hr {
-    width: 3em;
-  }
-
-  p.author {
-    font-family: $serif-2;
-    font-style: italic;
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-              </div>
-            </section>
-          </li>
-
-          <li class="tab" data-role="tab">
-            <a href="#" class="tab-link-type-system" data-role="link">Sans</a>
-            <section>
-              <div class="tab-content">
-                <div class="refill-centering"><head>
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200' rel='stylesheet' type='text/css'>
-</head>
-
-<article class="type-system-sans">
-  <p class="type">Article Type</p>
-  <h1>Article Heading</h1>
-  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
-  <p class="date">30 Mar 2014</p>
-  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
-  </p>
-  <h3>Subheading lorem</h3>
-  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
-  <hr>
-  <p class="author">Author Name</p>
-</article>
-</div>
-                <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;head&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200' rel='stylesheet' type='text/css'&gt;
-&lt;/head&gt;
-
-&lt;article class=&quot;type-system-sans&quot;&gt;
-  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
-  &lt;h1&gt;Article Heading&lt;/h1&gt;
-  &lt;h2&gt;These override some of the styles specified in the &lt;code&gt;_variables.scss&lt;/code&gt; and &lt;code&gt;_typography.scss&lt;/code&gt; partials in &lt;a href=&quot;//bitters.bourbon.io&quot;&gt;Bitters&lt;/a&gt;. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&amp;rsquo;t need the wrapping class &lt;code&gt;.type-system-name&lt;/code&gt;.&lt;/h2&gt;
-  &lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
-  &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
-  &lt;/p&gt;
-  &lt;h3&gt;Subheading lorem&lt;/h3&gt;
-  &lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.&lt;/p&gt;
-  &lt;hr&gt;
-  &lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
-&lt;/article&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">article.type-system-sans {
-  $sans-serif: 'PT Sans', sans-serif;
-  $sans-serif-2: 'Titillium Web', sans-serif;
-
-  @include clearfix;
-  text-align: left;
-
-  .type {
-    border-bottom: 1px solid;
-    display: inline-block;
-    font-family: $sans-serif-2;
-    font-size: .7em;
-    font-weight: 900;
-    letter-spacing: 1px;
-    margin-bottom: 2em;
-    padding: .1em 0;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    font-family: $sans-serif-2;
-    font-size: 2em;
-    font-weight: 600;
-    margin-bottom: .6em;
-
-    @include media($medium-screen) {
-      font-size: 2.4em;
-    }
-  }
-
-  h2 {
-    font-family: $sans-serif;
-    font-size: 1.2em;
-    font-weight: 400;
-    line-height: 1.4em;
-    margin-bottom: 1.2em;
-
-    @include media($medium-screen) {
-      font-size: 1.4em;
-    }
-  }
-
-  code {
-    white-space: nowrap;
-    font-family: monaco;
-    background: #F7F7F7;
-    border: 1px solid #E0E0E0;
-    border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
-    font-size: .65em;
-    font-style: normal;
-  }
-
-  h3 {
-   font-family: $sans-serif-2;
-   font-size: 1em;
-   font-weight: 700;
-   text-transform: uppercase;
-   line-height: 1.4em;
-   margin-bottom: .5em; 
-  }
-
-  p.date {
-    color: transparentize($base-font-color, .6);
-    font-family: $sans-serif;
-    font-size: .8em;
-    margin-bottom: .5em;
-  }
-
-  p {
-    font-family: $sans-serif;
-    font-weight: 300;
-    letter-spacing: 1;
-    margin-bottom: 1.5em;
-
-    span {
-      font-family: $sans-serif;
-      font-weight: 600;
-      font-size: .8em;
-      text-transform: uppercase;
-    }
-  }
-
-  hr {
-    width: 3em;
-  }
-
-  a.read-more {
-    display: inline-block;
-    font-family: $sans-serif;
-    font-weight: 700;
-    font-size: .8em;
-    text-transform: uppercase;
-    margin-left: .2em;
-    position: relative;
-
-    span {
-      position: absolute;
-      font-size: 1.7em;
-      top: -2px;
-      right: -10px;
-    }
-  }
-
-  p.author {
-    font-family: $sans-serif;
-    font-style: italic;
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-              </div>
-            </section>
-          </li>
-
-          <li class="tab" data-role="tab">
-            <a href="#" class="tab-link-type-system" data-role="link">Slab</a>
-            <section>
-              <div class="tab-content">
-                <div class="refill-centering"><head>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
-</head>
-
-<article class="type-system-slab">
-  <p class="type">Article Type</p>
-  <h1>Article Heading</h1>
-  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
-  <p class="date">30 Mar 2014</p>
-  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
-  </p>
-  <h3>Subheading lorem</h3>
-  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
-  <hr>
-  <p class="author">Author Name</p>
-</article>
-</div>
-                <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;head&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'&gt;
-&lt;/head&gt;
-
-&lt;article class=&quot;type-system-slab&quot;&gt;
-  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
-  &lt;h1&gt;Article Heading&lt;/h1&gt;
-  &lt;h2&gt;These override some of the styles specified in the &lt;code&gt;_variables.scss&lt;/code&gt; and &lt;code&gt;_typography.scss&lt;/code&gt; partials in &lt;a href=&quot;//bitters.bourbon.io&quot;&gt;Bitters&lt;/a&gt;. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&amp;rsquo;t need the wrapping class &lt;code&gt;.type-system-name&lt;/code&gt;.&lt;/h2&gt;
-  &lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
-  &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
-  &lt;/p&gt;
-  &lt;h3&gt;Subheading lorem&lt;/h3&gt;
-  &lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.&lt;/p&gt;
-  &lt;hr&gt;
-  &lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
-&lt;/article&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">article.type-system-slab {
-  $sans-serif: 'Open Sans', sans-serif;
-  $serif: 'Roboto Slab', serif;
-
-  @include clearfix;
-  text-align: left;
-
-  .type {
-    border-bottom: 1px solid;
-    display: inline-block;
-    font-family: $sans-serif;
-    font-size: .7em;
-    font-weight: 600;
-    margin-bottom: 2em;
-    padding: .1em 0;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    font-family: $serif;
-    font-size: 1.6em;
-    font-weight: 400;
-    margin-bottom: .6em;
-
-    @include media($medium-screen) {
-      font-size: 2.4em;
-    }
-  }
-
-  h2 {
-    font-family: $sans-serif;
-    font-size: 1.1em;
-    font-weight: 400;
-    line-height: 1.5em;
-    margin-bottom: 1.2em;
-
-    @include media($medium-screen) {
-      font-size: 1.3em;
-    }
-  }
-
-  code {
-    white-space: nowrap;
-    background: #F7F7F7;
-    border: 1px solid #E0E0E0;
-    border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
-    font-size: .8em;
-    font-style: normal;
-  }
-
-  h3 {
-   font-family: $serif;
-   font-size: 1em;
-   font-weight: 600;
-   text-transform: uppercase;
-   line-height: 1.4em;
-   margin-bottom: .5em; 
-  }
-
-  p.date {
-    color: transparentize($base-font-color, .6);
-    font-family: $serif;
-    font-size: .8em;
-    margin-bottom: .5em;
-  }
-
-  p {
-    font-family: $serif;
-    font-weight: 300;
-    letter-spacing: 1;
-    margin-bottom: 1.5em;
-
-    span {
-      font-family: $sans-serif;
-      font-weight: 600;
-      font-size: .8em;
-      text-transform: uppercase;
-    }
-  }
-
-  a.read-more {
-    display: inline-block;
-    font-family: $serif;
-    font-weight: 700;
-    font-size: .8em;
-    text-transform: uppercase;
-    margin-left: .2em;
-    position: relative;
-
-    span {
-      position: absolute;
-      font-size: 1.8em;
-      top: -2px;
-      right: -12px;
-    }
-  }
-
-  hr {
-    width: 3em;
-  }
-
-  p.author {
-    font-family: $serif;
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-              </div>
-            </section>
-          </li>
-
-          <li class="tab" data-role="tab">
-            <a href="#" class="tab-link-type-system" data-role="link">Rounded</a>
-            <section>
-              <div class="tab-content">
-                <div class="refill-centering"><head>
-  <link href='http://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-</head>
-
-<article class="type-system-rounded">
-  <p class="type">Article Type</p>
-  <h1>Article Heading</h1>
-  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
-  <p class="date">30 Mar 2014</p>
-  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
-  </p>
-  <h3>Subheading lorem</h3>
-  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
-  <hr>
-  <p class="author">Author Name</p>
-</article>
-</div>
-                <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;head&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'&gt;
-&lt;/head&gt;
-
-&lt;article class=&quot;type-system-rounded&quot;&gt;
-  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
-  &lt;h1&gt;Article Heading&lt;/h1&gt;
-  &lt;h2&gt;These override some of the styles specified in the &lt;code&gt;_variables.scss&lt;/code&gt; and &lt;code&gt;_typography.scss&lt;/code&gt; partials in &lt;a href=&quot;//bitters.bourbon.io&quot;&gt;Bitters&lt;/a&gt;. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&amp;rsquo;t need the wrapping class &lt;code&gt;.type-system-name&lt;/code&gt;.&lt;/h2&gt;
-  &lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
-  &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
-  &lt;/p&gt;
-  &lt;h3&gt;Subheading lorem&lt;/h3&gt;
-  &lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.&lt;/p&gt;
-  &lt;hr&gt;
-  &lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
-&lt;/article&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">article.type-system-rounded {
-  $sans-serif: 'Nunito', sans-serif;
-  $sans-serif-2: 'Varela Round', sans-serif;
-
-  @include clearfix;
-  text-align: left;
-
-  .type {
-    border-bottom: 1px solid;
-    display: inline-block;
-    font-family: $sans-serif;
-    font-size: .7em;
-    font-weight: 800;
-    margin-bottom: 2em;
-    padding: .3em 0;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    font-family: $sans-serif-2;
-    font-size: 1.8em;
-    margin-bottom: .5em;
-
-    @include media($medium-screen) {
-      font-size: 2.4em;
-    }
-  }
-
-  h2 {
-    font-family: $sans-serif-2;
-    font-size: 1.2em;
-    font-weight: 400;
-    line-height: 1.4em;
-    margin-bottom: .9em;
-
-    @include media($medium-screen) {
-      font-size: 1.4em;
-    }
-  }
-
-  code {
-    white-space: nowrap;
-    font-family: monaco;
-    background: #F7F7F7;
-    border: 1px solid #E0E0E0;
-    border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
-    font-size: .7em;
-    font-style: normal;
-  }
-
-
-  h3 {
-    font-family: $sans-serif-2;
-    font-size: 1.2em;
-    font-weight: 400;
-    line-height: 1.3em;
-    margin-bottom: .4em;
-  }
-
-  p.date {
-    color: transparentize($base-font-color, .6);
-    font-family: $sans-serif;
-    font-size: .9em;
-    margin-bottom: .3em;
-  }
-
-  p {
-    font-family: $sans-serif;
-    line-height: 1.4em;
-    font-size: 1.05em;
-    font-weight: 300;
-    margin-bottom: 1.5em;
-
-    span {
-      font-family: $sans-serif-2;
-      text-transform: uppercase;
-      font-size: 0.8em;
-    }
-  }
-
-  a.read-more {
-    display: inline-block;
-    font-family: $sans-serif-2;
-    font-weight: 700;
-    font-size: .8em;
-    text-transform: uppercase;
-    margin-left: .2em;
-    position: relative;
-
-    span {
-      position: absolute;
-      font-size: 1.5em;
-      top: -1px;
-      right: -12px;
-    }
-  }
-  
-  hr {
-    width: 3em;
-  }
-
-  p.author {
-    font-family: $sans-serif;
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-              </div>
-            </section>
-          </li>
-
-          <li class="tab" data-role="tab">
-            <a href="#" class="tab-link-type-system" data-role="link">Traditional</a>
-            <section>
-              <div class="tab-content">
-                <div class="refill-centering"><head>
-  <link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-</head>
-
-<article class="type-system-traditional">
-  <p class="type">Article Type</p>
-  <h1>Article Heading</h1>
-  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
-  <p class="date">30 Mar 2014</p>
-  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
-  </p>
-  <h3>Subheading lorem</h3>
-  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
-  <hr>
-  <p class="author">Author Name</p>
-</article>
-</div>
-                <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;head&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'&gt;
-&lt;/head&gt;
-
-&lt;article class=&quot;type-system-traditional&quot;&gt;
-  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
-  &lt;h1&gt;Article Heading&lt;/h1&gt;
-  &lt;h2&gt;These override some of the styles specified in the &lt;code&gt;_variables.scss&lt;/code&gt; and &lt;code&gt;_typography.scss&lt;/code&gt; partials in &lt;a href=&quot;//bitters.bourbon.io&quot;&gt;Bitters&lt;/a&gt;. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&amp;rsquo;t need the wrapping class &lt;code&gt;.type-system-name&lt;/code&gt;.&lt;/h2&gt;
-  &lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
-  &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
-  &lt;/p&gt;
-  &lt;h3&gt;Subheading lorem&lt;/h3&gt;
-  &lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.&lt;/p&gt;
-  &lt;hr&gt;
-  &lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
-&lt;/article&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">article.type-system-traditional {
-  $sans-serif: 'Noto Sans', sans-serif;
-  $serif: 'Radley', serif;
-
-  @include clearfix;
-  text-align: left;
-
-  .type {
-    border-bottom: 2px solid;
-    display: inline-block;
-    font-family: $sans-serif;
-    font-size: .7em;
-    font-weight: 800;
-    margin-bottom: 2em;
-    padding: .1em 0;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    font-family: $serif;
-    font-size: 1.9em;
-    font-weight: 700;
-    margin-bottom: .3em;
-
-    @include media($medium-screen) {
-      font-size: 2.6em;
-    }
-  }
-
-  h2 {
-    font-family: $serif;
-    font-size: 1.3em;
-    font-weight: 400;
-    line-height: 1.25em;
-    margin-bottom: .9em;
-
-    @include media($medium-screen) {
-      font-size: 1.5em;
-    }
-  }
-
-  code {
-    white-space: nowrap;
-    background: #F7F7F7;
-    border: 1px solid #E0E0E0;
-    border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
-    font-size: .75em;
-    font-style: normal;
-  }
-
-  h2 code {
-    font-size: .65em;
-  }
-
-  h3 {
-    font-family: $serif;
-    font-size: 1.4em;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1.3em;
-    margin-bottom: .4em;
-  }
-
-  p.date {
-    color: transparentize($base-font-color, .6);
-    font-family: $serif;
-    font-style: italic;
-    margin-bottom: .3em;
-  }
-
-  p {
-    font-family: $sans-serif;
-    letter-spacing: 1;
-    margin-bottom: 1.5em;
-    line-height: 1.55em;
-
-    span {
-      font-family: $serif;
-      font-size: 1.2em;
-      font-style: italic;
-    }
-  }
-  
-  a.read-more {
-    display: inline-block;
-    font-family: $sans-serif;
-    font-weight: 700;
-    font-size: .8em;
-    text-transform: uppercase;
-    margin-left: .2em;
-    position: relative;
-
-    span {
-      font-family: $sans-serif;
-      font-style: normal;
-      position: absolute;
-      font-size: 1.5em;
-      top: -1px;
-      right: -12px;
-    }
-  }
-
-  hr {
-    width: 3em;
-  }
-
-  p.author {
-    font-family: $serif;
-    font-size: 1.2em;
-    font-style: italic;
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-              </div>
-            </section>
-          </li>
-
-          <li class="tab" data-role="tab">
-            <a href="#" class="tab-link-type-system" data-role="link">Geometric</a>
-            <section>
-              <div class="tab-content">
-                <div class="refill-centering"><head>
-  <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
-</head>
-
-<article class="type-system-geometric">
-  <p class="type">Article Type</p>
-  <h1>Article Heading</h1>
-  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
-  <p class="date">30 Mar 2014</p>
-  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
-  </p>
-  <h3>Subheading lorem</h3>
-  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
-  <hr>
-  <p class="author">Author Name</p>
-</article>
-</div>
-                <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;head&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'&gt;
-  &lt;link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'&gt;
-&lt;/head&gt;
-
-&lt;article class=&quot;type-system-geometric&quot;&gt;
-  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
-  &lt;h1&gt;Article Heading&lt;/h1&gt;
-  &lt;h2&gt;These override some of the styles specified in the &lt;code&gt;_variables.scss&lt;/code&gt; and &lt;code&gt;_typography.scss&lt;/code&gt; partials in &lt;a href=&quot;//bitters.bourbon.io&quot;&gt;Bitters&lt;/a&gt;. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&amp;rsquo;t need the wrapping class &lt;code&gt;.type-system-name&lt;/code&gt;.&lt;/h2&gt;
-  &lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
-  &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
-  &lt;/p&gt;
-  &lt;h3&gt;Subheading lorem&lt;/h3&gt;
-  &lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.&lt;/p&gt;
-  &lt;hr&gt;
-  &lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
-&lt;/article&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">article.type-system-geometric {
-  $sans-serif: 'Questrial', sans-serif;
-  $serif: 'Sanchez', serif;
-
-  @include clearfix;
-  text-align: left;
-
-  .type {
-    border-bottom: 1px solid;
-    display: inline-block;
-    font-family: $sans-serif;
-    font-size: .7em;
-    font-weight: 800;
-    margin-bottom: 2em;
-    padding: .3em 0;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    font-family: $serif;
-    font-size: 1.8em;
-    font-weight: 700;
-    margin-bottom: .5em;
-
-    @include media($medium-screen) {
-      font-size: 2.6em;
-    }
-  }
-
-  h2 {
-    font-family: $serif;
-    font-style: italic;
-    font-size: 1.2em;
-    font-weight: 400;
-    line-height: 1.4em;
-    margin-bottom: 1.1em;
-
-    @include media($medium-screen) {
-      font-size: 1.3em;
-    }
-  }
-
-  code {
-    white-space: nowrap;
-    background: #F7F7F7;
-    border: 1px solid #E0E0E0;
-    border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
-    font-size: .7em;
-    font-style: normal;
-  }
-
-  h3 {
-    font-family: $serif;
-    font-size: 1.4em;
-    font-weight: 400;
-    line-height: 1.3em;
-    margin-bottom: .4em;
-  }
-
-  p.date {
-    color: transparentize($base-font-color, .6);
-    font-family: $serif;
-    font-style: italic;
-    font-size: .9em;
-    margin-bottom: .3em;
-  }
-
-  p {
-    font-family: $sans-serif;
-    line-height: 1.5em;
-    font-size: 1.05em;
-    margin-bottom: 1.5em;
-  }
-
-  a.read-more {
-    display: inline-block;
-    font-family: $sans-serif;
-    font-weight: 700;
-    font-size: .8em;
-    text-transform: uppercase;
-    margin-left: .2em;
-    position: relative;
-
-    span {
-      font-family: $sans-serif;
-      font-style: normal;
-      position: absolute;
-      font-size: 1.5em;
-      top: -1px;
-      right: -12px;
-    }
-  }
-  
-  hr {
-    width: 3em;
-  }
-
-  p.author {
-    font-family: $sans-serif;
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-              </div>
-            </section>
-          </li>
-        </ul>
-      </div>
     </div>
-  </div>
 
-  <div id="cards" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Cards</h6></div>
-      <div class="refill-centering"><div class="cards">
+
+
+    <div id="cards" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Cards</h6></div>
+        <div class="refill-centering"><div class="cards">
   <div class="card">
     <div class="card-image">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
@@ -2852,8 +1800,8 @@ $(function() {
   </div>
 </div>
 </div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -3065,12 +2013,12 @@ $(function() {
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
-  <div id="browser" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Browser</h6></div>
-      <div class = "browsers">
+    <div id="browser" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Browser</h6></div>
+        <div class = "browsers">
   <div class = "browser">
     <div class="browser-top-bar">
       <div class="browser-circle"></div>
@@ -3100,8 +2048,8 @@ $(function() {
 
 <div class="cover"></div>
 
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -3292,13 +2240,13 @@ $browser-content-background-3: #F0F0F0;
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
-  <div id="comment" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Comments</h6></div>
-      <div class="refill-centering">
-        <div class="refill-smaller"><div class="comment">
+    <div id="comment" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Comments</h6></div>
+        <div class="refill-centering">
+          <div class="refill-smaller"><div class="comment">
   <div class="comment-image">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
   </div>
@@ -3320,9 +2268,9 @@ $browser-content-background-3: #F0F0F0;
   </div>
 </div>
 </div>
+        </div>
       </div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -3424,12 +2372,12 @@ $browser-content-background-3: #F0F0F0;
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
-  <div id="accordion-tabs" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
-      <ul class="accordion-tabs">
+    <div id="accordion-tabs" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
+        <ul class="accordion-tabs">
   <li class="tab-header-and-content">
     <a href="#" class="is-active tab-link">Tab Item</a>
     <div class="tab-content">
@@ -3456,8 +2404,8 @@ $browser-content-background-3: #F0F0F0;
   </li>
 </ul>
 
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -3625,8 +2573,8 @@ $browser-content-background-3: #F0F0F0;
   </tr>
 </table>
 </div>
-    <div class="refills-wrapper">
-      <ul class="accordion-tabs-minimal">
+      <div class="refills-wrapper">
+        <ul class="accordion-tabs-minimal">
   <li class="tab-header-and-content">
     <a href="#" class="tab-link is-active">Tab Item</a>
     <div class="tab-content">
@@ -3653,8 +2601,8 @@ $browser-content-background-3: #F0F0F0;
   </li>
 </ul>
 
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -3820,12 +2768,12 @@ $browser-content-background-3: #F0F0F0;
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
-  <div id="tables" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Tables</h6></div>
-      <table class="table-borders">
+    <div id="tables" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Tables</h6></div>
+        <table class="table-borders">
   <thead>
     <tr>
       <th>Header Cell 1</th>
@@ -3856,8 +2804,8 @@ $browser-content-background-3: #F0F0F0;
     </tr>
   </tbody>
 </table>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -3991,8 +2939,8 @@ $browser-content-background-3: #F0F0F0;
   </tr>
 </table>
 </div>
-    <div class="refills-wrapper">
-      <table class="table-minimal">
+      <div class="refills-wrapper">
+        <table class="table-minimal">
   <thead>
     <tr>
       <th>Header Cell 1</th>
@@ -4023,8 +2971,8 @@ $browser-content-background-3: #F0F0F0;
     </tr>
   </tbody>
 </table>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -4129,12 +3077,12 @@ $browser-content-background-3: #F0F0F0;
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
-  <div id="vertical-tabs" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Vertical Tabs</h6></div>
-      <div class="vertical-tabs-container">
+    <div id="vertical-tabs" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Vertical Tabs</h6></div>
+        <div class="vertical-tabs-container">
   <div class="vertical-tabs">
     <a href="#" class="js-vertical-tab vertical-tab is-active" rel="tab1">Item 1</a>
     <a href="#" class="js-vertical-tab vertical-tab" rel="tab2">Item 2</a>
@@ -4165,8 +3113,8 @@ $browser-content-background-3: #F0F0F0;
   </div>
 </div>
 
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -4353,12 +3301,12 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
-  <div id="grid-items" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Grid Items</h6></div>
-      <div class="refill-centering"><div class="grid-items">
+    <div id="grid-items" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Grid Items</h6></div>
+        <div class="refill-centering"><div class="grid-items">
   <a href="javascript:void(0)" class="grid-item">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
     <h1>Grid Item</h1>
@@ -4396,8 +3344,8 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
   </a>
 </div>
 </div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -4552,8 +3500,8 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
   </tr>
 </table>
 </div>
-    <div class="refills-wrapper">
-      <div class="refill-centering"><div class="grid-items-lines">
+      <div class="refills-wrapper">
+        <div class="refill-centering"><div class="grid-items-lines">
   <a href="javascript:void(0)" class="grid-item">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png" alt="">
     <h1>Grid Item</h1>
@@ -4598,8 +3546,8 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
   <div class="bottom-cover"></div>
 </div>
 </div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
   <a href="#" class="js-hide-code">Hide Code</a>
 </div>
@@ -4750,7 +3698,7 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
   </tr>
 </table>
 </div>
-  </div>
+    </div>
 
     <div id="footer" class="refill">
       <div class="refills-wrapper">
@@ -5115,2069 +4063,10 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
 </table>
 </div>
     </div>
-
-  <h5>Components</h5>
-
-  <div id="textures" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Textures</h6></div>
-      <div class="texture-examples">
-  <div class="texture-examples-container">
-    <h3>Legend</h3>
-
-    <script>
-      for (i = 1; i < 89; i++) {
-        document.write('<div class="texture-' + i + '">')
-          document.write('<h4>' + i + '</h4>')
-          document.write('<div class="examples">')
-            document.write('<div class="example-normal"></div>')
-            document.write('<div class="example-inverted"></div>')
-          document.write('</div>')
-        document.write('</div>')
-      }
-    </script>
-
-    <div class="instructions">
-      <b>Instructions</b>
-      <p>Each texture has two versions, shown in each box in the pattern; a normal version and an inverted one. Some versions work better on dark backgrounds, some on light. Switch between the two by changing between 0 and 1 for the final argument passed in the @include.</p>
-      <p>The mixin can change background color – or gradient colors – for the texture, along with gradient angle.</p>
-      <p>The two squares below is what will be rendered if you copy-paste the code. Use the numbers in the legend above to switch textures in the code. This is done by changing the texture number in the @include for .texture-normal or .texture-inverted. The default selection is texture number 67. Most of these textures are from <a href="http://subtlepatterns.com/">subtlepatterns.com</a></p>
-    </div>
   </div>
 </div>
 
-      <div class="texture">
-  <div class="texture-normal"></div>
-  <div class="texture-inverted"></div>
-</div>
-
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;texture&quot;&gt;
-  &lt;div class=&quot;texture-normal&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;texture-inverted&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">@mixin texture($gradient-angle, $bg-color-1, $bg-color-2, $texture-number, $inverted) { $texture-list: 
-  &quot;paper.png&quot;             // Fabric and paper
-  &quot;rice_paper.png&quot;
-  &quot;noise_lines.png&quot;
-  &quot;fabric_plaid.png&quot;
-  &quot;first_aid_kit.png&quot;
-  &quot;texturetastic_gray.png&quot;
-  &quot;lil_fiber.png&quot;
-  &quot;tex2res5.png&quot;
-  &quot;skin_side_up.png&quot;
-  &quot;light_noise_diagonal.png&quot;
-  &quot;chruch.png&quot;
-  &quot;45degreee_fabric.png&quot;
-  &quot;bgnoise_lg.png&quot;
-  &quot;little_pluses.png&quot;
-  &quot;squairy_light.png&quot;
-  &quot;white_texture.png&quot;
-  &quot;binding_light.png&quot;
-  &quot;double_lined.png&quot;      // Grid, mesh and squares
-  &quot;grid.png&quot;
-  &quot;absurdidad.png&quot;
-  &quot;grid_noise.png&quot;
-  &quot;fancy_deboss.png&quot;
-  &quot;graphy.png&quot;
-  &quot;noise_pattern_with_crosslines.png&quot;
-  &quot;old_mathematics.png&quot;
-  &quot;ps_neutral.png&quot;
-  &quot;subtle_freckles.png&quot;
-  &quot;wavegrid.png&quot;
-  &quot;az_subtle.png&quot;
-  &quot;tiny_grid.png&quot;
-  &quot;wavegrid.png&quot;
-  &quot;gridme.png&quot;
-  &quot;noisy_grid.png&quot;
-  &quot;subtlenet2.png&quot;
-  &quot;white_carbon.png&quot;
-  &quot;lghtmesh.png&quot;
-  &quot;p5.png&quot;                 // Dots
-  &quot;worn_dots.png&quot;
-  &quot;subtle_dots.png&quot;
-  &quot;brillant.png&quot;
-  &quot;farmer.png&quot;
-  &quot;retina_dust.png&quot;        // Lines
-  &quot;pinstripe.png&quot;
-  &quot;line_horizontal1.png&quot;
-  &quot;line_horizontal2.png&quot;
-  &quot;linen.png&quot; 
-  &quot;vintage_speckles.png&quot;   // Patina and irregular
-  &quot;subtle_grunge.png&quot;
-  &quot;old_wall.png&quot;
-  &quot;brushed.png&quot;
-  &quot;stucco.png&quot;
-  &quot;mooning.png&quot;
-  &quot;husk.png&quot;
-  &quot;concrete_wall_2.png&quot;
-  &quot;noisy.png&quot;
-  &quot;concrete_wall_3.png&quot;
-  &quot;subtle_surface.png&quot;
-  &quot;dust.png&quot;
-  &quot;light_alu.png&quot;
-  &quot;corrugation.png&quot; 
-  &quot;kindajean.png&quot;           // Diagonal
-  &quot;line_diagonal1.png&quot;
-  &quot;line_diagonal2.png&quot;
-  &quot;groovepaper.png&quot;
-  &quot;brushed_alu.png&quot;
-  &quot;rough_diagonal.png&quot;
-  &quot;diagonal-noise.png&quot;
-  &quot;cross_scratches.png&quot;
-  &quot;striped_lens.png&quot;
-  &quot;debut_light.png&quot;
-  &quot;diagonal_waves.png&quot;    // Special
-  &quot;honey_im_subtle.png&quot;
-  &quot;pw_maze_white.png&quot;
-  &quot;subtle_zebra_3d.png&quot;
-  &quot;white_wave.png&quot;
-  &quot;circles.png&quot;
-  &quot;crosses.png&quot;
-  &quot;grilled.png&quot;
-  &quot;pw_pattern.png&quot;
-  &quot;struckaxiom.png&quot;
-  &quot;vichy.png&quot;
-  &quot;wavecut.png&quot;
-  &quot;whitey.png&quot;
-  &quot;cream_pixels.png&quot;
-  &quot;grey.png&quot;
-  &quot;shinedotted.png&quot;
-  &quot;stacked_circles.png&quot;
-  &quot;noisy_grid_simple.png&quot;;
-
-  @if ($inverted == 1) {
-    @include background(url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/#{nth($texture-list, $texture-number)}&quot;), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), center no-repeat $bg-color-1 scroll);
-  }
-
-  @else {
-    @include background(url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/#{nth($texture-list, $texture-number)}&quot;), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), center no-repeat $bg-color-1 scroll);
-  }
-}
-
-// The mixin above should preferably be in a file of its own. Below is the code for the object that has the texture.
-
-.texture {
-  height: 5em;
-  width: 100%;
-}
-
-.texture-normal {
-  @include texture(180deg, lighten(#DDF0EF, 1), darken(#DDF0EF, 10), 67, 1); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
-  float: left;
-  height: 5em;
-  width: 50%;
-}
-
-.texture-inverted {
-  @include texture(180deg, lighten(#DDF0EF, 1), darken(#DDF0EF, 10), 67, 0); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
-  float: left;
-  height: 5em;
-  width: 50%;
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="pagination" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Pagination</h6></div>
-      <div class="pagination">
-  <ul>
-    <li class="page-prev"><a href="javascript:void(0)">Prev</a></li>
-    <li>
-      <ul>
-        <li><a href="javascript:void(0)">1</a></li>
-        <li><a href="javascript:void(0)">2</a></li>
-        <li><a href="javascript:void(0)">3</a></li>
-        <li><a href="javascript:void(0)">4</a></li>
-        <li><a href="javascript:void(0)">5</a></li>
-        <li><a href="javascript:void(0)">6</a></li>
-        <li><a href="javascript:void(0)">7</a></li>
-      </ul>
-    </li>
-    <li class="page-next"><a href="javascript:void(0)">Next</a></li>
-  </ul>
-</div>
-
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;pagination&quot;&gt;
-  &lt;ul&gt;
-    &lt;li class=&quot;page-prev&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Prev&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;6&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;7&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;page-next&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.pagination {
-  $pagination-border-color: $base-border-color;
-  $pagination-border: 1px solid $pagination-border-color;
-  $pagination-background: lighten($pagination-border-color, 10);
-  $pagination-hover-background: lighten($pagination-background, 5);
-  $pagination-color: $base-font-color;
-
-  text-align: center;
-
-  ul {
-    display: inline;
-    text-align: center;
-
-    li {
-      display: inline;
-    }
-
-    ul li {
-      display: none;
-      
-      &amp;:nth-child(1),
-      &amp;:nth-child(2),
-      &amp;:nth-child(3) {
-        display: inline;
-      }
-
-      @include media($large-screen) {
-        display: inline;
-      }
-    }
-
-    li a {
-      @include transition (all 0.2s ease-in-out);
-      background: $pagination-background;
-      border-radius: $base-border-radius;
-      border: $pagination-border;
-      color: $pagination-color;
-      padding: $base-line-height/4 $gutter/2;
-
-      &amp;:hover,
-      &amp;:focus {
-        background: $pagination-hover-background;
-        color: $base-link-color;
-      }
-
-      &amp;:active {
-        background: $pagination-background;
-      }
-    }
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="modal" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Modal</h6></div>
-      <div class="refill-centering"><div class="modal">
-  <label for="modal-1">
-    <div class="btn js-btn">Click for Modal</div>
-  </label>
-  <input class="modal-state" id="modal-1" type="checkbox" />
-  <div class="modal-window">
-    <div class="modal-inner">
-      <label class="modal-close" for="modal-1"></label>
-      <h1>Modal Title</h1>
-      <p class="intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
-      <p class="body">Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam.</p>
-    </div>
-  </div>
-</div>
-</div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;modal&quot;&gt;
-  &lt;label for=&quot;modal-1&quot;&gt;
-    &lt;div class=&quot;btn js-btn&quot;&gt;Click for Modal&lt;/div&gt;
-  &lt;/label&gt;
-  &lt;input class=&quot;modal-state&quot; id=&quot;modal-1&quot; type=&quot;checkbox&quot; /&gt;
-  &lt;div class=&quot;modal-window&quot;&gt;
-    &lt;div class=&quot;modal-inner&quot;&gt;
-      &lt;label class=&quot;modal-close&quot; for=&quot;modal-1&quot;&gt;&lt;/label&gt;
-      &lt;h1&gt;Modal Title&lt;/h1&gt;
-      &lt;p class=&quot;intro&quot;&gt;Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.&lt;/p&gt;
-      &lt;p class=&quot;body&quot;&gt;Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.modal {
-  $modal-padding: 3em;
-  $modal-background: $base-background-color;
-  $modal-close-color: $light-gray;
-  $modal-image-height: 135px;
-  $modal-image-width: $modal-image-height;
-
-  label {
-    cursor: pointer;
-    margin-bottom: 0;
-  }
-
-  label img {
-    $img-width: 300px;
-    border-radius: $img-width/2;
-    display: block;
-    max-width: $img-width;
-  }
-
-  input[type=&quot;checkbox&quot;] {
-    display: none;
-  }
-
-  .btn {
-    @include button(simple, $base-background-color);
-    font-size: $base-font-size;
-    margin-bottom: $base-line-height;
-  }
-
-  .modal-open {
-    overflow: hidden;
-  }
-
-  .modal-window { // overlay
-    @include transition(opacity .25s ease);
-    @include position(fixed, 0px 0px 0px 0px);
-    background: rgba(0,0,0, .85);
-    opacity: 0;
-    text-align: left;
-    visibility: hidden;
-    z-index: 99999999999;
-
-    .modal-bg {
-      @include position(absolute, 0px 0px 0px 0px);
-      cursor: pointer;
-    }
-  }
-
-  .modal-close {
-    @include position(absolute, ($modal-padding /2) ($modal-padding /2) 0 0);
-    @include size(1.5em);
-    cursor: pointer;
-    background: $modal-background;
-
-    &amp;:after,
-    &amp;:before {
-      @include position(absolute, 3px 3px 0 50%);
-      @include transform(rotate(45deg));
-      @include size(.15em 1.5em);
-      background: $modal-close-color;
-      content: '';
-      display: block;
-      margin: -3px 0 0 -1px;
-    }
-
-    &amp;:hover:after,
-    &amp;:hover:before {
-      background: darken($modal-close-color, 10);
-    }
-
-    &amp;:before {
-      @include transform(rotate(-45deg));
-    }
-  }
-
-  .modal-inner {
-    @include transition(opacity .25s ease);
-    border-radius: $base-border-radius;
-    background: $modal-background;
-    margin: auto;
-    max-height: 95%;
-    position: relative;
-    overflow: auto;
-    width: 95%;
-    padding: $modal-padding /2;
-    margin-top: .6em;
-
-    @include media($medium-screen) {
-      padding: $modal-padding;
-      width: 60%;
-      max-height: 60%;
-      margin-top: 10em;
-    }
-
-    @include media($large-screen) {
-      width: 50%;
-      margin-top: 10em;
-    }
-
-    h1 {
-      color: $base-font-color;
-      margin-bottom: .6em;
-      text-align: left;
-      text-transform: capitalize;
-    }
-
-    p {
-      font-size: $base-font-size;
-      max-width: 100% !important;
-      padding: 0;
-      text-align: left;
-
-      &amp;.intro {
-        color: $blue;
-        line-height: 1.6em;
-      }
-
-      &amp;.body { 
-        color: $base-font-color;
-        line-height: 1.45em;
-
-        @include media($medium-screen) {
-          @include columns(2 8em);
-        }
-      }
-    }
-
-    a.cta {
-      color: white;
-      display: inline-block;
-      margin-right: .5em;
-      margin-top: 1em;
-
-      &amp;:last-child {
-        padding: 0 2em;
-      }
-    }
-  }
-
-  .modal-state:checked + .modal-window {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .modal-state:checked + .modal-window .modal-inner {
-    top: 0;
-  }
-}
-
-// Based on code by Kasper Mikiewicz
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="sliding-menu" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Sliding Menu</h6></div>
-      <div class="refill-centering"><button type="button" class="js-menu-trigger sliding-menu-button">
-  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu.png" alt="">
-</button>
-
-<nav class="js-menu sliding-menu-content">
-  <ul>
-    <li><a href="javascript:void(0)">Item 1</a></li>
-    <li><a href="javascript:void(0)">Item 2</a></li>
-    <li><a href="javascript:void(0)">Item 3</a></li>
-  </ul>
-</nav>
-
-<div class="js-menu-screen menu-screen"></div>
-</div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;js-menu-trigger sliding-menu-button&quot;&gt;
-  &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu.png&quot; alt=&quot;&quot;&gt;
-&lt;/button&gt;
-
-&lt;nav class=&quot;js-menu sliding-menu-content&quot;&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;div class=&quot;js-menu-screen menu-screen&quot;&gt;&lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">$sliding-menu-border-color: $dark-gray;
-$sliding-menu-background: lighten($sliding-menu-border-color, 5);
-$sliding-menu-color: #fff;
-$sliding-menu-border: 1px solid $sliding-menu-border-color;
-$sliding-menu-background-hover: $base-accent-color;
-$sliding-menu-color-hover: #fff;
-
-.sliding-menu-button {
-  @include button(simple, $base-background-color);
-  @include inline-block;
-  cursor: pointer;
-  font-size: $base-font-size;
-  margin-bottom: $base-line-height;
-  position: relative;
-  outline: none;
-
-  img {
-    height: 1.3em;
-  }
-}
-
-.sliding-menu-content {
-  @include position(fixed, 0px auto 0px 0px);
-  @include size(220px 100%);
-  @include transform(translateX(-220px));
-  @include transition(all .25s linear);
-  background: $sliding-menu-background;
-  z-index: 999999;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-
-  li a {
-    border-bottom: $sliding-menu-border;
-    color: $sliding-menu-color;
-    display: block;
-    font-weight: bold;
-    padding: 1em;
-
-    &amp;:hover {
-      background-color: $sliding-menu-background-hover;
-      color: $sliding-menu-color-hover;
-    }
-  }
-
-  &amp;.is-visible {
-    @include transform(translateX(0));
-  }
-}
-
-.menu-screen {
-  @include position(fixed, 0px 0px 0px 0px);
-  @include transition;
-  background: $sliding-menu-border-color;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 999998;
-
-  &amp;.is-visible {
-    opacity: .4;
-    visibility: visible;
-  }
-}
-
-// Based on code by Diego Eis
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-javascript">$(document).ready(function(){
-  $('.js-menu-trigger').on('click touchstart', function(e){
-    $('.js-menu').toggleClass('is-visible');
-    $('.js-menu-screen').toggleClass('is-visible');
-    e.preventDefault();
-  });
-
-  $('.js-menu-screen').on('click touchstart', function(e){
-    $('.js-menu').toggleClass('is-visible');
-    $('.js-menu-screen').toggleClass('is-visible');
-    e.preventDefault();
-  });
-});
-</code></pre>
-</td>
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="badges" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Badges</h6></div>
-      <div class="refill-centering"><div class="badges">
-	<span class="badge">4</span>
-	<span class="badge dark">4</span>
-	<span class="badge error">4</span>
-	<span class="badge notice">4</span>
-	<span class="badge success">4</span>
-</div></div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;badges&quot;&gt;
-	&lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge dark&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge error&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge notice&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge success&quot;&gt;4&lt;/span&gt;
-&lt;/div&gt;</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.badges {
-  $badge-background: $medium-gray;
-  $badge-dark-color: $dark-gray;
-  $badge-error-color: $error-color;
-  $badge-notice-color: $notice-color;
-  $badge-success-color: $success-color;
-  $badge-font-color: #fff;
-  $badge-font-size: $base-font-size * .75;
-
-  display: block;
-  margin-bottom: $base-line-height;
-
-  .badge {
-    @include inline-block;
-    background: $badge-background;
-    border-radius: 2em;
-    color: $badge-font-color;
-    font-size: $badge-font-size;
-    font-weight: 600;
-    line-height: 1;
-    padding: .25em 1em;
-    text-align: center;
-
-    &amp;.dark {
-      background: $badge-dark-color;
-    }
-
-    &amp;.error {
-      background: $badge-error-color;
-      color: darken($badge-error-color, 60);
-    }
-
-    &amp;.notice {
-      background: $badge-notice-color;
-      color: darken($badge-error-color, 60);
-    }
-
-    &amp;.success {
-      background: $badge-success-color;
-      color: darken($badge-success-color, 60);
-    }
-  }
-}
-
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="breadcrumbs" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Breadcrumbs</h6></div>
-      <div class="refill-centering"><div class="breadcrumb">
-  <a href="javascript:void(0)">One</a>
-  <a href="javascript:void(0)">Two</a>
-  <a href="javascript:void(0)">Three</a>
-  <a href="javascript:void(0)">Four</a>
-  <a href="javascript:void(0)">Five</a>
-</div>
-</div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;breadcrumb&quot;&gt;
-  &lt;a href=&quot;javascript:void(0)&quot;&gt;One&lt;/a&gt;
-  &lt;a href=&quot;javascript:void(0)&quot;&gt;Two&lt;/a&gt;
-  &lt;a href=&quot;javascript:void(0)&quot;&gt;Three&lt;/a&gt;
-  &lt;a href=&quot;javascript:void(0)&quot;&gt;Four&lt;/a&gt;
-  &lt;a href=&quot;javascript:void(0)&quot;&gt;Five&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.breadcrumb { 
-  $breadcrumb-border-color: $base-border-color;
-  $breadcrumb-border: 1px solid $breadcrumb-border-color;
-  $breadcrumb-height: $base-line-height * 1.5;
-  $breadcrumb-arrow-color: $breadcrumb-border-color;
-  $breadcrumb-background: $base-background-color;
-  $breadcrumb-inactive-hover-color: $breadcrumb-background;
-  $breadcrumb-color: $medium-gray;
-  $breadcrumb-color-hover: $base-accent-color;
-  $breadcrumb-color-active: $breadcrumb-color;
-
-  @include inline-block;
-  text-align: left;
-  margin-bottom: $base-line-height;
-
-  a {
-    @include inline-block;
-    background-color: $breadcrumb-background;
-    border: $breadcrumb-border;
-    color: $breadcrumb-color;
-    line-height: $breadcrumb-height;
-    margin-right: -5px;
-    font-size: .8em;
-    padding: 0 $breadcrumb-height/4 0 $breadcrumb-height/2;
-    position: relative;
-    text-decoration: none;
-    margin-bottom: 2px;
-
-    &amp;:first-child {
-      padding-left: $breadcrumb-height/2;
-      border-top-left-radius: $base-border-radius;
-      border-bottom-left-radius: $base-border-radius;
-    }
-
-    &amp;:last-child {
-      background-color: $breadcrumb-background;
-      color: $breadcrumb-color-active;
-      border-bottom-right-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
-      padding-right: $breadcrumb-height/2;
-    }
-
-    &amp;:hover {
-      color: $breadcrumb-color-hover;
-      background-color: $breadcrumb-inactive-hover-color;
-    }
-
-    &amp;:hover:after {
-      border-left-color: $breadcrumb-inactive-hover-color;;
-    }
-
-    &amp;:after,
-    &amp;:before {
-      @include position(absolute, 0px auto 0px 100%);
-      border-bottom: $breadcrumb-height/2 solid transparent;
-      border-left: $breadcrumb-height/4 solid transparent;
-      border-top: $breadcrumb-height/2 solid transparent;
-      content: '';
-      display: block;
-      margin: auto;
-      z-index: 2;
-    }
-
-    &amp;:last-child:after,
-    &amp;:last-child:before {
-       border: none;
-    }
-
-    &amp;:before {
-      border-left-color: $breadcrumb-arrow-color;
-      margin-left: 1px;
-      z-index: 1;
-    }
-    &amp;:after {
-      border-left-color: $breadcrumb-background;
-    }
-
-    @include media($medium-screen) {
-      font-size: 1em;
-      padding: 0 $breadcrumb-height/2 0 $breadcrumb-height/1.5;
-    }
-  }
-}
-
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="hover-tile-animation" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
-      <div class="refill-centering"><div class="hover-tile-outer">
-  <div class="hover-tile-container">
-    <div class="hover-tile hover-tile-visible">
-      Hover
-    </div>
-    <div class="hover-tile hover-tile-hidden">
-      <h4>Hidden Copy</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.</p>
-    </div>
-  </div>
-</div></div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;hover-tile-outer&quot;&gt;
-  &lt;div class=&quot;hover-tile-container&quot;&gt;
-    &lt;div class=&quot;hover-tile hover-tile-visible&quot;&gt;
-      Hover
-    &lt;/div&gt;
-    &lt;div class=&quot;hover-tile hover-tile-hidden&quot;&gt;
-      &lt;h4&gt;Hidden Copy&lt;/h4&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.hover-tile-outer {
-  $hover-tile-height: 10em;
-
-  background-position: bottom;
-  background-size: cover;
-  background: url(&quot;/images/mountains.png&quot;);
-  background-size: cover;
-  background-color: #BEB56E;
-  border: 1px solid $base-border-color;
-  height: $hover-tile-height;
-  margin-bottom: $base-line-height;
-  cursor: pointer;
-  
-  @include media($medium-screen) {
-    width: 40%;
-  }
-
-  .hover-tile-container {
-    height: $hover-tile-height;
-    overflow: hidden;
-  }
-
-  .hover-tile-container:hover &gt; .hover-tile {
-    @include transform(translate(0, -100%));
-  }
-
-  .hover-tile {
-    @include transition(all, .2s ease-in-out);
-    background:inherit;
-    color: white;
-    height:inherit;
-    padding: 1em 1.5em;
-  }
-
-  .hover-tile-visible {
-    color: transparentize(white, .3);
-    font-size: 2em;
-    font-weight: 200;  
-    padding-top: 2em;
-    text-align: center;
-  }
-
-  .hover-tile-hidden {
-    background: transparentize(black, .5);
-    h4 {
-      margin-bottom: .5em;
-    }
-    p {
-      color: transparentize(white, .3);
-    }
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="accordion" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Accordion</h6></div>
-      <div class="refill-centering"><ul class="accordion">
-  <li>
-    <a href="javascript:void(0)" class="js-accordion-trigger">Accordion Item</a>
-    <ul class="submenu">
-      <li>
-        <a href="javascript:void(0)">Sub Item 1</a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">Sub Item 2</a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a href="javascript:void(0)" class="js-accordion-trigger">Another Item</a>
-    <ul class="submenu">
-      <li>
-        <a href="javascript:void(0)">Sub Item 1</a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">Sub Item 2</a>
-      </li>
-    </ul>
-  </li>
-</ul>
-</div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;ul class=&quot;accordion&quot;&gt;
-  &lt;li&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;js-accordion-trigger&quot;&gt;Accordion Item&lt;/a&gt;
-    &lt;ul class=&quot;submenu&quot;&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;javascript:void(0)&quot;&gt;Sub Item 1&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;javascript:void(0)&quot;&gt;Sub Item 2&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;js-accordion-trigger&quot;&gt;Another Item&lt;/a&gt;
-    &lt;ul class=&quot;submenu&quot;&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;javascript:void(0)&quot;&gt;Sub Item 1&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;javascript:void(0)&quot;&gt;Sub Item 2&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.accordion {
-  $accordion-menu-border-color: $base-border-color;
-  $accordion-menu-border: 1px solid $accordion-menu-border-color;
-  $accordion-menu-background: lighten($accordion-menu-border-color, 10);
-  $accordion-menu-hover: lighten($accordion-menu-background, 10);
-  $accordion-menu-sub-background: darken($accordion-menu-background, 5);
-  $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
-  $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
-  $accordion-menu-list-padding: $base-line-height/2 $gutter;
-  
-  background-color: $accordion-menu-background;
-  border: $accordion-menu-border;
-  margin-bottom: $base-line-height;
-
-  li {
-    border-bottom: $accordion-menu-border;
-
-    &gt; a {
-      padding: $accordion-menu-list-padding;
-      display: block;
-    }
-
-    &amp;:last-child {
-      border: none;
-    }
-
-    &amp;:hover {
-      background-color: $accordion-menu-hover;
-    }
-  }
-
-  ul.submenu {
-    display: none;
-
-    li {
-      background-color: $accordion-menu-sub-background;
-
-      &amp;:first-child {
-        border-top: $accordion-menu-border;
-        box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
-      }
-
-      &amp;:hover {
-        background-color: $accordion-menu-sub-hover;
-      }
-    }
-  }
-
-  .is-expanded {
-    display: block;
-    padding-bottom: 0;
-  }
-}
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-javascript">$('.js-accordion-trigger').bind('click', function(){
-  jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
-  jQuery(this).parent().toggleClass('is-expanded');
-  event.preventDefault();
-});
-</code></pre>
-</td>
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="search-bar" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Search bar</h6></div>
-      <div class="refill-centering">  <div class="search-bar">
-    <div class="search-and-submit">
-      <input type="search" placeholder="Enter Search" />
-      <button type="submit">
-        <img src="images/search-icon-black.png" alt="">
-      </button>
-    </div>
-  </div>
-</div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">  &lt;div class=&quot;search-bar&quot;&gt;
-    &lt;div class=&quot;search-and-submit&quot;&gt;
-      &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
-      &lt;button type=&quot;submit&quot;&gt;
-        &lt;img src=&quot;images/search-icon-black.png&quot; alt=&quot;&quot;&gt;
-      &lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.search-bar {
-  $search-bar-border-color: $base-border-color;
-  $search-bar-border: 1px solid $search-bar-border-color;
-  $search-bar-background: lighten($search-bar-border-color, 10);
-
-  position: relative; 
-  display: inline-block;
-
-  input {
-    @include box-sizing(border-box);
-    display: block;
-  }
-
-  div.search-and-submit {
-    position: relative;
-
-    input[type=search] {
-      @include appearance(none);
-      width: 100%;
-      padding: .5em .8em;
-      font-size: .9em;
-      font-style: italic;
-      border-radius: $base-border-radius * 2;
-      margin: 0;
-    }
-
-    button[type=submit] {
-      @include button(simple, lighten($base-border-color, 10));
-      @include position(absolute, 0.3em 0.3em 0.3em 0);
-      outline: none;
-      padding: 5px 10px;
-
-      img {
-        height: 12px;
-        opacity: .7;
-      }
-    }
-  }
-}</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="switch" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Switch</h6></div>
-      <div class="refill-centering"><label class="label-switch">
-  <input type="checkbox" />
-  <div class="checkbox"></div>
-</label>
-</div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;label class=&quot;label-switch&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; /&gt;
-  &lt;div class=&quot;checkbox&quot;&gt;&lt;/div&gt;
-&lt;/label&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.label-switch {
-  $switch-width: 52px;
-  $switch-padding: 2px;
-  $switch-height: 32px;
-  $switch-radius: $switch-height;
-  $knob-height: $switch-height - ($switch-padding * 2);
-  $knob-width: $knob-height;
-  $knob-radius: $switch-height - ($switch-padding * 2);
-
-  align-self: center;
-  border-radius: $switch-radius;
-  cursor: pointer;
-  display: inline-block;
-  height: $switch-height;
-  position: relative;
-  vertical-align: middle;
-  width: $switch-width;
-  @include box-sizing(border-box);
-
-  input[type=&quot;checkbox&quot;] {
-    display: none;
-
-  + .checkbox {
-    background: #e5e5e5;
-    border: none;
-    border-radius: $switch-radius;
-    cursor: pointer;
-    height: $switch-height;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: $switch-width;
-    z-index: 0;
-    @include box-sizing(border-box);
-    @include transition(all 0.3s ease);
-
-    &amp;:before {
-      background: white;
-      border-radius: $switch-radius;
-      content: ' ';
-      height: $knob-radius;
-      width: $switch-width - ($switch-padding * 2);
-      z-index: 1;
-      @include box-sizing(border-box);
-      @include position(absolute, 2px 0 0 2px);
-      @include transition(all 0.3s ease);
-      @include transform(scale(1));
-    }
-
-    &amp;:after {
-      background: white;
-      border-radius: $knob-radius;
-      content: ' ';
-      height: $knob-height;
-      width: $knob-width;
-      z-index: 2;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-      @include position(absolute, 2px 0 0 2px);
-      @include transition(all 0.3s ease);
-    }
-  }
-
-  &amp;:checked {
-    + .checkbox {
-      background: $blue;
-        
-        &amp;:before {
-          @include transform(scale(0));
-        }
-
-        &amp;:after {
-          left: $switch-width - $knob-width - ($switch-padding);
-        }
-      }
-    }
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="image-gradient" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Image with gradient overlays</h6></div>
-      <div class="refill-centering"><div class="image-gradient-dynamic">
-  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
-  <div class="overlay"></div>
-  <div class="copy">
-    <p>Dynamic height container</p>
-  </div>
-</div>
-</div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;image-gradient-dynamic&quot;&gt;
-  &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot; alt=&quot;&quot;&gt;
-  &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;copy&quot;&gt;
-    &lt;p&gt;Dynamic height container&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.image-gradient-dynamic {
-  $image-gradient-color-top: red; 
-  $transparency-top: .9;
-  $image-gradient-color-bottom: green; 
-  $transparency-bottom: .6;
-  $vertical-angle: 0deg;
-
-  $image-gradient-color-left: teal; 
-  $transparency-left: .8;
-  $image-gradient-color-right: yellow; 
-  $transparency-right: .8;
-  $horizontal-angle: 90deg;
-
-  position: relative;
-  line-height: 0;
-  width: 100%;
-  margin-bottom: $base-line-height;  
-
-  img {
-   width: 100%;
-   height: auto;
-   position: relative;
-   top: 0;
-   left: 0; 
-  }
-
-  .copy {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: auto;
-    z-index: 999;
-    text-align: center;
-    @include transform(translate(-50%, -50%));
-
-    p {
-      line-height: 1.5em;
-      padding: 1em 2em;
-      position: relative;
-      color: white;
-      font-weight: 800;
-    }
-  }
-
-  .overlay {
-    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
-      transparentize($image-gradient-color-bottom, $transparency-bottom));
-    display: block;
-    @include position(absolute, 0px 0px 0px 0px);
-
-    &amp;:after {
-      content: '';
-      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
-        transparentize($image-gradient-color-right, $transparency-right));
-      display: block;
-      @include position(absolute, 0px 0px 0px 0px);
-    }
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="button-group" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Button Group</h6></div>
-      <div class="refill-centering"><div class="button-group">
-  <label>
-    <input type="radio" name="button-group" value="item" checked>
-    <span class="button-group-item">Item</span>
-  </label>
-  <label>
-    <input type="radio" name="button-group" value="other-item">
-    <span class="button-group-item">Other But Longer Item</span>
-  </label>
-  <label>
-    <input type="radio" name="button-group" value="other-item">
-    <span class="button-group-item">Third</span>
-  </label>
-  <label>
-    <input type="radio" name="button-group" value="third">
-    <span class="button-group-item">Last Item</span>
-  </label>
-</div>
-</div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;button-group&quot;&gt;
-  &lt;label&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;button-group&quot; value=&quot;item&quot; checked&gt;
-    &lt;span class=&quot;button-group-item&quot;&gt;Item&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;label&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;button-group&quot; value=&quot;other-item&quot;&gt;
-    &lt;span class=&quot;button-group-item&quot;&gt;Other But Longer Item&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;label&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;button-group&quot; value=&quot;other-item&quot;&gt;
-    &lt;span class=&quot;button-group-item&quot;&gt;Third&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;label&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;button-group&quot; value=&quot;third&quot;&gt;
-    &lt;span class=&quot;button-group-item&quot;&gt;Last Item&lt;/span&gt;
-  &lt;/label&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.button-group {
-  $button-group-background: $base-background-color;
-  $button-group-color: lighten($base-font-color, 30);
-  $button-group-border: 1px solid silver;
-  $button-group-inner-border: 1px solid lighten(silver, 18);
-  $button-group-background-checked: $base-accent-color;
-  $button-group-color-checked: white;
-  $button-group-border-checked: darken($button-group-background-checked, 15);
-
-  input {
-    display: none;
-  }
-
-  label {
-    margin-bottom: 0;
-
-    @include media($large-screen) {
-      float: left;
-    }
-
-    .button-group-item {
-      background: $button-group-background;
-      border-left: $button-group-border;
-      border-radius: 0;
-      border-right: $button-group-border;
-      color: $button-group-color;
-      cursor: pointer;
-      display: inline-block;
-      font-size: $base-font-size;
-      font-weight: normal;
-      line-height: 1;
-      padding: .75em 1em;
-      width: 100%;
-
-      @include media($large-screen) {
-        border-bottom: $button-group-border;
-        border-left: 0;
-        border-right: $button-group-inner-border;
-        border-top: $button-group-border;
-        width: auto;
-      }
-
-      &amp;:hover {
-        background-color: darken($button-group-background, 3);
-      }
-    }
-
-    &amp;:first-child .button-group-item {
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
-      border-top: $button-group-border;
-
-      @include media($large-screen) {
-        border-bottom-left-radius: $base-border-radius;
-        border-left: $button-group-border;
-        border-top-left-radius: $base-border-radius;
-        border-top-right-radius: 0;
-      }
-    }
-
-    &amp;:last-child .button-group-item {
-      border-bottom-left-radius: $base-border-radius;
-      border-bottom-right-radius: $base-border-radius;
-      border-bottom: $button-group-border;
-
-      @include media($large-screen) {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: $base-border-radius;
-        border-right: $button-group-border;
-        border-top-right-radius: $base-border-radius;
-      }
-    }
-
-    input:checked + .button-group-item {
-      background: $button-group-background-checked;
-      border: 1px solid $button-group-border-checked;
-      box-shadow: inset 0 1px 2px darken($button-group-background-checked, 10);
-      color: $button-group-color-checked;
-    }
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="dropdown" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Dropdown</h6></div>
-      <div class="dropdown">
-  <div class="dropdown-container">
-    <p class="dropdown-description">Description</p>
-    <p class="dropdown-button">Click to Select</p>
-    <ul class="menu">
-      <li>Dropdown Menu Item</li>
-      <li>Another Item</li>
-      <li>Item Three</li>
-      <li>The Last One</li>
-    </ul>
-  </div>
-</div>
-
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;dropdown&quot;&gt;
-  &lt;div class=&quot;dropdown-container&quot;&gt;
-    &lt;p class=&quot;dropdown-description&quot;&gt;Description&lt;/p&gt;
-    &lt;p class=&quot;dropdown-button&quot;&gt;Click to Select&lt;/p&gt;
-    &lt;ul class=&quot;menu&quot;&gt;
-      &lt;li&gt;Dropdown Menu Item&lt;/li&gt;
-      &lt;li&gt;Another Item&lt;/li&gt;
-      &lt;li&gt;Item Three&lt;/li&gt;
-      &lt;li&gt;The Last One&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">$dropdown-color: $base-font-color;
-$dropdown-description-color: lighten($dropdown-color, 40);
-$dropdown-border: 1px solid silver;
-$dropdown-background: $base-background-color;
-$dropdown-background-hover: darken($dropdown-background, 3);
-$dropdown-inner-border: 1px solid silver;
-$dropdown-height: 40px;
-$dropdown-padding: 1em;
-$dropdown-distance-from-menu: 50px;
-$dropdown-arrow-top-distance: 0;
-
-.dropdown {
-  text-align: center;
-}
-
-.dropdown-container {
-  display: inline-block;
-  position: relative;
-}
-
-.dropdown-description {
-  background: $dropdown-background;
-  border-bottom-left-radius: $base-border-radius;
-  border-bottom: $dropdown-border;
-  border-left: $dropdown-border;
-  border-top-left-radius: $base-border-radius;
-  border-top: $dropdown-border;
-  color: $dropdown-description-color;
-  float: left;
-  font-size: .7em;
-  line-height: $dropdown-height;
-  margin-bottom: 0;
-  padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
-
-  @include media($large-screen) {
-    font-size: 1em;
-  }
-}
-
-.dropdown-button {
-  background: $dropdown-background;
-  border-bottom-right-radius: $base-border-radius;
-  border-top-right-radius: $base-border-radius;
-  border-top: $dropdown-border;
-  border-right: $dropdown-border;
-  border-bottom: $dropdown-border;
-  cursor: pointer;
-  float: right;
-  font-size: .7em;
-  font-weight: 800;
-  line-height: $dropdown-height;
-  margin-bottom: 0;
-  padding: 0 ($dropdown-padding * 3.5) 0 ($dropdown-padding / 2);
-  position: relative;
-
-  @include media($large-screen) {
-    font-size: 1em;
-    padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
-  }
-}
-
-.dropdown-button:hover{
-  background-color: $dropdown-background-hover;
-}
-
-.dropdown-button:after {
-  color: $base-font-color;
-  content: &quot;\25BE&quot;;
-  display: block;
-  position: absolute;
-  right: $dropdown-padding;
-  top: $dropdown-arrow-top-distance;
-}
-
-.menu {
-  @include transition (all 0.2s ease-in-out);
-  background: $dropdown-background;
-  border-radius: $base-border-radius;
-  border: $dropdown-border;
-  box-shadow: 0 2px 2px transparentize(black, .8);
-  color: $dropdown-color;
-  cursor: pointer;
-  display: none;
-  overflow: show;
-  position: absolute;
-  right: 0;
-  top: $dropdown-distance-from-menu;
-  width: 228px;
-  z-index: 99999;
-
-  &amp;:before {
-    @include position(absolute, 0 1em 0 0);
-    color: $dropdown-background;
-    content: &quot;\25b2&quot;;
-    font-size: 1.4em;
-    pointer-events: none;
-    text-shadow: 0 -2px 2px transparentize(black, .7);
-    top: -1em;
-  }
-}
-
-.menu li {
-  border-bottom: $dropdown-inner-border;
-  color: $dropdown-color; 
-  padding: $dropdown-padding / 2;
-}
-
-.menu li:hover {
-  background: $dropdown-background-hover;
-}
-
-.menu li:first-child {
-  border-top-left-radius: $base-border-radius;
-  border-top-right-radius: $base-border-radius;
-}
-
-.menu li:last-child {
-  border: none;
-  border-bottom-left-radius: $base-border-radius;
-  border-bottom-right-radius: $base-border-radius;
-}
-
-.show-menu {
-  display: block;
-}
-
-// Inspired by code by www.HUSAMUI.com
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-javascript">$(document).ready(function(){
-  $(&quot;.dropdown-button&quot;).click(function(){
-    $(&quot;.menu&quot;).toggleClass(&quot;show-menu&quot;);
-    $(&quot;.menu &gt; li&quot;).click(function(){
-      $(&quot;.dropdown-button&quot;).html($(this).html());
-      $(&quot;.menu&quot;).removeClass(&quot;show-menu&quot;);
-    });
-  });  
-});
-</code></pre>
-</td>
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="progress-bar" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Progress Bars</h6></div>
-      <div class="refill-centering"><div class="progress-bar">
-  <span class="meter" style="width: 60%"></span>
-</div></div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;progress-bar&quot;&gt;
-  &lt;span class=&quot;meter&quot; style=&quot;width: 60%&quot;&gt;&lt;/span&gt;
-&lt;/div&gt;</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.progress-bar {
-  $progress-border-color: $base-border-color;
-  $progress-border: 1px solid $progress-border-color;
-  $progress-meter-border-color: $base-accent-color;
-  $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
-  $progress-meter-color: $progress-meter-border-color;
-  $progress-background: darken($base-background-color, 5);
-  $progress-animation-duration: 0.7s;
-  $progress-height: 30px;
-
-  background-color: $progress-background;
-  border: $progress-border;
-  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
-  border-radius: $base-border-radius;
-  height: $progress-height;
-  margin: 0 auto;
-  padding: 2px;
-  width: 50%;
-
-  &gt; span.meter {
-    @include animation(progress $progress-animation-duration linear infinite);
-    @include box-sizing(border-box);
-    background-color: $progress-meter-color;
-    @include background-image(linear-gradient(-45deg, rgba(255,255,255, 0.15) 25%,
-                                                      transparent 25%,
-                                                      transparent 50%,
-                                                      rgba(255,255,255, 0.15) 50%,
-                                                      rgba(255,255,255, 0.15) 75%,
-                                                      transparent 75%));
-    background-size: 40px 40px;
-    background-repeat: repeat-x;
-    border: $progress-meter-border;
-    border-radius: $base-border-radius /1.5;
-    display: block;
-    height: 100%;
-    width: 60%;
-  }
-}
-
-@-webkit-keyframes progress {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: 40px 0px;
-  }
-}
-
-@-moz-keyframes progress {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: 40px 0px;
-  }
-}
-
-@-ms-keyframes progress {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: 40px 0px;
-  }
-}
-
-@-o-keyframes progress {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: 40px 0px;
-  }
-}
-
-@keyframes progress {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: 40px 0px;
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-    <div class="refills-wrapper">
-      <div class="refill-centering"><div class="progress-bar-indication">
-  <span class="meter" style="width: 60%">
-    <p>60%</p>
-  </span>
-</div></div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;progress-bar-indication&quot;&gt;
-  &lt;span class=&quot;meter&quot; style=&quot;width: 60%&quot;&gt;
-    &lt;p&gt;60%&lt;/p&gt;
-  &lt;/span&gt;
-&lt;/div&gt;</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.progress-bar-indication {
-  $progress-border-color: $base-border-color;
-  $progress-border: 1px solid $progress-border-color;
-  $progress-meter-border-color: $base-accent-color;
-  $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
-  $progress-meter-color: $progress-meter-border-color;
-  $progress-background: darken($base-background-color, 5);
-  $progress-animation-duration: 0.7s;
-  $progress-color: white;
-
-  background-color: $progress-background;
-  border: $progress-border;
-  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
-  border-radius: $base-border-radius;
-  margin: 0 auto;
-  width: 50%;
-
-  &gt; span.meter {
-    @include box-sizing(border-box);
-    background-color: $progress-meter-color;
-    background-size: 40px 40px;
-    background-repeat: repeat-x;
-    border: $progress-meter-border;
-    border-radius: $base-border-radius /1.5;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    display: block;
-    height: 100%;
-    width: 60%;
-  }
-
-  p {
-    margin-bottom: 0;
-    padding: .1em .5em;
-    font-weight: 800;
-    color: $progress-color;    
-    text-shadow: 0 0 1px black;
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="tooltip" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Tooltip</h6></div>
-      <div class="refill-centering"><div class="tooltip-item">
-  Hover for Tooltip
-  <div class="tooltip">
-    <p>Lorem ipsum doloandae oluptate aperiam unde voluptates quas.</p>
-  </div>
-</div>
-</div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;tooltip-item&quot;&gt;
-  Hover for Tooltip
-  &lt;div class=&quot;tooltip&quot;&gt;
-    &lt;p&gt;Lorem ipsum doloandae oluptate aperiam unde voluptates quas.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.tooltip-item {
-  $tooltip-background: white;
-  $tooltip-color: $base-font-color;
-  $tooltip-width: 16em;
-  $tooltip-arrow-width: 8px;
-  $tooltip-shadow: 0 2px 2px silver;
-  $tooltip-distance-from-item: 140%;
-  $tooltip-arrow-distance-from-box: -$tooltip-arrow-width * 3.4;
-
-  border: 1px solid $base-border-color;
-  padding: .5em 1em;
-  border-radius: $base-border-radius;
-  position: relative;
-  margin-bottom: $base-line-height;
-
-  &amp;:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .tooltip {
-    @include position(absolute, 0 0 0 50%);
-    @include box-sizing(border-box);
-    @include transition (all 0.2s ease-in-out);
-    bottom: $tooltip-distance-from-item;
-    background-color: $tooltip-background;
-    border-radius: $base-border-radius;
-    color: $tooltip-color;
-    font-size: .9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
-    line-height: 1.5em;
-    margin-left: -($tooltip-width/2);
-    opacity: 0;
-    padding: 1em;
-    box-shadow: $tooltip-shadow;
-    text-align: center;
-    visibility: hidden;
-    min-width: $tooltip-width;
-    z-index: 10;
-    font-family: $serif;
-
-    p {
-      margin-bottom: 0;
-    }
-
-    &amp;:after {
-      @include position(absolute, 0 0 0 46%);
-      margin-left: -$tooltip-arrow-width;
-      border: $tooltip-arrow-width solid transparent;
-      color: $tooltip-background;
-      content: '▼';
-      text-shadow: $tooltip-shadow;
-      font-size: 1.4em;
-      pointer-events: none;
-      bottom: $tooltip-arrow-distance-from-box;
-    }
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-
-  <div id="video" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Responsive Video Embed</h6></div>
-      <div class="video">
-  <div class="video-wrapper">
-      <iframe src="http://www.youtube.com/embed/8ItNE_DX6Cc?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;video&quot;&gt;
-  &lt;div class=&quot;video-wrapper&quot;&gt;
-      &lt;iframe src=&quot;http://www.youtube.com/embed/8ItNE_DX6Cc?showinfo=0&amp;iv_load_policy=3&amp;controls=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.video {
-  margin: auto;
-
-  @include media($large-screen) {
-    width: 50%;
-  }
-}
-
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
-  height: 0;
-}
-
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-  </div>
-  
-</div>
-
-<!-- for the type-system tabs -->
+<!-- Type System tabs -->
 <script>
   var $tabs, $toggles, ACTIVE_CLASS;
 
@@ -7199,6 +4088,7 @@ iframe {
   });
 </script>
 
+<!-- Show Code -->
 <script>
   $('a.js-show-code').on('click', function(e){
     $(this).hide();
@@ -7215,9 +4105,10 @@ iframe {
   });
 </script>
 
+<!-- Copy Code -->
 <script>
   $(document).ready( function() {
-    client = new ZeroClipboard($('.copy-source'), {moviePath: 'images/ZeroClipboard.swf'})
+    client = new ZeroClipboard($('.copy-source'), {moviePath: '/images/ZeroClipboard.swf'})
     client.on('dataRequested', function(client, args) {
       code = $(this).siblings('pre').text();
       client.setText(code);
@@ -7242,8 +4133,14 @@ iframe {
   });
 </script>
 
+
         <footer class="refills-footer">
-        <img src="//raw.githubusercontent.com/thoughtbot/refills/master/source/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
+          <ul class="footer-links">
+            <li><a href="./">Patterns</a></li>
+            <li><a href="components/">Components</a></li>
+            <li><a href="type-systems/">Type Systems</a></li>
+          </ul>
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
           <p>Refills is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>.</p>
           <p>Copyright &copy; 2014 <a href="//thoughtbot.com">thoughtbot, inc</a>. Refills is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/refills/blob/master/LICENSE.md">license</a>.</p>
         </footer>

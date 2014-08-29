@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Refills are prepackaged patterns and components, built on top of Bourbon, Bitters and Neat.">
+    <title></title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800">
+    <link href="../stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/javascripts/jquery.erToc.js"></script>
+  </head>
+  <body class="type-systems type-systems_index">
+    <nav class="bourbon">
+      <ul>
+        <li><a href="//bourbon.io" class="bourbon">Bourbon</a></li>
+        <li><a href="//neat.bourbon.io" class="neat">Neat</a></li>
+        <li><a href="//bitters.bourbon.io" class="bitters">Bitters</a></li>
+        <li><a href="//refills.bourbon.io" class="refills current">Refills</a></li>
+      </ul>
+      <h1>Maintained by the design team at <a href="//thoughtbot.com">thoughtbot</a></h1>
+    </nav>
+    <section class="container">
+      <section class="inner-content">
+        <div class="refills-type-systems">
+
+  <a class="js-menu-trigger-refills refills-menu-anchor fixedsticky">
+    <img src="/images/menu.png" alt="Menu icon">
+  </a>
+  <div class="js-menu-screen-refills refills-menu-screen"></div>
+
+  <div class="refills-header">
+  <div class="refills-logo">
+    <img src="/images/refills-logo.svg" alt="Refills logo">
+  </div>
+  <h2><span>Refills</span> are prepackaged patterns and components, built on top of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://bitters.bourbon.io/">Bitters</a>, and <a href="http://neat.bourbon.io/">Neat</a>.</h2>
+  <p>Managed by <a href="http://www.thoughtbot.com">thoughtbot</a>, instructions at <a href="https://github.com/thoughtbot/refills">GitHub</a></p>
+</div>
+
+  <ul class="refills-menu">
+  <li class="menu-item patterns"><a href="../">Patterns</a></li>
+  <li class="menu-item components"><a href="../components/">Components</a></li>
+  <li class="menu-item type-systems"><a href="./">Type Systems</a></li>
+</ul>
+
+
+  <div id="example">
+  
+    <div id="type-systems" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Serif</h6></div>
+        <div class="refill-smaller">
+          <div class="refill-centering"><head>
+  <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'>
+</head>
+
+<article class="type-system-serif">
+  <p class="type">Article Type</p>
+  <h1>Article Heading</h1>
+  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
+  <p class="date">30 Mar 2014</p>
+  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+  </p>
+  <h3>Subheading lorem</h3>
+  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
+  <hr>
+  <p class="author">Author Name</p>
+</article>
+</div>
+        </div>
+        <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;head&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+
+&lt;article class=&quot;type-system-serif&quot;&gt;
+  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
+  &lt;h1&gt;Article Heading&lt;/h1&gt;
+  &lt;h2&gt;These override some of the styles specified in the &lt;code&gt;_variables.scss&lt;/code&gt; and &lt;code&gt;_typography.scss&lt;/code&gt; partials in &lt;a href=&quot;//bitters.bourbon.io&quot;&gt;Bitters&lt;/a&gt;. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&amp;rsquo;t need the wrapping class &lt;code&gt;.type-system-name&lt;/code&gt;.&lt;/h2&gt;
+  &lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
+  &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;h3&gt;Subheading lorem&lt;/h3&gt;
+  &lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">article.type-system-serif {
+  $serif: 'Lusitana', serif;
+  $serif-2: 'Merriweather', serif;
+  $sans-serif: 'Merriweather Sans', sans-serif;
+
+  @include clearfix;
+  text-align: left;
+
+  .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: .7em;
+    font-weight: 700;
+    margin-bottom: 2em;
+    padding: .3em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $serif;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: .5em;
+
+    @include media($medium-screen) {
+      font-size: 2.6em;
+    }
+  }
+
+  h2 {
+    font-family: $serif-2;
+    font-style: italic;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin-bottom: .9em;
+
+    @include media($medium-screen) {
+      font-size: 1.2em;
+    }
+  }
+
+  code {
+    white-space: nowrap;
+    font-family: monaco;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: $base-border-radius * 1.5;
+    padding: .1em .4em;
+    font-size: .75em;
+    font-style: normal;
+  }
+
+  h3 {
+    font-family: $serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: .4em;
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $serif-2;
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: .3em;
+  }
+
+  p {
+    font-family: $serif-2;
+    line-height: 1.6em;
+    font-size: .9em;
+    margin-bottom: 1.5em;
+
+    span {
+      font-family: $sans-serif;
+      font-weight: 700;
+    }
+  }
+
+  a.read-more {
+    display: inline-block;
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      font-family: $serif;
+      font-style: normal;
+      position: absolute;
+      font-size: 1.5em;
+      top: -1px;
+      right: -12px;
+    }
+  }
+  
+  hr {
+    width: 3em;
+  }
+
+  p.author {
+    font-family: $serif-2;
+    font-style: italic;
+  }
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+      </div>
+      <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Sans Serif</h6></div>
+        <div class="refill-smaller">
+          <div class="refill-centering"><head>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200' rel='stylesheet' type='text/css'>
+</head>
+
+<article class="type-system-sans">
+  <p class="type">Article Type</p>
+  <h1>Article Heading</h1>
+  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
+  <p class="date">30 Mar 2014</p>
+  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+  </p>
+  <h3>Subheading lorem</h3>
+  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
+  <hr>
+  <p class="author">Author Name</p>
+</article>
+</div>
+        </div>
+        <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;head&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+
+&lt;article class=&quot;type-system-sans&quot;&gt;
+  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
+  &lt;h1&gt;Article Heading&lt;/h1&gt;
+  &lt;h2&gt;These override some of the styles specified in the &lt;code&gt;_variables.scss&lt;/code&gt; and &lt;code&gt;_typography.scss&lt;/code&gt; partials in &lt;a href=&quot;//bitters.bourbon.io&quot;&gt;Bitters&lt;/a&gt;. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&amp;rsquo;t need the wrapping class &lt;code&gt;.type-system-name&lt;/code&gt;.&lt;/h2&gt;
+  &lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
+  &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;h3&gt;Subheading lorem&lt;/h3&gt;
+  &lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">article.type-system-sans {
+  $sans-serif: 'PT Sans', sans-serif;
+  $sans-serif-2: 'Titillium Web', sans-serif;
+
+  @include clearfix;
+  text-align: left;
+
+  .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $sans-serif-2;
+    font-size: .7em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 2em;
+    padding: .1em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $sans-serif-2;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: .6em;
+
+    @include media($medium-screen) {
+      font-size: 2.4em;
+    }
+  }
+
+  h2 {
+    font-family: $sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: 1.2em;
+
+    @include media($medium-screen) {
+      font-size: 1.4em;
+    }
+  }
+
+  code {
+    white-space: nowrap;
+    font-family: monaco;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: $base-border-radius * 1.5;
+    padding: .1em .4em;
+    font-size: .65em;
+    font-style: normal;
+  }
+
+  h3 {
+   font-family: $sans-serif-2;
+   font-size: 1em;
+   font-weight: 700;
+   text-transform: uppercase;
+   line-height: 1.4em;
+   margin-bottom: .5em; 
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $sans-serif;
+    font-size: .8em;
+    margin-bottom: .5em;
+  }
+
+  p {
+    font-family: $sans-serif;
+    font-weight: 300;
+    letter-spacing: 1;
+    margin-bottom: 1.5em;
+
+    span {
+      font-family: $sans-serif;
+      font-weight: 600;
+      font-size: .8em;
+      text-transform: uppercase;
+    }
+  }
+
+  hr {
+    width: 3em;
+  }
+
+  a.read-more {
+    display: inline-block;
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      position: absolute;
+      font-size: 1.7em;
+      top: -2px;
+      right: -10px;
+    }
+  }
+
+  p.author {
+    font-family: $sans-serif;
+    font-style: italic;
+  }
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+      </div>
+      <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Slab Serif</h6></div>
+        <div class="refill-smaller">
+          <div class="refill-centering"><head>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
+</head>
+
+<article class="type-system-slab">
+  <p class="type">Article Type</p>
+  <h1>Article Heading</h1>
+  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
+  <p class="date">30 Mar 2014</p>
+  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+  </p>
+  <h3>Subheading lorem</h3>
+  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
+  <hr>
+  <p class="author">Author Name</p>
+</article>
+</div>
+        </div>
+        <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;head&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+
+&lt;article class=&quot;type-system-slab&quot;&gt;
+  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
+  &lt;h1&gt;Article Heading&lt;/h1&gt;
+  &lt;h2&gt;These override some of the styles specified in the &lt;code&gt;_variables.scss&lt;/code&gt; and &lt;code&gt;_typography.scss&lt;/code&gt; partials in &lt;a href=&quot;//bitters.bourbon.io&quot;&gt;Bitters&lt;/a&gt;. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&amp;rsquo;t need the wrapping class &lt;code&gt;.type-system-name&lt;/code&gt;.&lt;/h2&gt;
+  &lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
+  &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;h3&gt;Subheading lorem&lt;/h3&gt;
+  &lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">article.type-system-slab {
+  $sans-serif: 'Open Sans', sans-serif;
+  $serif: 'Roboto Slab', serif;
+
+  @include clearfix;
+  text-align: left;
+
+  .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: .7em;
+    font-weight: 600;
+    margin-bottom: 2em;
+    padding: .1em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    margin-bottom: .6em;
+
+    @include media($medium-screen) {
+      font-size: 2.4em;
+    }
+  }
+
+  h2 {
+    font-family: $sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-bottom: 1.2em;
+
+    @include media($medium-screen) {
+      font-size: 1.3em;
+    }
+  }
+
+  code {
+    white-space: nowrap;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: $base-border-radius * 1.5;
+    padding: .1em .4em;
+    font-size: .8em;
+    font-style: normal;
+  }
+
+  h3 {
+   font-family: $serif;
+   font-size: 1em;
+   font-weight: 600;
+   text-transform: uppercase;
+   line-height: 1.4em;
+   margin-bottom: .5em; 
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $serif;
+    font-size: .8em;
+    margin-bottom: .5em;
+  }
+
+  p {
+    font-family: $serif;
+    font-weight: 300;
+    letter-spacing: 1;
+    margin-bottom: 1.5em;
+
+    span {
+      font-family: $sans-serif;
+      font-weight: 600;
+      font-size: .8em;
+      text-transform: uppercase;
+    }
+  }
+
+  a.read-more {
+    display: inline-block;
+    font-family: $serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      position: absolute;
+      font-size: 1.8em;
+      top: -2px;
+      right: -12px;
+    }
+  }
+
+  hr {
+    width: 3em;
+  }
+
+  p.author {
+    font-family: $serif;
+  }
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+      </div>
+      <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Rounded Sans Serif</h6></div>
+        <div class="refill-smaller">
+          <div class="refill-centering"><head>
+  <link href='http://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+</head>
+
+<article class="type-system-rounded">
+  <p class="type">Article Type</p>
+  <h1>Article Heading</h1>
+  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
+  <p class="date">30 Mar 2014</p>
+  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+  </p>
+  <h3>Subheading lorem</h3>
+  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
+  <hr>
+  <p class="author">Author Name</p>
+</article>
+</div>
+        </div>
+        <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;head&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+
+&lt;article class=&quot;type-system-rounded&quot;&gt;
+  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
+  &lt;h1&gt;Article Heading&lt;/h1&gt;
+  &lt;h2&gt;These override some of the styles specified in the &lt;code&gt;_variables.scss&lt;/code&gt; and &lt;code&gt;_typography.scss&lt;/code&gt; partials in &lt;a href=&quot;//bitters.bourbon.io&quot;&gt;Bitters&lt;/a&gt;. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&amp;rsquo;t need the wrapping class &lt;code&gt;.type-system-name&lt;/code&gt;.&lt;/h2&gt;
+  &lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
+  &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;h3&gt;Subheading lorem&lt;/h3&gt;
+  &lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">article.type-system-rounded {
+  $sans-serif: 'Nunito', sans-serif;
+  $sans-serif-2: 'Varela Round', sans-serif;
+
+  @include clearfix;
+  text-align: left;
+
+  .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: .7em;
+    font-weight: 800;
+    margin-bottom: 2em;
+    padding: .3em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $sans-serif-2;
+    font-size: 1.8em;
+    margin-bottom: .5em;
+
+    @include media($medium-screen) {
+      font-size: 2.4em;
+    }
+  }
+
+  h2 {
+    font-family: $sans-serif-2;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: .9em;
+
+    @include media($medium-screen) {
+      font-size: 1.4em;
+    }
+  }
+
+  code {
+    white-space: nowrap;
+    font-family: monaco;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: $base-border-radius * 1.5;
+    padding: .1em .4em;
+    font-size: .7em;
+    font-style: normal;
+  }
+
+
+  h3 {
+    font-family: $sans-serif-2;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: .4em;
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $sans-serif;
+    font-size: .9em;
+    margin-bottom: .3em;
+  }
+
+  p {
+    font-family: $sans-serif;
+    line-height: 1.4em;
+    font-size: 1.05em;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+
+    span {
+      font-family: $sans-serif-2;
+      text-transform: uppercase;
+      font-size: 0.8em;
+    }
+  }
+
+  a.read-more {
+    display: inline-block;
+    font-family: $sans-serif-2;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      position: absolute;
+      font-size: 1.5em;
+      top: -1px;
+      right: -12px;
+    }
+  }
+  
+  hr {
+    width: 3em;
+  }
+
+  p.author {
+    font-family: $sans-serif;
+  }
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+      </div>
+      <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Traditional</h6></div>
+        <div class="refill-smaller">
+          <div class="refill-centering"><head>
+  <link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+<article class="type-system-traditional">
+  <p class="type">Article Type</p>
+  <h1>Article Heading</h1>
+  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
+  <p class="date">30 Mar 2014</p>
+  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+  </p>
+  <h3>Subheading lorem</h3>
+  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
+  <hr>
+  <p class="author">Author Name</p>
+</article>
+</div>
+        </div>
+        <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;head&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+
+&lt;article class=&quot;type-system-traditional&quot;&gt;
+  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
+  &lt;h1&gt;Article Heading&lt;/h1&gt;
+  &lt;h2&gt;These override some of the styles specified in the &lt;code&gt;_variables.scss&lt;/code&gt; and &lt;code&gt;_typography.scss&lt;/code&gt; partials in &lt;a href=&quot;//bitters.bourbon.io&quot;&gt;Bitters&lt;/a&gt;. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&amp;rsquo;t need the wrapping class &lt;code&gt;.type-system-name&lt;/code&gt;.&lt;/h2&gt;
+  &lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
+  &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;h3&gt;Subheading lorem&lt;/h3&gt;
+  &lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">article.type-system-traditional {
+  $sans-serif: 'Noto Sans', sans-serif;
+  $serif: 'Radley', serif;
+
+  @include clearfix;
+  text-align: left;
+
+  .type {
+    border-bottom: 2px solid;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: .7em;
+    font-weight: 800;
+    margin-bottom: 2em;
+    padding: .1em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $serif;
+    font-size: 1.9em;
+    font-weight: 700;
+    margin-bottom: .3em;
+
+    @include media($medium-screen) {
+      font-size: 2.6em;
+    }
+  }
+
+  h2 {
+    font-family: $serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    line-height: 1.25em;
+    margin-bottom: .9em;
+
+    @include media($medium-screen) {
+      font-size: 1.5em;
+    }
+  }
+
+  code {
+    white-space: nowrap;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: $base-border-radius * 1.5;
+    padding: .1em .4em;
+    font-size: .75em;
+    font-style: normal;
+  }
+
+  h2 code {
+    font-size: .65em;
+  }
+
+  h3 {
+    font-family: $serif;
+    font-size: 1.4em;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: .4em;
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $serif;
+    font-style: italic;
+    margin-bottom: .3em;
+  }
+
+  p {
+    font-family: $sans-serif;
+    letter-spacing: 1;
+    margin-bottom: 1.5em;
+    line-height: 1.55em;
+
+    span {
+      font-family: $serif;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+  }
+  
+  a.read-more {
+    display: inline-block;
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      font-family: $sans-serif;
+      font-style: normal;
+      position: absolute;
+      font-size: 1.5em;
+      top: -1px;
+      right: -12px;
+    }
+  }
+
+  hr {
+    width: 3em;
+  }
+
+  p.author {
+    font-family: $serif;
+    font-size: 1.2em;
+    font-style: italic;
+  }
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+      </div>    
+      <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Geometric</h6></div>
+        <div class="refill-smaller">
+          <div class="refill-centering"><head>
+  <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+</head>
+
+<article class="type-system-geometric">
+  <p class="type">Article Type</p>
+  <h1>Article Heading</h1>
+  <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
+  <p class="date">30 Mar 2014</p>
+  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+  </p>
+  <h3>Subheading lorem</h3>
+  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
+  <hr>
+  <p class="author">Author Name</p>
+</article>
+</div>
+        </div>
+        <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;head&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'&gt;
+&lt;/head&gt;
+
+&lt;article class=&quot;type-system-geometric&quot;&gt;
+  &lt;p class=&quot;type&quot;&gt;Article Type&lt;/p&gt;
+  &lt;h1&gt;Article Heading&lt;/h1&gt;
+  &lt;h2&gt;These override some of the styles specified in the &lt;code&gt;_variables.scss&lt;/code&gt; and &lt;code&gt;_typography.scss&lt;/code&gt; partials in &lt;a href=&quot;//bitters.bourbon.io&quot;&gt;Bitters&lt;/a&gt;. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&amp;rsquo;t need the wrapping class &lt;code&gt;.type-system-name&lt;/code&gt;.&lt;/h2&gt;
+  &lt;p class=&quot;date&quot;&gt;30 Mar 2014&lt;/p&gt;
+  &lt;p&gt;&lt;span&gt;Lorem ipsum dolor sit amet&lt;/span&gt;, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum&lt;/a&gt; illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;read-more&quot;&gt;Read More &lt;span&gt;&amp;rsaquo;&lt;/span&gt;&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;h3&gt;Subheading lorem&lt;/h3&gt;
+  &lt;p&gt;&lt;span&gt;Consequatur ullam, voluptatum&lt;/span&gt; incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;p class=&quot;author&quot;&gt;Author Name&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">article.type-system-geometric {
+  $sans-serif: 'Questrial', sans-serif;
+  $serif: 'Sanchez', serif;
+
+  @include clearfix;
+  text-align: left;
+
+  .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: .7em;
+    font-weight: 800;
+    margin-bottom: 2em;
+    padding: .3em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: .5em;
+
+    @include media($medium-screen) {
+      font-size: 2.6em;
+    }
+  }
+
+  h2 {
+    font-family: $serif;
+    font-style: italic;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: 1.1em;
+
+    @include media($medium-screen) {
+      font-size: 1.3em;
+    }
+  }
+
+  code {
+    white-space: nowrap;
+    background: #F7F7F7;
+    border: 1px solid #E0E0E0;
+    border-radius: $base-border-radius * 1.5;
+    padding: .1em .4em;
+    font-size: .7em;
+    font-style: normal;
+  }
+
+  h3 {
+    font-family: $serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: .4em;
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $serif;
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: .3em;
+  }
+
+  p {
+    font-family: $sans-serif;
+    line-height: 1.5em;
+    font-size: 1.05em;
+    margin-bottom: 1.5em;
+  }
+
+  a.read-more {
+    display: inline-block;
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-left: .2em;
+    position: relative;
+
+    span {
+      font-family: $sans-serif;
+      font-style: normal;
+      position: absolute;
+      font-size: 1.5em;
+      top: -1px;
+      right: -12px;
+    }
+  }
+  
+  hr {
+    width: 3em;
+  }
+
+  p.author {
+    font-family: $sans-serif;
+  }
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Type System tabs -->
+<script>
+  var $tabs, $toggles, ACTIVE_CLASS;
+
+  ACTIVE_CLASS = 'js-is-active';
+
+  $tabs = $("[data-role='tab']");
+
+  $toggles = $tabs.find("[data-role='link']");
+
+  $toggles.on('click', function(event) {
+    var $tab, $toggle;
+    event.preventDefault();
+    $toggle = $(this);
+    $tab = $toggle.closest($tabs);
+    if (!$tab.hasClass(ACTIVE_CLASS)) {
+      $tabs.removeClass(ACTIVE_CLASS);
+      return $tab.addClass(ACTIVE_CLASS);
+    }
+  });
+</script>
+
+<!-- Show Code -->
+<script>
+  $('a.js-show-code').on('click', function(e){
+    $(this).hide();
+    $(this).siblings('.js-hide-code').css('display', 'inline-block');
+    $(this).parent().siblings('.snippets-table').show();
+    e.preventDefault();
+  })
+
+  $('a.js-hide-code').on('click', function(e) {
+    $(this).hide();
+    $(this).siblings('.js-show-code').css("display", "inline-block");
+    $(this).parent().siblings('.snippets-table').hide();
+    e.preventDefault();
+  });
+</script>
+
+<!-- Copy Code -->
+<script>
+  $(document).ready( function() {
+    client = new ZeroClipboard($('.copy-source'), {moviePath: '/images/ZeroClipboard.swf'})
+    client.on('dataRequested', function(client, args) {
+      code = $(this).siblings('pre').text();
+      client.setText(code);
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function(){
+
+    $('.js-menu-trigger-refills').on('click touchstart', function(e){
+      $('.er_toc').toggleClass('is-visible');
+      $('.js-menu-screen-refills').toggleClass('is-visible');
+      e.preventDefault();
+    });
+
+    $('.js-menu-screen-refills').on('click touchstart', function(e){
+      $('.er_toc').toggleClass('is-visible');
+      $('.js-menu-screen-refills').toggleClass('is-visible');
+      e.preventDefault();
+    });
+  });
+</script>
+
+
+        <footer class="refills-footer">
+          <ul class="footer-links">
+            <li><a href="../">Patterns</a></li>
+            <li><a href="../components/">Components</a></li>
+            <li><a href="./">Type Systems</a></li>
+          </ul>
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
+          <p>Refills is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>.</p>
+          <p>Copyright &copy; 2014 <a href="//thoughtbot.com">thoughtbot, inc</a>. Refills is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/refills/blob/master/LICENSE.md">license</a>.</p>
+        </footer>
+      </section>
+    </section>
+  </body>
+  <script src="../javascripts/all.js" type="text/javascript"></script>
+</html>
