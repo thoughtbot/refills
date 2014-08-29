@@ -11,7 +11,7 @@
   @include clearfix;
   border-radius: $tab-border-radius;
   border: $tab-border;
-  margin-bottom: $base-line-height;
+  margin-bottom: $base-spacing;
   overflow: hidden;
 
   .vertical-tabs {
@@ -32,7 +32,7 @@
       display: block;
       font-weight: bold;
       margin-right: -1px;
-      padding: $base-line-height/2 $gutter/2;
+      padding: $base-spacing/2 $gutter/2;
 
       &.is-active {
         background-color: $tab-content-background;
@@ -62,7 +62,7 @@
 
   .vertical-tab-content {
     background-color: $tab-content-background;
-    padding: $base-line-height $gutter;
+    padding: $base-spacing $gutter;
 
     @include media($vertical-tab-mode) {
       border: none;
@@ -76,7 +76,7 @@
     cursor: pointer;
     display: block;
     font-weight: bold;
-    padding: $base-line-height/2 $gutter/2;
+    padding: $base-spacing/2 $gutter/2;
 
     &:hover {
       color: $base-accent-color;

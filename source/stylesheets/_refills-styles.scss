@@ -189,9 +189,7 @@ ul.refills-menu {
 }
 
 #example {
-  // @include media($large-screen) {
-    padding-top: 6em;
-  // }
+  padding-top: 6em;
 }
 
 // Refill section 
@@ -240,8 +238,8 @@ ul.refills-menu {
 
 .line-behind-text {
   border-bottom: 1px solid #CACACA;
-  margin-bottom: $base-line-height *3;
   text-align: center;
+  margin-bottom: $base-spacing *3;
 }
 
 .line-behind-text h6 {
@@ -258,7 +256,7 @@ ul.refills-menu {
 }
 
 .refill h6 {
-  margin-bottom: $base-line-height;
+  margin-bottom: $base-spacing;
 }
 
 // Hiding and showing code
@@ -288,7 +286,7 @@ ul.refills-menu {
 }
 
 .refill-snippet {
-  margin-top: $base-line-height *3;
+  margin-top: $base-spacing *3;
   padding: 0 1em;
 }
 
@@ -429,7 +427,7 @@ footer.refills-footer {
   @include clearfix;
   border-radius: $base-border-radius;
   border: $tab-border;
-  margin-bottom: $base-line-height;
+margin-bottom: $base-spacing;
  
   @include media($tab-mode) {
     border: none;
@@ -463,7 +461,7 @@ footer.refills-footer {
       font-size: .9em;
       font-weight: 200;
       letter-spacing: .6px;
-      padding: $base-line-height/2 $gutter/2;
+      padding: $base-spacing/2 $gutter/2;
       text-align: center;
  
       @include media($tab-mode) {
@@ -483,6 +481,7 @@ footer.refills-footer {
     }
  
     section {
+      padding: $base-spacing $gutter;
       background: $tab-content-background;
       display: none;
       overflow: hidden;
@@ -495,7 +494,7 @@ footer.refills-footer {
         border-top: $tab-border;
         float: left;
         left: 0;
-        padding: $base-line-height/2 $gutter;
+        padding: $base-spacing/2 $gutter;
       }
 
       .tab-content {

@@ -1,8 +1,8 @@
 fieldset {
   background: lighten($base-border-color, 10);
-  border: 1px solid $base-border-color;
-  margin: 0 0 ($base-line-height / 2) 0;
-  padding: $base-line-height;
+  border: $base-border;
+  margin: 0 0 ($base-spacing / 2) 0;
+  padding: $base-spacing;
 }
 
 input,
@@ -15,7 +15,7 @@ select {
 
 label {
   font-weight: bold;
-  margin-bottom: $base-line-height / 4;
+  margin-bottom: $base-spacing / 4;
 
   &.required:after {
     content: "*";
@@ -37,8 +37,8 @@ select[multiple=multiple] {
   box-shadow: $form-box-shadow;
   font-family: $form-font-family;
   font-size: $form-font-size;
-  margin-bottom: $base-line-height / 2;
-  padding: ($base-line-height / 3) ($base-line-height / 3);
+  margin-bottom: $base-spacing / 2;
+  padding: ($base-spacing / 3) ($base-spacing / 3);
   width: 100%;
 
   &:hover {
@@ -60,19 +60,19 @@ input[type="search"] {
   @include appearance(none);
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   display: inline;
-  margin-right: $base-line-height / 4;
+  margin-right: $base-spacing / 4;
 }
 
 input[type="file"] {
-  margin-bottom: $base-line-height / 2;
-  padding-bottom: ($base-line-height / 3);
+  padding-bottom: $base-spacing / 2;
   width: 100%;
 }
 
 select {
-  width: auto;
+  margin-bottom: $base-spacing;
   max-width: 100%;
-  margin-bottom: $base-line-height;
+  width: auto;
 }

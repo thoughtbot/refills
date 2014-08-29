@@ -4,10 +4,15 @@ body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  line-height: $unitless-line-height;
+  line-height: $base-line-height;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $header-font-family;
   line-height: $header-line-height;
   margin: 0;
@@ -15,31 +20,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
+  font-size: $h1-font-size;
 }
 
 h2 {
-  font-size: $base-font-size * 2; // 16 * 2 = 32px
+  font-size: $h2-font-size;
 }
 
 h3 {
-  font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
+  font-size: $h3-font-size;
 }
 
 h4 {
-  font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
+  font-size: $h4-font-size;
 }
 
 h5 {
-  font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
+  font-size: $h5-font-size;
 }
 
 h6 {
-  font-size: $base-font-size;
+  font-size: $h6-font-size;
 }
 
 p {
-  margin: 0 0 ($base-line-height * .5);
+  margin: 0 0 ($base-spacing / 2);
 }
 
 a {
@@ -58,14 +63,15 @@ a {
 }
 
 hr {
-  border-bottom: 1px solid $base-border-color;
+  border-bottom: $base-border;
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: $base-line-height 0;
+  margin: $base-spacing 0;
 }
 
-img {
+img,
+picture {
   margin: 0;
   max-width: 100%;
 }
@@ -73,8 +79,8 @@ img {
 blockquote {
   border-left: 2px solid $base-border-color;
   color: lighten($base-font-color, 15);
-  margin: $base-line-height 0;
-  padding-left: $base-line-height / 2;
+  margin: $base-spacing 0;
+  padding-left: $base-spacing / 2;
 }
 
 cite {
@@ -82,6 +88,6 @@ cite {
   font-style: italic;
 
   &:before {
-    content: '\2014 \00A0';
+    content: "\2014 \00A0";
   }
 }

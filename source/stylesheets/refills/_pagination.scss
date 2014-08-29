@@ -35,7 +35,7 @@
       border-radius: $base-border-radius;
       border: $pagination-border;
       color: $pagination-color;
-      padding: $base-line-height/4 $gutter/2;
+      padding: $base-spacing/4 $gutter/2;
 
       &:hover,
       &:focus {

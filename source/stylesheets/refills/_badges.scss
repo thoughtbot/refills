@@ -32,7 +32,7 @@
 
     &.notice {
       background: $badge-notice-color;
-      color: darken($badge-error-color, 60);
+      color: darken($badge-notice-color, 60);
     }
 
     &.success {
