@@ -427,7 +427,7 @@ footer.refills-footer {
   @include clearfix;
   border-radius: $base-border-radius;
   border: $tab-border;
-margin-bottom: $base-spacing;
+  margin-bottom: $base-spacing;
  
   @include media($tab-mode) {
     border: none;
