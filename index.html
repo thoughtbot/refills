@@ -1010,6 +1010,113 @@
 </div>
     </div>
 
+    <div id="intro_text" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Intro Text</h6></div>
+        <div class="intro-text">
+  <h3>Topic Label</h3>
+  <h2>Intro Text Heading</h2>
+  <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta rerum libero iste saepe.</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur consectetur adipisicing elit. Perferendis para mitis eun non ullam atque debitis, illo adipisicing elit. Perferendis para mitis eun non ullam atque debitis, illo. Amet, consectetur adipisicing. <a href="">Read more <span>&#187;</span></a></p>
+</div>
+
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;intro-text&quot;&gt;
+  &lt;h3&gt;Topic Label&lt;/h3&gt;
+  &lt;h2&gt;Intro Text Heading&lt;/h2&gt;
+  &lt;h4&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta rerum libero iste saepe.&lt;/h4&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur consectetur adipisicing elit. Perferendis para mitis eun non ullam atque debitis, illo adipisicing elit. Perferendis para mitis eun non ullam atque debitis, illo. Amet, consectetur adipisicing. &lt;a href=&quot;&quot;&gt;Read more &lt;span&gt;&amp;#187;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.intro-text {
+  $intro-text-width: 60%;
+
+  margin-bottom: 5em;
+  margin-top: 4em;
+  text-align: center;
+
+  h2 {
+    font-family: $serif;
+    font-weight: 800;
+    margin-bottom: .3em;
+
+    @include media($large-screen) {
+      font-size: 3em;
+      margin-bottom: .4em;
+    }
+  }
+
+  h3 {
+    background: $base-accent-color;
+    color: white;
+    display: inline-block;
+    font-size: .7em;
+    font-weight: 800;
+    margin-bottom: 2em;
+    padding: 3px 8px;
+    text-transform: uppercase;
+
+    @include media($large-screen) {
+      margin-bottom: 3.3em;
+    }
+  }
+
+  h4 {
+    color: lighten($base-font-color, 20);
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.4em;
+    margin: 0 auto 1em;
+
+    @include media($large-screen) {
+      font-size: 1.7em;
+      line-height: 1.35em;
+      margin: 0 auto 1em;
+      width: $intro-text-width;
+    }    
+  }
+
+  p {
+    margin: auto;
+
+    @include media($large-screen) {
+      width: $intro-text-width;
+    }
+
+    a {
+      font-size: .8em;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      span {
+        font-size: 1.3em;
+        line-height: 0;
+      }
+    }
+  }
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+    </div>
+
     <div id="icon-bullet-points" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Icon Bullet Points</h6></div>

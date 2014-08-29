@@ -978,7 +978,7 @@ body {
           padding: .5em; } }
   /* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
   .refills-header h2 {
-    font-family: "Lusitana", serif;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
     font-size: 1.4em;
     font-weight: 100;
     margin: 0 auto 2em auto;
@@ -2340,7 +2340,7 @@ section.inner-content {
             font-size: 1.8em; } }
       /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hero.scss */
       .hero .hero-inner .hero-copy p {
-        font-family: "Lusitana", serif;
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
         margin: auto;
         margin-bottom: 3em;
         font-weight: 200;
@@ -3482,7 +3482,7 @@ header.navigation {
     visibility: hidden;
     min-width: 16em;
     z-index: 10;
-    font-family: "Lusitana", serif; }
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
     /* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
     .tooltip-item .tooltip p {
       margin-bottom: 0; }
@@ -4279,7 +4279,7 @@ iframe {
 .centered-navigation {
   background-color: #e7f1ec;
   border-bottom: 1px solid #d4e6dd;
-  font-family: "Lusitana", serif;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   height: 60px;
   width: 100%;
   z-index: 9999; }
@@ -4666,7 +4666,7 @@ iframe {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
   /* line 45, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_device.scss */
   .device-text p {
-    font-family: "Lusitana", serif;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
     margin-bottom: 1.5em; }
 
 /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_device.scss */
@@ -4840,6 +4840,66 @@ iframe {
   float: left;
   height: 5em;
   width: 50%; }
+
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
+.intro-text {
+  margin-bottom: 5em;
+  margin-top: 4em;
+  text-align: center; }
+  /* line 8, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
+  .intro-text h2 {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 800;
+    margin-bottom: .3em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 8, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
+      .intro-text h2 {
+        font-size: 3em;
+        margin-bottom: .4em; } }
+  /* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
+  .intro-text h3 {
+    background: #477dca;
+    color: white;
+    display: inline-block;
+    font-size: .7em;
+    font-weight: 800;
+    margin-bottom: 2em;
+    padding: 3px 8px;
+    text-transform: uppercase; }
+    @media screen and (min-width: 53.75em) {
+      /* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
+      .intro-text h3 {
+        margin-bottom: 3.3em; } }
+  /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
+  .intro-text h4 {
+    color: #666666;
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.4em;
+    margin: 0 auto 1em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
+      .intro-text h4 {
+        font-size: 1.7em;
+        line-height: 1.35em;
+        margin: 0 auto 1em;
+        width: 60%; } }
+  /* line 49, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
+  .intro-text p {
+    margin: auto; }
+    @media screen and (min-width: 53.75em) {
+      /* line 49, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
+      .intro-text p {
+        width: 60%; } }
+    /* line 56, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
+    .intro-text p a {
+      font-size: .8em;
+      font-weight: 400;
+      text-transform: uppercase; }
+      /* line 61, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
+      .intro-text p a span {
+        font-size: 1.3em;
+        line-height: 0; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
 article.type-system-slab {
