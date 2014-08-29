@@ -137,7 +137,7 @@
       border-radius: $base-border-radius;
       border: $pagination-border;
       color: $pagination-color;
-      padding: $base-line-height/4 $gutter/2;
+      padding: $base-spacing/4 $gutter/2;
 
       &amp;:hover,
       &amp;:focus {
@@ -566,7 +566,7 @@ $sliding-menu-color-hover: #fff;
 
     &amp;.notice {
       background: $badge-notice-color;
-      color: darken($badge-error-color, 60);
+      color: darken($badge-notice-color, 60);
     }
 
     &amp;.success {
@@ -621,7 +621,7 @@ $sliding-menu-color-hover: #fff;
   <pre><code class="language-scss">.breadcrumb { 
   $breadcrumb-border-color: $base-border-color;
   $breadcrumb-border: 1px solid $breadcrumb-border-color;
-  $breadcrumb-height: $base-line-height * 1.5;
+  $breadcrumb-height: $base-spacing * 1.5;
   $breadcrumb-arrow-color: $breadcrumb-border-color;
   $breadcrumb-background: $base-background-color;
   $breadcrumb-inactive-hover-color: $breadcrumb-background;
@@ -631,7 +631,7 @@ $sliding-menu-color-hover: #fff;
 
   @include inline-block;
   text-align: left;
-  margin-bottom: $base-line-height;
+  margin-bottom: $base-spacing;
 
   a {
     @include inline-block;
@@ -886,11 +886,11 @@ $sliding-menu-color-hover: #fff;
   $accordion-menu-sub-background: darken($accordion-menu-background, 5);
   $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
   $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
-  $accordion-menu-list-padding: $base-line-height/2 $gutter;
+  $accordion-menu-list-padding: $base-spacing/2 $gutter;
   
   background-color: $accordion-menu-background;
   border: $accordion-menu-border;
-  margin-bottom: $base-line-height;
+  margin-bottom: $base-spacing;
 
   li {
     border-bottom: $accordion-menu-border;
