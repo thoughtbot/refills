@@ -72,7 +72,7 @@ $dropdown-arrow-top-distance: 0;
   top: $dropdown-arrow-top-distance;
 }
 
-.menu {
+.dropdown-menu {
   @include transition (all 0.2s ease-in-out);
   background: $dropdown-background;
   border-radius: $base-border-radius;
@@ -99,22 +99,22 @@ $dropdown-arrow-top-distance: 0;
   }
 }
 
-.menu li {
+.dropdown-menu li {
   border-bottom: $dropdown-inner-border;
   color: $dropdown-color; 
   padding: $dropdown-padding / 2;
 }
 
-.menu li:hover {
+.dropdown-menu li:hover {
   background: $dropdown-background-hover;
 }
 
-.menu li:first-child {
+.dropdown-menu li:first-child {
   border-top-left-radius: $base-border-radius;
   border-top-right-radius: $base-border-radius;
 }
 
-.menu li:last-child {
+.dropdown-menu li:last-child {
   border: none;
   border-bottom-left-radius: $base-border-radius;
   border-bottom-right-radius: $base-border-radius;
