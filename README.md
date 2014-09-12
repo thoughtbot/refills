@@ -34,9 +34,19 @@ If a component/pattern has JavaScript it is placed in the HTML.erb file. Feel fr
 
 Refills can be used by simply copy-pasting components/patterns from the site but if you prefer adding them via rake tasks, follow these steps:
 
-Add gem to your Gemfile
+## Installation for Rails 3.1+
 
-    gem 'refills'
+1. Add Refills to your Gemfile:
+
+  ```ruby
+  gem 'refills'
+  ```
+
+2. Then run:
+
+  ```bash
+  bundle install
+  ```
 
 The gem provides the following Rails generators
 
