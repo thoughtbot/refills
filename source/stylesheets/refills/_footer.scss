@@ -5,7 +5,7 @@
   $footer-disclaimer-color: transparentize($footer-color, .6);
 
   background: $footer-background;
-  padding: $base-spacing*2 $gutter;
+  padding: 3em $gutter;
   width: 100%;
 
   .footer-logo {
@@ -27,7 +27,7 @@
   }
 
   ul {
-    margin-bottom: $base-spacing*2;
+    margin-bottom: 1.5em;
 
     @include media($medium-screen) {
       @include span-columns(3);

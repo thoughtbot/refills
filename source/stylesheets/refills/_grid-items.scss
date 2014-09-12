@@ -4,20 +4,21 @@
 
 .grid-items {
   $grid-items-background: $base-background-color;
-  $grid-item-background: desaturate(teal, 30); 
+  $grid-item-background: #B7AC90; 
   $grid-item-colors: 
-    desaturate(teal, 30), 
     #3581A5, 
-    #5FBEBE,
-    #98C79A,
-    #A7A891, 
-    #BDCC97,
-    #979EA0;
-  $grid-item-border-size: 9px;
+    #3581A5, 
+    #02A5A9,
+    #3581A5,
+    #3581A5, 
+    #3581A5,
+    #3581A5;
+  $grid-item-gutter-size: 9px;
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
   $grid-item-color: white;
   $grid-item-height: 14em;
+  $grid-item-border-thickness: 1px;
 
   @include clearfix;
     
@@ -30,9 +31,9 @@
     float: left;
     padding: 2em;
     border-top: 0;
-    border-bottom: $grid-item-border-size solid $grid-items-background;
-    border-left: $grid-item-border-size /2 solid $grid-items-background;
-    border-right: $grid-item-border-size /2 solid $grid-items-background;
+    border-bottom: $grid-item-gutter-size solid $grid-items-background;
+    border-left: $grid-item-gutter-size /2 solid $grid-items-background;
+    border-right: $grid-item-gutter-size /2 solid $grid-items-background;
     text-align: center;
     cursor: pointer;
 
@@ -44,7 +45,7 @@
       &:nth-child(#{$i}) {
         $background-from-list: nth($grid-item-colors, $i);
         background-color: $background-from-list;
-        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10);
+        box-shadow: inset 0px 0px 0px $grid-item-border-thickness darken($background-from-list, 10);
         &:hover {
           background-color: darken($background-from-list, 10);
           background-repeat: no-repeat;
@@ -80,6 +81,7 @@
     @include media($large-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }
+
     p {
       @include media($medium-screen) {
         max-width: 60%;
