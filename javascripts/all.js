@@ -1753,10 +1753,10 @@ Prism.languages.scss=Prism.languages.extend("css",{comment:{pattern:/(^|[^\\])(\
   };
 
 })(jQuery, window, document);
-$('.js-accordion-trigger').bind('click', function(){
+$('.js-accordion-trigger').bind('click', function(e){
   jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
   jQuery(this).parent().toggleClass('is-expanded');
-  event.preventDefault();
+  e.preventDefault();
 });
 $(document).ready(function () {
   $('.accordion-tabs').each(function(index) {
@@ -1766,7 +1766,7 @@ $(document).ready(function () {
   $('.accordion-tabs').on('click', 'li > a', function(event) {
     if (!$(this).hasClass('is-active')) {
       event.preventDefault();
-      var accordionTabs = $(this).closest('.accordion-tabs')
+      var accordionTabs = $(this).closest('.accordion-tabs');
       accordionTabs.find('.is-open').removeClass('is-open').hide();
 
       $(this).next().toggleClass('is-open').toggle();
