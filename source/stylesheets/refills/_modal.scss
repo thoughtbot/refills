@@ -1,7 +1,7 @@
 .modal {
   $modal-padding: 3em;
-  $modal-background: $base-background-color;
-  $modal-close-color: $light-gray;
+  $modal-background: white;
+  $modal-close-color: silver;
   $modal-image-height: 135px;
   $modal-image-width: $modal-image-height;
 
@@ -17,14 +17,12 @@
     max-width: $img-width;
   }
 
-  input[type="checkbox"] {
+  input[type="checkbox"].modal-state {
     display: none;
   }
 
-  .btn {
-    @include button(simple, $base-background-color);
-    font-size: $base-font-size;
-    margin-bottom: $base-line-height;
+  .modal-trigger {
+    @extend button;
   }
 
   .modal-open {
