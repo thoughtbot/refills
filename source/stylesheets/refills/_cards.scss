@@ -3,20 +3,22 @@
 }
 
 .card {
-  $card-border-color: $base-border-color;
+  $card-border-color: gainsboro;
   $card-border: 1px solid $card-border-color;
   $card-background: lighten($card-border-color, 10);
   $card-header-background: $card-background;
   $card-hover-background: lighten($card-background, 5);
   $card-image-background: #DBD199;
   $card-image-hover-background: lighten($card-image-background, 5);
-  $card-stats-color: lighten($base-accent-color, 10);
+  $card-stats-color: teal;
+  $card-margin-bottom: 1.5em;
+  $card-padding: .75em 1em;
 
   @include transition (all 0.2s ease-in-out);
   background-color: $card-background;
   border-radius: $base-border-radius;
   border: $card-border;
-  margin-bottom: $base-spacing;
+  margin-bottom: $card-margin-bottom;
   cursor: pointer;
   box-shadow: 0 2px 4px darken($base-background-color, 10);
   position: relative;
@@ -41,7 +43,8 @@
 
   .ribbon-wrapper {
     $ribbon-size: 85px;
-    $ribbon-background: $base-accent-color;
+    $ribbon-background: teal;
+
     @include size($ribbon-size);
     overflow: hidden;
     position: absolute;
@@ -70,17 +73,17 @@
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
-    padding: $base-spacing/3 $gutter/2;
+    padding: $card-padding;
   }
 
   .card-copy {
-    padding: $base-spacing/2 $gutter/2;
+    padding: $card-padding;
     font-size: .9em;
     line-height: 1.5em;
   }
 
   .card-stats {
-    padding: $base-spacing/2 $gutter/2;
+    padding: $card-padding;
     overflow: auto;
 
     ul li {
@@ -102,7 +105,6 @@
       }
 
       span {
-        color: $base-font-color;
         font-size: .7em;
         display: block;
         font-weight: normal;

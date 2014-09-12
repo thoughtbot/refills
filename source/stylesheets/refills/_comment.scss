@@ -1,15 +1,16 @@
 .comment {
   $comment-gutter: 1.4em;
+  $comment-margin-bottom: 1.5em;
   $comment-image-padding: .7em;
   $comment-image-width: 4em;
   $comment-color: $base-font-color;
-  $comment-background: lighten($base-accent-color, 15);
+  $comment-background: lighten(teal, 15);
   $comment-detail-color: transparentize($comment-color, .5);
   $comment-image-vert-alignment: top;
 
   display: table;
   width: 100%;
-  margin-bottom: $base-spacing;
+  margin-bottom: $comment-margin-bottom;
   padding-bottom: 1em;
   border-bottom: 1px solid transparentize($comment-color, .9);
 

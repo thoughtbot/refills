@@ -1,5 +1,4 @@
 $refills-color: lighten(desaturate(teal, 60), 40);
-$base-background-color: white;
 $refills-nav-height: 60px;
 $logo-color: #93E9BE;
 $refills-anchor-color: #F55481;
@@ -271,7 +270,7 @@ ul.refills-menu {
   width: 9em;
 
   &:hover {
-    color: $base-accent-color;
+    color: teal;
   }
 }
 

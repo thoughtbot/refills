@@ -1,5 +1,6 @@
 .intro-text {
   $intro-text-width: 60%;
+  $intro-small-header-background: teal;
 
   margin-bottom: 5em;
   margin-top: 4em;
@@ -17,13 +18,13 @@
   }
 
   h3 {
-    background: $base-accent-color;
+    background: $intro-small-header-background;
     color: white;
     display: inline-block;
     font-size: .7em;
     font-weight: 800;
     margin-bottom: 2em;
-    padding: 3px 8px;
+    padding: 4px 8px 5px;
     text-transform: uppercase;
 
     @include media($large-screen) {

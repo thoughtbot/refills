@@ -3,7 +3,7 @@
   $button-group-color: lighten($base-font-color, 30);
   $button-group-border: 1px solid silver;
   $button-group-inner-border: 1px solid lighten(silver, 18);
-  $button-group-background-checked: $base-accent-color;
+  $button-group-background-checked: teal;
   $button-group-color-checked: white;
   $button-group-border-checked: darken($button-group-background-checked, 15);
 

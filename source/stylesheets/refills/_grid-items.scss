@@ -4,9 +4,9 @@
 
 .grid-items {
   $grid-items-background: $base-background-color;
-  $grid-item-background: desaturate($base-accent-color, 30); 
+  $grid-item-background: desaturate(teal, 30); 
   $grid-item-colors: 
-    desaturate($base-accent-color, 30), 
+    desaturate(teal, 30), 
     #3581A5, 
     #5FBEBE,
     #98C79A,

@@ -6,7 +6,7 @@
   $breadcrumb-background: $base-background-color;
   $breadcrumb-inactive-hover-color: $breadcrumb-background;
   $breadcrumb-color: $medium-gray;
-  $breadcrumb-color-hover: $base-accent-color;
+  $breadcrumb-color-hover: teal;
   $breadcrumb-color-active: $breadcrumb-color;
 
   @include inline-block;

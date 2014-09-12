@@ -6,6 +6,7 @@
   $tab-inactive-color: $base-background-color;
   $tab-inactive-hover-color: darken($light-gray, 5);
   $tab-mode: $medium-screen;
+  $tab-padding: .75em 1em;
 
   @include clearfix;
   border: $tab-border;
@@ -45,7 +46,7 @@
     color: $dark-gray;
     display: block;
     font-weight: 400;
-    padding: $base-spacing/2 $gutter;
+    padding: $tab-padding;
 
     @include media($tab-mode) {
       @include inline-block;
@@ -76,7 +77,7 @@
   }
 
   li.tab-header-and-content .tab-content {
-    padding: $base-spacing $gutter;
+    padding: $tab-padding;
     background: $tab-content-background;
     display: none;
     overflow: hidden;
@@ -86,7 +87,7 @@
       border-top: $tab-border;
       float: left;
       left: 0;
-      padding: $base-spacing/2 $gutter/2;
+      padding: 2em 1em;
 
       p {
         @include columns(2);

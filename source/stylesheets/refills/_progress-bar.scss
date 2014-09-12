@@ -1,7 +1,7 @@
 .progress-bar {
   $progress-border-color: $base-border-color;
   $progress-border: 1px solid $progress-border-color;
-  $progress-meter-border-color: $base-accent-color;
+  $progress-meter-border-color: teal;
   $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
   $progress-meter-color: $progress-meter-border-color;
   $progress-background: darken($base-background-color, 5);

@@ -1,5 +1,5 @@
 .vertical-tabs-container { // small screens: accordion
-  $tab-border-color: $base-border-color;
+  $tab-border-color: gainsboro;
   $tab-border: 1px solid $tab-border-color;
   $tab-border-radius: $base-border-radius;
   $tab-content-background: lighten($tab-border-color, 10);
@@ -7,11 +7,13 @@
   $tab-inactive-color: $base-background-color;
   $vertical-tabs-height: em(300);
   $vertical-tab-mode: $medium-screen;
+  $vertical-tab-margin-bottom: 1.5em;
+  $vertical-tab-padding: .75em 1em;
 
   @include clearfix;
   border-radius: $tab-border-radius;
   border: $tab-border;
-  margin-bottom: $base-spacing;
+  margin-bottom: $vertical-tab-margin-bottom;
   overflow: hidden;
 
   .vertical-tabs {
@@ -32,7 +34,7 @@
       display: block;
       font-weight: bold;
       margin-right: -1px;
-      padding: $base-spacing/2 $gutter/2;
+      padding: $vertical-tab-padding;
 
       &.is-active {
         background-color: $tab-content-background;
@@ -62,7 +64,7 @@
 
   .vertical-tab-content {
     background-color: $tab-content-background;
-    padding: $base-spacing $gutter;
+    padding: 2em;
 
     @include media($vertical-tab-mode) {
       border: none;
@@ -76,11 +78,7 @@
     cursor: pointer;
     display: block;
     font-weight: bold;
-    padding: $base-spacing/2 $gutter/2;
-
-    &:hover {
-      color: $base-accent-color;
-    }
+    padding: $vertical-tab-padding;
 
     &:first-child {
       border-top: none;
