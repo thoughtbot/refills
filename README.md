@@ -33,7 +33,13 @@ Alternative to copy-pasting manually, we also have a Refills gem that allows you
   gem 'refills'
   ```
 
-2. Use the following Rails generators:
+2. Then run:
+
+  ```bash
+  bundle install
+  ```
+
+3. Use the following Rails generators:
 
   List all available snippets:
 
@@ -56,7 +62,7 @@ If your css reset file does not add webkit antialias, add the following code to 
 ```css
 body {
   -webkit-font-smoothing: antialiased;
-}  
+}
 ```
 
 ## The Bourbon family
