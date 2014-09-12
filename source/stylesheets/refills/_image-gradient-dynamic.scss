@@ -14,24 +14,23 @@
   position: relative;
   line-height: 0;
   width: 100%;
-  margin-bottom: $base-line-height;  
 
   img {
-   width: 100%;
    height: auto;
+   left: 0; 
    position: relative;
    top: 0;
-   left: 0; 
+   width: 100%;
   }
 
   .copy {
-    position: absolute;
-    top: 50%;
+    @include transform(translate(-50%, -50%));
     left: 50%;
     margin: auto;
-    z-index: 999;
+    position: absolute;
     text-align: center;
-    @include transform(translate(-50%, -50%));
+    top: 50%;
+    z-index: 999;
 
     p {
       line-height: 1.5em;
@@ -45,15 +44,15 @@
   .overlay {
     @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
       transparentize($image-gradient-color-bottom, $transparency-bottom));
-    display: block;
     @include position(absolute, 0px 0px 0px 0px);
+    display: block;
 
     &:after {
       content: '';
       @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
         transparentize($image-gradient-color-right, $transparency-right));
-      display: block;
       @include position(absolute, 0px 0px 0px 0px);
+      display: block;
     }
   }
 }

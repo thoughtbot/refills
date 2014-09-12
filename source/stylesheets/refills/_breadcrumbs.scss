@@ -1,17 +1,17 @@
 .breadcrumb { 
-  $breadcrumb-border-color: $base-border-color;
+  $breadcrumb-border-color: gainsboro;
   $breadcrumb-border: 1px solid $breadcrumb-border-color;
-  $breadcrumb-height: $base-spacing * 1.5;
+  $breadcrumb-height: 2.25em;
   $breadcrumb-arrow-color: $breadcrumb-border-color;
-  $breadcrumb-background: $base-background-color;
+  $breadcrumb-background: white;
   $breadcrumb-inactive-hover-color: $breadcrumb-background;
-  $breadcrumb-color: $medium-gray;
+  $breadcrumb-color: gainsboro;
   $breadcrumb-color-hover: teal;
-  $breadcrumb-color-active: $breadcrumb-color;
+  $breadcrumb-color-active: darken($breadcrumb-color, 40);
 
   @include inline-block;
   text-align: left;
-  margin-bottom: $base-spacing;
+  margin-bottom: 1.5em;
 
   a {
     @include inline-block;

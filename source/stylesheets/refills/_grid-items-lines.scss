@@ -3,8 +3,8 @@
 }
 
 .grid-items-lines {
-  $grid-items-background: $base-background-color;
-  $grid-item-background: $base-background-color;
+  $grid-items-background: white;
+  $grid-item-background: white;
   $grid-item-border: 1px solid transparentize($base-font-color, .8); 
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;

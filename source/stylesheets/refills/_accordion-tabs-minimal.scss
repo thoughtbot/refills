@@ -1,9 +1,9 @@
 .accordion-tabs-minimal {
-  $tab-border-color: $base-border-color;
+  $tab-border-color: gainsboro;
   $tab-border: 1px solid $tab-border-color;
-  $tab-content-background: $base-background-color;
+  $tab-content-background: white;
   $tab-active-background: $tab-content-background;
-  $tab-inactive-color: $base-background-color;
+  $tab-inactive-color: white;
   $tab-inactive-hover-color: darken($light-gray, 5);
   $tab-mode: $medium-screen;
   $tab-padding: .75em 1em;
@@ -11,7 +11,7 @@
   @include clearfix;
   border: $tab-border;
   border-radius: $base-border-radius;
-  margin-bottom: $base-spacing;
+  margin-bottom: 1.5em;
 
   @include media($tab-mode) {
     border: none;

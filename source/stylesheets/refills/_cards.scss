@@ -20,7 +20,7 @@
   border: $card-border;
   margin-bottom: $card-margin-bottom;
   cursor: pointer;
-  box-shadow: 0 2px 4px darken($base-background-color, 10);
+  box-shadow: 0 2px 4px darken(white, 10);
   position: relative;
 
   @include media($large-screen) {

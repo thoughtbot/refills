@@ -1,12 +1,12 @@
 .hover-tile-outer {
   $hover-tile-height: 10em;
+  $hover-tile-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
 
   background-position: bottom;
   background-size: cover;
-  background: url("/images/mountains.png");
+  background: url($hover-tile-image);
   background-size: cover;
-  background-color: #BEB56E;
-  border: 1px solid $base-border-color;
+  background-color: #6EA5BE;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
   cursor: pointer;
@@ -36,7 +36,7 @@
     color: transparentize(white, .3);
     font-size: 2em;
     font-weight: 200;  
-    padding-top: 2em;
+    padding-top: 1.7em;
     text-align: center;
   }
 

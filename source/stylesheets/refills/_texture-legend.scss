@@ -150,16 +150,16 @@
 }
 
 .example-normal {
-  border-bottom-left-radius: $base-border-radius * 2;
-  border-top-left-radius: $base-border-radius * 2;
+  border-bottom-left-radius: $base-border-radius;
+  border-top-left-radius: $base-border-radius;
   float: left;
   height: 100%;
   width: 50%;
 }
 
 .example-inverted {
-  border-bottom-right-radius: $base-border-radius * 2;
-  border-top-right-radius: $base-border-radius * 2;
+  border-bottom-right-radius: $base-border-radius;
+  border-top-right-radius: $base-border-radius;
   float: left;
   height: 100%;
   width: 50%;
@@ -173,10 +173,10 @@
     width: 14.7%;
 
     .example-normal {
-      @include texture(180deg, lighten(#DDF0EF, 1), darken(#DDF0EF, 10), $i, 0); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
+      @include texture(180deg, darken(#DDF0EF, 5), darken(#DDF0EF, 10), $i, 0); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
     }
     .example-inverted {
-      @include texture(180deg, lighten(#DDF0EF, 1), darken(#DDF0EF, 10), $i, 1); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
+      @include texture(180deg, darken(#DDF0EF, 5), darken(#DDF0EF, 10), $i, 1); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
     }
   }
 }

@@ -1,10 +1,10 @@
 .progress-bar-indication {
-  $progress-border-color: $base-border-color;
+  $progress-border-color: gainsboro;
   $progress-border: 1px solid $progress-border-color;
   $progress-meter-border-color: teal;
   $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
   $progress-meter-color: $progress-meter-border-color;
-  $progress-background: darken($base-background-color, 5);
+  $progress-background: darken(white, 5);
   $progress-animation-duration: 0.7s;
   $progress-color: white;
 

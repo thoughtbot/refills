@@ -2,11 +2,16 @@
   $switch-width: 52px;
   $switch-padding: 2px;
   $switch-height: 32px;
+  $switch-border: #e5e5e5;
+  $switch-inactive-background: white;
+  $switch-active-background: teal;
   $switch-radius: $switch-height;
   $knob-height: $switch-height - ($switch-padding * 2);
   $knob-width: $knob-height;
   $knob-radius: $switch-height - ($switch-padding * 2);
+  $knob-background: white;
 
+  @include box-sizing(border-box);
   align-self: center;
   border-radius: $switch-radius;
   cursor: pointer;
@@ -15,15 +20,16 @@
   position: relative;
   vertical-align: middle;
   width: $switch-width;
-  @include box-sizing(border-box);
 
   input[type="checkbox"] {
     display: none;
 
   + .checkbox {
-    background: #e5e5e5;
-    border: none;
+    @include box-sizing(border-box);
+    @include transition(all 0.3s ease);
+    background: $switch-border;
     border-radius: $switch-radius;
+    border: none;
     cursor: pointer;
     height: $switch-height;
     margin: 0;
@@ -31,38 +37,36 @@
     position: relative;
     width: $switch-width;
     z-index: 0;
-    @include box-sizing(border-box);
-    @include transition(all 0.3s ease);
 
     &:before {
-      background: white;
+      @include box-sizing(border-box);
+      @include position(absolute, 2px 0 0 2px);
+      @include transform(scale(1));
+      @include transition(all 0.3s ease);
+      background: $switch-inactive-background;
       border-radius: $switch-radius;
       content: ' ';
       height: $knob-radius;
       width: $switch-width - ($switch-padding * 2);
       z-index: 1;
-      @include box-sizing(border-box);
-      @include position(absolute, 2px 0 0 2px);
-      @include transition(all 0.3s ease);
-      @include transform(scale(1));
     }
 
     &:after {
-      background: white;
+      @include position(absolute, 2px 0 0 2px);
+      @include transition(all 0.3s ease);
+      background: $knob-background;
       border-radius: $knob-radius;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
       content: ' ';
       height: $knob-height;
       width: $knob-width;
       z-index: 2;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-      @include position(absolute, 2px 0 0 2px);
-      @include transition(all 0.3s ease);
     }
   }
 
   &:checked {
     + .checkbox {
-      background: $blue;
+      background: $switch-active-background;
         
         &:before {
           @include transform(scale(0));

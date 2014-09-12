@@ -1,3 +1,4 @@
+$base-background-color: white;
 $refills-color: lighten(desaturate(teal, 60), 40);
 $refills-nav-height: 60px;
 $logo-color: #93E9BE;
@@ -238,7 +239,7 @@ ul.refills-menu {
 .line-behind-text {
   border-bottom: 1px solid #CACACA;
   text-align: center;
-  margin-bottom: $base-spacing *3;
+  margin-bottom: 4.5em;
 }
 
 .line-behind-text h6 {
@@ -255,7 +256,7 @@ ul.refills-menu {
 }
 
 .refill h6 {
-  margin-bottom: $base-spacing;
+  margin-bottom: 1.5em;
 }
 
 // Hiding and showing code
@@ -285,7 +286,7 @@ ul.refills-menu {
 }
 
 .refill-snippet {
-  margin-top: $base-spacing *3;
+  margin-top: 4.5em;
   padding: 0 1em;
 }
 
@@ -411,132 +412,5 @@ footer.refills-footer {
   @include media($large-screen) {
     margin: auto;
     width: 70%;
-  }
-}
-
-// Type Systems
-//////////////////////////////////////////////////////////////////
-
-@include keyframes(fadeInAccordionTabsArticles) {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.accordion-tabs-type-systems {
-  $tab-border-color: $base-border-color;
-  $tab-border: 1px solid $tab-border-color;
-  $tab-content-background: lighten($light-gray, 15);
-  $tab-active-background: $tab-content-background;
-  $tab-inactive-color: $base-background-color;
-  $tab-inactive-hover-color: darken($light-gray, 5);
-  $tab-mode: $medium-screen;
-
-  @include clearfix;
-  border-radius: $base-border-radius;
-  border: $tab-border;
-  margin-bottom: $base-spacing;
- 
-  @include media($tab-mode) {
-    border: none;
-  }
- 
-  .tab {
-    @include media($tab-mode) {
-      display: inline;
-    }
- 
-    &:first-child .tab-link {
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
-    }
- 
-    &:last-child .tab-link {
-      border-bottom-left-radius: $base-border-radius;
-      border-bottom-right-radius: $base-border-radius;
- 
-      @include media($tab-mode) {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-    }
- 
-    .tab-link-type-system {
-      background-color: transparent;
-      border-bottom: 1px solid $tab-border-color;
-      color: $dark-gray;
-      display: block;
-      font-size: .9em;
-      font-weight: 200;
-      letter-spacing: .6px;
-      padding: $base-spacing/2 $gutter/2;
-      text-align: center;
- 
-      @include media($tab-mode) {
-        @include inline-block;
-        border-bottom: 0;
-        border-top-left-radius: $base-border-radius;
-        border-top-right-radius: $base-border-radius;
-      }
- 
-      &:hover {
-        color: $base-link-color;
-      }
- 
-      &:focus {
-        outline: none;
-      }
-    }
- 
-    section {
-      padding: $base-spacing $gutter;
-      background: $tab-content-background;
-      display: none;
-      overflow: hidden;
-      padding: $base-line-height $gutter;
-      width: 100%;
- 
-      @include media($tab-mode) {
-        border-bottom-left-radius: $base-border-radius;
-        border-bottom-right-radius: $base-border-radius;
-        border-top: $tab-border;
-        float: left;
-        left: 0;
-        padding: $base-spacing/2 $gutter;
-      }
-
-      .tab-content {
-        opacity: 0;
-      }
-    }
- 
-    &.js-is-active {
-      border-bottom: $tab-border;
-
-      @include media($tab-mode) {
-        border-bottom: 0;
-      }
-
-      .tab-link-type-system {
-        background-color: $tab-active-background;
-        border-bottom: 0;
- 
-        @include media($tab-mode) {
-          background-color: $tab-active-background;
-          border-bottom: 1px solid $tab-active-background;
-          border: $tab-border;
-          margin-bottom: -1px;
-        }
-      }
- 
-      section {
-        display: block;
-
-        .tab-content {
-          @include animation-name(fadeInAccordionTabsArticles);
-          @include animation-duration(1s);
-          opacity: 1;
-        }
-      }
-    }
   }
 }
