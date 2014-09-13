@@ -1,12 +1,12 @@
 .table-borders {
-  $table-border-color: $base-border-color;
+  $table-border-color: gainsboro;
   $table-border: 1px solid $table-border-color;
   $table-background: lighten($table-border-color, 10);
   $table-header-color: lighten($table-background, 10);
   $table-hover-color: darken($table-background, 5);
   $table-stripe-color: darken($table-background, 4);
   $table-stripe-color-hover: darken($table-stripe-color, 5);
-  $table-padding: 0.5em;
+  $table-padding: .75em 1em;
 
   border: $table-border;
   border-left: 0px;
@@ -16,6 +16,7 @@
 
   tbody {
     background-color: $table-background;
+    
     tr:hover > td, tr:hover > th {
       background-color: $table-hover-color;
     }
@@ -66,7 +67,8 @@
       border-bottom: 0px;
 
       button {
-        @include button(simple, $table-background);
+        padding: .5em 1em;
+        font-size: .8em;
         margin-right: 0.5em;
         display: inline-block;
         width: 100%;

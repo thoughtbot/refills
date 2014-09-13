@@ -1,9 +1,9 @@
 .button-group {
-  $button-group-background: $base-background-color;
+  $button-group-background: white;
   $button-group-color: lighten($base-font-color, 30);
   $button-group-border: 1px solid silver;
   $button-group-inner-border: 1px solid lighten(silver, 18);
-  $button-group-background-checked: $base-accent-color;
+  $button-group-background-checked: teal;
   $button-group-color-checked: white;
   $button-group-border-checked: darken($button-group-background-checked, 15);
 
@@ -26,7 +26,6 @@
       color: $button-group-color;
       cursor: pointer;
       display: inline-block;
-      font-size: $base-font-size;
       font-weight: normal;
       line-height: 1;
       padding: .75em 1em;

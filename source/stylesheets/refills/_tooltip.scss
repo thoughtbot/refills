@@ -5,13 +5,13 @@
   $tooltip-arrow-width: 8px;
   $tooltip-shadow: 0 2px 2px silver;
   $tooltip-distance-from-item: 140%;
-  $tooltip-arrow-distance-from-box: -$tooltip-arrow-width * 3.4;
+  $tooltip-arrow-distance-from-box: -$tooltip-arrow-width * 3.1;
 
-  border: 1px solid $base-border-color;
-  padding: .5em 1em;
   border-radius: $base-border-radius;
+  border: 1px solid gainsboro;
+  margin-bottom: 1.5em;
+  padding: .5em 1em;
   position: relative;
-  margin-bottom: $base-line-height;
 
   &:hover .tooltip {
     opacity: 1;
@@ -19,24 +19,24 @@
   }
 
   .tooltip {
-    @include position(absolute, 0 0 0 50%);
     @include box-sizing(border-box);
+    @include position(absolute, 0 0 0 50%);
     @include transition (all 0.2s ease-in-out);
-    bottom: $tooltip-distance-from-item;
     background-color: $tooltip-background;
     border-radius: $base-border-radius;
+    bottom: $tooltip-distance-from-item;
+    box-shadow: $tooltip-shadow;
     color: $tooltip-color;
+    font-family: $serif;
     font-size: .9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
     line-height: 1.5em;
     margin-left: -($tooltip-width/2);
+    min-width: $tooltip-width;
     opacity: 0;
     padding: 1em;
-    box-shadow: $tooltip-shadow;
     text-align: center;
     visibility: hidden;
-    min-width: $tooltip-width;
     z-index: 10;
-    font-family: $serif;
 
     p {
       margin-bottom: 0;
@@ -44,14 +44,14 @@
 
     &:after {
       @include position(absolute, 0 0 0 46%);
-      margin-left: -$tooltip-arrow-width;
       border: $tooltip-arrow-width solid transparent;
+      bottom: $tooltip-arrow-distance-from-box;
       color: $tooltip-background;
       content: '▼';
-      text-shadow: $tooltip-shadow;
       font-size: 1.4em;
+      margin-left: -$tooltip-arrow-width;
       pointer-events: none;
-      bottom: $tooltip-arrow-distance-from-box;
+      text-shadow: $tooltip-shadow;
     }
   }
 }

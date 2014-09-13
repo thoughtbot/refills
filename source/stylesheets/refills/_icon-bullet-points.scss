@@ -1,8 +1,10 @@
 .bullets {
   $icon-bullet-size: 3.5em;
+  $icon-bullet-margin-bottom: 1.5em;
+  $icon-bullet-background: lighten(teal, 10);
 
   overflow: auto;
-  margin-bottom: $base-line-height;
+  margin-bottom: $icon-bullet-margin-bottom;
 
   // change ".three-col-bullet" class to this for two bullet layout
   .two-col-bullet {
@@ -29,7 +31,7 @@
 
   .bullet-icon {
     float: left;
-    background: $base-accent-color;
+    background: $icon-bullet-background;
     padding: $icon-bullet-size /4;
     border-radius: 50%;
     width: $icon-bullet-size;
@@ -37,15 +39,15 @@
   }
 
   .bullet-icon-1 {
-    background: $base-accent-color;
+    background: $icon-bullet-background;
   }
 
   .bullet-icon-2 {
-    background: adjust-hue($base-accent-color, -50);
+    background: adjust-hue($icon-bullet-background, -30);
   }
 
   .bullet-icon-3 {
-    background: adjust-hue($base-accent-color, -140);
+    background: adjust-hue($icon-bullet-background, -110);
   }
 
   .bullet-content {

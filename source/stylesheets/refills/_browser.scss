@@ -3,9 +3,9 @@ $browser-circle-size: .5em;
 $browser-circle-margin: ($browser-top-bar-height - $browser-circle-size) / 2;
 $browser-top-bar-background: lighten(#DFDFDF, 5);
 $browser-border: 0px;
-$browser-background: $base-background-color;
+$browser-background: white;
 $browser-content-background-1: #F0F0F0;
-$browser-content-background-2: $base-background-color;
+$browser-content-background-2: white;
 $browser-content-background-3: #F0F0F0;
 
 .browsers {
@@ -131,7 +131,7 @@ $browser-content-background-3: #F0F0F0;
 //////////////////////////////////////////////
 
 .cover {
-  background: $base-background-color;
+  background: white;
   border-top: 1px solid #E6E6E6;
   height: 3.2em;
   margin-top: -1em;

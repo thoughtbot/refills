@@ -1,17 +1,18 @@
-$side-image-background-top: #B5EBEB;
-$side-image-background-bottom: #5DAC5D;
-$side-image-border: 1px solid darken(transparentize($side-image-background-bottom, .8), 30);
-
 .side-image {
-  background: #F9F9F9;
+  $side-image-background: #F9F9F9;
+  $side-image-gradient-background-top: #B5EBEB;
+  $side-image-gradient-background-bottom: #5DAC5D;
+  $side-image-border: 1px solid darken(transparentize($side-image-gradient-background-bottom, .8), 30);
+
+  background: $side-image-background;
 
   @include media($large-screen) {
     @include row(table);
   }
 
   .images-wrapper {
-    @include background(url('https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
-    background-color: $side-image-background-top;
+    @include background(url('https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png'), linear-gradient($side-image-gradient-background-top, $side-image-gradient-background-bottom), no-repeat $side-image-gradient-background-top scroll);
+    background-color: $side-image-gradient-background-top;
     border-bottom: $side-image-border;
     background-size: cover;
     display: block;
@@ -41,25 +42,20 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
   }
 
   .content h4 {
-    background: $side-image-background-bottom;
+    background: darken($side-image-background, 15);
     color: white;
     display: inline-block;
     font-size: .75em;
     font-weight: 800;
-    margin-bottom: 1.3em;
+    margin-bottom: 1.5em;
     padding: 3px 8px;
     text-transform: uppercase;
   }
 
   .content p {
     color: gray;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
   }
 
-  .content button {
-    @include button(simple, white);
-    font-size: $base-font-size;
-    outline: none;
-  }
   @include reset-display();
 }

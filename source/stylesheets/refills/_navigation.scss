@@ -4,9 +4,10 @@ header.navigation {
   $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
   $navigation-height: 60px;
-  $navigation-nav-button-background: $base-accent-color;
-  $navigation-nav-button-background-hover: lighten($navigation-background, 10);
-  $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
+  $navigation-cta-button-color: white;
+  $navigation-cta-button-background: teal;
+  $navigation-cta-button-background-hover: lighten($navigation-background, 10);
+  $navigation-nav-button-border: 1px solid lighten($navigation-cta-button-background, 20);
   $navigation-search-background: lighten($navigation-background, 5);
   $navigation-search-border: 1px solid darken($navigation-background, 5);
   $navigation-active-link-color: transparentize(white, 0.5);
@@ -259,14 +260,14 @@ header.navigation {
     }
   }
 
-  a.sign-up {
+  a.cta-button {
     margin-top: 1.2em;
     float: right;
     @include transition (all 0.2s ease-in-out);
     display: inline;
-    background: $navigation-nav-button-background;
+    background: $navigation-cta-button-background;
     border-radius: $base-border-radius; 
-    color: white;
+    color: $navigation-cta-button-color;
     font-size: .8em;  
     font-weight: 800;
     text-transform: uppercase;
@@ -277,19 +278,20 @@ header.navigation {
     }
 
     &:hover {
-      background: lighten($navigation-nav-button-background, 10);
+      background: lighten($navigation-cta-button-background, 10);
     }
   }
 
   // Search bar
 
   .search-bar {
-    $search-bar-border-color: $base-border-color;
+    $search-bar-border-color: gainsboro;
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10);
 
     padding: .85em .6em; 
     float: left;
+
     .search-and-submit {
       position: relative;
 

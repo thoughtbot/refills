@@ -1,11 +1,11 @@
 .search-tools {
-  $search-tools-border-color: $base-border-color;
+  $search-tools-border-color: gainsboro;
   $search-tools-background: lighten($search-tools-border-color, 10);
 
   @include clearfix;
   border: 1px solid $search-tools-border-color;
   background: $search-tools-background;
-  padding: $gutter / 2;
+  padding: 1em;
   border-radius: $base-border-radius;
 
   .filter {
@@ -29,12 +29,6 @@
 
     ol label {
       display: inline;
-    }
-
-    button {
-      @include button(simple, lighten($search-tools-background, 10));
-      @include position(absolute, 5px 5px auto auto);
-      font-size: .7em;
     }
 
     .hide-options {

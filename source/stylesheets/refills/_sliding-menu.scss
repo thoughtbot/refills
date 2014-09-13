@@ -1,12 +1,11 @@
-$sliding-menu-border-color: $dark-gray;
+$sliding-menu-border-color: dimgray;
 $sliding-menu-background: lighten($sliding-menu-border-color, 5);
 $sliding-menu-color: #fff;
 $sliding-menu-border: 1px solid $sliding-menu-border-color;
-$sliding-menu-background-hover: $base-accent-color;
+$sliding-menu-background-hover: gray;
 $sliding-menu-color-hover: #fff;
 
 .sliding-menu-button {
-  @include button(simple, $base-background-color);
   @include inline-block;
   cursor: pointer;
   font-size: $base-font-size;

@@ -1,21 +1,23 @@
 .accordion {
-  $accordion-menu-border-color: $base-border-color;
+  $accordion-menu-border-color: gainsboro;
+  $accordion-menu-color: gray;
   $accordion-menu-border: 1px solid $accordion-menu-border-color;
   $accordion-menu-background: lighten($accordion-menu-border-color, 10);
-  $accordion-menu-hover: lighten($accordion-menu-background, 10);
-  $accordion-menu-sub-background: darken($accordion-menu-background, 5);
+  $accordion-menu-hover: lighten($accordion-menu-background, 2);
+  $accordion-menu-sub-background: darken($accordion-menu-background, 3);
   $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
-  $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
-  $accordion-menu-list-padding: $base-spacing/2 $gutter;
+  $accordion-menu-sub-hover: lighten($accordion-menu-sub-background, 2);
+  $accordion-menu-list-padding: .75em 1em;
   
   background-color: $accordion-menu-background;
   border: $accordion-menu-border;
-  margin-bottom: $base-spacing;
+  margin-bottom: 1.5em;
 
   li {
     border-bottom: $accordion-menu-border;
 
     > a {
+      color: $accordion-menu-color;
       padding: $accordion-menu-list-padding;
       display: block;
     }
