@@ -6,11 +6,11 @@
   $accordion-menu-sub-background: darken($accordion-menu-background, 5);
   $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
   $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
-  $accordion-menu-list-padding: $base-spacing/2 $gutter;
+  $accordion-menu-list-padding: .75em $gutter;
   
   background-color: $accordion-menu-background;
   border: $accordion-menu-border;
-  margin-bottom: $base-spacing;
+  margin-bottom: 1.5em;
 
   li {
     border-bottom: $accordion-menu-border;

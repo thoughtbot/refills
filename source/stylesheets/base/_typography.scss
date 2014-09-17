@@ -44,7 +44,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 ($base-spacing / 2);
+  margin: 0 0 (.75em);
 }
 
 a {
@@ -67,7 +67,7 @@ hr {
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: $base-spacing 0;
+  margin: 1.5em 0;
 }
 
 img,
@@ -79,8 +79,8 @@ picture {
 blockquote {
   border-left: 2px solid $base-border-color;
   color: lighten($base-font-color, 15);
-  margin: $base-spacing 0;
-  padding-left: $base-spacing / 2;
+  margin: 1.5em 0;
+  padding-left: .75em;
 }
 
 cite {

@@ -10,7 +10,7 @@
   @include clearfix;
   border: $tab-border;
   border-radius: $base-border-radius;
-  margin-bottom: $base-spacing;
+  margin-bottom: 1.5em;
 
   @include media($tab-mode) {
     border: none;
@@ -45,7 +45,7 @@
     color: $dark-gray;
     display: block;
     font-weight: bold;
-    padding: $base-spacing/2 $gutter/2;
+    padding: .75em $gutter/2;
 
     @include media($tab-mode) {
       @include inline-block;
@@ -76,7 +76,7 @@
   }
 
   li.tab-header-and-content .tab-content {
-    padding: $base-spacing $gutter;
+    padding: 1.5em $gutter;
     background: $tab-content-background;
     display: none;
     overflow: hidden;
@@ -88,7 +88,7 @@
       border: $tab-border;
       float: left;
       left: 0;
-      padding: $base-spacing/2 $gutter/2;
+      padding: .75em $gutter/2;
 
       p {
         @include columns(2);
