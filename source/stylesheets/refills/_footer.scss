@@ -5,7 +5,7 @@
   $footer-disclaimer-color: transparentize($footer-color, .6);
 
   background: $footer-background;
-  padding: $base-spacing*2 $gutter;
+  padding: 3em $gutter;
   width: 100%;
 
   .footer-logo {
@@ -19,7 +19,7 @@
 
   .footer-links {
     @include clearfix;
-    margin-bottom: $base-spacing;
+    margin-bottom: 1.5em;
 
     @include media($medium-screen) {
       @include shift(3);
@@ -27,7 +27,7 @@
   }
 
   ul {
-    margin-bottom: $base-spacing*2;
+    margin-bottom: 3em;
 
     @include media($medium-screen) {
       @include span-columns(3);
@@ -61,7 +61,7 @@
 
   hr {
     border: 1px solid transparentize($footer-disclaimer-color, .3);
-    margin: 0 auto $base-spacing;
+    margin: 0 auto 1.5em;
     width: 12em;
   }
 

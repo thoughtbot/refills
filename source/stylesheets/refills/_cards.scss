@@ -16,7 +16,7 @@
   background-color: $card-background;
   border-radius: $base-border-radius;
   border: $card-border;
-  margin-bottom: $base-spacing;
+  margin-bottom: 1.5em;
   cursor: pointer;
   box-shadow: 0 2px 4px darken($base-background-color, 10);
   position: relative;
@@ -70,17 +70,17 @@
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
-    padding: $base-spacing/3 $gutter/2;
+    padding: .5em $gutter/2;
   }
 
   .card-copy {
-    padding: $base-spacing/2 $gutter/2;
+    padding: .75em $gutter/2;
     font-size: .9em;
     line-height: 1.5em;
   }
 
   .card-stats {
-    padding: $base-spacing/2 $gutter/2;
+    padding: .75em $gutter/2;
     overflow: auto;
 
     ul li {
