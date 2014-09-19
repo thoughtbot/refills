@@ -11,7 +11,12 @@
 //  height: 100%;
 // }
 
-// .footer-2, .push {
+// .wrapper-for-content-outside-of-footer:after {
+//   content: "";
+//   display: block;
+// }
+
+// .footer-2, .wrapper-for-content-outside-of-footer:after {
 //   height: 17em;
 
 //   @include media($large-screen) {
