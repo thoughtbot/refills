@@ -361,10 +361,18 @@ footer.refills-footer {
     color: $refills-anchor-color;
   }
 
+  p {
+    margin-bottom: 0;
+  }
+
+  .refills-footer-logo {
+    margin-bottom: 2em;    
+  }
+
   img {
+    @include clearfix;
     display: block;
     height: 60px;
-    margin-bottom: 2em;
     margin: auto;
   }
 

@@ -20,14 +20,15 @@
       padding: .5em .8em;
       font-size: .9em;
       font-style: italic;
-      border-radius: $base-border-radius * 2;
+      border-radius: $base-border-radius;
       margin: 0;
     }
 
     button[type=submit] {
-      @include button(simple, lighten($base-border-color, 10));
-      @include position(absolute, 0.3em 0.3em 0.3em 0);
+      @include position(absolute, 0em 0em 0em 0);
       outline: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
       padding: 5px 10px;
 
       img {

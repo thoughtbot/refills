@@ -5,7 +5,7 @@
   background-size: cover;
   background: url("/images/mountains.png");
   background-size: cover;
-  background-color: #BEB56E;
+  background-color: $base-accent-color;
   border: 1px solid $base-border-color;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
@@ -36,7 +36,7 @@
     color: transparentize(white, .3);
     font-size: 2em;
     font-weight: 200;  
-    padding-top: 2em;
+    padding-top: 1.5em;
     text-align: center;
   }
 
