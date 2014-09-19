@@ -4,3 +4,4 @@
 build
 Gemfile.lock
 pkg
+tmp/

@@ -1,5 +1,7 @@
 # Refills
 
+[![Build Status](https://travis-ci.org/thoughtbot/refills.svg?branch=master)](https://travis-ci.org/thoughtbot/refills)
+
 ## Prepackaged patterns and components, built on top of Bourbon, Bitters and Neat
 
 [Bourbon](http://bourbon.io) provides Sass mixins and eliminates vendor prefixes, for faster CSS coding.
@@ -43,9 +45,10 @@ The gem provides the following Rails generators
 * `rails generate refills:list`
 Lists all the available snippets
 
-* `rails generate refills:import SNIPPET`
-Copies partials to `app/views/refills` and stylesheets to
-`app/assets/stylesheets/refills`
+* `rails generate refills:import SNIPPET` copies:
+  * partials to `app/views/refills`
+  * stylesheets to `app/assets/stylesheets/refills`
+  * javascripts to `app/assets/javascripts/refills`
 
 # Submitting components or patterns
 

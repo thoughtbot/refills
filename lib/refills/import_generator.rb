@@ -23,7 +23,7 @@ module Refills
     def copy_javascripts
       copy_file_if_exists(
         File.join('javascripts', 'refills', javascript_name),
-        File.join('app', 'assets', 'javascript', 'refills', javascript_name),
+        File.join('app', 'assets', 'javascripts', 'refills', javascript_name),
       )
     end
 
