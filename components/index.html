@@ -757,7 +757,7 @@ $sliding-menu-color-hover: #fff;
   background-size: cover;
   background: url(&quot;/images/mountains.png&quot;);
   background-size: cover;
-  background-color: #BEB56E;
+  background-color: $base-accent-color;
   border: 1px solid $base-border-color;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
@@ -788,7 +788,7 @@ $sliding-menu-color-hover: #fff;
     color: transparentize(white, .3);
     font-size: 2em;
     font-weight: 200;  
-    padding-top: 2em;
+    padding-top: 1.5em;
     text-align: center;
   }
 
@@ -880,12 +880,13 @@ $sliding-menu-color-hover: #fff;
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.accordion {
   $accordion-menu-border-color: $base-border-color;
+  $accordion-menu-color: $base-font-color;
   $accordion-menu-border: 1px solid $accordion-menu-border-color;
   $accordion-menu-background: lighten($accordion-menu-border-color, 10);
-  $accordion-menu-hover: lighten($accordion-menu-background, 10);
+  $accordion-menu-hover: lighten($accordion-menu-background, 2);
   $accordion-menu-sub-background: darken($accordion-menu-background, 5);
   $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
-  $accordion-menu-sub-hover: darken($accordion-menu-sub-background, 5);
+  $accordion-menu-sub-hover: lighten($accordion-menu-sub-background, 2);
   $accordion-menu-list-padding: $base-spacing/2 $gutter;
   
   background-color: $accordion-menu-background;
@@ -896,6 +897,7 @@ $sliding-menu-color-hover: #fff;
     border-bottom: $accordion-menu-border;
 
     &gt; a {
+      color: $accordion-menu-color;
       padding: $accordion-menu-list-padding;
       display: block;
     }
@@ -956,7 +958,7 @@ $sliding-menu-color-hover: #fff;
     <div class="search-and-submit">
       <input type="search" placeholder="Enter Search" />
       <button type="submit">
-        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon-black.png" alt="Search Icon">
+        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
       </button>
     </div>
   </div>
@@ -975,7 +977,7 @@ $sliding-menu-color-hover: #fff;
     &lt;div class=&quot;search-and-submit&quot;&gt;
       &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
       &lt;button type=&quot;submit&quot;&gt;
-        &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon-black.png&quot; alt=&quot;Search Icon&quot;&gt;
+        &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png&quot; alt=&quot;Search Icon&quot;&gt;
       &lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -1006,14 +1008,15 @@ $sliding-menu-color-hover: #fff;
       padding: .5em .8em;
       font-size: .9em;
       font-style: italic;
-      border-radius: $base-border-radius * 2;
+      border-radius: $base-border-radius;
       margin: 0;
     }
 
     button[type=submit] {
-      @include button(simple, lighten($base-border-color, 10));
-      @include position(absolute, 0.3em 0.3em 0.3em 0);
+      @include position(absolute, 0em 0em 0em 0);
       outline: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
       padding: 5px 10px;
 
       img {
@@ -1022,7 +1025,8 @@ $sliding-menu-color-hover: #fff;
       }
     }
   }
-}</code></pre>
+}
+</code></pre>
 </td>
 
 
@@ -2181,7 +2185,9 @@ iframe {
             <li><a href="./">Components</a></li>
             <li><a href="../type-systems/">Type Systems</a></li>
           </ul>
-          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
+          <div class="refills-footer-logo">          
+            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
+          </div>
           <p>Refills is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>.</p>
           <p>Copyright &copy; 2014 <a href="//thoughtbot.com">thoughtbot, inc</a>. Refills is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/refills/blob/master/LICENSE.md">license</a>.</p>
         </footer>
