@@ -78,9 +78,18 @@ describe Refills::ImportGenerator, type: :generator do
         run_generator [ snippet ]
 
         assert_file "app/assets/javascripts/refills/#{snippet.underscore}.js"
+        assert_no_file "app/assets/javascripts/refills/#{snippet.underscore}.coffee"
+      end
+
+      context "with --coffee" do
+        it "imports Coffee file for #{snippet.humanize}" do
+          run_generator [ snippet, "--coffee" ]
+
+          assert_file "app/assets/javascripts/refills/#{snippet.underscore}.coffee"
+          assert_no_file "app/assets/javascripts/refills/#{snippet.underscore}.js"
+        end
       end
     end
-
   end
 
   def ensure_previous_snippets_removed

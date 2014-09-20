@@ -1,14 +1,17 @@
-$(document).ready(function() {
-  var menu = $('.centered-navigation-menu');
-  var menuToggle = $('.centered-navigation-menu-button');
-  var signUp = $('.sign-up');
-
-  $(menuToggle).on('click', function(e) {
-    e.preventDefault();
-    menu.slideToggle(function(){
-      if(menu.is(':hidden')) {
-        menu.removeAttr('style');
-      }
+(function() {
+  $(document).ready(function() {
+    var menu, menuToggle, signUp;
+    menu = $('.centered-navigation-menu');
+    menuToggle = $('.centered-navigation-menu-button');
+    signUp = $('.sign-up');
+    return $(menuToggle).on('click', function(event) {
+      event.preventDefault();
+      return menu.slideToggle(function() {
+        if (menu.is(':hidden')) {
+          return menu.removeAttr('style');
+        }
+      });
     });
   });
-});
+
+}).call(this);

@@ -50,6 +50,8 @@ Lists all the available snippets
   * stylesheets to `app/assets/stylesheets/refills`
   * javascripts to `app/assets/javascripts/refills`
 
+To install coffeescript instead of javascript, call the generator with `--coffee`
+
 # Submitting components or patterns
 
 You are more than welcome to submit any component or pattern you can’t find in the library, or feel free to send requests for content you’d like to see. When submitting a pull request, please think of these style guides:
