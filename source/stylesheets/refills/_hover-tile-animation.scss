@@ -1,10 +1,9 @@
 .hover-tile-outer {
   $hover-tile-height: 10em;
 
+  background-size: cover;
   background-position: bottom;
-  background-size: cover;
   background: url("/images/mountains.png");
-  background-size: cover;
   background-color: $base-accent-color;
   border: 1px solid $base-border-color;
   height: $hover-tile-height;
@@ -26,9 +25,9 @@
 
   .hover-tile {
     @include transition(all, .2s ease-in-out);
-    background:inherit;
+    background: inherit;
     color: white;
-    height:inherit;
+    height: inherit;
     padding: 1em 1.5em;
   }
 
