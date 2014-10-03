@@ -1,10 +1,14 @@
-.label-switch {
-  $switch-width: 52px;
-  $switch-padding: 2px;
-  $switch-height: 32px;
-  $switch-radius: $switch-height;
-  $knob-height: $switch-height - ($switch-padding * 2);
-  $knob-width: $knob-height;
+// .label-switch {
+//   @include label-switch;
+// }
+//
+// <label class="label-switch">
+//   <input type="checkbox" />
+//   <div class="checkbox"></div>
+// </label>
+
+@mixin label-switch($switch-width: 52px, $switch-padding: 2px, $switch-height: 32px, $switch-radius: $switch-height) {
+  $knob-size: $switch-height - ($switch-padding * 2);
   $knob-radius: $switch-height - ($switch-padding * 2);
 
   align-self: center;
@@ -15,55 +19,51 @@
   position: relative;
   vertical-align: middle;
   width: $switch-width;
-  @include box-sizing(border-box);
 
   input[type="checkbox"] {
     display: none;
 
-  + .checkbox {
-    background: #e5e5e5;
-    border: none;
-    border-radius: $switch-radius;
-    cursor: pointer;
-    height: $switch-height;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: $switch-width;
-    z-index: 0;
-    @include box-sizing(border-box);
-    @include transition(all 0.3s ease);
-
-    &:before {
-      background: white;
-      border-radius: $switch-radius;
-      content: ' ';
-      height: $knob-radius;
-      width: $switch-width - ($switch-padding * 2);
-      z-index: 1;
-      @include box-sizing(border-box);
-      @include position(absolute, 2px 0 0 2px);
-      @include transition(all 0.3s ease);
-      @include transform(scale(1));
-    }
-
-    &:after {
-      background: white;
-      border-radius: $knob-radius;
-      content: ' ';
-      height: $knob-height;
-      width: $knob-width;
-      z-index: 2;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-      @include position(absolute, 2px 0 0 2px);
-      @include transition(all 0.3s ease);
-    }
-  }
-
-  &:checked {
     + .checkbox {
-      background: $blue;
-        
+      @include transition(all 0.3s ease);
+      background: #e5e5e5;
+      border-radius: $switch-radius;
+      border: none;
+      cursor: pointer;
+      height: $switch-height;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: $switch-width;
+      z-index: 0;
+
+      &:before {
+        @include position(absolute, 2px 0 0 2px);
+        @include transform(scale(1));
+        @include transition(all 0.3s ease);
+        background: white;
+        border-radius: $switch-radius;
+        content: "";
+        height: $knob-radius;
+        width: $switch-width - ($switch-padding * 2);
+        z-index: 1;
+      }
+
+      &:after {
+        @include position(absolute, 2px 0 0 2px);
+        @include transition(all 0.3s ease);
+        @include size($knob-size);
+        background: white;
+        border-radius: $knob-radius;
+        box-shadow: 0 2px 5px rgba(black, 0.4);
+        content: "";
+        z-index: $base-z-index + 2;
+      }
+    }
+
+    &:checked {
+      + .checkbox {
+        background: $blue;
+
         &:before {
           @include transform(scale(0));
         }
