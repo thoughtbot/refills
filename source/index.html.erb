@@ -11,71 +11,25 @@ title: Refills
   <%= partial "refills-menu" %>
 
   <div id="example">
-
-    <div id="navigation" class="refill">
+    <div id="accordion-tabs" class="refill">
       <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Navigation</h6></div>
-        <%= partial "navigation" %>
+        <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
+        <%= partial "accordion_tabs" %>
       </div>
-      <div class="refill-snippet"><%= code_for('navigation') %></div>
+      <div class="refill-snippet"><%= code_for('accordion_tabs') %></div>
+      <div class="refills-wrapper">
+        <%= partial "accordion_tabs_minimal" %>
+      </div>
+      <div class="refill-snippet"><%= code_for('accordion_tabs_minimal') %></div>
     </div>
 
-    <div id="centered-navigation" class="refill">
+    <div id="browser" class="refill">
       <div class="refills-wrapper">
-        <%= partial "centered_navigation" %>
+        <div class="line-behind-text"><h6>Browser</h6></div>
+        <%= partial "browser" %>
       </div>
-      <div class="refill-snippet"><%= code_for('centered_navigation') %></div>
+      <div class="refill-snippet"><%= code_for('browser') %></div>
     </div>
-
-    <div id="hero" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Hero Unit</h6></div>
-        <%= partial "hero" %>
-      </div>
-      <div class="refill-snippet"><%= code_for('hero') %></div>
-    </div>
-
-    <div id="intro_text" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Intro Text</h6></div>
-        <%= partial "intro_text" %>
-      </div>
-      <div class="refill-snippet"><%= code_for('intro_text') %></div>
-    </div>
-
-    <div id="icon-bullet-points" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Icon Bullet Points</h6></div>
-        <%= partial "icon_bullet_points" %>
-      </div>
-      <div class="refill-snippet"><%= code_for('icon_bullet_points') %></div>
-    </div>
-
-    <div id="device" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Device</h6></div>
-        <%= partial "device" %>
-      </div>
-      <div class="refill-snippet"><%= code_for('device') %></div>
-    </div>
-
-    <div id="side-image" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Side Image</h6></div>
-        <%= partial "side_image" %>
-      </div>
-      <div class="refill-snippet"><%= code_for('side_image') %></div>
-    </div>
-
-    <div id="search-tools" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Search Tools</h6></div>
-        <%= partial "search_tools" %>
-      </div>
-      <div class="refill-snippet"><%= code_for('search_tools') %></div>
-    </div>
-
-
 
     <div id="cards" class="refill">
       <div class="refills-wrapper">
@@ -85,12 +39,12 @@ title: Refills
       <div class="refill-snippet"><%= code_for('cards') %></div>
     </div>
 
-    <div id="browser" class="refill">
+    <div id="centered-navigation" class="refill">
       <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Browser</h6></div>
-        <%= partial "browser" %>
+        <div class="line-behind-text"><h6>Centered Navigation</h6></div>
+        <%= partial "centered_navigation" %>
       </div>
-      <div class="refill-snippet"><%= code_for('browser') %></div>
+      <div class="refill-snippet"><%= code_for('centered_navigation') %></div>
     </div>
 
     <div id="comment" class="refill">
@@ -103,16 +57,84 @@ title: Refills
       <div class="refill-snippet"><%= code_for('comment') %></div>
     </div>
 
-    <div id="accordion-tabs" class="refill">
+    <div id="device" class="refill">
       <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
-        <%= partial "accordion_tabs" %>
+        <div class="line-behind-text"><h6>Device</h6></div>
+        <%= partial "device" %>
       </div>
-      <div class="refill-snippet"><%= code_for('accordion_tabs') %></div>
+      <div class="refill-snippet"><%= code_for('device') %></div>
+    </div>
+
+    <div id="footer" class="refill">
       <div class="refills-wrapper">
-        <%= partial "accordion_tabs_minimal" %>
+        <div class="line-behind-text"><h6>Footers</h6></div>
+        <div class="refill-centering"><%= partial "footer" %></div>
       </div>
-      <div class="refill-snippet"><%= code_for('accordion_tabs_minimal') %></div>
+      <div class="refill-snippet"><%= code_for('footer') %></div>
+      <div class="refills-wrapper">
+        <div class="refill-centering"><%= partial "footer_2" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('footer_2') %></div>
+    </div>
+
+    <div id="grid-items" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Grid Items</h6></div>
+        <div class="refill-centering"><%= partial "grid_items" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('grid_items') %></div>
+      <div class="refills-wrapper">
+        <div class="refill-centering"><%= partial "grid_items_lines" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('grid_items_lines') %></div>
+    </div>
+
+    <div id="hero" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Hero Unit</h6></div>
+        <%= partial "hero" %>
+      </div>
+      <div class="refill-snippet"><%= code_for('hero') %></div>
+    </div>
+
+    <div id="icon-bullet-points" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Icon Bullet Points</h6></div>
+        <%= partial "icon_bullet_points" %>
+      </div>
+      <div class="refill-snippet"><%= code_for('icon_bullet_points') %></div>
+    </div>
+
+    <div id="intro_text" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Intro Text</h6></div>
+        <%= partial "intro_text" %>
+      </div>
+      <div class="refill-snippet"><%= code_for('intro_text') %></div>
+    </div>
+
+    <div id="navigation" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Navigation</h6></div>
+        <%= partial "navigation" %>
+      </div>
+      <div class="refill-snippet"><%= code_for('navigation') %></div>
+    </div>
+
+    <div id="search-tools" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Search Tools</h6></div>
+        <%= partial "search_tools" %>
+      </div>
+      <div class="refill-snippet"><%= code_for('search_tools') %></div>
+    </div>
+
+    <div id="side-image" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Side Image</h6></div>
+        <%= partial "side_image" %>
+      </div>
+      <div class="refill-snippet"><%= code_for('side_image') %></div>
     </div>
 
     <div id="tables" class="refill">
@@ -134,31 +156,7 @@ title: Refills
       </div>
       <div class="refill-snippet"><%= code_for('vertical_tabs') %></div>
     </div>
-
-    <div id="grid-items" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Grid Items</h6></div>
-        <div class="refill-centering"><%= partial "grid_items" %></div>
-      </div>
-      <div class="refill-snippet"><%= code_for('grid_items') %></div>
-      <div class="refills-wrapper">
-        <div class="refill-centering"><%= partial "grid_items_lines" %></div>
-      </div>
-      <div class="refill-snippet"><%= code_for('grid_items_lines') %></div>
-    </div>
-
-    <div id="footer" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Footers</h6></div>
-        <div class="refill-centering"><%= partial "footer" %></div>
-      </div>
-      <div class="refill-snippet"><%= code_for('footer') %></div>
-      <div class="refills-wrapper">
-        <div class="refill-centering"><%= partial "footer_2" %></div>
-      </div>
-      <div class="refill-snippet"><%= code_for('footer_2') %></div>
-    </div>
-  </div>
+  <div>
 </div>
 
 <%= partial "refills-page-scripts" %>
