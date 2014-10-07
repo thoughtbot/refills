@@ -1,15 +1,7 @@
-// .label-switch {
-//   @include label-switch;
-// }
-//
-// <label class="label-switch">
-//   <input type="checkbox" />
-//   <div class="checkbox"></div>
-// </label>
-
 @mixin label-switch($switch-width: 52px, $switch-padding: 2px, $switch-height: 32px, $switch-radius: $switch-height) {
   $knob-size: $switch-height - ($switch-padding * 2);
   $knob-radius: $switch-height - ($switch-padding * 2);
+  $knob-width: $knob-size;
 
   align-self: center;
   border-radius: $switch-radius;
@@ -74,4 +66,8 @@
       }
     }
   }
+}
+
+.label-switch {
+  @include label-switch;
 }
