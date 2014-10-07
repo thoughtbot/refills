@@ -2562,38 +2562,36 @@ $browser-content-background-3: #F0F0F0;
   $tab-mode: $medium-screen;
 
   @include clearfix;
-  border: $tab-border;
-  border-radius: $base-border-radius;
   margin-bottom: $base-spacing;
 
-  @include media($tab-mode) {
-    border: none;
+  @include media(max-width $tab-mode) {
+    border: $tab-border;
+    border-radius: $base-border-radius;
   }
 
-  li.tab-header-and-content {
-
+  .tab-header-and-content {
     @include media($tab-mode) {
       display: inline;
     }
 
-    &amp;:first-child a.tab-link {
-      border-top-left-radius: $base-border-radius; 
-      border-top-right-radius: $base-border-radius; 
-      border-top: 0;
+    &amp;:first-child .tab-link {
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+
+      @include media(max-width $tab-mode) {
+        border-top: 0;
+      }
     }
 
-    &amp;:last-child a.tab-link {
-      border-bottom-left-radius: $base-border-radius; 
-      border-bottom-right-radius: $base-border-radius; 
-
-      @include media($tab-mode) {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+    &amp;:last-child .tab-link {
+      @include media(max-width $tab-mode) {
+        border-bottom-left-radius: $base-border-radius;
+        border-bottom-right-radius: $base-border-radius;
       }
     }
   }
 
-  li.tab-header-and-content a.tab-link {
+  .tab-link {
     background-color: $tab-inactive-color;
     border-top: $tab-border;
     color: $dark-gray;
@@ -2603,50 +2601,42 @@ $browser-content-background-3: #F0F0F0;
 
     @include media($tab-mode) {
       @include inline-block;
-      border-top: 0;
-      border-top-right-radius: $base-border-radius;
       border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      border-top: 0;
     }
 
     &amp;:hover {
       color: $base-link-color;
     }
 
-    &amp;:focus { 
-      outline: none; 
+    &amp;:focus {
+      outline: none;
     }
 
     &amp;.is-active {
       background-color: $tab-active-background;
-      border-bottom: 0;
 
       @include media($tab-mode) {
         background-color: $tab-active-background;
         border: $tab-border;
-        border-bottom: 1px solid $tab-active-background;
+        border-bottom-color: $tab-active-background;
         margin-bottom: -1px;
       }
     }
   }
 
-  li.tab-header-and-content .tab-content {
-    padding: $base-spacing $gutter;
+  .tab-content {
     background: $tab-content-background;
     display: none;
-    overflow: hidden;
-    width: 100%;
+    padding: $base-spacing $gutter;
 
     @include media($tab-mode) {
       border-bottom-left-radius: $base-border-radius;
       border-bottom-right-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
       border: $tab-border;
       float: left;
-      left: 0;
-      padding: $base-spacing/2 $gutter/2;
-
-      p {
-        @include columns(2);
-      }
     }
   }
 }
@@ -2759,38 +2749,15 @@ $browser-content-background-3: #F0F0F0;
   $tab-mode: $medium-screen;
 
   @include clearfix;
-  border: $tab-border;
-  border-radius: $base-border-radius;
   margin-bottom: $base-spacing;
 
-  @include media($tab-mode) {
-    border: none;
-  }
-
   li.tab-header-and-content {
-
     @include media($tab-mode) {
       display: inline;
     }
-
-    &amp;:first-child a.tab-link {
-      border-top-left-radius: $base-border-radius; 
-      border-top-right-radius: $base-border-radius; 
-      border-top: 0;
-    }
-
-    &amp;:last-child a.tab-link {
-      border-bottom-left-radius: $base-border-radius; 
-      border-bottom-right-radius: $base-border-radius; 
-
-      @include media($tab-mode) {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-    }
   }
 
-  li.tab-header-and-content a.tab-link {
+  a.tab-link {
     background-color: $tab-inactive-color;
     border-top: $tab-border;
     color: $dark-gray;
@@ -2801,47 +2768,34 @@ $browser-content-background-3: #F0F0F0;
     @include media($tab-mode) {
       @include inline-block;
       border-top: 0;
-      border-top-right-radius: $base-border-radius;
-      border-top-left-radius: $base-border-radius;
     }
 
     &amp;:hover {
       color: $base-link-color;
     }
 
-    &amp;:focus { 
-      outline: none; 
+    &amp;:focus {
+      outline: none;
     }
 
     &amp;.is-active {
-      background-color: $tab-active-background;
       border-bottom: 0;
 
       @include media($tab-mode) {
-        background-color: $tab-active-background;
         border: $tab-border;
-        border-bottom: 1px solid $tab-active-background;
+        border-bottom-color: $tab-active-background;
         margin-bottom: -1px;
       }
     }
   }
 
-  li.tab-header-and-content .tab-content {
-    padding: $base-spacing $gutter;
-    background: $tab-content-background;
+  .tab-content {
     display: none;
-    overflow: hidden;
-    width: 100%;
+    padding: $base-spacing $gutter;
 
     @include media($tab-mode) {
       border-top: $tab-border;
       float: left;
-      left: 0;
-      padding: $base-spacing/2 $gutter/2;
-
-      p {
-        @include columns(2);
-      }
     }
   }
 }
