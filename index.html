@@ -1703,7 +1703,6 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
       <div class="refills-wrapper">
         <div class="refill-centering"><!--<div class="wrapper-for-content-outside-of-footer">
    Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
-  <div class="push"></div>
 </div>-->
 
 <footer class="footer-2">
@@ -1748,7 +1747,6 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;!--&lt;div class=&quot;wrapper-for-content-outside-of-footer&quot;&gt;
    Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
-  &lt;div class=&quot;push&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;--&gt;
 
 &lt;footer class=&quot;footer-2&quot;&gt;
@@ -1798,7 +1796,12 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
 //  height: 100%;
 // }
 
-// .footer-2, .push {
+// .wrapper-for-content-outside-of-footer:after {
+//   content: &quot;&quot;;
+//   display: block;
+// }
+
+// .footer-2, .wrapper-for-content-outside-of-footer:after {
 //   height: 17em;
 
 //   @include media($large-screen) {
