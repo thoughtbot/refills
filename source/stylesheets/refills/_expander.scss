@@ -1,0 +1,25 @@
+$expander-arrow-width: 5px;
+$expander-toggle-size: 1em;
+$expander-toggle-arrow-size: $expander-toggle-size * .75;
+$expander-toggle-margin: 1em;
+
+.js-expander a.expander-toggle {
+  @include user-select(none);
+  border-bottom: 1px solid $light-gray;
+  cursor: pointer;
+  display: block;
+  font-size: $expander-toggle-size;
+  margin-bottom: $expander-toggle-size;
+  padding-bottom: $expander-toggle-size / 4;
+
+  &:before {
+    content: '\25BA';
+    font-size: $expander-toggle-arrow-size;
+    margin-right: 1em;
+  }
+}
+
+.js-expander.expanded .expander-toggle:before {
+  content: '\25BC';
+  margin-right: .95em;
+}
