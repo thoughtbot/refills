@@ -19,6 +19,7 @@ $flashes: (alert: $flash-yellow, error: $flash-red, notice: lighten($base-accent
 
     a {
       color: darken($color, 70);
+      border-bottom: 1px solid transparentize(darken($color, 70), .7);
 
       &:hover {
         color: darken($color, 90);
