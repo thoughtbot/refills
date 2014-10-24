@@ -733,92 +733,6 @@ $dropdown-arrow-top-distance: 0;
 </table>
 </div>
     </div>
-
-    <div id="flashes" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Flashes</h6></div>
-        <div class="refill-centering"><div class="flash-success">
-  <span>This is a success message <a href="#">with a link</a></span>
-</div>
-
-<div class="flash-error">
-  <span>This is an error message <a href="#">with a link</a></span>
-</div>
-
-<div class="flash-notice">
-  <span>This is an notice message <a href="#">with a link</a></span>
-</div>
-
-<div class="flash-alert">
-  <span>This is an alert message <a href="#">with a link</a></span>
-</div>
-</div>
-      </div>
-      <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;flash-success&quot;&gt;
-  &lt;span&gt;This is a success message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;flash-error&quot;&gt;
-  &lt;span&gt;This is an error message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;flash-notice&quot;&gt;
-  &lt;span&gt;This is an notice message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;flash-alert&quot;&gt;
-  &lt;span&gt;This is an alert message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">$flash-red: #FBE3E4;
-$flash-yellow: #FFF6BF;
-$flash-green: #E6EFC2;
-
-%flash-base {
-  display: block;
-  font-weight: bold;
-  margin-bottom: $base-spacing / 2;
-  padding: $base-spacing / 2;
-}
-
-$flashes: (alert: $flash-yellow, error: $flash-red, notice: lighten($base-accent-color, 40), success: $flash-green);
-
-@each $flash, $color in $flashes {
-  .flash-#{$flash} {
-    @extend %flash-base;
-    background: $color;
-    color: darken($color, 60);
-
-    a {
-      color: darken($color, 70);
-
-      &amp;:hover {
-        color: darken($color, 90);
-      }
-    }
-  }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-    </div>
     
     <div id="expander" class="refill">
       <div class="refills-wrapper">
@@ -938,6 +852,93 @@ $(function() {
 });
 </code></pre>
 </td>
+
+  </tr>
+</table>
+</div>
+    </div>
+
+    <div id="flashes" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Flashes</h6></div>
+        <div class="refill-centering"><div class="flash-success">
+  <span>This is a success message <a href="#">with a link</a></span>
+</div>
+
+<div class="flash-error">
+  <span>This is an error message <a href="#">with a link</a></span>
+</div>
+
+<div class="flash-notice">
+  <span>This is an notice message <a href="#">with a link</a></span>
+</div>
+
+<div class="flash-alert">
+  <span>This is an alert message <a href="#">with a link</a></span>
+</div>
+</div>
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;flash-success&quot;&gt;
+  &lt;span&gt;This is a success message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flash-error&quot;&gt;
+  &lt;span&gt;This is an error message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flash-notice&quot;&gt;
+  &lt;span&gt;This is an notice message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flash-alert&quot;&gt;
+  &lt;span&gt;This is an alert message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">$flash-red: #FBE3E4;
+$flash-yellow: #FFF6BF;
+$flash-green: #E6EFC2;
+
+%flash-base {
+  display: block;
+  font-weight: bold;
+  margin-bottom: $base-spacing / 2;
+  padding: $base-spacing / 2;
+}
+
+$flashes: (alert: $flash-yellow, error: $flash-red, notice: lighten($base-accent-color, 40), success: $flash-green);
+
+@each $flash, $color in $flashes {
+  .flash-#{$flash} {
+    @extend %flash-base;
+    background: $color;
+    color: darken($color, 60);
+
+    a {
+      color: darken($color, 70);
+      border-bottom: 1px solid transparentize(darken($color, 70), .7);
+
+      &amp;:hover {
+        color: darken($color, 90);
+      }
+    }
+  }
+}
+</code></pre>
+</td>
+
 
   </tr>
 </table>

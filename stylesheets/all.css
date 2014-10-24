@@ -4858,8 +4858,9 @@ iframe {
   color: #8c7800; }
   /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
   .flash-alert a {
-    color: #594c00; }
-    /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+    color: #594c00;
+    border-bottom: 1px solid rgba(89, 76, 0, 0.3); }
+    /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
     .flash-alert a:hover {
       color: black; }
 
@@ -4869,8 +4870,9 @@ iframe {
   color: #96151b; }
   /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
   .flash-error a {
-    color: #6a0f13; }
-    /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+    color: #6a0f13;
+    border-bottom: 1px solid rgba(106, 15, 19, 0.3); }
+    /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
     .flash-error a:hover {
       color: #110203; }
 
@@ -4880,8 +4882,9 @@ iframe {
   color: #264d85; }
   /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
   .flash-notice a {
-    color: #1b365d; }
-    /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+    color: #1b365d;
+    border-bottom: 1px solid rgba(27, 54, 93, 0.3); }
+    /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
     .flash-notice a:hover {
       color: #04080e; }
 
@@ -4891,8 +4894,9 @@ iframe {
   color: #56651a; }
   /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
   .flash-success a {
-    color: #333c10; }
-    /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+    color: #333c10;
+    border-bottom: 1px solid rgba(51, 60, 16, 0.3); }
+    /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
     .flash-success a:hover {
       color: black; }
 
