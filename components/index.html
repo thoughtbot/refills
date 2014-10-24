@@ -221,9 +221,9 @@
   <pre><code class="language-scss">.badges {
   $badge-background: $medium-gray;
   $badge-dark-color: $dark-gray;
-  $badge-error-color: $error-color;
-  $badge-notice-color: $notice-color;
-  $badge-success-color: $success-color;
+  $badge-error-color: #FBE3E4;
+  $badge-notice-color: lighten($base-accent-color, 40);
+  $badge-success-color: #E6EFC2;
   $badge-font-color: #fff;
   $badge-font-size: $base-font-size * .75;
 
@@ -734,6 +734,216 @@ $dropdown-arrow-top-distance: 0;
 </div>
     </div>
 
+    <div id="flashes" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Flashes</h6></div>
+        <div class="refill-centering"><div class="flash-success">
+  <span>This is a success message <a href="#">with a link</a></span>
+</div>
+
+<div class="flash-error">
+  <span>This is an error message <a href="#">with a link</a></span>
+</div>
+
+<div class="flash-notice">
+  <span>This is an notice message <a href="#">with a link</a></span>
+</div>
+
+<div class="flash-alert">
+  <span>This is an alert message <a href="#">with a link</a></span>
+</div>
+</div>
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;flash-success&quot;&gt;
+  &lt;span&gt;This is a success message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flash-error&quot;&gt;
+  &lt;span&gt;This is an error message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flash-notice&quot;&gt;
+  &lt;span&gt;This is an notice message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flash-alert&quot;&gt;
+  &lt;span&gt;This is an alert message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">$flash-red: #FBE3E4;
+$flash-yellow: #FFF6BF;
+$flash-green: #E6EFC2;
+
+%flash-base {
+  display: block;
+  font-weight: bold;
+  margin-bottom: $base-spacing / 2;
+  padding: $base-spacing / 2;
+}
+
+$flashes: (alert: $flash-yellow, error: $flash-red, notice: lighten($base-accent-color, 40), success: $flash-green);
+
+@each $flash, $color in $flashes {
+  .flash-#{$flash} {
+    @extend %flash-base;
+    background: $color;
+    color: darken($color, 60);
+
+    a {
+      color: darken($color, 70);
+
+      &amp;:hover {
+        color: darken($color, 90);
+      }
+    }
+  }
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+    </div>
+    
+    <div id="expander" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Expander</h6></div>
+        <div class="refill-centering">
+          <div class="refill-smaller"><div class="expander">
+  <a href="javascript:void(0)" class="expander-toggle">Expandable section</a>
+  <div class="expander-content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
+  </div>
+</div>
+</div>
+        </div>
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div class=&quot;expander&quot;&gt;
+  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;expander-toggle&quot;&gt;Expandable section&lt;/a&gt;
+  &lt;div class=&quot;expander-content&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">$expander-arrow-width: 5px;
+$expander-toggle-size: 1em;
+$expander-toggle-arrow-size: $expander-toggle-size * .75;
+$expander-toggle-margin: 1em;
+
+.js-expander a.expander-toggle {
+  @include user-select(none);
+  border-bottom: 1px solid $light-gray;
+  cursor: pointer;
+  display: block;
+  font-size: $expander-toggle-size;
+  margin-bottom: $expander-toggle-size;
+  padding-bottom: $expander-toggle-size / 4;
+
+  &amp;:before {
+    content: '\25BA';
+    font-size: $expander-toggle-arrow-size;
+    margin-right: 1em;
+  }
+}
+
+.js-expander.expanded .expander-toggle:before {
+  content: '\25BC';
+  margin-right: .95em;
+}
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-javascript">var Expander;
+
+Expander = (function() {
+  Expander.selector = '.expander';
+  Expander.toggleSelector = '.expander-toggle';
+  Expander.contentSelector = '.expander-content';
+  Expander.enhancedClass = 'js-expander';
+  Expander.expandedClass = 'expanded';
+
+  Expander.enhance = function() {
+    var thisClass;
+    thisClass = this;
+    return $(this.selector).each(function() {
+      return new thisClass(this).enhance();
+    });
+  };
+
+  function Expander(element) {
+    this._element = $(element);
+    this._toggleElement = this._element.find(this.constructor.toggleSelector);
+    this._contentElement = this._element.find(this.constructor.contentSelector);
+  }
+
+  Expander.prototype.enhance = function() {
+    this._element.addClass(this.constructor.enhancedClass);
+    this._buildUI();
+    return this._bindEvents();
+  };
+
+  Expander.prototype._buildUI = function() {
+    return this._contentElement.hide();
+  };
+
+  Expander.prototype._bindEvents = function() {
+    return this._toggleElement.click((function(_this) {
+      return function() {
+        return _this._toggleContent();
+      };
+    })(this));
+  };
+
+  Expander.prototype._toggleContent = function() {
+    this._contentElement.toggle();
+    return this._element.toggleClass(this.constructor.expandedClass);
+  };
+
+  return Expander;
+
+})();
+
+$(function() {
+  return Expander.enhance();
+});
+</code></pre>
+</td>
+
+  </tr>
+</table>
+</div>
+    </div>
+
     <div id="hover-tile-animation" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
@@ -924,6 +1134,49 @@ $dropdown-arrow-top-distance: 0;
       display: block;
       @include position(absolute, 0px 0px 0px 0px);
     }
+  }
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+    </div>
+
+    <div id="label-alerts" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Label Alerts</h6></div>
+        <div class="refill-centering"><label class="label-success">This is a success label</label>
+
+<label class="label-error">This is an error label</label>
+
+<label class="label-notice">This is an notice label</label>
+
+<label class="label-alert">This is an alert label</label>
+
+</div>
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">$alert-red: #FBE3E4;
+$alert-yellow: #FFF6BF;
+$alert-green: #E6EFC2;
+
+$label-alerts: (alert: $alert-yellow, error: $alert-red, notice: lighten($base-accent-color, 40), success: $alert-green);
+
+@each $alert, $color in $label-alerts {
+  .label-#{$alert} {
+    color: darken($color, 45);
   }
 }
 </code></pre>
