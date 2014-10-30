@@ -1,0 +1,51 @@
+$links-color: white;
+$gradient-angle: 10deg;
+$links-image: image_url('/images/background.jpg');
+
+.links-inner {
+  @include clearfix;
+  @include display(flex);
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch; 
+  -webkit-justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -webkit-align-items: stretch; 
+  -moz-justify-content: center;
+  -moz-flex-wrap: wrap;
+  -moz-align-items: stretch; 
+
+  padding: 3em;
+  margin: auto;
+  text-align: center;
+  color: $links-color;
+
+  a {
+    @include transition (all 0.2s ease-in-out);
+    background: #F6F5EF;
+    margin: .4em;
+
+  
+    -moz-flex-basis: 15em;
+    -moz-flex-grow: 1;
+    -webkit-flex-basis: 15em;
+    -webkit-flex-grow: 1;
+    flex-basis: 15em;
+    flex-grow: 1;
+
+    padding: 3em 0;
+    box-shadow: 0 2px 4px transparentize(black, .9);
+
+    &:hover, &:active {
+      background: #F8F8BC;
+    }
+
+    img {
+      max-height: 110px;
+    }
+
+    img.horizontal {
+      max-height: 70px; 
+    }
+  }
+}
