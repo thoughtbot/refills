@@ -1,51 +1,65 @@
-$links-color: white;
-$gradient-angle: 10deg;
-$links-image: image_url('/images/background.jpg');
+$flex-box-border-color: $base-border-color;
+$flex-box-border: 1px solid $flex-box-border-color;
+$flex-box-background: lighten($light-gray, 10);
+$flex-box-gutter: .3em;
+$flex-box-width: 18em;
+$flex-box-color: $base-font-color;
 
-.links-inner {
+.flex-boxes {
   @include clearfix;
   @include display(flex);
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: stretch; 
-  -webkit-justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -webkit-align-items: stretch; 
-  -moz-justify-content: center;
-  -moz-flex-wrap: wrap;
-  -moz-align-items: stretch; 
-
-  padding: 3em;
-  margin: auto;
+  @include justify-content(center);
+  @include align-items(stretch);
+  @include flex-wrap(wrap);
   text-align: center;
-  color: $links-color;
 
-  a {
+  a.flex-box {
     @include transition (all 0.2s ease-in-out);
-    background: #F6F5EF;
-    margin: .4em;
-
-  
-    -moz-flex-basis: 15em;
-    -moz-flex-grow: 1;
-    -webkit-flex-basis: 15em;
-    -webkit-flex-grow: 1;
-    flex-basis: 15em;
-    flex-grow: 1;
-
-    padding: 3em 0;
-    box-shadow: 0 2px 4px transparentize(black, .9);
+    @include flex(1);
+    @include flex-grow(1);
+    @include align-self(stretch);
+    box-shadow: 0 2px 4px darken($base-background-color, 10);
+    border: $flex-box-border;
+    border-radius: $base-border-radius;
+    min-width: $flex-box-width;
+    margin: $flex-box-gutter;
+    padding: 2em 2em 3em 2em;
+    background: $flex-box-background;
+    border-top: 7px solid tomato;
 
     &:hover, &:active {
-      background: #F8F8BC;
+      // background-color: transparentize($base-accent-color, .1);
     }
+  }
 
-    img {
-      max-height: 110px;
-    }
+  .flex-box img {
+    display: block;
+    opacity: .7;
+    height: 3em;
+    margin: auto;
+    margin-bottom: 2em;
+  }
 
-    img.horizontal {
-      max-height: 70px; 
-    }
+  .flex-box h1 {
+    color: $flex-box-color;
+    font-size: 1.3em;
+    margin-bottom: .4em;
+  }
+
+  .flex-box p {
+    margin: auto;
+    color: transparentize($flex-box-color, .3);
+  }
+
+  a.flex-box-big {
+    min-width: $flex-box-width * 2;
+  }
+
+  a.flex-box-image {
+    background: url(/images/lake-transparent.png);
+    background-color: $flex-box-background;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
   }
 }
