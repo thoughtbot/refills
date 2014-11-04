@@ -1,9 +1,9 @@
 .hover-tile-outer {
   $hover-tile-height: 10em;
 
+  background-size: cover;
   background-position: bottom;
   background: url("/images/mountains.png");
-  background-size: cover;
   background-color: $base-accent-color;
   border: 1px solid $base-border-color;
   height: $hover-tile-height;
