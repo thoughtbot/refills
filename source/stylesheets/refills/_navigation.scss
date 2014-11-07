@@ -260,20 +260,12 @@ header.navigation {
   }
 
   .sign-up {
-    @include transition (all 0.2s ease-in-out);
     margin-top: 1.2em;
     float: right;
     display: inline;
-    border-radius: $base-border-radius; 
-    color: white;
     font-size: .8em;  
-    font-weight: 800;
     text-transform: uppercase;
     padding: .75em 1em;
-
-    &:hover {
-      background: lighten($navigation-nav-button-background, 10);
-    }
   }
 
   // Search bar
