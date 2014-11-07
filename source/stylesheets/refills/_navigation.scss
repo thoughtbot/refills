@@ -260,6 +260,7 @@ header.navigation {
   }
 
   .sign-up {
+    @extend button;
     margin-top: 1.2em;
     float: right;
     display: inline;
@@ -276,7 +277,9 @@ header.navigation {
     $search-bar-background: lighten($search-bar-border-color, 10);
 
     padding: .85em .6em; 
+    width: 60%;
     float: left;
+
     .search-and-submit {
       position: relative;
 
