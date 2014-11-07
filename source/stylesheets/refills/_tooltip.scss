@@ -5,7 +5,7 @@
   $tooltip-arrow-width: 8px;
   $tooltip-shadow: 0 2px 2px silver;
   $tooltip-distance-from-item: 140%;
-  $tooltip-arrow-distance-from-box: -$tooltip-arrow-width * 3.4;
+  $tooltip-arrow-distance-from-box: -$tooltip-arrow-width * 3.2;
 
   border: 1px solid $base-border-color;
   padding: .5em 1em;
@@ -19,7 +19,7 @@
   }
 
   .tooltip {
-    @include position(absolute, 0 0 0 50%);
+    @include position(absolute, null null null 50%);
     @include box-sizing(border-box);
     @include transition (all 0.2s ease-in-out);
     bottom: $tooltip-distance-from-item;
@@ -43,7 +43,7 @@
     }
 
     &:after {
-      @include position(absolute, 0 0 0 46%);
+      @include position(absolute, null null null 46%);
       margin-left: -$tooltip-arrow-width;
       border: $tooltip-arrow-width solid transparent;
       color: $tooltip-background;
