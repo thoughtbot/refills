@@ -1465,12 +1465,6 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
   background-size: cover;
   width: 100%;
   height: 20em;
-
-  button {
-    @include button(simple, $base-background-color);
-    font-size: $base-font-size;
-    outline: none;
-  }
 }
 
 .device-text {
@@ -2349,8 +2343,8 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.hero {
-  $hero-background-top: darken($base-accent-color, 25); 
-  $hero-background-bottom: adjust-hue($hero-background-top, -70);
+  $hero-background-top: #7F99BE; 
+  $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
   $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
@@ -2374,12 +2368,6 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
     margin: auto;
     text-align: center;
     color: $hero-color;
-
-    button {
-      @include button(simple, $base-background-color);
-      font-size: $base-font-size;
-      outline: none;
-    }
 
     .hero-copy {
       text-align: center;
@@ -3042,26 +3030,14 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
     }
   }
 
-  a.sign-up {
+  .sign-up {
+    @extend button;
     margin-top: 1.2em;
     float: right;
-    @include transition (all 0.2s ease-in-out);
     display: inline;
-    background: $navigation-nav-button-background;
-    border-radius: $base-border-radius; 
-    color: white;
     font-size: .8em;  
-    font-weight: 800;
     text-transform: uppercase;
-    padding: .4em .5em;
-
-    @include media($large-screen) {
-      padding: .5em 1em;
-    }
-
-    &amp;:hover {
-      background: lighten($navigation-nav-button-background, 10);
-    }
+    padding: .75em 1em;
   }
 
   // Search bar
@@ -3072,7 +3048,9 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
     $search-bar-background: lighten($search-bar-border-color, 10);
 
     padding: .85em .6em; 
+    width: 60%;
     float: left;
+
     .search-and-submit {
       position: relative;
 
@@ -3092,7 +3070,7 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
       }
 
       button[type=submit] {
-        @include button(simple, lighten($navigation-search-background, 10));
+        @include button(flat, $navigation-search-background);
         position: absolute;
         top: 0.3em;
         right: 0.3em;
@@ -3563,7 +3541,7 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
   }
 
   .content h4 {
-    background: $side-image-background-bottom;
+    background: #BBB;
     color: white;
     display: inline-block;
     font-size: .75em;
@@ -3576,12 +3554,6 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
   .content p {
     color: gray;
     margin-bottom: 3em;
-  }
-
-  .content button {
-    @include button(simple, white);
-    font-size: $base-font-size;
-    outline: none;
   }
   @include reset-display();
 }
@@ -3681,7 +3653,7 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
   $table-hover-color: darken($table-background, 5);
   $table-stripe-color: darken($table-background, 4);
   $table-stripe-color-hover: darken($table-stripe-color, 5);
-  $table-padding: 0.5em;
+  $table-padding: .75em 1em;
 
   border: $table-border;
   border-left: 0px;
@@ -3741,7 +3713,8 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
       border-bottom: 0px;
 
       button {
-        @include button(simple, $table-background);
+        padding: .5em 1em .6em;
+        font-size: .7em;
         margin-right: 0.5em;
         display: inline-block;
         width: 100%;
@@ -3751,6 +3724,10 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
         @include media($medium-screen) {
           width: auto;
           margin-bottom: 0;
+        }
+
+        @include media($large-screen) {
+          font-size: .8em;
         }
       }
     }
@@ -3848,7 +3825,7 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
   $table-hover-color: darken($table-background, 2);
   $table-stripe-color: darken($table-background, 4);
   $table-stripe-color-hover: darken($table-stripe-color, 5);
-  $table-padding: 0.5em;
+  $table-padding: .75em 1em;
 
   border-collapse: separate;
   border-spacing: 0;
@@ -3879,7 +3856,8 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
       border-bottom: 0px;
 
       button {
-        @include button(simple, $table-background);
+        padding: .5em 1em .6em;
+        font-size: .7em;
         margin-right: 0.5em;
         display: inline-block;
         width: 100%;
@@ -3888,7 +3866,12 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
 
         @include media($medium-screen) {
           width: auto;
+          font-size: .8em;
           margin-bottom: 0;
+        }
+
+        @include media($large-screen) {
+          font-size: .8em;
         }
       }
     }
@@ -4023,6 +4006,11 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
         margin-right: -1px;
       }
     }
+  }
+
+  a.vertical-tab-accordion-heading,
+  a.vertical-tab {
+    color: $dark-gray;
   }
 
   .vertical-tab:focus {

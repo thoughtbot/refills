@@ -738,13 +738,13 @@ $dropdown-arrow-top-distance: 0;
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Expander</h6></div>
         <div class="refill-centering">
-          <div class="refill-smaller"><div class="expander">
+          <div class="expander">
   <a href="javascript:void(0)" class="expander-toggle">Expandable section</a>
   <div class="expander-content">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
   </div>
 </div>
-</div>
+
         </div>
       </div>
       <div class="refill-snippet"><div class="refill-control">
@@ -772,7 +772,12 @@ $expander-toggle-size: 1em;
 $expander-toggle-arrow-size: $expander-toggle-size * .75;
 $expander-toggle-margin: 1em;
 
-.js-expander a.expander-toggle {
+.expander {
+  margin: auto;
+  width: 60%;
+}
+
+.expander a.expander-toggle {
   @include user-select(none);
   border-bottom: 1px solid $light-gray;
   cursor: pointer;
@@ -788,7 +793,7 @@ $expander-toggle-margin: 1em;
   }
 }
 
-.js-expander.expanded .expander-toggle:before {
+.expander.expanded .expander-toggle:before {
   content: '\25BC';
   margin-right: .95em;
 }
@@ -1266,9 +1271,7 @@ $label-alerts: (alert: $alert-yellow, error: $alert-red, notice: lighten($base-a
   }
 
   .btn {
-    @include button(simple, $base-background-color);
-    font-size: $base-font-size;
-    margin-bottom: $base-line-height;
+    @extend button;
   }
 
   .modal-open {
@@ -1291,7 +1294,7 @@ $label-alerts: (alert: $alert-yellow, error: $alert-red, notice: lighten($base-a
   }
 
   .modal-close {
-    @include position(absolute, ($modal-padding /2) ($modal-padding /2) 0 0);
+    @include position(absolute, ($modal-padding /2) ($modal-padding /2) null null);
     @include size(1.5em);
     cursor: pointer;
     background: $modal-background;
@@ -1820,7 +1823,7 @@ iframe {
     }
 
     button[type=submit] {
-      @include position(absolute, 0em 0em 0em 0);
+      @include position(absolute, 0em 0em 0em null);
       outline: none;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
@@ -1846,7 +1849,7 @@ iframe {
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Sliding Menu</h6></div>
         <div class="refill-centering"><button type="button" class="js-menu-trigger sliding-menu-button">
-  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu.png" alt="Menu Icon">
+  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
 </button>
 
 <nav class="js-menu sliding-menu-content">
@@ -1870,7 +1873,7 @@ iframe {
     <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;js-menu-trigger sliding-menu-button&quot;&gt;
-  &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu.png&quot; alt=&quot;Menu Icon&quot;&gt;
+  &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png&quot; alt=&quot;Menu Icon&quot;&gt;
 &lt;/button&gt;
 
 &lt;nav class=&quot;js-menu sliding-menu-content&quot;&gt;
@@ -1895,7 +1898,6 @@ $sliding-menu-background-hover: $base-accent-color;
 $sliding-menu-color-hover: #fff;
 
 .sliding-menu-button {
-  @include button(simple, $base-background-color);
   @include inline-block;
   cursor: pointer;
   font-size: $base-font-size;
@@ -2308,7 +2310,7 @@ $sliding-menu-color-hover: #fff;
   $tooltip-arrow-width: 8px;
   $tooltip-shadow: 0 2px 2px silver;
   $tooltip-distance-from-item: 140%;
-  $tooltip-arrow-distance-from-box: -$tooltip-arrow-width * 3.4;
+  $tooltip-arrow-distance-from-box: -$tooltip-arrow-width * 3.2;
 
   border: 1px solid $base-border-color;
   padding: .5em 1em;
@@ -2322,7 +2324,7 @@ $sliding-menu-color-hover: #fff;
   }
 
   .tooltip {
-    @include position(absolute, 0 0 0 50%);
+    @include position(absolute, null null null 50%);
     @include box-sizing(border-box);
     @include transition (all 0.2s ease-in-out);
     bottom: $tooltip-distance-from-item;
@@ -2346,7 +2348,7 @@ $sliding-menu-color-hover: #fff;
     }
 
     &amp;:after {
-      @include position(absolute, 0 0 0 46%);
+      @include position(absolute, null null null 46%);
       margin-left: -$tooltip-arrow-width;
       border: $tooltip-arrow-width solid transparent;
       color: $tooltip-background;
