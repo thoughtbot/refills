@@ -259,22 +259,17 @@ header.navigation {
     }
   }
 
-  a.sign-up {
+  .sign-up {
+    @include transition (all 0.2s ease-in-out);
     margin-top: 1.2em;
     float: right;
-    @include transition (all 0.2s ease-in-out);
     display: inline;
-    background: $navigation-nav-button-background;
     border-radius: $base-border-radius; 
     color: white;
     font-size: .8em;  
     font-weight: 800;
     text-transform: uppercase;
-    padding: .4em .5em;
-
-    @include media($large-screen) {
-      padding: .5em 1em;
-    }
+    padding: .75em 1em;
 
     &:hover {
       background: lighten($navigation-nav-button-background, 10);
@@ -309,7 +304,7 @@ header.navigation {
       }
 
       button[type=submit] {
-        @include button(simple, lighten($navigation-search-background, 10));
+        @include button(flat, $navigation-search-background);
         position: absolute;
         top: 0.3em;
         right: 0.3em;

@@ -1,6 +1,6 @@
 .hero {
-  $hero-background-top: darken($base-accent-color, 25); 
-  $hero-background-bottom: adjust-hue($hero-background-top, -70);
+  $hero-background-top: #7F99BE; 
+  $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
   $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
@@ -24,12 +24,6 @@
     margin: auto;
     text-align: center;
     color: $hero-color;
-
-    button {
-      @include button(simple, $base-background-color);
-      font-size: $base-font-size;
-      outline: none;
-    }
 
     .hero-copy {
       text-align: center;

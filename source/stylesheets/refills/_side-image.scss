@@ -41,7 +41,7 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
   }
 
   .content h4 {
-    background: $side-image-background-bottom;
+    background: #BBB;
     color: white;
     display: inline-block;
     font-size: .75em;
@@ -54,12 +54,6 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
   .content p {
     color: gray;
     margin-bottom: 3em;
-  }
-
-  .content button {
-    @include button(simple, white);
-    font-size: $base-font-size;
-    outline: none;
   }
   @include reset-display();
 }

@@ -3,7 +3,11 @@ $expander-toggle-size: 1em;
 $expander-toggle-arrow-size: $expander-toggle-size * .75;
 $expander-toggle-margin: 1em;
 
-.js-expander a.expander-toggle {
+.expander {
+  width: 60%;
+}
+
+.expander a.expander-toggle {
   @include user-select(none);
   border-bottom: 1px solid $light-gray;
   cursor: pointer;
@@ -19,7 +23,7 @@ $expander-toggle-margin: 1em;
   }
 }
 
-.js-expander.expanded .expander-toggle:before {
+.expander.expanded .expander-toggle:before {
   content: '\25BC';
   margin-right: .95em;
 }

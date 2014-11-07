@@ -18,12 +18,6 @@ $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/mast
   background-size: cover;
   width: 100%;
   height: 20em;
-
-  button {
-    @include button(simple, $base-background-color);
-    font-size: $base-font-size;
-    outline: none;
-  }
 }
 
 .device-text {
