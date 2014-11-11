@@ -11,12 +11,6 @@ $flex-box-top-colors:
   #E3D743,
   #CCC,
   #F6C05C;
-  // red
-  // teal 
-  // blue
-  // yellow
-  // gray
-  // orange
 
 .flex-boxes {
   @include clearfix;
@@ -27,7 +21,7 @@ $flex-box-top-colors:
   text-align: center;
 }
 
-a.flex-box {
+.flex-box {
   @include transition (all 0.2s ease-in-out);
   @include flex(2 2 15em);
   @include align-self(stretch);
@@ -57,11 +51,12 @@ a.flex-box {
   margin-bottom: 2em;
 }
 
-.flex-box h1 {
+.flex-box .flex-title {
   color: $flex-box-color;
   font-family: $serif;
-  font-size: 1.3em;
-  margin-bottom: .4em;
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-bottom: .5em;
 }
 
 .flex-box p {
@@ -70,6 +65,6 @@ a.flex-box {
   color: transparentize($flex-box-color, .1);
 }
 
-a.flex-box-big {
+.flex-box-big {
   @include flex(1 1 40em);
 }
