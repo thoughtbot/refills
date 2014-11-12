@@ -1753,6 +1753,17 @@ Prism.languages.scss=Prism.languages.extend("css",{comment:{pattern:/(^|[^\\])(\
   };
 
 })(jQuery, window, document);
+(function() {
+  var refillsMenuAnchor = $('.refills-menu-anchor');
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 50) {
+      refillsMenuAnchor.addClass('refills-menu-anchor-moved');
+    } else if ($(this).scrollTop() <= 50) {
+      refillsMenuAnchor.removeClass('refills-menu-anchor-moved');
+    }
+  });
+})();
 $('.js-accordion-trigger').bind('click', function(e){
   jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
   jQuery(this).parent().toggleClass('is-expanded');
