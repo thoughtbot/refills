@@ -1,6 +1,6 @@
 $expander-arrow-width: 5px;
 $expander-toggle-size: 1em;
-$expander-toggle-arrow-size: $expander-toggle-size * .75;
+$expander-toggle-arrow-size: $expander-toggle-size;
 $expander-toggle-margin: 1em;
 
 .expander {
@@ -8,7 +8,7 @@ $expander-toggle-margin: 1em;
   width: 60%;
 }
 
-.expander a.expander-toggle {
+.expander-trigger {
   @include user-select(none);
   border-bottom: 1px solid $light-gray;
   cursor: pointer;
@@ -18,13 +18,18 @@ $expander-toggle-margin: 1em;
   padding-bottom: $expander-toggle-size / 4;
 
   &:before {
-    content: '\25BA';
+    content: '\25BC';
     font-size: $expander-toggle-arrow-size;
-    margin-right: 1em;
+    margin-right: .5em;
   }
 }
 
-.expander.expanded .expander-toggle:before {
-  content: '\25BC';
-  margin-right: .95em;
+.expander-hidden {
+  &:before {
+    content: '\25BA';
+  }
+}
+
+.expander-hidden + .expander-content {
+  display: none;
 }
