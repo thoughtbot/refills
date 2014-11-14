@@ -863,6 +863,95 @@ $(function() {
 </div>
     </section>
 
+    <section id="fade-in" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Fade In</h6></div>
+        <div class="refill-centering">
+          <div class="refill-smaller"><div id="js-fadeInElement" class="fade-in-element">
+  This box will fade in when it's <b>300px above the bottom</b> of the window.
+  <br>
+  And disappear as it goes <b>below the bottom</b> of the window.
+  <br>
+  If JavaScript is disabled, it will still show up.
+</div>
+</div>
+        </div>
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div id=&quot;js-fadeInElement&quot; class=&quot;fade-in-element&quot;&gt;
+  This box will fade in when it's &lt;b&gt;300px above the bottom&lt;/b&gt; of the window.
+  &lt;br&gt;
+  And disappear as it goes &lt;b&gt;below the bottom&lt;/b&gt; of the window.
+  &lt;br&gt;
+  If JavaScript is disabled, it will still show up.
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">.fade-in-element {
+  @include clearfix;
+  background: $base-background-color;
+  border-radius: $base-border-radius;
+  border: 1px solid silver;
+  box-shadow: 0 2px 2px transparentize(black, .8);
+  margin-bottom: 4em;
+  padding: $base-spacing;
+  text-align: center;
+  width: 100%;
+}
+
+.js-fade-element-hide {
+  opacity: 0;
+}
+
+.js-fade-element-show {
+  @include transition (all 0.4s ease-in-out);
+  opacity: 1;
+}
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-javascript">$(document).ready(function() {
+  var element = document.getElementById(&quot;js-fadeInElement&quot;);
+  $(element).addClass('js-fade-element-hide');
+
+  $(window).scroll(function() {
+    var elementTopToPageTop = $(element).offset().top;
+    var windowTopToPageTop = $(window).scrollTop();
+    var windowInnerHeight = window.innerHeight;
+    var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
+    var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
+    var distanceFromBottomToAppear = 300;
+
+    if(elementTopToWindowBottom &gt; distanceFromBottomToAppear) {
+      $(element).addClass('js-fade-element-show');
+    }
+    else if(elementTopToWindowBottom &lt; 0) {
+      $(element).removeClass('js-fade-element-show');
+      $(element).addClass('js-fade-element-hide');
+    }
+  });
+});
+</code></pre>
+</td>
+
+  </tr>
+</table>
+</div>
+    </section>
+    
     <section id="flashes" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Flashes</h6></div>

@@ -2608,6 +2608,33 @@ section.inner-content {
   content: '\25BC';
   margin-right: .95em; }
 
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_fade-in.scss */
+.fade-in-element {
+  background: white;
+  border-radius: 3px;
+  border: 1px solid silver;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 4em;
+  padding: 1.5em;
+  text-align: center;
+  width: 100%; }
+  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
+  .fade-in-element:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_fade-in.scss */
+.js-fade-element-hide {
+  opacity: 0; }
+
+/* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_fade-in.scss */
+.js-fade-element-show {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  opacity: 1; }
+
 /* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
 .flash-alert, .flash-error, .flash-notice, .flash-success {
   display: block;
