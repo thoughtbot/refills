@@ -1,0 +1,20 @@
+.fade-in-element {
+  @include clearfix;
+  background: $base-background-color;
+  border-radius: $base-border-radius;
+  border: 1px solid silver;
+  box-shadow: 0 2px 2px transparentize(black, .8);
+  margin-bottom: 4em;
+  padding: $base-spacing;
+  text-align: center;
+  width: 100%;
+}
+
+.js-fade-element-hide {
+  opacity: 0;
+}
+
+.js-fade-element-show {
+  @include transition (all 0.4s ease-in-out);
+  opacity: 1;
+}
