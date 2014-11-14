@@ -48,9 +48,11 @@ body {
     display: inline-block;
     margin: 0 auto 1.4em auto;
     max-width: 5em;
+    max-height: 5em;
 
     @include media($medium-screen) {
       max-width: 8em;
+      max-height: 8em;
     }
     
     img {
