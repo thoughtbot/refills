@@ -3499,6 +3499,37 @@ section.inner-content {
 .label-success {
   color: #89a12a; }
 
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_maps.scss */
+#map_canvas {
+  width: 100%;
+  height: 400px; }
+
+/* line 6, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_maps.scss */
+#map_canvas img {
+  max-width: none; }
+
+/* line 10, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_maps.scss */
+#map_canvas .content {
+  padding: .7em .5em 1em .5em; }
+
+/* line 14, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_maps.scss */
+#map_canvas .firstHeading {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 1.4em;
+  margin-bottom: .4em; }
+
+/* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_maps.scss */
+#map_canvas .bodyContent p {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+  margin-bottom: 0; }
+
+/* line 26, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_maps.scss */
+#map_canvas .bodyContent p:last-of-type {
+  border-top: 1px solid silver;
+  margin-top: .5em;
+  padding-top: .3em; }
+
 /* line 8, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
 .modal label {
   cursor: pointer;

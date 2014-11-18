@@ -10,6 +10,66 @@
     <link href="../stylesheets/all.css" rel="stylesheet" type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="/javascripts/jquery.erToc.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(59.342457, 18.057340);
+        var mapCenter = new google.maps.LatLng(59.340458, 18.057340);
+        var mapCanvas = document.getElementById('map_canvas');
+        var mapOptions = {
+          center: mapCenter,
+          zoom: 13,
+          scrollwheel: false,
+          draggable: true,
+          disableDefaultUI: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+
+        map.set('styles', [
+          {
+            featureType: 'landscape',
+            elementType: 'geometry',
+            stylers: [
+              { hue: '#ffff00' },
+              { saturation: 30 },
+              { lightness: 10}
+            ]
+          },
+        ]);
+
+        var contentString = 
+          '<div class="content">'+
+          '<div class="siteNotice">'+
+          '</div>'+
+          '<h1 class="firstHeading" class="firstHeading">thoughtbot</h1>'+
+          '<div class="bodyContent">'+
+          '<p>Sveavägen 98</p>'+
+          '<p>113 50 Stockholm</p>'+
+          '<p>Sweden</p>'+
+          '</div>'+
+          '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 300
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'thoughtbot (Sweden)'
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
   </head>
   <body class="refills-page-scripts refills-page-scripts_index">
     <nav class="bourbon">

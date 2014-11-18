@@ -10,6 +10,66 @@
     <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="/javascripts/jquery.erToc.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(59.342457, 18.057340);
+        var mapCenter = new google.maps.LatLng(59.340458, 18.057340);
+        var mapCanvas = document.getElementById('map_canvas');
+        var mapOptions = {
+          center: mapCenter,
+          zoom: 13,
+          scrollwheel: false,
+          draggable: true,
+          disableDefaultUI: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+
+        map.set('styles', [
+          {
+            featureType: 'landscape',
+            elementType: 'geometry',
+            stylers: [
+              { hue: '#ffff00' },
+              { saturation: 30 },
+              { lightness: 10}
+            ]
+          },
+        ]);
+
+        var contentString = 
+          '<div class="content">'+
+          '<div class="siteNotice">'+
+          '</div>'+
+          '<h1 class="firstHeading" class="firstHeading">thoughtbot</h1>'+
+          '<div class="bodyContent">'+
+          '<p>Sveavägen 98</p>'+
+          '<p>113 50 Stockholm</p>'+
+          '<p>Sweden</p>'+
+          '</div>'+
+          '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 300
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'thoughtbot (Sweden)'
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
   </head>
   <body class="index">
     <nav class="bourbon">
@@ -2815,6 +2875,220 @@ $flex-box-top-colors:
       }
     }
   }
+}
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+    </section>
+
+    <section id="maps" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Maps</h6></div>
+        <!-- 
+Add the code below to your <head>. 
+Edit myLatlng and the other variables.
+
+Find syntax for Features that can be styled here:
+
+https://developers.google.com/maps/documentation/javascript/reference#MapTypeStyleFeatureType  
+
+Or use a service such as:
+
+http://software.stadtwerk.org/google_maps_colorizr/#
+http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
+https://developers.google.com/maps/documentation/javascript/tutorial
+-->
+
+
+<!-- 
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(59.342457, 18.057340);
+    var mapCenter = new google.maps.LatLng(59.340458, 18.057340);
+    var mapCanvas = document.getElementById('map_canvas');
+    var mapOptions = {
+      center: mapCenter,
+      zoom: 13,
+      scrollwheel: false,
+      draggable: true,
+      disableDefaultUI: true,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+    var map = new google.maps.Map(mapCanvas, mapOptions)
+
+    map.set('styles', [
+     {
+         featureType: 'landscape',
+         elementType: 'geometry',
+         stylers: [
+           { hue: '#ffff00' },
+           { saturation: 30 },
+           { lightness: 10}
+         ]
+       },
+    ]);
+
+    var contentString = 
+      '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">thoughtbot</h1>'+
+      '<div id="bodyContent">'+
+      '<p>Sveavägen 98</p>'+
+      '<p>113 50 Stockholm</p>'+
+      '<p>Sweden</p>'+
+      '</div>'+
+      '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 300
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'thoughtbot (Sweden)'
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+-->
+
+<div id="map_canvas"></div>
+
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;!-- 
+Add the code below to your &lt;head&gt;. 
+Edit myLatlng and the other variables.
+
+Find syntax for Features that can be styled here:
+
+https://developers.google.com/maps/documentation/javascript/reference#MapTypeStyleFeatureType  
+
+Or use a service such as:
+
+http://software.stadtwerk.org/google_maps_colorizr/#
+http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
+https://developers.google.com/maps/documentation/javascript/tutorial
+--&gt;
+
+
+&lt;!-- 
+&lt;script src=&quot;https://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(59.342457, 18.057340);
+    var mapCenter = new google.maps.LatLng(59.340458, 18.057340);
+    var mapCanvas = document.getElementById('map_canvas');
+    var mapOptions = {
+      center: mapCenter,
+      zoom: 13,
+      scrollwheel: false,
+      draggable: true,
+      disableDefaultUI: true,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+    var map = new google.maps.Map(mapCanvas, mapOptions)
+
+    map.set('styles', [
+     {
+         featureType: 'landscape',
+         elementType: 'geometry',
+         stylers: [
+           { hue: '#ffff00' },
+           { saturation: 30 },
+           { lightness: 10}
+         ]
+       },
+    ]);
+
+    var contentString = 
+      '&lt;div id=&quot;content&quot;&gt;'+
+      '&lt;div id=&quot;siteNotice&quot;&gt;'+
+      '&lt;/div&gt;'+
+      '&lt;h1 id=&quot;firstHeading&quot; class=&quot;firstHeading&quot;&gt;thoughtbot&lt;/h1&gt;'+
+      '&lt;div id=&quot;bodyContent&quot;&gt;'+
+      '&lt;p&gt;Sveavägen 98&lt;/p&gt;'+
+      '&lt;p&gt;113 50 Stockholm&lt;/p&gt;'+
+      '&lt;p&gt;Sweden&lt;/p&gt;'+
+      '&lt;/div&gt;'+
+      '&lt;/div&gt;';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 300
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'thoughtbot (Sweden)'
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+&lt;/script&gt;
+--&gt;
+
+&lt;div id=&quot;map_canvas&quot;&gt;&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">#map_canvas {
+  width: 100%;
+  height: 400px;
+}
+
+#map_canvas img { 
+  max-width: none; // to prevent UI control bug
+}
+
+#map_canvas .content {
+  padding: .7em .5em 1em .5em;
+}
+
+#map_canvas .firstHeading {
+  font-family: $serif;
+  font-size: 1.4em;
+  margin-bottom: .4em;
+}
+
+#map_canvas .bodyContent p {
+  font-family: $sans-serif;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+#map_canvas .bodyContent p:last-of-type {
+  border-top: 1px solid silver;
+  margin-top: .5em;
+  padding-top: .3em;
 }
 </code></pre>
 </td>
