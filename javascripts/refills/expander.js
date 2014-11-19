@@ -3,6 +3,6 @@ $(document).ready(function() {
   var expanderContent = document.getElementById("js-expander-content");
 
   $('#js-expander-trigger').click(function(){
-    $(this).toggleClass("expander-hidden", 1000, "easeInOutExpo" );
+    $(this).toggleClass("expander-hidden");
   });
 });
