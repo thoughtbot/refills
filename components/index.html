@@ -799,8 +799,8 @@ $dropdown-arrow-top-distance: 0;
         <div class="line-behind-text"><h6>Expander</h6></div>
         <div class="refill-centering">
           <div class="expander">
-  <a href="javascript:void(0)" class="expander-toggle">Expandable section</a>
-  <div class="expander-content">
+  <a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden">Expandable section</a>
+  <div id="js-expander-content" class="expander-content">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
   </div>
 </div>
@@ -817,8 +817,8 @@ $dropdown-arrow-top-distance: 0;
     <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;expander&quot;&gt;
-  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;expander-toggle&quot;&gt;Expandable section&lt;/a&gt;
-  &lt;div class=&quot;expander-content&quot;&gt;
+  &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-expander-trigger&quot; class=&quot;expander-trigger expander-hidden&quot;&gt;Expandable section&lt;/a&gt;
+  &lt;div id=&quot;js-expander-content&quot; class=&quot;expander-content&quot;&gt;
     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -829,7 +829,7 @@ $dropdown-arrow-top-distance: 0;
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">$expander-arrow-width: 5px;
 $expander-toggle-size: 1em;
-$expander-toggle-arrow-size: $expander-toggle-size * .75;
+$expander-toggle-arrow-size: $expander-toggle-size;
 $expander-toggle-margin: 1em;
 
 .expander {
@@ -837,7 +837,7 @@ $expander-toggle-margin: 1em;
   width: 60%;
 }
 
-.expander a.expander-toggle {
+.expander-trigger {
   @include user-select(none);
   border-bottom: 1px solid $light-gray;
   cursor: pointer;
@@ -847,73 +847,33 @@ $expander-toggle-margin: 1em;
   padding-bottom: $expander-toggle-size / 4;
 
   &amp;:before {
-    content: '\25BA';
+    content: '\25BC';
     font-size: $expander-toggle-arrow-size;
-    margin-right: 1em;
+    margin-right: .5em;
   }
 }
 
-.expander.expanded .expander-toggle:before {
-  content: '\25BC';
-  margin-right: .95em;
+.expander-hidden {
+  &amp;:before {
+    content: '\25BA';
+  }
+}
+
+.expander-hidden + .expander-content {
+  display: none;
 }
 </code></pre>
 </td>
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-javascript">var Expander;
+  <pre><code class="language-javascript">$(document).ready(function() {
+  var expanderTrigger = document.getElementById(&quot;js-expander-trigger&quot;);
+  var expanderContent = document.getElementById(&quot;js-expander-content&quot;);
 
-Expander = (function() {
-  Expander.selector = '.expander';
-  Expander.toggleSelector = '.expander-toggle';
-  Expander.contentSelector = '.expander-content';
-  Expander.enhancedClass = 'js-expander';
-  Expander.expandedClass = 'expanded';
-
-  Expander.enhance = function() {
-    var thisClass;
-    thisClass = this;
-    return $(this.selector).each(function() {
-      return new thisClass(this).enhance();
-    });
-  };
-
-  function Expander(element) {
-    this._element = $(element);
-    this._toggleElement = this._element.find(this.constructor.toggleSelector);
-    this._contentElement = this._element.find(this.constructor.contentSelector);
-  }
-
-  Expander.prototype.enhance = function() {
-    this._element.addClass(this.constructor.enhancedClass);
-    this._buildUI();
-    return this._bindEvents();
-  };
-
-  Expander.prototype._buildUI = function() {
-    return this._contentElement.hide();
-  };
-
-  Expander.prototype._bindEvents = function() {
-    return this._toggleElement.click((function(_this) {
-      return function() {
-        return _this._toggleContent();
-      };
-    })(this));
-  };
-
-  Expander.prototype._toggleContent = function() {
-    this._contentElement.toggle();
-    return this._element.toggleClass(this.constructor.expandedClass);
-  };
-
-  return Expander;
-
-})();
-
-$(function() {
-  return Expander.enhance();
+  $('#js-expander-trigger').click(function(){
+    $(this).toggleClass(&quot;expander-hidden&quot;, 1000, &quot;easeInOutExpo&quot; );
+  });
 });
 </code></pre>
 </td>
@@ -1011,7 +971,7 @@ $(function() {
 </table>
 </div>
     </section>
-    
+
     <section id="flashes" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Flashes</h6></div>
@@ -2516,7 +2476,7 @@ $sliding-menu-color-hover: #fff;
   </tr>
 </table>
 </div>
-    </div>
+    </section>
   </div>
 </div>
 

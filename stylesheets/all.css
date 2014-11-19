@@ -2586,7 +2586,7 @@ section.inner-content {
   width: 60%; }
 
 /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_expander.scss */
-.expander a.expander-toggle {
+.expander-trigger {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2598,15 +2598,18 @@ section.inner-content {
   margin-bottom: 1em;
   padding-bottom: 0.25em; }
   /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_expander.scss */
-  .expander a.expander-toggle:before {
-    content: '\25BA';
-    font-size: 0.75em;
-    margin-right: 1em; }
+  .expander-trigger:before {
+    content: '\25BC';
+    font-size: 1em;
+    margin-right: .5em; }
 
-/* line 27, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_expander.scss */
-.expander.expanded .expander-toggle:before {
-  content: '\25BC';
-  margin-right: .95em; }
+/* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_expander.scss */
+.expander-hidden:before {
+  content: '\25BA'; }
+
+/* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_expander.scss */
+.expander-hidden + .expander-content {
+  display: none; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_fade-in.scss */
 .fade-in-element {
