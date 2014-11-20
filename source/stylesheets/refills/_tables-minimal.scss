@@ -6,7 +6,7 @@
   $table-hover-color: darken($table-background, 2);
   $table-stripe-color: darken($table-background, 4);
   $table-stripe-color-hover: darken($table-stripe-color, 5);
-  $table-padding: 0.5em;
+  $table-padding: .75em 1em;
 
   border-collapse: separate;
   border-spacing: 0;
@@ -37,7 +37,8 @@
       border-bottom: 0px;
 
       button {
-        @include button(simple, $table-background);
+        padding: .5em 1em .6em;
+        font-size: .7em;
         margin-right: 0.5em;
         display: inline-block;
         width: 100%;
@@ -46,7 +47,12 @@
 
         @include media($medium-screen) {
           width: auto;
+          font-size: .8em;
           margin-bottom: 0;
+        }
+
+        @include media($large-screen) {
+          font-size: .8em;
         }
       }
     }

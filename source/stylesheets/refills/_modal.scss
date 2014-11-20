@@ -22,9 +22,7 @@
   }
 
   .btn {
-    @include button(simple, $base-background-color);
-    font-size: $base-font-size;
-    margin-bottom: $base-line-height;
+    @extend button;
   }
 
   .modal-open {
@@ -47,7 +45,7 @@
   }
 
   .modal-close {
-    @include position(absolute, ($modal-padding /2) ($modal-padding /2) 0 0);
+    @include position(absolute, ($modal-padding /2) ($modal-padding /2) null null);
     @include size(1.5em);
     cursor: pointer;
     background: $modal-background;
@@ -104,10 +102,9 @@
       text-transform: capitalize;
     }
 
-    p {
+    p.body, p.intro {
       font-size: $base-font-size;
       max-width: 100% !important;
-      padding: 0;
       text-align: left;
 
       &.intro {

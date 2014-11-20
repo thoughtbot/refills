@@ -1,0 +1,11 @@
+$alert-red: #FBE3E4;
+$alert-yellow: #FFF6BF;
+$alert-green: #E6EFC2;
+
+$label-alerts: (alert: $alert-yellow, error: $alert-red, notice: lighten($base-accent-color, 40), success: $alert-green);
+
+@each $alert, $color in $label-alerts {
+  .label-#{$alert} {
+    color: darken($color, 45);
+  }
+}

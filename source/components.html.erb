@@ -10,103 +10,115 @@
 
   <div id="example">
 
-    <div id="pagination" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Pagination</h6></div>
-        <%= partial "pagination" %>
-      </div>
-      <div class="refill-snippet"><%= code_for('pagination') %></div>
-    </div>
-
-    <div id="modal" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Modal</h6></div>
-        <div class="refill-centering"><%= partial "modal" %></div>
-      </div>
-      <div class="refill-snippet"><%= code_for('modal') %></div>
-    </div>
-
-    <div id="sliding-menu" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Sliding Menu</h6></div>
-        <div class="refill-centering"><%= partial "sliding_menu" %></div>
-      </div>
-      <div class="refill-snippet"><%= code_for('sliding_menu') %></div>
-    </div>
-
-    <div id="badges" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Badges</h6></div>
-        <div class="refill-centering"><%= partial "badges" %></div>
-      </div>
-      <div class="refill-snippet"><%= code_for('badges') %></div>
-    </div>
-
-    <div id="breadcrumbs" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Breadcrumbs</h6></div>
-        <div class="refill-centering"><%= partial "breadcrumbs" %></div>
-      </div>
-      <div class="refill-snippet"><%= code_for('breadcrumbs') %></div>
-    </div>
-
-    <div id="hover-tile-animation" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
-        <div class="refill-centering"><%= partial "hover_tile_animation" %></div>
-      </div>
-      <div class="refill-snippet"><%= code_for('hover_tile_animation') %></div>
-    </div>
-
-    <div id="accordion" class="refill">
+    <section id="accordion" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Accordion</h6></div>
         <div class="refill-centering"><%= partial "accordion" %></div>
       </div>
       <div class="refill-snippet"><%= code_for('accordion') %></div>
-    </div>
+    </section>
 
-    <div id="search-bar" class="refill">
+    <section id="badges" class="refill">
       <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Search bar</h6></div>
-        <div class="refill-centering"><%= partial "search_bar" %></div>
+        <div class="line-behind-text"><h6>Badges</h6></div>
+        <div class="refill-centering"><%= partial "badges" %></div>
       </div>
-      <div class="refill-snippet"><%= code_for('search_bar') %></div>
-    </div>
+      <div class="refill-snippet"><%= code_for('badges') %></div>
+    </section>
 
-    <div id="switch" class="refill">
+    <section id="breadcrumbs" class="refill">
       <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Switch</h6></div>
-        <div class="refill-centering"><%= partial "switch" %></div>
+        <div class="line-behind-text"><h6>Breadcrumbs</h6></div>
+        <div class="refill-centering"><%= partial "breadcrumbs" %></div>
       </div>
-      <div class="refill-snippet"><%= code_for('switch') %></div>
-    </div>
+      <div class="refill-snippet"><%= code_for('breadcrumbs') %></div>
+    </section>
 
-    <div id="image-gradient" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Image with gradient overlays</h6></div>
-        <div class="refill-centering"><%= partial "image_gradient_dynamic" %></div>
-      </div>
-      <div class="refill-snippet"><%= code_for('image_gradient_dynamic') %></div>
-    </div>
-
-    <div id="button-group" class="refill">
+    <section id="button-group" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Button Group</h6></div>
         <div class="refill-centering"><%= partial "button_group" %></div>
       </div>
       <div class="refill-snippet"><%= code_for('button_group') %></div>
-    </div>
+    </section>
 
-    <div id="dropdown" class="refill">
+    <section id="dropdown" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Dropdown</h6></div>
         <%= partial "dropdown" %>
       </div>
       <div class="refill-snippet"><%= code_for('dropdown') %></div>
-    </div>
+    </section>
+    
+    <section id="expander" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Expander</h6></div>
+        <div class="refill-centering">
+          <%= partial "expander" %>
+        </div>
+      </div>
+      <div class="refill-snippet"><%= code_for('expander') %></div>
+    </section>
 
-    <div id="progress-bar" class="refill">
+    <section id="fade-in" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Fade In</h6></div>
+        <div class="refill-centering">
+          <div class="refill-smaller"><%= partial "fade_in" %></div>
+        </div>
+      </div>
+      <div class="refill-snippet"><%= code_for('fade_in') %></div>
+    </section>
+
+    <section id="flashes" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Flashes</h6></div>
+        <div class="refill-centering"><%= partial "flashes" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('flashes') %></div>
+    </section>
+
+    <section id="hover-tile-animation" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
+        <div class="refill-centering"><%= partial "hover_tile_animation" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('hover_tile_animation') %></div>
+    </section>
+
+    <section id="image-gradient" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Image with gradient overlays</h6></div>
+        <div class="refill-centering"><%= partial "image_gradient_dynamic" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('image_gradient_dynamic') %></div>
+    </section>
+
+    <section id="label-alerts" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Label Alerts</h6></div>
+        <div class="refill-centering"><%= partial "label_alerts" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('label_alerts') %></div>
+    </section>
+
+    <section id="modal" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Modal</h6></div>
+        <div class="refill-centering"><%= partial "modal" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('modal') %></div>
+    </section>
+
+    <section id="pagination" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Pagination</h6></div>
+        <%= partial "pagination" %>
+      </div>
+      <div class="refill-snippet"><%= code_for('pagination') %></div>
+    </section>
+
+    <section id="progress-bar" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Progress Bars</h6></div>
         <div class="refill-centering"><%= partial "progress_bar" %></div>
@@ -116,33 +128,56 @@
         <div class="refill-centering"><%= partial "progress_bar_indication" %></div>
       </div>
       <div class="refill-snippet"><%= code_for('progress_bar_indication') %></div>
-    </div>
+    </section>
 
-    <div id="tooltip" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Tooltip</h6></div>
-        <div class="refill-centering"><%= partial "tooltip" %></div>
-      </div>
-      <div class="refill-snippet"><%= code_for('tooltip') %></div>
-    </div>
-
-    <div id="video" class="refill">
+    <section id="video" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Responsive Video Embed</h6></div>
         <%= partial "video" %>
       </div>
       <div class="refill-snippet"><%= code_for('video') %></div>
-    </div>
+    </section>
 
-    <div id="textures" class="refill">
+    <section id="search-bar" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Search bar</h6></div>
+        <div class="refill-centering"><%= partial "search_bar" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('search_bar') %></div>
+    </section>
+
+    <section id="sliding-menu" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Sliding Menu</h6></div>
+        <div class="refill-centering"><%= partial "sliding_menu" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('sliding_menu') %></div>
+    </section>
+
+    <section id="switch" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Switch</h6></div>
+        <div class="refill-centering"><%= partial "switch" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('switch') %></div>
+    </section>
+
+    <section id="textures" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Textures</h6></div>
         <%= partial "texture-legend" %>
         <%= partial "textures" %>
       </div>
       <div class="refill-snippet"><%= code_for('textures') %></div>
-    </div>
+    </section>
 
+    <section id="tooltip" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Tooltip</h6></div>
+        <div class="refill-centering"><%= partial "tooltip" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for('tooltip') %></div>
+    </section>
   </div>
 </div>
 

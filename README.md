@@ -16,11 +16,11 @@ See examples and get the code snippets [here](http://refills.bourbon.io)
 
 # Installing Dependencies
 
-[Install Bourbon](http://bourbon.io). Make sure to install version 3.2.0 if you are using e.g. Middleman.
+[Install Bourbon 4.0](http://bourbon.io)
 
 [Install Neat](http://neat.bourbon.io)
 
-[Install Bitters](http://bitters.bourbon.io)
+[Install Bitters 10.1](http://bitters.bourbon.io)
 
 [Install jQuery](http://jquery.com) if you are using any of the components/patterns that require JavaScript. JavaScript, when used, can be found at the bottom of the HTML file.
 

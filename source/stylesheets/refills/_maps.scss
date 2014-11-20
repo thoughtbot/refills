@@ -1,0 +1,30 @@
+#map_canvas {
+  width: 100%;
+  height: 400px;
+}
+
+#map_canvas img { 
+  max-width: none; // to prevent UI control bug
+}
+
+#map_canvas .content {
+  padding: .7em .5em 1em .5em;
+}
+
+#map_canvas .firstHeading {
+  font-family: $serif;
+  font-size: 1.4em;
+  margin-bottom: .4em;
+}
+
+#map_canvas .bodyContent p {
+  font-family: $sans-serif;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+#map_canvas .bodyContent p:last-of-type {
+  border-top: 1px solid silver;
+  margin-top: .5em;
+  padding-top: .3em;
+}

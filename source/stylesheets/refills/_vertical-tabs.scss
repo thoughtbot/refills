@@ -41,6 +41,11 @@
     }
   }
 
+  a.vertical-tab-accordion-heading,
+  a.vertical-tab {
+    color: $dark-gray;
+  }
+
   .vertical-tab:focus {
     outline: none; 
   }

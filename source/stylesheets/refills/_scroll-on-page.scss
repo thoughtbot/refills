@@ -1,0 +1,32 @@
+.scroll-on-page aside {
+  @include media($large-screen) {
+    @include span-columns(4);
+  }
+}
+
+.scroll-on-page-link {
+  border-bottom: 1px solid transparentize($base-link-color, .8);
+  padding: $base-spacing / 2 0;
+  margin-right: $base-spacing;
+  display: block;
+
+  &:last-child {
+    margin-bottom: $base-spacing;
+  }
+}
+
+.scroll-on-page article {
+  h4 {
+    margin-bottom: .5em; 
+  }
+
+  section p:last-of-type {
+    margin-bottom: 2em; 
+  }
+
+  @include media($large-screen) {
+    @include span-columns(8);
+  }
+}
+
+// Based on code by http://codepen.io/xmark/

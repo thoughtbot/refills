@@ -1,0 +1,35 @@
+$expander-arrow-width: 5px;
+$expander-toggle-size: 1em;
+$expander-toggle-arrow-size: $expander-toggle-size;
+$expander-toggle-margin: 1em;
+
+.expander {
+  margin: auto;
+  width: 60%;
+}
+
+.expander-trigger {
+  @include user-select(none);
+  border-bottom: 1px solid $light-gray;
+  cursor: pointer;
+  display: block;
+  font-size: $expander-toggle-size;
+  margin-bottom: $expander-toggle-size;
+  padding-bottom: $expander-toggle-size / 4;
+
+  &:before {
+    content: '\25BC';
+    font-size: $expander-toggle-arrow-size;
+    margin-right: .5em;
+  }
+}
+
+.expander-hidden {
+  &:before {
+    content: '\25BA';
+  }
+}
+
+.expander-hidden + .expander-content {
+  display: none;
+}

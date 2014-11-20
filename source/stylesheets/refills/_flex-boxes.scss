@@ -1,0 +1,71 @@
+$flex-box-border-color: $medium-gray;
+$flex-box-border: 1px solid $flex-box-border-color;
+$flex-box-background: lighten($light-gray, 10);
+$flex-box-gutter: .4em;
+$flex-box-width: 18em;
+$flex-box-color: transparentize($base-font-color, .3);
+$flex-box-top-colors: 
+  tomato, 
+  #72BFBF, 
+  #92B1E3, 
+  #E3D743,
+  #CCC,
+  #F6C05C;
+
+.flex-boxes {
+  @include clearfix;
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(stretch);
+  @include flex-wrap(wrap);
+  text-align: center;
+}
+
+.flex-box {
+  @include transition (all 0.2s ease-in-out);
+  @include flex(2 2 15em);
+  @include align-self(stretch);
+  display: block;
+  box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10);
+  border-radius: $base-border-radius;
+  margin: $flex-box-gutter;
+  padding: 2em 2em 3em 2em;
+  background: $flex-box-background;
+
+  @for $i from 1 to 7 { // assign colors from $flex-box-top-colors list
+    &:nth-child(#{$i}) {
+      $color-from-list: nth($flex-box-top-colors, $i);
+      border-top: 6px solid $color-from-list;
+      
+      &:hover {
+        background-color: transparentize($color-from-list, .9);
+      }
+    }
+  }
+}
+
+.flex-box img {
+  display: block;
+  opacity: .4;
+  height: 3em;
+  margin: auto;
+  margin-bottom: 2em;
+}
+
+.flex-box .flex-title {
+  color: $flex-box-color;
+  font-family: $serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+.flex-box p {
+  margin: auto;
+  line-height: 1.5em;
+  color: transparentize($flex-box-color, .1);
+}
+
+.flex-box-big {
+  @include flex(1 1 40em);
+}
