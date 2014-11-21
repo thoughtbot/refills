@@ -2524,7 +2524,7 @@ section.inner-content {
   top: 0; }
 
 /* line 75, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_dropdown.scss */
-.menu {
+.dropdown-menu {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -2542,7 +2542,7 @@ section.inner-content {
   width: 228px;
   z-index: 99999; }
   /* line 91, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_dropdown.scss */
-  .menu:before {
+  .dropdown-menu:before {
     position: absolute;
     top: 0;
     right: 1em;
@@ -2556,22 +2556,22 @@ section.inner-content {
     top: -1em; }
 
 /* line 102, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_dropdown.scss */
-.menu li {
+.dropdown-menu li {
   border-bottom: 1px solid silver;
   color: #333;
   padding: 0.5em; }
 
 /* line 108, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_dropdown.scss */
-.menu li:hover {
+.dropdown-menu li:hover {
   background: #f7f7f7; }
 
 /* line 112, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_dropdown.scss */
-.menu li:first-child {
+.dropdown-menu li:first-child {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px; }
 
 /* line 117, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_dropdown.scss */
-.menu li:last-child {
+.dropdown-menu li:last-child {
   border: none;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px; }

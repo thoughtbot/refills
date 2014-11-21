@@ -609,7 +609,7 @@
   <div class="dropdown-container">
     <p class="dropdown-description">Description</p>
     <p class="dropdown-button">Click to Select</p>
-    <ul class="menu">
+    <ul class="dropdown-menu dropdown-select">
       <li>Dropdown Menu Item</li>
       <li>Another Item</li>
       <li>Item Three</li>
@@ -632,7 +632,7 @@
   &lt;div class=&quot;dropdown-container&quot;&gt;
     &lt;p class=&quot;dropdown-description&quot;&gt;Description&lt;/p&gt;
     &lt;p class=&quot;dropdown-button&quot;&gt;Click to Select&lt;/p&gt;
-    &lt;ul class=&quot;menu&quot;&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-select&quot;&gt;
       &lt;li&gt;Dropdown Menu Item&lt;/li&gt;
       &lt;li&gt;Another Item&lt;/li&gt;
       &lt;li&gt;Item Three&lt;/li&gt;
@@ -719,7 +719,7 @@ $dropdown-arrow-top-distance: 0;
   top: $dropdown-arrow-top-distance;
 }
 
-.menu {
+.dropdown-menu {
   @include transition (all 0.2s ease-in-out);
   background: $dropdown-background;
   border-radius: $base-border-radius;
@@ -746,22 +746,22 @@ $dropdown-arrow-top-distance: 0;
   }
 }
 
-.menu li {
+.dropdown-menu li {
   border-bottom: $dropdown-inner-border;
   color: $dropdown-color; 
   padding: $dropdown-padding / 2;
 }
 
-.menu li:hover {
+.dropdown-menu li:hover {
   background: $dropdown-background-hover;
 }
 
-.menu li:first-child {
+.dropdown-menu li:first-child {
   border-top-left-radius: $base-border-radius;
   border-top-right-radius: $base-border-radius;
 }
 
-.menu li:last-child {
+.dropdown-menu li:last-child {
   border: none;
   border-bottom-left-radius: $base-border-radius;
   border-bottom-right-radius: $base-border-radius;
@@ -778,14 +778,17 @@ $dropdown-arrow-top-distance: 0;
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-javascript">$(document).ready(function(){
-  $(&quot;.dropdown-button&quot;).click(function(){
-    $(&quot;.menu&quot;).toggleClass(&quot;show-menu&quot;);
-    $(&quot;.menu &gt; li&quot;).click(function(){
-      $(&quot;.dropdown-button&quot;).html($(this).html());
-      $(&quot;.menu&quot;).removeClass(&quot;show-menu&quot;);
+  $(&quot;.dropdown-button&quot;).click(function() {
+    $(&quot;.dropdown-menu&quot;).toggleClass(&quot;show-menu&quot;);
+    $(&quot;.dropdown-menu &gt; li&quot;).click(function(){
+      $(&quot;.dropdown-menu&quot;).removeClass(&quot;show-menu&quot;);
     });
-  });  
+    $(&quot;.dropdown-menu.dropdown-select &gt; li&quot;).click(function() {
+      $(&quot;.dropdown-button&quot;).html($(this).html());
+    });
+  });
 });
+
 </code></pre>
 </td>
 
