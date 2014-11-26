@@ -9,12 +9,12 @@
   $breadcrumb-color-hover: $base-accent-color;
   $breadcrumb-color-active: $breadcrumb-color;
 
-  @include inline-block;
+  display: inline-block;
   text-align: left;
   margin-bottom: $base-spacing;
 
   a {
-    @include inline-block;
+    display: inline-block;
     background-color: $breadcrumb-background;
     border: $breadcrumb-border;
     color: $breadcrumb-color;

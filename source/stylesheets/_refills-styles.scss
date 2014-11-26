@@ -475,7 +475,7 @@ footer.refills-footer {
       text-align: center;
  
       @include media($tab-mode) {
-        @include inline-block;
+        display: inline-block;
         border-bottom: 0;
         border-top-left-radius: $base-border-radius;
         border-top-right-radius: $base-border-radius;

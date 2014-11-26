@@ -5,7 +5,7 @@ section.inner-content {
 }
 
 .refills-menu-anchor {
-  @include inline-block;
+  display: inline-block;
   @include transition (all 0.2s ease-in-out);
   cursor: pointer;
   border: 1px solid darken(desaturate($logo-color, 50), 15);;

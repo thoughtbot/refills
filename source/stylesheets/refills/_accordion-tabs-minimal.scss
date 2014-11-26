@@ -25,7 +25,7 @@
     padding: $base-spacing/2 $gutter;
 
     @include media($tab-mode) {
-      @include inline-block;
+      display: inline-block;
       border-top: 0;
     }
 

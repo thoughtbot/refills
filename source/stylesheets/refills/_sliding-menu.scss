@@ -6,7 +6,7 @@ $sliding-menu-background-hover: $base-accent-color;
 $sliding-menu-color-hover: #fff;
 
 .sliding-menu-button {
-  @include inline-block;
+  display: inline-block;
   cursor: pointer;
   font-size: $base-font-size;
   margin-bottom: $base-line-height;
