@@ -6811,3 +6811,30 @@ iframe {
     /* line 85, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
     .scroll-on-page article:last-child {
       margin-right: 0; } }
+
+/* line 4, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_parallax.scss */
+.parallax-window {
+  max-height: 30em;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%; }
+
+/* line 12, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_parallax.scss */
+.parallax-static-content {
+  color: #9A9A8A;
+  padding: 8em 0;
+  position: relative;
+  z-index: 9; }
+
+/* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_parallax.scss */
+.parallax-background {
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png") repeat;
+  background-size: cover;
+  background-color: beige;
+  background-position: top;
+  height: 60em;
+  left: 0;
+  position: absolute;
+  top: -10em;
+  width: 100%; }

@@ -40,7 +40,7 @@
           },
         ]);
 
-        var contentString = 
+        var contentString =
           '<div class="content">'+
           '<div class="siteNotice">'+
           '</div>'+
@@ -68,6 +68,15 @@
       }
 
       google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1485842-21', 'auto');
+      ga('send', 'pageview');
     </script>
 
   </head>
@@ -1627,6 +1636,105 @@ $label-alerts: (alert: $alert-yellow, error: $alert-red, notice: lighten($base-a
 </div>
     </section>
 
+    <section id="parallax" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Parallax</h6></div>
+        <div id="js-parallax-window" class="parallax-window">
+  <div class="parallax-static-content">
+    <b>Parallax Window</b>
+  </div>
+  <div id="js-parallax-background" class="parallax-background"></div>
+</div>
+
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div id=&quot;js-parallax-window&quot; class=&quot;parallax-window&quot;&gt;
+  &lt;div class=&quot;parallax-static-content&quot;&gt;
+    &lt;b&gt;Parallax Window&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;js-parallax-background&quot; class=&quot;parallax-background&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">$parallax-window-height: 30em;
+$parallax-background-height: $parallax-window-height * 2;
+
+.parallax-window {
+  max-height: $parallax-window-height;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.parallax-static-content {
+  color: #9A9A8A;
+  padding: 8em 0;
+  position: relative;
+  z-index: 9;
+}
+
+.parallax-background {
+  background: url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot;) repeat;
+  background-size: cover;
+  background-color: beige;
+  background-position: top;
+  height: $parallax-background-height;
+  left: 0;
+  position: absolute;
+  top: - $parallax-window-height / 3;
+  width: 100%;
+}
+
+// Based on http://codepen.io/skeurentjes/
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-javascript">$(document).ready(function() {
+  parallax();
+});
+
+$(window).scroll(function(e) {
+  parallax();
+});
+
+function parallax(){
+  var plxBackground = $(&quot;#js-parallax-background&quot;);
+  var plxWindow = $(&quot;#js-parallax-window&quot;);
+
+  var plxWindowTopToPageTop = $(plxWindow).offset().top;
+  var windowTopToPageTop = $(window).scrollTop();
+  var plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
+
+  var plxBackgroundTopToPageTop = $(plxBackground).offset().top;
+  var windowInnerHeight = window.innerHeight;
+  var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
+  var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
+  var plxSpeed = 0.35;
+
+  plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
+}
+</code></pre>
+</td>
+
+  </tr>
+</table>
+</div>
+    </section>
+
     <section id="progress-bar" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Progress Bars</h6></div>
@@ -2556,7 +2664,7 @@ $sliding-menu-color-hover: #fff;
             <li><a href="./">Components</a></li>
             <li><a href="../type-systems/">Type Systems</a></li>
           </ul>
-          <div class="refills-footer-logo">          
+          <div class="refills-footer-logo">
             <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
           </div>
           <p>Refills is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>.</p>
