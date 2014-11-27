@@ -234,7 +234,7 @@
     padding: $base-spacing/2 $gutter/2;
 
     @include media($tab-mode) {
-      @include inline-block;
+      display: inline-block;
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
       border-top: 0;
@@ -400,7 +400,7 @@
     padding: $base-spacing/2 $gutter;
 
     @include media($tab-mode) {
-      @include inline-block;
+      display: inline-block;
       border-top: 0;
     }
 
@@ -4612,7 +4612,7 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
     }
 
     @include media($vertical-tab-mode) {
-      @include inline-block;
+      display: inline-block;
       @include size(80% $vertical-tabs-height);
       background-color: $tab-content-background;
     }
