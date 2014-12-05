@@ -98,4 +98,4 @@ Tweet your questions or suggestions to [@bourbonsass](https://twitter.com/bourbo
 
 # License
 
-Refills is Copyright © 2014 thoughtbot. It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.txt) file.
+Refills is Copyright © 2014 thoughtbot. It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.md) file.
