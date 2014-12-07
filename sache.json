@@ -1,5 +1,5 @@
 {
   "name": "Refills",
-  "description": "Refills are prepackaged patterns and components, built on top of Bourbon, Bitters, and Neat.",
+  "description": "Prepackaged patterns and components built with Bourbon, Neat and Bitters.",
   "tags": ["gui", "buttons", "patterns", "components", "templates", "navigation", "tabs", "framework", "elements", "neat", "bourbon", "bitters"]
 }
