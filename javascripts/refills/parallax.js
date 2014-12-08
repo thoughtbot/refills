@@ -1,9 +1,13 @@
 $(document).ready(function() {
-  parallax();
+  if ($("#js-parallax-window").length) {
+    parallax();
+  }
 });
 
 $(window).scroll(function(e) {
-  parallax();
+  if ($("#js-parallax-window").length) {
+    parallax();
+  }
 });
 
 function parallax(){

@@ -1704,11 +1704,15 @@ $parallax-background-height: $parallax-window-height * 2;
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-javascript">$(document).ready(function() {
-  parallax();
+  if ($(&quot;#js-parallax-window&quot;).length) {
+    parallax();
+  }
 });
 
 $(window).scroll(function(e) {
-  parallax();
+  if ($(&quot;#js-parallax-window&quot;).length) {
+    parallax();
+  }
 });
 
 function parallax(){
