@@ -1,10 +1,4 @@
-// Usage:
-//
-// .video {
-//   @include video-wrapper;
-// }
-
-@mixin video-wrapper {
+.video-wrapper {
   height: 0;
   overflow: hidden;
   padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
