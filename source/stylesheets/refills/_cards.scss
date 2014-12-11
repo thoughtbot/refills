@@ -1,8 +1,24 @@
 .cards {
-  @include clearfix;
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
 }
 
 .card {
+  // if you are using Bitters you can remove everything down to the line break
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-background-color: white;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $light-gray: #DDD;
+  $medium-screen: em(640);
+  $large-screen: em(860);
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
   $card-border-color: $base-border-color;
   $card-border: 1px solid $card-border-color;
   $card-background: lighten($card-border-color, 10);
@@ -11,28 +27,29 @@
   $card-image-background: #DBD199;
   $card-image-hover-background: lighten($card-image-background, 5);
   $card-stats-color: lighten($base-accent-color, 10);
+  $card-padding-for-absolute-stats: 5em;
+  $card-margin: 1em;
 
   @include transition (all 0.2s ease-in-out);
+  @include flex-basis(15em);
+  @include flex-grow(1);
   background-color: $card-background;
   border-radius: $base-border-radius;
+  position: relative;
   border: $card-border;
-  margin-bottom: $base-spacing;
+  margin: 0 $card-margin $base-spacing $card-margin;
   cursor: pointer;
+  padding-bottom: $card-padding-for-absolute-stats;
   box-shadow: 0 2px 4px darken($base-background-color, 10);
   position: relative;
-
-  @include media($large-screen) {
-    @include span-columns(4);  
-    @include omega(3n);
-  }
 
   .card-image {
     overflow: hidden;
     max-height: 150px;
 
     img {
-      width: 100%;
       @include transition (all 0.2s ease-in-out);
+      width: 100%;
       background: $card-image-background;
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
@@ -49,6 +66,7 @@
     right: -1px;
 
     .ribbon {
+      line-height: 1.5em;
       font-size: .8em;
       font-weight: 800;
       text-align: center;
@@ -70,20 +88,32 @@
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
-    padding: $base-spacing/3 $gutter/2;
-  }
-
-  .card-copy {
-    padding: $base-spacing/2 $gutter/2;
-    font-size: .9em;
+    padding: $base-spacing/3 $base-spacing/2;
     line-height: 1.5em;
   }
 
+  .card-copy {
+    padding: $base-spacing/2 $base-spacing/2;
+    font-size: .9em;
+    line-height: 1.5em;
+
+    p {
+      margin: 0 0 ($base-spacing / 2);
+    }
+  }
+
   .card-stats {
-    padding: $base-spacing/2 $gutter/2;
+    @include align-self(flex-end);
+    position: absolute;
+    bottom: .5em;
+    padding: $base-spacing/2 $base-spacing/2;
     overflow: auto;
 
-    ul li {
+    ul {
+      padding: 0;
+    }
+
+    li {
       display: inline;
       color: $card-stats-color;
       font-weight: 800;
