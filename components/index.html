@@ -1033,34 +1033,38 @@ $expander-toggle-margin: 1em;
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">$flash-red: #FBE3E4;
-$flash-yellow: #FFF6BF;
-$flash-green: #E6EFC2;
-
-%flash-base {
+  <pre><code class="language-scss">@mixin flash($color) {
   display: block;
   font-weight: bold;
   margin-bottom: $base-spacing / 2;
   padding: $base-spacing / 2;
-}
+  background: $color;
+  color: darken($color, 60);
 
-$flashes: (alert: $flash-yellow, error: $flash-red, notice: lighten($base-accent-color, 40), success: $flash-green);
+  a {
+    color: darken($color, 70);
+    border-bottom: 1px solid transparentize(darken($color, 70), .7);
 
-@each $flash, $color in $flashes {
-  .flash-#{$flash} {
-    @extend %flash-base;
-    background: $color;
-    color: darken($color, 60);
-
-    a {
-      color: darken($color, 70);
-      border-bottom: 1px solid transparentize(darken($color, 70), .7);
-
-      &amp;:hover {
-        color: darken($color, 90);
-      }
+    &amp;:hover {
+      color: darken($color, 90);
     }
   }
+}
+
+.flash-alert {
+  @include flash($alert-color);
+}
+
+.flash-error {
+  @include flash($error-color);
+}
+
+.flash-notice {
+  @include flash($notice-color);
+}
+
+.flash-success {
+  @include flash($success-color);
 }
 </code></pre>
 </td>
@@ -1300,16 +1304,20 @@ $flashes: (alert: $flash-yellow, error: $flash-red, notice: lighten($base-accent
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">$alert-red: #FBE3E4;
-$alert-yellow: #FFF6BF;
-$alert-green: #E6EFC2;
+  <pre><code class="language-scss">.label-alert {
+  color: darken($alert-color, 45);
+}
 
-$label-alerts: (alert: $alert-yellow, error: $alert-red, notice: lighten($base-accent-color, 40), success: $alert-green);
+.label-error {
+  color: darken($error-color, 45);
+}
 
-@each $alert, $color in $label-alerts {
-  .label-#{$alert} {
-    color: darken($color, 45);
-  }
+.label-notice {
+  color: darken($notice-color, 45);
+}
+
+.label-success {
+  color: darken($success-color, 45);
 }
 </code></pre>
 </td>

@@ -439,12 +439,6 @@ input[type="submit"] {
     cursor: not-allowed;
     opacity: 0.5; }
 
-/* line 14, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/base/extends/_flashes.scss */
-.flash-alert, .flash-error, .flash-notice, .flash-success {
-  font-weight: bold;
-  margin-bottom: 0.75em;
-  padding: 0.75em; }
-
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/base/_typography.scss */
 body {
   -webkit-font-smoothing: antialiased;
@@ -2638,58 +2632,67 @@ section.inner-content {
   transition: all 0.4s ease-in-out;
   opacity: 1; }
 
-/* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
-.flash-alert, .flash-error, .flash-notice, .flash-success {
+/* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+.flash-alert {
   display: block;
   font-weight: bold;
   margin-bottom: 0.75em;
-  padding: 0.75em; }
-
-/* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
-.flash-alert {
+  padding: 0.75em;
   background: #FFF6BF;
   color: #8c7800; }
-  /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+  /* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
   .flash-alert a {
     color: #594c00;
     border-bottom: 1px solid rgba(89, 76, 0, 0.3); }
-    /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+    /* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
     .flash-alert a:hover {
       color: black; }
 
-/* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+/* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
 .flash-error {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.75em;
+  padding: 0.75em;
   background: #FBE3E4;
   color: #96151b; }
-  /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+  /* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
   .flash-error a {
     color: #6a0f13;
     border-bottom: 1px solid rgba(106, 15, 19, 0.3); }
-    /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+    /* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
     .flash-error a:hover {
       color: #110203; }
 
-/* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+/* line 27, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
 .flash-notice {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.75em;
+  padding: 0.75em;
   background: #e5edf8;
   color: #264d85; }
-  /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+  /* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
   .flash-notice a {
     color: #1b365d;
     border-bottom: 1px solid rgba(27, 54, 93, 0.3); }
-    /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+    /* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
     .flash-notice a:hover {
       color: #04080e; }
 
-/* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+/* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
 .flash-success {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.75em;
+  padding: 0.75em;
   background: #E6EFC2;
   color: #56651a; }
-  /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+  /* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
   .flash-success a {
     color: #333c10;
     border-bottom: 1px solid rgba(51, 60, 16, 0.3); }
-    /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+    /* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
     .flash-success a:hover {
       color: black; }
 
@@ -3485,19 +3488,19 @@ section.inner-content {
         font-size: 1.3em;
         line-height: 0; }
 
-/* line 8, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_label-alerts.scss */
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_label-alerts.scss */
 .label-alert {
   color: #d9ba00; }
 
-/* line 8, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_label-alerts.scss */
+/* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_label-alerts.scss */
 .label-error {
   color: #d91f27; }
 
-/* line 8, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_label-alerts.scss */
+/* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_label-alerts.scss */
 .label-notice {
   color: #3770c0; }
 
-/* line 8, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_label-alerts.scss */
+/* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_label-alerts.scss */
 .label-success {
   color: #89a12a; }
 
