@@ -1,4 +1,12 @@
 .comment {
+  // if you are using Bitters you can remove everything down to the line break
+  $base-border-radius: 3px;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $dark-gray: #333;
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
   $comment-gutter: 1.4em;
   $comment-image-padding: .7em;
   $comment-image-width: 4em;
@@ -43,11 +51,12 @@
 
     h1 {
       font-size: 1em;
-      margin-bottom: .5em;
+      margin: 0 0 .5em 0;
     }
 
     p {
       margin-bottom: .5em;
+      line-height: 1.5em;
     }
 
     p.comment-detail {
