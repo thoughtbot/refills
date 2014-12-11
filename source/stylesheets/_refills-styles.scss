@@ -1,16 +1,6 @@
 nav.bourbon {
-  $base-line-height: 1.5;
-  $base-font-size: 1em;
-  $base-border-color: gainsboro;
-  $base-border-radius: 3px;
-  $base-background-color: white;
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
-  $dark-gray: #333;
-  $medium-gray: #999;
-  $light-gray: #DDD;
-  $base-font-color: $dark-gray;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  -webkit-font-smoothing: antialiased;
 
   ul {
     margin: 0;
@@ -24,7 +14,6 @@ nav.bourbon {
 
   h1 {
     margin: 0;
-    text-rendering: optimizeLegibility; // Fix the character spacing for headings
 
     a {
       text-decoration: none;
@@ -32,7 +21,7 @@ nav.bourbon {
   }  
 }
 
-// ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 
 $refills-color: lighten(desaturate(teal, 60), 40);
 $refills-accent-color: #477DCA;
@@ -415,7 +404,6 @@ pre[class*="language-"] {
 
 .snippet {
   $medium-screen: em(640);
-  $large-screen: em(860);
 
   a {
     text-decoration: none;
@@ -499,8 +487,8 @@ footer.refills-footer {
   }
 }
 
-// // Adjustments
-// //////////////////////////////////////////////////////////////////
+// Adjustments
+//////////////////////////////////////////////////////////////////
 
 .refill-smaller {
   $large-screen: em(640);
