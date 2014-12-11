@@ -1962,26 +1962,18 @@ function parallax(){
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.video {
-  margin: auto;
-
-  @include media($large-screen) {
-    width: 50%;
-  }
-}
-
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+  <pre><code class="language-scss">.video-wrapper {
   height: 0;
-}
+  overflow: hidden;
+  padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+  position: relative;
 
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  embed,
+  object,
+  iframe {
+    @include position(absolute, 0px null null 0px);
+    @include size(100%);
+  }
 }
 </code></pre>
 </td>
@@ -2242,9 +2234,9 @@ $sliding-menu-color-hover: #fff;
   $switch-padding: 2px;
   $switch-height: 32px;
   $switch-radius: $switch-height;
-  $knob-height: $switch-height - ($switch-padding * 2);
-  $knob-width: $knob-height;
+  $knob-size: $switch-height - ($switch-padding * 2);
   $knob-radius: $switch-height - ($switch-padding * 2);
+  $knob-width: $knob-size;
 
   align-self: center;
   border-radius: $switch-radius;
@@ -2254,55 +2246,51 @@ $sliding-menu-color-hover: #fff;
   position: relative;
   vertical-align: middle;
   width: $switch-width;
-  @include box-sizing(border-box);
 
   input[type=&quot;checkbox&quot;] {
     display: none;
 
-  + .checkbox {
-    background: #e5e5e5;
-    border: none;
-    border-radius: $switch-radius;
-    cursor: pointer;
-    height: $switch-height;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: $switch-width;
-    z-index: 0;
-    @include box-sizing(border-box);
-    @include transition(all 0.3s ease);
-
-    &amp;:before {
-      background: white;
-      border-radius: $switch-radius;
-      content: ' ';
-      height: $knob-radius;
-      width: $switch-width - ($switch-padding * 2);
-      z-index: 1;
-      @include box-sizing(border-box);
-      @include position(absolute, 2px 0 0 2px);
-      @include transition(all 0.3s ease);
-      @include transform(scale(1));
-    }
-
-    &amp;:after {
-      background: white;
-      border-radius: $knob-radius;
-      content: ' ';
-      height: $knob-height;
-      width: $knob-width;
-      z-index: 2;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-      @include position(absolute, 2px 0 0 2px);
-      @include transition(all 0.3s ease);
-    }
-  }
-
-  &amp;:checked {
     + .checkbox {
-      background: $blue;
-        
+      @include transition(all 0.3s ease);
+      background: #e5e5e5;
+      border-radius: $switch-radius;
+      border: none;
+      cursor: pointer;
+      height: $switch-height;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: $switch-width;
+      z-index: 0;
+
+      &amp;:before {
+        @include position(absolute, 2px 0 0 2px);
+        @include transform(scale(1));
+        @include transition(all 0.3s ease);
+        background: white;
+        border-radius: $switch-radius;
+        content: &quot;&quot;;
+        height: $knob-radius;
+        width: $switch-width - ($switch-padding * 2);
+        z-index: 1;
+      }
+
+      &amp;:after {
+        @include position(absolute, 2px 0 0 2px);
+        @include transition(all 0.3s ease);
+        @include size($knob-size);
+        background: white;
+        border-radius: $knob-radius;
+        box-shadow: 0 2px 5px rgba(black, 0.4);
+        content: &quot;&quot;;
+        z-index: $base-z-index + 2;
+      }
+    }
+
+    &amp;:checked {
+      + .checkbox {
+        background: $blue;
+
         &amp;:before {
           @include transform(scale(0));
         }
