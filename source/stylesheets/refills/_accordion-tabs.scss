@@ -1,6 +1,17 @@
 .accordion-tabs {
-  $tab-border-color: $base-border-color;
-  $tab-border: 1px solid $tab-border-color;
+  // if you are using Bitters you can remove everything down to the line break
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-background-color: white;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $light-gray: #DDD;
+  $medium-screen: em(640);
+  -webkit-font-smoothing: antialiased;
+
+  $tab-border: 1px solid $base-border-color;
   $tab-content-background: lighten($light-gray, 10);
   $tab-active-background: $tab-content-background;
   $tab-inactive-color: $base-background-color;
@@ -8,14 +19,18 @@
   $tab-mode: $medium-screen;
 
   @include clearfix;
+  line-height: 1.5;
   margin-bottom: $base-spacing;
+  padding: 0;
 
   @include media(max-width $tab-mode) {
-    border: $tab-border;
     border-radius: $base-border-radius;
+    border: $tab-border;
   }
 
   .tab-header-and-content {
+    list-style: none;
+
     @include media($tab-mode) {
       display: inline;
     }
@@ -44,9 +59,10 @@
     display: block;
     font-weight: bold;
     padding: $base-spacing/2 $gutter/2;
+    text-decoration: none;
 
     @include media($tab-mode) {
-      display: inline-block;
+      @include inline-block;
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
       border-top: 0;

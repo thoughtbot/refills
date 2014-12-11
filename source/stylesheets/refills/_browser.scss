@@ -1,14 +1,19 @@
-$browser-top-bar-height: 1.5em;
-$browser-circle-size: .5em; 
-$browser-circle-margin: ($browser-top-bar-height - $browser-circle-size) / 2;
-$browser-top-bar-background: lighten(#DFDFDF, 5);
-$browser-border: 0px;
-$browser-background: $base-background-color;
-$browser-content-background-1: #F0F0F0;
-$browser-content-background-2: $base-background-color;
-$browser-content-background-3: #F0F0F0;
-
 .browsers {
+  // if you are using Bitters you can remove everything down to the line break
+  $base-border-radius: 3px;
+  $base-background-color: white;
+  $large-screen: em(860);
+
+  $browser-top-bar-height: 1.5em;
+  $browser-circle-size: .5em; 
+  $browser-circle-margin: ($browser-top-bar-height - $browser-circle-size) / 2;
+  $browser-top-bar-background: lighten(#DFDFDF, 5);
+  $browser-border: 0px;
+  $browser-background: $base-background-color;
+  $browser-content-background-1: #F0F0F0;
+  $browser-content-background-2: $base-background-color;
+  $browser-content-background-3: #F0F0F0;
+
   display:inline-block;
   padding-top: 0;
   text-align:center;
@@ -17,117 +22,117 @@ $browser-content-background-3: #F0F0F0;
   @include media($large-screen) {
     padding-top: 2em;
   }
-}
 
-.browser-top-bar {
-  @include linear-gradient($browser-top-bar-background, darken($browser-top-bar-background, 2));
-  border-top-left-radius: $base-border-radius;
-  border-top-right-radius: $base-border-radius;
-  border: $browser-border;
-  box-shadow: inset 0 1px 0 transparentize(white, .6);
-  height: $browser-top-bar-height;
-  width: 100%;
-}
-
-.browser-circle {
-  border-radius: $browser-circle-size * 2;
-  box-shadow: 0 1px 0px transparentize(white, .5), inset 0 1px 1px transparentize(black, 0.8);
-  display: inline-block;
-  @include size($browser-circle-size);
-  margin: $browser-circle-margin 0;
-}
-
-.browser-circle:nth-child(1) {
-  background: #FF6F55;
-  margin-left: $browser-circle-margin;
-}
-
-.browser-circle:nth-child(2) {
-  background: #F5B01D;
-  margin-left: $browser-circle-margin / 3;
-}
-
-.browser-circle:nth-child(3) {
-  background: #51B151;
-  margin-left: $browser-circle-margin / 3;
-}
-
-//////////////////////////////////////////////
-
-.browser {
-  border-bottom: none;
-  border-top-left-radius: $base-border-radius;
-  border-top-right-radius: $base-border-radius;
-  box-shadow: 0 3px 5px transparentize(black, .7);
-  display: inline-block;    
-  text-align: left;
-  width:20%;
-}
-
-.browser:nth-child(1) {
-  background-color: $browser-content-background-1;
-  display: none;
-
-  @include media($large-screen) {
-    display: inline-block;    
+  .browser-top-bar {
+    @include linear-gradient($browser-top-bar-background, darken($browser-top-bar-background, 2));
+    border-top-left-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+    border: $browser-border;
+    box-shadow: inset 0 1px 0 transparentize(white, .6);
+    height: $browser-top-bar-height;
+    width: 100%;
   }
 
-  .browser-content {
-    background: url(https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot1.png);
+  .browser-circle {
+    border-radius: $browser-circle-size * 2;
+    box-shadow: 0 1px 0px transparentize(white, .5), inset 0 1px 1px transparentize(black, 0.8);
+    display: inline-block;
+    @include size($browser-circle-size);
+    margin: $browser-circle-margin 0;
+  }
+
+  .browser-circle:nth-child(1) {
+    background: #FF6F55;
+    margin-left: $browser-circle-margin;
+  }
+
+  .browser-circle:nth-child(2) {
+    background: #F5B01D;
+    margin-left: $browser-circle-margin / 3;
+  }
+
+  .browser-circle:nth-child(3) {
+    background: #51B151;
+    margin-left: $browser-circle-margin / 3;
+  }
+
+  //////////////////////////////////////////////
+
+  .browser {
+    border-bottom: none;
+    border-top-left-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+    box-shadow: 0 3px 5px transparentize(black, .7);
+    display: inline-block;    
+    text-align: left;
+    width:20%;
+  }
+
+  .browser:nth-child(1) {
     background-color: $browser-content-background-1;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
+    display: none;
 
-.browser:nth-child(2) {
-  @include transform(scale(1));
-  background-color: $browser-content-background-2; 
-  width: 90%;
-  
-  @include media($large-screen) {
-    @include transform(scale(1.2));
-    width: 40%;
+    @include media($large-screen) {
+      display: inline-block;    
+    }
+
+    .browser-content {
+      background: url(https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot1.png);
+      background-color: $browser-content-background-1;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
-  .browser-content {
-    background: url(https://raw.githubusercontent.com/thoughtbot/refills/9c16f8b69d857c296c85f2d8c434e825f813a566/source/images/refills-screenshot2.jpg);
+  .browser:nth-child(2) {
+    @include transform(scale(1));
     background-color: $browser-content-background-2; 
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
+    width: 90%;
+    
+    @include media($large-screen) {
+      @include transform(scale(1.2));
+      width: 40%;
+    }
 
-.browser:nth-child(3) {
-  background-color: $browser-content-background-3; 
-  display: none;
-   
-  @include media($large-screen) {
-    display: inline-block;    
+    .browser-content {
+      background: url(https://raw.githubusercontent.com/thoughtbot/refills/9c16f8b69d857c296c85f2d8c434e825f813a566/source/images/refills-screenshot2.jpg);
+      background-color: $browser-content-background-2; 
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .browser:nth-child(3) {
+    background-color: $browser-content-background-3; 
+    display: none;
+     
+    @include media($large-screen) {
+      display: inline-block;    
+    }
+
+    .browser-content {
+      background: url(https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot3.png);
+      background-color: $browser-content-background-3; 
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
   .browser-content {
-    background: url(https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot3.png);
-    background-color: $browser-content-background-3; 
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    border-left: $browser-border;
+    border-right: $browser-border;
+    height: 17em;
+    overflow: hidden;
+
+    @include media($large-screen) {
+      height: 18em;
+    }
   }
+
 }
-
-.browser-content {
-  border-left: $browser-border;
-  border-right: $browser-border;
-  height: 17em;
-  overflow: hidden;
-
-  @include media($large-screen) {
-    height: 18em;
-  }
-}
-
 //////////////////////////////////////////////
 
 .cover {

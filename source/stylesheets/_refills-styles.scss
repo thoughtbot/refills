@@ -1,4 +1,41 @@
+nav.bourbon {
+  $base-line-height: 1.5;
+  $base-font-size: 1em;
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-background-color: white;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $medium-gray: #999;
+  $light-gray: #DDD;
+  $base-font-color: $dark-gray;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li a {
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    text-rendering: optimizeLegibility; // Fix the character spacing for headings
+
+    a {
+      text-decoration: none;
+    }
+  }  
+}
+
+// ////////////////////////////////////////////////////////////
+
 $refills-color: lighten(desaturate(teal, 60), 40);
+$refills-accent-color: #477DCA;
 $base-background-color: white;
 $refills-nav-height: 60px;
 $logo-color: #93E9BE;
@@ -9,6 +46,7 @@ $narrow-sans: 'Oswald', sans-serif;
 $white-shadow: 0 1px 1px transparentize(white, .6);
 
 $refills-serif: 'Lusitana', serif;
+$refills-second-serif: georgia;
 
 @mixin refills-inset {
   background: darken($hero-background, 2);
@@ -26,6 +64,9 @@ body {
 //////////////////////////////////////////////////////////////////
 
 .refills-header {
+  $medium-screen: em(640);
+  $large-screen: em(860);
+  @extend .refills-header;
   @include clearfix;
   background-color: $hero-background;
   clear: both;
@@ -47,8 +88,6 @@ body {
   .refills-logo {
     display: inline-block;
     margin: 0 auto 1.4em auto;
-    max-width: 5em;
-    max-height: 5em;
 
     @include media($medium-screen) {
       max-width: 8em;
@@ -59,23 +98,30 @@ body {
       background: white;
       border-radius: 50%;
       padding: .3em;
+      margin-bottom: 1em;
+      max-width: 5em;
+      max-height: 5em;
 
       @include media($medium-screen) {
+        margin-bottom: 2em;
+        max-width: 8em;
+        max-height: 8em;
         padding: .5em;
       }
     }
   }
 
   h2 {
-    font-family: $serif;
+    font-family: $refills-second-serif;
     font-size: 1.4em;
     font-weight: 100;
     margin: 0 auto 2em auto;
     max-width: 90%;
     text-align: center;
+    line-height: 1.4em;
 
     @include media($medium-screen) {
-      font-size: 3em;
+      font-size: 2em;
       margin-bottom: 1em;
       max-width: 90%;
     }
@@ -83,6 +129,7 @@ body {
     @include media($large-screen) {
       font-size: 3em;
       margin-bottom: .8em;
+      line-height: 1.3em;
       max-width: 60%;
     }
   }
@@ -96,6 +143,7 @@ body {
 
   a {
     color: $refills-anchor-color;
+    text-decoration: none;
 
     &:hover {
       color: lighten($refills-anchor-color, 10);
@@ -104,7 +152,7 @@ body {
 
   p {
     @include refills-inset;
-    border-radius: $base-border-radius * 10;
+    border-radius: 30px;
     color: darken(desaturate($logo-color, 50), 15);
     display: inline;
     font-family: $narrow-sans;
@@ -126,6 +174,8 @@ body {
 //////////////////////////////////////////////////////////////////
 
 ul.refills-menu {
+  $medium-screen: em(640);
+  $large-screen: em(860);
   font-weight: normal;
   margin-bottom: 5em;
   margin: -3.3em auto 0 auto;
@@ -143,7 +193,8 @@ ul.refills-menu {
     display: inline;
 
     a {
-      border-radius: $base-border-radius;
+      text-decoration: none;
+      border-radius: 3px;
       color: darken($hero-background, 20);
       font-family: 'Lusitana', serif;
       font-size: .9em;
@@ -241,7 +292,7 @@ section.refill {
 .line-behind-text {
   border-bottom: 1px solid #CACACA;
   text-align: center;
-  margin-bottom: $base-spacing *3;
+  margin-bottom: 4.5em;
 }
 
 .line-behind-text h6 {
@@ -258,7 +309,8 @@ section.refill {
 }
 
 .refill h6 {
-  margin-bottom: $base-spacing;
+  margin-bottom: 1.5em;
+  -webkit-font-smoothing: antialiased;
 }
 
 // Hiding and showing code
@@ -273,7 +325,7 @@ section.refill {
   width: 9em;
 
   &:hover {
-    color: $base-accent-color;
+    color: $refills-accent-color;
   }
 }
 
@@ -287,20 +339,49 @@ section.refill {
   padding: 0.5em 1em;
 }
 
-.refill-snippet {
-  margin-top: $base-spacing *3;
-  padding: 0 1em;
-}
 
 .refill-control {
   display: block;
   margin-bottom: 2em;
   text-align: center;
   width: 100%;
+
+  a {
+    text-decoration: none;
+  }
+
 }
 
 // Snippet
 //////////////////////////////////////////////////////////////////
+
+.refill-snippet {
+  margin-top: 4.5em;
+  padding: 0 1em;
+
+  table {
+    border-collapse: collapse;
+    margin: (1.5em / 2) 0;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  th {
+    font-weight: bold;
+    padding: (1.5em / 2) 0;
+    text-align: left;
+  }
+
+  td {
+    padding: (1.5em / 2) 0;
+  }
+
+  tr,
+  td,
+  th {
+    vertical-align: middle;
+  }
+}
 
 pre[class*="language-"] {
   background: #F8F8F8;
@@ -310,16 +391,16 @@ pre[class*="language-"] {
 }
 
 .copy-source {
-  background-color: lighten($dark-gray, 20);
+  background-color: lighten(#333, 20);
   border-radius: 10px;
   color: white;
-  font-size: $base-font-size/2;
+  font-size: .5em;
   font-weight: 800;
   padding: 0.4em 1em;
   text-transform: uppercase;
 
   &:hover, &:active {
-    background-color: lighten($dark-gray, 20);
+    background-color: lighten(#333, 20);
     color: white;
   }
 }
@@ -333,6 +414,12 @@ pre[class*="language-"] {
 }
 
 .snippet {
+  $medium-screen: em(640);
+  $large-screen: em(860);
+
+  a {
+    text-decoration: none;
+  }
 
   @include media($medium-screen) {
     margin-bottom: 2em;
@@ -354,6 +441,8 @@ pre[class*="language-"] {
 //////////////////////////////////////////////////////////////////
 
 footer.refills-footer {
+  $medium-screen: em(640);
+  $large-screen: em(860);
   color: silver;
   padding-bottom: 2em;
   padding-top: 1em;
@@ -361,6 +450,7 @@ footer.refills-footer {
   
   a {
     color: $refills-anchor-color;
+    text-decoration: none;
   }
 
   p {
@@ -379,6 +469,7 @@ footer.refills-footer {
   }
 
   .footer-links {
+    $medium-screen: em(640);
     background: #F3F3F3;
     border-radius: 3em;
     box-shadow: inset 0 1px 2px darken(#F3F3F3, 6);
@@ -398,6 +489,7 @@ footer.refills-footer {
 
       a {
         color: #A7A7A7; 
+        text-decoration: none;
 
         &:hover {
           color: $refills-anchor-color;
@@ -407,10 +499,12 @@ footer.refills-footer {
   }
 }
 
-// Adjustments
-//////////////////////////////////////////////////////////////////
+// // Adjustments
+// //////////////////////////////////////////////////////////////////
 
 .refill-smaller {
+  $large-screen: em(640);
+
   @include media($large-screen) {
     margin: auto;
     width: 70%;
@@ -426,6 +520,18 @@ footer.refills-footer {
 }
 
 .accordion-tabs-type-systems {
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-background-color: white;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $light-gray: #DDD;
+  $base-line-height: 1.5em;
+  $medium-screen: em(640);
+  $large-screen: em(860);
+
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
   $tab-content-background: lighten($light-gray, 15);

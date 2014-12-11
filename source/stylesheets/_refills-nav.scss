@@ -8,13 +8,13 @@ section.inner-content {
   display: inline-block;
   @include transition (all 0.2s ease-in-out);
   cursor: pointer;
-  border: 1px solid darken(desaturate($logo-color, 50), 15);;
+  border: 1px solid darken(desaturate(#93E9BE, 50), 15);;
   height: 50px;
   width: 50px;
   padding: .7em 1em;
   border-radius: 50%;
-  font-size: $base-font-size;
-  margin-bottom: $base-line-height;
+  font-size: 1em;
+  margin-bottom: 1.5em;
   position: fixed;
   top: 4.5em;
   left: 1em;
@@ -31,6 +31,7 @@ section.inner-content {
   img {
     height: 26px;
     width: 30px;
+    max-width: 100%;
   }
 }
 
@@ -82,7 +83,8 @@ section.inner-content {
     a {
       color: white;
       font-weight: 300;
-      font-size: $base-font-size;
+      font-size: 1em;
+      text-decoration: none;
 
       &:hover {
         color: #FFF;
