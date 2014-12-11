@@ -85,7 +85,7 @@ Declare the variables inside of the component/pattern’s class like below. Note
   $card-border-color: $base-border-color;
   $card-border: 1px solid $card-border-color;
   $card-background: lighten($card-border-color, 10);
-  &hellip;
+  ...
 ```
 
 # Credits
