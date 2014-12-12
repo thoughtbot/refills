@@ -16,7 +16,7 @@ header.navigation {
 
   background-color: $navigation-background;
   border-bottom: 1px solid darken($navigation-background, 10);
-  height: $navigation-height;
+  min-height: $navigation-height;
   width: 100%;
   z-index: 999;
 
@@ -28,7 +28,7 @@ header.navigation {
   }
 
   .logo {
-    float: left;    
+    float: left;
     max-height: $navigation-height;
     padding-left: $navigation-padding;
     padding-right: 2em;
@@ -66,12 +66,14 @@ header.navigation {
   .nav {
     z-index: 9999999;
     float: none;
+    min-height: $navigation-height;
+
     @include media ($horizontal-bar-mode) {
       float: left;
     }
   }
 
-  ul#navigation-menu {    
+  ul.navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
     display: none;
@@ -80,6 +82,10 @@ header.navigation {
     padding: 0;
     width: 100%;
     z-index: 9999;
+
+    &.show {
+      display: block;
+    }
 
     @include media ($horizontal-bar-mode) {
       display: inline;
@@ -177,7 +183,7 @@ header.navigation {
         font-size: 1.2em;
         position: absolute;
         right: $navigation-submenu-padding / 2;
-      }      
+      }
     }
 
     &:hover > .submenu {
@@ -245,7 +251,7 @@ header.navigation {
   // Elements on the far right
 
   .navigation-tools {
-    @include clearfix;
+    height: $navigation-height;
     display: block;
     padding-right: $navigation-padding;
     padding-left: $navigation-padding/2;
@@ -261,10 +267,10 @@ header.navigation {
 
   .sign-up {
     @extend button;
-    margin-top: 1.2em;
+    margin-top: 1.1em;
     float: right;
     display: inline;
-    font-size: .8em;  
+    font-size: .8em;
     text-transform: uppercase;
     padding: .75em 1em;
   }
@@ -276,7 +282,7 @@ header.navigation {
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10);
 
-    padding: .85em .6em; 
+    padding: .85em .6em .7em .6em;
     width: 60%;
     float: left;
 
@@ -286,7 +292,7 @@ header.navigation {
       input[type=search] {
         background: $navigation-search-background;
         border: $navigation-search-border;
-        padding: .6em .8em;
+        padding: .5em .8em;
         font-size: .9em;
         font-style: italic;
         color: $navigation-color;
@@ -306,18 +312,19 @@ header.navigation {
         bottom: 0.3em;
         left: auto;
         outline: none;
-        padding: 0 15px;
+        padding: 0 9px;
 
         img {
           height: 12px;
           opacity: .7;
+          padding: 1px;
         }
       }
     }
 
     @include media($horizontal-bar-mode) {
       width: 16em;
-      position: relative; 
+      position: relative;
       display: inline-block;
 
       input {

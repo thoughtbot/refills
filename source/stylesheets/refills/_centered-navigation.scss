@@ -14,14 +14,14 @@
   background-color: $centered-navigation-background;
   border-bottom: 1px solid darken($centered-navigation-background, 6);
   font-family: $serif;
-  height: $centered-navigation-height;
+  min-height: $centered-navigation-height;
   width: 100%;
   z-index: 9999;
-  
+
   // Mobile view
 
   .mobile-logo {
-    display: inline;    
+    display: inline;
     float: left;
     max-height: $centered-navigation-height;
     padding-left: $centered-navigation-padding;
@@ -37,7 +37,7 @@
     }
   }
 
-  .centered-navigation-menu-button {
+  .centered-navigation-mobile-menu {
     color: $centered-navigation-color;
     display: block;
     float: right;
@@ -65,7 +65,7 @@
     z-index: 999;
   }
 
-  ul.centered-navigation-menu {    
+  ul.centered-navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
     display: none;
@@ -74,6 +74,10 @@
     padding: 0;
     width: 100%;
     z-index: 99999;
+
+    &.show {
+      display: block;
+    }
 
     @include media ($horizontal-bar-mode) {
       display: block;
@@ -102,17 +106,16 @@
     @include media($horizontal-bar-mode) {
       background: transparent;
       display: inline;
-      line-height: $centered-navigation-height;  
+      line-height: $centered-navigation-height;
 
       a {
         padding-right: $centered-navigation-item-padding;
       }
     }
-    
+
     a {
       color: $centered-navigation-color;
       display: inline-block;
-
 
       &:hover {
         color: $centered-navigation-color-hover;
@@ -184,7 +187,7 @@
         font-size: 1.2em;
         position: absolute;
         right: $centered-navigation-submenu-padding / 2;
-      }      
+      }
     }
 
     &:hover > .submenu {
