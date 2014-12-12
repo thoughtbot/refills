@@ -1,4 +1,41 @@
-.hero {
+.hero {  
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-radius: 3px;
+  $base-accent-color: #477DCA;
+  $large-screen: em(860);
+  -webkit-font-smoothing: antialiased;
+
+  button {
+    @include appearance(none);
+    -webkit-font-smoothing: antialiased;
+    background-color: $base-accent-color;
+    border-radius: $base-border-radius;
+    color: white;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0.75em 1em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: darken($base-accent-color, 15);
+      color: white;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+
+  //////////////////////////////////////////////
+
   $hero-background-top: #7F99BE; 
   $hero-background-bottom: #20392B;
   $hero-color: white;
@@ -10,17 +47,17 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  padding-bottom: 4em;
+  padding-bottom: 3em;
 
   .hero-logo img {
-    height: 3em;
-    margin-bottom: 2.5em;
+    height: 4em;
+    margin-bottom: 1em;
   }
 
   .hero-inner {
     @include outer-container;
     @include clearfix;
-    padding: 3em;
+    padding: 3.5em;
     margin: auto;
     text-align: center;
     color: $hero-color;
@@ -38,7 +75,6 @@
       }
 
       p {
-        font-family: $serif;
         margin: auto;
         margin-bottom: 3em; 
         font-weight: 200;
