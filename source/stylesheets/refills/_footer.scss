@@ -1,4 +1,26 @@
 .footer {
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $medium-screen: em(640);
+  $large-screen: em(860);
+  -webkit-font-smoothing: antialiased;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    line-height: 1.5em;
+  }
+
+  a {
+    text-decoration: none;
+
+  }
+  //////////////////////////////////////////////
+
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, .6);
