@@ -1,30 +1,44 @@
 .bullets {
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-line-height: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  padding: 0;
+
+  h2 {
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  //////////////////////////////////////////////
+
   $icon-bullet-size: 3.5em;
 
+  @include display(flex);
+  @include flex-wrap(wrap);
+  margin: 1em;
   overflow: auto;
   margin-bottom: $base-line-height;
 
-  // change ".three-col-bullet" class to this for two bullet layout
-  .two-col-bullet {
-    @include media($large-screen) {
-      @include span-columns(6);
-      @include omega(2n);  
-    } 
-  }
-  
-  .three-col-bullet {
-    @include media($large-screen) {
-      @include span-columns(4);
-      @include omega(3n);
-    }
-  }
-
-  // change ".three-col-bullet" class to this for four bullet layout
-  .four-col-bullet {
-    @include media($large-screen) {
-      @include span-columns(3);
-      @include omega(4n);
-    }
+  .bullet {
+    @include flex-basis(20em);
+    @include flex-grow(1);
   }
 
   .bullet-icon {
