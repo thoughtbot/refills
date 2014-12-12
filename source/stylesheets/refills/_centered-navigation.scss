@@ -1,10 +1,11 @@
 .centered-navigation {
-  // if you are using Bitters you can remove everything down to the line break
+  // if you are using Bitters you can remove everything down to the commented line
   $base-border-radius: 3px;
   $dark-gray: #333;
   $large-screen: em(860);
   $base-font-color: $dark-gray;
   -webkit-font-smoothing: antialiased;
+  //////////////////////////////////////////////
 
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;

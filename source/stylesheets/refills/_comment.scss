@@ -1,11 +1,12 @@
 .comment {
-  // if you are using Bitters you can remove everything down to the line break
+  // if you are using Bitters you can remove everything down to the commented line
   $base-border-radius: 3px;
   $base-spacing: 1.5em;
   $base-accent-color: #477DCA;
   $dark-gray: #333;
   $base-font-color: $dark-gray;
   -webkit-font-smoothing: antialiased;
+  //////////////////////////////////////////////
 
   $comment-gutter: 1.4em;
   $comment-image-padding: .7em;

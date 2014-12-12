@@ -5,7 +5,7 @@
 }
 
 .card {
-  // if you are using Bitters you can remove everything down to the line break
+  // if you are using Bitters you can remove everything down to the commented line
   $base-border-color: gainsboro;
   $base-border-radius: 3px;
   $base-background-color: white;
@@ -15,6 +15,7 @@
   $dark-gray: #333;
   $base-font-color: $dark-gray;
   -webkit-font-smoothing: antialiased;
+  //////////////////////////////////////////////
 
   $card-border-color: $base-border-color;
   $card-border: 1px solid $card-border-color;
