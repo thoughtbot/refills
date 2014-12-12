@@ -3,6 +3,23 @@
 }
 
 .grid-items-lines {
+  // if you are using Bitters you can remove everything down to the commented line
+  $dark-gray: #333;
+  $light-gray: #DDD;
+  $medium-screen: em(640);
+  $large-screen: em(860);
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  p {
+    line-height: 1.5em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////
+
   $grid-items-background: $base-background-color;
   $grid-item-background: $base-background-color;
   $grid-item-border: 1px solid transparentize($base-font-color, .8); 

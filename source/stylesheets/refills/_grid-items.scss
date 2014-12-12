@@ -3,6 +3,21 @@
 }
 
 .grid-items {
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-accent-color: #477DCA;
+  $medium-screen: em(640);
+  $large-screen: em(860);
+  -webkit-font-smoothing: antialiased;
+
+  p {
+    line-height: 1.5em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////
+
   $grid-items-background: $base-background-color;
   $grid-item-background: desaturate($base-accent-color, 30); 
   $grid-item-colors: 
