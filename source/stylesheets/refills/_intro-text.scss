@@ -1,20 +1,32 @@
 .intro-text {
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-line-height: 1.5em;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $large-screen: em(860);
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    text-decoration: none;
+    color: $base-link-color;
+  }
+
+  //////////////////////////////////////////////
+
   $intro-text-width: 60%;
 
   margin-bottom: 5em;
   margin-top: 4em;
   text-align: center;
-
-  h2 {
-    font-family: $serif;
-    font-weight: 800;
-    margin-bottom: .3em;
-
-    @include media($large-screen) {
-      font-size: 3em;
-      margin-bottom: .4em;
-    }
-  }
+  padding: 1em;
 
   h3 {
     background: $base-accent-color;
@@ -23,7 +35,7 @@
     font-size: .7em;
     font-weight: 800;
     margin-bottom: 2em;
-    padding: 3px 8px;
+    padding: .3em .6em;
     text-transform: uppercase;
 
     @include media($large-screen) {
@@ -40,7 +52,7 @@
 
     @include media($large-screen) {
       font-size: 1.7em;
-      line-height: 1.35em;
+      line-height: 1.4em;
       margin: 0 auto 1em;
       width: $intro-text-width;
     }    
