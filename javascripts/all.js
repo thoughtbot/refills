@@ -1846,19 +1846,21 @@ $(document).ready(function() {
   $(element).addClass('js-fade-element-hide');
 
   $(window).scroll(function() {
-    var elementTopToPageTop = $(element).offset().top;
-    var windowTopToPageTop = $(window).scrollTop();
-    var windowInnerHeight = window.innerHeight;
-    var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
-    var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
-    var distanceFromBottomToAppear = 300;
+    if( $("#js-fadeInElement").length > 0 ) {
+      var elementTopToPageTop = $(element).offset().top;
+      var windowTopToPageTop = $(window).scrollTop();
+      var windowInnerHeight = window.innerHeight;
+      var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
+      var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
+      var distanceFromBottomToAppear = 300;
 
-    if(elementTopToWindowBottom > distanceFromBottomToAppear) {
-      $(element).addClass('js-fade-element-show');
-    }
-    else if(elementTopToWindowBottom < 0) {
-      $(element).removeClass('js-fade-element-show');
-      $(element).addClass('js-fade-element-hide');
+      if(elementTopToWindowBottom > distanceFromBottomToAppear) {
+        $(element).addClass('js-fade-element-show');
+      }
+      else if(elementTopToWindowBottom < 0) {
+        $(element).removeClass('js-fade-element-show');
+        $(element).addClass('js-fade-element-hide');
+      }
     }
   });
 });
@@ -1898,20 +1900,22 @@ $(window).scroll(function(e) {
 });
 
 function parallax(){
-  var plxBackground = $("#js-parallax-background");
-  var plxWindow = $("#js-parallax-window");
+  if( $("#js-parallax-window").length > 0 ) {
+    var plxBackground = $("#js-parallax-background");
+    var plxWindow = $("#js-parallax-window");
 
-  var plxWindowTopToPageTop = $(plxWindow).offset().top;
-  var windowTopToPageTop = $(window).scrollTop();
-  var plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
+    var plxWindowTopToPageTop = $(plxWindow).offset().top;
+    var windowTopToPageTop = $(window).scrollTop();
+    var plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
 
-  var plxBackgroundTopToPageTop = $(plxBackground).offset().top;
-  var windowInnerHeight = window.innerHeight;
-  var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
-  var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
-  var plxSpeed = 0.35;
+    var plxBackgroundTopToPageTop = $(plxBackground).offset().top;
+    var windowInnerHeight = window.innerHeight;
+    var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
+    var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
+    var plxSpeed = 0.35;
 
-  plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
+    plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
+  }
 }
 ;
 (function (jQuery) {
