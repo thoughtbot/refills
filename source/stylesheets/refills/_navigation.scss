@@ -2,38 +2,13 @@ header.navigation {
   // if you are using Bitters you can remove everything down to the commented line
   $base-border-color: gainsboro;
   $base-border-radius: 3px;
-  $base-background-color: white;
-  $base-line-height: 1.5em;
-  $base-spacing: 1.5em;
   $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
   $dark-gray: #333;
-  $light-gray: #DDD;
-  $medium-screen: em(640);
   $large-screen: em(860);
-  $base-font-color: $dark-gray;
   -webkit-font-smoothing: antialiased;
-
-  h2 {
-    margin: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
 
   a {
     text-decoration: none;
-    color: $base-link-color;
-  }
-
-  img {
-    max-width: 100%;
   }
 
   //////////////////////////////////////////////
