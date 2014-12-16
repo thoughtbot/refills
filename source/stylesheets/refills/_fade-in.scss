@@ -1,4 +1,23 @@
 .fade-in-element {
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-background-color: white;
+  $base-line-height: 1.5em;
+  $base-spacing: 1.5em;
+  $dark-gray: #333;
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  line-height: $base-line-height;
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  //////////////////////////////////////////////
+
   @include clearfix;
   background: $base-background-color;
   border-radius: $base-border-radius;
@@ -8,6 +27,7 @@
   padding: $base-spacing;
   text-align: center;
   width: 100%;
+
 }
 
 .js-fade-element-hide {
