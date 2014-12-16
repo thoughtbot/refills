@@ -1,4 +1,29 @@
 .modal {
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-background-color: white;
+  $base-font-size: 1em;
+  $base-line-height: 1.5em;
+  $base-accent-color: #477DCA;
+  $dark-gray: #333;
+  $light-gray: #DDD;
+  $medium-screen: em(640);
+  $large-screen: em(860);
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  //////////////////////////////////////////////
+
   $modal-padding: 3em;
   $modal-background: $base-background-color;
   $modal-close-color: $light-gray;
@@ -21,8 +46,9 @@
     display: none;
   }
 
-  .btn {
-    @extend button;
+  .modal-trigger {
+    @include button(flat, $base-accent-color);
+    padding: .8em 1em;
   }
 
   .modal-open {
@@ -102,23 +128,15 @@
       text-transform: capitalize;
     }
 
-    p.body, p.intro {
-      font-size: $base-font-size;
-      max-width: 100% !important;
-      text-align: left;
+    .modal-intro {
+      font-weight: 800;
+    }
 
-      &.intro {
-        color: $blue;
-        line-height: 1.6em;
-      }
+    .modal-content {
+      color: $base-font-color;
 
-      &.body { 
-        color: $base-font-color;
-        line-height: 1.45em;
-
-        @include media($medium-screen) {
-          @include columns(2 8em);
-        }
+      @include media($medium-screen) {
+        @include columns(2 8em);
       }
     }
 
