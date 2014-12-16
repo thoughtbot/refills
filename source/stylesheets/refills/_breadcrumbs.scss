@@ -1,4 +1,17 @@
-.breadcrumb { 
+.breadcrumb {   
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $medium-gray: #999;
+  $light-gray: #DDD;
+  $medium-screen: em(640);
+  -webkit-font-smoothing: antialiased;
+
+  //////////////////////////////////////////////
+
   $breadcrumb-border-color: $base-border-color;
   $breadcrumb-border: 1px solid $breadcrumb-border-color;
   $breadcrumb-height: $base-spacing * 1.5;
@@ -17,6 +30,7 @@
     display: inline-block;
     background-color: $breadcrumb-background;
     border: $breadcrumb-border;
+    border-left: 0;
     color: $breadcrumb-color;
     line-height: $breadcrumb-height;
     margin-right: -5px;
@@ -28,6 +42,7 @@
 
     &:first-child {
       padding-left: $breadcrumb-height/2;
+      border-left: $breadcrumb-border;
       border-top-left-radius: $base-border-radius;
       border-bottom-left-radius: $base-border-radius;
     }
