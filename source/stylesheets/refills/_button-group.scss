@@ -1,4 +1,19 @@
-.button-group {
+.button-group {  
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-line-height: 1.5em;
+  $base-spacing: 1.5em;
+  $base-font-size: 1em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $large-screen: em(860);
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  //////////////////////////////////////////////
+
   $button-group-background: $base-background-color;
   $button-group-color: lighten($base-font-color, 30);
   $button-group-border: 1px solid silver;
