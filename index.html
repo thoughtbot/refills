@@ -978,8 +978,8 @@ $browser-content-background-3: #F0F0F0;
     <a href="javascript:void(0)" class="mobile-logo">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image">
     </a>
-    <a href="" class="centered-navigation-menu-button">MENU</a>
-    <ul class="centered-navigation-menu">
+    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+    <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
       <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
       <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
       <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
@@ -1027,8 +1027,8 @@ $browser-content-background-3: #F0F0F0;
     &lt;a href=&quot;javascript:void(0)&quot; class=&quot;mobile-logo&quot;&gt;
       &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png&quot; alt=&quot;Logo image&quot;&gt;
     &lt;/a&gt;
-    &lt;a href=&quot;&quot; class=&quot;centered-navigation-menu-button&quot;&gt;MENU&lt;/a&gt;
-    &lt;ul class=&quot;centered-navigation-menu&quot;&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-centered-navigation-mobile-menu&quot; class=&quot;centered-navigation-mobile-menu&quot;&gt;MENU&lt;/a&gt;
+    &lt;ul id=&quot;js-centered-navigation-menu&quot; class=&quot;centered-navigation-menu show&quot;&gt;
       &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
       &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
       &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
@@ -1081,14 +1081,14 @@ $browser-content-background-3: #F0F0F0;
   background-color: $centered-navigation-background;
   border-bottom: 1px solid darken($centered-navigation-background, 6);
   font-family: $serif;
-  height: $centered-navigation-height;
+  min-height: $centered-navigation-height;
   width: 100%;
   z-index: 9999;
-  
+
   // Mobile view
 
   .mobile-logo {
-    display: inline;    
+    display: inline;
     float: left;
     max-height: $centered-navigation-height;
     padding-left: $centered-navigation-padding;
@@ -1104,7 +1104,7 @@ $browser-content-background-3: #F0F0F0;
     }
   }
 
-  .centered-navigation-menu-button {
+  .centered-navigation-mobile-menu {
     color: $centered-navigation-color;
     display: block;
     float: right;
@@ -1132,7 +1132,7 @@ $browser-content-background-3: #F0F0F0;
     z-index: 999;
   }
 
-  ul.centered-navigation-menu {    
+  ul.centered-navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
     display: none;
@@ -1141,6 +1141,10 @@ $browser-content-background-3: #F0F0F0;
     padding: 0;
     width: 100%;
     z-index: 99999;
+
+    &amp;.show {
+      display: block;
+    }
 
     @include media ($horizontal-bar-mode) {
       display: block;
@@ -1169,17 +1173,16 @@ $browser-content-background-3: #F0F0F0;
     @include media($horizontal-bar-mode) {
       background: transparent;
       display: inline;
-      line-height: $centered-navigation-height;  
+      line-height: $centered-navigation-height;
 
       a {
         padding-right: $centered-navigation-item-padding;
       }
     }
-    
+
     a {
       color: $centered-navigation-color;
       display: inline-block;
-
 
       &amp;:hover {
         color: $centered-navigation-color-hover;
@@ -1251,7 +1254,7 @@ $browser-content-background-3: #F0F0F0;
         font-size: 1.2em;
         position: absolute;
         right: $centered-navigation-submenu-padding / 2;
-      }      
+      }
     }
 
     &amp;:hover &gt; .submenu {
@@ -1322,15 +1325,13 @@ $browser-content-background-3: #F0F0F0;
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-javascript">$(document).ready(function() {
-  var menu = $('.centered-navigation-menu');
-  var menuToggle = $('.centered-navigation-menu-button');
-  var signUp = $('.sign-up');
-
-  $(menuToggle).on('click', function(e) {
+  $('#js-centered-navigation-menu').removeClass(&quot;show&quot;);
+  
+  $('#js-centered-navigation-mobile-menu').on('click', function(e) {
     e.preventDefault();
-    menu.slideToggle(function(){
-      if(menu.is(':hidden')) {
-        menu.removeAttr('style');
+    $('#js-centered-navigation-menu').slideToggle(function(){
+      if($('#js-centered-navigation-menu').is(':hidden')) {
+        $('#js-centered-navigation-menu').removeAttr('style');
       }
     });
   });
@@ -3116,9 +3117,9 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     <a href="javascript:void(0)" class="logo">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image">
     </a>
-    <a href="" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <div class="nav">
-      <ul id="navigation-menu">
+      <ul id="js-navigation-menu" class="navigation-menu show">
         <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
         <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
         <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
@@ -3171,9 +3172,9 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     &lt;a href=&quot;javascript:void(0)&quot; class=&quot;logo&quot;&gt;
       &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png&quot; alt=&quot;Logo Image&quot;&gt;
     &lt;/a&gt;
-    &lt;a href=&quot;&quot; class=&quot;navigation-menu-button&quot; id=&quot;js-mobile-menu&quot;&gt;MENU&lt;/a&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;navigation-menu-button&quot; id=&quot;js-mobile-menu&quot;&gt;MENU&lt;/a&gt;
     &lt;div class=&quot;nav&quot;&gt;
-      &lt;ul id=&quot;navigation-menu&quot;&gt;
+      &lt;ul id=&quot;js-navigation-menu&quot; class=&quot;navigation-menu show&quot;&gt;
         &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
         &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
         &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
@@ -3233,7 +3234,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 
   background-color: $navigation-background;
   border-bottom: 1px solid darken($navigation-background, 10);
-  height: $navigation-height;
+  min-height: $navigation-height;
   width: 100%;
   z-index: 999;
 
@@ -3245,7 +3246,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   }
 
   .logo {
-    float: left;    
+    float: left;
     max-height: $navigation-height;
     padding-left: $navigation-padding;
     padding-right: 2em;
@@ -3283,12 +3284,14 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   .nav {
     z-index: 9999999;
     float: none;
+    min-height: $navigation-height;
+
     @include media ($horizontal-bar-mode) {
       float: left;
     }
   }
 
-  ul#navigation-menu {    
+  ul.navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
     display: none;
@@ -3297,6 +3300,10 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     padding: 0;
     width: 100%;
     z-index: 9999;
+
+    &amp;.show {
+      display: block;
+    }
 
     @include media ($horizontal-bar-mode) {
       display: inline;
@@ -3394,7 +3401,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
         font-size: 1.2em;
         position: absolute;
         right: $navigation-submenu-padding / 2;
-      }      
+      }
     }
 
     &amp;:hover &gt; .submenu {
@@ -3462,7 +3469,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   // Elements on the far right
 
   .navigation-tools {
-    @include clearfix;
+    height: $navigation-height;
     display: block;
     padding-right: $navigation-padding;
     padding-left: $navigation-padding/2;
@@ -3478,10 +3485,10 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 
   .sign-up {
     @extend button;
-    margin-top: 1.2em;
+    margin-top: 1.1em;
     float: right;
     display: inline;
-    font-size: .8em;  
+    font-size: .8em;
     text-transform: uppercase;
     padding: .75em 1em;
   }
@@ -3493,7 +3500,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10);
 
-    padding: .85em .6em; 
+    padding: .85em .6em .7em .6em;
     width: 60%;
     float: left;
 
@@ -3503,7 +3510,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       input[type=search] {
         background: $navigation-search-background;
         border: $navigation-search-border;
-        padding: .6em .8em;
+        padding: .5em .8em;
         font-size: .9em;
         font-style: italic;
         color: $navigation-color;
@@ -3523,18 +3530,19 @@ https://developers.google.com/maps/documentation/javascript/tutorial
         bottom: 0.3em;
         left: auto;
         outline: none;
-        padding: 0 15px;
+        padding: 0 9px;
 
         img {
           height: 12px;
           opacity: .7;
+          padding: 1px;
         }
       }
     }
 
     @include media($horizontal-bar-mode) {
       width: 16em;
-      position: relative; 
+      position: relative;
       display: inline-block;
 
       input {
@@ -3550,26 +3558,15 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-javascript">$(document).ready(function() {
-  var menu = $('#navigation-menu');
-  var menuToggle = $('#js-mobile-menu');
-  var signUp = $('.sign-up');
+  $('#js-navigation-menu').removeClass(&quot;show&quot;);
 
-  $(menuToggle).on('click', function(e) {
+  $('#js-mobile-menu').on('click', function(e) {
     e.preventDefault();
-    menu.slideToggle(function(){
-      if(menu.is(':hidden')) {
-        menu.removeAttr('style');
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
       }
     });
-  });
-
-  // underline under the active nav item
-  $(&quot;.nav .nav-link&quot;).click(function() {
-    $(&quot;.nav .nav-link&quot;).each(function() {
-      $(this).removeClass(&quot;active-nav-item&quot;);
-    });
-    $(this).addClass(&quot;active-nav-item&quot;);
-    $(&quot;.nav .more&quot;).removeClass(&quot;active-nav-item&quot;);
   });
 });
 </code></pre>

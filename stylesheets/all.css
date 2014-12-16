@@ -2139,7 +2139,7 @@ section.inner-content {
   background-color: #E7F1EC;
   border-bottom: 1px solid #d4e6dd;
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  height: 60px;
+  min-height: 60px;
   width: 100%;
   z-index: 9999; }
   /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
@@ -2158,7 +2158,7 @@ section.inner-content {
       .centered-navigation .mobile-logo {
         display: none; } }
   /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
-  .centered-navigation .centered-navigation-menu-button {
+  .centered-navigation .centered-navigation-mobile-menu {
     color: rgba(51, 51, 51, 0.7);
     display: block;
     float: right;
@@ -2169,10 +2169,10 @@ section.inner-content {
     text-transform: uppercase; }
     @media screen and (min-width: 53.75em) {
       /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
-      .centered-navigation .centered-navigation-menu-button {
+      .centered-navigation .centered-navigation-mobile-menu {
         display: none; } }
     /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
-    .centered-navigation .centered-navigation-menu-button:hover {
+    .centered-navigation .centered-navigation-mobile-menu:hover {
       color: #333; }
   /* line 61, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
   .centered-navigation .centered-navigation-wrapper {
@@ -2201,16 +2201,19 @@ section.inner-content {
     padding: 0;
     width: 100%;
     z-index: 99999; }
+    /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+    .centered-navigation ul.centered-navigation-menu.show {
+      display: block; }
     @media screen and (min-width: 53.75em) {
       /* line 68, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
       .centered-navigation ul.centered-navigation-menu {
         display: block;
         text-align: center; } }
   @media screen and (min-width: 53.75em) {
-    /* line 86, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+    /* line 90, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
     .centered-navigation .nav-link:first-child {
       margin-left: 2.2em; } }
-  /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+  /* line 96, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
   .centered-navigation ul li.nav-link {
     background: #E7F1EC;
     display: block;
@@ -2221,51 +2224,51 @@ section.inner-content {
     width: 100%;
     z-index: 9999; }
     @media screen and (min-width: 53.75em) {
-      /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+      /* line 96, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
       .centered-navigation ul li.nav-link {
         background: transparent;
         display: inline;
         line-height: 60px; }
-        /* line 107, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+        /* line 111, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
         .centered-navigation ul li.nav-link a {
           padding-right: 1em; } }
-    /* line 112, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+    /* line 116, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
     .centered-navigation ul li.nav-link a {
       color: rgba(51, 51, 51, 0.7);
       display: inline-block; }
-      /* line 117, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+      /* line 120, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
       .centered-navigation ul li.nav-link a:hover {
         color: #333; }
-  /* line 123, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+  /* line 126, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
   .centered-navigation li.logo.nav-link {
     display: none;
     line-height: 0; }
     @media screen and (min-width: 53.75em) {
-      /* line 123, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+      /* line 126, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
       .centered-navigation li.logo.nav-link {
         display: inline; } }
-  /* line 132, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+  /* line 135, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
   .centered-navigation .logo img {
     margin-bottom: -0.66667em;
     max-height: 2em;
     opacity: .6; }
-  /* line 140, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+  /* line 143, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
   .centered-navigation li.more.nav-link {
     padding-right: 0; }
     @media screen and (min-width: 53.75em) {
-      /* line 140, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+      /* line 143, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
       .centered-navigation li.more.nav-link {
         padding-right: 1em; } }
-    /* line 147, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+    /* line 150, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
     .centered-navigation li.more.nav-link > ul > li:first-child a {
       padding-top: 1em; }
-    /* line 151, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+    /* line 154, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
     .centered-navigation li.more.nav-link a {
       margin-right: 1em; }
-    /* line 155, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+    /* line 158, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
     .centered-navigation li.more.nav-link > a {
       padding-right: 0.6em; }
-    /* line 159, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+    /* line 162, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
     .centered-navigation li.more.nav-link > a:after {
       position: absolute;
       top: auto;
@@ -2274,75 +2277,75 @@ section.inner-content {
       left: auto;
       color: rgba(51, 51, 51, 0.7);
       content: '\25BE'; }
-  /* line 166, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+  /* line 169, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
   .centered-navigation li.more {
     overflow: visible;
     padding-right: 0; }
-    /* line 170, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+    /* line 173, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
     .centered-navigation li.more a {
       padding-right: 1em; }
-    /* line 174, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+    /* line 177, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
     .centered-navigation li.more > a {
       padding-right: 1.6em;
       position: relative; }
       @media screen and (min-width: 53.75em) {
-        /* line 174, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+        /* line 177, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
         .centered-navigation li.more > a {
           margin-right: 1em; } }
-      /* line 182, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+      /* line 185, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
       .centered-navigation li.more > a:after {
         content: '›';
         font-size: 1.2em;
         position: absolute;
         right: 0.5em; }
-    /* line 190, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+    /* line 193, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
     .centered-navigation li.more:hover > .submenu {
       display: block; }
     @media screen and (min-width: 53.75em) {
-      /* line 166, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+      /* line 169, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
       .centered-navigation li.more {
         padding-right: 1em;
         position: relative; } }
-  /* line 200, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+  /* line 203, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
   .centered-navigation ul.submenu {
     display: none;
     padding-left: 0; }
     @media screen and (min-width: 53.75em) {
-      /* line 200, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+      /* line 203, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
       .centered-navigation ul.submenu {
         left: -1em;
         position: absolute;
         top: 1.5em; } }
     @media screen and (min-width: 53.75em) {
-      /* line 210, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+      /* line 213, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
       .centered-navigation ul.submenu .submenu {
         left: 11.8em;
         top: 0; } }
-    /* line 217, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+    /* line 220, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
     .centered-navigation ul.submenu li {
       display: block;
       padding-right: 0; }
       @media screen and (min-width: 53.75em) {
-        /* line 217, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+        /* line 220, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
         .centered-navigation ul.submenu li {
           line-height: 46.15385px; }
-          /* line 224, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+          /* line 227, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
           .centered-navigation ul.submenu li:first-child > a {
             border-top-left-radius: 3px;
             border-top-right-radius: 3px; }
-          /* line 229, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+          /* line 232, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
           .centered-navigation ul.submenu li:last-child > a {
             border-bottom-left-radius: 3px;
             border-bottom-right-radius: 3px;
             padding-bottom: .7em; } }
-      /* line 236, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+      /* line 239, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
       .centered-navigation ul.submenu li a {
         background-color: #ddebe4;
         display: inline-block;
         text-align: right;
         width: 100%; }
         @media screen and (min-width: 53.75em) {
-          /* line 236, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
+          /* line 239, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
           .centered-navigation ul.submenu li a {
             background-color: #E7F1EC;
             padding-left: 1em;
@@ -3682,7 +3685,7 @@ section.inner-content {
 header.navigation {
   background-color: #333;
   border-bottom: 1px solid #1a1a1a;
-  height: 60px;
+  min-height: 60px;
   width: 100%;
   z-index: 999; }
   /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
@@ -3733,13 +3736,14 @@ header.navigation {
   /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation .nav {
     z-index: 9999999;
-    float: none; }
+    float: none;
+    min-height: 60px; }
     @media screen and (min-width: 53.75em) {
       /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .nav {
         float: left; } }
-  /* line 74, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-  header.navigation ul#navigation-menu {
+  /* line 76, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  header.navigation ul.navigation-menu {
     -webkit-transform-style: preserve-3d;
     clear: both;
     display: none;
@@ -3748,13 +3752,16 @@ header.navigation {
     padding: 0;
     width: 100%;
     z-index: 9999; }
+    /* line 86, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    header.navigation ul.navigation-menu.show {
+      display: block; }
     @media screen and (min-width: 53.75em) {
-      /* line 74, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-      header.navigation ul#navigation-menu {
+      /* line 76, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      header.navigation ul.navigation-menu {
         display: inline;
         margin: 0;
         padding: 0; } }
-  /* line 93, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 99, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation ul li.nav-link {
     background: #333;
     display: block;
@@ -3765,46 +3772,46 @@ header.navigation {
     width: 100%;
     z-index: 9999; }
     @media screen and (min-width: 53.75em) {
-      /* line 93, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 99, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation ul li.nav-link {
         background: transparent;
         display: inline;
         line-height: 60px;
         text-decoration: none;
         width: auto; } }
-    /* line 111, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 117, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation ul li.nav-link a {
       color: rgba(255, 255, 255, 0.7);
       display: inline-block;
       font-weight: 400; }
       @media screen and (min-width: 53.75em) {
-        /* line 111, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 117, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation ul li.nav-link a {
           padding-right: 1em; } }
-      /* line 120, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 126, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation ul li.nav-link a:hover {
         color: white; }
-  /* line 126, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 132, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation .active-nav-item a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding-bottom: 3px; }
-  /* line 133, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 139, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation li.more.nav-link {
     padding-right: 0; }
     @media screen and (min-width: 53.75em) {
-      /* line 133, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 139, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation li.more.nav-link {
         padding-right: 1em; } }
-    /* line 140, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 146, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation li.more.nav-link > ul > li:first-child a {
       padding-top: 1em; }
-    /* line 144, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 150, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation li.more.nav-link a {
       margin-right: 1em; }
-    /* line 148, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 154, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation li.more.nav-link > a {
       padding-right: 0.6em; }
-    /* line 152, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 158, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation li.more.nav-link > a:after {
       position: absolute;
       top: auto;
@@ -3813,129 +3820,125 @@ header.navigation {
       left: auto;
       content: '\25BE';
       color: rgba(255, 255, 255, 0.7); }
-  /* line 159, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 165, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation li.more {
     overflow: visible;
     padding-right: 0; }
-    /* line 163, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 169, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation li.more a {
       padding-right: .8em; }
-    /* line 167, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 173, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation li.more > a {
       padding-right: 1.6em;
       position: relative; }
       @media screen and (min-width: 53.75em) {
-        /* line 167, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 173, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation li.more > a {
           margin-right: 1em; } }
-      /* line 175, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 181, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation li.more > a:after {
         content: '›';
         font-size: 1.2em;
         position: absolute;
         right: 0.5em; }
-    /* line 183, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 189, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation li.more:hover > .submenu {
       display: block; }
     @media screen and (min-width: 53.75em) {
-      /* line 159, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 165, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation li.more {
         padding-right: .8em;
         position: relative; } }
-  /* line 193, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 199, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation ul.submenu {
     display: none;
     padding-left: 0; }
     @media screen and (min-width: 53.75em) {
-      /* line 193, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 199, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation ul.submenu {
         left: -1em;
         position: absolute;
         top: 1.5em; } }
     @media screen and (min-width: 53.75em) {
-      /* line 203, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 209, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation ul.submenu .submenu {
         left: 11.8em;
         top: 0; } }
-    /* line 210, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 216, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation ul.submenu li {
       display: block;
       padding-right: 0; }
       @media screen and (min-width: 53.75em) {
-        /* line 210, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 216, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation ul.submenu li {
           line-height: 46.15385px; }
-          /* line 217, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+          /* line 223, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
           header.navigation ul.submenu li:first-child > a {
             border-top-left-radius: 3px;
             border-top-right-radius: 3px; }
-          /* line 222, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+          /* line 228, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
           header.navigation ul.submenu li:last-child > a {
             border-bottom-left-radius: 3px;
             border-bottom-right-radius: 3px;
             padding-bottom: .7em; } }
-      /* line 229, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 235, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation ul.submenu li a {
         background-color: #2b2b2b;
         display: inline-block;
         text-align: right;
         width: 100%; }
         @media screen and (min-width: 53.75em) {
-          /* line 229, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+          /* line 235, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
           header.navigation ul.submenu li a {
             background-color: #333;
             padding-left: 1em;
             text-align: left;
             width: 12em; } }
-  /* line 247, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 253, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation .navigation-tools {
+    height: 60px;
     display: block;
     padding-right: 1em;
     padding-left: 0.5em;
     clear: both;
     background: #505050; }
-    /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-    header.navigation .navigation-tools:after {
-      content: "";
-      display: table;
-      clear: both; }
     @media screen and (min-width: 53.75em) {
-      /* line 247, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 253, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .navigation-tools {
         background: transparent;
         float: right;
         clear: none; } }
-  /* line 262, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 268, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation .sign-up {
-    margin-top: 1.2em;
+    margin-top: 1.1em;
     float: right;
     display: inline;
     font-size: .8em;
     text-transform: uppercase;
     padding: .75em 1em; }
-  /* line 274, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+  /* line 280, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation .search-bar {
-    padding: .85em .6em;
+    padding: .85em .6em .7em .6em;
     width: 60%;
     float: left; }
-    /* line 283, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+    /* line 289, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
     header.navigation .search-bar .search-and-submit {
       position: relative; }
-      /* line 286, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 292, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .search-bar .search-and-submit input[type=search] {
         background: #404040;
         border: 1px solid #262626;
-        padding: .6em .8em;
+        padding: .5em .8em;
         font-size: .9em;
         font-style: italic;
         color: rgba(255, 255, 255, 0.7);
         border-radius: 6px;
         margin: 0; }
         @media screen and (min-width: 53.75em) {
-          /* line 286, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+          /* line 292, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
           header.navigation .search-bar .search-and-submit input[type=search] {
             width: 100%; } }
-      /* line 301, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 307, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .search-bar .search-and-submit button[type=submit], header.navigation .search-bar .search-and-submit .modal [type=submit].btn, .modal header.navigation .search-bar .search-and-submit [type=submit].btn, header.navigation .search-bar .search-and-submit [type=submit].sign-up {
         background-color: #404040;
         border-radius: 3px;
@@ -3963,7 +3966,7 @@ header.navigation {
         bottom: 0.3em;
         left: auto;
         outline: none;
-        padding: 0 15px; }
+        padding: 0 9px; }
         /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
         header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled), header.navigation .search-bar .search-and-submit .modal [type=submit].btn:hover:not(:disabled), .modal header.navigation .search-bar .search-and-submit [type=submit].btn:hover:not(:disabled), header.navigation .search-bar .search-and-submit [type=submit].sign-up:hover:not(:disabled) {
           background-color: #4d4d4d;
@@ -3984,17 +3987,18 @@ header.navigation {
         header.navigation .search-bar .search-and-submit button[type=submit]:disabled, header.navigation .search-bar .search-and-submit .modal [type=submit].btn:disabled, .modal header.navigation .search-bar .search-and-submit [type=submit].btn:disabled, header.navigation .search-bar .search-and-submit [type=submit].sign-up:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
-        /* line 311, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 317, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation .search-bar .search-and-submit button[type=submit] img, header.navigation .search-bar .search-and-submit .modal [type=submit].btn img, .modal header.navigation .search-bar .search-and-submit [type=submit].btn img, header.navigation .search-bar .search-and-submit [type=submit].sign-up img {
           height: 12px;
-          opacity: .7; }
+          opacity: .7;
+          padding: 1px; }
     @media screen and (min-width: 53.75em) {
-      /* line 274, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+      /* line 280, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
       header.navigation .search-bar {
         width: 16em;
         position: relative;
         display: inline-block; }
-        /* line 323, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
+        /* line 330, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
         header.navigation .search-bar input {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
