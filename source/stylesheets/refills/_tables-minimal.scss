@@ -1,11 +1,42 @@
 .table-minimal {
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-background-color: white;
+  $base-line-height: 1.5em;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $light-gray: #DDD;
+  $medium-screen: em(640);
+  $large-screen: em(860);
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  width: 100%;
+
+  th {
+    text-align: left;
+  }
+
+  td {
+    line-height: 1.5em;
+  }
+
+  button {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  //////////////////////////////////////////////
+
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
   $table-background: $base-background-color;
-  $table-header-color: lighten($table-background, 10);
-  $table-hover-color: darken($table-background, 2);
-  $table-stripe-color: darken($table-background, 4);
-  $table-stripe-color-hover: darken($table-stripe-color, 5);
+  $table-header-background: lighten($table-background, 10);
+  $table-hover-background: darken($table-background, 2);
+  $table-stripe-background: darken($table-background, 4);
+  $table-stripe-background-hover: darken($table-stripe-background, 5);
   $table-padding: .75em 1em;
 
   border-collapse: separate;
@@ -13,7 +44,7 @@
 
   tbody {
     tr:hover > td, tr:hover > th {
-      background-color: $table-hover-color;
+      background-color: $table-hover-background;
     }
     tr:first-child td {
       border-top: 2px solid $table-border-color;
@@ -22,7 +53,7 @@
 
   thead {
     th {
-      background-color: $table-header-color;
+      background-color: $table-header-background;
       padding: $table-padding;
       border-bottom: 0px;
     }
@@ -37,7 +68,8 @@
       border-bottom: 0px;
 
       button {
-        padding: .5em 1em .6em;
+        @include button(flat, $base-accent-color);
+        padding: 0 1em;
         font-size: .7em;
         margin-right: 0.5em;
         display: inline-block;

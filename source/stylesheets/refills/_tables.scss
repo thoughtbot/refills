@@ -33,10 +33,10 @@
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
   $table-background: lighten($table-border-color, 12);
-  $table-header-color: lighten($table-background, 10);
-  $table-hover-color: transparentize($base-accent-color, .9);
-  $table-stripe-color: darken($table-background, 2);
-  $table-stripe-color-hover: transparentize($base-accent-color, .9);
+  $table-header-background: lighten($table-background, 10);
+  $table-hover-background: darken($table-background, 5);
+  $table-stripe-background: darken($table-background, 2);
+  $table-stripe-background-hover: darken($table-stripe-background, 5);
   $table-padding: .75em 1em;
 
   border: $table-border;
@@ -48,12 +48,12 @@
   tbody {
     background-color: $table-background;
     tr:hover > td, tr:hover > th {
-      background-color: $table-hover-color;
+      background-color: $table-hover-background;
     }
     tr:nth-child(even) {
-      background-color: $table-stripe-color;
+      background-color: $table-stripe-background;
       &:hover > td {
-        background-color: $table-stripe-color-hover;
+        background-color: $table-stripe-background-hover;
       }
     }
   }
@@ -80,7 +80,7 @@
 
   thead {
     th {
-      background-color: $table-header-color;
+      background-color: $table-header-background;
       padding: $table-padding;
       border-left: 1px solid $table-border-color;
       border-bottom: 0px;
@@ -98,7 +98,7 @@
 
       button {
         @include button(flat, $base-accent-color);
-        padding: 0 1em 0 1em;
+        padding: 0 1em;
         font-size: .7em;
         margin-right: 0.5em;
         display: inline-block;
