@@ -1,4 +1,35 @@
-.accordion {
+.accordion {  
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-line-height: 1.5em;
+  $base-spacing: 1.5em;
+  $dark-gray: #333;
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  padding: 0;
+  margin: 0;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  //////////////////////////////////////////////
+
   $accordion-menu-border-color: $base-border-color;
   $accordion-menu-color: $base-font-color;
   $accordion-menu-border: 1px solid $accordion-menu-border-color;
