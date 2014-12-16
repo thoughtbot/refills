@@ -1,3 +1,17 @@
+// if you are using Bitters you can remove everything down to the commented line
+$alert-color: #FFF6BF !default;
+$error-color: #FBE3E4 !default;
+$success-color: #E6EFC2 !default;
+$notice-color: #E5EDF8 !default;
+$base-spacing: 1.5em !default;
+
+label {
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+}
+
+//////////////////////////////////////////////
+
 .label-alert {
   color: darken($alert-color, 45);
 }
