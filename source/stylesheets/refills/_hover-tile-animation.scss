@@ -1,10 +1,26 @@
 .hover-tile-outer {
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-line-height: 1.5em;
+  $medium-screen: em(640);
+  -webkit-font-smoothing: antialiased;
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    line-height: $base-line-height;
+  }
+
+  //////////////////////////////////////////////
+
   $hover-tile-height: 10em;
 
-  background-size: cover;
-  background-position: bottom;
   background: url("/images/mountains.png");
-  background-color: $base-accent-color;
+  background-size: cover;
+  background-position: top;
+  background-color: beige;
   border: 1px solid $base-border-color;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
@@ -28,24 +44,19 @@
     background: inherit;
     color: white;
     height: inherit;
-    padding: 1em 1.5em;
-  }
-
-  .hover-tile-visible {
-    color: transparentize(white, .3);
-    font-size: 2em;
-    font-weight: 200;  
-    padding-top: 1.5em;
-    text-align: center;
+    overflow: hidden;
+    padding: $base-spacing;
   }
 
   .hover-tile-hidden {
     background: transparentize(black, .5);
-    h4 {
-      margin-bottom: .5em;
-    }
+
     p {
       color: transparentize(white, .3);
+    }
+
+    h4 {
+      margin-bottom: .5em;
     }
   }
 }
