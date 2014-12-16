@@ -11,10 +11,10 @@
   $transparency-right: .8;
   $horizontal-angle: 90deg;
 
+  -webkit-font-smoothing: antialiased;
   position: relative;
   line-height: 0;
   width: 100%;
-  margin-bottom: $base-line-height;  
 
   img {
    width: 100%;
