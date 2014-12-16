@@ -1,4 +1,43 @@
 header.navigation {
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-background-color: white;
+  $base-line-height: 1.5em;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $light-gray: #DDD;
+  $medium-screen: em(640);
+  $large-screen: em(860);
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  h2 {
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    text-decoration: none;
+    color: $base-link-color;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  //////////////////////////////////////////////
+
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;
   $navigation-color: transparentize(white, 0.3);
@@ -45,7 +84,6 @@ header.navigation {
     color: $navigation-color;
     display: block;
     float: right;
-    font-family: $sans-serif;
     font-weight: 700;
     line-height: $navigation-height;
     margin: 0;
@@ -266,8 +304,8 @@ header.navigation {
   }
 
   .sign-up {
-    @extend button;
-    margin-top: 1.1em;
+    @include button(flat, $base-accent-color);
+    margin-top: 1em;
     float: right;
     display: inline;
     font-size: .8em;
@@ -290,6 +328,7 @@ header.navigation {
       position: relative;
 
       input[type=search] {
+        @include box-sizing(border-box);
         background: $navigation-search-background;
         border: $navigation-search-border;
         padding: .5em .8em;
@@ -298,6 +337,7 @@ header.navigation {
         color: $navigation-color;
         border-radius: $base-border-radius * 2;
         margin: 0;
+        width: 100%;
 
         @include media($large-screen) {
           width: 100%;
