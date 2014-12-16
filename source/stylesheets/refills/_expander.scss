@@ -1,35 +1,59 @@
-$expander-arrow-width: 5px;
-$expander-toggle-size: 1em;
-$expander-toggle-arrow-size: $expander-toggle-size;
-$expander-toggle-margin: 1em;
+.expander {  
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-font-size: 1em;
+  $base-line-height: 1.5em;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $light-gray: #DDD;
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
 
-.expander {
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    text-decoration: none;
+    color: $base-link-color;
+  }
+
+  //////////////////////////////////////////////
+
+  $expander-arrow-width: .7em;
+  $expander-toggle-size: 1em;
+  $expander-toggle-arrow-size: $expander-toggle-size;
+  $expander-toggle-margin: 1em;
+
   margin: auto;
   width: 60%;
-}
 
-.expander-trigger {
-  @include user-select(none);
-  border-bottom: 1px solid $light-gray;
-  cursor: pointer;
-  display: block;
-  font-size: $expander-toggle-size;
-  margin-bottom: $expander-toggle-size;
-  padding-bottom: $expander-toggle-size / 4;
+  .expander-trigger {
+    @include user-select(none);
+    border-bottom: 1px solid $light-gray;
+    cursor: pointer;
+    display: block;
+    font-size: $expander-toggle-size;
+    margin-bottom: $expander-toggle-size;
+    padding-bottom: $expander-toggle-size / 4;
 
-  &:before {
-    content: '\25BC';
-    font-size: $expander-toggle-arrow-size;
-    margin-right: .5em;
+    &:before {
+      font-size: $expander-arrow-width;
+      content: '\25BC';
+      margin-right: .5em;
+    }
   }
-}
 
-.expander-hidden {
-  &:before {
-    content: '\25BA';
+  .expander-hidden {
+    &:before {
+      font-size: $expander-arrow-width;
+      content: '\25BA';
+    }
   }
-}
 
-.expander-hidden + .expander-content {
-  display: none;
+  .expander-hidden + .expander-content {
+    display: none;
+  }
 }
