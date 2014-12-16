@@ -1,11 +1,42 @@
-.table-borders {
+.tables {
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-background-color: white;
+  $base-line-height: 1.5em;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $light-gray: #DDD;
+  $medium-screen: em(640);
+  $large-screen: em(860);
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  width: 100%;
+
+  th {
+    text-align: left;
+  }
+
+  td {
+    line-height: 1.5em;
+  }
+
+  button {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  //////////////////////////////////////////////
+
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
-  $table-background: lighten($table-border-color, 10);
+  $table-background: lighten($table-border-color, 12);
   $table-header-color: lighten($table-background, 10);
-  $table-hover-color: darken($table-background, 5);
-  $table-stripe-color: darken($table-background, 4);
-  $table-stripe-color-hover: darken($table-stripe-color, 5);
+  $table-hover-color: transparentize($base-accent-color, .9);
+  $table-stripe-color: darken($table-background, 2);
+  $table-stripe-color-hover: transparentize($base-accent-color, .9);
   $table-padding: .75em 1em;
 
   border: $table-border;
@@ -66,7 +97,8 @@
       border-bottom: 0px;
 
       button {
-        padding: .5em 1em .6em;
+        @include button(flat, $base-accent-color);
+        padding: 0 1em 0 1em;
         font-size: .7em;
         margin-right: 0.5em;
         display: inline-block;
