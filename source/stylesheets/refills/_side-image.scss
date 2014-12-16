@@ -1,8 +1,28 @@
-$side-image-background-top: #B5EBEB;
-$side-image-background-bottom: #5DAC5D;
-$side-image-border: 1px solid darken(transparentize($side-image-background-bottom, .8), 30);
+.side-image {  
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-line-height: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $large-screen: em(860);
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
 
-.side-image {
+  button {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  //////////////////////////////////////////////
+
+  $side-image-background-top: #B5EBEB;
+  $side-image-background-bottom: #5DAC5D;
+  $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, .8), 30);
+
   background: #F9F9F9;
 
   @include media($large-screen) {
@@ -26,7 +46,7 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
     }
   }
 
-  .content {
+  .side-image-content {
     @include span-columns(12);
     padding: 1em 1em 4em 1em;
 
@@ -34,26 +54,32 @@ $side-image-border: 1px solid darken(transparentize($side-image-background-botto
       @include span-columns(8);
       padding: 4em 4em 8em 4em;
     }
+
+    h1 {
+      margin-bottom: .9em;
+    }
+
+    h4 {
+      background: #BBB;
+      color: white;
+      display: inline-block;
+      font-size: .75em;
+      font-weight: 800;
+      margin-bottom: 1.3em;
+      padding: 3px 8px;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: gray;
+      margin-bottom: 3em;
+    }
+
+    button {
+      @include button(flat, $base-accent-color);
+      padding: .7em 1em;
+    }
   }
 
-  .content h1 {
-    margin-bottom: .9em;
-  }
-
-  .content h4 {
-    background: #BBB;
-    color: white;
-    display: inline-block;
-    font-size: .75em;
-    font-weight: 800;
-    margin-bottom: 1.3em;
-    padding: 3px 8px;
-    text-transform: uppercase;
-  }
-
-  .content p {
-    color: gray;
-    margin-bottom: 3em;
-  }
   @include reset-display();
 }
