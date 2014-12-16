@@ -1,4 +1,15 @@
-.badges {
+.badges {  
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-font-size: 1em;
+  $base-line-height: 1.5em;
+  $base-accent-color: #477DCA;
+  $dark-gray: #333;
+  $medium-gray: #999;
+  -webkit-font-smoothing: antialiased;
+
+  //////////////////////////////////////////////
+
   $badge-background: $medium-gray;
   $badge-dark-color: $dark-gray;
   $badge-error-color: #FBE3E4;
