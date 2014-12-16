@@ -1,4 +1,39 @@
-.search-tools {
+.search-tools {  
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-line-height: 1.5em;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $large-screen: em(860);
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  button {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ol {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    line-height: 1.5em;
+    font-size: .8em;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: $base-spacing / 4;
+  }
+
+  //////////////////////////////////////////////
+
   $search-tools-border-color: $base-border-color;
   $search-tools-background: lighten($search-tools-border-color, 10);
 
@@ -17,7 +52,26 @@
     }
 
     > div {
-      @extend input[type="text"];
+      @include box-sizing(border-box);
+      @include transition(border-color);
+      background-color: white;
+      border-radius: $base-border-radius;
+      border: 1px solid $base-border-color;
+      position: relative;
+      font-size: 1em;
+      margin-bottom: $base-spacing / 2;
+      padding: ($base-spacing / 3) ($base-spacing / 3);
+      width: 100%;
+
+      &:hover {
+        border-color: darken($base-border-color, 10);
+      }
+
+      &:focus {
+        border-color: darken($base-border-color, 10);
+        outline: none;
+      }
+
       position: relative;
 
       label {
@@ -27,8 +81,12 @@
       }
     }
 
-    ol label {
-      display: inline;
+    ol {
+      margin-top: 1em;
+
+      label {
+        display: inline;
+      }
     }
 
     button {
@@ -54,13 +112,14 @@
     }
 
     button {
+      @include button(flat, $base-accent-color);
       width: 100%;
       margin-top: 1em;
-      padding-top: .7em;
-      padding-bottom: .7em;
+      padding-top: .5em;
+      padding-bottom: .5em;
 
       @include media($large-screen) {
-        margin-top: 1.95em;
+        margin-top: 1.55em;
       }
     }
   }
