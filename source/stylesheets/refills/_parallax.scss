@@ -10,6 +10,7 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 .parallax-static-content {
+  -webkit-font-smoothing: antialiased;
   color: #9A9A8A;
   padding: 8em 0;
   position: relative;
