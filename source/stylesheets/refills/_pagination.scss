@@ -1,4 +1,30 @@
-.pagination {
+.pagination {  
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $large-screen: em(860);
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  //////////////////////////////////////////////
+
   $pagination-border-color: $base-border-color;
   $pagination-border: 1px solid $pagination-border-color;
   $pagination-background: lighten($pagination-border-color, 10);
