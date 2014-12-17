@@ -1,4 +1,14 @@
-.search-bar {
+.search-bar {  
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-line-height: 1.5em;
+  $base-accent-color: #477DCA;
+  $dark-gray: #333;
+  -webkit-font-smoothing: antialiased;
+
+  //////////////////////////////////////////////
+
   $search-bar-border-color: $base-border-color;
   $search-bar-border: 1px solid $search-bar-border-color;
   $search-bar-background: lighten($search-bar-border-color, 10);
@@ -16,15 +26,22 @@
 
     input[type=search] {
       @include appearance(none);
-      width: 100%;
-      padding: .5em .8em;
-      font-size: .9em;
-      font-style: italic;
+      @include box-sizing(border-box);
+      @include transition(border-color);
+      background-color: white;
       border-radius: $base-border-radius;
+      border-radius: $base-border-radius;
+      border: 1px solid $base-border-color;
+      font-size: 1em;
+      font-style: italic;
       margin: 0;
+      padding: ($base-spacing / 3) ($base-spacing / 3);
+      position: relative;
+      width: 100%;
     }
 
     button[type=submit] {
+      @include button(flat, $base-accent-color);
       @include position(absolute, 0em 0em 0em null);
       outline: none;
       border-top-left-radius: 0;
