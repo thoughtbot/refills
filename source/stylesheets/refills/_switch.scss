@@ -1,4 +1,10 @@
-.label-switch {
+.label-switch {  
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-accent-color: #477DCA;
+  $base-background-color: white;
+
+  //////////////////////////////////////////////
+
   $switch-width: 52px;
   $switch-padding: 2px;
   $switch-height: 32px;
@@ -6,14 +12,15 @@
   $knob-size: $switch-height - ($switch-padding * 2);
   $knob-radius: $switch-height - ($switch-padding * 2);
   $knob-width: $knob-size;
+  $switch-background: $base-background-color;
+  $switch-border-background: darken($base-background-color, 9);
+  $switch-shadow: 0 2px 5px transparentize(black, 0.6);
 
-  align-self: center;
   border-radius: $switch-radius;
   cursor: pointer;
   display: inline-block;
   height: $switch-height;
   position: relative;
-  vertical-align: middle;
   width: $switch-width;
 
   input[type="checkbox"] {
@@ -21,7 +28,7 @@
 
     + .checkbox {
       @include transition(all 0.3s ease);
-      background: #e5e5e5;
+      background: $switch-border-background;
       border-radius: $switch-radius;
       border: none;
       cursor: pointer;
@@ -36,7 +43,7 @@
         @include position(absolute, 2px 0 0 2px);
         @include transform(scale(1));
         @include transition(all 0.3s ease);
-        background: white;
+        background: $switch-background;
         border-radius: $switch-radius;
         content: "";
         height: $knob-radius;
@@ -48,17 +55,17 @@
         @include position(absolute, 2px 0 0 2px);
         @include transition(all 0.3s ease);
         @include size($knob-size);
-        background: white;
+        background: $switch-background;
         border-radius: $knob-radius;
-        box-shadow: 0 2px 5px rgba(black, 0.4);
+        box-shadow: $switch-shadow;
         content: "";
-        z-index: $base-z-index + 2;
+        z-index: 2;
       }
     }
 
     &:checked {
       + .checkbox {
-        background: $blue;
+        background: $base-accent-color;
 
         &:before {
           @include transform(scale(0));
