@@ -3,10 +3,10 @@
 }
 
 .grid-items {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-accent-color: #477DCA;
-  $medium-screen: em(640);
-  $large-screen: em(860);
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-accent-color: #477DCA !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
   -webkit-font-smoothing: antialiased;
 
   p {
@@ -16,6 +16,7 @@
   a {
     text-decoration: none;
   }
+
   //////////////////////////////////////////////
 
   $grid-items-background: $base-background-color;
@@ -38,18 +39,18 @@
     
   .grid-item {
     @include transition (all 0.2s ease-in-out);
-    height: $grid-item-height;
     background: $grid-item-background;
-    width: 100%;
-    overflow: hidden;
-    float: left;
-    padding: 2em;
-    border-top: 0;
     border-bottom: $grid-item-border-size solid $grid-items-background;
     border-left: $grid-item-border-size /2 solid $grid-items-background;
     border-right: $grid-item-border-size /2 solid $grid-items-background;
-    text-align: center;
+    border-top: 0;
     cursor: pointer;
+    float: left;
+    height: $grid-item-height;
+    overflow: hidden;
+    padding: 2em;
+    text-align: center;
+    width: 100%;
 
     @include media($large-screen) {
       @include grid-item-columns($grid-item-columns);
@@ -60,6 +61,7 @@
         $background-from-list: nth($grid-item-colors, $i);
         background-color: $background-from-list;
         box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10);
+
         &:hover {
           background-color: darken($background-from-list, 10);
           background-repeat: no-repeat;
@@ -73,8 +75,8 @@
   .grid-item img {
       display: block;
       height: 3em;
-      margin: auto;
       margin-bottom: 1em;
+      margin: auto;
     }
 
   .grid-item h1 {
@@ -86,6 +88,7 @@
   .grid-item p {
       margin: auto;
       color: transparentize($grid-item-color, .3);
+      
       @include media($medium-screen) {
         max-width: 70%;
       }
@@ -105,8 +108,8 @@
   .grid-item-image {
     background: url(/images/lake-transparent.png);
     background-color: $grid-item-background;
-    background-repeat: no-repeat;
     background-position: top;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 }

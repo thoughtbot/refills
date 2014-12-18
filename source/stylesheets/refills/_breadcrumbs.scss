@@ -1,13 +1,13 @@
 .breadcrumb {   
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-color: gainsboro;
-  $base-border-radius: 3px;
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
-  $medium-gray: #999;
-  $light-gray: #DDD;
-  $medium-screen: em(640);
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $medium-gray: #999 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
   -webkit-font-smoothing: antialiased;
 
   //////////////////////////////////////////////
@@ -23,35 +23,35 @@
   $breadcrumb-color-active: $breadcrumb-color;
 
   display: inline-block;
-  text-align: left;
   margin-bottom: $base-spacing;
+  text-align: left;
 
   a {
-    display: inline-block;
     background-color: $breadcrumb-background;
-    border: $breadcrumb-border;
     border-left: 0;
+    border: $breadcrumb-border;
     color: $breadcrumb-color;
-    line-height: $breadcrumb-height;
-    margin-right: -5px;
+    display: inline-block;
     font-size: .8em;
+    line-height: $breadcrumb-height;
+    margin-bottom: 2px;
+    margin-right: -5px;
     padding: 0 $breadcrumb-height/4 0 $breadcrumb-height/2;
     position: relative;
     text-decoration: none;
-    margin-bottom: 2px;
 
     &:first-child {
-      padding-left: $breadcrumb-height/2;
+      border-bottom-left-radius: $base-border-radius;
       border-left: $breadcrumb-border;
       border-top-left-radius: $base-border-radius;
-      border-bottom-left-radius: $base-border-radius;
+      padding-left: $breadcrumb-height/2;
     }
 
     &:last-child {
       background-color: $breadcrumb-background;
-      color: $breadcrumb-color-active;
       border-bottom-right-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
+      color: $breadcrumb-color-active;
       padding-right: $breadcrumb-height/2;
     }
 

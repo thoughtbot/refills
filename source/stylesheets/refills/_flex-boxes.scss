@@ -1,14 +1,15 @@
 .flex-boxes {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-radius: 3px;
-  $dark-gray: #333;
-  $light-gray: #DDD;
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-radius: 3px !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
 
   a {
     text-decoration: none;
   }
+  
   //////////////////////////////////////////////
 
   $flex-box-border-color: $light-gray;
@@ -38,12 +39,12 @@
     @include transition (all 0.2s ease-in-out);
     @include flex(2 2 15em);
     @include align-self(stretch);
-    display: block;
-    box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10);
+    background: $flex-box-background;
     border-radius: $base-border-radius;
+    box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10);
+    display: block;
     margin: $flex-box-gutter;
     padding: 2em 2em 3em 2em;
-    background: $flex-box-background;
 
     @for $i from 1 to 7 { // assign colors from $flex-box-top-colors list
       &:nth-child(#{$i}) {
@@ -58,23 +59,23 @@
 
     img {
       display: block;
-      opacity: .4;
       height: 3em;
-      margin: auto;
       margin-bottom: 2em;
+      margin: auto;
+      opacity: .4;
     }
 
     .flex-title {
       color: $flex-box-color;
-      font-weight: 800;
       font-size: 1.2em;
+      font-weight: 800;
       margin-bottom: .5em;
     }
 
     p {
-      margin: auto;
-      line-height: 1.5em;
       color: transparentize($flex-box-color, .1);
+      line-height: 1.5em;
+      margin: auto;
     }
   }
 

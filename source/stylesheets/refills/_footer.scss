@@ -1,9 +1,9 @@
 .footer {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $medium-screen: em(640);
-  $large-screen: em(860);
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
   -webkit-font-smoothing: antialiased;
 
   ul {
@@ -17,8 +17,8 @@
 
   a {
     text-decoration: none;
-
   }
+
   //////////////////////////////////////////////
 
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
@@ -31,8 +31,8 @@
   width: 100%;
 
   .footer-logo {
-    text-align: center;
     margin-bottom: 2em;
+    text-align: center;
 
     img {
       height: 3em;

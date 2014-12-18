@@ -1,18 +1,18 @@
 .pagination {  
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-color: gainsboro;
-  $base-border-radius: 3px;
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
-  $dark-gray: #333;
-  $large-screen: em(860);
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
 
   ul {
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   li {

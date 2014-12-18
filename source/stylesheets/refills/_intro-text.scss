@@ -1,12 +1,12 @@
 .intro-text {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-line-height: 1.5em;
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
-  $dark-gray: #333;
-  $large-screen: em(860);
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
 
   p {
@@ -25,8 +25,8 @@
 
   margin-bottom: 5em;
   margin-top: 4em;
-  text-align: center;
   padding: 1em;
+  text-align: center;
 
   h3 {
     background: $base-accent-color;

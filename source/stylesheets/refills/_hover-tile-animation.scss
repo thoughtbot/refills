@@ -1,8 +1,8 @@
 .hover-tile-outer {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-color: gainsboro;
-  $base-line-height: 1.5em;
-  $medium-screen: em(640);
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-color: gainsboro !default;
+  $base-line-height: 1.5em !default;
+  $medium-screen: em(640) !default;
   -webkit-font-smoothing: antialiased;
 
   h4 {
@@ -18,13 +18,13 @@
   $hover-tile-height: 10em;
 
   background: url("/images/mountains.png");
-  background-size: cover;
   background-position: top;
+  background-size: cover;
   background-color: beige;
   border: 1px solid $base-border-color;
+  cursor: pointer;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
-  cursor: pointer;
   
   @include media($medium-screen) {
     width: 40%;

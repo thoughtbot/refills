@@ -1,10 +1,10 @@
 header.navigation {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-color: gainsboro;
-  $base-border-radius: 3px;
-  $base-accent-color: #477DCA;
-  $dark-gray: #333;
-  $large-screen: em(860);
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-accent-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
   -webkit-font-smoothing: antialiased;
 
   a {
@@ -77,9 +77,9 @@ header.navigation {
   // Nav menu
 
   .nav {
-    z-index: 9999999;
     float: none;
     min-height: $navigation-height;
+    z-index: 9999999;
 
     @include media ($horizontal-bar-mode) {
       float: left;
@@ -264,28 +264,28 @@ header.navigation {
   // Elements on the far right
 
   .navigation-tools {
-    height: $navigation-height;
-    display: block;
-    padding-right: $navigation-padding;
-    padding-left: $navigation-padding/2;
-    clear: both;
     background: #505050;
+    clear: both;
+    display: block;
+    height: $navigation-height;
+    padding-left: $navigation-padding/2;
+    padding-right: $navigation-padding;
 
     @include media($large-screen) {
       background: transparent;
-      float: right;
       clear: none;
+      float: right;
     }
   }
 
   .sign-up {
     @include button(flat, $base-accent-color);
-    margin-top: 1em;
-    float: right;
     display: inline;
+    float: right;
     font-size: .8em;
-    text-transform: uppercase;
+    margin-top: 1em;
     padding: .75em 1em;
+    text-transform: uppercase;
   }
 
   // Search bar
@@ -295,9 +295,9 @@ header.navigation {
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10);
 
+    float: left;
     padding: .85em .6em .7em .6em;
     width: 60%;
-    float: left;
 
     .search-and-submit {
       position: relative;
@@ -305,13 +305,13 @@ header.navigation {
       input[type=search] {
         @include box-sizing(border-box);
         background: $navigation-search-background;
+        border-radius: $base-border-radius * 2;
         border: $navigation-search-border;
-        padding: .5em .8em;
+        color: $navigation-color;
         font-size: .9em;
         font-style: italic;
-        color: $navigation-color;
-        border-radius: $base-border-radius * 2;
         margin: 0;
+        padding: .5em .8em;
         width: 100%;
 
         @include media($large-screen) {
@@ -321,13 +321,13 @@ header.navigation {
 
       button[type=submit] {
         @include button(flat, $navigation-search-background);
-        position: absolute;
-        top: 0.3em;
-        right: 0.3em;
         bottom: 0.3em;
         left: auto;
         outline: none;
         padding: 0 9px;
+        position: absolute;
+        right: 0.3em;
+        top: 0.3em;
 
         img {
           height: 12px;
@@ -338,9 +338,9 @@ header.navigation {
     }
 
     @include media($horizontal-bar-mode) {
-      width: 16em;
-      position: relative;
       display: inline-block;
+      position: relative;
+      width: 16em;
 
       input {
         @include box-sizing(border-box);

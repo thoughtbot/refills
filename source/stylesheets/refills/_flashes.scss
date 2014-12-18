@@ -1,4 +1,4 @@
-// if you are using Bitters you can remove everything down to the commented line
+// if you are using bitters.io you can remove everything down to the commented line
 $alert-color: #FFF6BF !default;
 $error-color: #FBE3E4 !default;
 $success-color: #E6EFC2 !default;
@@ -9,17 +9,17 @@ $base-spacing: 1.5em !default;
 
 @mixin flash($color) {
   -webkit-font-smoothing: antialiased;
+  background: $color;
+  color: darken($color, 60);
   display: block;
   font-weight: bold;
   margin-bottom: $base-spacing / 2;
   padding: $base-spacing / 2;
-  background: $color;
-  color: darken($color, 60);
 
   a {
+    border-bottom: 1px solid transparentize(darken($color, 70), .7);
     color: darken($color, 70);
     text-decoration: none;
-    border-bottom: 1px solid transparentize(darken($color, 70), .7);
 
     &:hover {
       color: darken($color, 90);

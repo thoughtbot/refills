@@ -1,9 +1,9 @@
 .progress-bar {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-color: gainsboro;
-  $base-border-radius: 3px;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
   -webkit-font-smoothing: antialiased;
 
   //////////////////////////////////////////////

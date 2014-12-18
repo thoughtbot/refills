@@ -25,11 +25,11 @@
 // }
 
 .footer-2 {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $medium-screen: em(640);
-  $large-screen: em(860);
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
   -webkit-font-smoothing: antialiased;
 
   ul {
@@ -45,6 +45,7 @@
   a {
     text-decoration: none;
   }
+
   //////////////////////////////////////////////
 
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
@@ -72,6 +73,7 @@
 
   ul {
     margin-bottom: 1em;
+    
     @include media($large-screen) {
       float: left;
       margin-left: 1em;
@@ -80,8 +82,8 @@
   }
 
   ul li {
-    padding-right: 1em;
     font-weight: 800;
+    padding-right: 1em;
 
     @include media($large-screen) {
       display: inline;
@@ -116,8 +118,8 @@
       }
 
       li {
-        float: left;
         font-size: 1em;
+        float: left;
         padding-right: .7em;
 
         &:last-child {
@@ -126,8 +128,8 @@
       }
 
       img {
-        opacity: .7;
         height: 1.6em;
+        opacity: .7;
         padding: 1px;
 
         &:hover {

@@ -1,14 +1,14 @@
 .search-tools {  
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-color: gainsboro;
-  $base-border-radius: 3px;
-  $base-line-height: 1.5em;
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
-  $dark-gray: #333;
-  $large-screen: em(860);
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
 
   button {
@@ -16,19 +16,19 @@
   }
 
   ol {
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   li {
-    list-style: none;
-    line-height: 1.5em;
     font-size: .8em;
+    line-height: 1.5em;
+    list-style: none;
   }
 
   label {
-    font-weight: bold;
     display: block;
+    font-weight: bold;
     margin-bottom: $base-spacing / 4;
   }
 
@@ -38,10 +38,10 @@
   $search-tools-background: lighten($search-tools-border-color, 10);
 
   @include clearfix;
-  border: 1px solid $search-tools-border-color;
   background: $search-tools-background;
-  padding: $gutter / 2;
   border-radius: $base-border-radius;
+  border: 1px solid $search-tools-border-color;
+  padding: $gutter / 2;
 
   .filter {
     margin-bottom: 1em;
@@ -57,10 +57,10 @@
       background-color: white;
       border-radius: $base-border-radius;
       border: 1px solid $base-border-color;
-      position: relative;
       font-size: 1em;
       margin-bottom: $base-spacing / 2;
       padding: ($base-spacing / 3) ($base-spacing / 3);
+      position: relative;
       width: 100%;
 
       &:hover {
@@ -72,11 +72,9 @@
         outline: none;
       }
 
-      position: relative;
-
       label {
-        font-weight: 400;
         cursor: pointer;
+        font-weight: 400;
         margin-bottom: 0;
       }
     }
@@ -113,10 +111,10 @@
 
     button {
       @include button(flat, $base-accent-color);
-      width: 100%;
       margin-top: 1em;
-      padding-top: .5em;
       padding-bottom: .5em;
+      padding-top: .5em;
+      width: 100%;
 
       @include media($large-screen) {
         margin-top: 1.55em;

@@ -1,10 +1,10 @@
 .bullets {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-line-height: 1.5em;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
-  $dark-gray: #333;
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-line-height: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
 
   padding: 0;
@@ -32,9 +32,9 @@
 
   @include display(flex);
   @include flex-wrap(wrap);
+  margin-bottom: $base-line-height;
   margin: 1em;
   overflow: auto;
-  margin-bottom: $base-line-height;
 
   .bullet {
     @include flex-basis(20em);
@@ -42,12 +42,12 @@
   }
 
   .bullet-icon {
-    float: left;
     background: $base-accent-color;
-    padding: $icon-bullet-size /4;
     border-radius: 50%;
-    width: $icon-bullet-size;
+    float: left;
     height: $icon-bullet-size;
+    padding: $icon-bullet-size /4;
+    width: $icon-bullet-size;
   }
 
   .bullet-icon-1 {
@@ -68,10 +68,10 @@
   }
 
   h2 {
-    font-size: $icon-bullet-size /2.5;
-    padding-top: $icon-bullet-size /7;
-    margin-bottom: $icon-bullet-size /6;
     border-bottom: 1px solid transparentize($base-font-color, .8);
     display: inline-block;
+    font-size: $icon-bullet-size /2.5;
+    margin-bottom: $icon-bullet-size /6;
+    padding-top: $icon-bullet-size /7;
   }
 }

@@ -1,11 +1,12 @@
 .comment {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-radius: 3px;
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $dark-gray: #333;
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-radius: 3px !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
+  
   //////////////////////////////////////////////
 
   $comment-gutter: 1.4em;
@@ -16,11 +17,11 @@
   $comment-detail-color: transparentize($comment-color, .5);
   $comment-image-vert-alignment: top;
 
+  border-bottom: 1px solid transparentize($comment-color, .9);
   display: table;
-  width: 100%;
   margin-bottom: $base-spacing;
   padding-bottom: 1em;
-  border-bottom: 1px solid transparentize($comment-color, .9);
+  width: 100%;
 
   .comment-image,
   .comment-content {
@@ -32,13 +33,13 @@
     padding-right: $comment-gutter;
 
     > img {
-      width: $comment-image-width;
-      height: auto;
-      border-radius: $base-border-radius;
-      padding: $comment-image-padding;
       background: $comment-background;
+      border-radius: $base-border-radius;
       display: block;
+      height: auto;
       max-width: none;
+      padding: $comment-image-padding;
+      width: $comment-image-width;
     }
 
     .comment-reverse-order & {
@@ -56,14 +57,14 @@
     }
 
     p {
-      margin-bottom: .5em;
       line-height: 1.5em;
+      margin-bottom: .5em;
     }
 
     p.comment-detail {
-      font-style: italic;
-      font-size: .9em;
       color: $comment-detail-color;
+      font-size: .9em;
+      font-style: italic;
     }
   }
 }

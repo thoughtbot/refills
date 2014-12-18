@@ -1,11 +1,11 @@
 .badges {  
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-color: gainsboro;
-  $base-font-size: 1em;
-  $base-line-height: 1.5em;
-  $base-accent-color: #477DCA;
-  $dark-gray: #333;
-  $medium-gray: #999;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-color: gainsboro !default;
+  $base-font-size: 1em !default;
+  $base-line-height: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $medium-gray: #999 !default;
   -webkit-font-smoothing: antialiased;
 
   //////////////////////////////////////////////
@@ -22,10 +22,10 @@
   margin-bottom: $base-line-height;
 
   .badge {
-    display: inline-block;
     background: $badge-background;
     border-radius: 2em;
     color: $badge-font-color;
+    display: inline-block;
     font-size: $badge-font-size;
     font-weight: 600;
     line-height: 1;

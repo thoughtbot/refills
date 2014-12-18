@@ -1,17 +1,17 @@
 .tables {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-color: gainsboro;
-  $base-border-radius: 3px;
-  $base-background-color: white;
-  $base-line-height: 1.5em;
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
-  $dark-gray: #333;
-  $light-gray: #DDD;
-  $medium-screen: em(640);
-  $large-screen: em(860);
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
 
   width: 100%;
@@ -39,14 +39,15 @@
   $table-stripe-background-hover: darken($table-stripe-background, 5);
   $table-padding: .75em 1em;
 
-  border: $table-border;
-  border-left: 0px;
   border-collapse: separate;
-  border-spacing: 0;
+  border-left: 0px;
   border-radius: $base-border-radius;
+  border-spacing: 0;
+  border: $table-border;
 
   tbody {
     background-color: $table-background;
+
     tr:hover > td, tr:hover > th {
       background-color: $table-hover-background;
     }
@@ -81,9 +82,13 @@
   thead {
     th {
       background-color: $table-header-background;
-      padding: $table-padding;
-      border-left: 1px solid $table-border-color;
       border-bottom: 0px;
+      border-left: 1px solid $table-border-color;
+      padding: $table-padding;
+
+      &:first-child {
+        border-left: none;
+      }
     }
   }
 
@@ -91,24 +96,28 @@
     background-color: $table-background;
 
     td {
-      padding: $table-padding;
+      border-bottom: 0px;
       border-left: 1px solid $table-border-color;
       border-top: 1px solid $table-border-color;
-      border-bottom: 0px;
+      padding: $table-padding;
+
+      &:first-child {
+        border-left: none;
+      }
 
       button {
         @include button(flat, $base-accent-color);
-        padding: 0 1em;
-        font-size: .7em;
-        margin-right: 0.5em;
         display: inline-block;
-        width: 100%;
+        font-size: .7em;
         margin-bottom: .3em;
+        margin-right: 0.5em;
         outline: none;
+        padding: 0 1em;
+        width: 100%;
 
         @include media($medium-screen) {
-          width: auto;
           margin-bottom: 0;
+          width: auto;
         }
 
         @include media($large-screen) {

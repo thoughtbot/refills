@@ -12,33 +12,33 @@
   $horizontal-angle: 90deg;
 
   -webkit-font-smoothing: antialiased;
-  position: relative;
   line-height: 0;
+  position: relative;
   width: 100%;
 
   img {
-   width: 100%;
    height: auto;
+   left: 0; 
    position: relative;
    top: 0;
-   left: 0; 
+   width: 100%;
   }
 
   .copy {
-    position: absolute;
-    top: 50%;
+    @include transform(translate(-50%, -50%));
     left: 50%;
     margin: auto;
-    z-index: 999;
+    position: absolute;
     text-align: center;
-    @include transform(translate(-50%, -50%));
+    top: 50%;
+    z-index: 999;
 
     p {
+      color: white;
+      font-weight: 800;
       line-height: 1.5em;
       padding: 1em 2em;
       position: relative;
-      color: white;
-      font-weight: 800;
     }
   }
 
@@ -49,11 +49,11 @@
     @include position(absolute, 0px 0px 0px 0px);
 
     &:after {
-      content: '';
       @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
         transparentize($image-gradient-color-right, $transparency-right));
-      display: block;
       @include position(absolute, 0px 0px 0px 0px);
+      content: '';
+      display: block;
     }
   }
 }

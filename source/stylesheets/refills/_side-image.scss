@@ -1,11 +1,11 @@
 .side-image {  
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-line-height: 1.5em;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
-  $dark-gray: #333;
-  $large-screen: em(860);
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-line-height: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
 
   button {
@@ -21,9 +21,10 @@
 
   $side-image-background-top: #B5EBEB;
   $side-image-background-bottom: #5DAC5D;
+  $side-image-content-background: #F9F9F9;
   $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, .8), 30);
 
-  background: #F9F9F9;
+  background: $side-image-content-background;
 
   @include media($large-screen) {
     @include row(table);
@@ -32,8 +33,8 @@
   .images-wrapper {
     @include background(url('https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
     background-color: $side-image-background-top;
-    border-bottom: $side-image-border;
     background-size: cover;
+    border-bottom: $side-image-border;
     display: block;
     min-height: 12em;
     padding: 3em;

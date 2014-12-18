@@ -1,8 +1,8 @@
 .device-background {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-radius: 3px;
-  $base-accent-color: #477DCA;
-  $large-screen: em(860);
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-radius: 3px !default;
+  $base-accent-color: #477DCA !default;
+  $large-screen: em(860) !default;
   -webkit-font-smoothing: antialiased;
 
   button {
@@ -37,23 +37,23 @@
   @include background(url($device-image), linear-gradient($gradient-angle, $device-background-bottom, $device-background-top), no-repeat $device-background-top scroll);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
   min-height: 20em;
+  width: 100%;
 
   .device-text {
     color: $device-text-color;
     padding: 2em;
 
     @include media($large-screen) {
+      float: left;
       max-width: 50%;
       padding: 4em;
-      float: left;
     }
 
     h4 {
+      border-bottom: 1px solid transparentize($device-text-color, .7);
       margin-bottom: .5em;
       padding-bottom: .5em;
-      border-bottom: 1px solid transparentize($device-text-color, .7);
     }
 
     p {
@@ -79,29 +79,29 @@
         rotateX(0deg) 
         rotateY(-20deg) 
         rotateZ(-0deg));
-      display: block;
-      float: right;
-      margin-bottom: -12em;
-      margin-right: 5em;
-      padding: $device-padding-vertical 0;
-      width: $device-screen-width + (2 * $device-padding-horizontal);
-      border-radius: 2em;
       background: $device-background;
+      border-radius: 2em;
       box-shadow: 
         1px 0px lighten($device-backside-background, 20), 
         4px 0px lighten($device-backside-background, 2),
         7px 0px $device-backside-background,
         10px 0px $device-backside-background,
         13px 0px $device-backside-background;
-        z-index: 99999;
+      display: block;
+      float: right;
+      margin-bottom: -12em;
+      margin-right: 5em;
+      padding: $device-padding-vertical 0;
+      width: $device-screen-width + (2 * $device-padding-horizontal);
+      z-index: 99999;
 
       .screen {
         @include size($device-screen-width $device-screen-height);
         background-image: url($device-screen-image);
         background-size: cover;
+        border-radius: .2em;
         box-shadow: inset 0 1px 8px transparentize(black, .5);
         margin: auto;
-        border-radius: .2em;
       }
     }
   }

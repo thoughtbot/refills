@@ -3,12 +3,12 @@
 }
 
 .grid-items-lines {
-  // if you are using Bitters you can remove everything down to the commented line
-  $dark-gray: #333;
-  $light-gray: #DDD;
-  $medium-screen: em(640);
-  $large-screen: em(860);
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
 
   p {
@@ -18,6 +18,7 @@
   a {
     text-decoration: none;
   }
+
   //////////////////////////////////////////////
 
   $grid-items-background: $base-background-color;
@@ -33,15 +34,15 @@
     
   .grid-item {
     @include transition (all 0.2s ease-in-out);
-    height: $grid-item-height;
     background: $grid-item-background;
-    width: 100%;
-    overflow: hidden;
-    float: left;
-    padding: 2em;
-    border-right: $grid-item-border;
     border-bottom: $grid-item-border;
+    border-right: $grid-item-border;
     cursor: pointer;
+    float: left;
+    height: $grid-item-height;
+    overflow: hidden;
+    padding: 2em;
+    width: 100%;
 
     @include media($large-screen) {
       @include grid-item-columns($grid-item-columns);
@@ -67,6 +68,7 @@
 
   .grid-item p {
       color: transparentize($grid-item-color, .4);
+      
       @include media($medium-screen) {
         max-width: 70%;
       }
@@ -85,19 +87,19 @@
 
   // this, below, might not be the most beautiful solution but it removes the outer borders by using the background color.
   .bottom-cover {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 3px;
     background: $grid-items-background;
+    bottom: 0px;
+    height: 3px;
+    position: absolute;
+    width: 100%;
   }
 
   .right-cover {
+    background: $grid-items-background;
+    height: 100%;
     position: absolute;
     right: 0px;
-    height: 100%;
     width: 4px;
-    background: $grid-items-background;
   }
 }
 

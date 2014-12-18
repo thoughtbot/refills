@@ -1,10 +1,11 @@
 .centered-navigation {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-radius: 3px;
-  $dark-gray: #333;
-  $large-screen: em(860);
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-radius: 3px !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
+  
   //////////////////////////////////////////////
 
   $centered-navigation-padding: 1em;
@@ -52,8 +53,8 @@
     line-height: $centered-navigation-height;
     margin: 0;
     padding-right: $centered-navigation-submenu-padding;
-    text-transform: uppercase;
     text-decoration: none;
+    text-transform: uppercase;
 
     @include media ($horizontal-bar-mode) {
       display: none;
@@ -112,9 +113,9 @@
     z-index: 9999;
 
     a {
-      text-decoration: none;
       color: $centered-navigation-color;
       display: inline-block;
+      text-decoration: none;
 
       &:hover {
         color: $centered-navigation-color-hover;
@@ -246,10 +247,10 @@
       }
 
       a {
-        text-decoration: none;
         background-color: darken($centered-navigation-background, 3);
         display: inline-block;
         text-align: right;
+        text-decoration: none;
         width: 100%;
 
         @include media($horizontal-bar-mode) {

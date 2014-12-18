@@ -1,8 +1,9 @@
 .browsers {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-radius: 3px;
-  $base-background-color: white;
-  $large-screen: em(860);
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $large-screen: em(860) !default;
+  
   //////////////////////////////////////////////
 
   $browser-top-bar-height: 1.5em;
@@ -35,10 +36,10 @@
   }
 
   .browser-circle {
+    @include size($browser-circle-size);
     border-radius: $browser-circle-size * 2;
     box-shadow: 0 1px 0px transparentize(white, .5), inset 0 1px 1px transparentize(black, 0.8);
     display: inline-block;
-    @include size($browser-circle-size);
     margin: $browser-circle-margin 0;
   }
 

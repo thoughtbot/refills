@@ -1,8 +1,8 @@
 .hero {  
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-radius: 3px;
-  $base-accent-color: #477DCA;
-  $large-screen: em(860);
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-radius: 3px !default;
+  $base-accent-color: #477DCA !default;
+  $large-screen: em(860) !default;
   -webkit-font-smoothing: antialiased;
 
   button {
@@ -18,9 +18,8 @@
   $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
 
   @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-
-  background-repeat: no-repeat;
   background-position: top;
+  background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 3em;
 
@@ -32,10 +31,10 @@
   .hero-inner {
     @include outer-container;
     @include clearfix;
-    padding: 3.5em;
-    margin: auto;
-    text-align: center;
     color: $hero-color;
+    margin: auto;
+    padding: 3.5em;
+    text-align: center;
 
     .hero-copy {
       text-align: center;
@@ -50,10 +49,9 @@
       }
 
       p {
-        margin: auto;
-        margin-bottom: 3em; 
         font-weight: 200;
         line-height: 1.4em;
+        margin: 0 auto 3em auto; 
 
         @include media($large-screen) {
           font-size: 1.1em;

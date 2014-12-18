@@ -1,10 +1,10 @@
 .search-bar {  
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-color: gainsboro;
-  $base-border-radius: 3px;
-  $base-line-height: 1.5em;
-  $base-accent-color: #477DCA;
-  $dark-gray: #333;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $dark-gray: #333 !default;
   -webkit-font-smoothing: antialiased;
 
   //////////////////////////////////////////////
@@ -13,8 +13,8 @@
   $search-bar-border: 1px solid $search-bar-border-color;
   $search-bar-background: lighten($search-bar-border-color, 10);
 
-  position: relative; 
   display: inline-block;
+  position: relative; 
 
   input {
     @include box-sizing(border-box);
@@ -43,9 +43,9 @@
     button[type=submit] {
       @include button(flat, $base-accent-color);
       @include position(absolute, 0em 0em 0em null);
-      outline: none;
-      border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      outline: none;
       padding: 5px 10px;
 
       img {

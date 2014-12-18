@@ -1,14 +1,14 @@
 article.type-system-traditional {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-radius: 3px;
-  $base-line-height: 1.5em;
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
-  $dark-gray: #333;
-  $light-gray: #DDD;
-  $medium-screen: em(640);
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
 
   h1, h2, h3, p {
@@ -29,8 +29,8 @@ article.type-system-traditional {
   }
 
   a {
-    text-decoration: none;
     color: $base-link-color;
+    text-decoration: none;
   }
 
   //////////////////////////////////////////////
@@ -77,13 +77,13 @@ article.type-system-traditional {
   }
 
   code {
-    white-space: nowrap;
     background: #F7F7F7;
-    border: 1px solid #E0E0E0;
     border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
+    border: 1px solid #E0E0E0;
     font-size: .75em;
     font-style: normal;
+    padding: .1em .4em;
+    white-space: nowrap;
   }
 
   h2 code {
@@ -109,8 +109,8 @@ article.type-system-traditional {
   p {
     font-family: $sans-serif;
     letter-spacing: 1;
-    margin-bottom: 1.5em;
     line-height: 1.55em;
+    margin-bottom: 1.5em;
 
     span {
       font-family: $serif;
@@ -122,19 +122,19 @@ article.type-system-traditional {
   a.read-more {
     display: inline-block;
     font-family: $sans-serif;
-    font-weight: 700;
     font-size: .8em;
-    text-transform: uppercase;
+    font-weight: 700;
     margin-left: .2em;
     position: relative;
+    text-transform: uppercase;
 
     span {
       font-family: $sans-serif;
+      font-size: 1.5em;
       font-style: normal;
       position: absolute;
-      font-size: 1.5em;
-      top: -1px;
       right: -12px;
+      top: -1px;
     }
   }
 

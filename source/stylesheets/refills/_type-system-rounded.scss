@@ -1,14 +1,14 @@
 article.type-system-rounded {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-border-radius: 3px;
-  $base-line-height: 1.5em;
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
-  $dark-gray: #333;
-  $light-gray: #DDD;
-  $medium-screen: em(640);
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
 
   h1, h2, h3, p {
@@ -29,8 +29,8 @@ article.type-system-rounded {
   }
 
   a {
-    text-decoration: none;
     color: $base-link-color;
+    text-decoration: none;
   }
 
   //////////////////////////////////////////////
@@ -76,14 +76,14 @@ article.type-system-rounded {
   }
 
   code {
-    white-space: nowrap;
-    font-family: monaco;
     background: #F7F7F7;
-    border: 1px solid #E0E0E0;
     border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
+    border: 1px solid #E0E0E0;
+    font-family: monaco;
     font-size: .7em;
     font-style: normal;
+    padding: .1em .4em;
+    white-space: nowrap;
   }
 
 
@@ -104,32 +104,32 @@ article.type-system-rounded {
 
   p {
     font-family: $sans-serif;
-    line-height: 1.4em;
     font-size: 1.05em;
     font-weight: 300;
+    line-height: 1.4em;
     margin-bottom: 1.5em;
 
     span {
       font-family: $sans-serif-2;
-      text-transform: uppercase;
       font-size: 0.8em;
+      text-transform: uppercase;
     }
   }
 
   a.read-more {
     display: inline-block;
     font-family: $sans-serif-2;
-    font-weight: 700;
     font-size: .8em;
-    text-transform: uppercase;
+    font-weight: 700;
     margin-left: .2em;
     position: relative;
+    text-transform: uppercase;
 
     span {
-      position: absolute;
       font-size: 1.5em;
-      top: -1px;
+      position: absolute;
       right: -12px;
+      top: -1px;
     }
   }
   

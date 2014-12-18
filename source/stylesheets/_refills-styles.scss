@@ -163,8 +163,8 @@ body {
 //////////////////////////////////////////////////////////////////
 
 ul.refills-menu {
-  $medium-screen: em(640);
-  $large-screen: em(860);
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
   font-weight: normal;
   margin-bottom: 5em;
   margin: -3.3em auto 0 auto;
@@ -403,7 +403,7 @@ pre[class*="language-"] {
 }
 
 .snippet {
-  $medium-screen: em(640);
+  $medium-screen: em(640) !default;
 
   a {
     text-decoration: none;
@@ -429,8 +429,8 @@ pre[class*="language-"] {
 //////////////////////////////////////////////////////////////////
 
 footer.refills-footer {
-  $medium-screen: em(640);
-  $large-screen: em(860);
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
   color: silver;
   padding-bottom: 2em;
   padding-top: 1em;
@@ -457,7 +457,7 @@ footer.refills-footer {
   }
 
   .footer-links {
-    $medium-screen: em(640);
+    $medium-screen: em(640) !default;
     background: #F3F3F3;
     border-radius: 3em;
     box-shadow: inset 0 1px 2px darken(#F3F3F3, 6);

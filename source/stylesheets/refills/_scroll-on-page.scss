@@ -1,12 +1,12 @@
 .scroll-on-page {
-  // if you are using Bitters you can remove everything down to the commented line
-  $base-line-height: 1.5em;
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
-  $dark-gray: #333;
-  $large-screen: em(860);
-  $base-font-color: $dark-gray;
+  // if you are using bitters.io you can remove everything down to the commented line
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
 
   p {
@@ -15,8 +15,8 @@
   }
 
   a {
-    text-decoration: none;
     color: $base-link-color;
+    text-decoration: none;
   }
 
   //////////////////////////////////////////////
@@ -29,9 +29,9 @@
 
   .scroll-on-page-link {
     border-bottom: 1px solid transparentize($base-link-color, .8);
-    padding: $base-spacing / 2 0;
-    margin-right: $base-spacing;
     display: block;
+    margin-right: $base-spacing;
+    padding: $base-spacing / 2 0;
 
     &:last-child {
       margin-bottom: $base-spacing;
