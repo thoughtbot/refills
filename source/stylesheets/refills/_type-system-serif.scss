@@ -1,4 +1,40 @@
 article.type-system-serif {
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-radius: 3px;
+  $base-line-height: 1.5em;
+  $base-spacing: 1.5em;
+  $base-accent-color: #477DCA;
+  $base-link-color: $base-accent-color;
+  $dark-gray: #333;
+  $light-gray: #DDD;
+  $medium-screen: em(640);
+  $base-font-color: $dark-gray;
+  -webkit-font-smoothing: antialiased;
+
+  h1, h2, h3, p {
+    margin: 0;
+  }
+
+  hr {
+    border-bottom: 1px solid $light-gray;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: $base-spacing 0;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    text-decoration: none;
+    color: $base-link-color;
+  }
+
+  //////////////////////////////////////////////
+
   $serif: 'Lusitana', serif;
   $serif-2: 'Merriweather', serif;
   $sans-serif: 'Merriweather Sans', sans-serif;
