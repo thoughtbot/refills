@@ -66,16 +66,20 @@ section.inner-content {
 }
 
 .er_toc {
+  $base-line-height: 1.5em;
+
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
   @include transform(translateX(-220px));
   @include transition(all .2s linear);
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
   background: black;
   z-index: 999999;
 
   ul {
+    margin: 0;
     padding: 1em;
   }
 
@@ -83,6 +87,7 @@ section.inner-content {
     a {
       color: white;
       font-weight: 300;
+      line-height: $base-line-height;
       font-size: 1em;
       text-decoration: none;
 
