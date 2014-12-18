@@ -1,24 +1,31 @@
-$sliding-menu-border-color: $dark-gray;
-$sliding-menu-background: lighten($sliding-menu-border-color, 5);
-$sliding-menu-color: #fff;
-$sliding-menu-border: 1px solid $sliding-menu-border-color;
-$sliding-menu-background-hover: $base-accent-color;
-$sliding-menu-color-hover: #fff;
+.sliding-menu-content {  
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-accent-color: #477DCA;
+  $dark-gray: #333;
+  -webkit-font-smoothing: antialiased;
 
-.sliding-menu-button {
-  display: inline-block;
-  cursor: pointer;
-  font-size: $base-font-size;
-  margin-bottom: $base-line-height;
-  position: relative;
-  outline: none;
-
-  img {
-    height: 1.3em;
+  ul {
+    padding: 0;
+    margin: 0;
   }
-}
 
-.sliding-menu-content {
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+//////////////////////////////////////////////
+
+  $sliding-menu-border-color: $dark-gray;
+  $sliding-menu-background: lighten($sliding-menu-border-color, 5);
+  $sliding-menu-color: #fff;
+  $sliding-menu-border: 1px solid $sliding-menu-border-color;
+  $sliding-menu-background-hover: $base-accent-color;
+  $sliding-menu-color-hover: #fff;
+
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
   @include transform(translateX(-220px));
@@ -46,10 +53,10 @@ $sliding-menu-color-hover: #fff;
   }
 }
 
-.menu-screen {
+.sliding-menu-fade-screen {
   @include position(fixed, 0px 0px 0px 0px);
   @include transition;
-  background: $sliding-menu-border-color;
+  background: black;
   opacity: 0;
   visibility: hidden;
   z-index: 999998;
@@ -57,6 +64,19 @@ $sliding-menu-color-hover: #fff;
   &.is-visible {
     opacity: .4;
     visibility: visible;
+  }
+}
+
+.sliding-menu-button {
+  @include button(flat, #477DCA);
+  padding: 10px 16px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+
+  img {
+    height: 1.3em;
   }
 }
 
