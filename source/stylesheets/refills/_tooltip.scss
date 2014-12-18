@@ -1,4 +1,19 @@
-.tooltip-item {
+.tooltip-item {  
+  // if you are using Bitters you can remove everything down to the commented line
+  $base-border-color: gainsboro;
+  $base-border-radius: 3px;
+  $base-line-height: 1.5em;
+  $dark-gray: #333;
+  $base-font-color: $dark-gray;
+
+  p {
+    margin: 0;
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  //////////////////////////////////////////////
+
   $tooltip-background: white;
   $tooltip-color: $base-font-color;
   $tooltip-width: 16em;
@@ -36,7 +51,6 @@
     visibility: hidden;
     min-width: $tooltip-width;
     z-index: 10;
-    font-family: $serif;
 
     p {
       margin-bottom: 0;
