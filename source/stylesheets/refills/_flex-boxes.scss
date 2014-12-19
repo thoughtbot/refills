@@ -1,6 +1,7 @@
 .flex-boxes {
   // if you are using bitters.io you can remove everything down to the commented line
   $base-border-radius: 3px !default;
+  $base-background-color: white !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $base-font-color: $dark-gray !default;
@@ -10,7 +11,7 @@
     text-decoration: none;
   }
   
-  //////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////
 
   $flex-box-border-color: $light-gray;
   $flex-box-border: 1px solid $flex-box-border-color;

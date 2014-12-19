@@ -1,3 +1,5 @@
+$refills-body-background-color: white;
+
 nav.bourbon {
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
   -webkit-font-smoothing: antialiased;
@@ -21,55 +23,54 @@ nav.bourbon {
   }  
 }
 
-////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
 
 $refills-color: lighten(desaturate(teal, 60), 40);
 $refills-accent-color: #477DCA;
-$base-background-color: white;
 $refills-nav-height: 60px;
-$logo-color: #93E9BE;
+$refills-logo-color: #93E9BE;
 $refills-anchor-color: #F55481;
-$hero-background: #E7F1EC;
+$refills-hero-background: #E7F1EC;
 $refills-highlight-color: #BBB295; 
-$narrow-sans: 'Oswald', sans-serif;
-$white-shadow: 0 1px 1px transparentize(white, .6);
+$refills-narrow-sans: 'Oswald', sans-serif;
+$refills-white-shadow: 0 1px 1px transparentize(white, .6);
 
 $refills-serif: 'Lusitana', serif;
 $refills-second-serif: georgia;
 
 @mixin refills-inset {
-  background: darken($hero-background, 2);
-  box-shadow: inset 0 1px 2px darken($hero-background, 7), $white-shadow;
-  text-shadow: $white-shadow;
+  background: darken($refills-hero-background, 2);
+  box-shadow: inset 0 1px 2px darken($refills-hero-background, 7), $refills-white-shadow;
+  text-shadow: $refills-white-shadow;
 }
 
 body {
   -webkit-backface-visibility: hidden;
-  background-color: $base-background-color; 
+  background: $refills-body-background-color;
   min-width: 320px;
 }
 
 // Header & Hero
-//////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .refills-header {
-  $medium-screen: em(640);
-  $large-screen: em(860);
+  $refills-medium-screen: em(640);
+  $refills-large-screen: em(860);
   @extend .refills-header;
   @include clearfix;
-  background-color: $hero-background;
+  background-color: $refills-hero-background;
   clear: both;
   margin-bottom: 1em;
   padding: 5em 0;
   text-align: center;
   width: 100%;
 
-  @include media($medium-screen) {
+  @include media($refills-medium-screen) {
     margin-bottom: 4em;
     padding: 6em 0;
   }
 
-  @include media($large-screen) {
+  @include media($refills-large-screen) {
     margin-bottom: 4em;
     padding: 6em 0 11em 0;
   }
@@ -78,7 +79,7 @@ body {
     display: inline-block;
     margin: 0 auto 1.4em auto;
 
-    @include media($medium-screen) {
+    @include media($refills-medium-screen) {
       max-width: 8em;
       max-height: 8em;
     }
@@ -91,7 +92,7 @@ body {
       max-width: 5em;
       max-height: 5em;
 
-      @include media($medium-screen) {
+      @include media($refills-medium-screen) {
         margin-bottom: 2em;
         max-width: 8em;
         max-height: 8em;
@@ -109,13 +110,13 @@ body {
     text-align: center;
     line-height: 1.4em;
 
-    @include media($medium-screen) {
+    @include media($refills-medium-screen) {
       font-size: 2em;
       margin-bottom: 1em;
       max-width: 90%;
     }
 
-    @include media($large-screen) {
+    @include media($refills-large-screen) {
       font-size: 3em;
       margin-bottom: .8em;
       line-height: 1.3em;
@@ -142,14 +143,14 @@ body {
   p {
     @include refills-inset;
     border-radius: 30px;
-    color: darken(desaturate($logo-color, 50), 15);
+    color: darken(desaturate($refills-logo-color, 50), 15);
     display: inline;
-    font-family: $narrow-sans;
+    font-family: $refills-narrow-sans;
     font-size: .8em;
     font-weight: 400;
     padding: .5em 1.4em;
 
-    @include media($large-screen) {
+    @include media($refills-large-screen) {
       font-size: .8em;
     }
   }
@@ -160,21 +161,21 @@ body {
 }
 
 // Refill menu 
-//////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ul.refills-menu {
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
+  $refills-medium-screen: em(640) !default;
+  $refills-large-screen: em(860) !default;
   font-weight: normal;
   margin-bottom: 5em;
   margin: -3.3em auto 0 auto;
   text-align: center;
 
-  @include media($medium-screen) {
+  @include media($refills-medium-screen) {
     margin: -6em auto 0 auto;
   }
 
-  @include media($large-screen) {
+  @include media($refills-large-screen) {
     margin: -6.7em auto 0 auto;
   }
 
@@ -184,49 +185,49 @@ ul.refills-menu {
     a {
       text-decoration: none;
       border-radius: 3px;
-      color: darken($hero-background, 20);
+      color: darken($refills-hero-background, 20);
       font-family: 'Lusitana', serif;
       font-size: .9em;
       padding: .5em .5em 2em;
 
-      @include media($medium-screen) {
+      @include media($refills-medium-screen) {
         font-size: 1.1em;
         padding: .5em .8em 2em;
       }
 
-      @include media($large-screen) {
+      @include media($refills-large-screen) {
         font-size: 1.3em;
         padding: .5em 1.3em 2em;
       }
 
       &:hover {
-        color: darken($hero-background, 30);      
+        color: darken($refills-hero-background, 30);      
       }
     }
   }
 }
 
 .refills-patterns li.patterns a {
-  background: $base-background-color;
+  background: $refills-body-background-color;
 
   &:hover {
-    color: darken($hero-background, 20);
+    color: darken($refills-hero-background, 20);
   }
 }
 
 .refills-components li.components a {
-  background: $base-background-color;
+  background: $refills-body-background-color;
 
   &:hover {
-    color: darken($hero-background, 20);
+    color: darken($refills-hero-background, 20);
   }
 }
 
 .refills-type-systems li.type-systems a {
-  background: $base-background-color;
+  background: $refills-body-background-color;
 
   &:hover {
-    color: darken($hero-background, 20);
+    color: darken($refills-hero-background, 20);
   }
 }
 
@@ -235,7 +236,7 @@ ul.refills-menu {
 }
 
 // Refill section 
-//////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 section.refill {
   @include clearfix;
@@ -288,7 +289,7 @@ section.refill {
   background: white;
   color: gray;
   display: inline-block;
-  font-family: $narrow-sans;
+  font-family: $refills-narrow-sans;
   font-size: 1em;
   font-weight: 500;
   padding: 0 10px;
@@ -303,7 +304,7 @@ section.refill {
 }
 
 // Hiding and showing code
-//////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .js-hide-code, 
 .js-show-code {
@@ -342,7 +343,7 @@ section.refill {
 }
 
 // Snippet
-//////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .refill-snippet {
   margin-top: 4.5em;
@@ -403,13 +404,13 @@ pre[class*="language-"] {
 }
 
 .snippet {
-  $medium-screen: em(640) !default;
+  $refills-medium-screen: em(640) !default;
 
   a {
     text-decoration: none;
   }
 
-  @include media($medium-screen) {
+  @include media($refills-medium-screen) {
     margin-bottom: 2em;
   }
 
@@ -426,11 +427,11 @@ pre[class*="language-"] {
 }
 
 // Footer
-//////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 footer.refills-footer {
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
+  $refills-medium-screen: em(640) !default;
+  $refills-large-screen: em(860) !default;
   color: silver;
   padding-bottom: 2em;
   padding-top: 1em;
@@ -457,7 +458,7 @@ footer.refills-footer {
   }
 
   .footer-links {
-    $medium-screen: em(640) !default;
+    $refills-medium-screen: em(640) !default;
     background: #F3F3F3;
     border-radius: 3em;
     box-shadow: inset 0 1px 2px darken(#F3F3F3, 6);
@@ -466,7 +467,7 @@ footer.refills-footer {
     margin-bottom: 2em;
     padding: .6em; 
 
-    @include media($large-screen) {
+    @include media($refills-large-screen) {
       font-size: 1em;
       padding: 1em;
     }
@@ -488,19 +489,19 @@ footer.refills-footer {
 }
 
 // Adjustments
-//////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .refill-smaller {
-  $large-screen: em(640);
+  $refills-large-screen: em(640);
 
-  @include media($large-screen) {
+  @include media($refills-large-screen) {
     margin: auto;
     width: 70%;
   }
 }
 
 // Type Systems
-//////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @include keyframes(fadeInAccordionTabsArticles) {
   0% { opacity: 0; }
@@ -508,30 +509,29 @@ footer.refills-footer {
 }
 
 .accordion-tabs-type-systems {
-  $base-border-color: gainsboro;
-  $base-border-radius: 3px;
-  $base-background-color: white;
-  $base-spacing: 1.5em;
-  $base-accent-color: #477DCA;
-  $base-link-color: $base-accent-color;
+  $refills-border-color: gainsboro;
+  $refills-border-radius: 3px;
+  $refills-spacing: 1.5em;
+  $refills-accent-color: #477DCA;
+  $refills-link-color: $refills-accent-color;
   $dark-gray: #333;
   $light-gray: #DDD;
-  $base-line-height: 1.5em;
-  $medium-screen: em(640);
-  $large-screen: em(860);
+  $refills-line-height: 1.5em;
+  $refills-medium-screen: em(640);
+  $refills-large-screen: em(860);
 
-  $tab-border-color: $base-border-color;
+  $tab-border-color: $refills-border-color;
   $tab-border: 1px solid $tab-border-color;
   $tab-content-background: lighten($light-gray, 15);
   $tab-active-background: $tab-content-background;
-  $tab-inactive-color: $base-background-color;
+  $refills-body-inactive-color: $refills-body-background-color;
   $tab-inactive-hover-color: darken($light-gray, 5);
-  $tab-mode: $medium-screen;
+  $tab-mode: $refills-medium-screen;
 
   @include clearfix;
-  border-radius: $base-border-radius;
+  border-radius: $refills-border-radius;
   border: $tab-border;
-  margin-bottom: $base-spacing;
+  margin-bottom: $refills-spacing;
  
   @include media($tab-mode) {
     border: none;
@@ -543,13 +543,13 @@ footer.refills-footer {
     }
  
     &:first-child .tab-link {
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
+      border-top-left-radius: $refills-border-radius;
+      border-top-right-radius: $refills-border-radius;
     }
  
     &:last-child .tab-link {
-      border-bottom-left-radius: $base-border-radius;
-      border-bottom-right-radius: $base-border-radius;
+      border-bottom-left-radius: $refills-border-radius;
+      border-bottom-right-radius: $refills-border-radius;
  
       @include media($tab-mode) {
         border-bottom-left-radius: 0;
@@ -565,18 +565,18 @@ footer.refills-footer {
       font-size: .9em;
       font-weight: 200;
       letter-spacing: .6px;
-      padding: $base-spacing/2 $gutter/2;
+      padding: $refills-spacing/2 $gutter/2;
       text-align: center;
  
       @include media($tab-mode) {
         display: inline-block;
         border-bottom: 0;
-        border-top-left-radius: $base-border-radius;
-        border-top-right-radius: $base-border-radius;
+        border-top-left-radius: $refills-border-radius;
+        border-top-right-radius: $refills-border-radius;
       }
  
       &:hover {
-        color: $base-link-color;
+        color: $refills-link-color;
       }
  
       &:focus {
@@ -585,20 +585,20 @@ footer.refills-footer {
     }
  
     section {
-      padding: $base-spacing $gutter;
+      padding: $refills-spacing $gutter;
       background: $tab-content-background;
       display: none;
       overflow: hidden;
-      padding: $base-line-height $gutter;
+      padding: $refills-line-height $gutter;
       width: 100%;
  
       @include media($tab-mode) {
-        border-bottom-left-radius: $base-border-radius;
-        border-bottom-right-radius: $base-border-radius;
+        border-bottom-left-radius: $refills-border-radius;
+        border-bottom-right-radius: $refills-border-radius;
         border-top: $tab-border;
         float: left;
         left: 0;
-        padding: $base-spacing/2 $gutter;
+        padding: $refills-spacing/2 $gutter;
       }
 
       .tab-content {

@@ -2,9 +2,8 @@
   // if you are using bitters.io you can remove everything down to the commented line
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
-  $large-screen: em(860) !default;
-  
-  //////////////////////////////////////////////
+  $large-screen: em(860) !default;  
+  ///////////////////////////////////////////////////////////////////////////////////
 
   $browser-top-bar-height: 1.5em;
   $browser-circle-size: .5em; 
@@ -58,7 +57,7 @@
     margin-left: $browser-circle-margin / 3;
   }
 
-  //////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////
 
   .browser {
     border-bottom: none;
@@ -135,9 +134,10 @@
   }
 
 }
-//////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 .cover {
+  $base-background-color: white !default;
   background: $base-background-color;
   border-top: 1px solid #E6E6E6;
   height: 3.2em;

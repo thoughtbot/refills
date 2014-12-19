@@ -28,7 +28,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  //////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////
 
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
@@ -71,20 +71,16 @@
         @include button(flat, $base-accent-color);
         display: inline-block;
         font-size: .7em;
+        line-height: $base-line-height;
         margin-bottom: .3em;
         margin-right: 0.5em;
         outline: none;
-        padding: 0 1em;
+        padding: .3em 1em;
         width: 100%;
 
         @include media($medium-screen) {
-          font-size: .8em;
           margin-bottom: 0;
           width: auto;
-        }
-
-        @include media($large-screen) {
-          font-size: .8em;
         }
       }
     }

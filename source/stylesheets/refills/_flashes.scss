@@ -4,8 +4,7 @@ $error-color: #FBE3E4 !default;
 $success-color: #E6EFC2 !default;
 $notice-color: #E5EDF8 !default;
 $base-spacing: 1.5em !default;
-
-//////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 @mixin flash($color) {
   -webkit-font-smoothing: antialiased;

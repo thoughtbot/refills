@@ -5,6 +5,7 @@
 .grid-items {
   // if you are using bitters.io you can remove everything down to the commented line
   $base-accent-color: #477DCA !default;
+  $base-background-color: white !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   -webkit-font-smoothing: antialiased;
@@ -17,7 +18,7 @@
     text-decoration: none;
   }
 
-  //////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////
 
   $grid-items-background: $base-background-color;
   $grid-item-background: desaturate($base-accent-color, 30); 

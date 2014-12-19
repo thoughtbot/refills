@@ -5,14 +5,14 @@
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
   $base-font-size: 1em !default;
+  $base-background-color: white !default;
   $base-accent-color: #477DCA !default;
   $base-link-color: $base-accent-color !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;
-
-  //////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////
 
   $button-group-background: $base-background-color;
   $button-group-color: lighten($base-font-color, 30);

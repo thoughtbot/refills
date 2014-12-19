@@ -4,6 +4,7 @@
 
 .grid-items-lines {
   // if you are using bitters.io you can remove everything down to the commented line
+  $base-background-color: white !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
@@ -19,7 +20,7 @@
     text-decoration: none;
   }
 
-  //////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////
 
   $grid-items-background: $base-background-color;
   $grid-item-background: $base-background-color;

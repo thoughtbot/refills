@@ -1,12 +1,12 @@
 .progress-bar {
   // if you are using bitters.io you can remove everything down to the commented line
   $base-border-color: gainsboro !default;
+  $base-background-color: white !default;
   $base-border-radius: 3px !default;
   $base-accent-color: #477DCA !default;
   $base-link-color: $base-accent-color !default;
   -webkit-font-smoothing: antialiased;
-
-  //////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////
 
   $progress-border-color: $base-border-color;
   $progress-border: 1px solid $progress-border-color;

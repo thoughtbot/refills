@@ -2,6 +2,7 @@
   // if you are using bitters.io you can remove everything down to the commented line
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
+  $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
   $base-accent-color: #477DCA !default;
@@ -25,7 +26,7 @@
     color: $base-link-color;
   }
 
-  //////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////
 
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
