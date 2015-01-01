@@ -67,4 +67,4 @@ Whenever code for Refills is borrowed or inspired by existing code, we try to cr
 
 ## License
 
-Copyright © 2014 [thoughtbot, inc](http://thoughtbot.com). Refills is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
+Copyright © 2014–2015 [thoughtbot, inc](http://thoughtbot.com). Refills is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
