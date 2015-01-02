@@ -43,15 +43,15 @@
     }
 
     &:after {
-      @include position(absolute, null null null 46%);
+      @include position(absolute, null 0 null 0);
       margin-left: -$tooltip-arrow-width;
       border: $tooltip-arrow-width solid transparent;
       color: $tooltip-background;
       content: '▼';
       text-shadow: $tooltip-shadow;
       font-size: 1.4em;
-      pointer-events: none;
       bottom: $tooltip-arrow-distance-from-box;
+      text-align: center;
     }
   }
 }
