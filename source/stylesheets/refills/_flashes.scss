@@ -1,15 +1,12 @@
-///////////////////////////////////////////////////////////////////////////////////
-$alert-color: #FFF6BF !default;
-$error-color: #FBE3E4 !default;
-$success-color: #E6EFC2 !default;
-$notice-color: #E5EDF8 !default;
+$alert-color: #fff6bf !default;
+$error-color: #fbe3e4 !default;
+$notice-color: #e5edf8 !default;
+$success-color: #e6efc2 !default;
 $base-spacing: 1.5em !default;
-//////////////////////////////////////////////////////////////////////////////////
 
 @mixin flash($color) {
-  -webkit-font-smoothing: antialiased;
-  background: $color;
-  color: darken($color, 60);
+  background-color: $color;
+  color: darken($color, 60%);
   display: block;
   font-weight: bold;
   margin-bottom: $base-spacing / 2;
@@ -17,12 +14,13 @@ $base-spacing: 1.5em !default;
   text-align: center;
 
   a {
-    border-bottom: 1px solid transparentize(darken($color, 70), .7);
-    color: darken($color, 70);
+    border-bottom: 1px solid transparentize(darken($color, 70%), 0.7);
+    color: darken($color, 70%);
     text-decoration: none;
 
-    &:hover {
-      color: darken($color, 90);
+    &:hover,
+    &:focus {
+      color: darken($color, 90%);
     }
   }
 }
