@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Refills are prepackaged patterns and components, built on top of Bourbon, Bitters and Neat.">
+    <meta name="description" content="Refills are prepackaged patterns and components built with Bourbon, Neat and Bitters.">
     <title></title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800">
     <link href="../stylesheets/all.css" rel="stylesheet" type="text/css" />
@@ -103,7 +103,7 @@
   <div class="refills-logo">
     <img src="/images/refills-logo.svg" alt="Refills logo">
   </div>
-  <h2><span>Refills</span> are prepackaged patterns and components, built on top of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://bitters.bourbon.io/">Bitters</a>, and <a href="http://neat.bourbon.io/">Neat</a>.</h2>
+  <h2><span>Refills</span> are prepackaged patterns and components, built on top of <a href="http://www.bourbon.io">Bourbon</a> and <a href="http://neat.bourbon.io/">Neat</a>.</h2>
   <p>Managed by <a href="http://www.thoughtbot.com">thoughtbot</a>, instructions at <a href="https://github.com/thoughtbot/refills">GitHub</a></p>
 </div>
 
@@ -183,7 +183,37 @@
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.accordion {
+  <pre><code class="language-scss">.accordion {  
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
+
+  margin: 0;
+  padding: 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   $accordion-menu-border-color: $base-border-color;
   $accordion-menu-color: $base-font-color;
   $accordion-menu-border: 1px solid $accordion-menu-border-color;
@@ -203,8 +233,8 @@
 
     &gt; a {
       color: $accordion-menu-color;
-      padding: $accordion-menu-list-padding;
       display: block;
+      padding: $accordion-menu-list-padding;
     }
 
     &amp;:last-child {
@@ -287,7 +317,17 @@
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.badges {
+  <pre><code class="language-scss">.badges {  
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-font-size: 1em !default;
+  $base-line-height: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $medium-gray: #999 !default;
+  -webkit-font-smoothing: antialiased;
+  //////////////////////////////////////////////////////////////////////////////////
+
   $badge-background: $medium-gray;
   $badge-dark-color: $dark-gray;
   $badge-error-color: #FBE3E4;
@@ -300,10 +340,10 @@
   margin-bottom: $base-line-height;
 
   .badge {
-    display: inline-block;
     background: $badge-background;
     border-radius: 2em;
     color: $badge-font-color;
+    display: inline-block;
     font-size: $badge-font-size;
     font-weight: 600;
     line-height: 1;
@@ -373,7 +413,20 @@
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.breadcrumb { 
+  <pre><code class="language-scss">.breadcrumb {   
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $medium-gray: #999 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  -webkit-font-smoothing: antialiased;
+  //////////////////////////////////////////////////////////////////////////////////
+
   $breadcrumb-border-color: $base-border-color;
   $breadcrumb-border: 1px solid $breadcrumb-border-color;
   $breadcrumb-height: $base-spacing * 1.5;
@@ -385,33 +438,35 @@
   $breadcrumb-color-active: $breadcrumb-color;
 
   display: inline-block;
-  text-align: left;
   margin-bottom: $base-spacing;
+  text-align: left;
 
   a {
-    display: inline-block;
     background-color: $breadcrumb-background;
+    border-left: 0;
     border: $breadcrumb-border;
     color: $breadcrumb-color;
-    line-height: $breadcrumb-height;
-    margin-right: -5px;
+    display: inline-block;
     font-size: .8em;
+    line-height: $breadcrumb-height;
+    margin-bottom: 2px;
+    margin-right: -5px;
     padding: 0 $breadcrumb-height/4 0 $breadcrumb-height/2;
     position: relative;
     text-decoration: none;
-    margin-bottom: 2px;
 
     &amp;:first-child {
-      padding-left: $breadcrumb-height/2;
-      border-top-left-radius: $base-border-radius;
       border-bottom-left-radius: $base-border-radius;
+      border-left: $breadcrumb-border;
+      border-top-left-radius: $base-border-radius;
+      padding-left: $breadcrumb-height/2;
     }
 
     &amp;:last-child {
       background-color: $breadcrumb-background;
-      color: $breadcrumb-color-active;
       border-bottom-right-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
+      color: $breadcrumb-color-active;
       padding-right: $breadcrumb-height/2;
     }
 
@@ -521,7 +576,22 @@
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.button-group {
+  <pre><code class="language-scss">.button-group {  
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-font-size: 1em !default;
+  $base-background-color: white !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
+  //////////////////////////////////////////////////////////////////////////////////
+
   $button-group-background: $base-background-color;
   $button-group-color: lighten($base-font-color, 30);
   $button-group-border: 1px solid silver;
@@ -614,7 +684,8 @@
     <section id="dropdown" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Dropdown</h6></div>
-        <div class="dropdown">
+        <div class="refill-centering">
+          <div class="dropdown">
   <div class="dropdown-container">
     <p class="dropdown-description">Description</p>
     <p class="dropdown-button">Click to Select</p>
@@ -627,6 +698,7 @@
   </div>
 </div>
 
+        </div>
       </div>
       <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
@@ -654,132 +726,152 @@
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">$dropdown-color: $base-font-color;
-$dropdown-description-color: lighten($dropdown-color, 40);
-$dropdown-border: 1px solid silver;
-$dropdown-background: $base-background-color;
-$dropdown-background-hover: darken($dropdown-background, 3);
-$dropdown-inner-border: 1px solid silver;
-$dropdown-height: 40px;
-$dropdown-padding: 1em;
-$dropdown-distance-from-menu: 50px;
-$dropdown-arrow-top-distance: 0;
+  <pre><code class="language-scss">.dropdown {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-background-color: white !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
 
-.dropdown {
-  text-align: center;
-}
+  line-height: $base-line-height;
 
-.dropdown-container {
-  display: inline-block;
-  position: relative;
-}
-
-.dropdown-description {
-  background: $dropdown-background;
-  border-bottom-left-radius: $base-border-radius;
-  border-bottom: $dropdown-border;
-  border-left: $dropdown-border;
-  border-top-left-radius: $base-border-radius;
-  border-top: $dropdown-border;
-  color: $dropdown-description-color;
-  float: left;
-  font-size: .7em;
-  line-height: $dropdown-height;
-  margin-bottom: 0;
-  padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
-
-  @include media($large-screen) {
-    font-size: 1em;
+  ul {
+    padding: 0;
+    margin: 0;
   }
-}
 
-.dropdown-button {
-  background: $dropdown-background;
-  border-bottom-right-radius: $base-border-radius;
-  border-top-right-radius: $base-border-radius;
-  border-top: $dropdown-border;
-  border-right: $dropdown-border;
-  border-bottom: $dropdown-border;
-  cursor: pointer;
-  float: right;
-  font-size: .7em;
-  font-weight: 800;
-  line-height: $dropdown-height;
-  margin-bottom: 0;
-  padding: 0 ($dropdown-padding * 3.5) 0 ($dropdown-padding / 2);
-  position: relative;
+  li {
+    list-style: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
 
-  @include media($large-screen) {
-    font-size: 1em;
+  $dropdown-color: $base-font-color;
+  $dropdown-description-color: lighten($dropdown-color, 40);
+  $dropdown-border: 1px solid silver;
+  $dropdown-background: $base-background-color;
+  $dropdown-background-hover: darken($dropdown-background, 3);
+  $dropdown-inner-border: 1px solid silver;
+  $dropdown-height: 40px;
+  $dropdown-padding: 1em;
+  $dropdown-distance-from-menu: 50px;
+  $dropdown-arrow-top-distance: 0;
+
+  .dropdown-container {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+  }
+
+  .dropdown-description {
+    background: $dropdown-background;
+    border-bottom-left-radius: $base-border-radius;
+    border-bottom: $dropdown-border;
+    border-left: $dropdown-border;
+    border-top-left-radius: $base-border-radius;
+    border-top: $dropdown-border;
+    color: $dropdown-description-color;
+    float: left;
+    font-size: .7em;
+    line-height: $dropdown-height;
+    margin: 0;
+    padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
+
+    @include media($large-screen) {
+      font-size: 1em;
+    }
+  }
+
+  .dropdown-button {
+    background: $dropdown-background;
+    border-bottom-right-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+    border-top: $dropdown-border;
+    border-right: $dropdown-border;
+    border-bottom: $dropdown-border;
+    cursor: pointer;
+    float: right;
+    font-size: .7em;
+    font-weight: 800;
+    line-height: $dropdown-height;
+    margin: 0;
     padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+    position: relative;
+
+    @include media($large-screen) {
+      font-size: 1em;
+      padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+    }
+  }
+
+  .dropdown-button:hover{
+    background-color: $dropdown-background-hover;
+  }
+
+  .dropdown-button:after {
+    color: $base-font-color;
+    content: &quot;\25BE&quot;;
+    display: block;
+    position: absolute;
+    right: $dropdown-padding;
+    top: $dropdown-arrow-top-distance;
+  }
+
+  .dropdown-menu {
+    @include transition (all 0.2s ease-in-out);
+    background: $dropdown-background;
+    border-radius: $base-border-radius;
+    border: $dropdown-border;
+    box-shadow: 0 2px 2px transparentize(black, .8);
+    color: $dropdown-color;
+    cursor: pointer;
+    display: none;
+    overflow: show;
+    position: absolute;
+    right: 0;
+    top: $dropdown-distance-from-menu;
+    width: 228px;
+    z-index: 99999;
+
+    &amp;:before {
+      @include position(absolute, 0 1em 0 0);
+      color: $dropdown-background;
+      content: &quot;\25b2&quot;;
+      font-size: 1.4em;
+      pointer-events: none;
+      text-shadow: 0 -2px 2px transparentize(black, .7);
+      top: -.7em;
+    }
+  }
+
+  .dropdown-menu li {
+    border-bottom: $dropdown-inner-border;
+    color: $dropdown-color; 
+    padding: $dropdown-padding / 2;
+  }
+
+  .dropdown-menu li:hover {
+    background: $dropdown-background-hover;
+  }
+
+  .dropdown-menu li:first-child {
+    border-top-left-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+  }
+
+  .dropdown-menu li:last-child {
+    border: none;
+    border-bottom-left-radius: $base-border-radius;
+    border-bottom-right-radius: $base-border-radius;
+  }
+
+  .show-menu {
+    display: block;
   }
 }
-
-.dropdown-button:hover{
-  background-color: $dropdown-background-hover;
-}
-
-.dropdown-button:after {
-  color: $base-font-color;
-  content: &quot;\25BE&quot;;
-  display: block;
-  position: absolute;
-  right: $dropdown-padding;
-  top: $dropdown-arrow-top-distance;
-}
-
-.dropdown-menu {
-  @include transition (all 0.2s ease-in-out);
-  background: $dropdown-background;
-  border-radius: $base-border-radius;
-  border: $dropdown-border;
-  box-shadow: 0 2px 2px transparentize(black, .8);
-  color: $dropdown-color;
-  cursor: pointer;
-  display: none;
-  overflow: show;
-  position: absolute;
-  right: 0;
-  top: $dropdown-distance-from-menu;
-  width: 228px;
-  z-index: 99999;
-
-  &amp;:before {
-    @include position(absolute, 0 1em 0 0);
-    color: $dropdown-background;
-    content: &quot;\25b2&quot;;
-    font-size: 1.4em;
-    pointer-events: none;
-    text-shadow: 0 -2px 2px transparentize(black, .7);
-    top: -1em;
-  }
-}
-
-.dropdown-menu li {
-  border-bottom: $dropdown-inner-border;
-  color: $dropdown-color; 
-  padding: $dropdown-padding / 2;
-}
-
-.dropdown-menu li:hover {
-  background: $dropdown-background-hover;
-}
-
-.dropdown-menu li:first-child {
-  border-top-left-radius: $base-border-radius;
-  border-top-right-radius: $base-border-radius;
-}
-
-.dropdown-menu li:last-child {
-  border: none;
-  border-bottom-left-radius: $base-border-radius;
-  border-bottom-right-radius: $base-border-radius;
-}
-
-.show-menu {
-  display: block;
-}
-
 // Inspired by code by www.HUSAMUI.com
 </code></pre>
 </td>
@@ -839,40 +931,62 @@ $dropdown-arrow-top-distance: 0;
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">$expander-arrow-width: 5px;
-$expander-toggle-size: 1em;
-$expander-toggle-arrow-size: $expander-toggle-size;
-$expander-toggle-margin: 1em;
+  <pre><code class="language-scss">.expander {  
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-font-size: 1em !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
 
-.expander {
-  margin: auto;
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    color: $base-link-color;
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $expander-arrow-width: .7em;
+  $expander-toggle-size: 1em;
+  $expander-toggle-arrow-size: $expander-toggle-size;
+  $expander-toggle-margin: 1em;
+
   width: 60%;
-}
 
-.expander-trigger {
-  @include user-select(none);
-  border-bottom: 1px solid $light-gray;
-  cursor: pointer;
-  display: block;
-  font-size: $expander-toggle-size;
-  margin-bottom: $expander-toggle-size;
-  padding-bottom: $expander-toggle-size / 4;
+  .expander-trigger {
+    @include user-select(none);
+    border-bottom: 1px solid $light-gray;
+    cursor: pointer;
+    display: block;
+    font-size: $expander-toggle-size;
+    margin-bottom: $expander-toggle-size;
+    padding-bottom: $expander-toggle-size / 4;
 
-  &amp;:before {
-    content: '\25BC';
-    font-size: $expander-toggle-arrow-size;
-    margin-right: .5em;
+    &amp;:before {
+      font-size: $expander-arrow-width;
+      content: '\25BC';
+      margin-right: .5em;
+    }
   }
-}
 
-.expander-hidden {
-  &amp;:before {
-    content: '\25BA';
+  .expander-hidden {
+    &amp;:before {
+      font-size: $expander-arrow-width;
+      content: '\25BA';
+    }
   }
-}
 
-.expander-hidden + .expander-content {
-  display: none;
+  .expander-hidden + .expander-content {
+    display: none;
+  }
 }
 </code></pre>
 </td>
@@ -931,6 +1045,24 @@ $expander-toggle-margin: 1em;
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.fade-in-element {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
+
+  line-height: $base-line-height;
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   @include clearfix;
   background: $base-background-color;
   border-radius: $base-border-radius;
@@ -940,6 +1072,7 @@ $expander-toggle-margin: 1em;
   padding: $base-spacing;
   text-align: center;
   width: 100%;
+
 }
 
 .js-fade-element-hide {
@@ -1035,17 +1168,28 @@ $expander-toggle-margin: 1em;
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">@mixin flash($color) {
+  <pre><code class="language-scss">///////////////////////////////////////////////////////////////////////////////////
+$alert-color: #FFF6BF !default;
+$error-color: #FBE3E4 !default;
+$success-color: #E6EFC2 !default;
+$notice-color: #E5EDF8 !default;
+$base-spacing: 1.5em !default;
+//////////////////////////////////////////////////////////////////////////////////
+
+@mixin flash($color) {
+  -webkit-font-smoothing: antialiased;
+  background: $color;
+  color: darken($color, 60);
   display: block;
   font-weight: bold;
   margin-bottom: $base-spacing / 2;
   padding: $base-spacing / 2;
-  background: $color;
-  color: darken($color, 60);
+  text-align: center;
 
   a {
-    color: darken($color, 70);
     border-bottom: 1px solid transparentize(darken($color, 70), .7);
+    color: darken($color, 70);
+    text-decoration: none;
 
     &amp;:hover {
       color: darken($color, 90);
@@ -1082,15 +1226,14 @@ $expander-toggle-margin: 1em;
         <div class="line-behind-text"><h6>Hover Tile Animation</h6></div>
         <div class="refill-centering"><div class="hover-tile-outer">
   <div class="hover-tile-container">
-    <div class="hover-tile hover-tile-visible">
-      Hover
-    </div>
+    <div class="hover-tile hover-tile-visible"></div>
     <div class="hover-tile hover-tile-hidden">
       <h4>Hidden Copy</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.</p>
+      <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
     </div>
   </div>
-</div></div>
+</div>
+</div>
       </div>
       <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
@@ -1103,30 +1246,44 @@ $expander-toggle-margin: 1em;
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;hover-tile-outer&quot;&gt;
   &lt;div class=&quot;hover-tile-container&quot;&gt;
-    &lt;div class=&quot;hover-tile hover-tile-visible&quot;&gt;
-      Hover
-    &lt;/div&gt;
+    &lt;div class=&quot;hover-tile hover-tile-visible&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;hover-tile hover-tile-hidden&quot;&gt;
       &lt;h4&gt;Hidden Copy&lt;/h4&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, hic, dolore, labore,provident eligendi fugiat ad exercitationem.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
 </td>
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.hover-tile-outer {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-line-height: 1.5em !default;
+  $medium-screen: em(640) !default;
+  -webkit-font-smoothing: antialiased;
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    line-height: $base-line-height;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   $hover-tile-height: 10em;
 
+  background: url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot;);
+  background-position: top;
   background-size: cover;
-  background-position: bottom;
-  background: url(&quot;/images/mountains.png&quot;);
-  background-color: $base-accent-color;
+  background-color: beige;
   border: 1px solid $base-border-color;
+  cursor: pointer;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
-  cursor: pointer;
   
   @include media($medium-screen) {
     width: 40%;
@@ -1146,24 +1303,19 @@ $expander-toggle-margin: 1em;
     background: inherit;
     color: white;
     height: inherit;
-    padding: 1em 1.5em;
-  }
-
-  .hover-tile-visible {
-    color: transparentize(white, .3);
-    font-size: 2em;
-    font-weight: 200;  
-    padding-top: 1.5em;
-    text-align: center;
+    overflow: hidden;
+    padding: $base-spacing;
   }
 
   .hover-tile-hidden {
     background: transparentize(black, .5);
-    h4 {
-      margin-bottom: .5em;
-    }
+
     p {
       color: transparentize(white, .3);
+    }
+
+    h4 {
+      margin-bottom: .5em;
     }
   }
 }
@@ -1222,34 +1374,34 @@ $expander-toggle-margin: 1em;
   $transparency-right: .8;
   $horizontal-angle: 90deg;
 
-  position: relative;
+  -webkit-font-smoothing: antialiased;
   line-height: 0;
+  position: relative;
   width: 100%;
-  margin-bottom: $base-line-height;  
 
   img {
-   width: 100%;
    height: auto;
+   left: 0; 
    position: relative;
    top: 0;
-   left: 0; 
+   width: 100%;
   }
 
   .copy {
-    position: absolute;
-    top: 50%;
+    @include transform(translate(-50%, -50%));
     left: 50%;
     margin: auto;
-    z-index: 999;
+    position: absolute;
     text-align: center;
-    @include transform(translate(-50%, -50%));
+    top: 50%;
+    z-index: 999;
 
     p {
+      color: white;
+      font-weight: 800;
       line-height: 1.5em;
       padding: 1em 2em;
       position: relative;
-      color: white;
-      font-weight: 800;
     }
   }
 
@@ -1260,11 +1412,11 @@ $expander-toggle-margin: 1em;
     @include position(absolute, 0px 0px 0px 0px);
 
     &amp;:after {
-      content: '';
       @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
         transparentize($image-gradient-color-right, $transparency-right));
-      display: block;
       @include position(absolute, 0px 0px 0px 0px);
+      content: '';
+      display: block;
     }
   }
 }
@@ -1306,7 +1458,20 @@ $expander-toggle-margin: 1em;
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.label-alert {
+  <pre><code class="language-scss">///////////////////////////////////////////////////////////////////////////////////
+$alert-color: #FFF6BF !default;
+$error-color: #FBE3E4 !default;
+$success-color: #E6EFC2 !default;
+$notice-color: #E5EDF8 !default;
+$base-spacing: 1.5em !default;
+
+label {
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+}
+//////////////////////////////////////////////////////////////////////////////////
+
+.label-alert {
   color: darken($alert-color, 45);
 }
 
@@ -1335,15 +1500,15 @@ $expander-toggle-margin: 1em;
         <div class="line-behind-text"><h6>Modal</h6></div>
         <div class="refill-centering"><div class="modal">
   <label for="modal-1">
-    <div class="btn js-btn">Click for Modal</div>
+    <div class="modal-trigger">Click for Modal</div>
   </label>
   <input class="modal-state" id="modal-1" type="checkbox" />
   <div class="modal-window">
     <div class="modal-inner">
       <label class="modal-close" for="modal-1"></label>
       <h1>Modal Title</h1>
-      <p class="intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
-      <p class="body">Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam.</p>
+      <p class="modal-intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
+      <p class="modal-content">Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam.</p>
     </div>
   </div>
 </div>
@@ -1360,15 +1525,15 @@ $expander-toggle-margin: 1em;
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;modal&quot;&gt;
   &lt;label for=&quot;modal-1&quot;&gt;
-    &lt;div class=&quot;btn js-btn&quot;&gt;Click for Modal&lt;/div&gt;
+    &lt;div class=&quot;modal-trigger&quot;&gt;Click for Modal&lt;/div&gt;
   &lt;/label&gt;
   &lt;input class=&quot;modal-state&quot; id=&quot;modal-1&quot; type=&quot;checkbox&quot; /&gt;
   &lt;div class=&quot;modal-window&quot;&gt;
     &lt;div class=&quot;modal-inner&quot;&gt;
       &lt;label class=&quot;modal-close&quot; for=&quot;modal-1&quot;&gt;&lt;/label&gt;
       &lt;h1&gt;Modal Title&lt;/h1&gt;
-      &lt;p class=&quot;intro&quot;&gt;Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.&lt;/p&gt;
-      &lt;p class=&quot;body&quot;&gt;Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam.&lt;/p&gt;
+      &lt;p class=&quot;modal-intro&quot;&gt;Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.&lt;/p&gt;
+      &lt;p class=&quot;modal-content&quot;&gt;Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -1378,11 +1543,36 @@ $expander-toggle-margin: 1em;
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.modal {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $base-font-size: 1em !default;
+  $base-line-height: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   $modal-padding: 3em;
   $modal-background: $base-background-color;
   $modal-close-color: $light-gray;
   $modal-image-height: 135px;
   $modal-image-width: $modal-image-height;
+  $modal-trigger-image-width: 300px;
 
   label {
     cursor: pointer;
@@ -1390,18 +1580,18 @@ $expander-toggle-margin: 1em;
   }
 
   label img {
-    $img-width: 300px;
-    border-radius: $img-width/2;
+    border-radius: $modal-trigger-image-width/2;
     display: block;
-    max-width: $img-width;
+    max-width: $modal-trigger-image-width;
   }
 
   input[type=&quot;checkbox&quot;] {
     display: none;
   }
 
-  .btn {
-    @extend button;
+  .modal-trigger {
+    @include button(flat, $base-accent-color);
+    padding: .8em 1em;
   }
 
   .modal-open {
@@ -1426,8 +1616,8 @@ $expander-toggle-margin: 1em;
   .modal-close {
     @include position(absolute, ($modal-padding /2) ($modal-padding /2) null null);
     @include size(1.5em);
-    cursor: pointer;
     background: $modal-background;
+    cursor: pointer;
 
     &amp;:after,
     &amp;:before {
@@ -1452,26 +1642,26 @@ $expander-toggle-margin: 1em;
 
   .modal-inner {
     @include transition(opacity .25s ease);
-    border-radius: $base-border-radius;
     background: $modal-background;
+    border-radius: $base-border-radius;
+    margin-top: .6em;
     margin: auto;
     max-height: 95%;
-    position: relative;
     overflow: auto;
-    width: 95%;
     padding: $modal-padding /2;
-    margin-top: .6em;
+    position: relative;
+    width: 95%;
 
     @include media($medium-screen) {
+      margin-top: 10em;
+      max-height: 60%;
       padding: $modal-padding;
       width: 60%;
-      max-height: 60%;
-      margin-top: 10em;
     }
 
     @include media($large-screen) {
-      width: 50%;
       margin-top: 10em;
+      width: 50%;
     }
 
     h1 {
@@ -1481,23 +1671,15 @@ $expander-toggle-margin: 1em;
       text-transform: capitalize;
     }
 
-    p.body, p.intro {
-      font-size: $base-font-size;
-      max-width: 100% !important;
-      text-align: left;
+    .modal-intro {
+      font-weight: 800;
+    }
 
-      &amp;.intro {
-        color: $blue;
-        line-height: 1.6em;
-      }
+    .modal-content {
+      color: $base-font-color;
 
-      &amp;.body { 
-        color: $base-font-color;
-        line-height: 1.45em;
-
-        @include media($medium-screen) {
-          @include columns(2 8em);
-        }
+      @include media($medium-screen) {
+        @include columns(2 8em);
       }
     }
 
@@ -1519,7 +1701,7 @@ $expander-toggle-margin: 1em;
   }
 
   .modal-state:checked + .modal-window .modal-inner {
-    top: 0;
+    top: .5em;
   }
 }
 
@@ -1586,7 +1768,32 @@ $expander-toggle-margin: 1em;
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.pagination {
+  <pre><code class="language-scss">.pagination {  
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   $pagination-border-color: $base-border-color;
   $pagination-border: 1px solid $pagination-border-color;
   $pagination-background: lighten($pagination-border-color, 10);
@@ -1689,6 +1896,7 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 .parallax-static-content {
+  -webkit-font-smoothing: antialiased;
   color: #9A9A8A;
   padding: 8em 0;
   position: relative;
@@ -1697,9 +1905,9 @@ $parallax-background-height: $parallax-window-height * 2;
 
 .parallax-background {
   background: url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot;) repeat;
+  background-position: top;
   background-size: cover;
   background-color: beige;
-  background-position: top;
   height: $parallax-background-height;
   left: 0;
   position: absolute;
@@ -1754,9 +1962,11 @@ function parallax(){
     <section id="progress-bar" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Progress Bars</h6></div>
-        <div class="refill-centering"><div class="progress-bar">
+        <div class="refill-centering">
+          <div class="refill-smaller"><div class="progress-bar">
   <span class="meter" style="width: 60%"></span>
 </div></div>
+        </div>
       </div>
       <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
@@ -1775,6 +1985,15 @@ function parallax(){
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.progress-bar {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-background-color: white !default;
+  $base-border-radius: 3px !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  -webkit-font-smoothing: antialiased;
+  //////////////////////////////////////////////////////////////////////////////////
+
   $progress-border-color: $base-border-color;
   $progress-border: 1px solid $progress-border-color;
   $progress-meter-border-color: $base-accent-color;
@@ -1791,7 +2010,7 @@ function parallax(){
   height: $progress-height;
   margin: 0 auto;
   padding: 2px;
-  width: 50%;
+  width: 100%;
 
   &gt; span.meter {
     @include animation(progress $progress-animation-duration linear infinite);
@@ -1865,11 +2084,13 @@ function parallax(){
 </table>
 </div>
       <div class="refills-wrapper">
-        <div class="refill-centering"><div class="progress-bar-indication">
+        <div class="refill-centering">
+          <div class="refill-smaller"><div class="progress-bar-indication">
   <span class="meter" style="width: 60%">
     <p>60%</p>
   </span>
 </div></div>
+        </div>
       </div>
       <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
@@ -1889,7 +2110,20 @@ function parallax(){
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.progress-bar-indication {
+  <pre><code class="language-scss">.progress-bar-indication {  
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $base-line-height: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  -webkit-font-smoothing: antialiased;
+
+  p {
+    line-height: $base-line-height;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   $progress-border-color: $base-border-color;
   $progress-border: 1px solid $progress-border-color;
   $progress-meter-border-color: $base-accent-color;
@@ -1900,31 +2134,31 @@ function parallax(){
   $progress-color: white;
 
   background-color: $progress-background;
+  border-radius: $base-border-radius;
   border: $progress-border;
   box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
-  border-radius: $base-border-radius;
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
 
   &gt; span.meter {
     @include box-sizing(border-box);
     background-color: $progress-meter-color;
-    background-size: 40px 40px;
     background-repeat: repeat-x;
-    border: $progress-meter-border;
+    background-size: 40px 40px;
+    border-bottom-right-radius: 0;
     border-radius: $base-border-radius /1.5;
     border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border: $progress-meter-border;
     display: block;
     height: 100%;
     width: 60%;
   }
 
   p {
-    margin-bottom: 0;
-    padding: .1em .5em;
-    font-weight: 800;
     color: $progress-color;    
+    font-weight: 800;
+    margin: 0;
+    padding: .1em .5em;
     text-shadow: 0 0 1px black;
   }
 }
@@ -1991,7 +2225,8 @@ function parallax(){
     <section id="search-bar" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Search bar</h6></div>
-        <div class="refill-centering">  <div class="search-bar">
+        <div class="refill-centering">
+          <div class="refill-smaller">  <div class="search-bar">
     <div class="search-and-submit">
       <input type="search" placeholder="Enter Search" />
       <button type="submit">
@@ -2000,6 +2235,7 @@ function parallax(){
     </div>
   </div>
 </div>
+        </div>
       </div>
       <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
@@ -2023,13 +2259,23 @@ function parallax(){
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.search-bar {
+  <pre><code class="language-scss">.search-bar {  
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  -webkit-font-smoothing: antialiased;
+  //////////////////////////////////////////////////////////////////////////////////
+
   $search-bar-border-color: $base-border-color;
   $search-bar-border: 1px solid $search-bar-border-color;
   $search-bar-background: lighten($search-bar-border-color, 10);
 
-  position: relative; 
   display: inline-block;
+  position: relative; 
+  width: 100%;
 
   input {
     @include box-sizing(border-box);
@@ -2041,19 +2287,26 @@ function parallax(){
 
     input[type=search] {
       @include appearance(none);
-      width: 100%;
-      padding: .5em .8em;
-      font-size: .9em;
-      font-style: italic;
+      @include box-sizing(border-box);
+      @include transition(border-color);
+      background-color: white;
       border-radius: $base-border-radius;
+      border-radius: $base-border-radius;
+      border: 1px solid $base-border-color;
+      font-size: 1em;
+      font-style: italic;
       margin: 0;
+      padding: ($base-spacing / 3) ($base-spacing / 3);
+      position: relative;
+      width: 100%;
     }
 
     button[type=submit] {
+      @include button(flat, $base-accent-color);
       @include position(absolute, 0em 0em 0em null);
-      outline: none;
-      border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      outline: none;
       padding: 5px 10px;
 
       img {
@@ -2087,7 +2340,7 @@ function parallax(){
   </ul>
 </nav>
 
-<div class="js-menu-screen menu-screen"></div>
+<div class="js-menu-screen sliding-menu-fade-screen"></div>
 </div>
       </div>
       <div class="refill-snippet"><div class="refill-control">
@@ -2111,33 +2364,39 @@ function parallax(){
   &lt;/ul&gt;
 &lt;/nav&gt;
 
-&lt;div class=&quot;js-menu-screen menu-screen&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;js-menu-screen sliding-menu-fade-screen&quot;&gt;&lt;/div&gt;
 </code></pre>
 </td>
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">$sliding-menu-border-color: $dark-gray;
-$sliding-menu-background: lighten($sliding-menu-border-color, 5);
-$sliding-menu-color: #fff;
-$sliding-menu-border: 1px solid $sliding-menu-border-color;
-$sliding-menu-background-hover: $base-accent-color;
-$sliding-menu-color-hover: #fff;
+  <pre><code class="language-scss">.sliding-menu-content {  
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-accent-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  -webkit-font-smoothing: antialiased;
 
-.sliding-menu-button {
-  display: inline-block;
-  cursor: pointer;
-  font-size: $base-font-size;
-  margin-bottom: $base-line-height;
-  position: relative;
-  outline: none;
-
-  img {
-    height: 1.3em;
+  ul {
+    padding: 0;
+    margin: 0;
   }
-}
 
-.sliding-menu-content {
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $sliding-menu-border-color: $dark-gray;
+  $sliding-menu-background: lighten($sliding-menu-border-color, 5);
+  $sliding-menu-color: #fff;
+  $sliding-menu-border: 1px solid $sliding-menu-border-color;
+  $sliding-menu-background-hover: $base-accent-color;
+  $sliding-menu-color-hover: #fff;
+
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
   @include transform(translateX(-220px));
@@ -2165,10 +2424,10 @@ $sliding-menu-color-hover: #fff;
   }
 }
 
-.menu-screen {
+.sliding-menu-fade-screen {
   @include position(fixed, 0px 0px 0px 0px);
   @include transition;
-  background: $sliding-menu-border-color;
+  background: black;
   opacity: 0;
   visibility: hidden;
   z-index: 999998;
@@ -2176,6 +2435,19 @@ $sliding-menu-color-hover: #fff;
   &amp;.is-visible {
     opacity: .4;
     visibility: visible;
+  }
+}
+
+.sliding-menu-button {
+  @include button(flat, #477DCA);
+  padding: 10px 16px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+
+  img {
+    height: 1.3em;
   }
 }
 
@@ -2233,7 +2505,12 @@ $sliding-menu-color-hover: #fff;
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.label-switch {
+  <pre><code class="language-scss">.label-switch {  
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-accent-color: #477DCA !default;
+  $base-background-color: white !default;
+  //////////////////////////////////////////////////////////////////////////////////
+
   $switch-width: 52px;
   $switch-padding: 2px;
   $switch-height: 32px;
@@ -2241,14 +2518,15 @@ $sliding-menu-color-hover: #fff;
   $knob-size: $switch-height - ($switch-padding * 2);
   $knob-radius: $switch-height - ($switch-padding * 2);
   $knob-width: $knob-size;
+  $switch-background: $base-background-color;
+  $switch-border-background: darken($base-background-color, 9);
+  $switch-shadow: 0 2px 5px transparentize(black, 0.6);
 
-  align-self: center;
   border-radius: $switch-radius;
   cursor: pointer;
   display: inline-block;
   height: $switch-height;
   position: relative;
-  vertical-align: middle;
   width: $switch-width;
 
   input[type=&quot;checkbox&quot;] {
@@ -2256,7 +2534,7 @@ $sliding-menu-color-hover: #fff;
 
     + .checkbox {
       @include transition(all 0.3s ease);
-      background: #e5e5e5;
+      background: $switch-border-background;
       border-radius: $switch-radius;
       border: none;
       cursor: pointer;
@@ -2271,7 +2549,7 @@ $sliding-menu-color-hover: #fff;
         @include position(absolute, 2px 0 0 2px);
         @include transform(scale(1));
         @include transition(all 0.3s ease);
-        background: white;
+        background: $switch-background;
         border-radius: $switch-radius;
         content: &quot;&quot;;
         height: $knob-radius;
@@ -2283,17 +2561,17 @@ $sliding-menu-color-hover: #fff;
         @include position(absolute, 2px 0 0 2px);
         @include transition(all 0.3s ease);
         @include size($knob-size);
-        background: white;
+        background: $switch-background;
         border-radius: $knob-radius;
-        box-shadow: 0 2px 5px rgba(black, 0.4);
+        box-shadow: $switch-shadow;
         content: &quot;&quot;;
-        z-index: $base-z-index + 2;
+        z-index: 2;
       }
     }
 
     &amp;:checked {
       + .checkbox {
-        background: $blue;
+        background: $base-accent-color;
 
         &amp;:before {
           @include transform(scale(0));
@@ -2526,7 +2804,22 @@ $sliding-menu-color-hover: #fff;
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.tooltip-item {
+  <pre><code class="language-scss">.tooltip-item {  
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+    margin: 0;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   $tooltip-background: white;
   $tooltip-color: $base-font-color;
   $tooltip-width: 16em;
@@ -2535,11 +2828,12 @@ $sliding-menu-color-hover: #fff;
   $tooltip-distance-from-item: 140%;
   $tooltip-arrow-distance-from-box: -$tooltip-arrow-width * 3.2;
 
-  border: 1px solid $base-border-color;
-  padding: .5em 1em;
   border-radius: $base-border-radius;
-  position: relative;
+  border: 1px solid $base-border-color;
   margin-bottom: $base-line-height;
+  padding: .5em 1em;
+  position: relative;
+  text-align: center;
 
   &amp;:hover .tooltip {
     opacity: 1;
@@ -2550,21 +2844,20 @@ $sliding-menu-color-hover: #fff;
     @include position(absolute, null null null 50%);
     @include box-sizing(border-box);
     @include transition (all 0.2s ease-in-out);
-    bottom: $tooltip-distance-from-item;
     background-color: $tooltip-background;
     border-radius: $base-border-radius;
+    bottom: $tooltip-distance-from-item;
+    box-shadow: $tooltip-shadow;
     color: $tooltip-color;
     font-size: .9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
     line-height: 1.5em;
     margin-left: -($tooltip-width/2);
+    min-width: $tooltip-width;
     opacity: 0;
     padding: 1em;
-    box-shadow: $tooltip-shadow;
     text-align: center;
     visibility: hidden;
-    min-width: $tooltip-width;
     z-index: 10;
-    font-family: $serif;
 
     p {
       margin-bottom: 0;
@@ -2572,14 +2865,14 @@ $sliding-menu-color-hover: #fff;
 
     &amp;:after {
       @include position(absolute, null null null 46%);
-      margin-left: -$tooltip-arrow-width;
       border: $tooltip-arrow-width solid transparent;
+      bottom: $tooltip-arrow-distance-from-box;
       color: $tooltip-background;
       content: '▼';
-      text-shadow: $tooltip-shadow;
       font-size: 1.4em;
+      margin-left: -$tooltip-arrow-width;
       pointer-events: none;
-      bottom: $tooltip-arrow-distance-from-box;
+      text-shadow: $tooltip-shadow;
     }
   }
 }
@@ -2591,7 +2884,7 @@ $sliding-menu-color-hover: #fff;
 </table>
 </div>
     </section>
-    
+
   </div>
 </div>
 
@@ -2670,10 +2963,10 @@ $sliding-menu-color-hover: #fff;
             <li><a href="../type-systems/">Type Systems</a></li>
           </ul>
           <div class="refills-footer-logo">
-            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
+            <img src="//raw.githubusercontent.com/thoughtbot/refills/master/source/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
           </div>
           <p>Refills is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>.</p>
-          <p>Copyright &copy; 2014 <a href="//thoughtbot.com">thoughtbot, inc</a>. Refills is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/refills/blob/master/LICENSE.md">license</a>.</p>
+          <p>Copyright &copy; 2014&ndash;2015 <a href="//thoughtbot.com">thoughtbot, inc</a>. Refills is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/refills/blob/master/LICENSE.md">license</a>.</p>
         </footer>
       </section>
     </section>

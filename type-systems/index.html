@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Refills are prepackaged patterns and components, built on top of Bourbon, Bitters and Neat.">
+    <meta name="description" content="Refills are prepackaged patterns and components built with Bourbon, Neat and Bitters.">
     <title></title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800">
     <link href="../stylesheets/all.css" rel="stylesheet" type="text/css" />
@@ -103,7 +103,7 @@
   <div class="refills-logo">
     <img src="/images/refills-logo.svg" alt="Refills logo">
   </div>
-  <h2><span>Refills</span> are prepackaged patterns and components, built on top of <a href="http://www.bourbon.io">Bourbon</a>, <a href="http://bitters.bourbon.io/">Bitters</a>, and <a href="http://neat.bourbon.io/">Neat</a>.</h2>
+  <h2><span>Refills</span> are prepackaged patterns and components, built on top of <a href="http://www.bourbon.io">Bourbon</a> and <a href="http://neat.bourbon.io/">Neat</a>.</h2>
   <p>Managed by <a href="http://www.thoughtbot.com">thoughtbot</a>, instructions at <a href="https://github.com/thoughtbot/refills">GitHub</a></p>
 </div>
 
@@ -175,6 +175,41 @@
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">article.type-system-geometric {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
+
+  h1, h2, h3, p {
+    margin: 0;
+  }
+
+  hr {
+    border-bottom: 1px solid $light-gray;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: $base-spacing 0;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    color: $base-link-color;
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   $sans-serif: 'Questrial', sans-serif;
   $serif: 'Sanchez', serif;
 
@@ -206,8 +241,8 @@
 
   h2 {
     font-family: $serif;
-    font-style: italic;
     font-size: 1.2em;
+    font-style: italic;
     font-weight: 400;
     line-height: 1.4em;
     margin-bottom: 1.1em;
@@ -218,13 +253,13 @@
   }
 
   code {
-    white-space: nowrap;
     background: #F7F7F7;
-    border: 1px solid #E0E0E0;
     border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
+    border: 1px solid #E0E0E0;
     font-size: .7em;
     font-style: normal;
+    padding: .1em .4em;
+    white-space: nowrap;
   }
 
   h3 {
@@ -238,34 +273,34 @@
   p.date {
     color: transparentize($base-font-color, .6);
     font-family: $serif;
-    font-style: italic;
     font-size: .9em;
+    font-style: italic;
     margin-bottom: .3em;
   }
 
   p {
     font-family: $sans-serif;
-    line-height: 1.5em;
     font-size: 1.05em;
+    line-height: 1.5em;
     margin-bottom: 1.5em;
   }
 
   a.read-more {
     display: inline-block;
     font-family: $sans-serif;
-    font-weight: 700;
     font-size: .8em;
-    text-transform: uppercase;
+    font-weight: 700;
     margin-left: .2em;
     position: relative;
+    text-transform: uppercase;
 
     span {
       font-family: $sans-serif;
+      font-size: 1.5em;
       font-style: normal;
       position: absolute;
-      font-size: 1.5em;
-      top: -1px;
       right: -12px;
+      top: -1px;
     }
   }
   
@@ -344,6 +379,41 @@
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">article.type-system-rounded {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
+
+  h1, h2, h3, p {
+    margin: 0;
+  }
+
+  hr {
+    border-bottom: 1px solid $light-gray;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: $base-spacing 0;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    color: $base-link-color;
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   $sans-serif: 'Nunito', sans-serif;
   $sans-serif-2: 'Varela Round', sans-serif;
 
@@ -385,14 +455,14 @@
   }
 
   code {
-    white-space: nowrap;
-    font-family: monaco;
     background: #F7F7F7;
-    border: 1px solid #E0E0E0;
     border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
+    border: 1px solid #E0E0E0;
+    font-family: monaco;
     font-size: .7em;
     font-style: normal;
+    padding: .1em .4em;
+    white-space: nowrap;
   }
 
 
@@ -413,32 +483,32 @@
 
   p {
     font-family: $sans-serif;
-    line-height: 1.4em;
     font-size: 1.05em;
     font-weight: 300;
+    line-height: 1.4em;
     margin-bottom: 1.5em;
 
     span {
       font-family: $sans-serif-2;
-      text-transform: uppercase;
       font-size: 0.8em;
+      text-transform: uppercase;
     }
   }
 
   a.read-more {
     display: inline-block;
     font-family: $sans-serif-2;
-    font-weight: 700;
     font-size: .8em;
-    text-transform: uppercase;
+    font-weight: 700;
     margin-left: .2em;
     position: relative;
+    text-transform: uppercase;
 
     span {
-      position: absolute;
       font-size: 1.5em;
-      top: -1px;
+      position: absolute;
       right: -12px;
+      top: -1px;
     }
   }
   
@@ -517,6 +587,41 @@
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">article.type-system-sans {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
+
+  h1, h2, h3, p {
+    margin: 0;
+  }
+
+  hr {
+    border-bottom: 1px solid $light-gray;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: $base-spacing 0;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    color: $base-link-color;
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   $sans-serif: 'PT Sans', sans-serif;
   $sans-serif-2: 'Titillium Web', sans-serif;
 
@@ -560,23 +665,23 @@
   }
 
   code {
-    white-space: nowrap;
-    font-family: monaco;
     background: #F7F7F7;
-    border: 1px solid #E0E0E0;
     border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
+    border: 1px solid #E0E0E0;
+    font-family: monaco;
     font-size: .65em;
     font-style: normal;
+    padding: .1em .4em;
+    white-space: nowrap;
   }
 
   h3 {
    font-family: $sans-serif-2;
    font-size: 1em;
    font-weight: 700;
-   text-transform: uppercase;
    line-height: 1.4em;
    margin-bottom: .5em; 
+   text-transform: uppercase;
   }
 
   p.date {
@@ -594,8 +699,8 @@
 
     span {
       font-family: $sans-serif;
-      font-weight: 600;
       font-size: .8em;
+      font-weight: 600;
       text-transform: uppercase;
     }
   }
@@ -607,17 +712,17 @@
   a.read-more {
     display: inline-block;
     font-family: $sans-serif;
-    font-weight: 700;
     font-size: .8em;
-    text-transform: uppercase;
+    font-weight: 700;
     margin-left: .2em;
     position: relative;
+    text-transform: uppercase;
 
     span {
-      position: absolute;
       font-size: 1.7em;
-      top: -2px;
+      position: absolute;
       right: -10px;
+      top: -2px;
     }
   }
 
@@ -695,6 +800,41 @@
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">article.type-system-serif {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
+
+  h1, h2, h3, p {
+    margin: 0;
+  }
+
+  hr {
+    border-bottom: 1px solid $light-gray;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: $base-spacing 0;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    color: $base-link-color;
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   $serif: 'Lusitana', serif;
   $serif-2: 'Merriweather', serif;
   $sans-serif: 'Merriweather Sans', sans-serif;
@@ -727,8 +867,8 @@
 
   h2 {
     font-family: $serif-2;
-    font-style: italic;
     font-size: 1em;
+    font-style: italic;
     font-weight: 400;
     line-height: 1.6em;
     margin-bottom: .9em;
@@ -739,14 +879,14 @@
   }
 
   code {
-    white-space: nowrap;
-    font-family: monaco;
     background: #F7F7F7;
-    border: 1px solid #E0E0E0;
     border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
+    border: 1px solid #E0E0E0;
+    font-family: monaco;
     font-size: .75em;
     font-style: normal;
+    padding: .1em .4em;
+    white-space: nowrap;
   }
 
   h3 {
@@ -760,15 +900,15 @@
   p.date {
     color: transparentize($base-font-color, .6);
     font-family: $serif-2;
-    font-style: italic;
     font-size: .9em;
+    font-style: italic;
     margin-bottom: .3em;
   }
 
   p {
     font-family: $serif-2;
-    line-height: 1.6em;
     font-size: .9em;
+    line-height: 1.6em;
     margin-bottom: 1.5em;
 
     span {
@@ -780,19 +920,19 @@
   a.read-more {
     display: inline-block;
     font-family: $sans-serif;
-    font-weight: 700;
     font-size: .8em;
-    text-transform: uppercase;
+    font-weight: 700;
     margin-left: .2em;
     position: relative;
+    text-transform: uppercase;
 
     span {
       font-family: $serif;
+      font-size: 1.5em;
       font-style: normal;
       position: absolute;
-      font-size: 1.5em;
-      top: -1px;
       right: -12px;
+      top: -1px;
     }
   }
   
@@ -872,6 +1012,41 @@
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">article.type-system-slab {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
+
+  h1, h2, h3, p {
+    margin: 0;
+  }
+
+  hr {
+    border-bottom: 1px solid $light-gray;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: $base-spacing 0;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    color: $base-link-color;
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   $sans-serif: 'Open Sans', sans-serif;
   $serif: 'Roboto Slab', serif;
 
@@ -914,22 +1089,22 @@
   }
 
   code {
-    white-space: nowrap;
     background: #F7F7F7;
-    border: 1px solid #E0E0E0;
     border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
+    border: 1px solid #E0E0E0;
     font-size: .8em;
     font-style: normal;
+    padding: .1em .4em;
+    white-space: nowrap;
   }
 
   h3 {
    font-family: $serif;
    font-size: 1em;
    font-weight: 600;
-   text-transform: uppercase;
    line-height: 1.4em;
    margin-bottom: .5em; 
+   text-transform: uppercase;
   }
 
   p.date {
@@ -947,8 +1122,8 @@
 
     span {
       font-family: $sans-serif;
-      font-weight: 600;
       font-size: .8em;
+      font-weight: 600;
       text-transform: uppercase;
     }
   }
@@ -956,17 +1131,17 @@
   a.read-more {
     display: inline-block;
     font-family: $serif;
-    font-weight: 700;
     font-size: .8em;
-    text-transform: uppercase;
+    font-weight: 700;
     margin-left: .2em;
     position: relative;
+    text-transform: uppercase;
 
     span {
-      position: absolute;
       font-size: 1.8em;
-      top: -2px;
+      position: absolute;
       right: -12px;
+      top: -2px;
     }
   }
 
@@ -1045,6 +1220,41 @@
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">article.type-system-traditional {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $base-font-color: $dark-gray !default;
+  -webkit-font-smoothing: antialiased;
+
+  h1, h2, h3, p {
+    margin: 0;
+  }
+
+  hr {
+    border-bottom: 1px solid $light-gray;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: $base-spacing 0;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    color: $base-link-color;
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
   $sans-serif: 'Noto Sans', sans-serif;
   $serif: 'Radley', serif;
 
@@ -1087,13 +1297,13 @@
   }
 
   code {
-    white-space: nowrap;
     background: #F7F7F7;
-    border: 1px solid #E0E0E0;
     border-radius: $base-border-radius * 1.5;
-    padding: .1em .4em;
+    border: 1px solid #E0E0E0;
     font-size: .75em;
     font-style: normal;
+    padding: .1em .4em;
+    white-space: nowrap;
   }
 
   h2 code {
@@ -1119,8 +1329,8 @@
   p {
     font-family: $sans-serif;
     letter-spacing: 1;
-    margin-bottom: 1.5em;
     line-height: 1.55em;
+    margin-bottom: 1.5em;
 
     span {
       font-family: $serif;
@@ -1132,19 +1342,19 @@
   a.read-more {
     display: inline-block;
     font-family: $sans-serif;
-    font-weight: 700;
     font-size: .8em;
-    text-transform: uppercase;
+    font-weight: 700;
     margin-left: .2em;
     position: relative;
+    text-transform: uppercase;
 
     span {
       font-family: $sans-serif;
+      font-size: 1.5em;
       font-style: normal;
       position: absolute;
-      font-size: 1.5em;
-      top: -1px;
       right: -12px;
+      top: -1px;
     }
   }
 
@@ -1247,10 +1457,10 @@
             <li><a href="./">Type Systems</a></li>
           </ul>
           <div class="refills-footer-logo">
-            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
+            <img src="//raw.githubusercontent.com/thoughtbot/refills/master/source/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
           </div>
           <p>Refills is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>.</p>
-          <p>Copyright &copy; 2014 <a href="//thoughtbot.com">thoughtbot, inc</a>. Refills is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/refills/blob/master/LICENSE.md">license</a>.</p>
+          <p>Copyright &copy; 2014&ndash;2015 <a href="//thoughtbot.com">thoughtbot, inc</a>. Refills is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/refills/blob/master/LICENSE.md">license</a>.</p>
         </footer>
       </section>
     </section>
