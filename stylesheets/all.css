@@ -2892,11 +2892,12 @@ section.inner-content {
 /* line 14, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_maps.scss */
 #map_canvas .firstHeading {
   font-size: 1em;
+  line-height: 1em;
   font-weight: bold;
   margin: 0; }
 
-/* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_maps.scss */
-#map_canvas .bodyContent p {
+/* line 21, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_maps.scss */
+#map_canvas #bodyContent p {
   font-size: 1em;
   margin: 0; }
 
