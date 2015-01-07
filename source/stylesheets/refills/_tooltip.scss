@@ -58,14 +58,14 @@
     }
 
     &:after {
-      @include position(absolute, null null null 46%);
+      @include position(absolute, null 0 null 0);
       border: $tooltip-arrow-width solid transparent;
       bottom: $tooltip-arrow-distance-from-box;
       color: $tooltip-background;
       content: '▼';
       font-size: 1.4em;
       margin-left: -$tooltip-arrow-width;
-      pointer-events: none;
+      text-align: center;
       text-shadow: $tooltip-shadow;
     }
   }
