@@ -1418,7 +1418,8 @@ section.inner-content {
   .accordion-tabs .tab-content {
     background: #f7f7f7;
     display: none;
-    padding: 1.5em 1.618em; }
+    padding: 1.5em 1.618em;
+    width: 100%; }
     @media screen and (min-width: 40em) {
       /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
       .accordion-tabs .tab-content {
@@ -1477,7 +1478,8 @@ section.inner-content {
   /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
   .accordion-tabs-minimal .tab-content {
     display: none;
-    padding: 1.5em 1.618em; }
+    padding: 1.5em 1.618em;
+    width: 100%; }
     @media screen and (min-width: 40em) {
       /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
       .accordion-tabs-minimal .tab-content {
