@@ -308,6 +308,7 @@ section.refill {
 
 .js-hide-code, 
 .js-show-code {
+  -webkit-font-smoothing: antialiased;
   border-top: 1px dashed #BEBCBC;
   color: #7E7A7A;
   font-size: .8em;
@@ -338,6 +339,7 @@ section.refill {
 
   a {
     text-decoration: none;
+    line-height: 1.5em;
   }
 
 }
