@@ -13,11 +13,12 @@
 
 #map_canvas .firstHeading {
   font-size: 1em;
+  line-height: 1em;
   font-weight: bold;
   margin: 0;
 }
 
-#map_canvas .bodyContent p {
+#map_canvas #bodyContent p {
   font-size: 1em;
   margin: 0;
 }
