@@ -1,11 +1,11 @@
 .centered-navigation {
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   -webkit-font-smoothing: antialiased;  
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;

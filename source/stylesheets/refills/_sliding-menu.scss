@@ -1,5 +1,5 @@
 .sliding-menu-content {  
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
   -webkit-font-smoothing: antialiased;
@@ -16,8 +16,7 @@
   a {
     text-decoration: none;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $sliding-menu-border-color: $dark-gray;
   $sliding-menu-background: lighten($sliding-menu-border-color, 5);

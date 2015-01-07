@@ -1,5 +1,5 @@
 .footer {
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-spacing: 1.5em !default;
   $base-accent-color: #477DCA !default;
   $medium-screen: em(640) !default;
@@ -18,8 +18,7 @@
   a {
     text-decoration: none;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
   $footer-color: white;

@@ -1,5 +1,5 @@
 .side-image {  
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
   $base-accent-color: #477DCA !default;
   $base-link-color: $base-accent-color !default;
@@ -16,8 +16,7 @@
     color: $base-font-color;
     line-height: $base-line-height;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $side-image-background-top: #B5EBEB;
   $side-image-background-bottom: #5DAC5D;

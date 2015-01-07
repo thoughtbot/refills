@@ -1,5 +1,5 @@
 .scroll-on-page {
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
   $base-accent-color: #477DCA !default;
@@ -18,8 +18,9 @@
     color: $base-link-color;
     text-decoration: none;
   }
+  //////////////////////////////////////////////////////////////////////////////////
 
-  ///////////////////////////////////////////////////////////////////////////////////
+  display: inline-block;
 
   aside {
     @include media($large-screen) {
@@ -31,6 +32,7 @@
     border-bottom: 1px solid transparentize($base-link-color, .8);
     display: block;
     margin-right: $base-spacing;
+    outline: none;
     padding: $base-spacing / 2 0;
 
     &:last-child {
@@ -40,7 +42,7 @@
 
   article {
     h4 {
-      margin-bottom: .5em; 
+      margin: 0 0 .5em 0;
     }
 
     section p:last-of-type {

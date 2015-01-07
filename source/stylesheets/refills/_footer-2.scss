@@ -25,7 +25,7 @@
 // }
 
 .footer-2 {
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-spacing: 1.5em !default;
   $base-accent-color: #477DCA !default;
   $medium-screen: em(640) !default;
@@ -45,8 +45,7 @@
   a {
     text-decoration: none;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
   $footer-color: white;
@@ -56,6 +55,7 @@
   background: $footer-background;
   padding: $base-spacing;
   width: 100%;
+  display: inline-block;
 
   .footer-logo {
     margin-right: 1em;
@@ -76,6 +76,7 @@
     
     @include media($large-screen) {
       float: left;
+      line-height: 1.8em;
       margin-left: 1em;
       margin-bottom: 0;
     }
@@ -120,6 +121,7 @@
       li {
         font-size: 1em;
         float: left;
+        line-height: 0;
         padding-right: .7em;
 
         &:last-child {

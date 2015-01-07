@@ -1,5 +1,5 @@
 .pagination {  
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-spacing: 1.5em !default;
@@ -22,8 +22,7 @@
   a {
     text-decoration: none;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $pagination-border-color: $base-border-color;
   $pagination-border: 1px solid $pagination-border-color;

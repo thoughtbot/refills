@@ -45,7 +45,9 @@
     <section id="dropdown" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Dropdown</h6></div>
-        <%= partial "dropdown" %>
+        <div class="refill-centering">
+          <%= partial "dropdown" %>
+        </div>
       </div>
       <div class="refill-snippet"><%= code_for('dropdown') %></div>
     </section>
@@ -129,11 +131,15 @@
     <section id="progress-bar" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Progress Bars</h6></div>
-        <div class="refill-centering"><%= partial "progress_bar" %></div>
+        <div class="refill-centering">
+          <div class="refill-smaller"><%= partial "progress_bar" %></div>
+        </div>
       </div>
       <div class="refill-snippet"><%= code_for('progress_bar') %></div>
       <div class="refills-wrapper">
-        <div class="refill-centering"><%= partial "progress_bar_indication" %></div>
+        <div class="refill-centering">
+          <div class="refill-smaller"><%= partial "progress_bar_indication" %></div>
+        </div>
       </div>
       <div class="refill-snippet"><%= code_for('progress_bar_indication') %></div>
     </section>
@@ -149,7 +155,9 @@
     <section id="search-bar" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Search bar</h6></div>
-        <div class="refill-centering"><%= partial "search_bar" %></div>
+        <div class="refill-centering">
+          <div class="refill-smaller"><%= partial "search_bar" %></div>
+        </div>
       </div>
       <div class="refill-snippet"><%= code_for('search_bar') %></div>
     </section>

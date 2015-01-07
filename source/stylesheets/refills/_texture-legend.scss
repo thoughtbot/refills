@@ -134,6 +134,11 @@
     text-align: center;    
   }
 
+  a {
+    color: $refills-anchor-color;
+    text-decoration: none;
+  }
+
   b {
     font-weight: 800;
   }

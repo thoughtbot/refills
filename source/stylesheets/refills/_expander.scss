@@ -1,5 +1,5 @@
 .expander {  
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-font-size: 1em !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
@@ -19,15 +19,13 @@
     color: $base-link-color;
     text-decoration: none;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $expander-arrow-width: .7em;
   $expander-toggle-size: 1em;
   $expander-toggle-arrow-size: $expander-toggle-size;
   $expander-toggle-margin: 1em;
 
-  margin: auto;
   width: 60%;
 
   .expander-trigger {

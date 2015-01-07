@@ -1,5 +1,5 @@
 .fade-in-element {
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
@@ -15,8 +15,7 @@
     color: $base-font-color;
     line-height: $base-line-height;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   @include clearfix;
   background: $base-background-color;

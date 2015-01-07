@@ -1,5 +1,5 @@
 .flex-boxes {
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $dark-gray: #333 !default;
@@ -9,9 +9,8 @@
 
   a {
     text-decoration: none;
-  }
-  
-  ///////////////////////////////////////////////////////////////////////////////////
+  }  
+  //////////////////////////////////////////////////////////////////////////////////
 
   $flex-box-border-color: $light-gray;
   $flex-box-border: 1px solid $flex-box-border-color;
@@ -27,14 +26,13 @@
     #CCC,
     #F6C05C;
 
-
     @include clearfix;
     @include display(flex);
     @include justify-content(center);
     @include align-items(stretch);
     @include flex-wrap(wrap);
+    clear: both;
     text-align: center;
-
 
   .flex-box {
     @include transition (all 0.2s ease-in-out);

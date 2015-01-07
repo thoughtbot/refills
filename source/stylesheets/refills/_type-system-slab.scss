@@ -1,5 +1,5 @@
 article.type-system-slab {
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
@@ -32,8 +32,7 @@ article.type-system-slab {
     color: $base-link-color;
     text-decoration: none;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $sans-serif: 'Open Sans', sans-serif;
   $serif: 'Roboto Slab', serif;

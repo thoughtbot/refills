@@ -1,5 +1,5 @@
 .tooltip-item {  
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -12,8 +12,7 @@
     line-height: $base-line-height;
     margin: 0;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $tooltip-background: white;
   $tooltip-color: $base-font-color;
@@ -28,6 +27,7 @@
   margin-bottom: $base-line-height;
   padding: .5em 1em;
   position: relative;
+  text-align: center;
 
   &:hover .tooltip {
     opacity: 1;

@@ -1,5 +1,5 @@
 .vertical-tabs-container {
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
@@ -25,8 +25,7 @@
     text-decoration: none;
     color: $base-link-color;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;

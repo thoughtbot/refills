@@ -1,5 +1,5 @@
 .tables {
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -22,8 +22,7 @@
   button {
     -webkit-font-smoothing: antialiased;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;

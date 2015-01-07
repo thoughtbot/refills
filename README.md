@@ -3,7 +3,7 @@
 [![Gem Version](http://img.shields.io/gem/v/refills.svg?style=flat)](https://rubygems.org/gems/refills)
 [![Build Status](https://travis-ci.org/thoughtbot/refills.svg?branch=master)](https://travis-ci.org/thoughtbot/refills)
 
-## Prepackaged patterns and components built with Bourbon, Neat and Bitters
+## Prepackaged patterns and components built with Bourbon and Neat
 
 - **[Examples & Code Snippets](http://refills.bourbon.io)**
 - **[Changelog](NEWS.md)**
@@ -14,11 +14,10 @@
 - [Sass](https://github.com/sass/sass) 3.3+
 - [Bourbon](https://github.com/thoughtbot/bourbon) 4.0+
 - [Neat](https://github.com/thoughtbot/neat) 1.6+
-- [Bitters](https://github.com/thoughtbot/bitters) 0.10.1+
 
 ## Installation
 
-1. Install Refills’ dependencies: [Bourbon](https://github.com/thoughtbot/bourbon#installation), [Neat](https://github.com/thoughtbot/neat#installation), [Bitters](https://github.com/thoughtbot/bitters#installation), and [jQuery](http://jquery.com/download) (if you plan to use any components that require JavaScript).
+1. Install Refills’ dependencies: [Bourbon](https://github.com/thoughtbot/bourbon#installation), [Neat](https://github.com/thoughtbot/neat#installation) and [jQuery](http://jquery.com/download) (if you plan to use any components that require JavaScript).
 
 2. Go to the [Refills website](http://refills.bourbon.io), click “Show Code” under the component or pattern that you want and copy-paste it into your project.
 

@@ -1,12 +1,12 @@
 .search-bar {  
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
   -webkit-font-smoothing: antialiased;
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $search-bar-border-color: $base-border-color;
   $search-bar-border: 1px solid $search-bar-border-color;
@@ -14,6 +14,7 @@
 
   display: inline-block;
   position: relative; 
+  width: 100%;
 
   input {
     @include box-sizing(border-box);

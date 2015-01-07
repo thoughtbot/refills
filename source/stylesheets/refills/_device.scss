@@ -1,5 +1,5 @@
 .device-background {
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-accent-color: #477DCA !default;
   $large-screen: em(860) !default;
@@ -17,8 +17,7 @@
     font-size: 1.5em;
     margin: 0;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $device-padding-vertical: 5em;
   $device-padding-horizontal: .4em;

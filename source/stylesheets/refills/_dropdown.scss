@@ -1,5 +1,5 @@
 .dropdown {
-  // if you are using bitters.io you can remove everything down to the commented line
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -19,8 +19,7 @@
   li {
     list-style: none;
   }
-
-  ///////////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////
 
   $dropdown-color: $base-font-color;
   $dropdown-description-color: lighten($dropdown-color, 40);
@@ -33,11 +32,10 @@
   $dropdown-distance-from-menu: 50px;
   $dropdown-arrow-top-distance: 0;
 
-  text-align: center;
-
   .dropdown-container {
     display: inline-block;
     position: relative;
+    text-align: center;
   }
 
   .dropdown-description {
