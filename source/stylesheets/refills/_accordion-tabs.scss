@@ -93,6 +93,7 @@
     background: $tab-content-background;
     display: none;
     padding: $base-spacing $gutter;
+    width: 100%;
 
     @include media($tab-mode) {
       border-bottom-left-radius: $base-border-radius;
