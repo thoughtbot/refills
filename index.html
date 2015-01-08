@@ -1344,9 +1344,10 @@
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-javascript">$(document).ready(function() {
+  var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
   $('#js-centered-navigation-menu').removeClass(&quot;show&quot;);
   
-  $('#js-centered-navigation-mobile-menu').on('click', function(e) {
+  menuToggle.on('click', function(e) {
     e.preventDefault();
     $('#js-centered-navigation-menu').slideToggle(function(){
       if($('#js-centered-navigation-menu').is(':hidden')) {
@@ -3744,9 +3745,10 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-javascript">$(document).ready(function() {
+  var menuToggle = $('#js-mobile-menu').unbind();
   $('#js-navigation-menu').removeClass(&quot;show&quot;);
 
-  $('#js-mobile-menu').on('click', function(e) {
+  menuToggle.on('click', function(e) {
     e.preventDefault();
     $('#js-navigation-menu').slideToggle(function(){
       if($('#js-navigation-menu').is(':hidden')) {

@@ -1808,9 +1808,10 @@ $(document).ready(function () {
   });
 });
 $(document).ready(function() {
+  var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
   $('#js-centered-navigation-menu').removeClass("show");
   
-  $('#js-centered-navigation-mobile-menu').on('click', function(e) {
+  menuToggle.on('click', function(e) {
     e.preventDefault();
     $('#js-centered-navigation-menu').slideToggle(function(){
       if($('#js-centered-navigation-menu').is(':hidden')) {
@@ -1863,9 +1864,10 @@ $(document).ready(function() {
   });
 });
 $(document).ready(function() {
+  var menuToggle = $('#js-mobile-menu').unbind();
   $('#js-navigation-menu').removeClass("show");
 
-  $('#js-mobile-menu').on('click', function(e) {
+  menuToggle.on('click', function(e) {
     e.preventDefault();
     $('#js-navigation-menu').slideToggle(function(){
       if($('#js-navigation-menu').is(':hidden')) {
