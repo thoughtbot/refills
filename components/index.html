@@ -1447,7 +1447,7 @@ label {
       <label class="modal-close" for="modal-1"></label>
       <h1>Modal Title</h1>
       <p class="modal-intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
-      <p class="modal-content">Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam.</p>
+      <p class="modal-content">Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.</p>
     </div>
   </div>
 </div>
@@ -1472,7 +1472,7 @@ label {
       &lt;label class=&quot;modal-close&quot; for=&quot;modal-1&quot;&gt;&lt;/label&gt;
       &lt;h1&gt;Modal Title&lt;/h1&gt;
       &lt;p class=&quot;modal-intro&quot;&gt;Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.&lt;/p&gt;
-      &lt;p class=&quot;modal-content&quot;&gt;Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam.&lt;/p&gt;
+      &lt;p class=&quot;modal-content&quot;&gt;Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -1542,9 +1542,14 @@ label {
     @include position(fixed, 0px 0px 0px 0px);
     background: rgba(0,0,0, .85);
     opacity: 0;
+    padding-top: 0.6em;
     text-align: left;
     visibility: hidden;
     z-index: 99999999999;
+
+    @include media($large-screen) {
+      padding-top: 10em;
+    }
 
     .modal-bg {
       @include position(absolute, 0px 0px 0px 0px);
@@ -1583,7 +1588,7 @@ label {
     @include transition(opacity .25s ease);
     background: $modal-background;
     border-radius: $base-border-radius;
-    margin-top: .6em;
+    margin-top: 0;
     margin: auto;
     max-height: 95%;
     overflow: auto;
@@ -1592,14 +1597,12 @@ label {
     width: 95%;
 
     @include media($medium-screen) {
-      margin-top: 10em;
-      max-height: 60%;
+      max-height: 70%;
       padding: $modal-padding;
       width: 60%;
     }
 
     @include media($large-screen) {
-      margin-top: 10em;
       width: 50%;
     }
 

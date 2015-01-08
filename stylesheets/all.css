@@ -4534,10 +4534,15 @@ label {
     left: 0px;
     background: rgba(0, 0, 0, 0.85);
     opacity: 0;
+    padding-top: 0.6em;
     text-align: left;
     visibility: hidden;
     z-index: 99999999999; }
-    /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+    @media screen and (min-width: 53.75em) {
+      /* line 57, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+      .modal .modal-window {
+        padding-top: 10em; } }
+    /* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
     .modal .modal-window .modal-bg {
       position: absolute;
       top: 0px;
@@ -4545,7 +4550,7 @@ label {
       bottom: 0px;
       left: 0px;
       cursor: pointer; }
-  /* line 72, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+  /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
   .modal .modal-close {
     position: absolute;
     top: 1.5em;
@@ -4554,7 +4559,7 @@ label {
     width: 1.5em;
     background: white;
     cursor: pointer; }
-    /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+    /* line 83, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
     .modal .modal-close:after, .modal .modal-close:before {
       position: absolute;
       top: 3px;
@@ -4572,24 +4577,24 @@ label {
       content: '';
       display: block;
       margin: -3px 0 0 -1px; }
-    /* line 89, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+    /* line 94, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
     .modal .modal-close:hover:after, .modal .modal-close:hover:before {
       background: #c4c4c4; }
-    /* line 94, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+    /* line 99, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
     .modal .modal-close:before {
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
       transform: rotate(-45deg); }
-  /* line 99, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+  /* line 104, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
   .modal .modal-inner {
     -webkit-transition: opacity 0.25s ease;
     -moz-transition: opacity 0.25s ease;
     transition: opacity 0.25s ease;
     background: white;
     border-radius: 3px;
-    margin-top: .6em;
+    margin-top: 0;
     margin: auto;
     max-height: 95%;
     overflow: auto;
@@ -4597,49 +4602,47 @@ label {
     position: relative;
     width: 95%; }
     @media screen and (min-width: 40em) {
-      /* line 99, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+      /* line 104, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
       .modal .modal-inner {
-        margin-top: 10em;
-        max-height: 60%;
+        max-height: 70%;
         padding: 3em;
         width: 60%; } }
     @media screen and (min-width: 53.75em) {
-      /* line 99, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+      /* line 104, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
       .modal .modal-inner {
-        margin-top: 10em;
         width: 50%; } }
-    /* line 123, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+    /* line 126, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
     .modal .modal-inner h1 {
       color: #333;
       margin-bottom: .6em;
       text-align: left;
       text-transform: capitalize; }
-    /* line 130, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+    /* line 133, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
     .modal .modal-inner .modal-intro {
       font-weight: 800; }
-    /* line 134, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+    /* line 137, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
     .modal .modal-inner .modal-content {
       color: #333; }
       @media screen and (min-width: 40em) {
-        /* line 134, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+        /* line 137, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
         .modal .modal-inner .modal-content {
           -webkit-columns: 2 8em;
           -moz-columns: 2 8em;
           columns: 2 8em; } }
-    /* line 142, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+    /* line 145, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
     .modal .modal-inner a.cta {
       color: white;
       display: inline-block;
       margin-right: .5em;
       margin-top: 1em; }
-      /* line 148, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+      /* line 151, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
       .modal .modal-inner a.cta:last-child {
         padding: 0 2em; }
-  /* line 154, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+  /* line 157, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
   .modal .modal-state:checked + .modal-window {
     opacity: 1;
     visibility: visible; }
-  /* line 159, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
+  /* line 162, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
   .modal .modal-state:checked + .modal-window .modal-inner {
     top: .5em; }
 
