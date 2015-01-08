@@ -2714,7 +2714,7 @@ function parallax(){
         <div class="refill-centering"><div class="tooltip-item">
   Hover for Tooltip
   <div class="tooltip">
-    <p>Lorem ipsum doloandae oluptate aperiam unde voluptates quas.</p>
+    <p>Lorem ipsum doldae oluptate aperiam unde voluptates quas.</p>
   </div>
 </div>
 </div>
@@ -2731,7 +2731,7 @@ function parallax(){
   <pre><code class="language-markup">&lt;div class=&quot;tooltip-item&quot;&gt;
   Hover for Tooltip
   &lt;div class=&quot;tooltip&quot;&gt;
-    &lt;p&gt;Lorem ipsum doloandae oluptate aperiam unde voluptates quas.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum doldae oluptate aperiam unde voluptates quas.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -2757,15 +2757,16 @@ function parallax(){
 
   $tooltip-background: white;
   $tooltip-color: $base-font-color;
-  $tooltip-width: 16em;
+  $tooltip-max-width: 16em;
   $tooltip-arrow-width: 8px;
   $tooltip-shadow: 0 2px 2px silver;
-  $tooltip-distance-from-item: 140%;
-  $tooltip-arrow-distance-from-box: -$tooltip-arrow-width * 3.2;
+  $tooltip-distance-from-item: 3em;
+  $tooltip-arrow-distance-from-box: -1.3em;
 
+  background: $tooltip-background;
   border-radius: $base-border-radius;
   border: 1px solid $base-border-color;
-  margin-bottom: $base-line-height;
+  display: inline-block;
   padding: .5em 1em;
   position: relative;
   text-align: center;
@@ -2776,18 +2777,17 @@ function parallax(){
   }
 
   .tooltip {
-    @include position(absolute, null null null 50%);
-    @include box-sizing(border-box);
+    @include position(absolute, null 0 $tooltip-distance-from-item 0);
     @include transition (all 0.2s ease-in-out);
     background-color: $tooltip-background;
+    background: #fff;
     border-radius: $base-border-radius;
-    bottom: $tooltip-distance-from-item;
     box-shadow: $tooltip-shadow;
     color: $tooltip-color;
     font-size: .9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
     line-height: 1.5em;
-    margin-left: -($tooltip-width/2);
-    min-width: $tooltip-width;
+    margin: 0 auto;
+    max-width: $tooltip-max-width;
     opacity: 0;
     padding: 1em;
     text-align: center;

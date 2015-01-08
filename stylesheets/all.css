@@ -6490,9 +6490,10 @@ label {
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
 .tooltip-item {
   -webkit-font-smoothing: antialiased;
+  background: white;
   border-radius: 3px;
   border: 1px solid gainsboro;
-  margin-bottom: 1.5em;
+  display: inline-block;
   padding: .5em 1em;
   position: relative;
   text-align: center; }
@@ -6501,29 +6502,28 @@ label {
     color: #333;
     line-height: 1.5em;
     margin: 0; }
-  /* line 32, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
+  /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
   .tooltip-item:hover .tooltip {
     opacity: 1;
     visibility: visible; }
-  /* line 37, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
+  /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_tooltip.scss */
   .tooltip-item .tooltip {
     position: absolute;
-    left: 50%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    right: 0;
+    bottom: 3em;
+    left: 0;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     background-color: white;
+    background: #fff;
     border-radius: 3px;
-    bottom: 140%;
     box-shadow: 0 2px 2px silver;
     color: #333;
     font-size: .9em;
     line-height: 1.5em;
-    margin-left: -8em;
-    min-width: 16em;
+    margin: 0 auto;
+    max-width: 16em;
     opacity: 0;
     padding: 1em;
     text-align: center;
@@ -6538,7 +6538,7 @@ label {
       right: 0;
       left: 0;
       border: 8px solid transparent;
-      bottom: -25.6px;
+      bottom: -1.3em;
       color: white;
       content: '▼';
       font-size: 1.4em;
