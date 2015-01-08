@@ -59,9 +59,14 @@
     @include position(fixed, 0px 0px 0px 0px);
     background: rgba(0,0,0, .85);
     opacity: 0;
+    padding-top: 0.6em;
     text-align: left;
     visibility: hidden;
     z-index: 99999999999;
+
+    @include media($large-screen) {
+      padding-top: 10em;
+    }
 
     .modal-bg {
       @include position(absolute, 0px 0px 0px 0px);
@@ -100,7 +105,7 @@
     @include transition(opacity .25s ease);
     background: $modal-background;
     border-radius: $base-border-radius;
-    margin-top: .6em;
+    margin-top: 0;
     margin: auto;
     max-height: 95%;
     overflow: auto;
@@ -109,14 +114,12 @@
     width: 95%;
 
     @include media($medium-screen) {
-      margin-top: 10em;
-      max-height: 60%;
+      max-height: 70%;
       padding: $modal-padding;
       width: 60%;
     }
 
     @include media($large-screen) {
-      margin-top: 10em;
       width: 50%;
     }
 
