@@ -75,7 +75,7 @@ header.navigation {
 
   // Nav menu
 
-  .nav {
+  nav {
     float: none;
     min-height: $navigation-height;
     z-index: 9999999;
@@ -298,7 +298,7 @@ header.navigation {
     padding: .85em .6em .7em .6em;
     width: 60%;
 
-    .search-and-submit {
+    form {
       position: relative;
 
       input[type=search] {
