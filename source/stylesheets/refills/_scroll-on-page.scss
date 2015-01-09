@@ -29,7 +29,7 @@
   }
 
   .scroll-on-page-link {
-    border-bottom: 1px solid transparentize($base-link-color, .8);
+    border-bottom: 1px solid transparentize($base-link-color, 0.8);
     display: block;
     margin-right: $base-spacing;
     outline: none;
@@ -42,7 +42,7 @@
 
   article {
     h4 {
-      margin: 0 0 .5em 0;
+      margin: 0 0 0.5em 0;
     }
 
     section p:last-of-type {

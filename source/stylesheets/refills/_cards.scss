@@ -19,12 +19,12 @@
 
   $card-border-color: $base-border-color;
   $card-border: 1px solid $card-border-color;
-  $card-background: lighten($card-border-color, 10);
+  $card-background: lighten($card-border-color, 10%);
   $card-header-background: $card-background;
-  $card-hover-background: lighten($card-background, 5);
+  $card-hover-background: lighten($card-background, 5%);
   $card-image-background: #DBD199;
-  $card-image-hover-background: lighten($card-image-background, 5);
-  $card-stats-color: lighten($base-accent-color, 10);
+  $card-image-hover-background: lighten($card-image-background, 5%);
+  $card-stats-color: lighten($base-accent-color, 10%);
   $card-padding-for-absolute-stats: 5em;
   $card-margin: 1em;
 
@@ -34,7 +34,7 @@
   background-color: $card-background;
   border-radius: $base-border-radius;
   border: $card-border;
-  box-shadow: 0 2px 4px darken($base-background-color, 10);
+  box-shadow: 0 2px 4px darken($base-background-color, 10%);
   cursor: pointer;
   margin: 0 $card-margin $base-spacing $card-margin;
   padding-bottom: $card-padding-for-absolute-stats;
@@ -87,13 +87,13 @@
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
     line-height: 1.5em;
-    padding: $base-spacing/3 $base-spacing/2;
+    padding: $base-spacing / 3 $base-spacing / 2;
   }
 
   .card-copy {
     font-size: .9em;
     line-height: 1.5em;
-    padding: $base-spacing/2 $base-spacing/2;
+    padding: $base-spacing / 2 $base-spacing / 2;
 
     p {
       margin: 0 0 ($base-spacing / 2);
@@ -112,7 +112,7 @@
     }
 
     li {
-      border-right: 1px solid transparentize($base-font-color, .8);
+      border-right: 1px solid transparentize($base-font-color, 0.8);
       color: $card-stats-color;
       display: inline;
       float: left;
@@ -132,7 +132,7 @@
       span {
         color: $base-font-color;
         display: block;
-        font-size: .7em;
+        font-size: 0.7em;
         font-weight: normal;
       }
     }

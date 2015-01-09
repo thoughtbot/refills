@@ -20,13 +20,13 @@
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-background: desaturate(darken($base-accent-color, 20%), 30%);
   $footer-color: white;
-  $footer-link-color: transparentize($footer-color, .6);
-  $footer-disclaimer-color: transparentize($footer-color, .6);
+  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
-  padding: $base-spacing*2 $gutter;
+  padding: $base-spacing * 2 $gutter;
   width: 100%;
 
   .footer-logo {
@@ -48,7 +48,7 @@
   }
 
   ul {
-    margin-bottom: $base-spacing*2;
+    margin-bottom: $base-spacing * 2;
 
     @include media($medium-screen) {
       @include span-columns(3);
@@ -77,18 +77,18 @@
     color: $footer-color;
     font-size: 1em;
     font-weight: 800;
-    margin-bottom: .4em;
+    margin-bottom: 0.4em;
   }  
 
   hr {
-    border: 1px solid transparentize($footer-disclaimer-color, .3);
+    border: 1px solid transparentize($footer-disclaimer-color, 0.3);
     margin: 0 auto $base-spacing;
     width: 12em;
   }
 
   p {
     color: $footer-disclaimer-color;
-    font-size: .9em;
+    font-size: 0.9em;
     line-height: 1.5em;
     margin: auto;
     max-width: 35em;

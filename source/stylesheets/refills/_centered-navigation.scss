@@ -20,7 +20,7 @@
   $horizontal-bar-mode: $large-screen;
 
   background-color: $centered-navigation-background;
-  border-bottom: 1px solid darken($centered-navigation-background, 6);
+  border-bottom: 1px solid darken($centered-navigation-background, 6%);
   min-height: $centered-navigation-height;
   width: 100%;
   z-index: 9999;
@@ -144,7 +144,7 @@
   .logo img {
     margin-bottom: -$centered-navigation-logo-height / 3;
     max-height: $centered-navigation-logo-height;
-    opacity: .6;
+    opacity: 0.6;
   }
 
   // Sub menus
@@ -169,7 +169,7 @@
     }
 
     > a:after {
-      @include position(absolute, auto -.4em auto auto);
+      @include position(absolute, auto -0.4em auto auto);
       color: $centered-navigation-color;
       content: '\25BE';
     }
@@ -221,7 +221,7 @@
 
     .submenu {
       @include media($horizontal-bar-mode) {
-        left: $centered-navigation-submenu-width - .2em;
+        left: $centered-navigation-submenu-width - 0.2em;
         top: 0;
       }
     }
@@ -246,7 +246,7 @@
       }
 
       a {
-        background-color: darken($centered-navigation-background, 3);
+        background-color: darken($centered-navigation-background, 3%);
         display: inline-block;
         text-align: right;
         text-decoration: none;

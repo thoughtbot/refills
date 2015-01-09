@@ -41,7 +41,7 @@
       
       h1 {
         font-size: 1.6em;
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
 
         @include media($large-screen) {
           font-size: 1.8em;
@@ -62,7 +62,7 @@
 
     button {
       @include button(flat, $base-accent-color);
-      padding: .7em 1em;
+      padding: 0.7em 1em;
     }
   }
 }

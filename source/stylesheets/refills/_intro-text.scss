@@ -31,10 +31,10 @@
     background: $base-accent-color;
     color: white;
     display: inline-block;
-    font-size: .7em;
+    font-size: 0.7em;
     font-weight: 800;
     margin-bottom: 2em;
-    padding: .3em .6em;
+    padding: 0.3em 0.6em;
     text-transform: uppercase;
 
     @include media($large-screen) {
@@ -65,7 +65,7 @@
     }
 
     a {
-      font-size: .8em;
+      font-size: 0.8em;
       font-weight: 400;
       text-transform: uppercase;
 

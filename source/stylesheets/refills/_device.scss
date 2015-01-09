@@ -20,11 +20,11 @@
   //////////////////////////////////////////////////////////////////////////////////
 
   $device-padding-vertical: 5em;
-  $device-padding-horizontal: .4em;
+  $device-padding-horizontal: 0.4em;
   $device-screen-width: 14em;
   $device-screen-height: 25em;
-  $device-background: darken(gray, 40);
-  $device-backside-background: darken($device-background, 10);
+  $device-background: darken(gray, 40%);
+  $device-backside-background: darken($device-background, 10%);
   $device-text-color: white;
 
   $device-background-top: #162C4C; 
@@ -50,9 +50,9 @@
     }
 
     h4 {
-      border-bottom: 1px solid transparentize($device-text-color, .7);
-      margin-bottom: .5em;
-      padding-bottom: .5em;
+      border-bottom: 1px solid transparentize($device-text-color, 0.7);
+      margin-bottom: 0.5em;
+      padding-bottom: 0.5em;
     }
 
     p {
@@ -61,7 +61,7 @@
 
     button {
       @include button(flat, $base-accent-color);
-      padding: .7em 1em;
+      padding: 0.7em 1em;
     }
   }
 
@@ -81,8 +81,8 @@
       background: $device-background;
       border-radius: 2em;
       box-shadow: 
-        1px 0px lighten($device-backside-background, 20), 
-        4px 0px lighten($device-backside-background, 2),
+        1px 0px lighten($device-backside-background, 20%), 
+        4px 0px lighten($device-backside-background, 2%),
         7px 0px $device-backside-background,
         10px 0px $device-backside-background,
         13px 0px $device-backside-background;
@@ -98,8 +98,8 @@
         @include size($device-screen-width $device-screen-height);
         background-image: url($device-screen-image);
         background-size: cover;
-        border-radius: .2em;
-        box-shadow: inset 0 1px 8px transparentize(black, .5);
+        border-radius: 0.2em;
+        box-shadow: inset 0 1px 8px transparentize(black, 0.5);
         margin: auto;
       }
     }

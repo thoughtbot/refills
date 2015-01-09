@@ -21,7 +21,7 @@
   }
 
   li {
-    font-size: .8em;
+    font-size: 0.8em;
     line-height: 1.5em;
     list-style: none;
   }
@@ -34,7 +34,7 @@
   //////////////////////////////////////////////////////////////////////////////////
 
   $search-tools-border-color: $base-border-color;
-  $search-tools-background: lighten($search-tools-border-color, 10);
+  $search-tools-background: lighten($search-tools-border-color, 10%);
 
   @include clearfix;
   background: $search-tools-background;
@@ -63,11 +63,11 @@
       width: 100%;
 
       &:hover {
-        border-color: darken($base-border-color, 10);
+        border-color: darken($base-border-color, 10%);
       }
 
       &:focus {
-        border-color: darken($base-border-color, 10);
+        border-color: darken($base-border-color, 10%);
         outline: none;
       }
 
@@ -87,9 +87,9 @@
     }
 
     button {
-      @include button(simple, lighten($search-tools-background, 10));
+      @include button(simple, lighten($search-tools-background, 10%));
       @include position(absolute, 5px 5px auto auto);
-      font-size: .7em;
+      font-size: 0.7em;
     }
 
     .hide-options {
@@ -111,8 +111,8 @@
     button {
       @include button(flat, $base-accent-color);
       margin-top: 1em;
-      padding-bottom: .5em;
-      padding-top: .5em;
+      padding-bottom: 0.5em;
+      padding-top: 0.5em;
       width: 100%;
 
       @include media($large-screen) {

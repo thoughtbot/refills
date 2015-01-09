@@ -26,11 +26,11 @@
 
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
-  $table-background: lighten($table-border-color, 12);
-  $table-header-background: lighten($table-background, 10);
-  $table-hover-background: darken($table-background, 5);
-  $table-stripe-background: darken($table-background, 2);
-  $table-stripe-background-hover: darken($table-stripe-background, 5);
+  $table-background: lighten($table-border-color, 12%);
+  $table-header-background: lighten($table-background, 10%);
+  $table-hover-background: darken($table-background, 5%);
+  $table-stripe-background: darken($table-background, 2%);
+  $table-stripe-background-hover: darken($table-stripe-background, 5%);
   $table-padding: .75em 1em;
 
   border-collapse: separate;
@@ -102,12 +102,12 @@
       button {
         @include button(flat, $base-accent-color);
         display: inline-block;
-        font-size: .7em;
+        font-size: 0.7em;
         line-height: $base-line-height;
-        margin-bottom: .3em;
+        margin-bottom: 0.3em;
         margin-right: 0.5em;
         outline: none;
-        padding: .3em 1em;
+        padding: 0.3em 1em;
         width: 100%;
 
         @include media($medium-screen) {
