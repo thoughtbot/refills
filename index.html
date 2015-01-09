@@ -982,42 +982,44 @@
     <section id="centered-navigation" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Centered Navigation</h6></div>
-        <header class="centered-navigation">
+        <header class="centered-navigation" role="banner">
   <div class="centered-navigation-wrapper">
     <a href="javascript:void(0)" class="mobile-logo">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image">
     </a>
     <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
-    <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-      <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
-      <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
-      <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
-      <li class="nav-link logo">
-        <a href="javascript:void(0)" class="logo">
-          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image">
-        </a>
-      </li>
-      <li class="nav-link"><a href="javascript:void(0)">Testimonials</a></li>
-      <li class="nav-link more"><a href="javascript:void(0)">More</a>
-        <ul class="submenu">
-          <li><a href="javascript:void(0)">Submenu Item</a></li>
-          <li><a href="javascript:void(0)">Another Item</a></li>
-          <li class="more"><a href="javascript:void(0)">Item with submenu</a>
-            <ul class="submenu">
-              <li><a href="javascript:void(0)">Sub-submenu Item</a></li>
-              <li><a href="javascript:void(0)">Another Item</a></li>
-            </ul>
-          </li>
-          <li class="more"><a href="javascript:void(0)">Another submenu</a>
-            <ul class="submenu">
-              <li><a href="javascript:void(0)">Sub-submenu</a></li>
-              <li><a href="javascript:void(0)">An Item</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-link"><a href="javascript:void(0)">Sign up</a></li>
-    </ul>
+    <nav role="navigation">
+      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+        <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+        <li class="nav-link logo">
+          <a href="javascript:void(0)" class="logo">
+            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image">
+          </a>
+        </li>
+        <li class="nav-link"><a href="javascript:void(0)">Testimonials</a></li>
+        <li class="nav-link more"><a href="javascript:void(0)">More</a>
+          <ul class="submenu">
+            <li><a href="javascript:void(0)">Submenu Item</a></li>
+            <li><a href="javascript:void(0)">Another Item</a></li>
+            <li class="more"><a href="javascript:void(0)">Item with submenu</a>
+              <ul class="submenu">
+                <li><a href="javascript:void(0)">Sub-submenu Item</a></li>
+                <li><a href="javascript:void(0)">Another Item</a></li>
+              </ul>
+            </li>
+            <li class="more"><a href="javascript:void(0)">Another submenu</a>
+              <ul class="submenu">
+                <li><a href="javascript:void(0)">Sub-submenu</a></li>
+                <li><a href="javascript:void(0)">An Item</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-link"><a href="javascript:void(0)">Sign up</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
@@ -1031,42 +1033,44 @@
   <tr>
     <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;header class=&quot;centered-navigation&quot;&gt;
+  <pre><code class="language-markup">&lt;header class=&quot;centered-navigation&quot; role=&quot;banner&quot;&gt;
   &lt;div class=&quot;centered-navigation-wrapper&quot;&gt;
     &lt;a href=&quot;javascript:void(0)&quot; class=&quot;mobile-logo&quot;&gt;
       &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png&quot; alt=&quot;Logo image&quot;&gt;
     &lt;/a&gt;
     &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-centered-navigation-mobile-menu&quot; class=&quot;centered-navigation-mobile-menu&quot;&gt;MENU&lt;/a&gt;
-    &lt;ul id=&quot;js-centered-navigation-menu&quot; class=&quot;centered-navigation-menu show&quot;&gt;
-      &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;nav-link logo&quot;&gt;
-        &lt;a href=&quot;javascript:void(0)&quot; class=&quot;logo&quot;&gt;
-          &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png&quot; alt=&quot;Logo image&quot;&gt;
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Testimonials&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;nav-link more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;More&lt;/a&gt;
-        &lt;ul class=&quot;submenu&quot;&gt;
-          &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Submenu Item&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another Item&lt;/a&gt;&lt;/li&gt;
-          &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Item with submenu&lt;/a&gt;
-            &lt;ul class=&quot;submenu&quot;&gt;
-              &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sub-submenu Item&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another Item&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another submenu&lt;/a&gt;
-            &lt;ul class=&quot;submenu&quot;&gt;
-              &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sub-submenu&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;An Item&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sign up&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
+    &lt;nav role=&quot;navigation&quot;&gt;
+      &lt;ul id=&quot;js-centered-navigation-menu&quot; class=&quot;centered-navigation-menu show&quot;&gt;
+        &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-link logo&quot;&gt;
+          &lt;a href=&quot;javascript:void(0)&quot; class=&quot;logo&quot;&gt;
+            &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png&quot; alt=&quot;Logo image&quot;&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Testimonials&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-link more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;More&lt;/a&gt;
+          &lt;ul class=&quot;submenu&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Submenu Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Item with submenu&lt;/a&gt;
+              &lt;ul class=&quot;submenu&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sub-submenu Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another Item&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another submenu&lt;/a&gt;
+              &lt;ul class=&quot;submenu&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sub-submenu&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;An Item&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sign up&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
   &lt;/div&gt;
 &lt;/header&gt;
 </code></pre>
@@ -1840,7 +1844,7 @@
     <section id="footer" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Footers</h6></div>
-        <div class="refill-centering"><footer class="footer">
+        <div class="refill-centering"><footer class="footer" role="contentinfo">
   <div class="footer-logo">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
   </div>
@@ -1879,7 +1883,7 @@
   <tr>
     <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;footer class=&quot;footer&quot;&gt;
+  <pre><code class="language-markup">&lt;footer class=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;
   &lt;div class=&quot;footer-logo&quot;&gt;
     &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png&quot; alt=&quot;Logo image&quot;&gt;
   &lt;/div&gt;
@@ -2021,7 +2025,7 @@
    Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
 </div>-->
 
-<footer class="footer-2">
+<footer class="footer-2" role="contentinfo">
   <div class="footer-logo">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
   </div>
@@ -2065,7 +2069,7 @@
    Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
 &lt;/div&gt;--&gt;
 
-&lt;footer class=&quot;footer-2&quot;&gt;
+&lt;footer class=&quot;footer-2&quot; role=&quot;contentinfo&quot;&gt;
   &lt;div class=&quot;footer-logo&quot;&gt;
     &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png&quot; alt=&quot;Logo image&quot;&gt;
   &lt;/div&gt;
@@ -3286,13 +3290,13 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     <section id="navigation" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Navigation</h6></div>
-        <header class="navigation">
+        <header class="navigation" role="banner">
   <div class="navigation-wrapper">
     <a href="javascript:void(0)" class="logo">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image">
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
-    <div class="nav">
+    <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
         <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
         <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
@@ -3316,15 +3320,15 @@ https://developers.google.com/maps/documentation/javascript/tutorial
           </ul>
         </li>
       </ul>
-    </div>
+    </nav>
     <div class="navigation-tools">
       <div class="search-bar">
-        <div class="search-and-submit">
+        <form role="search">
           <input type="search" placeholder="Enter Search" />
           <button type="submit">
             <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
           </button>
-        </div>
+        </form>
       </div>
       <a href="javascript:void(0)" class="sign-up">Sign Up</a>
     </div>
@@ -3341,13 +3345,13 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   <tr>
     <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;header class=&quot;navigation&quot;&gt;
+  <pre><code class="language-markup">&lt;header class=&quot;navigation&quot; role=&quot;banner&quot;&gt;
   &lt;div class=&quot;navigation-wrapper&quot;&gt;
     &lt;a href=&quot;javascript:void(0)&quot; class=&quot;logo&quot;&gt;
       &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png&quot; alt=&quot;Logo Image&quot;&gt;
     &lt;/a&gt;
     &lt;a href=&quot;javascript:void(0)&quot; class=&quot;navigation-menu-button&quot; id=&quot;js-mobile-menu&quot;&gt;MENU&lt;/a&gt;
-    &lt;div class=&quot;nav&quot;&gt;
+    &lt;nav role=&quot;navigation&quot;&gt;
       &lt;ul id=&quot;js-navigation-menu&quot; class=&quot;navigation-menu show&quot;&gt;
         &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
         &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
@@ -3371,15 +3375,15 @@ https://developers.google.com/maps/documentation/javascript/tutorial
           &lt;/ul&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
-    &lt;/div&gt;
+    &lt;/nav&gt;
     &lt;div class=&quot;navigation-tools&quot;&gt;
       &lt;div class=&quot;search-bar&quot;&gt;
-        &lt;div class=&quot;search-and-submit&quot;&gt;
+        &lt;form role=&quot;search&quot;&gt;
           &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
           &lt;button type=&quot;submit&quot;&gt;
             &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png&quot; alt=&quot;Search Icon&quot;&gt;
           &lt;/button&gt;
-        &lt;/div&gt;
+        &lt;/form&gt;
       &lt;/div&gt;
       &lt;a href=&quot;javascript:void(0)&quot; class=&quot;sign-up&quot;&gt;Sign Up&lt;/a&gt;
     &lt;/div&gt;
@@ -3467,7 +3471,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 
   // Nav menu
 
-  .nav {
+  nav {
     float: none;
     min-height: $navigation-height;
     z-index: 9999999;
@@ -3690,7 +3694,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     padding: .85em .6em .7em .6em;
     width: 60%;
 
-    .search-and-submit {
+    form {
       position: relative;
 
       input[type=search] {
@@ -3974,7 +3978,7 @@ jQuery(function(){
       </ol>
     </div>
   </div>
-    <div class="filter">
+  <div class="filter">
     <label>Lengths</label>
     <div>
       <ol>
@@ -4043,7 +4047,7 @@ jQuery(function(){
       &lt;/ol&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-    &lt;div class=&quot;filter&quot;&gt;
+  &lt;div class=&quot;filter&quot;&gt;
     &lt;label&gt;Lengths&lt;/label&gt;
     &lt;div&gt;
       &lt;ol&gt;

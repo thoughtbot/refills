@@ -2958,13 +2958,13 @@ header.navigation {
     header.navigation .navigation-menu-button:hover {
       color: white; }
   /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-  header.navigation .nav {
+  header.navigation nav {
     float: none;
     min-height: 60px;
     z-index: 9999999; }
     @media screen and (min-width: 53.75em) {
       /* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-      header.navigation .nav {
+      header.navigation nav {
         float: left; } }
   /* line 88, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation ul.navigation-menu {
@@ -3168,10 +3168,10 @@ header.navigation {
     padding: .85em .6em .7em .6em;
     width: 60%; }
     /* line 301, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-    header.navigation .search-bar .search-and-submit {
+    header.navigation .search-bar form {
       position: relative; }
       /* line 304, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-      header.navigation .search-bar .search-and-submit input[type=search] {
+      header.navigation .search-bar form input[type=search] {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -3186,10 +3186,10 @@ header.navigation {
         width: 100%; }
         @media screen and (min-width: 53.75em) {
           /* line 304, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-          header.navigation .search-bar .search-and-submit input[type=search] {
+          header.navigation .search-bar form input[type=search] {
             width: 100%; } }
       /* line 321, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-      header.navigation .search-bar .search-and-submit button[type=submit] {
+      header.navigation .search-bar form button[type=submit] {
         background-color: #404040;
         border-radius: 3px;
         border: none;
@@ -3218,27 +3218,27 @@ header.navigation {
         right: 0.3em;
         top: 0.3em; }
         /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
-        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled) {
+        header.navigation .search-bar form button[type=submit]:hover:not(:disabled) {
           background-color: #4d4d4d;
           cursor: pointer; }
         /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
-        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled) {
+        header.navigation .search-bar form button[type=submit]:active:not(:disabled), header.navigation .search-bar form button[type=submit]:focus:not(:disabled) {
           background-color: #333333;
           cursor: pointer; }
         /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
-        header.navigation .search-bar .search-and-submit button[type=submit]:hover:not(:disabled) {
+        header.navigation .search-bar form button[type=submit]:hover:not(:disabled) {
           background-color: #504949;
           cursor: pointer; }
         /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
-        header.navigation .search-bar .search-and-submit button[type=submit]:active:not(:disabled), header.navigation .search-bar .search-and-submit button[type=submit]:focus:not(:disabled) {
+        header.navigation .search-bar form button[type=submit]:active:not(:disabled), header.navigation .search-bar form button[type=submit]:focus:not(:disabled) {
           background-color: #333333;
           cursor: pointer; }
         /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
-        header.navigation .search-bar .search-and-submit button[type=submit]:disabled {
+        header.navigation .search-bar form button[type=submit]:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
         /* line 331, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
-        header.navigation .search-bar .search-and-submit button[type=submit] img {
+        header.navigation .search-bar form button[type=submit] img {
           height: 12px;
           opacity: .7;
           padding: 1px; }
@@ -4815,79 +4815,69 @@ label {
     text-shadow: 0 0 1px black; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-bar.scss */
-.search-bar {
+form.search-bar {
   -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  position: relative;
-  width: 100%; }
-  /* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-bar.scss */
-  .search-bar input {
+  position: relative; }
+  /* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-bar.scss */
+  form.search-bar input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    display: block; }
-  /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-bar.scss */
-  .search-bar div.search-and-submit {
-    position: relative; }
-    /* line 27, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-bar.scss */
-    .search-bar div.search-and-submit input[type=search] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -ms-appearance: none;
-      -o-appearance: none;
-      appearance: none;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      -webkit-transition: border-color;
-      -moz-transition: border-color;
-      transition: border-color;
-      background-color: white;
-      border-radius: 3px;
-      border-radius: 3px;
-      border: 1px solid gainsboro;
-      font-size: 1em;
-      font-style: italic;
-      margin: 0;
-      padding: 0.5em 0.5em;
-      position: relative;
-      width: 100%; }
-    /* line 43, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-bar.scss */
-    .search-bar div.search-and-submit button[type=submit] {
-      background-color: #477DCA;
-      border-radius: 3px;
-      border: none;
-      color: white;
-      display: inline-block;
-      font-size: inherit;
-      font-weight: bold;
-      padding: 7px 18px;
-      text-decoration: none;
-      background-clip: padding-box;
-      position: absolute;
-      top: 0em;
-      right: 0em;
-      bottom: 0em;
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-      outline: none;
-      padding: 5px 10px; }
-      /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
-      .search-bar div.search-and-submit button[type=submit]:hover:not(:disabled) {
-        background-color: #578ad4;
-        cursor: pointer; }
-      /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
-      .search-bar div.search-and-submit button[type=submit]:active:not(:disabled), .search-bar div.search-and-submit button[type=submit]:focus:not(:disabled) {
-        background-color: #3c71bb;
-        cursor: pointer; }
-      /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
-      .search-bar div.search-and-submit button[type=submit]:disabled {
-        opacity: 0.5;
-        cursor: not-allowed; }
-      /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-bar.scss */
-      .search-bar div.search-and-submit button[type=submit] img {
-        height: 12px;
-        opacity: .7; }
+    -webkit-transition: border-color;
+    -moz-transition: border-color;
+    transition: border-color;
+    background-color: white;
+    border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid gainsboro;
+    display: block;
+    font-size: 1em;
+    font-style: italic;
+    margin: 0;
+    padding: 0.5em 0.5em;
+    position: relative;
+    width: 100%; }
+  /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-bar.scss */
+  form.search-bar button[type=submit] {
+    background-color: #477DCA;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: bold;
+    padding: 7px 18px;
+    text-decoration: none;
+    background-clip: padding-box;
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    bottom: 0em;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    outline: none;
+    padding: 5px 10px; }
+    /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    form.search-bar button[type=submit]:hover:not(:disabled) {
+      background-color: #578ad4;
+      cursor: pointer; }
+    /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    form.search-bar button[type=submit]:active:not(:disabled), form.search-bar button[type=submit]:focus:not(:disabled) {
+      background-color: #3c71bb;
+      cursor: pointer; }
+    /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    form.search-bar button[type=submit]:disabled {
+      opacity: 0.5;
+      cursor: not-allowed; }
+    /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-bar.scss */
+    form.search-bar button[type=submit] img {
+      height: 12px;
+      opacity: .7; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
 .sliding-menu-content {

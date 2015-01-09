@@ -2168,14 +2168,12 @@ function parallax(){
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Search bar</h6></div>
         <div class="refill-centering">
-          <div class="refill-smaller">  <div class="search-bar">
-    <div class="search-and-submit">
-      <input type="search" placeholder="Enter Search" />
-      <button type="submit">
-        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
-      </button>
-    </div>
-  </div>
+          <div class="refill-smaller"><form class="search-bar" role="search">
+  <input type="search" placeholder="Enter Search" />
+  <button type="submit">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+  </button>
+</form>
 </div>
         </div>
       </div>
@@ -2188,20 +2186,18 @@ function parallax(){
   <tr>
     <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">  &lt;div class=&quot;search-bar&quot;&gt;
-    &lt;div class=&quot;search-and-submit&quot;&gt;
-      &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
-      &lt;button type=&quot;submit&quot;&gt;
-        &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png&quot; alt=&quot;Search Icon&quot;&gt;
-      &lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  <pre><code class="language-markup">&lt;form class=&quot;search-bar&quot; role=&quot;search&quot;&gt;
+  &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
+  &lt;button type=&quot;submit&quot;&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png&quot; alt=&quot;Search Icon&quot;&gt;
+  &lt;/button&gt;
+&lt;/form&gt;
 </code></pre>
 </td>
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.search-bar {  
+  <pre><code class="language-scss">form.search-bar {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
@@ -2215,46 +2211,36 @@ function parallax(){
   $search-bar-border: 1px solid $search-bar-border-color;
   $search-bar-background: lighten($search-bar-border-color, 10);
 
-  display: inline-block;
-  position: relative; 
-  width: 100%;
+  position: relative;
 
-  input {
+  input[type=search] {
+    @include appearance(none);
     @include box-sizing(border-box);
+    @include transition(border-color);
+    background-color: white;
+    border-radius: $base-border-radius;
+    border-radius: $base-border-radius;
+    border: 1px solid $base-border-color;
     display: block;
+    font-size: 1em;
+    font-style: italic;
+    margin: 0;
+    padding: ($base-spacing / 3) ($base-spacing / 3);
+    position: relative;
+    width: 100%;
   }
 
-  div.search-and-submit {
-    position: relative;
+  button[type=submit] {
+    @include button(flat, $base-accent-color);
+    @include position(absolute, 0em 0em 0em null);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    outline: none;
+    padding: 5px 10px;
 
-    input[type=search] {
-      @include appearance(none);
-      @include box-sizing(border-box);
-      @include transition(border-color);
-      background-color: white;
-      border-radius: $base-border-radius;
-      border-radius: $base-border-radius;
-      border: 1px solid $base-border-color;
-      font-size: 1em;
-      font-style: italic;
-      margin: 0;
-      padding: ($base-spacing / 3) ($base-spacing / 3);
-      position: relative;
-      width: 100%;
-    }
-
-    button[type=submit] {
-      @include button(flat, $base-accent-color);
-      @include position(absolute, 0em 0em 0em null);
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-      outline: none;
-      padding: 5px 10px;
-
-      img {
-        height: 12px;
-        opacity: .7;
-      }
+    img {
+      height: 12px;
+      opacity: .7;
     }
   }
 }
