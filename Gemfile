@@ -1,16 +1,12 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'middleman'
 
-gem 'bitters'
-gem 'sass'
-gem 'bourbon'
-gem 'middleman-livereload', '~> 3.1.0'
+gem 'bourbon', '~> 4.1.0'
 gem 'middleman-gh-pages'
-gem 'neat'
-
-# For faster file watcher updates on Windows:
-gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
+gem 'middleman-livereload', '~> 3.1.0'
+gem 'neat', '~> 1.7.0'
+gem 'sass', '~> 3.4.0'
 
 group :test do
   gem 'rspec'
