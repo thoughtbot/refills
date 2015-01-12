@@ -6,7 +6,7 @@
 ## Prepackaged patterns and components built with Bourbon and Neat
 
 - **[Examples & Code Snippets](http://refills.bourbon.io)**
-- **[Changelog](NEWS.md)**
+- **[Changelog](https://github.com/thoughtbot/refills/releases)**
 - **[Issues & Bugs](https://github.com/thoughtbot/refills/issues)**
 
 ## Requirements
