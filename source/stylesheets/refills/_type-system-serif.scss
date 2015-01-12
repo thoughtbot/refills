@@ -1,17 +1,57 @@
-article.type-system-serif {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-radius: 3px !default;
-  $base-line-height: 1.5em !default;
-  $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
-  $medium-screen: em(640) !default;
-  $base-font-color: $dark-gray !default;
-  
-  h1, h2, h3, p {
-    margin: 0;
+$dark-gray: #333 !default;
+$light-gray: #ddd !default;
+$base-font-color: $dark-gray !default;
+$base-link-color: #477dca !default;
+$sans-serif: "Quattrocento Sans", $helvetica !default;
+$serif: "Lora" !default;
+$modular-scale-ratio: $major-third !default;
+$base-line-height: 1.6 !default;
+$heading-line-height: 1.1 !default;
+$base-spacing: $base-line-height * 1.4em !default;
+
+.type-system-serif {
+  color: $base-font-color;
+  font-family: $serif;
+  line-height: $base-line-height;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: $heading-line-height;
+    margin: ($base-spacing / 1.5) 0 ($base-spacing / 3);
+  }
+
+  h1 {
+    font-size: modular-scale(4);
+  }
+
+  h2 {
+    font-size: modular-scale(2);
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: modular-scale(1);
+  }
+
+  p {
+    margin: 0 0 ($base-spacing / 1.5);
+  }
+
+  a {
+    color: $base-link-color;
+    transition: color 0.1s ease-in-out;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $base-font-color;
+    }
   }
 
   hr {
@@ -19,127 +59,31 @@ article.type-system-serif {
     border-left: none;
     border-right: none;
     border-top: none;
-    margin: $base-spacing 0;
+    margin: ($base-spacing * 2) auto;
+    max-width: $base-spacing * 8;
   }
 
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
+  .article-title {
+    text-align: center;
   }
 
-  a {
-    color: $base-link-color;
-    text-decoration: none;
+  .article-intro {
+    font-size: modular-scale(1);
+    font-style: italic;
+    line-height: $base-line-height * 0.9;
+    margin-top: $base-spacing;
   }
-  //////////////////////////////////////////////////////////////////////////////////
 
-  $serif: 'Lusitana', serif;
-  $serif-2: 'Merriweather', serif;
-  $sans-serif: 'Merriweather Sans', sans-serif;
-
-  @include clearfix;
-  text-align: left;
-
-  .type {
-    border-bottom: 1px solid;
-    display: inline-block;
+  .article-meta-info {
+    color: tint($base-font-color, 25%);
     font-family: $sans-serif;
-    font-size: 0.7em;
-    font-weight: 700;
-    margin-bottom: 2em;
-    padding: 0.3em 0;
-    text-align: left;
-    text-transform: uppercase;
+    font-size: modular-scale(0);
+    text-align: center;
   }
 
-  h1 {
-    font-family: $serif;
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: 0.5em;
-
-    @include media($medium-screen) {
-      font-size: 2.6em;
-    }
-  }
-
-  h2 {
-    font-family: $serif-2;
-    font-size: 1em;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1.6em;
-    margin-bottom: 0.9em;
-
-    @include media($medium-screen) {
-      font-size: 1.2em;
-    }
-  }
-
-  code {
-    background: #F7F7F7;
-    border-radius: $base-border-radius * 1.5;
-    border: 1px solid #E0E0E0;
-    font-family: monaco;
-    font-size: 0.75em;
-    font-style: normal;
-    padding: 0.1em 0.4em;
-    white-space: nowrap;
-  }
-
-  h3 {
-    font-family: $serif;
-    font-size: 1.4em;
-    font-weight: 400;
-    line-height: 1.3em;
-    margin-bottom: .4em;
-  }
-
-  p.date {
-    color: transparentize($base-font-color, .6);
-    font-family: $serif-2;
-    font-size: 0.9em;
-    font-style: italic;
-    margin-bottom: 0.3em;
-  }
-
-  p {
-    font-family: $serif-2;
-    font-size: 0.9em;
-    line-height: 1.6em;
-    margin-bottom: 1.5em;
-
-    span {
-      font-family: $sans-serif;
-      font-weight: 700;
-    }
-  }
-
-  a.read-more {
-    display: inline-block;
-    font-family: $sans-serif;
-    font-size: 0.8em;
-    font-weight: 700;
-    margin-left: 0.2em;
-    position: relative;
-    text-transform: uppercase;
-
-    span {
-      font-family: $serif;
-      font-size: 1.5em;
-      font-style: normal;
-      position: absolute;
-      right: -12px;
-      top: -1px;
-    }
-  }
-  
-  hr {
-    width: 3em;
-  }
-
-  p.author {
-    font-family: $serif-2;
-    font-style: italic;
+  .article-date::after {
+    @include padding(null 0.25em null 0.5em);
+    color: tint($base-font-color, 50%);
+    content: "•";
   }
 }
