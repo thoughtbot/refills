@@ -1,8 +1,9 @@
-@import "normalize";
+@import "vendor/normalize.css";
+@import "vendor/fixedsticky.css";
+@import "vendor/prism.css";
+
 @import "bourbon";
 @import "neat";
-@import "prism";
-@import "fixedsticky";
 
 @import "refills-styles";
 @import "bourbon-nav";
