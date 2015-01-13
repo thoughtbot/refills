@@ -58,6 +58,7 @@
       display: none;
     }
 
+    &:focus,
     &:hover {
       color: $centered-navigation-color-hover;
     }
@@ -113,8 +114,10 @@
     a {
       color: $centered-navigation-color;
       display: inline-block;
+      outline: none;
       text-decoration: none;
 
+      &:focus,
       &:hover {
         color: $centered-navigation-color-hover;
       }
@@ -198,6 +201,7 @@
       }
     }
 
+    &:focus > .submenu,
     &:hover > .submenu {
       display: block;
     }

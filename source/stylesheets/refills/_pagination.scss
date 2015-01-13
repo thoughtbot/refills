@@ -59,6 +59,7 @@
       border-radius: $base-border-radius;
       border: $pagination-border;
       color: $pagination-color;
+      outline: none;
       padding: ($base-spacing / 4) ($gutter / 2);
 
       &:hover,

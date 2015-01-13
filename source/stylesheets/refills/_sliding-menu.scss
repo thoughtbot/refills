@@ -23,6 +23,7 @@
   $sliding-menu-border: 1px solid $sliding-menu-border-color;
   $sliding-menu-background-hover: $base-accent-color;
   $sliding-menu-color-hover: #fff;
+  $sliding-menu-background-focus: lighten($sliding-menu-background, 5%);
 
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
@@ -39,6 +40,10 @@
     display: block;
     font-weight: bold;
     padding: 1em;
+
+    &:focus {
+      background-color: $sliding-menu-background-focus;
+    }
 
     &:hover {
       background-color: $sliding-menu-background-hover;

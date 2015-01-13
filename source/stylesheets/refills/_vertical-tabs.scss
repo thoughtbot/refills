@@ -110,6 +110,7 @@
     font-weight: bold;
     padding: $base-spacing / 2 $gutter / 2;
 
+    &:focus,
     &:hover {
       color: $base-accent-color;
     }

@@ -55,6 +55,7 @@
       border: none;
     }
 
+    &:focus,
     &:hover {
       background-color: $accordion-menu-hover;
     }
@@ -70,7 +71,8 @@
         border-top: $accordion-menu-border;
         box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
       }
-
+      
+      &:focus,
       &:hover {
         background-color: $accordion-menu-sub-hover;
       }

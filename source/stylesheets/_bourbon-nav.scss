@@ -39,6 +39,7 @@ nav.bourbon {
       display: block;
     };
 
+    &:focus,
     &:hover {
       background-color: darken($bourbon-nav-background-color, 10);
       color: #fff;

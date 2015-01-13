@@ -8,7 +8,7 @@ section.inner-content {
   display: inline-block;
   @include transition (all 0.2s ease-in-out);
   cursor: pointer;
-  border: 1px solid darken(desaturate(#93E9BE, 50), 15);;
+  border: 1px solid darken(desaturate(#93e9be, 50), 15);;
   height: 50px;
   width: 50px;
   padding: .7em 1em;
@@ -84,14 +84,15 @@ section.inner-content {
 
   ul li {
     a {
-      color: white;
+      color: darken(#fff, 15%);
       font-weight: 300;
       line-height: $base-line-height;
       font-size: 1em;
       text-decoration: none;
 
+      &:focus,
       &:hover {
-        color: #FFF;
+        color: #fff;
         text-decoration: none;
       }
     }

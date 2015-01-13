@@ -20,8 +20,8 @@ $base-spacing: 1.5em !default;
     color: darken($color, 70%);
     text-decoration: none;
 
-    &:hover,
-    &:focus {
+    &:focus,
+    &:hover {
       color: darken($color, 90%);
     }
   }

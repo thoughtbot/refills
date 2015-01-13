@@ -54,13 +54,10 @@
       padding-right: $breadcrumb-height / 2;
     }
 
+    &:focus,
     &:hover {
-      color: $breadcrumb-color-hover;
       background-color: $breadcrumb-inactive-hover-color;
-    }
-
-    &:hover:after {
-      border-left-color: $breadcrumb-inactive-hover-color;
+      color: $breadcrumb-color-hover;
     }
 
     &:after,

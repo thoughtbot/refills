@@ -54,6 +54,7 @@
         width: auto;
       }
 
+      &:focus,
       &:hover {
         background-color: darken($button-group-background, 3%);
       }

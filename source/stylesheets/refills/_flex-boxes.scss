@@ -49,6 +49,7 @@
         $color-from-list: nth($flex-box-top-colors, $i);
         border-top: 6px solid $color-from-list;
         
+        &:focus,
         &:hover {
           background-color: transparentize($color-from-list, 0.9);
         }

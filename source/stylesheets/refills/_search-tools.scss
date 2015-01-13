@@ -57,13 +57,9 @@
       position: relative;
       width: 100%;
 
+      &:focus,
       &:hover {
         border-color: darken($base-border-color, 10%);
-      }
-
-      &:focus {
-        border-color: darken($base-border-color, 10%);
-        outline: none;
       }
 
       label {

@@ -138,6 +138,7 @@ body {
     color: $refills-anchor-color;
     text-decoration: none;
 
+    &:focus,
     &:hover {
       color: lighten($refills-anchor-color, 10);
     }

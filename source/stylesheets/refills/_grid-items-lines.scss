@@ -40,6 +40,7 @@
     float: left;
     height: $grid-item-height;
     overflow: hidden;
+    outline: none;
     padding: 2em;
     width: 100%;
 
@@ -47,6 +48,7 @@
       @include grid-item-columns($grid-item-columns);
     }
 
+    &:focus,
     &:hover {
       background: transparentize($grid-item-color, 0.95);
     }

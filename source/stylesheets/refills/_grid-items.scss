@@ -47,6 +47,7 @@
     float: left;
     height: $grid-item-height;
     overflow: hidden;
+    outline: none;
     padding: 2em;
     text-align: center;
     width: 100%;
@@ -61,6 +62,7 @@
         background-color: $background-from-list;
         box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%);
 
+        &:focus,
         &:hover {
           background-color: darken($background-from-list, 10%);
           background-repeat: no-repeat;

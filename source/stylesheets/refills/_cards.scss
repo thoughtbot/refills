@@ -136,7 +136,8 @@
       }
     }
   }
-
+  
+  &:focus,
   &:hover {
     background-color: $card-hover-background;
     
