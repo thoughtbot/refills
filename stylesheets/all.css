@@ -1,561 +1,18 @@
 @charset "UTF-8";
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-/* line 10, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
-
-/**
- * Remove default margin.
- */
-/* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-body {
-  margin: 0; }
-
-/* HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
-/* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block; }
-
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-/* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */ }
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-/* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
- */
-/* line 76, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-[hidden],
-template {
-  display: none; }
-
-/* Links
-   ========================================================================== */
-/**
- * Remove the gray background color from active links in IE 10.
- */
-/* line 88, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-a {
-  background: transparent; }
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-/* line 96, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-a:active,
-a:hover {
-  outline: 0; }
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-/* line 108, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
-/* line 116, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-b,
-strong {
-  font-weight: bold; }
-
-/**
- * Address styling not present in Safari and Chrome.
- */
-/* line 125, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-dfn {
-  font-style: italic; }
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-/* line 134, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-/**
- * Address styling not present in IE 8/9.
- */
-/* line 143, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-mark {
-  background: #ff0;
-  color: #000; }
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-/* line 152, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-small {
-  font-size: 80%; }
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-/* line 160, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-/* line 168, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-sup {
-  top: -0.5em; }
-
-/* line 172, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-sub {
-  bottom: -0.25em; }
-
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9/10.
- */
-/* line 183, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-img {
-  border: 0; }
-
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-/* line 191, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-svg:not(:root) {
-  overflow: hidden; }
-
-/* Grouping content
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-/* line 202, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-figure {
-  margin: 1em 40px; }
-
-/**
- * Address differences between Firefox and other browsers.
- */
-/* line 210, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0; }
-
-/**
- * Contain overflow in all browsers.
- */
-/* line 220, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-pre {
-  overflow: auto; }
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-/* line 228, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em; }
-
-/* Forms
-   ========================================================================== */
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- */
-/* line 251, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */ }
-
-/**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
- */
-/* line 265, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-button {
-  overflow: visible; }
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
- */
-/* line 276, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-button,
-select {
-  text-transform: none; }
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-/* line 289, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */ }
-
-/**
- * Re-set default cursor for disabled elements.
- */
-/* line 301, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-button[disabled],
-html input[disabled] {
-  cursor: default; }
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-/* line 310, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-/* line 321, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-input {
-  line-height: normal; }
-
-/**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-/* line 333, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-/* line 345, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
- */
-/* line 356, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box; }
-
-/**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
- */
-/* line 369, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-/**
- * Define consistent border, margin, and padding.
- */
-/* line 378, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-/* line 389, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-/**
- * Remove default vertical scrollbar in IE 8/9/10/11.
- */
-/* line 398, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-textarea {
-  overflow: auto; }
-
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
-/* line 407, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-optgroup {
-  font-weight: bold; }
-
-/* Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-/* line 418, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-/* line 423, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_normalize.scss */
-td,
-th {
-  padding: 0; }
-
-/* Neat 1.7.0
- * http://neat.bourbon.io
- * Copyright 2012-2014 thoughtbot, inc.
- * MIT License */
-/* line 2, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_box-sizing.scss */
+@import url(vendor/normalize.css);
+@import url(vendor/fixedsticky.css);
+@import url(vendor/prism.css);
+/* line 4, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 7, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_box-sizing.scss */
+/* line 9, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_box-sizing.scss */
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
-
-/**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
- */
-/* line 8, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: black;
-  text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none; }
-
-/* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-  text-shadow: none;
-  background: #b3d4fc; }
-
-/* line 36, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
-  text-shadow: none;
-  background: #b3d4fc; }
-
-@media print {
-  /* line 43, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-  code[class*="language-"],
-  pre[class*="language-"] {
-    text-shadow: none; } }
-/* Code blocks */
-/* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-pre[class*="language-"] {
-  padding: 1em;
-  margin: .5em 0;
-  overflow: auto; }
-
-/* line 56, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #f5f2f0; }
-
-/* Inline code */
-/* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em; }
-
-/* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: slategray; }
-
-/* line 74, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-.token.punctuation {
-  color: #999; }
-
-/* line 78, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-.namespace {
-  opacity: .7; }
-
-/* line 82, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol {
-  color: #905; }
-
-/* line 91, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.builtin {
-  color: #690; }
-
-/* line 98, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-  color: #a67f59;
-  background: rgba(255, 255, 255, 0.5); }
-
-/* line 108, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: #07a; }
-
-/* line 115, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-.token.regex,
-.token.important {
-  color: #e90; }
-
-/* line 120, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-.token.important {
-  font-weight: bold; }
-
-/* line 124, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/prism.css */
-.token.entity {
-  cursor: help; }
-
-/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/fixedsticky.css */
-.fixedsticky {
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -ms-sticky;
-  position: -o-sticky;
-  position: sticky; }
-
-/* When position: sticky is supported but native behavior is ignored */
-/* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/fixedsticky.css */
-.fixedsticky-withoutfixedfixed .fixedsticky-off,
-.fixed-supported .fixedsticky-off {
-  position: static; }
-
-/* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/fixedsticky.css */
-.fixedsticky-withoutfixedfixed .fixedsticky-on,
-.fixed-supported .fixedsticky-on {
-  position: fixed; }
-
-/* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/fixedsticky.css */
-.fixedsticky-dummy {
-  display: none; }
-
-/* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/vendor/stylesheets/fixedsticky.css */
-.fixedsticky-on + .fixedsticky-dummy {
-  display: block; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 body {
@@ -593,11 +50,11 @@ body {
   padding: 5em 0;
   text-align: center;
   width: 100%; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .refills-header:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .refills-header::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   @media screen and (min-width: 40em) {
     /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
     .refills-header {
@@ -684,11 +141,11 @@ body {
       .refills-header p {
         font-size: .8em; } }
 
-/* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-.menu-wrapper:after {
+/* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+.menu-wrapper::after {
+  clear: both;
   content: "";
-  display: table;
-  clear: both; }
+  display: table; }
 
 /* line 169, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
 ul.refills-menu {
@@ -759,11 +216,11 @@ section.refill {
   margin-bottom: 2em;
   padding-bottom: 1em;
   position: relative; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  section.refill:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  section.refill::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 250, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
   section.refill > h3 {
     margin-bottom: 1.3em;
@@ -776,11 +233,11 @@ section.refill {
   margin-left: auto;
   margin-right: auto;
   padding: 1em; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .refills-wrapper:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .refills-wrapper::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 261, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
   .refills-wrapper h1.main-header {
     background-color: #82caca;
@@ -954,11 +411,11 @@ footer.refills-footer {
     display: block;
     height: 60px;
     margin: auto; }
-    /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-    footer.refills-footer img:after {
+    /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    footer.refills-footer img::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
   /* line 472, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
   footer.refills-footer .footer-links {
     background: #F3F3F3;
@@ -1011,11 +468,11 @@ footer.refills-footer {
   border-radius: 3px;
   border: 1px solid gainsboro;
   margin-bottom: 1.5em; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .accordion-tabs-type-systems:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .accordion-tabs-type-systems::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   @media screen and (min-width: 40em) {
     /* line 523, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
     .accordion-tabs-type-systems {
@@ -1116,11 +573,11 @@ footer.refills-footer {
 nav.bourbon {
   background-color: #5B5E63;
   padding: 0 2em 0 1em; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  nav.bourbon:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  nav.bourbon::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   @media screen and (max-width: 31.875em) {
     /* line 3, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_bourbon-nav.scss */
     nav.bourbon {
@@ -1351,11 +808,11 @@ section.inner-content {
   line-height: 1.5;
   margin-bottom: 1.5em;
   padding: 0; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .accordion-tabs:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .accordion-tabs::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   @media screen and (max-width: 40em) {
     /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs.scss */
     .accordion-tabs {
@@ -1432,11 +889,11 @@ section.inner-content {
 .accordion-tabs-minimal {
   line-height: 1.5;
   padding: 0; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .accordion-tabs-minimal:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .accordion-tabs-minimal::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
   .accordion-tabs-minimal li.tab-header-and-content {
     list-style: none; }
@@ -1515,15 +972,15 @@ section.inner-content {
     margin: 0.5em 0; }
   /* line 45, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
   .browsers .browser-circle:nth-child(1) {
-    background: #FF6F55;
+    background: #ff6f55;
     margin-left: 0.5em; }
   /* line 50, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
   .browsers .browser-circle:nth-child(2) {
-    background: #F5B01D;
+    background: #f5b01d;
     margin-left: 0.16667em; }
   /* line 55, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
   .browsers .browser-circle:nth-child(3) {
-    background: #51B151;
+    background: #51b151;
     margin-left: 0.16667em; }
   /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
   .browsers .browser {
@@ -1536,7 +993,7 @@ section.inner-content {
     width: 20%; }
   /* line 72, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
   .browsers .browser:nth-child(1) {
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
     display: none; }
     @media screen and (min-width: 53.75em) {
       /* line 72, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
@@ -1545,7 +1002,7 @@ section.inner-content {
     /* line 80, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
     .browsers .browser:nth-child(1) .browser-content {
       background: url(https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot1.png);
-      background-color: #F0F0F0;
+      background-color: #f0f0f0;
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover; }
@@ -1556,7 +1013,7 @@ section.inner-content {
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
-    background-color: white;
+    background-color: #fff;
     width: 90%; }
     @media screen and (min-width: 53.75em) {
       /* line 89, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
@@ -1570,13 +1027,13 @@ section.inner-content {
     /* line 99, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
     .browsers .browser:nth-child(2) .browser-content {
       background: url(https://raw.githubusercontent.com/thoughtbot/refills/9c16f8b69d857c296c85f2d8c434e825f813a566/source/images/refills-screenshot2.jpg);
-      background-color: white;
+      background-color: #fff;
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover; }
   /* line 108, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
   .browsers .browser:nth-child(3) {
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
     display: none; }
     @media screen and (min-width: 53.75em) {
       /* line 108, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
@@ -1585,7 +1042,7 @@ section.inner-content {
     /* line 116, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
     .browsers .browser:nth-child(3) .browser-content {
       background: url(https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot3.png);
-      background-color: #F0F0F0;
+      background-color: #f0f0f0;
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover; }
@@ -1602,8 +1059,8 @@ section.inner-content {
 
 /* line 139, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_browser.scss */
 .cover {
-  background: white;
-  border-top: 1px solid #E6E6E6;
+  background: #fff;
+  border-top: 1px solid #e6e6e6;
   height: 3.5em;
   margin-top: -1em;
   position: relative;
@@ -1689,7 +1146,7 @@ section.inner-content {
       background-color: #477DCA;
       box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
       color: white;
-      font-size: .8em;
+      font-size: 0.8em;
       font-weight: 800;
       left: -5px;
       line-height: 1.5em;
@@ -1711,7 +1168,7 @@ section.inner-content {
     padding: 0.5em 0.75em; }
   /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .card .card-copy {
-    font-size: .9em;
+    font-size: 0.9em;
     line-height: 1.5em;
     padding: 0.75em 0.75em; }
     /* line 97, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
@@ -1723,9 +1180,9 @@ section.inner-content {
     -moz-align-self: flex-end;
     align-self: flex-end;
     -ms-flex-item-align: end;
-    bottom: .5em;
+    bottom: 0.5em;
     overflow: auto;
-    padding: 0.75em 0.75em;
+    padding: 0.75em;
     position: absolute; }
     /* line 109, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .card .card-stats ul {
@@ -1739,7 +1196,7 @@ section.inner-content {
       font-size: 1.2em;
       font-weight: 800;
       line-height: 1.1em;
-      padding: 0 .7em 0 .7em; }
+      padding: 0 0.7em; }
       /* line 123, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
       .card .card-stats li:first-child {
         padding-left: 0; }
@@ -1815,16 +1272,16 @@ section.inner-content {
     margin-right: auto;
     position: relative;
     z-index: 999; }
-    /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-    .centered-navigation .centered-navigation-wrapper:after {
+    /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    .centered-navigation .centered-navigation-wrapper::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
-    /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-    .centered-navigation .centered-navigation-wrapper:after {
+      display: table; }
+    /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    .centered-navigation .centered-navigation-wrapper::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
   /* line 75, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
   .centered-navigation ul.centered-navigation-menu {
     -webkit-transform-style: preserve-3d;
@@ -1911,7 +1368,7 @@ section.inner-content {
       bottom: auto;
       left: auto;
       color: rgba(51, 51, 51, 0.7);
-      content: '\25BE'; }
+      content: "\25BE"; }
   /* line 177, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
   .centered-navigation li.more {
     overflow: visible;
@@ -1929,7 +1386,7 @@ section.inner-content {
           margin-right: 1em; } }
       /* line 193, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
       .centered-navigation li.more > a:after {
-        content: '›';
+        content: "›";
         font-size: 1.2em;
         position: absolute;
         right: 0.5em; }
@@ -2079,15 +1536,15 @@ section.inner-content {
       text-decoration: none;
       background-clip: padding-box;
       padding: 0.7em 1em; }
-      /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 351, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .device-background .device-text button:hover:not(:disabled) {
         background-color: #578ad4;
         cursor: pointer; }
-      /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 362, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .device-background .device-text button:active:not(:disabled), .device-background .device-text button:focus:not(:disabled) {
         background-color: #3c71bb;
         cursor: pointer; }
-      /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 59, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .device-background .device-text button:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -2162,11 +1619,11 @@ section.inner-content {
   /* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flex-boxes.scss */
   .flex-boxes a {
     text-decoration: none; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .flex-boxes:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .flex-boxes::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 36, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flex-boxes.scss */
   .flex-boxes .flex-box {
     -webkit-transition: all 0.2s ease-in-out;
@@ -2278,11 +1735,11 @@ section.inner-content {
   /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
   .footer .footer-links {
     margin-bottom: 1.5em; }
-    /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-    .footer .footer-links:after {
+    /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    .footer .footer-links::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
     @media screen and (min-width: 40em) {
       /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
       .footer .footer-links {
@@ -2297,20 +1754,20 @@ section.inner-content {
         display: block;
         margin-right: 2.35765%;
         width: 23.23176%; }
-        /* line 85, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
+        /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
         .footer ul:last-child {
           margin-right: 0; }
-        /* line 82, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_omega.scss */
+        /* line 78, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_omega.scss */
         .footer ul:nth-child(3n) {
           margin-right: 0; }
-        /* line 87, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_omega.scss */
+        /* line 83, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_omega.scss */
         .footer ul:nth-child(3n+1) {
           clear: left; }
-        /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-        .footer ul:after {
+        /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+        .footer ul::after {
+          clear: both;
           content: "";
-          display: table;
-          clear: both; } }
+          display: table; } }
   /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
   .footer li {
     text-align: center; }
@@ -2438,11 +1895,11 @@ section.inner-content {
 /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-items.scss */
 .grid-items a {
   text-decoration: none; }
-/* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-.grid-items:after {
+/* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+.grid-items::after {
+  clear: both;
   content: "";
-  display: table;
-  clear: both; }
+  display: table; }
 /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-items.scss */
 .grid-items .grid-item {
   -webkit-transition: all 0.2s ease-in-out;
@@ -2578,11 +2035,11 @@ section.inner-content {
   /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-items-lines.scss */
   .grid-items-lines a {
     text-decoration: none; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .grid-items-lines:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .grid-items-lines::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-items-lines.scss */
   .grid-items-lines .grid-item {
     -webkit-transition: all 0.2s ease-in-out;
@@ -2667,16 +2124,16 @@ section.inner-content {
     margin: auto;
     padding: 3.5em;
     text-align: center; }
-    /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-    .hero .hero-inner:after {
+    /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    .hero .hero-inner::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
-    /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-    .hero .hero-inner:after {
+      display: table; }
+    /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    .hero .hero-inner::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
     /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hero.scss */
     .hero .hero-inner .hero-copy {
       text-align: center; }
@@ -2711,15 +2168,15 @@ section.inner-content {
       text-decoration: none;
       background-clip: padding-box;
       padding: 0.7em 1em; }
-      /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 351, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .hero .hero-inner button:hover:not(:disabled) {
         background-color: #578ad4;
         cursor: pointer; }
-      /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 362, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .hero .hero-inner button:active:not(:disabled), .hero .hero-inner button:focus:not(:disabled) {
         background-color: #3c71bb;
         cursor: pointer; }
-      /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 59, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .hero .hero-inner button:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -2897,16 +2354,16 @@ header.navigation {
     margin-right: auto;
     position: relative;
     z-index: 9999; }
-    /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-    header.navigation .navigation-wrapper:after {
+    /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    header.navigation .navigation-wrapper::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
-    /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-    header.navigation .navigation-wrapper:after {
+      display: table; }
+    /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    header.navigation .navigation-wrapper::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
   /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_navigation.scss */
   header.navigation .logo {
     float: left;
@@ -3127,15 +2584,15 @@ header.navigation {
     margin-top: 1em;
     padding: 0.75em 1em;
     text-transform: uppercase; }
-    /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    /* line 351, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
     header.navigation .sign-up:hover:not(:disabled) {
       background-color: #578ad4;
       cursor: pointer; }
-    /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    /* line 362, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
     header.navigation .sign-up:active:not(:disabled), header.navigation .sign-up:focus:not(:disabled) {
       background-color: #3c71bb;
       cursor: pointer; }
-    /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    /* line 59, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
     header.navigation .sign-up:disabled {
       opacity: 0.5;
       cursor: not-allowed; }
@@ -3194,23 +2651,23 @@ header.navigation {
         position: absolute;
         right: 0.3em;
         top: 0.3em; }
-        /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        /* line 351, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         header.navigation .search-bar form button[type=submit]:hover:not(:disabled) {
           background-color: #4d4d4d;
           cursor: pointer; }
-        /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        /* line 362, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         header.navigation .search-bar form button[type=submit]:active:not(:disabled), header.navigation .search-bar form button[type=submit]:focus:not(:disabled) {
           background-color: #333333;
           cursor: pointer; }
-        /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        /* line 351, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         header.navigation .search-bar form button[type=submit]:hover:not(:disabled) {
           background-color: #504949;
           cursor: pointer; }
-        /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        /* line 362, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         header.navigation .search-bar form button[type=submit]:active:not(:disabled), header.navigation .search-bar form button[type=submit]:focus:not(:disabled) {
           background-color: #333333;
           cursor: pointer; }
-        /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        /* line 59, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         header.navigation .search-bar form button[type=submit]:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
@@ -3250,7 +2707,7 @@ header.navigation {
       display: block;
       margin-right: 2.35765%;
       width: 31.76157%; }
-      /* line 85, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
+      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
       .scroll-on-page aside:last-child {
         margin-right: 0; } }
   /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_scroll-on-page.scss */
@@ -3276,7 +2733,7 @@ header.navigation {
       display: block;
       margin-right: 2.35765%;
       width: 65.88078%; }
-      /* line 85, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
+      /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
       .scroll-on-page article:last-child {
         margin-right: 0; } }
 
@@ -3300,11 +2757,11 @@ header.navigation {
     display: block;
     font-weight: bold;
     margin-bottom: 0.375em; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .search-tools:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .search-tools::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
   .search-tools .filter {
     margin-bottom: 1em; }
@@ -3316,7 +2773,7 @@ header.navigation {
         margin-right: 2.35765%;
         width: 27.49666%;
         margin-bottom: 0; }
-        /* line 85, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
+        /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
         .search-tools .filter:last-child {
           margin-right: 0; } }
     /* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
@@ -3389,29 +2846,29 @@ header.navigation {
       bottom: auto;
       left: auto;
       font-size: 0.7em; }
-      /* line 131, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 137, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .search-tools .filter button:hover:not(:disabled) {
         box-shadow: inset 0 1px 0 0 white;
         cursor: pointer;
         background-color: #f2f2f2;
         background-image: -webkit-linear-gradient(#f2f2f2, #dbdbdb);
         background-image: linear-gradient(#f2f2f2, #dbdbdb); }
-      /* line 147, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 153, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .search-tools .filter button:active:not(:disabled), .search-tools .filter button:focus:not(:disabled) {
         border: 1px solid #dbdbdb;
         box-shadow: inset 0 0 8px 4px #d4d4d4, inset 0 0 8px 4px #d4d4d4; }
-      /* line 131, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 137, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .search-tools .filter button:hover:not(:disabled) {
         box-shadow: inset 0 1px 0 0 white;
         cursor: pointer;
         background-color: #f2f2f2;
         background-image: -webkit-linear-gradient(#f2f2f2, #ded8d8);
         background-image: linear-gradient(#f2f2f2, #ded8d8); }
-      /* line 147, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 153, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .search-tools .filter button:active:not(:disabled), .search-tools .filter button:focus:not(:disabled) {
         border: 1px solid #dfd8d8;
         box-shadow: inset 0 0 8px 4px #d7d1d1, inset 0 0 8px 4px #d7d1d1; }
-      /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 59, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .search-tools .filter button:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -3431,7 +2888,7 @@ header.navigation {
         display: block;
         margin-right: 2.35765%;
         width: 10.43705%; }
-        /* line 85, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/neat/grid/_span-columns.scss */
+        /* line 87, /Library/Ruby/Gems/2.0.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
         .search-tools .trigger:last-child {
           margin-right: 0; } }
     /* line 106, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
@@ -3450,15 +2907,15 @@ header.navigation {
       padding-bottom: 0.5em;
       padding-top: 0.5em;
       width: 100%; }
-      /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 351, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .search-tools .trigger button:hover:not(:disabled) {
         background-color: #578ad4;
         cursor: pointer; }
-      /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 362, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .search-tools .trigger button:active:not(:disabled), .search-tools .trigger button:focus:not(:disabled) {
         background-color: #3c71bb;
         cursor: pointer; }
-      /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 59, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .search-tools .trigger button:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -3538,16 +2995,16 @@ header.navigation {
       padding: 7px 18px;
       text-decoration: none;
       background-clip: padding-box;
-      padding: .7em 1em; }
-      /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      padding: 0.7em 1em; }
+      /* line 351, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .side-image .side-image-content button:hover:not(:disabled) {
         background-color: #578ad4;
         cursor: pointer; }
-      /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 362, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .side-image .side-image-content button:active:not(:disabled), .side-image .side-image-content button:focus:not(:disabled) {
         background-color: #3c71bb;
         cursor: pointer; }
-      /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+      /* line 59, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .side-image .side-image-content button:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -3628,15 +3085,15 @@ header.navigation {
         outline: none;
         padding: 0.3em 1em;
         width: 100%; }
-        /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        /* line 351, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .tables tbody td button:hover:not(:disabled) {
           background-color: #578ad4;
           cursor: pointer; }
-        /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        /* line 362, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .tables tbody td button:active:not(:disabled), .tables tbody td button:focus:not(:disabled) {
           background-color: #3c71bb;
           cursor: pointer; }
-        /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        /* line 59, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .tables tbody td button:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
@@ -3696,15 +3153,15 @@ header.navigation {
         outline: none;
         padding: .3em 1em;
         width: 100%; }
-        /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        /* line 351, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .table-minimal tbody td button:hover:not(:disabled) {
           background-color: #578ad4;
           cursor: pointer; }
-        /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        /* line 362, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .table-minimal tbody td button:active:not(:disabled), .table-minimal tbody td button:focus:not(:disabled) {
           background-color: #3c71bb;
           cursor: pointer; }
-        /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+        /* line 59, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .table-minimal tbody td button:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
@@ -3731,11 +3188,11 @@ header.navigation {
   .vertical-tabs-container a {
     text-decoration: none;
     color: #477DCA; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .vertical-tabs-container:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .vertical-tabs-container::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_vertical-tabs.scss */
   .vertical-tabs-container .vertical-tabs {
     display: none; }
@@ -4175,12 +3632,12 @@ header.navigation {
     /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_expander.scss */
     .expander .expander-trigger:before {
       font-size: 0.7em;
-      content: '\25BC';
+      content: "\25BC";
       margin-right: 0.5em; }
   /* line 47, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_expander.scss */
   .expander .expander-hidden:before {
     font-size: 0.7em;
-    content: '\25BA'; }
+    content: "\25BA"; }
   /* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_expander.scss */
   .expander .expander-hidden + .expander-content {
     display: none; }
@@ -4200,11 +3657,11 @@ header.navigation {
   .fade-in-element p {
     color: #333;
     line-height: 1.5em; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .fade-in-element:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .fade-in-element::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
 
 /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_fade-in.scss */
 .js-fade-element-hide {
@@ -4448,15 +3905,15 @@ label {
   text-decoration: none;
   background-clip: padding-box;
   padding: 0.8em 1em; }
-  /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  /* line 351, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .modal .modal-trigger:hover:not(:disabled) {
     background-color: #578ad4;
     cursor: pointer; }
-  /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  /* line 362, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .modal .modal-trigger:active:not(:disabled), .modal .modal-trigger:focus:not(:disabled) {
     background-color: #3c71bb;
     cursor: pointer; }
-  /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  /* line 59, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .modal .modal-trigger:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
@@ -4797,15 +4254,15 @@ form.search-bar {
     border-top-left-radius: 0;
     outline: none;
     padding: 5px 10px; }
-    /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    /* line 351, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
     form.search-bar button[type=submit]:hover:not(:disabled) {
       background-color: #578ad4;
       cursor: pointer; }
-    /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    /* line 362, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
     form.search-bar button[type=submit]:active:not(:disabled), form.search-bar button[type=submit]:focus:not(:disabled) {
       background-color: #3c71bb;
       cursor: pointer; }
-    /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+    /* line 59, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
     form.search-bar button[type=submit]:disabled {
       opacity: 0.5;
       cursor: not-allowed; }
@@ -4900,15 +4357,15 @@ form.search-bar {
   cursor: pointer;
   position: relative;
   outline: none; }
-  /* line 352, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  /* line 351, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .sliding-menu-button:hover:not(:disabled) {
     background-color: #578ad4;
     cursor: pointer; }
-  /* line 363, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  /* line 362, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .sliding-menu-button:active:not(:disabled), .sliding-menu-button:focus:not(:disabled) {
     background-color: #3c71bb;
     cursor: pointer; }
-  /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_button.scss */
+  /* line 59, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .sliding-menu-button:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
@@ -5000,16 +4457,16 @@ form.search-bar {
   border: 1px solid silver;
   margin-bottom: 3em;
   padding: 1em; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .texture-examples:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .texture-examples::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .texture-examples .texture-examples-container:after {
+    display: table; }
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .texture-examples .texture-examples-container::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 111, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_texture-legend.scss */
   .texture-examples h3 {
     color: #CDCDCD;
@@ -6502,11 +5959,11 @@ article.type-system-geometric {
   article.type-system-geometric a {
     color: #477DCA;
     text-decoration: none; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  article.type-system-geometric:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  article.type-system-geometric::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
   article.type-system-geometric .type {
     border-bottom: 1px solid;
@@ -6614,11 +6071,11 @@ article.type-system-rounded {
   article.type-system-rounded a {
     color: #477DCA;
     text-decoration: none; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  article.type-system-rounded:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  article.type-system-rounded::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
   article.type-system-rounded .type {
     border-bottom: 1px solid;
@@ -6728,11 +6185,11 @@ article.type-system-sans {
   article.type-system-sans a {
     color: #477DCA;
     text-decoration: none; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  article.type-system-sans:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  article.type-system-sans::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
   article.type-system-sans .type {
     border-bottom: 1px solid;
@@ -6846,11 +6303,11 @@ article.type-system-serif {
   article.type-system-serif a {
     color: #477DCA;
     text-decoration: none; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  article.type-system-serif:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  article.type-system-serif::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 43, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
   article.type-system-serif .type {
     border-bottom: 1px solid;
@@ -6964,11 +6421,11 @@ article.type-system-slab {
   article.type-system-slab a {
     color: #477DCA;
     text-decoration: none; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  article.type-system-slab:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  article.type-system-slab::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
   article.type-system-slab .type {
     border-bottom: 1px solid;
@@ -7079,11 +6536,11 @@ article.type-system-traditional {
   article.type-system-traditional a {
     color: #477DCA;
     text-decoration: none; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/bourbon/addons/_clearfix.scss */
-  article.type-system-traditional:after {
+  /* line 9, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  article.type-system-traditional::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
   article.type-system-traditional .type {
     border-bottom: 2px solid;

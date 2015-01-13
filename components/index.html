@@ -160,7 +160,7 @@
   $accordion-menu-sub-background: darken($accordion-menu-background, 5%);
   $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6%);
   $accordion-menu-sub-hover: lighten($accordion-menu-sub-background, 2%);
-  $accordion-menu-list-padding: $base-spacing / 2 $gutter;
+  $accordion-menu-list-padding: ($base-spacing / 2) $gutter;
   
   background-color: $accordion-menu-background;
   border: $accordion-menu-border;
@@ -387,7 +387,7 @@
     line-height: $breadcrumb-height;
     margin-bottom: 2px;
     margin-right: -5px;
-    padding: 0 $breadcrumb-height / 4 0 $breadcrumb-height / 2;
+    padding: 0 ($breadcrumb-height / 4) 0 ($breadcrumb-height / 2);
     position: relative;
     text-decoration: none;
 
@@ -443,7 +443,7 @@
 
     @include media($medium-screen) {
       font-size: 1em;
-      padding: 0 $breadcrumb-height / 2 0 $breadcrumb-height / 1.5;
+      padding: 0 ($breadcrumb-height / 2) 0 ($breadcrumb-height / 1.5);
     }
   }
 }
@@ -905,7 +905,7 @@
 
     &amp;:before {
       font-size: $expander-arrow-width;
-      content: '\25BC';
+      content: &quot;\25BC&quot;;
       margin-right: 0.5em;
     }
   }
@@ -913,7 +913,7 @@
   .expander-hidden {
     &amp;:before {
       font-size: $expander-arrow-width;
-      content: '\25BA';
+      content: &quot;\25BA&quot;;
     }
   }
 
@@ -1239,10 +1239,10 @@ $base-spacing: 1.5em !default;
   }
 
   .hover-tile-hidden {
-    background: transparentize(black, 0.5);
+    background: transparentize(#000, 0.5);
 
     p {
-      color: transparentize(white, 0.3);
+      color: transparentize(#fff, 0.3);
     }
 
     h4 {
@@ -1759,7 +1759,7 @@ label {
       border-radius: $base-border-radius;
       border: $pagination-border;
       color: $pagination-color;
-      padding: $base-spacing / 4 $gutter / 2;
+      padding: ($base-spacing / 4) ($gutter / 2);
 
       &amp;:hover,
       &amp;:focus {
@@ -2650,8 +2650,8 @@ function parallax(){
 // The mixin above should preferably be in a file of its own. Below is the code for the object that has the texture.
 
 .texture {
-  $texture-top-background: lighten(#DDF0EF, 1%);
-  $texture-bottom-background: darken(#DDF0EF, 10%);
+  $texture-top-background: lighten(#ddf0ef, 1%);
+  $texture-bottom-background: darken(#ddf0ef, 10%);
   height: 5em;
   width: 100%;
 

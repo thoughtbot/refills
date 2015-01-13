@@ -365,7 +365,7 @@
     color: $tab-link-color;
     display: block;
     font-weight: 400;
-    padding: $base-spacing/2 $gutter;
+    padding: ($base-spacing / 2) $gutter;
     text-decoration: none;
 
     @include media($tab-mode) {
@@ -515,19 +515,19 @@
   <pre><code class="language-scss">.browsers {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
-  $base-background-color: white !default;
+  $base-background-color: #fff !default;
   $large-screen: em(860) !default;  
   //////////////////////////////////////////////////////////////////////////////////
 
   $browser-top-bar-height: 1.5em;
   $browser-circle-size: 0.5em; 
   $browser-circle-margin: ($browser-top-bar-height - $browser-circle-size) / 2;
-  $browser-top-bar-background: lighten(#DFDFDF, 5%);
+  $browser-top-bar-background: lighten(#dfdfdf, 5%);
   $browser-border: 0px;
   $browser-background: $base-background-color;
-  $browser-content-background-1: #F0F0F0;
+  $browser-content-background-1: #f0f0f0;
   $browser-content-background-2: $base-background-color;
-  $browser-content-background-3: #F0F0F0;
+  $browser-content-background-3: #f0f0f0;
 
   display:inline-block;
   padding-top: 0;
@@ -543,7 +543,7 @@
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
     border: $browser-border;
-    box-shadow: inset 0 1px 0 transparentize(white, 0.6);
+    box-shadow: inset 0 1px 0 transparentize(#fff, 0.6);
     height: $browser-top-bar-height;
     width: 100%;
   }
@@ -551,23 +551,23 @@
   .browser-circle {
     @include size($browser-circle-size);
     border-radius: $browser-circle-size * 2;
-    box-shadow: 0 1px 0px transparentize(white, 0.5), inset 0 1px 1px transparentize(black, 0.8);
+    box-shadow: 0 1px 0px transparentize(#fff, 0.5), inset 0 1px 1px transparentize(#000, 0.8);
     display: inline-block;
     margin: $browser-circle-margin 0;
   }
 
   .browser-circle:nth-child(1) {
-    background: #FF6F55;
+    background: #ff6f55;
     margin-left: $browser-circle-margin;
   }
 
   .browser-circle:nth-child(2) {
-    background: #F5B01D;
+    background: #f5b01d;
     margin-left: $browser-circle-margin / 3;
   }
 
   .browser-circle:nth-child(3) {
-    background: #51B151;
+    background: #51b151;
     margin-left: $browser-circle-margin / 3;
   }
 
@@ -577,7 +577,7 @@
     border-bottom: none;
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
-    box-shadow: 0 3px 5px transparentize(black, 0.7);
+    box-shadow: 0 3px 5px transparentize(#000, 0.7);
     display: inline-block;    
     text-align: left;
     width: 20%;
@@ -651,9 +651,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 .cover {
-  $base-background-color: white !default;
+  $base-background-color: #fff !default;
   background: $base-background-color;
-  border-top: 1px solid #E6E6E6;
+  border-top: 1px solid #e6e6e6;
   height: 3.5em;
   margin-top: -1em;
   position: relative;
@@ -877,7 +877,7 @@
       background-color: $ribbon-background;
       box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
       color: white;
-      font-size: .8em;
+      font-size: 0.8em;
       font-weight: 800;
       left: -5px;
       line-height: 1.5em;
@@ -896,13 +896,13 @@
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
     line-height: 1.5em;
-    padding: $base-spacing / 3 $base-spacing / 2;
+    padding: ($base-spacing / 3) ($base-spacing / 2);
   }
 
   .card-copy {
-    font-size: .9em;
+    font-size: 0.9em;
     line-height: 1.5em;
-    padding: $base-spacing / 2 $base-spacing / 2;
+    padding: ($base-spacing / 2) ($base-spacing / 2);
 
     p {
       margin: 0 0 ($base-spacing / 2);
@@ -911,9 +911,9 @@
 
   .card-stats {
     @include align-self(flex-end);
-    bottom: .5em;
+    bottom: 0.5em;
     overflow: auto;
-    padding: $base-spacing/2 $base-spacing/2;
+    padding: $base-spacing / 2;
     position: absolute;
 
     ul {
@@ -928,7 +928,7 @@
       font-size: 1.2em;
       font-weight: 800;
       line-height: 1.1em;
-      padding: 0 .7em 0 .7em;
+      padding: 0 0.7em;
 
       &amp;:first-child {
         padding-left: 0;
@@ -1247,7 +1247,7 @@
     &gt; a:after {
       @include position(absolute, auto -0.4em auto auto);
       color: $centered-navigation-color;
-      content: '\25BE';
+      content: &quot;\25BE&quot;;
     }
   }
 
@@ -1268,7 +1268,7 @@
       }
 
       &amp;:after {
-        content: '›';
+        content: &quot;›&quot;;
         font-size: 1.2em;
         position: absolute;
         right: $centered-navigation-submenu-padding / 2;
@@ -1931,7 +1931,7 @@
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
-  padding: $base-spacing * 2 $gutter;
+  padding: ($base-spacing * 2) $gutter;
   width: 100%;
 
   .footer-logo {
@@ -2376,8 +2376,8 @@
     @include transition (all 0.2s ease-in-out);
     background: $grid-item-background;
     border-bottom: $grid-item-border-size solid $grid-items-background;
-    border-left: $grid-item-border-size / 2 solid $grid-items-background;
-    border-right: $grid-item-border-size / 2 solid $grid-items-background;
+    border-left: ($grid-item-border-size / 2) solid $grid-items-background;
+    border-right: ($grid-item-border-size / 2) solid $grid-items-background;
     border-top: 0;
     cursor: pointer;
     float: left;
@@ -3849,7 +3849,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     display: block;
     margin-right: $base-spacing;
     outline: none;
-    padding: $base-spacing / 2 0;
+    padding: ($base-spacing / 2) 0;
 
     &amp;:last-child {
       margin-bottom: $base-spacing;
@@ -4400,7 +4400,7 @@ $(function() {
 
     button {
       @include button(flat, $base-accent-color);
-      padding: .7em 1em;
+      padding: 0.7em 1em;
     }
   }
 
@@ -4524,7 +4524,7 @@ $(function() {
   $table-hover-background: darken($table-background, 5%);
   $table-stripe-background: darken($table-background, 2%);
   $table-stripe-background-hover: darken($table-stripe-background, 5%);
-  $table-padding: .75em 1em;
+  $table-padding: 0.75em 1em;
 
   border-collapse: separate;
   border-left: 0px;
@@ -4926,7 +4926,7 @@ $(function() {
       display: block;
       font-weight: bold;
       margin-right: -1px;
-      padding: $base-spacing / 2 $gutter / 2;
+      padding: ($base-spacing / 2) ($gutter / 2);
 
       &amp;.is-active {
         background-color: $tab-content-background;
