@@ -1,24 +1,20 @@
-//////////////////////////////////////////////////////////////////////////////////
+$base-spacing: 1.5em !default;
 $alert-color: #fff6bf !default;
 $error-color: #fbe3e4 !default;
 $notice-color: #e5edf8 !default;
 $success-color: #e6efc2 !default;
-$base-spacing: 1.5em !default;
-//////////////////////////////////////////////////////////////////////////////////
 
 @mixin flash($color) {
   background-color: $color;
   color: darken($color, 60%);
   display: block;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: $base-spacing / 2;
   padding: $base-spacing / 2;
   text-align: center;
 
   a {
-    border-bottom: 1px solid transparentize(darken($color, 70%), 0.7);
     color: darken($color, 70%);
-    text-decoration: none;
 
     &:focus,
     &:hover {
