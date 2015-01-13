@@ -34,7 +34,7 @@
     color: $tab-link-color;
     display: block;
     font-weight: 400;
-    padding: $base-spacing/2 $gutter;
+    padding: ($base-spacing / 2) $gutter;
     text-decoration: none;
 
     @include media($tab-mode) {

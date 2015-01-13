@@ -59,7 +59,7 @@
       display: block;
       font-weight: bold;
       margin-right: -1px;
-      padding: $base-spacing / 2 $gutter / 2;
+      padding: ($base-spacing / 2) ($gutter / 2);
 
       &.is-active {
         background-color: $tab-content-background;

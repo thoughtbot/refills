@@ -72,7 +72,7 @@
 
     button {
       @include button(flat, $base-accent-color);
-      padding: .7em 1em;
+      padding: 0.7em 1em;
     }
   }
 

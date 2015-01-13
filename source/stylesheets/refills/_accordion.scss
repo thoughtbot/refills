@@ -36,7 +36,7 @@
   $accordion-menu-sub-background: darken($accordion-menu-background, 5%);
   $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6%);
   $accordion-menu-sub-hover: lighten($accordion-menu-sub-background, 2%);
-  $accordion-menu-list-padding: $base-spacing / 2 $gutter;
+  $accordion-menu-list-padding: ($base-spacing / 2) $gutter;
   
   background-color: $accordion-menu-background;
   border: $accordion-menu-border;

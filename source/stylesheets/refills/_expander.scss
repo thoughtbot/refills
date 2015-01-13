@@ -38,7 +38,7 @@
 
     &:before {
       font-size: $expander-arrow-width;
-      content: '\25BC';
+      content: "\25BC";
       margin-right: 0.5em;
     }
   }
@@ -46,7 +46,7 @@
   .expander-hidden {
     &:before {
       font-size: $expander-arrow-width;
-      content: '\25BA';
+      content: "\25BA";
     }
   }
 

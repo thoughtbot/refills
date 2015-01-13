@@ -32,7 +32,7 @@
     display: block;
     margin-right: $base-spacing;
     outline: none;
-    padding: $base-spacing / 2 0;
+    padding: ($base-spacing / 2) 0;
 
     &:last-child {
       margin-bottom: $base-spacing;

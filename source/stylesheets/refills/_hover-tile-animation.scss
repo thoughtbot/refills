@@ -47,10 +47,10 @@
   }
 
   .hover-tile-hidden {
-    background: transparentize(black, 0.5);
+    background: transparentize(#000, 0.5);
 
     p {
-      color: transparentize(white, 0.3);
+      color: transparentize(#fff, 0.3);
     }
 
     h4 {

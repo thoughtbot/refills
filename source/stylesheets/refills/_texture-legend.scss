@@ -174,8 +174,8 @@
 
 @for $i from 1 through 88 {
   .texture-#{$i} {
-    $texture-legend-top-background: lighten(#DDF0EF, 1%);
-    $texture-legend-bottom-background: darken(#DDF0EF, 10%);
+    $texture-legend-top-background: lighten(#ddf0ef, 1%);
+    $texture-legend-bottom-background: darken(#ddf0ef, 10%);
     float: left;
     margin-bottom: 1em;
     margin: 0 0.95% 1em 0.95%;

@@ -67,7 +67,7 @@
       background-color: $ribbon-background;
       box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
       color: white;
-      font-size: .8em;
+      font-size: 0.8em;
       font-weight: 800;
       left: -5px;
       line-height: 1.5em;
@@ -86,13 +86,13 @@
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
     line-height: 1.5em;
-    padding: $base-spacing / 3 $base-spacing / 2;
+    padding: ($base-spacing / 3) ($base-spacing / 2);
   }
 
   .card-copy {
-    font-size: .9em;
+    font-size: 0.9em;
     line-height: 1.5em;
-    padding: $base-spacing / 2 $base-spacing / 2;
+    padding: ($base-spacing / 2) ($base-spacing / 2);
 
     p {
       margin: 0 0 ($base-spacing / 2);
@@ -101,9 +101,9 @@
 
   .card-stats {
     @include align-self(flex-end);
-    bottom: .5em;
+    bottom: 0.5em;
     overflow: auto;
-    padding: $base-spacing/2 $base-spacing/2;
+    padding: $base-spacing / 2;
     position: absolute;
 
     ul {
@@ -118,7 +118,7 @@
       font-size: 1.2em;
       font-weight: 800;
       line-height: 1.1em;
-      padding: 0 .7em 0 .7em;
+      padding: 0 0.7em;
 
       &:first-child {
         padding-left: 0;

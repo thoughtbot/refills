@@ -100,8 +100,8 @@
 // The mixin above should preferably be in a file of its own. Below is the code for the object that has the texture.
 
 .texture {
-  $texture-top-background: lighten(#DDF0EF, 1%);
-  $texture-bottom-background: darken(#DDF0EF, 10%);
+  $texture-top-background: lighten(#ddf0ef, 1%);
+  $texture-bottom-background: darken(#ddf0ef, 10%);
   height: 5em;
   width: 100%;
 

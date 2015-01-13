@@ -1,19 +1,19 @@
 .browsers {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
-  $base-background-color: white !default;
+  $base-background-color: #fff !default;
   $large-screen: em(860) !default;  
   //////////////////////////////////////////////////////////////////////////////////
 
   $browser-top-bar-height: 1.5em;
   $browser-circle-size: 0.5em; 
   $browser-circle-margin: ($browser-top-bar-height - $browser-circle-size) / 2;
-  $browser-top-bar-background: lighten(#DFDFDF, 5%);
+  $browser-top-bar-background: lighten(#dfdfdf, 5%);
   $browser-border: 0px;
   $browser-background: $base-background-color;
-  $browser-content-background-1: #F0F0F0;
+  $browser-content-background-1: #f0f0f0;
   $browser-content-background-2: $base-background-color;
-  $browser-content-background-3: #F0F0F0;
+  $browser-content-background-3: #f0f0f0;
 
   display:inline-block;
   padding-top: 0;
@@ -29,7 +29,7 @@
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
     border: $browser-border;
-    box-shadow: inset 0 1px 0 transparentize(white, 0.6);
+    box-shadow: inset 0 1px 0 transparentize(#fff, 0.6);
     height: $browser-top-bar-height;
     width: 100%;
   }
@@ -37,23 +37,23 @@
   .browser-circle {
     @include size($browser-circle-size);
     border-radius: $browser-circle-size * 2;
-    box-shadow: 0 1px 0px transparentize(white, 0.5), inset 0 1px 1px transparentize(black, 0.8);
+    box-shadow: 0 1px 0px transparentize(#fff, 0.5), inset 0 1px 1px transparentize(#000, 0.8);
     display: inline-block;
     margin: $browser-circle-margin 0;
   }
 
   .browser-circle:nth-child(1) {
-    background: #FF6F55;
+    background: #ff6f55;
     margin-left: $browser-circle-margin;
   }
 
   .browser-circle:nth-child(2) {
-    background: #F5B01D;
+    background: #f5b01d;
     margin-left: $browser-circle-margin / 3;
   }
 
   .browser-circle:nth-child(3) {
-    background: #51B151;
+    background: #51b151;
     margin-left: $browser-circle-margin / 3;
   }
 
@@ -63,7 +63,7 @@
     border-bottom: none;
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
-    box-shadow: 0 3px 5px transparentize(black, 0.7);
+    box-shadow: 0 3px 5px transparentize(#000, 0.7);
     display: inline-block;    
     text-align: left;
     width: 20%;
@@ -137,9 +137,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 .cover {
-  $base-background-color: white !default;
+  $base-background-color: #fff !default;
   background: $base-background-color;
-  border-top: 1px solid #E6E6E6;
+  border-top: 1px solid #e6e6e6;
   height: 3.5em;
   margin-top: -1em;
   position: relative;

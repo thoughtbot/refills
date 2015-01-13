@@ -35,7 +35,7 @@
     line-height: $breadcrumb-height;
     margin-bottom: 2px;
     margin-right: -5px;
-    padding: 0 $breadcrumb-height / 4 0 $breadcrumb-height / 2;
+    padding: 0 ($breadcrumb-height / 4) 0 ($breadcrumb-height / 2);
     position: relative;
     text-decoration: none;
 
@@ -91,7 +91,7 @@
 
     @include media($medium-screen) {
       font-size: 1em;
-      padding: 0 $breadcrumb-height / 2 0 $breadcrumb-height / 1.5;
+      padding: 0 ($breadcrumb-height / 2) 0 ($breadcrumb-height / 1.5);
     }
   }
 }
