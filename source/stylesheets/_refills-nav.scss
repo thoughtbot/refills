@@ -63,7 +63,9 @@ section.inner-content {
   @include position(fixed, 0 auto 0 0);
   @include size(220px 100%);
   @include transform(translateX(-220px));
+  @include transition(all 0.2s linear);
   background-color: black;
+  overflow-y: auto;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;

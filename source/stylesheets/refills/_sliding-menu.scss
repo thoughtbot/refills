@@ -31,7 +31,7 @@
   @include transition(all 0.25s linear);
   background: $sliding-menu-background;
   z-index: 999999;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
   li a {
