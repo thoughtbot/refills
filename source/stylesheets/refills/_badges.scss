@@ -1,53 +1,37 @@
-.badges {  
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-color: gainsboro !default;
-  $base-font-size: 1em !default;
-  $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  $medium-gray: #999 !default;
-  //////////////////////////////////////////////////////////////////////////////////
+$badge-font-size: 0.75em !default;
+$medium-gray: #999 !default;
+$alert-color: #fff6bf !default;
+$error-color: #fbe3e4 !default;
+$notice-color: #e5edf8 !default;
+$success-color: #e6efc2 !default;
 
-  $badge-background: $medium-gray;
-  $badge-dark-color: $dark-gray;
-  $badge-error-color: #FBE3E4;
-  $badge-notice-color: lighten($base-accent-color, 40%);
-  $badge-success-color: #E6EFC2;
-  $badge-font-color: #fff;
-  $badge-font-size: $base-font-size * 0.75;
-
-  display: block;
-  margin-bottom: $base-line-height;
-
-  .badge {
-    background: $badge-background;
-    border-radius: 2em;
-    color: $badge-font-color;
-    display: inline-block;
-    font-size: $badge-font-size;
-    font-weight: 600;
-    line-height: 1em;
-    padding: 0.25em 1em;
-    text-align: center;
-
-    &.dark {
-      background: $badge-dark-color;
-    }
-
-    &.error {
-      background: $badge-error-color;
-      color: darken($badge-error-color, 60%);
-    }
-
-    &.notice {
-      background: $badge-notice-color;
-      color: darken($badge-notice-color, 60%);
-    }
-
-    &.success {
-      background: $badge-success-color;
-      color: darken($badge-success-color, 60%);
-    }
-  }
+@mixin badge($color: $medium-gray) {
+  background-color: $color;
+  border-radius: $badge-font-size * 5;
+  color: darken($color, 60%);
+  display: inline-block;
+  font-size: $badge-font-size;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.4em 1.2em;
 }
 
+.badge {
+  @include badge;
+}
+
+.badge-alert {
+  @include badge($alert-color);
+}
+
+.badge-error {
+  @include badge($error-color);
+}
+
+.badge-notice {
+  @include badge($notice-color);
+}
+
+.badge-success {
+  @include badge($success-color);
+}
