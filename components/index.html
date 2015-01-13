@@ -129,8 +129,7 @@
   $base-spacing: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   margin: 0;
   padding: 0;
 
@@ -156,12 +155,12 @@
   $accordion-menu-border-color: $base-border-color;
   $accordion-menu-color: $base-font-color;
   $accordion-menu-border: 1px solid $accordion-menu-border-color;
-  $accordion-menu-background: lighten($accordion-menu-border-color, 10);
-  $accordion-menu-hover: lighten($accordion-menu-background, 2);
-  $accordion-menu-sub-background: darken($accordion-menu-background, 5);
-  $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6);
-  $accordion-menu-sub-hover: lighten($accordion-menu-sub-background, 2);
-  $accordion-menu-list-padding: $base-spacing/2 $gutter;
+  $accordion-menu-background: lighten($accordion-menu-border-color, 10%);
+  $accordion-menu-hover: lighten($accordion-menu-background, 2%);
+  $accordion-menu-sub-background: darken($accordion-menu-background, 5%);
+  $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6%);
+  $accordion-menu-sub-hover: lighten($accordion-menu-sub-background, 2%);
+  $accordion-menu-list-padding: $base-spacing / 2 $gutter;
   
   background-color: $accordion-menu-background;
   border: $accordion-menu-border;
@@ -264,16 +263,15 @@
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
   $medium-gray: #999 !default;
-  -webkit-font-smoothing: antialiased;
   //////////////////////////////////////////////////////////////////////////////////
 
   $badge-background: $medium-gray;
   $badge-dark-color: $dark-gray;
   $badge-error-color: #FBE3E4;
-  $badge-notice-color: lighten($base-accent-color, 40);
+  $badge-notice-color: lighten($base-accent-color, 40%);
   $badge-success-color: #E6EFC2;
   $badge-font-color: #fff;
-  $badge-font-size: $base-font-size * .75;
+  $badge-font-size: $base-font-size * 0.75;
 
   display: block;
   margin-bottom: $base-line-height;
@@ -285,8 +283,8 @@
     display: inline-block;
     font-size: $badge-font-size;
     font-weight: 600;
-    line-height: 1;
-    padding: .25em 1em;
+    line-height: 1em;
+    padding: 0.25em 1em;
     text-align: center;
 
     &amp;.dark {
@@ -295,17 +293,17 @@
 
     &amp;.error {
       background: $badge-error-color;
-      color: darken($badge-error-color, 60);
+      color: darken($badge-error-color, 60%);
     }
 
     &amp;.notice {
       background: $badge-notice-color;
-      color: darken($badge-notice-color, 60);
+      color: darken($badge-notice-color, 60%);
     }
 
     &amp;.success {
       background: $badge-success-color;
-      color: darken($badge-success-color, 60);
+      color: darken($badge-success-color, 60%);
     }
   }
 }
@@ -363,7 +361,6 @@
   $medium-gray: #999 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
-  -webkit-font-smoothing: antialiased;
   //////////////////////////////////////////////////////////////////////////////////
 
   $breadcrumb-border-color: $base-border-color;
@@ -386,11 +383,11 @@
     border: $breadcrumb-border;
     color: $breadcrumb-color;
     display: inline-block;
-    font-size: .8em;
+    font-size: 0.8em;
     line-height: $breadcrumb-height;
     margin-bottom: 2px;
     margin-right: -5px;
-    padding: 0 $breadcrumb-height/4 0 $breadcrumb-height/2;
+    padding: 0 $breadcrumb-height / 4 0 $breadcrumb-height / 2;
     position: relative;
     text-decoration: none;
 
@@ -398,7 +395,7 @@
       border-bottom-left-radius: $base-border-radius;
       border-left: $breadcrumb-border;
       border-top-left-radius: $base-border-radius;
-      padding-left: $breadcrumb-height/2;
+      padding-left: $breadcrumb-height / 2;
     }
 
     &amp;:last-child {
@@ -406,7 +403,7 @@
       border-bottom-right-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
       color: $breadcrumb-color-active;
-      padding-right: $breadcrumb-height/2;
+      padding-right: $breadcrumb-height / 2;
     }
 
     &amp;:hover {
@@ -421,9 +418,9 @@
     &amp;:after,
     &amp;:before {
       @include position(absolute, 0px auto 0px 100%);
-      border-bottom: $breadcrumb-height/2 solid transparent;
-      border-left: $breadcrumb-height/4 solid transparent;
-      border-top: $breadcrumb-height/2 solid transparent;
+      border-bottom: $breadcrumb-height / 2 solid transparent;
+      border-left: $breadcrumb-height / 4 solid transparent;
+      border-top: $breadcrumb-height / 2 solid transparent;
       content: '';
       display: block;
       margin: auto;
@@ -446,7 +443,7 @@
 
     @include media($medium-screen) {
       font-size: 1em;
-      padding: 0 $breadcrumb-height/2 0 $breadcrumb-height/1.5;
+      padding: 0 $breadcrumb-height / 2 0 $breadcrumb-height / 1.5;
     }
   }
 }
@@ -528,16 +525,15 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
   //////////////////////////////////////////////////////////////////////////////////
 
   $button-group-background: $base-background-color;
-  $button-group-color: lighten($base-font-color, 30);
+  $button-group-color: lighten($base-font-color, 30%);
   $button-group-border: 1px solid silver;
-  $button-group-inner-border: 1px solid lighten(silver, 18);
+  $button-group-inner-border: 1px solid lighten(silver, 18%);
   $button-group-background-checked: $base-accent-color;
   $button-group-color-checked: white;
-  $button-group-border-checked: darken($button-group-background-checked, 15);
+  $button-group-border-checked: darken($button-group-background-checked, 15%);
 
   input {
     display: none;
@@ -561,7 +557,7 @@
       font-size: $base-font-size;
       font-weight: normal;
       line-height: 1;
-      padding: .75em 1em;
+      padding: 0.75em 1em;
       width: 100%;
 
       @include media($large-screen) {
@@ -573,7 +569,7 @@
       }
 
       &amp;:hover {
-        background-color: darken($button-group-background, 3);
+        background-color: darken($button-group-background, 3%);
       }
     }
 
@@ -606,7 +602,7 @@
     input:checked + .button-group-item {
       background: $button-group-background-checked;
       border: 1px solid $button-group-border-checked;
-      box-shadow: inset 0 1px 2px darken($button-group-background-checked, 10);
+      box-shadow: inset 0 1px 2px darken($button-group-background-checked, 10%);
       color: $button-group-color-checked;
     }
   }
@@ -674,8 +670,7 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   line-height: $base-line-height;
 
   ul {
@@ -689,10 +684,10 @@
   //////////////////////////////////////////////////////////////////////////////////
 
   $dropdown-color: $base-font-color;
-  $dropdown-description-color: lighten($dropdown-color, 40);
+  $dropdown-description-color: lighten($dropdown-color, 40%);
   $dropdown-border: 1px solid silver;
   $dropdown-background: $base-background-color;
-  $dropdown-background-hover: darken($dropdown-background, 3);
+  $dropdown-background-hover: darken($dropdown-background, 3%);
   $dropdown-inner-border: 1px solid silver;
   $dropdown-height: 40px;
   $dropdown-padding: 1em;
@@ -714,7 +709,7 @@
     border-top: $dropdown-border;
     color: $dropdown-description-color;
     float: left;
-    font-size: .7em;
+    font-size: 0.7em;
     line-height: $dropdown-height;
     margin: 0;
     padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
@@ -733,7 +728,7 @@
     border-bottom: $dropdown-border;
     cursor: pointer;
     float: right;
-    font-size: .7em;
+    font-size: 0.7em;
     font-weight: 800;
     line-height: $dropdown-height;
     margin: 0;
@@ -764,7 +759,7 @@
     background: $dropdown-background;
     border-radius: $base-border-radius;
     border: $dropdown-border;
-    box-shadow: 0 2px 2px transparentize(black, .8);
+    box-shadow: 0 2px 2px transparentize(black, 0.8);
     color: $dropdown-color;
     cursor: pointer;
     display: none;
@@ -781,8 +776,8 @@
       content: &quot;\25b2&quot;;
       font-size: 1.4em;
       pointer-events: none;
-      text-shadow: 0 -2px 2px transparentize(black, .7);
-      top: -.7em;
+      text-shadow: 0 -2px 2px transparentize(black, 0.7);
+      top: -0.7em;
     }
   }
 
@@ -880,8 +875,7 @@
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   p {
     color: $base-font-color;
     line-height: $base-line-height;
@@ -893,7 +887,7 @@
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $expander-arrow-width: .7em;
+  $expander-arrow-width: 0.7em;
   $expander-toggle-size: 1em;
   $expander-toggle-arrow-size: $expander-toggle-size;
   $expander-toggle-margin: 1em;
@@ -912,7 +906,7 @@
     &amp;:before {
       font-size: $expander-arrow-width;
       content: '\25BC';
-      margin-right: .5em;
+      margin-right: 0.5em;
     }
   }
 
@@ -992,8 +986,7 @@
   $base-spacing: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   line-height: $base-line-height;
 
   p {
@@ -1006,7 +999,7 @@
   background: $base-background-color;
   border-radius: $base-border-radius;
   border: 1px solid silver;
-  box-shadow: 0 2px 2px transparentize(black, .8);
+  box-shadow: 0 2px 2px transparentize(black, 0.8);
   margin-bottom: 4em;
   padding: $base-spacing;
   text-align: center;
@@ -1107,18 +1100,17 @@
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">///////////////////////////////////////////////////////////////////////////////////
-$alert-color: #FFF6BF !default;
-$error-color: #FBE3E4 !default;
-$success-color: #E6EFC2 !default;
-$notice-color: #E5EDF8 !default;
+  <pre><code class="language-scss">//////////////////////////////////////////////////////////////////////////////////
+$alert-color: #fff6bf !default;
+$error-color: #fbe3e4 !default;
+$notice-color: #e5edf8 !default;
+$success-color: #e6efc2 !default;
 $base-spacing: 1.5em !default;
 //////////////////////////////////////////////////////////////////////////////////
 
 @mixin flash($color) {
-  -webkit-font-smoothing: antialiased;
-  background: $color;
-  color: darken($color, 60);
+  background-color: $color;
+  color: darken($color, 60%);
   display: block;
   font-weight: bold;
   margin-bottom: $base-spacing / 2;
@@ -1126,12 +1118,13 @@ $base-spacing: 1.5em !default;
   text-align: center;
 
   a {
-    border-bottom: 1px solid transparentize(darken($color, 70), .7);
-    color: darken($color, 70);
+    border-bottom: 1px solid transparentize(darken($color, 70%), 0.7);
+    color: darken($color, 70%);
     text-decoration: none;
 
-    &amp;:hover {
-      color: darken($color, 90);
+    &amp;:hover,
+    &amp;:focus {
+      color: darken($color, 90%);
     }
   }
 }
@@ -1202,8 +1195,7 @@ $base-spacing: 1.5em !default;
   $base-border-color: gainsboro !default;
   $base-line-height: 1.5em !default;
   $medium-screen: em(640) !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   h4 {
     margin: 0;
   }
@@ -1238,7 +1230,7 @@ $base-spacing: 1.5em !default;
   }
 
   .hover-tile {
-    @include transition(all, .2s ease-in-out);
+    @include transition(all, 0.2s ease-in-out);
     background: inherit;
     color: white;
     height: inherit;
@@ -1247,14 +1239,14 @@ $base-spacing: 1.5em !default;
   }
 
   .hover-tile-hidden {
-    background: transparentize(black, .5);
+    background: transparentize(black, 0.5);
 
     p {
-      color: transparentize(white, .3);
+      color: transparentize(white, 0.3);
     }
 
     h4 {
-      margin-bottom: .5em;
+      margin-bottom: 0.5em;
     }
   }
 }
@@ -1302,18 +1294,16 @@ $base-spacing: 1.5em !default;
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-scss">.image-gradient-dynamic {
   $image-gradient-color-top: red; 
-  $transparency-top: .9;
+  $transparency-top: 0.9;
   $image-gradient-color-bottom: green; 
-  $transparency-bottom: .6;
+  $transparency-bottom: 0.6;
   $vertical-angle: 0deg;
-
   $image-gradient-color-left: teal; 
-  $transparency-left: .8;
+  $transparency-left: 0.8;
   $image-gradient-color-right: yellow; 
-  $transparency-right: .8;
+  $transparency-right: 0.8;
   $horizontal-angle: 90deg;
-
-  -webkit-font-smoothing: antialiased;
+  
   line-height: 0;
   position: relative;
   width: 100%;
@@ -1405,25 +1395,24 @@ $notice-color: #E5EDF8 !default;
 $base-spacing: 1.5em !default;
 
 label {
-  -webkit-font-smoothing: antialiased;
   font-weight: bold;
 }
 //////////////////////////////////////////////////////////////////////////////////
 
 .label-alert {
-  color: darken($alert-color, 45);
+  color: darken($alert-color, 45%);
 }
 
 .label-error {
-  color: darken($error-color, 45);
+  color: darken($error-color, 45%);
 }
 
 .label-notice {
-  color: darken($notice-color, 45);
+  color: darken($notice-color, 45%);
 }
 
 .label-success {
-  color: darken($success-color, 45);
+  color: darken($success-color, 45%);
 }
 </code></pre>
 </td>
@@ -1494,8 +1483,7 @@ label {
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   h1 {
     margin: 0;
   }
@@ -1519,7 +1507,7 @@ label {
   }
 
   label img {
-    border-radius: $modal-trigger-image-width/2;
+    border-radius: $modal-trigger-image-width / 2;
     display: block;
     max-width: $modal-trigger-image-width;
   }
@@ -1530,7 +1518,7 @@ label {
 
   .modal-trigger {
     @include button(flat, $base-accent-color);
-    padding: .8em 1em;
+    padding: 0.8em 1em;
   }
 
   .modal-open {
@@ -1538,9 +1526,9 @@ label {
   }
 
   .modal-window { // overlay
-    @include transition(opacity .25s ease);
+    @include transition(opacity 0.25s ease);
     @include position(fixed, 0px 0px 0px 0px);
-    background: rgba(0,0,0, .85);
+    background: rgba(0,0,0, 0.85);
     opacity: 0;
     padding-top: 0.6em;
     text-align: left;
@@ -1567,7 +1555,7 @@ label {
     &amp;:before {
       @include position(absolute, 3px 3px 0 50%);
       @include transform(rotate(45deg));
-      @include size(.15em 1.5em);
+      @include size(0.15em 1.5em);
       background: $modal-close-color;
       content: '';
       display: block;
@@ -1576,7 +1564,7 @@ label {
 
     &amp;:hover:after,
     &amp;:hover:before {
-      background: darken($modal-close-color, 10);
+      background: darken($modal-close-color, 10%);
     }
 
     &amp;:before {
@@ -1585,14 +1573,14 @@ label {
   }
 
   .modal-inner {
-    @include transition(opacity .25s ease);
+    @include transition(opacity 0.25s ease);
     background: $modal-background;
     border-radius: $base-border-radius;
     margin-top: 0;
     margin: auto;
     max-height: 95%;
     overflow: auto;
-    padding: $modal-padding /2;
+    padding: $modal-padding / 2;
     position: relative;
     width: 95%;
 
@@ -1608,7 +1596,7 @@ label {
 
     h1 {
       color: $base-font-color;
-      margin-bottom: .6em;
+      margin-bottom: 0.6em;
       text-align: left;
       text-transform: capitalize;
     }
@@ -1628,7 +1616,7 @@ label {
     a.cta {
       color: white;
       display: inline-block;
-      margin-right: .5em;
+      margin-right: 0.5em;
       margin-top: 1em;
 
       &amp;:last-child {
@@ -1643,7 +1631,7 @@ label {
   }
 
   .modal-state:checked + .modal-window .modal-inner {
-    top: .5em;
+    top: 0.5em;
   }
 }
 
@@ -1720,8 +1708,7 @@ label {
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   ul {
     margin: 0;
     padding: 0;
@@ -1772,7 +1759,7 @@ label {
       border-radius: $base-border-radius;
       border: $pagination-border;
       color: $pagination-color;
-      padding: $base-spacing/4 $gutter/2;
+      padding: $base-spacing / 4 $gutter / 2;
 
       &amp;:hover,
       &amp;:focus {
@@ -1838,7 +1825,6 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 .parallax-static-content {
-  -webkit-font-smoothing: antialiased;
   color: #9A9A8A;
   padding: 8em 0;
   position: relative;
@@ -1933,7 +1919,6 @@ function parallax(){
   $base-border-radius: 3px !default;
   $base-accent-color: #477DCA !default;
   $base-link-color: $base-accent-color !default;
-  -webkit-font-smoothing: antialiased;
   //////////////////////////////////////////////////////////////////////////////////
 
   $progress-border-color: $base-border-color;
@@ -1967,7 +1952,7 @@ function parallax(){
     background-size: 40px 40px;
     background-repeat: repeat-x;
     border: $progress-meter-border;
-    border-radius: $base-border-radius /1.5;
+    border-radius: $base-border-radius / 1.5;
     display: block;
     height: 100%;
     width: 60%;
@@ -2059,7 +2044,6 @@ function parallax(){
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $base-accent-color: #477DCA !default;
-  -webkit-font-smoothing: antialiased;
 
   p {
     line-height: $base-line-height;
@@ -2204,12 +2188,11 @@ function parallax(){
   $base-line-height: 1.5em !default;
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
-  -webkit-font-smoothing: antialiased;
   //////////////////////////////////////////////////////////////////////////////////
 
   $search-bar-border-color: $base-border-color;
   $search-bar-border: 1px solid $search-bar-border-color;
-  $search-bar-background: lighten($search-bar-border-color, 10);
+  $search-bar-background: lighten($search-bar-border-color, 10%);
 
   position: relative;
 
@@ -2240,7 +2223,7 @@ function parallax(){
 
     img {
       height: 12px;
-      opacity: .7;
+      opacity: 0.7;
     }
   }
 }
@@ -2302,7 +2285,6 @@ function parallax(){
   ///////////////////////////////////////////////////////////////////////////////////
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
-  -webkit-font-smoothing: antialiased;
 
   ul {
     padding: 0;
@@ -2319,7 +2301,7 @@ function parallax(){
   //////////////////////////////////////////////////////////////////////////////////
 
   $sliding-menu-border-color: $dark-gray;
-  $sliding-menu-background: lighten($sliding-menu-border-color, 5);
+  $sliding-menu-background: lighten($sliding-menu-border-color, 5%);
   $sliding-menu-color: #fff;
   $sliding-menu-border: 1px solid $sliding-menu-border-color;
   $sliding-menu-background-hover: $base-accent-color;
@@ -2328,7 +2310,7 @@ function parallax(){
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
   @include transform(translateX(-220px));
-  @include transition(all .25s linear);
+  @include transition(all 0.25s linear);
   background: $sliding-menu-background;
   z-index: 999999;
   overflow-y: scroll;
@@ -2361,7 +2343,7 @@ function parallax(){
   z-index: 999998;
 
   &amp;.is-visible {
-    opacity: .4;
+    opacity: 0.4;
     visibility: visible;
   }
 }
@@ -2440,7 +2422,7 @@ function parallax(){
   $knob-radius: $switch-height - ($switch-padding * 2);
   $knob-width: $knob-size;
   $switch-background: $base-background-color;
-  $switch-border-background: darken($base-background-color, 9);
+  $switch-border-background: darken($base-background-color, 9%);
   $switch-shadow: 0 2px 5px transparentize(black, 0.6);
 
   border-radius: $switch-radius;
@@ -2543,8 +2525,8 @@ function parallax(){
 </div>
 
         <div class="texture">
-  <div class="texture-normal"></div>
   <div class="texture-inverted"></div>
+  <div class="texture-normal"></div>
 </div>
 
       </div>
@@ -2558,8 +2540,8 @@ function parallax(){
     <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-markup">&lt;div class=&quot;texture&quot;&gt;
-  &lt;div class=&quot;texture-normal&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;texture-inverted&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;texture-normal&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 </td>
@@ -2668,22 +2650,26 @@ function parallax(){
 // The mixin above should preferably be in a file of its own. Below is the code for the object that has the texture.
 
 .texture {
+  $texture-top-background: lighten(#DDF0EF, 1%);
+  $texture-bottom-background: darken(#DDF0EF, 10%);
   height: 5em;
   width: 100%;
-}
 
-.texture-normal {
-  @include texture(180deg, lighten(#DDF0EF, 1), darken(#DDF0EF, 10), 67, 1); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
-  float: left;
-  height: 5em;
-  width: 50%;
-}
+  .texture-normal {
+    // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
+    @include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 1); 
+    float: left;
+    height: 5em;
+    width: 50%;
+  }
 
-.texture-inverted {
-  @include texture(180deg, lighten(#DDF0EF, 1), darken(#DDF0EF, 10), 67, 0); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
-  float: left;
-  height: 5em;
-  width: 50%;
+  .texture-inverted {
+    // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
+    @include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 0); 
+    float: left;
+    height: 5em;
+    width: 50%;
+  }
 }
 </code></pre>
 </td>
@@ -2732,8 +2718,7 @@ function parallax(){
   $base-line-height: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   p {
     color: $base-font-color;
     line-height: $base-line-height;
@@ -2753,7 +2738,7 @@ function parallax(){
   border-radius: $base-border-radius;
   border: 1px solid $base-border-color;
   display: inline-block;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   position: relative;
   text-align: center;
 
@@ -2770,7 +2755,7 @@ function parallax(){
     border-radius: $base-border-radius;
     box-shadow: $tooltip-shadow;
     color: $tooltip-color;
-    font-size: .9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
+    font-size: 0.9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
     line-height: 1.5em;
     margin: 0 auto;
     max-width: $tooltip-max-width;

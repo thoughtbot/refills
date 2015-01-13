@@ -136,7 +136,6 @@
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
-  -webkit-font-smoothing: antialiased;
   //////////////////////////////////////////////////////////////////////////////////
 
   $tab-border: 1px solid $base-border-color;
@@ -339,7 +338,6 @@
   $base-link-color: $base-accent-color !default;
   $dark-gray: #333 !default;
   $medium-screen: em(640) !default;
-  -webkit-font-smoothing: antialiased;
   //////////////////////////////////////////////////////////////////////////////////
 
   $tab-link-color: $dark-gray;
@@ -522,9 +520,9 @@
   //////////////////////////////////////////////////////////////////////////////////
 
   $browser-top-bar-height: 1.5em;
-  $browser-circle-size: .5em; 
+  $browser-circle-size: 0.5em; 
   $browser-circle-margin: ($browser-top-bar-height - $browser-circle-size) / 2;
-  $browser-top-bar-background: lighten(#DFDFDF, 5);
+  $browser-top-bar-background: lighten(#DFDFDF, 5%);
   $browser-border: 0px;
   $browser-background: $base-background-color;
   $browser-content-background-1: #F0F0F0;
@@ -541,11 +539,11 @@
   }
 
   .browser-top-bar {
-    @include linear-gradient($browser-top-bar-background, darken($browser-top-bar-background, 2));
+    @include linear-gradient($browser-top-bar-background, darken($browser-top-bar-background, 2%));
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
     border: $browser-border;
-    box-shadow: inset 0 1px 0 transparentize(white, .6);
+    box-shadow: inset 0 1px 0 transparentize(white, 0.6);
     height: $browser-top-bar-height;
     width: 100%;
   }
@@ -553,7 +551,7 @@
   .browser-circle {
     @include size($browser-circle-size);
     border-radius: $browser-circle-size * 2;
-    box-shadow: 0 1px 0px transparentize(white, .5), inset 0 1px 1px transparentize(black, 0.8);
+    box-shadow: 0 1px 0px transparentize(white, 0.5), inset 0 1px 1px transparentize(black, 0.8);
     display: inline-block;
     margin: $browser-circle-margin 0;
   }
@@ -579,10 +577,10 @@
     border-bottom: none;
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
-    box-shadow: 0 3px 5px transparentize(black, .7);
+    box-shadow: 0 3px 5px transparentize(black, 0.7);
     display: inline-block;    
     text-align: left;
-    width:20%;
+    width: 20%;
   }
 
   .browser:nth-child(1) {
@@ -826,17 +824,16 @@
   $base-link-color: $base-accent-color !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;  
   //////////////////////////////////////////////////////////////////////////////////
 
   $card-border-color: $base-border-color;
   $card-border: 1px solid $card-border-color;
-  $card-background: lighten($card-border-color, 10);
+  $card-background: lighten($card-border-color, 10%);
   $card-header-background: $card-background;
-  $card-hover-background: lighten($card-background, 5);
+  $card-hover-background: lighten($card-background, 5%);
   $card-image-background: #DBD199;
-  $card-image-hover-background: lighten($card-image-background, 5);
-  $card-stats-color: lighten($base-accent-color, 10);
+  $card-image-hover-background: lighten($card-image-background, 5%);
+  $card-stats-color: lighten($base-accent-color, 10%);
   $card-padding-for-absolute-stats: 5em;
   $card-margin: 1em;
 
@@ -846,7 +843,7 @@
   background-color: $card-background;
   border-radius: $base-border-radius;
   border: $card-border;
-  box-shadow: 0 2px 4px darken($base-background-color, 10);
+  box-shadow: 0 2px 4px darken($base-background-color, 10%);
   cursor: pointer;
   margin: 0 $card-margin $base-spacing $card-margin;
   padding-bottom: $card-padding-for-absolute-stats;
@@ -899,13 +896,13 @@
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
     line-height: 1.5em;
-    padding: $base-spacing/3 $base-spacing/2;
+    padding: $base-spacing / 3 $base-spacing / 2;
   }
 
   .card-copy {
     font-size: .9em;
     line-height: 1.5em;
-    padding: $base-spacing/2 $base-spacing/2;
+    padding: $base-spacing / 2 $base-spacing / 2;
 
     p {
       margin: 0 0 ($base-spacing / 2);
@@ -924,7 +921,7 @@
     }
 
     li {
-      border-right: 1px solid transparentize($base-font-color, .8);
+      border-right: 1px solid transparentize($base-font-color, 0.8);
       color: $card-stats-color;
       display: inline;
       float: left;
@@ -944,7 +941,7 @@
       span {
         color: $base-font-color;
         display: block;
-        font-size: .7em;
+        font-size: 0.7em;
         font-weight: normal;
       }
     }
@@ -1084,7 +1081,6 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;  
   //////////////////////////////////////////////////////////////////////////////////
 
   $centered-navigation-padding: 1em;
@@ -1100,7 +1096,7 @@
   $horizontal-bar-mode: $large-screen;
 
   background-color: $centered-navigation-background;
-  border-bottom: 1px solid darken($centered-navigation-background, 6);
+  border-bottom: 1px solid darken($centered-navigation-background, 6%);
   min-height: $centered-navigation-height;
   width: 100%;
   z-index: 9999;
@@ -1224,7 +1220,7 @@
   .logo img {
     margin-bottom: -$centered-navigation-logo-height / 3;
     max-height: $centered-navigation-logo-height;
-    opacity: .6;
+    opacity: 0.6;
   }
 
   // Sub menus
@@ -1249,7 +1245,7 @@
     }
 
     &gt; a:after {
-      @include position(absolute, auto -.4em auto auto);
+      @include position(absolute, auto -0.4em auto auto);
       color: $centered-navigation-color;
       content: '\25BE';
     }
@@ -1301,7 +1297,7 @@
 
     .submenu {
       @include media($horizontal-bar-mode) {
-        left: $centered-navigation-submenu-width - .2em;
+        left: $centered-navigation-submenu-width - 0.2em;
         top: 0;
       }
     }
@@ -1326,7 +1322,7 @@
       }
 
       a {
-        background-color: darken($centered-navigation-background, 3);
+        background-color: darken($centered-navigation-background, 3%);
         display: inline-block;
         text-align: right;
         text-decoration: none;
@@ -1438,18 +1434,17 @@
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;  
   //////////////////////////////////////////////////////////////////////////////////
 
   $comment-gutter: 1.4em;
-  $comment-image-padding: .7em;
+  $comment-image-padding: 0.7em;
   $comment-image-width: 4em;
   $comment-color: $base-font-color;
-  $comment-background: lighten($base-accent-color, 15);
-  $comment-detail-color: transparentize($comment-color, .5);
+  $comment-background: lighten($base-accent-color, 15%);
+  $comment-detail-color: transparentize($comment-color, 0.5);
   $comment-image-vert-alignment: top;
 
-  border-bottom: 1px solid transparentize($comment-color, .9);
+  border-bottom: 1px solid transparentize($comment-color, 0.9);
   display: table;
   margin-bottom: $base-spacing;
   padding-bottom: 1em;
@@ -1485,17 +1480,17 @@
 
     h1 {
       font-size: 1em;
-      margin: 0 0 .5em 0;
+      margin: 0 0 0.5em 0;
     }
 
     p {
       line-height: 1.5em;
-      margin-bottom: .5em;
+      margin-bottom: 0.5em;
     }
 
     p.comment-detail {
       color: $comment-detail-color;
-      font-size: .9em;
+      font-size: 0.9em;
       font-style: italic;
     }
   }
@@ -1554,11 +1549,6 @@
   $base-border-radius: 3px !default;
   $base-accent-color: #477DCA !default;
   $large-screen: em(860) !default;
-  -webkit-font-smoothing: antialiased;
-
-  button {
-    -webkit-font-smoothing: antialiased;
-  }
 
   p {
     line-height: 1.5em;
@@ -1571,13 +1561,12 @@
   //////////////////////////////////////////////////////////////////////////////////
 
   $device-padding-vertical: 5em;
-  $device-padding-horizontal: .4em;
+  $device-padding-horizontal: 0.4em;
   $device-screen-width: 14em;
   $device-screen-height: 25em;
-  $device-background: darken(gray, 40);
-  $device-backside-background: darken($device-background, 10);
+  $device-background: darken(gray, 40%);
+  $device-backside-background: darken($device-background, 10%);
   $device-text-color: white;
-
   $device-background-top: #162C4C; 
   $device-background-bottom: #0A120D;
   $gradient-angle: 10deg;
@@ -1601,9 +1590,9 @@
     }
 
     h4 {
-      border-bottom: 1px solid transparentize($device-text-color, .7);
-      margin-bottom: .5em;
-      padding-bottom: .5em;
+      border-bottom: 1px solid transparentize($device-text-color, 0.7);
+      margin-bottom: 0.5em;
+      padding-bottom: 0.5em;
     }
 
     p {
@@ -1612,7 +1601,7 @@
 
     button {
       @include button(flat, $base-accent-color);
-      padding: .7em 1em;
+      padding: 0.7em 1em;
     }
   }
 
@@ -1632,8 +1621,8 @@
       background: $device-background;
       border-radius: 2em;
       box-shadow: 
-        1px 0px lighten($device-backside-background, 20), 
-        4px 0px lighten($device-backside-background, 2),
+        1px 0px lighten($device-backside-background, 20%), 
+        4px 0px lighten($device-backside-background, 2%),
         7px 0px $device-backside-background,
         10px 0px $device-backside-background,
         13px 0px $device-backside-background;
@@ -1649,8 +1638,8 @@
         @include size($device-screen-width $device-screen-height);
         background-image: url($device-screen-image);
         background-size: cover;
-        border-radius: .2em;
-        box-shadow: inset 0 1px 8px transparentize(black, .5);
+        border-radius: 0.2em;
+        box-shadow: inset 0 1px 8px transparentize(black, 0.5);
         margin: auto;
       }
     }
@@ -1755,8 +1744,7 @@
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   a {
     text-decoration: none;
   }  
@@ -1764,10 +1752,10 @@
 
   $flex-box-border-color: $light-gray;
   $flex-box-border: 1px solid $flex-box-border-color;
-  $flex-box-background: lighten($light-gray, 10);
-  $flex-box-gutter: .4em;
+  $flex-box-background: lighten($light-gray, 10%);
+  $flex-box-gutter: 0.4em;
   $flex-box-width: 18em;
-  $flex-box-color: transparentize($base-font-color, .3);
+  $flex-box-color: transparentize($base-font-color, 0.3);
   $flex-box-top-colors: 
     tomato, 
     #72BFBF, 
@@ -1790,7 +1778,7 @@
     @include align-self(stretch);
     background: $flex-box-background;
     border-radius: $base-border-radius;
-    box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10);
+    box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10%);
     display: block;
     margin: $flex-box-gutter;
     padding: 2em 2em 3em 2em;
@@ -1801,7 +1789,7 @@
         border-top: 6px solid $color-from-list;
         
         &amp;:hover {
-          background-color: transparentize($color-from-list, .9);
+          background-color: transparentize($color-from-list, 0.9);
         }
       }
     }
@@ -1811,18 +1799,18 @@
       height: 3em;
       margin-bottom: 2em;
       margin: auto;
-      opacity: .4;
+      opacity: 0.4;
     }
 
     .flex-title {
       color: $flex-box-color;
       font-size: 1.2em;
       font-weight: 800;
-      margin-bottom: .5em;
+      margin-bottom: 0.5em;
     }
 
     p {
-      color: transparentize($flex-box-color, .1);
+      color: transparentize($flex-box-color, 0.1);
       line-height: 1.5em;
       margin: auto;
     }
@@ -1922,8 +1910,7 @@
   $base-accent-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   ul {
     padding: 0;
   }
@@ -1938,13 +1925,13 @@
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-background: desaturate(darken($base-accent-color, 20%), 30%);
   $footer-color: white;
-  $footer-link-color: transparentize($footer-color, .6);
-  $footer-disclaimer-color: transparentize($footer-color, .6);
+  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
-  padding: $base-spacing*2 $gutter;
+  padding: $base-spacing * 2 $gutter;
   width: 100%;
 
   .footer-logo {
@@ -1966,7 +1953,7 @@
   }
 
   ul {
-    margin-bottom: $base-spacing*2;
+    margin-bottom: $base-spacing * 2;
 
     @include media($medium-screen) {
       @include span-columns(3);
@@ -1995,18 +1982,18 @@
     color: $footer-color;
     font-size: 1em;
     font-weight: 800;
-    margin-bottom: .4em;
+    margin-bottom: 0.4em;
   }  
 
   hr {
-    border: 1px solid transparentize($footer-disclaimer-color, .3);
+    border: 1px solid transparentize($footer-disclaimer-color, 0.3);
     margin: 0 auto $base-spacing;
     width: 12em;
   }
 
   p {
     color: $footer-disclaimer-color;
-    font-size: .9em;
+    font-size: 0.9em;
     line-height: 1.5em;
     margin: auto;
     max-width: 35em;
@@ -2135,8 +2122,7 @@
   $base-accent-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   ul {
     margin: 0;
     padding: 0;
@@ -2152,10 +2138,10 @@
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-background: desaturate(darken($base-accent-color, 20%), 30%);
   $footer-color: white;
-  $footer-link-color: transparentize($footer-color, .6);
-  $footer-disclaimer-color: transparentize($footer-color, .6);
+  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
   padding: $base-spacing;
@@ -2211,7 +2197,7 @@
     }
 
     li {
-      font-size: .8em;
+      font-size: 0.8em;
       font-weight: 400;
     }
 
@@ -2227,7 +2213,7 @@
         font-size: 1em;
         float: left;
         line-height: 0;
-        padding-right: .7em;
+        padding-right: 0.7em;
 
         &amp;:last-child {
           padding-right: 0;
@@ -2236,7 +2222,7 @@
 
       img {
         height: 1.6em;
-        opacity: .7;
+        opacity: 0.7;
         padding: 1px;
 
         &amp;:hover {
@@ -2358,8 +2344,7 @@
   $base-background-color: white !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   p {
     line-height: 1.5em;
   }
@@ -2370,9 +2355,9 @@
   //////////////////////////////////////////////////////////////////////////////////
 
   $grid-items-background: $base-background-color;
-  $grid-item-background: desaturate($base-accent-color, 30); 
+  $grid-item-background: desaturate($base-accent-color, 30%);
   $grid-item-colors: 
-    desaturate($base-accent-color, 30), 
+    desaturate($base-accent-color, 30%), 
     #3581A5, 
     #5FBEBE,
     #98C79A,
@@ -2391,8 +2376,8 @@
     @include transition (all 0.2s ease-in-out);
     background: $grid-item-background;
     border-bottom: $grid-item-border-size solid $grid-items-background;
-    border-left: $grid-item-border-size /2 solid $grid-items-background;
-    border-right: $grid-item-border-size /2 solid $grid-items-background;
+    border-left: $grid-item-border-size / 2 solid $grid-items-background;
+    border-right: $grid-item-border-size / 2 solid $grid-items-background;
     border-top: 0;
     cursor: pointer;
     float: left;
@@ -2410,10 +2395,10 @@
       &amp;:nth-child(#{$i}) {
         $background-from-list: nth($grid-item-colors, $i);
         background-color: $background-from-list;
-        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10);
+        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%);
 
         &amp;:hover {
-          background-color: darken($background-from-list, 10);
+          background-color: darken($background-from-list, 10%);
           background-repeat: no-repeat;
           background-position: top;
           background-size: cover;
@@ -2432,12 +2417,12 @@
   .grid-item h1 {
       color: $grid-item-color;
       font-size: 1.3em;
-      margin-bottom: .4em;
+      margin-bottom: 0.4em;
     }
 
   .grid-item p {
       margin: auto;
-      color: transparentize($grid-item-color, .3);
+      color: transparentize($grid-item-color, 0.3);
       
       @include media($medium-screen) {
         max-width: 70%;
@@ -2587,7 +2572,6 @@
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
 
   p {
     line-height: 1.5em;
@@ -2600,7 +2584,7 @@
 
   $grid-items-background: $base-background-color;
   $grid-item-background: $base-background-color;
-  $grid-item-border: 1px solid transparentize($base-font-color, .8); 
+  $grid-item-border: 1px solid transparentize($base-font-color, 0.8); 
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
   $grid-item-color: $base-font-color;
@@ -2626,7 +2610,7 @@
     }
 
     &amp;:hover {
-      background: transparentize($grid-item-color, .95);
+      background: transparentize($grid-item-color, 0.95);
     }
   }
 
@@ -2634,17 +2618,17 @@
       display: block;
       height: 2.5em;
       margin-bottom: 1.2em;
-      opacity: .2;
+      opacity: 0.2;
     }
 
   .grid-item h1 {
       color: $grid-item-color;
       font-size: 1.3em;
-      margin-bottom: .4em;
+      margin-bottom: 0.4em;
     }
 
   .grid-item p {
-      color: transparentize($grid-item-color, .4);
+      color: transparentize($grid-item-color, 0.4);
       
       @include media($medium-screen) {
         max-width: 70%;
@@ -2735,11 +2719,6 @@
   $base-border-radius: 3px !default;
   $base-accent-color: #477DCA !default;
   $large-screen: em(860) !default;
-  -webkit-font-smoothing: antialiased;
-
-  button {
-    -webkit-font-smoothing: antialiased;
-  }
   //////////////////////////////////////////////////////////////////////////////////
 
   $hero-background-top: #7F99BE; 
@@ -2773,7 +2752,7 @@
       
       h1 {
         font-size: 1.6em;
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
 
         @include media($large-screen) {
           font-size: 1.8em;
@@ -2794,7 +2773,7 @@
 
     button {
       @include button(flat, $base-accent-color);
-      padding: .7em 1em;
+      padding: 0.7em 1em;
     }
   }
 }
@@ -2893,8 +2872,7 @@
   $base-link-color: $base-accent-color !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   padding: 0;
 
   h2 {
@@ -2933,7 +2911,7 @@
     border-radius: 50%;
     float: left;
     height: $icon-bullet-size;
-    padding: $icon-bullet-size /4;
+    padding: $icon-bullet-size / 4;
     width: $icon-bullet-size;
   }
 
@@ -2942,24 +2920,24 @@
   }
 
   .bullet-icon-2 {
-    background: adjust-hue($base-accent-color, -50);
+    background: adjust-hue($base-accent-color, -50%);
   }
 
   .bullet-icon-3 {
-    background: adjust-hue($base-accent-color, -140);
+    background: adjust-hue($base-accent-color, -140%);
   }
 
   .bullet-content {
-    margin-left: $icon-bullet-size *1.4;
+    margin-left: $icon-bullet-size * 1.4;
     margin-bottom: 2em;
   }
 
   h2 {
-    border-bottom: 1px solid transparentize($base-font-color, .8);
+    border-bottom: 1px solid transparentize($base-font-color, 0.8);
     display: inline-block;
-    font-size: $icon-bullet-size /2.5;
-    margin-bottom: $icon-bullet-size /6;
-    padding-top: $icon-bullet-size /7;
+    font-size: $icon-bullet-size / 2.5;
+    margin-bottom: $icon-bullet-size / 6;
+    padding-top: $icon-bullet-size / 7;
   }
 }
 </code></pre>
@@ -3009,8 +2987,7 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   p {
     color: $base-font-color;
     line-height: $base-line-height;
@@ -3033,10 +3010,10 @@
     background: $base-accent-color;
     color: white;
     display: inline-block;
-    font-size: .7em;
+    font-size: 0.7em;
     font-weight: 800;
     margin-bottom: 2em;
-    padding: .3em .6em;
+    padding: 0.3em 0.6em;
     text-transform: uppercase;
 
     @include media($large-screen) {
@@ -3067,7 +3044,7 @@
     }
 
     a {
-      font-size: .8em;
+      font-size: 0.8em;
       font-weight: 400;
       text-transform: uppercase;
 
@@ -3264,7 +3241,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 }
 
 #map_canvas .content {
-  padding: 0 .5em 1em .5em;
+  padding: 0 0.5em 1em 0.5em;
 }
 
 #map_canvas .firstHeading {
@@ -3401,8 +3378,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   a {
     text-decoration: none;
   }
@@ -3414,8 +3390,8 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   $navigation-color-hover: white;
   $navigation-height: 60px;
   $navigation-nav-button-background: $base-accent-color;
-  $navigation-nav-button-background-hover: lighten($navigation-background, 10);
-  $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
+  $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
+  $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20%);
   $navigation-search-background: lighten($navigation-background, 5);
   $navigation-search-border: 1px solid darken($navigation-background, 5);
   $navigation-active-link-color: transparentize(white, 0.5);
@@ -3444,7 +3420,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 
     img {
       max-height: $navigation-height;
-      padding: .8em 0;
+      padding: 0.8em 0;
     }
   }
 
@@ -3509,7 +3485,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     display: block;
     line-height: $navigation-height;
     overflow: hidden;
-    padding-right: .8em;
+    padding-right: 0.8em;
     text-align: right;
     width: 100%;
     z-index: 9999;
@@ -3564,7 +3540,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     }
 
     &gt; a:after {
-      @include position(absolute, auto -.4em auto auto);
+      @include position(absolute, auto -0.4em auto auto);
       content: '\25BE';
       color: $navigation-color;
     }
@@ -3575,7 +3551,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     padding-right: 0;
 
     a {
-      padding-right: .8em;
+      padding-right: 0.8em;
     }
 
     &gt; a {
@@ -3599,7 +3575,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     }
 
     @include media($horizontal-bar-mode) {
-      padding-right: .8em;
+      padding-right: 0.8em;
       position: relative;
     }
   }
@@ -3616,7 +3592,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 
     .submenu {
       @include media($horizontal-bar-mode) {
-        left: $navigation-submenu-width - .2em;
+        left: $navigation-submenu-width - 0.2em;
         top: 0;
       }
     }
@@ -3636,12 +3612,12 @@ https://developers.google.com/maps/documentation/javascript/tutorial
         &amp;:last-child &gt; a {
           border-bottom-left-radius: $base-border-radius;
           border-bottom-right-radius: $base-border-radius;
-          padding-bottom: .7em;
+          padding-bottom: 0.7em;
         }
       }
 
       a {
-        background-color: darken($navigation-background, 3);
+        background-color: darken($navigation-background, 3%);
         display: inline-block;
         text-align: right;
         width: 100%;
@@ -3663,7 +3639,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     clear: both;
     display: block;
     height: $navigation-height;
-    padding-left: $navigation-padding/2;
+    padding-left: $navigation-padding / 2;
     padding-right: $navigation-padding;
 
     @include media($large-screen) {
@@ -3677,9 +3653,9 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     @include button(flat, $base-accent-color);
     display: inline;
     float: right;
-    font-size: .8em;
+    font-size: 0.8em;
     margin-top: 1em;
-    padding: .75em 1em;
+    padding: 0.75em 1em;
     text-transform: uppercase;
   }
 
@@ -3688,10 +3664,10 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   .search-bar {
     $search-bar-border-color: $base-border-color;
     $search-bar-border: 1px solid $search-bar-border-color;
-    $search-bar-background: lighten($search-bar-border-color, 10);
+    $search-bar-background: lighten($search-bar-border-color, 10%);
 
     float: left;
-    padding: .85em .6em .7em .6em;
+    padding: 0.85em 0.6em 0.7em 0.6em;
     width: 60%;
 
     form {
@@ -3703,10 +3679,10 @@ https://developers.google.com/maps/documentation/javascript/tutorial
         border-radius: $base-border-radius * 2;
         border: $navigation-search-border;
         color: $navigation-color;
-        font-size: .9em;
+        font-size: 0.9em;
         font-style: italic;
         margin: 0;
-        padding: .5em .8em;
+        padding: 0.5em 0.8em;
         width: 100%;
 
         @include media($large-screen) {
@@ -3726,7 +3702,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 
         img {
           height: 12px;
-          opacity: .7;
+          opacity: 0.7;
           padding: 1px;
         }
       }
@@ -3848,8 +3824,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   p {
     color: $base-font-color;
     line-height: $base-line-height;
@@ -3870,7 +3845,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   }
 
   .scroll-on-page-link {
-    border-bottom: 1px solid transparentize($base-link-color, .8);
+    border-bottom: 1px solid transparentize($base-link-color, 0.8);
     display: block;
     margin-right: $base-spacing;
     outline: none;
@@ -3883,7 +3858,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 
   article {
     h4 {
-      margin: 0 0 .5em 0;
+      margin: 0 0 0.5em 0;
     }
 
     section p:last-of-type {
@@ -4082,19 +4057,14 @@ jQuery(function(){
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
-  button {
-    -webkit-font-smoothing: antialiased;
-  }
-
+  
   ol {
     margin: 0;
     padding: 0;
   }
 
   li {
-    font-size: .8em;
+    font-size: 0.8em;
     line-height: 1.5em;
     list-style: none;
   }
@@ -4107,7 +4077,7 @@ jQuery(function(){
   //////////////////////////////////////////////////////////////////////////////////
 
   $search-tools-border-color: $base-border-color;
-  $search-tools-background: lighten($search-tools-border-color, 10);
+  $search-tools-background: lighten($search-tools-border-color, 10%);
 
   @include clearfix;
   background: $search-tools-background;
@@ -4136,11 +4106,11 @@ jQuery(function(){
       width: 100%;
 
       &amp;:hover {
-        border-color: darken($base-border-color, 10);
+        border-color: darken($base-border-color, 10%);
       }
 
       &amp;:focus {
-        border-color: darken($base-border-color, 10);
+        border-color: darken($base-border-color, 10%);
         outline: none;
       }
 
@@ -4160,9 +4130,9 @@ jQuery(function(){
     }
 
     button {
-      @include button(simple, lighten($search-tools-background, 10));
+      @include button(simple, lighten($search-tools-background, 10%));
       @include position(absolute, 5px 5px auto auto);
-      font-size: .7em;
+      font-size: 0.7em;
     }
 
     .hide-options {
@@ -4184,8 +4154,8 @@ jQuery(function(){
     button {
       @include button(flat, $base-accent-color);
       margin-top: 1em;
-      padding-bottom: .5em;
-      padding-top: .5em;
+      padding-bottom: 0.5em;
+      padding-top: 0.5em;
       width: 100%;
 
       @include media($large-screen) {
@@ -4364,12 +4334,7 @@ $(function() {
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
-  button {
-    -webkit-font-smoothing: antialiased;
-  }
-
+  
   p {
     color: $base-font-color;
     line-height: $base-line-height;
@@ -4379,7 +4344,7 @@ $(function() {
   $side-image-background-top: #B5EBEB;
   $side-image-background-bottom: #5DAC5D;
   $side-image-content-background: #F9F9F9;
-  $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, .8), 30);
+  $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
 
   background: $side-image-content-background;
 
@@ -4414,14 +4379,14 @@ $(function() {
     }
 
     h1 {
-      margin-bottom: .9em;
+      margin-bottom: 0.9em;
     }
 
     h4 {
       background: #BBB;
       color: white;
       display: inline-block;
-      font-size: .75em;
+      font-size: 0.75em;
       font-weight: 800;
       margin-bottom: 1.3em;
       padding: 3px 8px;
@@ -4544,26 +4509,21 @@ $(function() {
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   width: 100%;
 
   th {
     text-align: left;
   }
-
-  button {
-    -webkit-font-smoothing: antialiased;
-  }
   //////////////////////////////////////////////////////////////////////////////////
 
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
-  $table-background: lighten($table-border-color, 12);
-  $table-header-background: lighten($table-background, 10);
-  $table-hover-background: darken($table-background, 5);
-  $table-stripe-background: darken($table-background, 2);
-  $table-stripe-background-hover: darken($table-stripe-background, 5);
+  $table-background: lighten($table-border-color, 12%);
+  $table-header-background: lighten($table-background, 10%);
+  $table-hover-background: darken($table-background, 5%);
+  $table-stripe-background: darken($table-background, 2%);
+  $table-stripe-background-hover: darken($table-stripe-background, 5%);
   $table-padding: .75em 1em;
 
   border-collapse: separate;
@@ -4635,12 +4595,12 @@ $(function() {
       button {
         @include button(flat, $base-accent-color);
         display: inline-block;
-        font-size: .7em;
+        font-size: 0.7em;
         line-height: $base-line-height;
-        margin-bottom: .3em;
+        margin-bottom: 0.3em;
         margin-right: 0.5em;
         outline: none;
-        padding: .3em 1em;
+        padding: 0.3em 1em;
         width: 100%;
 
         @include media($medium-screen) {
@@ -4749,8 +4709,7 @@ $(function() {
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   width: 100%;
 
   th {
@@ -4759,10 +4718,6 @@ $(function() {
 
   td {
     line-height: $base-line-height;
-  }
-
-  button {
-    -webkit-font-smoothing: antialiased;
   }
   //////////////////////////////////////////////////////////////////////////////////
 
@@ -4922,8 +4877,7 @@ $(function() {
   $dark-gray: #333 !default;
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   li {
     list-style: none;
   }
@@ -4942,7 +4896,7 @@ $(function() {
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
   $tab-border-radius: $base-border-radius;
-  $tab-content-background: lighten($tab-border-color, 10);
+  $tab-content-background: lighten($tab-border-color, 10%);
   $tab-active-color: $tab-content-background;
   $tab-inactive-color: $base-background-color;
   $vertical-tabs-height: em(300);
@@ -4972,7 +4926,7 @@ $(function() {
       display: block;
       font-weight: bold;
       margin-right: -1px;
-      padding: $base-spacing/2 $gutter/2;
+      padding: $base-spacing / 2 $gutter / 2;
 
       &amp;.is-active {
         background-color: $tab-content-background;
@@ -5021,7 +4975,7 @@ $(function() {
     cursor: pointer;
     display: block;
     font-weight: bold;
-    padding: $base-spacing/2 $gutter/2;
+    padding: $base-spacing / 2 $gutter / 2;
 
     &amp;:hover {
       color: $base-accent-color;
