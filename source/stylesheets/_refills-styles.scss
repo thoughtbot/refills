@@ -1,9 +1,12 @@
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
 $refills-body-background-color: white;
 
 nav.bourbon {
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
-  -webkit-font-smoothing: antialiased;
-
+  
   ul {
     margin: 0;
     padding: 0;
@@ -300,7 +303,7 @@ section.refill {
 
 .refill h6 {
   margin-bottom: 1.5em;
-  -webkit-font-smoothing: antialiased;
+  
 }
 
 // Hiding and showing code
@@ -308,7 +311,7 @@ section.refill {
 
 .js-hide-code, 
 .js-show-code {
-  -webkit-font-smoothing: antialiased;
+  
   border-top: 1px dashed #BEBCBC;
   color: #7E7A7A;
   font-size: .8em;
@@ -434,7 +437,7 @@ pre[class*="language-"] {
 footer.refills-footer {
   $refills-medium-screen: em(640) !default;
   $refills-large-screen: em(860) !default;
-  -webkit-font-smoothing: antialiased;
+  
   color: silver;
   padding-bottom: 2em;
   padding-top: 1em;

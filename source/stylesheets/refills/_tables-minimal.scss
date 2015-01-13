@@ -12,8 +12,7 @@
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  -webkit-font-smoothing: antialiased;
-
+  
   width: 100%;
 
   th {
@@ -22,10 +21,6 @@
 
   td {
     line-height: $base-line-height;
-  }
-
-  button {
-    -webkit-font-smoothing: antialiased;
   }
   //////////////////////////////////////////////////////////////////////////////////
 

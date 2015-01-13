@@ -7,7 +7,6 @@ $base-spacing: 1.5em !default;
 //////////////////////////////////////////////////////////////////////////////////
 
 @mixin flash($color) {
-  -webkit-font-smoothing: antialiased;
   background-color: $color;
   color: darken($color, 60%);
   display: block;

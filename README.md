@@ -49,6 +49,16 @@ Alternative to copy-pasting manually, we also have a Refills gem that allows you
 
   This copies the snippet’s partial to `app/views/refills`, the stylesheet to `app/assets/stylesheets/refills` and the JavaScript to `app/assets/javascripts/refills`
 
+## Miscellaneous
+
+If your css reset file does not add webkit antialias, add the following code to your Scss file:
+
+```css
+body {
+  -webkit-font-smoothing: antialiased;
+}  
+```
+
 ## The Bourbon family
 
 - [Bourbon](https://github.com/thoughtbot/bourbon): A simple and lightweight mixin library for Sass

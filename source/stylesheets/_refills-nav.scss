@@ -67,14 +67,13 @@ section.inner-content {
 
 .er_toc {
   $base-line-height: 1.5em !default;
-
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
   @include transform(translateX(-220px));
-  @include transition(all .2s linear);
+  @include transition(all 0.2s linear);
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
   -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
   background: black;
   z-index: 999999;
 
