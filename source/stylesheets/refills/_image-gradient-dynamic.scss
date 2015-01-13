@@ -1,14 +1,14 @@
 .image-gradient-dynamic {
   $image-gradient-color-top: red; 
-  $transparency-top: .9;
+  $transparency-top: 0.9;
   $image-gradient-color-bottom: green; 
-  $transparency-bottom: .6;
+  $transparency-bottom: 0.6;
   $vertical-angle: 0deg;
 
   $image-gradient-color-left: teal; 
-  $transparency-left: .8;
+  $transparency-left: 0.8;
   $image-gradient-color-right: yellow; 
-  $transparency-right: .8;
+  $transparency-right: 0.8;
   $horizontal-angle: 90deg;
 
   -webkit-font-smoothing: antialiased;

@@ -100,20 +100,24 @@
 // The mixin above should preferably be in a file of its own. Below is the code for the object that has the texture.
 
 .texture {
+  $texture-top-background: lighten(#DDF0EF, 1%);
+  $texture-bottom-background: darken(#DDF0EF, 10%);
   height: 5em;
   width: 100%;
-}
 
-.texture-normal {
-  @include texture(180deg, lighten(#DDF0EF, 1), darken(#DDF0EF, 10), 67, 1); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
-  float: left;
-  height: 5em;
-  width: 50%;
-}
+  .texture-normal {
+    // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
+    @include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 1); 
+    float: left;
+    height: 5em;
+    width: 50%;
+  }
 
-.texture-inverted {
-  @include texture(180deg, lighten(#DDF0EF, 1), darken(#DDF0EF, 10), 67, 0); // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
-  float: left;
-  height: 5em;
-  width: 50%;
+  .texture-inverted {
+    // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
+    @include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 0); 
+    float: left;
+    height: 5em;
+    width: 50%;
+  }
 }

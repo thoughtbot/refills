@@ -26,7 +26,7 @@
   border-radius: $base-border-radius;
   border: 1px solid $base-border-color;
   display: inline-block;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   position: relative;
   text-align: center;
 
@@ -43,7 +43,7 @@
     border-radius: $base-border-radius;
     box-shadow: $tooltip-shadow;
     color: $tooltip-color;
-    font-size: .9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
+    font-size: 0.9em; // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
     line-height: 1.5em;
     margin: 0 auto;
     max-width: $tooltip-max-width;

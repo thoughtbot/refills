@@ -12,17 +12,17 @@ label {
 //////////////////////////////////////////////////////////////////////////////////
 
 .label-alert {
-  color: darken($alert-color, 45);
+  color: darken($alert-color, 45%);
 }
 
 .label-error {
-  color: darken($error-color, 45);
+  color: darken($error-color, 45%);
 }
 
 .label-notice {
-  color: darken($notice-color, 45);
+  color: darken($notice-color, 45%);
 }
 
 .label-success {
-  color: darken($success-color, 45);
+  color: darken($success-color, 45%);
 }

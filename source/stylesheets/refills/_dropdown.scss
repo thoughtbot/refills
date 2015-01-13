@@ -22,10 +22,10 @@
   //////////////////////////////////////////////////////////////////////////////////
 
   $dropdown-color: $base-font-color;
-  $dropdown-description-color: lighten($dropdown-color, 40);
+  $dropdown-description-color: lighten($dropdown-color, 40%);
   $dropdown-border: 1px solid silver;
   $dropdown-background: $base-background-color;
-  $dropdown-background-hover: darken($dropdown-background, 3);
+  $dropdown-background-hover: darken($dropdown-background, 3%);
   $dropdown-inner-border: 1px solid silver;
   $dropdown-height: 40px;
   $dropdown-padding: 1em;
@@ -47,7 +47,7 @@
     border-top: $dropdown-border;
     color: $dropdown-description-color;
     float: left;
-    font-size: .7em;
+    font-size: 0.7em;
     line-height: $dropdown-height;
     margin: 0;
     padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
@@ -66,7 +66,7 @@
     border-bottom: $dropdown-border;
     cursor: pointer;
     float: right;
-    font-size: .7em;
+    font-size: 0.7em;
     font-weight: 800;
     line-height: $dropdown-height;
     margin: 0;
@@ -97,7 +97,7 @@
     background: $dropdown-background;
     border-radius: $base-border-radius;
     border: $dropdown-border;
-    box-shadow: 0 2px 2px transparentize(black, .8);
+    box-shadow: 0 2px 2px transparentize(black, 0.8);
     color: $dropdown-color;
     cursor: pointer;
     display: none;
@@ -114,8 +114,8 @@
       content: "\25b2";
       font-size: 1.4em;
       pointer-events: none;
-      text-shadow: 0 -2px 2px transparentize(black, .7);
-      top: -.7em;
+      text-shadow: 0 -2px 2px transparentize(black, 0.7);
+      top: -0.7em;
     }
   }
 

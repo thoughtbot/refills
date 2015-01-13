@@ -19,7 +19,7 @@
   //////////////////////////////////////////////////////////////////////////////////
 
   $sliding-menu-border-color: $dark-gray;
-  $sliding-menu-background: lighten($sliding-menu-border-color, 5);
+  $sliding-menu-background: lighten($sliding-menu-border-color, 5%);
   $sliding-menu-color: #fff;
   $sliding-menu-border: 1px solid $sliding-menu-border-color;
   $sliding-menu-background-hover: $base-accent-color;
@@ -28,7 +28,7 @@
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
   @include transform(translateX(-220px));
-  @include transition(all .25s linear);
+  @include transition(all 0.25s linear);
   background: $sliding-menu-background;
   z-index: 999999;
   overflow-y: scroll;
@@ -61,7 +61,7 @@
   z-index: 999998;
 
   &.is-visible {
-    opacity: .4;
+    opacity: 0.4;
     visibility: visible;
   }
 }

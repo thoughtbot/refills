@@ -36,7 +36,7 @@
   }
 
   label img {
-    border-radius: $modal-trigger-image-width/2;
+    border-radius: $modal-trigger-image-width / 2;
     display: block;
     max-width: $modal-trigger-image-width;
   }
@@ -47,7 +47,7 @@
 
   .modal-trigger {
     @include button(flat, $base-accent-color);
-    padding: .8em 1em;
+    padding: 0.8em 1em;
   }
 
   .modal-open {
@@ -55,9 +55,9 @@
   }
 
   .modal-window { // overlay
-    @include transition(opacity .25s ease);
+    @include transition(opacity 0.25s ease);
     @include position(fixed, 0px 0px 0px 0px);
-    background: rgba(0,0,0, .85);
+    background: rgba(0,0,0, 0.85);
     opacity: 0;
     padding-top: 0.6em;
     text-align: left;
@@ -84,7 +84,7 @@
     &:before {
       @include position(absolute, 3px 3px 0 50%);
       @include transform(rotate(45deg));
-      @include size(.15em 1.5em);
+      @include size(0.15em 1.5em);
       background: $modal-close-color;
       content: '';
       display: block;
@@ -93,7 +93,7 @@
 
     &:hover:after,
     &:hover:before {
-      background: darken($modal-close-color, 10);
+      background: darken($modal-close-color, 10%);
     }
 
     &:before {
@@ -102,14 +102,14 @@
   }
 
   .modal-inner {
-    @include transition(opacity .25s ease);
+    @include transition(opacity 0.25s ease);
     background: $modal-background;
     border-radius: $base-border-radius;
     margin-top: 0;
     margin: auto;
     max-height: 95%;
     overflow: auto;
-    padding: $modal-padding /2;
+    padding: $modal-padding / 2;
     position: relative;
     width: 95%;
 
@@ -125,7 +125,7 @@
 
     h1 {
       color: $base-font-color;
-      margin-bottom: .6em;
+      margin-bottom: 0.6em;
       text-align: left;
       text-transform: capitalize;
     }
@@ -145,7 +145,7 @@
     a.cta {
       color: white;
       display: inline-block;
-      margin-right: .5em;
+      margin-right: 0.5em;
       margin-top: 1em;
 
       &:last-child {
@@ -160,7 +160,7 @@
   }
 
   .modal-state:checked + .modal-window .modal-inner {
-    top: .5em;
+    top: 0.5em;
   }
 }
 

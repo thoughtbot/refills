@@ -10,7 +10,7 @@ form.search-bar {
 
   $search-bar-border-color: $base-border-color;
   $search-bar-border: 1px solid $search-bar-border-color;
-  $search-bar-background: lighten($search-bar-border-color, 10);
+  $search-bar-background: lighten($search-bar-border-color, 10%);
 
   position: relative;
 
@@ -41,7 +41,7 @@ form.search-bar {
 
     img {
       height: 12px;
-      opacity: .7;
+      opacity: 0.7;
     }
   }
 }
