@@ -2368,7 +2368,7 @@ function parallax(){
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
   <pre><code class="language-javascript">$(document).ready(function(){
-  $('.js-menu-trigger,.js-menu-screen').on('click touchstart',function () {
+  $('.js-menu-trigger,.js-menu-screen').on('click touchstart',function (e) {
     $('.js-menu,.js-menu-screen').toggleClass('is-visible');
     e.preventDefault();
   });
