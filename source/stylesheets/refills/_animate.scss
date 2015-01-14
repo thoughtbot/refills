@@ -1,0 +1,78 @@
+$base-accent-color: #477dca !default;
+
+.animated {
+  @include animation-duration(1s);
+  @include animation-fill-mode(both);
+
+  &.infinite {
+    @include animation-iteration-count(infinite);
+  }
+
+  &.alternate {
+    @include animation-direction(alternate);
+  }
+
+  &.iteration {
+    @include animation-iteration-count(2);
+  }
+}
+
+// Tweak the keyframes below. Or swap them with another animation pattern at 
+// https://github.com/daneden/animate.css/tree/master/source
+
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+          animation-name: zoomOut;
+}
+
+/////////////////////////////////////////////////////////////
+
+.animate-target {
+  @include size(6em);
+  -webkit-transform-style: preserve-3d;
+  border-radius: 50%;
+  border: 22px solid #e2e2e3;
+  margin: 0 auto 3em;
+  text-align: center;
+}
+
+button {
+  @include button(flat, $base-accent-color);
+  display: block;
+  margin: auto;
+  outline: none;
+  padding: 0.8em 1em;
+  text-align: center;
+}
