@@ -946,7 +946,8 @@
       }
     }
   }
-
+  
+  &amp;:focus,
   &amp;:hover {
     background-color: $card-hover-background;
     
@@ -1135,6 +1136,7 @@
       display: none;
     }
 
+    &amp;:focus,
     &amp;:hover {
       color: $centered-navigation-color-hover;
     }
@@ -1190,8 +1192,10 @@
     a {
       color: $centered-navigation-color;
       display: inline-block;
+      outline: none;
       text-decoration: none;
 
+      &amp;:focus,
       &amp;:hover {
         color: $centered-navigation-color-hover;
       }
@@ -1275,6 +1279,7 @@
       }
     }
 
+    &amp;:focus &gt; .submenu,
     &amp;:hover &gt; .submenu {
       display: block;
     }
@@ -1788,6 +1793,7 @@
         $color-from-list: nth($flex-box-top-colors, $i);
         border-top: 6px solid $color-from-list;
         
+        &amp;:focus,
         &amp;:hover {
           background-color: transparentize($color-from-list, 0.9);
         }
@@ -1973,6 +1979,7 @@
   li a {
     color: $footer-link-color;
 
+    &amp;:focus,
     &amp;:hover {
       color: transparentize($footer-color, 0);
     }
@@ -2186,6 +2193,7 @@
   ul li a {
     color: $footer-link-color;
 
+    &amp;:focus,
     &amp;:hover {
       color: transparentize($footer-color, 0);
     }
@@ -2225,6 +2233,7 @@
         opacity: 0.7;
         padding: 1px;
 
+        &amp;:focus,
         &amp;:hover {
           opacity: 1;
         }
@@ -2383,6 +2392,7 @@
     float: left;
     height: $grid-item-height;
     overflow: hidden;
+    outline: none;
     padding: 2em;
     text-align: center;
     width: 100%;
@@ -2397,6 +2407,7 @@
         background-color: $background-from-list;
         box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%);
 
+        &amp;:focus,
         &amp;:hover {
           background-color: darken($background-from-list, 10%);
           background-repeat: no-repeat;
@@ -2602,6 +2613,7 @@
     float: left;
     height: $grid-item-height;
     overflow: hidden;
+    outline: none;
     padding: 2em;
     width: 100%;
 
@@ -2609,6 +2621,7 @@
       @include grid-item-columns($grid-item-columns);
     }
 
+    &amp;:focus,
     &amp;:hover {
       background: transparentize($grid-item-color, 0.95);
     }
@@ -3440,6 +3453,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       display: none;
     }
 
+    &amp;:focus,
     &amp;:hover {
       color: $navigation-color-hover;
     }
@@ -3507,6 +3521,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
         padding-right: 1em;
       }
 
+      &amp;:focus,
       &amp;:hover {
         color: $navigation-color-hover;
       }
@@ -3570,6 +3585,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       }
     }
 
+    &amp;:focus &gt; .submenu,
     &amp;:hover &gt; .submenu {
       display: block;
     }
@@ -4105,13 +4121,9 @@ jQuery(function(){
       position: relative;
       width: 100%;
 
+      &amp;:focus,
       &amp;:hover {
         border-color: darken($base-border-color, 10%);
-      }
-
-      &amp;:focus {
-        border-color: darken($base-border-color, 10%);
-        outline: none;
       }
 
       label {
@@ -4977,6 +4989,7 @@ $(function() {
     font-weight: bold;
     padding: $base-spacing / 2 $gutter / 2;
 
+    &amp;:focus,
     &amp;:hover {
       color: $base-accent-color;
     }

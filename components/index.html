@@ -179,6 +179,7 @@
       border: none;
     }
 
+    &amp;:focus,
     &amp;:hover {
       background-color: $accordion-menu-hover;
     }
@@ -194,7 +195,8 @@
         border-top: $accordion-menu-border;
         box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
       }
-
+      
+      &amp;:focus,
       &amp;:hover {
         background-color: $accordion-menu-sub-hover;
       }
@@ -406,13 +408,10 @@
       padding-right: $breadcrumb-height / 2;
     }
 
+    &amp;:focus,
     &amp;:hover {
-      color: $breadcrumb-color-hover;
       background-color: $breadcrumb-inactive-hover-color;
-    }
-
-    &amp;:hover:after {
-      border-left-color: $breadcrumb-inactive-hover-color;
+      color: $breadcrumb-color-hover;
     }
 
     &amp;:after,
@@ -568,6 +567,7 @@
         width: auto;
       }
 
+      &amp;:focus,
       &amp;:hover {
         background-color: darken($button-group-background, 3%);
       }
@@ -741,7 +741,7 @@
     }
   }
 
-  .dropdown-button:hover{
+  .dropdown-button:hover {
     background-color: $dropdown-background-hover;
   }
 
@@ -831,7 +831,7 @@
 </table>
 </div>
     </section>
-    
+
     <section id="expander" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Expander</h6></div>
@@ -1122,8 +1122,8 @@ $base-spacing: 1.5em !default;
     color: darken($color, 70%);
     text-decoration: none;
 
-    &amp;:hover,
-    &amp;:focus {
+    &amp;:focus,
+    &amp;:hover {
       color: darken($color, 90%);
     }
   }
@@ -1348,71 +1348,6 @@ $base-spacing: 1.5em !default;
       display: block;
     }
   }
-}
-</code></pre>
-</td>
-
-
-  </tr>
-</table>
-</div>
-    </section>
-
-    <section id="label-alerts" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Label Alerts</h6></div>
-        <div class="refill-centering"><label class="label-success">This is a success label</label>
-<label class="label-error">This is an error label</label>
-<label class="label-notice">This is an notice label</label>
-<label class="label-alert">This is an alert label</label>
-
-</div>
-      </div>
-      <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;label class=&quot;label-success&quot;&gt;This is a success label&lt;/label&gt;
-&lt;label class=&quot;label-error&quot;&gt;This is an error label&lt;/label&gt;
-&lt;label class=&quot;label-notice&quot;&gt;This is an notice label&lt;/label&gt;
-&lt;label class=&quot;label-alert&quot;&gt;This is an alert label&lt;/label&gt;
-
-</code></pre>
-</td>
-
-<td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">///////////////////////////////////////////////////////////////////////////////////
-$alert-color: #FFF6BF !default;
-$error-color: #FBE3E4 !default;
-$success-color: #E6EFC2 !default;
-$notice-color: #E5EDF8 !default;
-$base-spacing: 1.5em !default;
-
-label {
-  font-weight: bold;
-}
-//////////////////////////////////////////////////////////////////////////////////
-
-.label-alert {
-  color: darken($alert-color, 45%);
-}
-
-.label-error {
-  color: darken($error-color, 45%);
-}
-
-.label-notice {
-  color: darken($notice-color, 45%);
-}
-
-.label-success {
-  color: darken($success-color, 45%);
 }
 </code></pre>
 </td>
@@ -1759,6 +1694,7 @@ label {
       border-radius: $base-border-radius;
       border: $pagination-border;
       color: $pagination-color;
+      outline: none;
       padding: ($base-spacing / 4) ($gutter / 2);
 
       &amp;:hover,
@@ -2306,6 +2242,7 @@ function parallax(){
   $sliding-menu-border: 1px solid $sliding-menu-border-color;
   $sliding-menu-background-hover: $base-accent-color;
   $sliding-menu-color-hover: #fff;
+  $sliding-menu-background-focus: lighten($sliding-menu-background, 5%);
 
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
@@ -2322,6 +2259,10 @@ function parallax(){
     display: block;
     font-weight: bold;
     padding: 1em;
+
+    &amp;:focus {
+      background-color: $sliding-menu-background-focus;
+    }
 
     &amp;:hover {
       background-color: $sliding-menu-background-hover;
@@ -2742,6 +2683,7 @@ function parallax(){
   position: relative;
   text-align: center;
 
+  &amp;:focus,
   &amp;:hover .tooltip {
     opacity: 1;
     visibility: visible;
