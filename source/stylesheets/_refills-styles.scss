@@ -2,15 +2,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-$refills-body-background-color: white;
+$refills-body-background-color: #fff;
 
 nav.bourbon {
-  text-rendering: optimizeLegibility; // Fix the character spacing for headings
-  
+  text-rendering: optimizeLegibility;
+
   ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    list-style-type: none;
 
     li a {
       text-decoration: none;
@@ -23,27 +23,25 @@ nav.bourbon {
     a {
       text-decoration: none;
     }
-  }  
+  }
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////
-
-$refills-color: lighten(desaturate(teal, 60), 40);
-$refills-accent-color: #477DCA;
+$refills-color: lighten(desaturate(teal, 60%), 40%);
+$refills-accent-color: #477dca;
 $refills-nav-height: 60px;
-$refills-logo-color: #93E9BE;
-$refills-anchor-color: #F55481;
-$refills-hero-background: #E7F1EC;
-$refills-highlight-color: #BBB295; 
-$refills-narrow-sans: 'Oswald', sans-serif;
-$refills-white-shadow: 0 1px 1px transparentize(white, .6);
+$refills-logo-color: #93e9be;
+$refills-anchor-color: #f55481;
+$refills-hero-background: #e7f1ec;
+$refills-highlight-color: #bbb295;
+$refills-narrow-sans: "Oswald", sans-serif;
+$refills-white-shadow: 0 1px 1px transparentize(#fff, 0.6);
 
-$refills-serif: 'Lusitana', serif;
-$refills-second-serif: georgia;
+$refills-serif: "Lusitana", $georgia;
+$refills-second-serif: $georgia;
 
 @mixin refills-inset {
-  background: darken($refills-hero-background, 2);
-  box-shadow: inset 0 1px 2px darken($refills-hero-background, 7), $refills-white-shadow;
+  background: darken($refills-hero-background, 2%);
+  box-shadow: inset 0 1px 2px darken($refills-hero-background, 7%), $refills-white-shadow;
   text-shadow: $refills-white-shadow;
 }
 
@@ -52,9 +50,6 @@ body {
   background: $refills-body-background-color;
   min-width: 320px;
 }
-
-// Header & Hero
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .refills-header {
   $refills-medium-screen: em(640);
@@ -86,11 +81,11 @@ body {
       max-width: 8em;
       max-height: 8em;
     }
-    
+
     img {
-      background: white;
+      background: #fff;
       border-radius: 50%;
-      padding: .3em;
+      padding: 0.3em;
       margin-bottom: 1em;
       max-width: 5em;
       max-height: 5em;
@@ -99,7 +94,7 @@ body {
         margin-bottom: 2em;
         max-width: 8em;
         max-height: 8em;
-        padding: .5em;
+        padding: 0.5em;
       }
     }
   }
@@ -121,7 +116,7 @@ body {
 
     @include media($refills-large-screen) {
       font-size: 3em;
-      margin-bottom: .8em;
+      margin-bottom: 0.8em;
       line-height: 1.3em;
       max-width: 55%;
     }
@@ -140,22 +135,22 @@ body {
 
     &:focus,
     &:hover {
-      color: lighten($refills-anchor-color, 10);
+      color: lighten($refills-anchor-color, 10%);
     }
   }
 
   p {
     @include refills-inset;
     border-radius: 30px;
-    color: darken(desaturate($refills-logo-color, 50), 15);
+    color: darken(desaturate($refills-logo-color, 50%), 15%);
     display: inline;
     font-family: $refills-narrow-sans;
-    font-size: .8em;
+    font-size: 0.8em;
     font-weight: 400;
-    padding: .5em 1.4em;
+    padding: 0.5em 1.4em;
 
     @include media($refills-large-screen) {
-      font-size: .8em;
+      font-size: 0.8em;
     }
   }
 }
@@ -164,8 +159,7 @@ body {
   @include clearfix;
 }
 
-// Refill menu 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+// Refill menu
 
 ul.refills-menu {
   $refills-medium-screen: em(640) !default;
@@ -189,23 +183,23 @@ ul.refills-menu {
     a {
       text-decoration: none;
       border-radius: 3px;
-      color: darken($refills-hero-background, 20);
-      font-family: 'Lusitana', serif;
-      font-size: .9em;
-      padding: .5em .5em 2em;
+      color: darken($refills-hero-background, 20%);
+      font-family: "Lusitana", serif;
+      font-size: 0.9em;
+      padding: 0.5em 0.5em 2em;
 
       @include media($refills-medium-screen) {
         font-size: 1.1em;
-        padding: .5em .8em 2em;
+        padding: 0.5em 0.8em 2em;
       }
 
       @include media($refills-large-screen) {
         font-size: 1.3em;
-        padding: .5em 1.3em 2em;
+        padding: 0.5em 1.3em 2em;
       }
 
       &:hover {
-        color: darken($refills-hero-background, 30);      
+        color: darken($refills-hero-background, 30%);
       }
     }
   }
@@ -215,7 +209,7 @@ ul.refills-menu {
   background: $refills-body-background-color;
 
   &:hover {
-    color: darken($refills-hero-background, 20);
+    color: darken($refills-hero-background, 20%);
   }
 }
 
@@ -223,7 +217,7 @@ ul.refills-menu {
   background: $refills-body-background-color;
 
   &:hover {
-    color: darken($refills-hero-background, 20);
+    color: darken($refills-hero-background, 20%);
   }
 }
 
@@ -231,7 +225,7 @@ ul.refills-menu {
   background: $refills-body-background-color;
 
   &:hover {
-    color: darken($refills-hero-background, 20);
+    color: darken($refills-hero-background, 20%);
   }
 }
 
@@ -239,8 +233,7 @@ ul.refills-menu {
   padding-top: 6em;
 }
 
-// Refill section 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+// Refill section
 
 section.refill {
   @include clearfix;
@@ -256,8 +249,8 @@ section.refill {
 }
 
 .refills-wrapper {
-    @include outer-container;
-    padding: 1em;
+  @include outer-container;
+  padding: 1em;
 
   h1.main-header {
     background-color: $refills-color;
@@ -274,7 +267,7 @@ section.refill {
     display: inline-block;
 
     & > * {
-      text-align: left;      
+      text-align: left;
     }
   }
 
@@ -284,13 +277,13 @@ section.refill {
 }
 
 .line-behind-text {
-  border-bottom: 1px solid #CACACA;
+  border-bottom: 1px solid #cacaca;
   text-align: center;
   margin-bottom: 4.5em;
 }
 
 .line-behind-text h6 {
-  background: white;
+  background: #fff;
   color: gray;
   display: inline-block;
   font-family: $refills-narrow-sans;
@@ -304,18 +297,16 @@ section.refill {
 
 .refill h6 {
   margin-bottom: 1.5em;
-  
+
 }
 
 // Hiding and showing code
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-.js-hide-code, 
+.js-hide-code,
 .js-show-code {
-  
-  border-top: 1px dashed #BEBCBC;
-  color: #7E7A7A;
-  font-size: .8em;
+  border-top: 1px dashed #bebcbc;
+  color: #7e7a7a;
+  font-size: 0.8em;
   text-transform: uppercase;
   width: 9em;
 
@@ -342,14 +333,13 @@ section.refill {
   width: 100%;
 
   a {
-    text-decoration: none;
     line-height: 1.5em;
+    text-decoration: none;
   }
 
 }
 
 // Snippet
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .refill-snippet {
   margin-top: 4.5em;
@@ -380,24 +370,25 @@ section.refill {
 }
 
 pre[class*="language-"] {
-  background: #F8F8F8;
+  background-color: #f8f8f8;
   border-top: 2px solid silver;
   height: 300px;
   line-height: 1em;
 }
 
 .copy-source {
-  background-color: lighten(#333, 20);
+  background-color: lighten(#333, 20%);
   border-radius: 10px;
-  color: white;
-  font-size: .5em;
+  color: #fff;
+  font-size: 0.5em;
   font-weight: 800;
   padding: 0.4em 1em;
   text-transform: uppercase;
 
-  &:hover, &:active {
-    background-color: lighten(#333, 20);
-    color: white;
+  &:hover,
+  &:active {
+    background-color: lighten(#333, 20%);
+    color: #fff;
   }
 }
 
@@ -421,7 +412,7 @@ pre[class*="language-"] {
   }
 
   code {
-    font-size: .6em;
+    font-size: 0.6em;
     line-height: 1.4em;
     max-height: em(400);
     overflow: scroll;
@@ -433,26 +424,25 @@ pre[class*="language-"] {
 }
 
 // Footer
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 footer.refills-footer {
   $refills-medium-screen: em(640) !default;
   $refills-large-screen: em(860) !default;
-  
+
   color: silver;
   padding-bottom: 2em;
   padding-top: 1em;
   text-align: center;
-  
+
   a {
     color: $refills-anchor-color;
     text-decoration: none;
   }
 
   p {
-    margin: 0 1em;
-    font-size: .8em;
+    font-size: 0.8em;
     line-height: 1.5em;
+    margin: 0 1em;
 
     @include media($refills-large-screen) {
       font-size: 1em;
@@ -460,7 +450,7 @@ footer.refills-footer {
   }
 
   .refills-footer-logo {
-    margin-bottom: 2em;    
+    margin-bottom: 2em;
   }
 
   img {
@@ -472,13 +462,13 @@ footer.refills-footer {
 
   .footer-links {
     $refills-medium-screen: em(640) !default;
-    background: #F3F3F3;
+    background: #f3f3f3;
     border-radius: 3em;
-    box-shadow: inset 0 1px 2px darken(#F3F3F3, 6);
+    box-shadow: inset 0 1px 2px darken(#f3f3f3, 6%);
     display: inline-block;
-    font-size: .8em;
+    font-size: 0.8em;
     margin-bottom: 2em;
-    padding: .6em; 
+    padding: 0.6em;
 
     @include media($refills-large-screen) {
       font-size: 1em;
@@ -487,10 +477,10 @@ footer.refills-footer {
 
     li {
       display: inline;
-      padding: .4em;
+      padding: 0.4em;
 
       a {
-        color: #A7A7A7; 
+        color: #a7a7a7;
         text-decoration: none;
 
         &:hover {
@@ -502,7 +492,6 @@ footer.refills-footer {
 }
 
 // Adjustments
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .refill-smaller {
   $refills-large-screen: em(640);
@@ -514,10 +503,9 @@ footer.refills-footer {
 }
 
 // Type Systems
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @include keyframes(fadeInAccordionTabsArticles) {
-  0% { opacity: 0; }
+  0%   { opacity: 0; }
   100% { opacity: 1; }
 }
 
@@ -525,78 +513,78 @@ footer.refills-footer {
   $refills-border-color: gainsboro;
   $refills-border-radius: 3px;
   $refills-spacing: 1.5em;
-  $refills-accent-color: #477DCA;
+  $refills-accent-color: #477dca;
   $refills-link-color: $refills-accent-color;
   $dark-gray: #333;
-  $light-gray: #DDD;
+  $light-gray: #ddd;
   $refills-line-height: 1.5em;
   $refills-medium-screen: em(640);
   $refills-large-screen: em(860);
 
   $tab-border-color: $refills-border-color;
   $tab-border: 1px solid $tab-border-color;
-  $tab-content-background: lighten($light-gray, 15);
+  $tab-content-background: lighten($light-gray, 15%);
   $tab-active-background: $tab-content-background;
   $refills-body-inactive-color: $refills-body-background-color;
-  $tab-inactive-hover-color: darken($light-gray, 5);
+  $tab-inactive-hover-color: darken($light-gray, 5%);
   $tab-mode: $refills-medium-screen;
 
   @include clearfix;
-  border-radius: $refills-border-radius;
   border: $tab-border;
+  border-radius: $refills-border-radius;
   margin-bottom: $refills-spacing;
- 
+
   @include media($tab-mode) {
     border: none;
   }
- 
+
   .tab {
     @include media($tab-mode) {
       display: inline;
     }
- 
+
     &:first-child .tab-link {
       border-top-left-radius: $refills-border-radius;
       border-top-right-radius: $refills-border-radius;
     }
- 
+
     &:last-child .tab-link {
       border-bottom-left-radius: $refills-border-radius;
       border-bottom-right-radius: $refills-border-radius;
- 
+
       @include media($tab-mode) {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
       }
     }
- 
+
     .tab-link-type-system {
       background-color: transparent;
       border-bottom: 1px solid $tab-border-color;
       color: $dark-gray;
       display: block;
-      font-size: .9em;
+      font-size: 0.9em;
       font-weight: 200;
-      letter-spacing: .6px;
-      padding: $refills-spacing/2 $gutter/2;
+      letter-spacing: 0.6px;
+      padding: ($refills-spacing / 2) ($gutter / 2);
       text-align: center;
- 
+
       @include media($tab-mode) {
         display: inline-block;
         border-bottom: 0;
         border-top-left-radius: $refills-border-radius;
         border-top-right-radius: $refills-border-radius;
       }
- 
+
       &:hover {
         color: $refills-link-color;
       }
- 
+
       &:focus {
         outline: none;
       }
     }
- 
+
     section {
       padding: $refills-spacing $gutter;
       background: $tab-content-background;
@@ -604,21 +592,20 @@ footer.refills-footer {
       overflow: hidden;
       padding: $refills-line-height $gutter;
       width: 100%;
- 
+
       @include media($tab-mode) {
-        border-bottom-left-radius: $refills-border-radius;
-        border-bottom-right-radius: $refills-border-radius;
+        @include border-bottom-radius($refills-border-radius);
         border-top: $tab-border;
         float: left;
         left: 0;
-        padding: $refills-spacing/2 $gutter;
+        padding: ($refills-spacing / 2) $gutter;
       }
 
       .tab-content {
         opacity: 0;
       }
     }
- 
+
     &.js-is-active {
       border-bottom: $tab-border;
 
@@ -629,7 +616,7 @@ footer.refills-footer {
       .tab-link-type-system {
         background-color: $tab-active-background;
         border-bottom: 0;
- 
+
         @include media($tab-mode) {
           background-color: $tab-active-background;
           border-bottom: 1px solid $tab-active-background;
@@ -637,7 +624,7 @@ footer.refills-footer {
           margin-bottom: -1px;
         }
       }
- 
+
       section {
         display: block;
 

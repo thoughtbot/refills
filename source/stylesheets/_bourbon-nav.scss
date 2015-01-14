@@ -1,11 +1,11 @@
-$bourbon-nav-background-color: #5B5E63;
+$bourbon-nav-background-color: #5b5e63;
 
 nav.bourbon {
   @include clearfix;
   background-color: $bourbon-nav-background-color;
   padding: 0 2em 0 1em;
 
-  @include media(max-width em(510)){
+  @include media(max-width em(510)) {
     padding: 0;
   };
 
@@ -31,7 +31,7 @@ nav.bourbon {
     padding: 1em 1em 1em 3em;
 
     @include media(max-width em(515)) {
-      padding: .75em .5em;
+      padding: 0.75em 0.5em;
       text-align: center;
     };
 
@@ -53,10 +53,10 @@ nav.bourbon {
 
     @each $site in $sites {
       &.#{$site} {
-        background-image: url('/images/bourbon-nav/#{$site}.png');
+        background-image: url("/images/bourbon-nav/#{$site}.png");
 
         @include hidpi {
-          background-image: url('/images/bourbon-nav/#{$site}@2x.png');
+          background-image: url("/images/bourbon-nav/#{$site}@2x.png");
           background-size: 20%;
         }
 
@@ -68,11 +68,11 @@ nav.bourbon {
   }
 
   h1 {
-    color: rgba(#fff, .6);
+    color: rgba(#fff, 0.6);
     float: right;
     font-size: 1em;
 
-    @include media(max-width em(900)){
+    @include media(max-width em(900)) {
       display: none;
     };
 

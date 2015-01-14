@@ -5,19 +5,16 @@ section.inner-content {
 }
 
 .refills-menu-anchor {
-  display: inline-block;
-  @include transition (all 0.2s ease-in-out);
-  cursor: pointer;
-  border: 1px solid darken(desaturate(#93e9be, 50), 15);;
-  height: 50px;
-  width: 50px;
-  padding: .7em 1em;
+  @include position(fixed, 4.5em null null 1em);
+  @include size(50px);
+  border: 1px solid darken(desaturate(#93e9be, 50), 15%);
   border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
   font-size: 1em;
+  padding: 0.7em 1em;
   margin-bottom: 1.5em;
-  position: fixed;
-  top: 4.5em;
-  left: 1em;
+  transition: all 0.2s ease-in-out;
   z-index: 9999;
 
   &.fixedsticky-on {
@@ -29,8 +26,7 @@ section.inner-content {
   }
 
   img {
-    height: 26px;
-    width: 30px;
+    @include size(30px 26px);
     max-width: 100%;
   }
 }
@@ -44,9 +40,9 @@ section.inner-content {
 }
 
 .refills-menu-screen {
-  @include position(fixed, 0px 0px 0px 0px);
+  @include position(fixed, 0 0 0 0);
   @include transition;
-  background: teal;
+  background-color: teal;
   opacity: 0;
   visibility: hidden;
   z-index: 999998;
@@ -57,24 +53,21 @@ section.inner-content {
   }
 }
 
-.er_toc_title {
-  display: none;
-}
-
+.er_toc_title,
 .er_toc_top {
   display: none;
 }
 
 .er_toc {
   $base-line-height: 1.5em !default;
-  @include position(fixed, 0px auto 0px 0px);
+  @include position(fixed, 0 auto 0 0);
   @include size(220px 100%);
   @include transform(translateX(-220px));
-  @include transition(all 0.2s linear);
-  overflow-y: scroll;
+  background-color: black;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
-  background: black;
+  overflow-y: scroll;
+  transition: all 0.2s linear;
   z-index: 999999;
 
   ul {
@@ -85,9 +78,9 @@ section.inner-content {
   ul li {
     a {
       color: darken(#fff, 15%);
+      font-size: 1em;
       font-weight: 300;
       line-height: $base-line-height;
-      font-size: 1em;
       text-decoration: none;
 
       &:focus,
@@ -99,8 +92,8 @@ section.inner-content {
   }
 
   ul ul {
-    margin-top: .5em;
     margin-bottom: 1em;
+    margin-top: 0.5em;
     padding: 0;
   }
 
