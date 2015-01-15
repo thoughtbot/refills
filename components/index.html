@@ -229,13 +229,14 @@
     <section id="badges" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Badges</h6></div>
-        <div class="refill-centering"><div class="badges">
-	<span class="badge">4</span>
-	<span class="badge dark">4</span>
-	<span class="badge error">4</span>
-	<span class="badge notice">4</span>
-	<span class="badge success">4</span>
-</div></div>
+        <div class="refill-centering"><div>
+  <span class="badge">4</span>
+  <span class="badge-alert">4</span>
+  <span class="badge-error">4</span>
+  <span class="badge-notice">4</span>
+  <span class="badge-success">4</span>
+</div>
+</div>
       </div>
       <div class="refill-snippet"><div class="refill-control">
   <a href="#" class="js-show-code">Show Code</a>
@@ -246,70 +247,55 @@
   <tr>
     <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class=&quot;badges&quot;&gt;
-	&lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge dark&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge error&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge notice&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge success&quot;&gt;4&lt;/span&gt;
-&lt;/div&gt;</code></pre>
+  <pre><code class="language-markup">&lt;div&gt;
+  &lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
+  &lt;span class=&quot;badge-alert&quot;&gt;4&lt;/span&gt;
+  &lt;span class=&quot;badge-error&quot;&gt;4&lt;/span&gt;
+  &lt;span class=&quot;badge-notice&quot;&gt;4&lt;/span&gt;
+  &lt;span class=&quot;badge-success&quot;&gt;4&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
 </td>
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.badges {  
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-color: gainsboro !default;
-  $base-font-size: 1em !default;
-  $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  $medium-gray: #999 !default;
-  //////////////////////////////////////////////////////////////////////////////////
+  <pre><code class="language-scss">$badge-font-size: 0.75em !default;
+$medium-gray: #999 !default;
+$alert-color: #fff6bf !default;
+$error-color: #fbe3e4 !default;
+$notice-color: #e5edf8 !default;
+$success-color: #e6efc2 !default;
 
-  $badge-background: $medium-gray;
-  $badge-dark-color: $dark-gray;
-  $badge-error-color: #FBE3E4;
-  $badge-notice-color: lighten($base-accent-color, 40%);
-  $badge-success-color: #E6EFC2;
-  $badge-font-color: #fff;
-  $badge-font-size: $base-font-size * 0.75;
-
-  display: block;
-  margin-bottom: $base-line-height;
-
-  .badge {
-    background: $badge-background;
-    border-radius: 2em;
-    color: $badge-font-color;
-    display: inline-block;
-    font-size: $badge-font-size;
-    font-weight: 600;
-    line-height: 1em;
-    padding: 0.25em 1em;
-    text-align: center;
-
-    &amp;.dark {
-      background: $badge-dark-color;
-    }
-
-    &amp;.error {
-      background: $badge-error-color;
-      color: darken($badge-error-color, 60%);
-    }
-
-    &amp;.notice {
-      background: $badge-notice-color;
-      color: darken($badge-notice-color, 60%);
-    }
-
-    &amp;.success {
-      background: $badge-success-color;
-      color: darken($badge-success-color, 60%);
-    }
-  }
+@mixin badge($color: $medium-gray) {
+  background-color: $color;
+  border-radius: $badge-font-size * 5;
+  color: darken($color, 60%);
+  display: inline-block;
+  font-size: $badge-font-size;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.4em 1.2em;
 }
 
+.badge {
+  @include badge;
+}
+
+.badge-alert {
+  @include badge($alert-color);
+}
+
+.badge-error {
+  @include badge($error-color);
+}
+
+.badge-notice {
+  @include badge($notice-color);
+}
+
+.badge-success {
+  @include badge($success-color);
+}
 </code></pre>
 </td>
 
@@ -1100,27 +1086,23 @@
 
 <td class="snippet">
   <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">//////////////////////////////////////////////////////////////////////////////////
+  <pre><code class="language-scss">$base-spacing: 1.5em !default;
 $alert-color: #fff6bf !default;
 $error-color: #fbe3e4 !default;
 $notice-color: #e5edf8 !default;
 $success-color: #e6efc2 !default;
-$base-spacing: 1.5em !default;
-//////////////////////////////////////////////////////////////////////////////////
 
 @mixin flash($color) {
   background-color: $color;
   color: darken($color, 60%);
   display: block;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: $base-spacing / 2;
   padding: $base-spacing / 2;
   text-align: center;
 
   a {
-    border-bottom: 1px solid transparentize(darken($color, 70%), 0.7);
     color: darken($color, 70%);
-    text-decoration: none;
 
     &amp;:focus,
     &amp;:hover {
@@ -2250,7 +2232,7 @@ function parallax(){
   @include transition(all 0.25s linear);
   background: $sliding-menu-background;
   z-index: 999999;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
   li a {
