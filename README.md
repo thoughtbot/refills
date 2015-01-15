@@ -53,6 +53,12 @@ Alternative to copy-pasting manually, we also have a Refills gem that allows you
   rails generate refills:import SNIPPET
   ```
 
+  If you want to generate coffeescript instead of javascript, simply add `--coffee`
+
+  ```bash
+  rails generate refills:import SNIPPET --coffee
+  ```
+
   This copies the snippet’s partial to `app/views/refills`, the stylesheet to `app/assets/stylesheets/refills` and the JavaScript to `app/assets/javascripts/refills`
 
 ## Miscellaneous

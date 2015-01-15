@@ -5,6 +5,7 @@ module Refills
     desc 'Copy refills'
     source_root File.expand_path("../../../source", __FILE__)
     argument :snippet, type: :string, required: true
+    class_option :coffee, type: :boolean, default: false
 
     def copy_html
       copy_file_if_exists(
@@ -22,7 +23,7 @@ module Refills
 
     def copy_javascripts
       copy_file_if_exists(
-        File.join('javascripts', 'refills', javascript_name),
+        javascript_path,
         File.join('app', 'assets', 'javascripts', 'refills', javascript_name),
       )
     end
@@ -44,7 +45,36 @@ module Refills
     end
 
     def javascript_name
-      "#{snippet.underscore}.js"
+      "#{snippet.underscore}.#{javascript_extension}"
+    end
+
+    def javascript_extension
+      if coffee?
+        "coffee"
+      else
+        "js"
+      end
+    end
+
+    def javascript_path
+      if coffee?
+        File.join(
+          "javascripts",
+          "refills",
+          "coffeescript",
+          javascript_name
+        )
+      else
+        File.join(
+          "javascripts",
+          "refills",
+          javascript_name
+        )
+      end
+    end
+
+    def coffee?
+      options[:coffee]
     end
   end
 end
