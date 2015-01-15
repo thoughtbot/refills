@@ -11,7 +11,7 @@
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
+
   h1 {
     margin: 0;
   }
@@ -40,7 +40,7 @@
     max-width: $modal-trigger-image-width;
   }
 
-  input[type="checkbox"] {
+  .modal-state {
     display: none;
   }
 
