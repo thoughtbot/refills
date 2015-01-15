@@ -5,3 +5,4 @@ build
 Gemfile.lock
 pkg
 tmp/
+node_modules/
