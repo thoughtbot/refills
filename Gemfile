@@ -10,6 +10,6 @@ gem 'sass', '~> 3.4.0'
 
 group :test do
   gem 'rspec'
-  gem "generator_spec", github: "stevehodgkiss/generator_spec"
+  gem "generator_spec", github: "stevehodgkiss/generator_spec", tag: "0.9.3"
   gem 'railties'
 end
