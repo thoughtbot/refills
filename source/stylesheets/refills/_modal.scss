@@ -45,8 +45,7 @@
   }
 
   .modal-trigger {
-    @include button(flat, $base-accent-color);
-    padding: 0.8em 1em;
+    font-weight: 800;
   }
 
   .modal-open {

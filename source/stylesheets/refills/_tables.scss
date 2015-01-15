@@ -95,7 +95,6 @@
       }
 
       button {
-        @include button(flat, $base-accent-color);
         display: inline-block;
         font-size: 0.7em;
         line-height: $base-line-height;
