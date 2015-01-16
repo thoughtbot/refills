@@ -1,24 +1,8 @@
 .footer {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-spacing: 1.5em !default;
   $base-accent-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  
-  ul {
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
-    line-height: 1.5em;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $footer-background: desaturate(darken($base-accent-color, 20%), 30%);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
@@ -48,6 +32,7 @@
 
   ul {
     margin-bottom: $base-spacing * 2;
+    padding: 0;
 
     @include media($medium-screen) {
       @include span-columns(3);
@@ -57,6 +42,8 @@
   }
 
   li {
+    line-height: 1.5em;
+    list-style: none;
     text-align: center;
 
     @include media($medium-screen) {
@@ -66,6 +53,7 @@
 
   li a {
     color: $footer-link-color;
+    text-decoration: none;
 
     &:focus,
     &:hover {

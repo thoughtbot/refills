@@ -1,5 +1,4 @@
 article.type-system-rounded {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
@@ -9,6 +8,11 @@ article.type-system-rounded {
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
+  $sans-serif: 'Nunito', sans-serif;
+  $sans-serif-2: 'Varela Round', sans-serif;
+
+  @include clearfix;
+  text-align: left;
   
   h1, h2, h3, p {
     margin: 0;
@@ -31,13 +35,6 @@ article.type-system-rounded {
     color: $base-link-color;
     text-decoration: none;
   }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $sans-serif: 'Nunito', sans-serif;
-  $sans-serif-2: 'Varela Round', sans-serif;
-
-  @include clearfix;
-  text-align: left;
 
   .type {
     border-bottom: 1px solid;

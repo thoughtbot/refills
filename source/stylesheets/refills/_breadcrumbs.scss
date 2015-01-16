@@ -1,5 +1,4 @@
 .breadcrumb {   
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
@@ -9,8 +8,6 @@
   $medium-gray: #999 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
   $breadcrumb-border-color: $base-border-color;
   $breadcrumb-border: 1px solid $breadcrumb-border-color;
   $breadcrumb-height: $base-spacing * 1.5;

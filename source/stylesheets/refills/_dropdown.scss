@@ -1,5 +1,4 @@
 .dropdown {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -7,19 +6,6 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
-  line-height: $base-line-height;
-
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $dropdown-color: $base-font-color;
   $dropdown-description-color: lighten($dropdown-color, 40%);
   $dropdown-border: 1px solid silver;
@@ -30,6 +16,8 @@
   $dropdown-padding: 1em;
   $dropdown-distance-from-menu: 50px;
   $dropdown-arrow-top-distance: 0;
+
+  line-height: $base-line-height;
 
   .dropdown-container {
     display: inline-block;
@@ -100,7 +88,9 @@
     color: $dropdown-color;
     cursor: pointer;
     display: none;
+    margin: 0;
     overflow: show;
+    padding: 0;
     position: absolute;
     right: 0;
     top: $dropdown-distance-from-menu;
@@ -121,6 +111,7 @@
   .dropdown-menu li {
     border-bottom: $dropdown-inner-border;
     color: $dropdown-color; 
+    list-style: none;
     padding: $dropdown-padding / 2;
   }
 

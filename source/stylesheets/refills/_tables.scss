@@ -1,5 +1,4 @@
 .tables {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -11,14 +10,6 @@
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
-  width: 100%;
-
-  th {
-    text-align: left;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
   $table-background: lighten($table-border-color, 12%);
@@ -33,6 +24,7 @@
   border-radius: $base-border-radius;
   border-spacing: 0;
   border: $table-border;
+  width: 100%;
 
   tbody {
     background-color: $table-background;
@@ -74,6 +66,7 @@
       border-bottom: 0px;
       border-left: 1px solid $table-border-color;
       padding: $table-padding;
+      text-align: left;
 
       &:first-child {
         border-left: none;

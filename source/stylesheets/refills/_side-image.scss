@@ -1,18 +1,10 @@
 .side-image {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
   $base-accent-color: #477DCA !default;
   $base-link-color: $base-accent-color !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $side-image-background-top: #B5EBEB;
   $side-image-background-bottom: #5DAC5D;
   $side-image-content-background: #F9F9F9;
@@ -66,7 +58,8 @@
     }
 
     p {
-      color: gray;
+      line-height: $base-line-height;
+      color: $base-font-color;
       margin-bottom: 3em;
     }
 

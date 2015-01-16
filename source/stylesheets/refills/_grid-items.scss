@@ -3,21 +3,10 @@
 }
 
 .grid-items {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-accent-color: #477DCA !default;
   $base-background-color: white !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  
-  p {
-    line-height: 1.5em;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $grid-items-background: $base-background-color;
   $grid-item-background: desaturate($base-accent-color, 30%);
   $grid-item-colors: 
@@ -50,6 +39,7 @@
     outline: none;
     padding: 2em;
     text-align: center;
+    text-decoration: none;
     width: 100%;
 
     @include media($large-screen) {
@@ -87,6 +77,7 @@
     }
 
   .grid-item p {
+      line-height: 1.5em;
       margin: auto;
       color: transparentize($grid-item-color, 0.3);
       
