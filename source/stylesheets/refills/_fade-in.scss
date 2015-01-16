@@ -1,5 +1,4 @@
 .fade-in-element {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
@@ -8,24 +7,21 @@
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
   
-  line-height: $base-line-height;
-
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   @include clearfix;
   background: $base-background-color;
   border-radius: $base-border-radius;
   border: 1px solid silver;
   box-shadow: 0 2px 2px transparentize(black, 0.8);
   margin-bottom: 4em;
+  line-height: $base-line-height;
   padding: $base-spacing;
   text-align: center;
   width: 100%;
 
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
 }
 
 .js-fade-element-hide {

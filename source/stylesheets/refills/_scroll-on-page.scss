@@ -1,5 +1,4 @@
 .scroll-on-page {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
   $base-accent-color: #477DCA !default;
@@ -7,19 +6,13 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
+
+  display: inline-block;
 
   a {
     color: $base-link-color;
     text-decoration: none;
   }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  display: inline-block;
 
   aside {
     @include media($large-screen) {
@@ -42,6 +35,11 @@
   article {
     h4 {
       margin: 0 0 0.5em 0;
+    }
+
+    p {
+      color: $base-font-color;
+      line-height: $base-line-height;
     }
 
     section p:last-of-type {

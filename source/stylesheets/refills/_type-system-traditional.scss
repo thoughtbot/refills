@@ -1,5 +1,4 @@
 article.type-system-traditional {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
@@ -9,6 +8,11 @@ article.type-system-traditional {
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
+  $sans-serif: 'Noto Sans', sans-serif;
+  $serif: 'Radley', serif;
+
+  @include clearfix;
+  text-align: left;
   
   h1, h2, h3, p {
     margin: 0;
@@ -31,13 +35,6 @@ article.type-system-traditional {
     color: $base-link-color;
     text-decoration: none;
   }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $sans-serif: 'Noto Sans', sans-serif;
-  $serif: 'Radley', serif;
-
-  @include clearfix;
-  text-align: left;
 
   .type {
     border-bottom: 2px solid;

@@ -1,5 +1,4 @@
 .intro-text {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
   $base-accent-color: #477DCA !default;
@@ -7,18 +6,6 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-
-  a {
-    text-decoration: none;
-    color: $base-link-color;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $intro-text-width: 60%;
 
   margin-bottom: 5em;
@@ -57,6 +44,8 @@
   }
 
   p {
+    color: $base-font-color;
+    line-height: $base-line-height;
     margin: auto;
 
     @include media($large-screen) {
@@ -64,8 +53,10 @@
     }
 
     a {
+      color: $base-link-color;
       font-size: 0.8em;
       font-weight: 400;
+      text-decoration: none;
       text-transform: uppercase;
 
       span {
