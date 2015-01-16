@@ -37,9 +37,9 @@
   p {
     color: $progress-color;    
     font-weight: 800;
+    line-height: $base-line-height;
     margin: 0;
     padding: .1em .5em;
-    line-height: $base-line-height;
     text-shadow: 0 0 1px black;
   }
 }
