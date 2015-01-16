@@ -1,5 +1,4 @@
 .search-tools {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -9,7 +8,15 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
+  $search-tools-border-color: $base-border-color;
+  $search-tools-background: lighten($search-tools-border-color, 10%);
+
+  @include clearfix;
+  background: $search-tools-background;
+  border-radius: $base-border-radius;
+  border: 1px solid $search-tools-border-color;
+  padding: $gutter / 2;
+
   ol {
     margin: 0;
     padding: 0;
@@ -26,16 +33,6 @@
     font-weight: bold;
     margin-bottom: $base-spacing / 4;
   }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $search-tools-border-color: $base-border-color;
-  $search-tools-background: lighten($search-tools-border-color, 10%);
-
-  @include clearfix;
-  background: $search-tools-background;
-  border-radius: $base-border-radius;
-  border: 1px solid $search-tools-border-color;
-  padding: $gutter / 2;
 
   .filter {
     margin-bottom: 1em;

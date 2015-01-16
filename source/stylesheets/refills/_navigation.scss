@@ -1,16 +1,9 @@
 header.navigation {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
-  
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;
   $navigation-color: transparentize(white, 0.3);
@@ -130,6 +123,7 @@ header.navigation {
       color: $navigation-color;
       display: inline-block;
       font-weight: 400;
+      text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
         padding-right: 1em;

@@ -25,27 +25,10 @@
 // }
 
 .footer-2 {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-spacing: 1.5em !default;
   $base-accent-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  
-  ul {
-    margin: 0;
-    padding: 0;
-    line-height: 1.5em;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $footer-background: desaturate(darken($base-accent-color, 20%), 30%);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
@@ -55,6 +38,9 @@
   padding: $base-spacing;
   width: 100%;
   display: inline-block;
+
+  a {
+  }
 
   .footer-logo {
     margin-right: 1em;
@@ -71,7 +57,9 @@
   } 
 
   ul {
-    margin-bottom: 1em;
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 0;
     
     @include media($large-screen) {
       float: left;
@@ -83,6 +71,7 @@
 
   ul li {
     font-weight: 800;
+    list-style: none;
     padding-right: 1em;
 
     @include media($large-screen) {
@@ -93,6 +82,7 @@
 
   ul li a {
     color: $footer-link-color;
+    text-decoration: none;
 
     &:focus,
     &:hover {
@@ -111,7 +101,7 @@
     }
 
     ul.footer-social {
-      margin-top: 1em;
+      margin: 1em 0 0 0;
 
       @include media($large-screen) {
         float: right;
@@ -122,6 +112,7 @@
         font-size: 1em;
         float: left;
         line-height: 0;
+        margin: 0;
         padding-right: 0.7em;
 
         &:last-child {

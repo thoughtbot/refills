@@ -1,22 +1,6 @@
 .sliding-menu-content {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
-
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $sliding-menu-border-color: $dark-gray;
   $sliding-menu-background: lighten($sliding-menu-border-color, 5%);
   $sliding-menu-color: #fff;
@@ -34,12 +18,22 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
   li a {
     border-bottom: $sliding-menu-border;
     color: $sliding-menu-color;
     display: block;
     font-weight: bold;
     padding: 1em;
+    text-decoration: none;
 
     &:focus {
       background-color: $sliding-menu-background-focus;

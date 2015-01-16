@@ -1,16 +1,9 @@
 .progress-bar-indication {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $base-accent-color: #477DCA !default;
-
-  p {
-    line-height: $base-line-height;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $progress-border-color: $base-border-color;
   $progress-border: 1px solid $progress-border-color;
   $progress-meter-border-color: $base-accent-color;
@@ -46,6 +39,7 @@
     font-weight: 800;
     margin: 0;
     padding: .1em .5em;
+    line-height: $base-line-height;
     text-shadow: 0 0 1px black;
   }
 }

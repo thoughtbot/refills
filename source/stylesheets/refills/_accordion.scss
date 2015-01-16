@@ -1,33 +1,9 @@
 .accordion {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  
-  margin: 0;
-  padding: 0;
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $accordion-menu-border-color: $base-border-color;
   $accordion-menu-color: $base-font-color;
   $accordion-menu-border: 1px solid $accordion-menu-border-color;
@@ -40,15 +16,23 @@
   
   background-color: $accordion-menu-background;
   border: $accordion-menu-border;
-  margin-bottom: $base-spacing;
+  margin: 0 0 $base-spacing 0;
+  padding: 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
 
   li {
     border-bottom: $accordion-menu-border;
+    list-style: none;
 
     > a {
       color: $accordion-menu-color;
       display: block;
       padding: $accordion-menu-list-padding;
+      text-decoration: none;
     }
 
     &:last-child {

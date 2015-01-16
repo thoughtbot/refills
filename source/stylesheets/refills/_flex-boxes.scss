@@ -1,16 +1,9 @@
 .flex-boxes {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $base-font-color: $dark-gray !default;
-  
-  a {
-    text-decoration: none;
-  }  
-  //////////////////////////////////////////////////////////////////////////////////
-
   $flex-box-border-color: $light-gray;
   $flex-box-border: 1px solid $flex-box-border-color;
   $flex-box-background: lighten($light-gray, 10%);
@@ -43,6 +36,7 @@
     display: block;
     margin: $flex-box-gutter;
     padding: 2em 2em 3em 2em;
+    text-decoration: none;
 
     @for $i from 1 to 7 { // assign colors from $flex-box-top-colors list
       &:nth-child(#{$i}) {

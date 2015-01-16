@@ -1,19 +1,7 @@
 .device-background {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-accent-color: #477DCA !default;
   $large-screen: em(860) !default;
-
-  p {
-    line-height: 1.5em;
-  }
-
-  h4 {
-    font-size: 1.5em;
-    margin: 0;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $device-padding-vertical: 5em;
   $device-padding-horizontal: 0.4em;
   $device-screen-width: 14em;
@@ -45,11 +33,13 @@
 
     h4 {
       border-bottom: 1px solid transparentize($device-text-color, 0.7);
-      margin-bottom: 0.5em;
+      font-size: 1.5em;
+      margin-bottom: 0 0 0.5em 0;
       padding-bottom: 0.5em;
     }
 
     p {
+      line-height: 1.5em;
       margin-bottom: 1.5em;
     }
 
