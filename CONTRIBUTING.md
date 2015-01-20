@@ -48,6 +48,14 @@ that variables should be interdependent to enable quick restyling.
 }
 ```
 
+## JavaScript
+
+If you change any JavaScript, please run `rake coffee` afterwards to
+generate the corresponding CoffeScript.
+
+**NOTE** - do not manually change any of the CoffeeScript files, they are
+automatically generated with `js2coffee`.
+
 ## Build
 
 If you rename/remove/add any files to the repository, please make sure that the
