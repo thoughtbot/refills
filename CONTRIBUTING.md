@@ -47,3 +47,11 @@ that variables should be interdependent to enable quick restyling.
   …
 }
 ```
+
+## Build
+
+If you rename/remove/add any files to the repository, please make sure that the
+build reflects that change. Add your changed file to the `SNIPPETS` constant in
+the [test][spec_file] to have it tested.
+
+[spec_file]: https://github.com/thoughtbot/refills/blob/master/spec/refills/import_generator_spec.rb
