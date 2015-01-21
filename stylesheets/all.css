@@ -3317,6 +3317,106 @@ header.navigation {
     display: block;
     padding-bottom: 0; }
 
+/* line 3, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_animate.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both; }
+  /* line 7, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_animate.scss */
+  .animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+  /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_animate.scss */
+  .animated.alternate {
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    animation-direction: alternate; }
+  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_animate.scss */
+  .animated.iteration {
+    -webkit-animation-iteration-count: 2;
+    -moz-animation-iteration-count: 2;
+    animation-iteration-count: 2; }
+
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  100% {
+    opacity: 0; } }
+@keyframes zoomOut {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  100% {
+    opacity: 0; } }
+/* line 55, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_animate.scss */
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut; }
+
+/* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_animate.scss */
+.animate-target {
+  height: 6em;
+  width: 6em;
+  -webkit-transform-style: preserve-3d;
+  border-radius: 50%;
+  border: 22px solid #e2e2e3;
+  margin: 0 auto 3em;
+  text-align: center; }
+
+/* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_animate.scss */
+button {
+  background-color: #477dca;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+  display: block;
+  margin: auto;
+  outline: none;
+  padding: 0.8em 1em;
+  text-align: center; }
+  /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+  button:hover:not(:disabled) {
+    background-color: #578ad4;
+    cursor: pointer; }
+  /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+  button:active:not(:disabled), button:focus:not(:disabled) {
+    background-color: #3c71bb;
+    cursor: pointer; }
+  /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
+
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_animate-info.scss */
+.animate-info {
+  color: #909090;
+  display: block;
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 3em auto 0;
+  max-width: 23em; }
+  /* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_animate-info.scss */
+  .animate-info a {
+    color: #f55481;
+    text-decoration: none; }
+
 /* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_badges.scss */
 .badge {
   background-color: #999;
@@ -3407,7 +3507,7 @@ header.navigation {
     /* line 57, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
     .breadcrumb a:focus, .breadcrumb a:hover {
       background-color: white;
-      color: #477DCA; }
+      color: #477dca; }
     /* line 63, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_breadcrumbs.scss */
     .breadcrumb a:after, .breadcrumb a:before {
       position: absolute;
@@ -3500,7 +3600,7 @@ header.navigation {
         border-top-right-radius: 3px; } }
   /* line 89, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_button-group.scss */
   .button-group label input:checked + .button-group-item {
-    background: #477DCA;
+    background: #477dca;
     border: 1px solid #2c5999;
     box-shadow: inset 0 1px 2px #3264ac;
     color: white; }
@@ -3631,7 +3731,7 @@ header.navigation {
     line-height: 1.5em; }
   /* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_expander.scss */
   .expander a {
-    color: #477DCA;
+    color: #477dca;
     text-decoration: none; }
   /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_expander.scss */
   .expander .expander-trigger {
@@ -3878,11 +3978,11 @@ header.navigation {
   display: block;
   max-width: 300px; }
 /* line 43, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-.modal input[type="checkbox"] {
+.modal .modal-state {
   display: none; }
 /* line 47, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
 .modal .modal-trigger {
-  background-color: #477DCA;
+  background-color: #477dca;
   border-radius: 3px;
   border: none;
   color: white;
@@ -4076,7 +4176,7 @@ header.navigation {
       /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_pagination.scss */
       .pagination ul li a:hover, .pagination ul li a:focus {
         background: white;
-        color: #477DCA; }
+        color: #477dca; }
       /* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_pagination.scss */
       .pagination ul li a:active {
         background: #f6f6f6; }
@@ -4126,7 +4226,7 @@ header.navigation {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #477DCA;
+    background-color: #477dca;
     background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%);
     background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%);
     background-size: 40px 40px;
@@ -4178,7 +4278,7 @@ header.navigation {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #477DCA;
+    background-color: #477dca;
     background-repeat: repeat-x;
     background-size: 40px 40px;
     border-bottom-right-radius: 0;
@@ -4225,7 +4325,7 @@ form.search-bar {
     width: 100%; }
   /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-bar.scss */
   form.search-bar button[type=submit] {
-    background-color: #477DCA;
+    background-color: #477dca;
     border-radius: 3px;
     border: none;
     color: white;
@@ -4303,7 +4403,7 @@ form.search-bar {
       background-color: #4d4d4d; }
     /* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
     .sliding-menu-content li a:hover {
-      background-color: #477DCA;
+      background-color: #477dca;
       color: #fff; }
   /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
   .sliding-menu-content.is-visible {
@@ -4431,7 +4531,7 @@ form.search-bar {
         z-index: 2; }
     /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
     .label-switch input[type="checkbox"]:checked + .checkbox {
-      background: #477DCA; }
+      background: #477dca; }
       /* line 69, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
       .label-switch input[type="checkbox"]:checked + .checkbox:before {
         -webkit-transform: scale(0);
@@ -5949,7 +6049,7 @@ article.type-system-geometric {
     line-height: 1.5em; }
   /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-geometric.scss */
   article.type-system-geometric a {
-    color: #477DCA;
+    color: #477dca;
     text-decoration: none; }
   /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   article.type-system-geometric::after {
@@ -6061,7 +6161,7 @@ article.type-system-rounded {
     line-height: 1.5em; }
   /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-rounded.scss */
   article.type-system-rounded a {
-    color: #477DCA;
+    color: #477dca;
     text-decoration: none; }
   /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   article.type-system-rounded::after {
@@ -6175,7 +6275,7 @@ article.type-system-sans {
     line-height: 1.5em; }
   /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-sans.scss */
   article.type-system-sans a {
-    color: #477DCA;
+    color: #477dca;
     text-decoration: none; }
   /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   article.type-system-sans::after {
@@ -6293,7 +6393,7 @@ article.type-system-serif {
     line-height: 1.5em; }
   /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-serif.scss */
   article.type-system-serif a {
-    color: #477DCA;
+    color: #477dca;
     text-decoration: none; }
   /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   article.type-system-serif::after {
@@ -6411,7 +6511,7 @@ article.type-system-slab {
     line-height: 1.5em; }
   /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-slab.scss */
   article.type-system-slab a {
-    color: #477DCA;
+    color: #477dca;
     text-decoration: none; }
   /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   article.type-system-slab::after {
@@ -6526,7 +6626,7 @@ article.type-system-traditional {
     line-height: 1.5em; }
   /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_type-system-traditional.scss */
   article.type-system-traditional a {
-    color: #477DCA;
+    color: #477dca;
     text-decoration: none; }
   /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   article.type-system-traditional::after {

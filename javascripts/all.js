@@ -1472,6 +1472,16 @@ $(document).ready(function () {
     }
   });
 });
+$(function() {
+  var animationClasses = 'animated alternate iteration zoomOut';
+  var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+  $('.animate-trigger').on('click',function() {
+    $('.animate-target').addClass(animationClasses).one(animationEnd,function() {
+      $(this).removeClass(animationClasses);
+    });
+  });
+});
 $(document).ready(function() {
   var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
   $('#js-centered-navigation-menu').removeClass("show");

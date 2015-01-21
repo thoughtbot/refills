@@ -226,6 +226,141 @@
 </div>
     </section>
 
+    <section id="animate" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Animate</h6></div>
+        <div class="refill-centering">
+          <div>
+  <div class="animate-target"></div>
+  <button class="animate-trigger">Press to Animate.css</button>
+</div>
+
+          <div class="animate-info">
+  This component is based on Dan Eden’s Animate.css. It sets up the JavaScript for triggering an animation for another element. 
+  Check out the <a href="http://daneden.github.io/animate.css/">Animate.css website</a> to view the animations in action and the <a href="https://github.com/daneden/animate.css/blob/master/animate.css">GitHub page</a> for the CSS.
+</div>
+
+        </div>
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-markup">&lt;div&gt;
+  &lt;div class=&quot;animate-target&quot;&gt;&lt;/div&gt;
+  &lt;button class=&quot;animate-trigger&quot;&gt;Press to Animate.css&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-scss">$base-accent-color: #477dca !default;
+
+.animated {
+  @include animation-duration(1s);
+  @include animation-fill-mode(both);
+
+  &amp;.infinite {
+    @include animation-iteration-count(infinite);
+  }
+
+  &amp;.alternate {
+    @include animation-direction(alternate);
+  }
+
+  &amp;.iteration {
+    @include animation-iteration-count(2);
+  }
+}
+
+// Tweak the keyframes below. Or swap them with another animation pattern at 
+// https://github.com/daneden/animate.css/tree/master/source
+
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+          animation-name: zoomOut;
+}
+
+/////////////////////////////////////////////////////////////
+
+.animate-target {
+  @include size(6em);
+  -webkit-transform-style: preserve-3d;
+  border-radius: 50%;
+  border: 22px solid #e2e2e3;
+  margin: 0 auto 3em;
+  text-align: center;
+}
+
+button {
+  @include button(flat, $base-accent-color);
+  display: block;
+  margin: auto;
+  outline: none;
+  padding: 0.8em 1em;
+  text-align: center;
+}
+</code></pre>
+</td>
+
+<td class="snippet">
+  <a href="#" class="copy-source">Copy</a>
+  <pre><code class="language-javascript">$(function() {
+  var animationClasses = 'animated alternate iteration zoomOut';
+  var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+  $('.animate-trigger').on('click',function() {
+    $('.animate-target').addClass(animationClasses).one(animationEnd,function() {
+      $(this).removeClass(animationClasses);
+    });
+  });
+});
+</code></pre>
+</td>
+
+  </tr>
+</table>
+</div>
+    </section>
+
     <section id="badges" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Badges</h6></div>
@@ -1400,7 +1535,7 @@ $success-color: #e6efc2 !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
+
   h1 {
     margin: 0;
   }
@@ -1429,7 +1564,7 @@ $success-color: #e6efc2 !default;
     max-width: $modal-trigger-image-width;
   }
 
-  input[type=&quot;checkbox&quot;] {
+  .modal-state {
     display: none;
   }
 
