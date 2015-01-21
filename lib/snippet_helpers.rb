@@ -45,6 +45,22 @@ module SnippetHelpers
     end
   end
 
+  class CoffeeScriptSnippet < Snippet
+    def path_segments
+      [
+        SOURCE_DIR,
+        "javascripts",
+        "refills",
+        "coffeescript",
+        "#{name.underscore}.coffee"
+      ]
+    end
+
+    def language
+      :javascript
+    end
+  end
+
   def code_for(snippet_name)
     partial 'code', locals: { snippets: snippets_for(snippet_name) }
   end
@@ -52,17 +68,21 @@ module SnippetHelpers
   private
 
   def snippets_for(name)
-    [HtmlSnippet, ScssSnippet, JavaScriptSnippet].map do |snippet_factory|
-      snippet = snippet_factory.new(name)
-      render_snippet snippet.path, snippet.language
+    [
+      HtmlSnippet,
+      ScssSnippet,
+      JavaScriptSnippet,
+      CoffeeScriptSnippet,
+    ].map do |snippet_factory|
+      render_snippet snippet_factory.new(name)
     end.join("\n")
   end
 
-  def render_snippet(path, language)
-    if File.exists?(path)
+  def render_snippet(snippet)
+    if File.exists?(snippet.path)
       partial 'snippet', locals: {
-        snippet: File.read(path),
-        language: language,
+        snippet: File.read(snippet.path),
+        language: snippet.language
       }
     end
   end

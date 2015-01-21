@@ -398,6 +398,10 @@ pre[class*="language-"] {
   td {
     border-bottom: 0;
   }
+
+  .snippet:nth-child(4n) {
+    display: none;
+  }
 }
 
 .snippet {

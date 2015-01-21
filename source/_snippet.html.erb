@@ -1,4 +1,9 @@
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <% if language == :javascript -%>
+    <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+    <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  <% else -%>
+    <a href="javascript:void(0)" class="copy-source">Copy</a>
+  <% end -%>
   <pre><code class="language-<%= language %>"><%== snippet %></code></pre>
 </td>
