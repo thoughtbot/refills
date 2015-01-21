@@ -42,15 +42,13 @@
   $(document).ready( function() {
     client = new ZeroClipboard($('.copy-source'), {moviePath: '/images/ZeroClipboard.swf'})
     client.on('dataRequested', function(client, args) {
-      var code;
       if ($(this).hasClass("copy-coffee")) {
-        var row = $(this).parent().parent();
-        var coffee = row.find("td.snippet").last();
-
-        code = coffee.children("pre").text();
+        var cell = $(this).parents("tr").find("td.snippet").last();
       } else {
-        code = $(this).siblings("pre").text();
+        var cell = $(this).parents("td.snippet");
       }
+
+      var code = cell.children("pre").text();
       client.setText(code);
     });
   });
