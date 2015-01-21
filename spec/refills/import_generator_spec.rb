@@ -22,7 +22,7 @@ describe Refills::ImportGenerator, type: :generator do
     icon_bullet_points: %w[scss erb],
     image_gradient_dynamic: %w[scss erb],
     intro_text: %w[scss erb],
-    modal: %w[scss erb],
+    modal: %w[scss js erb],
     navigation: %w[scss js erb],
     pagination: %w[scss erb],
     progress_bar: %w[scss erb],

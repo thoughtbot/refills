@@ -49,10 +49,6 @@
     padding: 0.8em 1em;
   }
 
-  .modal-open {
-    overflow: hidden;
-  }
-
   .modal-window { // overlay
     @include transition(opacity 0.25s ease);
     @include position(fixed, 0px 0px 0px 0px);
@@ -161,6 +157,15 @@
   .modal-state:checked + .modal-window .modal-inner {
     top: 0.5em;
   }
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  .modal-closed {
+    overflow: auto;
+  }
+
 }
 
 // Based on code by Kasper Mikiewicz
