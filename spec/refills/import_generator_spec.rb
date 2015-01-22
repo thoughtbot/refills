@@ -4,6 +4,7 @@ describe Refills::ImportGenerator, type: :generator do
   SNIPPETS = {
     accordion: %w[scss js erb],
     accordion_tabs: %w[scss js erb],
+    animate: %w[scss js erb],
     badges: %w[scss erb],
     breadcrumbs: %w[scss erb],
     button_group: %w[scss erb],
