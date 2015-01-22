@@ -75,7 +75,13 @@
   $(document).ready( function() {
     client = new ZeroClipboard($('.copy-source'), {moviePath: '/images/ZeroClipboard.swf'})
     client.on('dataRequested', function(client, args) {
-      code = $(this).siblings('pre').text();
+      if ($(this).hasClass("copy-coffee")) {
+        var cell = $(this).parents("tr").find("td.snippet").last();
+      } else {
+        var cell = $(this).parents("td.snippet");
+      }
+
+      var code = cell.children("pre").text();
       client.setText(code);
     });
   });

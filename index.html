@@ -93,7 +93,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;ul class=&quot;accordion-tabs&quot;&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;
     &lt;a href=&quot;javascript:void(0)&quot; class=&quot;is-active tab-link&quot;&gt;Tab Item&lt;/a&gt;
@@ -124,7 +126,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.accordion-tabs {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -234,7 +238,10 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">$(document).ready(function () {
   $('.accordion-tabs').each(function(index) {
     $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
@@ -254,6 +261,33 @@
     }
   });
 });
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(document).ready -&gt;
+  $(&quot;.accordion-tabs&quot;).each (index) -&gt;
+    $(this).children(&quot;li&quot;).first().children(&quot;a&quot;).addClass(&quot;is-active&quot;).next().addClass(&quot;is-open&quot;).show()
+    return
+
+  $(&quot;.accordion-tabs&quot;).on &quot;click&quot;, &quot;li &gt; a&quot;, (event) -&gt;
+    unless $(this).hasClass(&quot;is-active&quot;)
+      event.preventDefault()
+      accordionTabs = $(this).closest(&quot;.accordion-tabs&quot;)
+      accordionTabs.find(&quot;.is-open&quot;).removeClass(&quot;is-open&quot;).hide()
+      $(this).next().toggleClass(&quot;is-open&quot;).toggle()
+      accordionTabs.find(&quot;.is-active&quot;).removeClass &quot;is-active&quot;
+      $(this).addClass &quot;is-active&quot;
+    else
+      event.preventDefault()
+    return
+
+  return
+
 </code></pre>
 </td>
 
@@ -297,7 +331,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;ul class=&quot;accordion-tabs-minimal&quot;&gt;
   &lt;li class=&quot;tab-header-and-content&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;tab-link is-active&quot;&gt;Tab Item&lt;/a&gt;
@@ -328,7 +364,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.accordion-tabs-minimal {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -407,7 +445,10 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">$(document).ready(function () {
   $('.accordion-tabs-minimal').each(function(index) {
     $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
@@ -430,239 +471,32 @@
 </code></pre>
 </td>
 
-  </tr>
-</table>
-</div>
-    </section>
-
-    <section id="browser" class="refill">
-      <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Browser</h6></div>
-        <div class = "browsers">
-  <div class = "browser">
-    <div class="browser-top-bar">
-      <div class="browser-circle"></div>
-      <div class="browser-circle"></div>
-      <div class="browser-circle"></div>
-    </div>
-  <div class="browser-content"></div>
-  </div>
-  <div class = "browser">
-    <div class="browser-top-bar">
-      <div class="browser-circle"></div>
-      <div class="browser-circle"></div>
-      <div class="browser-circle"></div>
-    </div>
-    <div class="browser-content">
-    </div>
-  </div>
-  <div class = "browser">
-    <div class="browser-top-bar">
-      <div class="browser-circle"></div>
-      <div class="browser-circle"></div>
-      <div class="browser-circle"></div>
-    </div>
-    <div class="browser-content"></div>
-  </div>
-</div>
-
-<div class="cover"></div>
-
-      </div>
-      <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-markup">&lt;div class = &quot;browsers&quot;&gt;
-  &lt;div class = &quot;browser&quot;&gt;
-    &lt;div class=&quot;browser-top-bar&quot;&gt;
-      &lt;div class=&quot;browser-circle&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;browser-circle&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;browser-circle&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;div class=&quot;browser-content&quot;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class = &quot;browser&quot;&gt;
-    &lt;div class=&quot;browser-top-bar&quot;&gt;
-      &lt;div class=&quot;browser-circle&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;browser-circle&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;browser-circle&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;browser-content&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class = &quot;browser&quot;&gt;
-    &lt;div class=&quot;browser-top-bar&quot;&gt;
-      &lt;div class=&quot;browser-circle&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;browser-circle&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;browser-circle&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;browser-content&quot;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;cover&quot;&gt;&lt;/div&gt;
-</code></pre>
-</td>
-
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
-  <pre><code class="language-scss">.browsers {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-radius: 3px !default;
-  $base-background-color: #fff !default;
-  $large-screen: em(860) !default;  
-  //////////////////////////////////////////////////////////////////////////////////
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(document).ready -&gt;
+  $(&quot;.accordion-tabs-minimal&quot;).each (index) -&gt;
+    $(this).children(&quot;li&quot;).first().children(&quot;a&quot;).addClass(&quot;is-active&quot;).next().addClass(&quot;is-open&quot;).show()
+    return
 
-  $browser-top-bar-height: 1.5em;
-  $browser-circle-size: 0.5em; 
-  $browser-circle-margin: ($browser-top-bar-height - $browser-circle-size) / 2;
-  $browser-top-bar-background: lighten(#dfdfdf, 5%);
-  $browser-border: 0px;
-  $browser-background: $base-background-color;
-  $browser-content-background-1: #f0f0f0;
-  $browser-content-background-2: $base-background-color;
-  $browser-content-background-3: #f0f0f0;
+  $(&quot;.accordion-tabs-minimal&quot;).on &quot;click&quot;, &quot;li &gt; a&quot;, (event) -&gt;
+    unless $(this).hasClass(&quot;is-active&quot;)
+      event.preventDefault()
+      accordionTabs = $(this).closest(&quot;.accordion-tabs-minimal&quot;)
+      accordionTabs.find(&quot;.is-open&quot;).removeClass(&quot;is-open&quot;).hide()
+      $(this).next().toggleClass(&quot;is-open&quot;).toggle()
+      accordionTabs.find(&quot;.is-active&quot;).removeClass &quot;is-active&quot;
+      $(this).addClass &quot;is-active&quot;
+    else
+      event.preventDefault()
+    return
 
-  display:inline-block;
-  padding-top: 0;
-  text-align:center;
-  width:100%;
+  return
 
-  @include media($large-screen) {
-    padding-top: 2em;
-  }
-
-  .browser-top-bar {
-    @include linear-gradient($browser-top-bar-background, darken($browser-top-bar-background, 2%));
-    border-top-left-radius: $base-border-radius;
-    border-top-right-radius: $base-border-radius;
-    border: $browser-border;
-    box-shadow: inset 0 1px 0 transparentize(#fff, 0.6);
-    height: $browser-top-bar-height;
-    width: 100%;
-  }
-
-  .browser-circle {
-    @include size($browser-circle-size);
-    border-radius: $browser-circle-size * 2;
-    box-shadow: 0 1px 0px transparentize(#fff, 0.5), inset 0 1px 1px transparentize(#000, 0.8);
-    display: inline-block;
-    margin: $browser-circle-margin 0;
-  }
-
-  .browser-circle:nth-child(1) {
-    background: #ff6f55;
-    margin-left: $browser-circle-margin;
-  }
-
-  .browser-circle:nth-child(2) {
-    background: #f5b01d;
-    margin-left: $browser-circle-margin / 3;
-  }
-
-  .browser-circle:nth-child(3) {
-    background: #51b151;
-    margin-left: $browser-circle-margin / 3;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////////
-
-  .browser {
-    border-bottom: none;
-    border-top-left-radius: $base-border-radius;
-    border-top-right-radius: $base-border-radius;
-    box-shadow: 0 3px 5px transparentize(#000, 0.7);
-    display: inline-block;    
-    text-align: left;
-    width: 20%;
-  }
-
-  .browser:nth-child(1) {
-    background-color: $browser-content-background-1;
-    display: none;
-
-    @include media($large-screen) {
-      display: inline-block;    
-    }
-
-    .browser-content {
-      background: url(https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot1.png);
-      background-color: $browser-content-background-1;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
-
-  .browser:nth-child(2) {
-    @include transform(scale(1));
-    background-color: $browser-content-background-2; 
-    width: 90%;
-    
-    @include media($large-screen) {
-      @include transform(scale(1.2));
-      width: 40%;
-    }
-
-    .browser-content {
-      background: url(https://raw.githubusercontent.com/thoughtbot/refills/9c16f8b69d857c296c85f2d8c434e825f813a566/source/images/refills-screenshot2.jpg);
-      background-color: $browser-content-background-2; 
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
-
-  .browser:nth-child(3) {
-    background-color: $browser-content-background-3; 
-    display: none;
-     
-    @include media($large-screen) {
-      display: inline-block;    
-    }
-
-    .browser-content {
-      background: url(https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot3.png);
-      background-color: $browser-content-background-3; 
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  }
-
-  .browser-content {
-    border-left: $browser-border;
-    border-right: $browser-border;
-    height: 17em;
-    overflow: hidden;
-
-    @include media($large-screen) {
-      height: 18em;
-    }
-  }
-
-}
-//////////////////////////////////////////////////////////////////////////////////
-
-.cover {
-  $base-background-color: #fff !default;
-  background: $base-background-color;
-  border-top: 1px solid #e6e6e6;
-  height: 3.5em;
-  margin-top: -1em;
-  position: relative;
-  width: 100%;
-  z-index: 999;
-}
 </code></pre>
 </td>
-
 
   </tr>
 </table>
@@ -742,7 +576,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;cards&quot;&gt;
   &lt;div class=&quot;card&quot;&gt;
     &lt;div class=&quot;card-image&quot;&gt;
@@ -807,7 +643,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.cards {
   @include display(flex);
   @include flex-wrap(wrap);
@@ -972,6 +810,7 @@
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -1030,7 +869,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;header class=&quot;centered-navigation&quot; role=&quot;banner&quot;&gt;
   &lt;div class=&quot;centered-navigation-wrapper&quot;&gt;
     &lt;a href=&quot;javascript:void(0)&quot; class=&quot;mobile-logo&quot;&gt;
@@ -1075,7 +916,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.centered-navigation {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
@@ -1347,7 +1190,10 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">$(document).ready(function() {
   var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
   $('#js-centered-navigation-menu').removeClass(&quot;show&quot;);
@@ -1361,6 +1207,27 @@
     });
   });
 });
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(document).ready -&gt;
+  menuToggle = $(&quot;#js-centered-navigation-mobile-menu&quot;).unbind()
+  $(&quot;#js-centered-navigation-menu&quot;).removeClass &quot;show&quot;
+  menuToggle.on &quot;click&quot;, (e) -&gt;
+    e.preventDefault()
+    $(&quot;#js-centered-navigation-menu&quot;).slideToggle -&gt;
+      $(&quot;#js-centered-navigation-menu&quot;).removeAttr &quot;style&quot;  if $(&quot;#js-centered-navigation-menu&quot;).is(&quot;:hidden&quot;)
+      return
+
+    return
+
+  return
+
 </code></pre>
 </td>
 
@@ -1405,7 +1272,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;comment&quot;&gt;
   &lt;div class=&quot;comment-image&quot;&gt;
     &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png&quot; alt=&quot;Logo image&quot;&gt;
@@ -1431,7 +1300,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.comment {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
@@ -1505,6 +1376,7 @@
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -1533,7 +1405,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;device-background&quot;&gt;
   &lt;div class=&quot;device-text&quot;&gt;
     &lt;h4&gt;Text about App or Device&lt;/h4&gt;
@@ -1548,7 +1422,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.device-background {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
@@ -1654,6 +1530,7 @@
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -1704,7 +1581,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;flex-boxes&quot;&gt;
   &lt;a href=&quot;javascript:void(0)&quot; class=&quot;flex-box flex-box-big&quot;&gt;
     &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png&quot; alt=&quot;&quot;&gt;
@@ -1741,7 +1620,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.flex-boxes {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
@@ -1830,6 +1711,7 @@
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -1876,7 +1758,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;footer class=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;
   &lt;div class=&quot;footer-logo&quot;&gt;
     &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png&quot; alt=&quot;Logo image&quot;&gt;
@@ -1909,7 +1793,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.footer {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-spacing: 1.5em !default;
@@ -2011,6 +1897,7 @@
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -2058,7 +1945,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;!--&lt;div class=&quot;wrapper-for-content-outside-of-footer&quot;&gt;
    Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
 &lt;/div&gt;--&gt;
@@ -2096,7 +1985,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">// Uncomment this for a sticky footer.
 //
 // .wrapper-for-content-outside-of-footer {
@@ -2245,6 +2136,7 @@
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -2300,7 +2192,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;grid-items&quot;&gt;
   &lt;a href=&quot;javascript:void(0)&quot; class=&quot;grid-item&quot;&gt;
     &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png&quot; alt=&quot;&quot;&gt;
@@ -2342,7 +2236,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">@mixin grid-item-columns($columns) {
   width: (100% / 12) * $columns;
 }
@@ -2463,6 +2359,7 @@
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -2521,7 +2418,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;grid-items-lines&quot;&gt;
   &lt;a href=&quot;javascript:void(0)&quot; class=&quot;grid-item&quot;&gt;
     &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png&quot; alt=&quot;&quot;&gt;
@@ -2570,7 +2469,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">@mixin grid-item-columns($columns) {
   width: (100% / 12) * $columns;
 }
@@ -2681,6 +2582,7 @@
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -2710,7 +2612,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;hero&quot;&gt;
 	&lt;div class=&quot;hero-inner&quot;&gt;
     &lt;a href=&quot;&quot; class=&quot;hero-logo&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png
@@ -2726,7 +2630,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.hero {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
@@ -2794,6 +2700,7 @@
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -2842,7 +2749,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;ul class=&quot;bullets&quot;&gt;
   &lt;li class=&quot;bullet three-col-bullet&quot;&gt;
     &lt;div class=&quot;bullet-icon bullet-icon-1&quot;&gt;
@@ -2877,7 +2786,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.bullets {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
@@ -2957,6 +2868,7 @@
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -2980,7 +2892,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;intro-text&quot;&gt;
   &lt;h3&gt;Topic Label&lt;/h3&gt;
   &lt;h4&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta rerum libero iste saepe.&lt;/h4&gt;
@@ -2990,7 +2904,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.intro-text {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
@@ -3070,6 +2986,7 @@
 }
 </code></pre>
 </td>
+
 
 
   </tr>
@@ -3164,7 +3081,9 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;!--
 Add the code below to the bottom of your page, just before the closing &lt;/body&gt; tag.
 Edit myLatlng and the other variables.
@@ -3243,7 +3162,9 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">#map_canvas {
   height: 400px;
   width: 100%;
@@ -3270,6 +3191,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 }
 </code></pre>
 </td>
+
 
 
   </tr>
@@ -3334,7 +3256,9 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;header class=&quot;navigation&quot; role=&quot;banner&quot;&gt;
   &lt;div class=&quot;navigation-wrapper&quot;&gt;
     &lt;a href=&quot;javascript:void(0)&quot; class=&quot;logo&quot;&gt;
@@ -3383,7 +3307,9 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">header.navigation {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -3740,7 +3666,10 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">$(document).ready(function() {
   var menuToggle = $('#js-mobile-menu').unbind();
   $('#js-navigation-menu').removeClass(&quot;show&quot;);
@@ -3754,6 +3683,27 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     });
   });
 });
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(document).ready -&gt;
+  menuToggle = $(&quot;#js-mobile-menu&quot;).unbind()
+  $(&quot;#js-navigation-menu&quot;).removeClass &quot;show&quot;
+  menuToggle.on &quot;click&quot;, (e) -&gt;
+    e.preventDefault()
+    $(&quot;#js-navigation-menu&quot;).slideToggle -&gt;
+      $(&quot;#js-navigation-menu&quot;).removeAttr &quot;style&quot;  if $(&quot;#js-navigation-menu&quot;).is(&quot;:hidden&quot;)
+      return
+
+    return
+
+  return
+
 </code></pre>
 </td>
 
@@ -3801,7 +3751,9 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;scroll-on-page&quot;&gt;
   &lt;aside id=&quot;scroll-on-page-top&quot;&gt;
     &lt;a class=&quot;scroll-on-page-link&quot; href=&quot;#scroll-link-1&quot;&gt;First Scroll Link&lt;/a&gt;
@@ -3830,7 +3782,9 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.scroll-on-page {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
@@ -3892,7 +3846,10 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">(function (jQuery) {
   jQuery.mark = {
     jump: function (options) {
@@ -3919,6 +3876,37 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 jQuery(function(){  
   jQuery.mark.jump();
 });
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">((jQuery) -&gt;
+  jQuery.mark = jump: (options) -&gt;
+    defaults = selector: &quot;a.scroll-on-page-link&quot;
+    defaults.selector = options  if typeof options is &quot;string&quot;
+    options = jQuery.extend(defaults, options)
+    jQuery(options.selector).click (e) -&gt;
+      jumpobj = jQuery(this)
+      target = jumpobj.attr(&quot;href&quot;)
+      thespeed = 1000
+      offset = jQuery(target).offset().top
+      jQuery(&quot;html,body&quot;).animate
+        scrollTop: offset
+      , thespeed, &quot;swing&quot;
+      e.preventDefault()
+      return
+
+
+  return
+) jQuery
+jQuery -&gt;
+  jQuery.mark.jump()
+  return
+
 </code></pre>
 </td>
 
@@ -3998,7 +3986,9 @@ jQuery(function(){
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;search-tools&quot;&gt;
   &lt;div class=&quot;filter&quot;&gt;
     &lt;label&gt;Colors&lt;/label&gt;
@@ -4061,7 +4051,9 @@ jQuery(function(){
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.search-tools {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -4180,7 +4172,10 @@ jQuery(function(){
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">var Filter = (function() {
   function Filter(element) {
     this._element = $(element);
@@ -4294,6 +4289,99 @@ $(function() {
 </code></pre>
 </td>
 
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">Filter = (-&gt;
+  Filter = (element) -&gt;
+    @_element = $(element)
+    @_optionsContainer = @_element.find(@constructor.optionsContainerSelector)
+    return
+  Filter.selector = &quot;.filter&quot;
+  Filter.optionsContainerSelector = &quot;&gt; div&quot;
+  Filter.hideOptionsClass = &quot;hide-options&quot;
+  Filter.enhance = -&gt;
+    klass = this
+    $(klass.selector).each -&gt;
+      new klass(this).enhance()
+
+
+  Filter::enhance = -&gt;
+    @_buildUI()
+    @_bindEvents()
+    return
+
+  Filter::_buildUI = -&gt;
+    @_summaryElement = $(&quot;&lt;label&gt;&lt;/label&gt;&quot;).addClass(&quot;summary&quot;).attr(&quot;data-role&quot;, &quot;summary&quot;).prependTo(@_optionsContainer)
+    @_clearSelectionButton = $(&quot;&lt;button&gt;&lt;/button&gt;&quot;).text(&quot;Clear&quot;).attr(&quot;type&quot;, &quot;button&quot;).insertAfter(@_summaryElement)
+    @_optionsContainer.addClass @constructor.hideOptionsClass
+    @_updateSummary()
+    return
+
+  Filter::_bindEvents = -&gt;
+    self = this
+    @_summaryElement.click -&gt;
+      self._toggleOptions()
+      return
+
+    @_clearSelectionButton.click -&gt;
+      self._clearSelection()
+      return
+
+    @_checkboxes().change -&gt;
+      self._updateSummary()
+      return
+
+    $(&quot;body&quot;).click (e) -&gt;
+      inFilter = $(e.target).closest(self.constructor.selector).length &gt; 0
+      self._allOptionsContainers().addClass self.constructor.hideOptionsClass  unless inFilter
+      return
+
+    return
+
+  Filter::_toggleOptions = -&gt;
+    @_allOptionsContainers().not(@_optionsContainer).addClass @constructor.hideOptionsClass
+    @_optionsContainer.toggleClass @constructor.hideOptionsClass
+    return
+
+  Filter::_updateSummary = -&gt;
+    summary = &quot;All&quot;
+    checked = @_checkboxes().filter(&quot;:checked&quot;)
+    summary = @_labelsFor(checked).join(&quot;, &quot;)  if checked.length &gt; 0
+    @_summaryElement.text summary
+    return
+
+  Filter::_clearSelection = -&gt;
+    @_checkboxes().each -&gt;
+      $(this).prop &quot;checked&quot;, false
+      return
+
+    @_updateSummary()
+    return
+
+  Filter::_checkboxes = -&gt;
+    @_element.find &quot;:checkbox&quot;
+
+  Filter::_labelsFor = (inputs) -&gt;
+    inputs.map(-&gt;
+      id = $(this).attr(&quot;id&quot;)
+      $(&quot;label[for='&quot; + id + &quot;']&quot;).text()
+    ).get()
+
+  Filter::_allOptionsContainers = -&gt;
+    $ @constructor.selector + &quot; &quot; + @constructor.optionsContainerSelector
+
+  Filter
+)()
+$ -&gt;
+  Filter.enhance()
+  return
+
+</code></pre>
+</td>
+
   </tr>
 </table>
 </div>
@@ -4322,7 +4410,9 @@ $(function() {
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;side-image&quot;&gt;
   &lt;div class=&quot;images-wrapper&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;side-image-content&quot;&gt;
@@ -4337,7 +4427,9 @@ $(function() {
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.side-image {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
@@ -4422,6 +4514,7 @@ $(function() {
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -4471,7 +4564,9 @@ $(function() {
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;table class=&quot;tables&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -4507,7 +4602,9 @@ $(function() {
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.tables {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -4627,6 +4724,7 @@ $(function() {
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -4671,7 +4769,9 @@ $(function() {
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;table class=&quot;table-minimal&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -4706,7 +4806,9 @@ $(function() {
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.table-minimal {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -4793,6 +4895,7 @@ $(function() {
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -4841,7 +4944,9 @@ $(function() {
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;vertical-tabs-container&quot;&gt;
   &lt;div class=&quot;vertical-tabs&quot;&gt;
     &lt;a href=&quot;javascript:void(0)&quot; class=&quot;js-vertical-tab vertical-tab is-active&quot; rel=&quot;tab1&quot;&gt;Item 1&lt;/a&gt;
@@ -4876,7 +4981,9 @@ $(function() {
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.vertical-tabs-container {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -5014,7 +5121,10 @@ $(function() {
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">$(&quot;.js-vertical-tab-content&quot;).hide();
 $(&quot;.js-vertical-tab-content:first&quot;).show();
 
@@ -5047,6 +5157,42 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
   $(&quot;.js-vertical-tab&quot;).removeClass(&quot;is-active&quot;);
   $(&quot;.js-vertical-tab[rel^='&quot;+accordion_activeTab+&quot;']&quot;).addClass(&quot;is-active&quot;);
 });
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(&quot;.js-vertical-tab-content&quot;).hide()
+$(&quot;.js-vertical-tab-content:first&quot;).show()
+
+# if in tab mode 
+$(&quot;.js-vertical-tab&quot;).click (event) -&gt;
+  event.preventDefault()
+  $(&quot;.js-vertical-tab-content&quot;).hide()
+  activeTab = $(this).attr(&quot;rel&quot;)
+  $(&quot;#&quot; + activeTab).show()
+  $(&quot;.js-vertical-tab&quot;).removeClass &quot;is-active&quot;
+  $(this).addClass &quot;is-active&quot;
+  $(&quot;.js-vertical-tab-accordion-heading&quot;).removeClass &quot;is-active&quot;
+  $(&quot;.js-vertical-tab-accordion-heading[rel^='&quot; + activeTab + &quot;']&quot;).addClass &quot;is-active&quot;
+  return
+
+
+# if in accordion mode 
+$(&quot;.js-vertical-tab-accordion-heading&quot;).click (event) -&gt;
+  event.preventDefault()
+  $(&quot;.js-vertical-tab-content&quot;).hide()
+  accordion_activeTab = $(this).attr(&quot;rel&quot;)
+  $(&quot;#&quot; + accordion_activeTab).show()
+  $(&quot;.js-vertical-tab-accordion-heading&quot;).removeClass &quot;is-active&quot;
+  $(this).addClass &quot;is-active&quot;
+  $(&quot;.js-vertical-tab&quot;).removeClass &quot;is-active&quot;
+  $(&quot;.js-vertical-tab[rel^='&quot; + accordion_activeTab + &quot;']&quot;).addClass &quot;is-active&quot;
+  return
+
 </code></pre>
 </td>
 
@@ -5102,7 +5248,13 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
   $(document).ready( function() {
     client = new ZeroClipboard($('.copy-source'), {moviePath: '/images/ZeroClipboard.swf'})
     client.on('dataRequested', function(client, args) {
-      code = $(this).siblings('pre').text();
+      if ($(this).hasClass("copy-coffee")) {
+        var cell = $(this).parents("tr").find("td.snippet").last();
+      } else {
+        var cell = $(this).parents("td.snippet");
+      }
+
+      var code = cell.children("pre").text();
       client.setText(code);
     });
   });

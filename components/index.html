@@ -92,7 +92,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;ul class=&quot;accordion&quot;&gt;
   &lt;li&gt;
     &lt;a href=&quot;javascript:void(0)&quot; class=&quot;js-accordion-trigger&quot;&gt;Accordion Item&lt;/a&gt;
@@ -121,7 +123,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.accordion {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -212,12 +216,29 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">$('.js-accordion-trigger').bind('click', function(e){
   jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
   jQuery(this).parent().toggleClass('is-expanded');
   e.preventDefault();
 });
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(&quot;.js-accordion-trigger&quot;).bind &quot;click&quot;, (e) -&gt;
+  jQuery(this).parent().find(&quot;.submenu&quot;).slideToggle &quot;fast&quot; # apply the toggle to the ul
+  jQuery(this).parent().toggleClass &quot;is-expanded&quot;
+  e.preventDefault()
+  return
+
 </code></pre>
 </td>
 
@@ -250,7 +271,9 @@
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div&gt;
   &lt;div class=&quot;animate-target&quot;&gt;&lt;/div&gt;
   &lt;button class=&quot;animate-trigger&quot;&gt;Press to Animate.css&lt;/button&gt;
@@ -259,7 +282,9 @@
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">$base-accent-color: #477dca !default;
 
 .animated {
@@ -342,7 +367,10 @@ button {
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">$(function() {
   var animationClasses = 'animated alternate iteration zoomOut';
   var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -355,6 +383,7 @@ button {
 });
 </code></pre>
 </td>
+
 
   </tr>
 </table>
@@ -381,7 +410,9 @@ button {
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div&gt;
   &lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
   &lt;span class=&quot;badge-alert&quot;&gt;4&lt;/span&gt;
@@ -393,7 +424,9 @@ button {
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">$badge-font-size: 0.75em !default;
 $medium-gray: #999 !default;
 $alert-color: #fff6bf !default;
@@ -435,6 +468,7 @@ $success-color: #e6efc2 !default;
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -460,7 +494,9 @@ $success-color: #e6efc2 !default;
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;breadcrumb&quot;&gt;
   &lt;a href=&quot;javascript:void(0)&quot;&gt;One&lt;/a&gt;
   &lt;a href=&quot;javascript:void(0)&quot;&gt;Two&lt;/a&gt;
@@ -472,7 +508,9 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.breadcrumb {   
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -572,6 +610,7 @@ $success-color: #e6efc2 !default;
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -608,7 +647,9 @@ $success-color: #e6efc2 !default;
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;button-group&quot;&gt;
   &lt;label&gt;
     &lt;input type=&quot;radio&quot; name=&quot;button-group&quot; value=&quot;item&quot; checked&gt;
@@ -631,7 +672,9 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.button-group {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -732,6 +775,7 @@ $success-color: #e6efc2 !default;
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -764,7 +808,9 @@ $success-color: #e6efc2 !default;
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;dropdown&quot;&gt;
   &lt;div class=&quot;dropdown-container&quot;&gt;
     &lt;p class=&quot;dropdown-description&quot;&gt;Description&lt;/p&gt;
@@ -781,7 +827,9 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.dropdown {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -932,7 +980,10 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">$(document).ready(function(){
   $(&quot;.dropdown-button&quot;).click(function() {
     $(&quot;.dropdown-menu&quot;).toggleClass(&quot;show-menu&quot;);
@@ -944,6 +995,29 @@ $success-color: #e6efc2 !default;
     });
   });
 });
+
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(document).ready -&gt;
+  $(&quot;.dropdown-button&quot;).click -&gt;
+    $(&quot;.dropdown-menu&quot;).toggleClass &quot;show-menu&quot;
+    $(&quot;.dropdown-menu &gt; li&quot;).click -&gt;
+      $(&quot;.dropdown-menu&quot;).removeClass &quot;show-menu&quot;
+      return
+
+    $(&quot;.dropdown-menu.dropdown-select &gt; li&quot;).click -&gt;
+      $(&quot;.dropdown-button&quot;).html $(this).html()
+      return
+
+    return
+
+  return
 
 </code></pre>
 </td>
@@ -974,7 +1048,9 @@ $success-color: #e6efc2 !default;
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;expander&quot;&gt;
   &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-expander-trigger&quot; class=&quot;expander-trigger expander-hidden&quot;&gt;Expandable section&lt;/a&gt;
   &lt;div id=&quot;js-expander-content&quot; class=&quot;expander-content&quot;&gt;
@@ -985,7 +1061,9 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.expander {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-font-size: 1em !default;
@@ -1046,7 +1124,10 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">$(document).ready(function() {
   var expanderTrigger = document.getElementById(&quot;js-expander-trigger&quot;);
   var expanderContent = document.getElementById(&quot;js-expander-content&quot;);
@@ -1055,6 +1136,23 @@ $success-color: #e6efc2 !default;
     $(this).toggleClass(&quot;expander-hidden&quot;);
   });
 });
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(document).ready -&gt;
+  expanderTrigger = document.getElementById(&quot;js-expander-trigger&quot;)
+  expanderContent = document.getElementById(&quot;js-expander-content&quot;)
+  $(&quot;#js-expander-trigger&quot;).click -&gt;
+    $(this).toggleClass &quot;expander-hidden&quot;
+    return
+
+  return
+
 </code></pre>
 </td>
 
@@ -1085,7 +1183,9 @@ $success-color: #e6efc2 !default;
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div id=&quot;js-fadeInElement&quot; class=&quot;fade-in-element&quot;&gt;
   This box will fade in when it's &lt;b&gt;300px above the bottom&lt;/b&gt; of the window.
   &lt;br&gt;
@@ -1097,7 +1197,9 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.fade-in-element {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -1140,7 +1242,10 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">$(document).ready(function() {
   var element = document.getElementById(&quot;js-fadeInElement&quot;);
   $(element).addClass('js-fade-element-hide');
@@ -1164,6 +1269,34 @@ $success-color: #e6efc2 !default;
     }
   });
 });
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(document).ready -&gt;
+  element = document.getElementById(&quot;js-fadeInElement&quot;)
+  $(element).addClass &quot;js-fade-element-hide&quot;
+  $(window).scroll -&gt;
+    if $(&quot;#js-fadeInElement&quot;).length &gt; 0
+      elementTopToPageTop = $(element).offset().top
+      windowTopToPageTop = $(window).scrollTop()
+      windowInnerHeight = window.innerHeight
+      elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop
+      elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop
+      distanceFromBottomToAppear = 300
+      if elementTopToWindowBottom &gt; distanceFromBottomToAppear
+        $(element).addClass &quot;js-fade-element-show&quot;
+      else if elementTopToWindowBottom &lt; 0
+        $(element).removeClass &quot;js-fade-element-show&quot;
+        $(element).addClass &quot;js-fade-element-hide&quot;
+    return
+
+  return
+
 </code></pre>
 </td>
 
@@ -1200,7 +1333,9 @@ $success-color: #e6efc2 !default;
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;flash-success&quot;&gt;
   &lt;span&gt;This is a success message &lt;a href=&quot;#&quot;&gt;with a link&lt;/a&gt;&lt;/span&gt;
 &lt;/div&gt;
@@ -1220,7 +1355,9 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">$base-spacing: 1.5em !default;
 $alert-color: #fff6bf !default;
 $error-color: #fbe3e4 !default;
@@ -1265,6 +1402,7 @@ $success-color: #e6efc2 !default;
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -1292,7 +1430,9 @@ $success-color: #e6efc2 !default;
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;hover-tile-outer&quot;&gt;
   &lt;div class=&quot;hover-tile-container&quot;&gt;
     &lt;div class=&quot;hover-tile hover-tile-visible&quot;&gt;&lt;/div&gt;
@@ -1306,7 +1446,9 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.hover-tile-outer {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -1371,6 +1513,7 @@ $success-color: #e6efc2 !default;
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -1396,7 +1539,9 @@ $success-color: #e6efc2 !default;
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;image-gradient-dynamic&quot;&gt;
   &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot; alt=&quot;&quot;&gt;
   &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
@@ -1408,7 +1553,9 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.image-gradient-dynamic {
   $image-gradient-color-top: red; 
   $transparency-top: 0.9;
@@ -1470,6 +1617,7 @@ $success-color: #e6efc2 !default;
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -1502,7 +1650,9 @@ $success-color: #e6efc2 !default;
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;modal&quot;&gt;
   &lt;label for=&quot;modal-1&quot;&gt;
     &lt;div class=&quot;modal-trigger&quot;&gt;Click for Modal&lt;/div&gt;
@@ -1521,7 +1671,9 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.modal {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -1571,10 +1723,6 @@ $success-color: #e6efc2 !default;
   .modal-trigger {
     @include button(flat, $base-accent-color);
     padding: 0.8em 1em;
-  }
-
-  .modal-open {
-    overflow: hidden;
   }
 
   .modal-window { // overlay
@@ -1685,12 +1833,55 @@ $success-color: #e6efc2 !default;
   .modal-state:checked + .modal-window .modal-inner {
     top: 0.5em;
   }
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  .modal-closed {
+    overflow: auto;
+  }
+
 }
 
 // Based on code by Kasper Mikiewicz
 </code></pre>
 </td>
 
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(function() {
+  $(&quot;#modal-1&quot;).on(&quot;click&quot;, function() {
+    if ($(this).is(&quot;:checked&quot;)) {
+      $(&quot;body&quot;).addClass(&quot;modal-open&quot;);
+    } else {
+      $(&quot;body&quot;).removeClass(&quot;modal-open&quot;);
+    }
+  });
+});
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$ -&gt;
+  $(&quot;#modal-1&quot;).on &quot;click&quot;, -&gt;
+    if $(this).is(&quot;:checked&quot;)
+      $(&quot;body&quot;).addClass &quot;modal-open&quot;
+    else
+      $(&quot;body&quot;).removeClass &quot;modal-open&quot;
+    return
+
+  return
+
+</code></pre>
+</td>
 
   </tr>
 </table>
@@ -1727,7 +1918,9 @@ $success-color: #e6efc2 !default;
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;pagination&quot;&gt;
   &lt;ul&gt;
     &lt;li class=&quot;page-prev&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Prev&lt;/a&gt;&lt;/li&gt;
@@ -1749,7 +1942,9 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.pagination {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -1830,6 +2025,7 @@ $success-color: #e6efc2 !default;
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -1854,7 +2050,9 @@ $success-color: #e6efc2 !default;
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div id=&quot;js-parallax-window&quot; class=&quot;parallax-window&quot;&gt;
   &lt;div class=&quot;parallax-static-content&quot;&gt;
     &lt;b&gt;Parallax Window&lt;/b&gt;
@@ -1865,7 +2063,9 @@ $success-color: #e6efc2 !default;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">$parallax-window-height: 30em;
 $parallax-background-height: $parallax-window-height * 2;
 
@@ -1901,7 +2101,10 @@ $parallax-background-height: $parallax-window-height * 2;
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">$(document).ready(function() {
   if ($(&quot;#js-parallax-window&quot;).length) {
     parallax();
@@ -1935,6 +2138,36 @@ function parallax(){
 </code></pre>
 </td>
 
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">parallax = -&gt;
+  if $(&quot;#js-parallax-window&quot;).length &gt; 0
+    plxBackground = $(&quot;#js-parallax-background&quot;)
+    plxWindow = $(&quot;#js-parallax-window&quot;)
+    plxWindowTopToPageTop = $(plxWindow).offset().top
+    windowTopToPageTop = $(window).scrollTop()
+    plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop
+    plxBackgroundTopToPageTop = $(plxBackground).offset().top
+    windowInnerHeight = window.innerHeight
+    plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop
+    plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop
+    plxSpeed = 0.35
+    plxBackground.css &quot;top&quot;, -(plxWindowTopToWindowTop * plxSpeed) + &quot;px&quot;
+  return
+$(document).ready -&gt;
+  parallax()  if $(&quot;#js-parallax-window&quot;).length
+  return
+
+$(window).scroll (e) -&gt;
+  parallax()  if $(&quot;#js-parallax-window&quot;).length
+  return
+
+</code></pre>
+</td>
+
   </tr>
 </table>
 </div>
@@ -1957,14 +2190,18 @@ function parallax(){
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;progress-bar&quot;&gt;
   &lt;span class=&quot;meter&quot; style=&quot;width: 60%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.progress-bar {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -2060,6 +2297,7 @@ function parallax(){
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -2080,7 +2318,9 @@ function parallax(){
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;progress-bar-indication&quot;&gt;
   &lt;span class=&quot;meter&quot; style=&quot;width: 60%&quot;&gt;
     &lt;p&gt;60%&lt;/p&gt;
@@ -2089,7 +2329,9 @@ function parallax(){
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.progress-bar-indication {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -2145,6 +2387,7 @@ function parallax(){
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -2168,7 +2411,9 @@ function parallax(){
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;video&quot;&gt;
   &lt;div class=&quot;video-wrapper&quot;&gt;
       &lt;iframe src=&quot;http://www.youtube.com/embed/8ItNE_DX6Cc?showinfo=0&amp;iv_load_policy=3&amp;controls=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
@@ -2178,7 +2423,9 @@ function parallax(){
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.video-wrapper {
   height: 0;
   overflow: hidden;
@@ -2194,6 +2441,7 @@ function parallax(){
 }
 </code></pre>
 </td>
+
 
 
   </tr>
@@ -2222,7 +2470,9 @@ function parallax(){
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;form class=&quot;search-bar&quot; role=&quot;search&quot;&gt;
   &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
   &lt;button type=&quot;submit&quot;&gt;
@@ -2233,7 +2483,9 @@ function parallax(){
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">form.search-bar {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -2284,6 +2536,7 @@ function parallax(){
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -2315,7 +2568,9 @@ function parallax(){
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;js-menu-trigger sliding-menu-button&quot;&gt;
   &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png&quot; alt=&quot;Menu Icon&quot;&gt;
 &lt;/button&gt;
@@ -2333,7 +2588,9 @@ function parallax(){
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.sliding-menu-content {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-accent-color: #477DCA !default;
@@ -2424,13 +2681,32 @@ function parallax(){
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
   <pre><code class="language-javascript">$(document).ready(function(){
   $('.js-menu-trigger,.js-menu-screen').on('click touchstart',function (e) {
     $('.js-menu,.js-menu-screen').toggleClass('is-visible');
     e.preventDefault();
   });
 });
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(document).ready -&gt;
+  $(&quot;.js-menu-trigger,.js-menu-screen&quot;).on &quot;click touchstart&quot;, (e) -&gt;
+    $(&quot;.js-menu,.js-menu-screen&quot;).toggleClass &quot;is-visible&quot;
+    e.preventDefault()
+    return
+
+  return
+
 </code></pre>
 </td>
 
@@ -2456,7 +2732,9 @@ function parallax(){
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;label class=&quot;label-switch&quot;&gt;
   &lt;input type=&quot;checkbox&quot; /&gt;
   &lt;div class=&quot;checkbox&quot;&gt;&lt;/div&gt;
@@ -2465,7 +2743,9 @@ function parallax(){
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.label-switch {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-accent-color: #477DCA !default;
@@ -2549,6 +2829,7 @@ function parallax(){
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -2596,7 +2877,9 @@ function parallax(){
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;texture&quot;&gt;
   &lt;div class=&quot;texture-inverted&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;texture-normal&quot;&gt;&lt;/div&gt;
@@ -2605,7 +2888,9 @@ function parallax(){
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">@mixin texture($gradient-angle, $bg-color-1, $bg-color-2, $texture-number, $inverted) { $texture-list: 
   &quot;paper.png&quot;             // Fabric and paper
   &quot;rice_paper.png&quot;
@@ -2733,6 +3018,7 @@ function parallax(){
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -2757,7 +3043,9 @@ function parallax(){
 <table class="snippets-table">
   <tr>
     <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
   <pre><code class="language-markup">&lt;div class=&quot;tooltip-item&quot;&gt;
   Hover for Tooltip
   &lt;div class=&quot;tooltip&quot;&gt;
@@ -2768,7 +3056,9 @@ function parallax(){
 </td>
 
 <td class="snippet">
-  <a href="#" class="copy-source">Copy</a>
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
   <pre><code class="language-scss">.tooltip-item {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
@@ -2845,6 +3135,7 @@ function parallax(){
 </td>
 
 
+
   </tr>
 </table>
 </div>
@@ -2897,7 +3188,13 @@ function parallax(){
   $(document).ready( function() {
     client = new ZeroClipboard($('.copy-source'), {moviePath: '/images/ZeroClipboard.swf'})
     client.on('dataRequested', function(client, args) {
-      code = $(this).siblings('pre').text();
+      if ($(this).hasClass("copy-coffee")) {
+        var cell = $(this).parents("tr").find("td.snippet").last();
+      } else {
+        var cell = $(this).parents("td.snippet");
+      }
+
+      var code = cell.children("pre").text();
       client.setText(code);
     });
   });
