@@ -6,7 +6,6 @@ describe Refills::ImportGenerator, type: :generator do
     accordion_tabs: %w[scss js erb],
     badges: %w[scss erb],
     breadcrumbs: %w[scss erb],
-    browser: %w[scss erb],
     button_group: %w[scss erb],
     cards: %w[scss erb],
     centered_navigation: %w[scss js erb],
