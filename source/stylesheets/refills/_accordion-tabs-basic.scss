@@ -1,76 +1,67 @@
-ul.accordion-tabs-basic {
-  $tab-mode: em(640) !default;
+.accordion-tabs-basic {
+  $medium-screen: em(640) !default;
+  $tab-mode: $medium-screen;
 
   @include clearfix;
   padding: 0;
 
-  li.tab-header-and-content {
+  @include media(max-width $tab-mode) {
+  // Overall styles
+  }
+
+  .tab-header-and-content {
     list-style: none;
 
     @include media($tab-mode) {
       display: inline;
     }
-  }
 
-  .tab-content {
-    display: none;
-    width: 100%;
+    &:first-child .tab-link {
+    // Top link style in list mode
 
-    @include media($tab-mode) {
+      @include media(max-width $tab-mode) {
+      // First link style in tab mode
+      }
+    }
+
+    &:last-child .tab-link {
+    // Last link style in list mode
+
+      @include media(max-width $tab-mode) {
+      // Rightmost link style in tab mode
+      }
+    }
+
+    a.tab-link {
+    // Link style in list mode
+
+      @include media($tab-mode) {
+      // Link style in tab mode
+      }
+
+      &:hover {
+      // Link hover
+      }
+
+      &:focus {
+      // Link focus
+      }
+
+      &.is-active {
+      // Active list item
+        @include media($tab-mode) {
+          // Active tab
+        }
+      }
+    }
+
+    .tab-content {
+      display: none;
+      width: 100%;
+
+      @include media($tab-mode) {
       float: left;
+      }
     }
   }
 }
-
-
-// .accordion-tabs-basic {
-//   $medium-screen: em(640) !default;
-//   $tab-mode: $medium-screen;
-
-//   @include clearfix;
-//   padding: 0;
-
-//   @include media(max-width $tab-mode) {
-
-//   }
-
-//   .tab-header-and-content {
-//     list-style: none;
-
-//     @include media($tab-mode) {
-//       display: inline;
-//     }
-
-//     &:first-child .tab-link {
-//       @include media(max-width $tab-mode) {
-//         border-top: 0;
-//       }
-//     }
-
-//     &:last-child .tab-link {
-//       @include media(max-width $tab-mode) {
-
-//       }
-//     }
-//   }
-
-//   a.tab-link {
-//     &:hover {
-//     }
-
-//     &.is-active {
-//       @include media($tab-mode) {
-//         margin-bottom: -1px;
-//       }
-//     }
-//   }
-
-//   .tab-content {
-//     display: none;
-//     width: 100%;
-
-//     @include media($tab-mode) {
-//       float: left;
-//     }
-//   }
-// }
