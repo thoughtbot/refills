@@ -4,13 +4,13 @@
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
+  $action-color-dark: #477DCA !default;
+  $action-color-dark: $action-color-dark !default;
+  $dark-color: #333 !default;
+  $light-color: #DDD !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
+  $base-font-color-dark: $dark-color !default;
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
   $table-background: $base-background-color;
@@ -52,7 +52,7 @@
       padding: $table-padding;
 
       button {
-        @include button(flat, $base-accent-color);
+        @include button(flat, $action-color-dark);
         display: inline-block;
         font-size: .7em;
         line-height: $base-line-height;

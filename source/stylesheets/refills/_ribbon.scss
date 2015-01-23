@@ -5,8 +5,8 @@
 }
 
 .ribbon-wrapper {
-  $base-accent-color: #477dca !default;
-  $ribbon-background: $base-accent-color;
+  $action-color-dark: #477dca !default;
+  $ribbon-background: $action-color-dark;
   $ribbon-size: 85px;
 
   @include size($ribbon-size);
@@ -18,7 +18,7 @@
   .ribbon {
     @include transform(rotate(45deg));
     background-color: $ribbon-background;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: $base-shadow;
     color: #fff;
     font-size: 0.8em;
     font-weight: 800;

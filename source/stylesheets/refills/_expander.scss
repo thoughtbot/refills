@@ -2,11 +2,11 @@
   $base-font-size: 1em !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
-  $base-font-color: $dark-gray !default;
+  $action-color-dark: #477DCA !default;
+  $action-color-dark: $action-color-dark !default;
+  $dark-color: #333 !default;
+  $light-color: #DDD !default;
+  $base-font-color-dark: $dark-color !default;
   $expander-arrow-width: 0.7em;
   $expander-toggle-size: 1em;
   $expander-toggle-arrow-size: $expander-toggle-size;
@@ -16,8 +16,8 @@
 
   .expander-trigger {
     @include user-select(none);
-    border-bottom: 1px solid $light-gray;
-    color: $base-link-color;
+    border-bottom: 1px solid $light-color;
+    color: $action-color-dark;
     cursor: pointer;
     display: block;
     font-size: $expander-toggle-size;
@@ -33,7 +33,7 @@
   }
 
   .expander-content p {
-    color: $base-font-color;
+    color: $base-font-color-dark;
     line-height: $base-line-height;
   }
 

@@ -8,7 +8,7 @@
   background-position: top;
   background-size: cover;
   background-color: beige;
-  border: 1px solid $base-border-color;
+  border: $base-border;
   cursor: pointer;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;

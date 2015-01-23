@@ -1,9 +1,9 @@
 .bullets {
   $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
+  $action-color-dark: #477DCA !default;
+  $action-color-dark: $action-color-dark !default;
+  $dark-color: #333 !default;
+  $base-font-color-dark: $dark-color !default;
   $icon-bullet-size: 3.5em;
 
   @include display(flex);
@@ -19,7 +19,7 @@
   }
 
   .bullet-icon {
-    background: $base-accent-color;
+    background: $action-color-dark;
     border-radius: 50%;
     float: left;
     height: $icon-bullet-size;
@@ -28,15 +28,15 @@
   }
 
   .bullet-icon-1 {
-    background: $base-accent-color;
+    background: $action-color-dark;
   }
 
   .bullet-icon-2 {
-    background: adjust-hue($base-accent-color, -50%);
+    background: adjust-hue($action-color-dark, -50%);
   }
 
   .bullet-icon-3 {
-    background: adjust-hue($base-accent-color, -140%);
+    background: adjust-hue($action-color-dark, -140%);
   }
 
   .bullet-content {
@@ -45,7 +45,7 @@
   }
 
   h2 {
-    border-bottom: 1px solid transparentize($base-font-color, 0.8);
+    border-bottom: 1px solid transparentize($base-font-color-dark, 0.8);
     display: inline-block;
     font-size: $icon-bullet-size / 2.5;
     margin: 0 0 ($icon-bullet-size / 6) 0;
@@ -57,7 +57,7 @@
   }
 
   p {
-    color: $base-font-color;
+    color: $base-font-color-dark;
     line-height: $base-line-height;
   }
 
