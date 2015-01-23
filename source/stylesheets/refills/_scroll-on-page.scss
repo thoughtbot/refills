@@ -1,16 +1,16 @@
 .scroll-on-page {
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
+  $action-color-dark: #477DCA !default;
+  $action-color-dark: $action-color-dark !default;
+  $dark-color: #333 !default;
   $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
+  $base-font-color-dark: $dark-color !default;
 
   display: inline-block;
 
   a {
-    color: $base-link-color;
+    color: $action-color-dark;
     text-decoration: none;
   }
 
@@ -21,7 +21,7 @@
   }
 
   .scroll-on-page-link {
-    border-bottom: 1px solid transparentize($base-link-color, 0.8);
+    border-bottom: 1px solid transparentize($action-color-dark, 0.8);
     display: block;
     margin-right: $base-spacing;
     outline: none;
@@ -38,7 +38,7 @@
     }
 
     p {
-      color: $base-font-color;
+      color: $base-font-color-dark;
       line-height: $base-line-height;
     }
 

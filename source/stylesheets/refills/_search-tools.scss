@@ -3,11 +3,11 @@
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
+  $action-color-dark: #477DCA !default;
+  $action-color-dark: $action-color-dark !default;
+  $dark-color: #333 !default;
   $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
+  $base-font-color-dark: $dark-color !default;
   $search-tools-border-color: $base-border-color;
   $search-tools-background: lighten($search-tools-border-color, 10%);
 
@@ -47,7 +47,7 @@
       @include transition(border-color);
       background-color: white;
       border-radius: $base-border-radius;
-      border: 1px solid $base-border-color;
+      border: $base-border;
       font-size: 1em;
       margin-bottom: $base-spacing / 2;
       padding: ($base-spacing / 3) ($base-spacing / 3);
@@ -97,7 +97,7 @@
     }
 
     button {
-      @include button(flat, $base-accent-color);
+      @include button(flat, $action-color-dark);
       margin-top: 1em;
       padding-bottom: 0.5em;
       padding-top: 0.5em;

@@ -4,15 +4,15 @@
   $base-background-color: white !default;
   $base-font-size: 1em !default;
   $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
+  $action-color-dark: #477DCA !default;
+  $dark-color: #333 !default;
+  $light-color: #DDD !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
+  $base-font-color-dark: $dark-color !default;
   $modal-padding: 3em;
   $modal-background: $base-background-color;
-  $modal-close-color: $light-gray;
+  $modal-close-color: $light-color;
   $modal-image-height: 135px;
   $modal-image-width: $modal-image-height;
   $modal-trigger-image-width: 300px;
@@ -33,7 +33,7 @@
   }
 
   .modal-trigger {
-    @include button(flat, $base-accent-color);
+    @include button(flat, $action-color-dark);
     padding: 0.8em 1em;
   }
 
@@ -107,14 +107,14 @@
     }
 
     h1 {
-      color: $base-font-color;
+      color: $base-font-color-dark;
       margin-bottom: 0 0 0.6em 0;
       text-align: left;
       text-transform: capitalize;
     }
 
     p {
-      color: $base-font-color;
+      color: $base-font-color-dark;
       line-height: $base-line-height;
     }
 
@@ -123,7 +123,7 @@
     }
 
     .modal-content {
-      color: $base-font-color;
+      color: $base-font-color-dark;
 
       @include media($medium-screen) {
         @include columns(2 8em);

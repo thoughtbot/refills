@@ -4,14 +4,14 @@
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
+  $dark-color: #333 !default;
+  $base-font-color-dark: $dark-color !default;
   
   @include clearfix;
   background: $base-background-color;
   border-radius: $base-border-radius;
   border: 1px solid silver;
-  box-shadow: 0 2px 2px transparentize(black, 0.8);
+  box-shadow: $base-shadow;
   line-height: $base-line-height;
   margin-bottom: 4em;
   line-height: $base-line-height;
@@ -20,7 +20,7 @@
   width: 100%;
 
   p {
-    color: $base-font-color;
+    color: $base-font-color-dark;
     line-height: $base-line-height;
   }
 }

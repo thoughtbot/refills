@@ -4,11 +4,11 @@
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
+  $action-color-dark: #477DCA !default;
+  $action-color-dark: $action-color-dark !default;
+  $dark-color: #333 !default;
   $medium-screen: em(640) !default;
-  $base-font-color: $dark-gray !default;
+  $base-font-color-dark: $dark-color !default;
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
   $tab-border-radius: $base-border-radius;
@@ -29,7 +29,7 @@
   }
 
   a {
-    color: $base-link-color;
+    color: $action-color-dark;
     text-decoration: none;
   }
 
@@ -62,7 +62,7 @@
 
   a.vertical-tab-accordion-heading,
   a.vertical-tab {
-    color: $dark-gray;
+    color: $dark-color;
   }
 
   .vertical-tab:focus {
@@ -89,7 +89,7 @@
     padding: $base-spacing $gutter;
 
     p {
-      color: $base-font-color;
+      color: $base-font-color-dark;
       line-height: $base-line-height;
     }
 
@@ -109,7 +109,7 @@
 
     &:focus,
     &:hover {
-      color: $base-accent-color;
+      color: $action-color-dark;
     }
 
     &:first-child {
