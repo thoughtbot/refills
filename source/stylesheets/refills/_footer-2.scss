@@ -25,26 +25,18 @@
 // }
 
 .footer-2 {
-  $base-spacing: 1.5em !default;
-  $action-color-dark: #477DCA !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
-  $footer-background: desaturate(darken($action-color-dark, 20%), 30%);
-  $footer-color: white;
-  $footer-link-color: transparentize($footer-color, 0.6);
-  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+  $footer-background: $dark-color;
+  $footer-link-color: $base-font-color-light;
+  $footer-link-color-hover: transparentize($base-font-color-light, 0.5);
 
   background: $footer-background;
   padding: $base-spacing;
   width: 100%;
   display: inline-block;
 
-  a {
-  }
-
   .footer-logo {
-    margin-right: 1em;
-    margin-bottom: 1em;
+    margin-right: $base-spacing;
+    margin-bottom: $small-spacing;
 
     @include media($large-screen) {
       float: left;
@@ -58,13 +50,13 @@
 
   ul {
     line-height: 1.5em;
-    margin: 0 0 1em 0;
+    margin: 0 0 $small-spacing 0;
     padding: 0;
     
     @include media($large-screen) {
       float: left;
       line-height: 1.8em;
-      margin-left: 1em;
+      margin-left: 0;
       margin-bottom: 0;
     }
   }
@@ -72,7 +64,7 @@
   ul li {
     font-weight: 800;
     list-style: none;
-    padding-right: 1em;
+    padding-right: $small-spacing;
 
     @include media($large-screen) {
       display: inline;
@@ -86,7 +78,7 @@
 
     &:focus,
     &:hover {
-      color: transparentize($footer-color, 0);
+      color: $footer-link-color-hover;
     }
   }
 
@@ -101,15 +93,15 @@
     }
 
     ul.footer-social {
-      margin: 1em 0 0 0;
+      margin: $small-spacing 0 0 0;
 
       @include media($large-screen) {
         float: right;
-        margin-top: 0;
+        margin: $small-spacing 0 0 $base-spacing;
       }
 
       li {
-        font-size: 1em;
+        font-size: $base-font-size;
         float: left;
         line-height: 0;
         margin: 0;

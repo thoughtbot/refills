@@ -28,7 +28,7 @@ $success-color: #e6efc2;
 
 // Font Colors
 $base-font-color-dark: $dark-color;
-$base-font-color-light: #fff;
+$base-font-color-light: transparentize(#fff, .2);
 $action-color-dark: #477dca;
 $action-color-light: lighten($action-color-dark, 25);
 
@@ -50,3 +50,8 @@ $large-screen: em(860);
 // $inset-color ? For accordion
 // $inset-inner-shadow ?
 // $theme-color ? for card image etc
+// link hover color
+
+//transparentize($base-font-color-light, 0.5) change!
+
+// change all variable values and see what breaks!

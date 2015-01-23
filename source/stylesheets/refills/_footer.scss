@@ -1,11 +1,8 @@
 .footer {
-  $base-spacing: 1.5em !default;
-  $action-color-dark: #477DCA !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
-  $footer-background: desaturate(darken($action-color-dark, 20%), 30%);
-  $footer-color: white;
-  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-background: $dark-color;
+  $footer-color: $base-font-color-light;
+  $footer-link-color: $base-font-color-light;
+  $footer-link-color-hover: transparentize($base-font-color-light, 0.5);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
@@ -57,7 +54,7 @@
 
     &:focus,
     &:hover {
-      color: transparentize($footer-color, 0);
+      color: $footer-link-color-hover;
     }
   }
 
