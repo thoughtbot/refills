@@ -4,9 +4,10 @@
 
   @include clearfix;
   padding: 0;
+  // Overall styles list mode
 
   @include media(max-width $tab-mode) {
-  // Overall styles
+  // Overall styles tab mode
   }
 
   .tab-header-and-content {
@@ -37,15 +38,12 @@
   // Link style in list mode
 
     @include media($tab-mode) {
-    // Link style in tab mode
     }
 
     &:hover {
-    // Link hover
     }
 
     &:focus {
-    // Link focus
     }
 
     &.is-active {
