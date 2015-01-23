@@ -3,15 +3,9 @@
 }
 
 .grid-items-lines {
-  $base-background-color: white !default;
-  $dark-color: #333 !default;
-  $light-color: #DDD !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
-  $base-font-color-dark: $dark-color !default;
   $grid-items-background: $base-background-color;
   $grid-item-background: $base-background-color;
-  $grid-item-border: 1px solid transparentize($base-font-color-dark, 0.8); 
+  $grid-item-border: $base-border; 
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
   $grid-item-color: $base-font-color-dark;
@@ -30,7 +24,7 @@
     height: $grid-item-height;
     overflow: hidden;
     outline: none;
-    padding: 2em;
+    padding: $base-spacing;
     text-decoration: none;
     width: 100%;
 

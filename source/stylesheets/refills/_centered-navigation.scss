@@ -3,10 +3,10 @@
   $centered-navigation-logo-height: 2em;
   $centered-navigation-background: $dark-color;
   $centered-navigation-color: $base-font-color-light;
-  $centered-navigation-color-hover: $action-color-light;
+  $centered-navigation-color-hover: transparentize($base-font-color-light, 0.5);
   $centered-navigation-height: 60px;
-  $centered-navigation-item-padding: $small-spacing;
-  $centered-navigation-submenu-padding: $small-spacing;
+  $centered-navigation-item-padding: 1em;
+  $centered-navigation-submenu-padding: 1em;
   $centered-navigation-submenu-width: 12em;
   $centered-navigation-item-nudge: 2.2em;
   $horizontal-bar-mode: $large-screen;
