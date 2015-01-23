@@ -517,17 +517,9 @@
     <div class="card-copy">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
     </div>
-    <div class="card-stats">
-      <ul>
-        <li>98<span>Items</span></li>
-        <li>298<span>Things</span></li>
-        <li>923<span>Objects</span></li>
-      </ul>
-    </div>
   </div>
 
   <div class="card">
-    <div class="ribbon-wrapper"><div class="ribbon">RIBBON</div></div>
     <div class="card-image">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-4.png" alt="">
     </div>
@@ -536,13 +528,6 @@
     </div>
     <div class="card-copy">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
-    </div>
-    <div class="card-stats">
-      <ul>
-        <li>98<span>Items</span></li>
-        <li>298<span>Things</span></li>
-        <li>923<span>Objects</span></li>
-      </ul>
     </div>
   </div>
 
@@ -556,15 +541,7 @@
     <div class="card-copy">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     </div>
-    <div class="card-stats">
-      <ul>
-        <li>98<span>Items</span></li>
-        <li>298<span>Things</span></li>
-        <li>923<span>Objects</span></li>
-      </ul>
-    </div>
   </div>
-  
 </div>
 </div>
       </div>
@@ -590,17 +567,9 @@
     &lt;div class=&quot;card-copy&quot;&gt;
       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;card-stats&quot;&gt;
-      &lt;ul&gt;
-        &lt;li&gt;98&lt;span&gt;Items&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;298&lt;span&gt;Things&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;923&lt;span&gt;Objects&lt;/span&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;card&quot;&gt;
-    &lt;div class=&quot;ribbon-wrapper&quot;&gt;&lt;div class=&quot;ribbon&quot;&gt;RIBBON&lt;/div&gt;&lt;/div&gt;
     &lt;div class=&quot;card-image&quot;&gt;
       &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-4.png&quot; alt=&quot;&quot;&gt;
     &lt;/div&gt;
@@ -609,13 +578,6 @@
     &lt;/div&gt;
     &lt;div class=&quot;card-copy&quot;&gt;
       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;card-stats&quot;&gt;
-      &lt;ul&gt;
-        &lt;li&gt;98&lt;span&gt;Items&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;298&lt;span&gt;Things&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;923&lt;span&gt;Objects&lt;/span&gt;&lt;/li&gt;
-      &lt;/ul&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
@@ -629,15 +591,7 @@
     &lt;div class=&quot;card-copy&quot;&gt;
       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     &lt;/div&gt;
-    &lt;div class=&quot;card-stats&quot;&gt;
-      &lt;ul&gt;
-        &lt;li&gt;98&lt;span&gt;Items&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;298&lt;span&gt;Things&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;923&lt;span&gt;Objects&lt;/span&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
   &lt;/div&gt;
-  
 &lt;/div&gt;
 </code></pre>
 </td>
@@ -671,8 +625,6 @@
   $card-hover-background: lighten($card-background, 5%);
   $card-image-background: #DBD199;
   $card-image-hover-background: lighten($card-image-background, 5%);
-  $card-stats-color: lighten($base-accent-color, 10%);
-  $card-padding-for-absolute-stats: 5em;
   $card-margin: 1em;
 
   @include flex-basis(15em);
@@ -684,7 +636,6 @@
   box-shadow: 0 2px 4px darken($base-background-color, 10%);
   cursor: pointer;
   margin: 0 $card-margin $base-spacing $card-margin;
-  padding-bottom: $card-padding-for-absolute-stats;
   position: relative;
   position: relative;
 
@@ -698,32 +649,6 @@
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
       width: 100%;
-    }
-  }
-
-  .ribbon-wrapper {
-    $ribbon-background: $base-accent-color;
-    $ribbon-size: 85px;
-    @include size($ribbon-size);
-    overflow: hidden;
-    position: absolute;
-    right: -1px;
-    top: -1px;
-
-    .ribbon {
-      @include transform(rotate(45deg));
-      background-color: $ribbon-background;
-      box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-      color: white;
-      font-size: 0.8em;
-      font-weight: 800;
-      left: -5px;
-      line-height: 1.5em;
-      padding: 2px 7px;
-      position: relative;
-      text-align: center;
-      top: 15px;
-      width: 120px;
     }
   }
 
@@ -744,44 +669,6 @@
 
     p {
       margin: 0 0 ($base-spacing / 2);
-    }
-  }
-
-  .card-stats {
-    @include align-self(flex-end);
-    bottom: 0.5em;
-    overflow: auto;
-    padding: $base-spacing / 2;
-    position: absolute;
-
-    ul {
-      padding: 0;
-    }
-
-    li {
-      border-right: 1px solid transparentize($base-font-color, 0.8);
-      color: $card-stats-color;
-      display: inline;
-      float: left;
-      font-size: 1.2em;
-      font-weight: 800;
-      line-height: 1.1em;
-      padding: 0 0.7em;
-
-      &amp;:first-child {
-        padding-left: 0;
-      }
-
-      &amp;:last-child {
-        border-right: 0;
-      }
-
-      span {
-        color: $base-font-color;
-        display: block;
-        font-size: 0.7em;
-        font-weight: normal;
-      }
     }
   }
   

@@ -1010,14 +1010,13 @@ section.inner-content {
   box-shadow: 0 2px 4px #e6e6e6;
   cursor: pointer;
   margin: 0 1em 1.5em 1em;
-  padding-bottom: 5em;
   position: relative;
   position: relative; }
-  /* line 43, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .card .card-image {
     overflow: hidden;
     max-height: 150px; }
-    /* line 47, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .card .card-image img {
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
@@ -1026,34 +1025,7 @@ section.inner-content {
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
       width: 100%; }
-  /* line 56, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-  .card .ribbon-wrapper {
-    height: 85px;
-    width: 85px;
-    overflow: hidden;
-    position: absolute;
-    right: -1px;
-    top: -1px; }
-    /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-    .card .ribbon-wrapper .ribbon {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      background-color: #477DCA;
-      box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-      color: white;
-      font-size: 0.8em;
-      font-weight: 800;
-      left: -5px;
-      line-height: 1.5em;
-      padding: 2px 7px;
-      position: relative;
-      text-align: center;
-      top: 15px;
-      width: 120px; }
-  /* line 82, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  /* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .card .card-header {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -1064,62 +1036,27 @@ section.inner-content {
     font-weight: bold;
     line-height: 1.5em;
     padding: 0.5em 0.75em; }
-  /* line 92, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  /* line 63, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .card .card-copy {
     font-size: 0.9em;
     line-height: 1.5em;
     padding: 0.75em 0.75em; }
-    /* line 97, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    /* line 68, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .card .card-copy p {
       margin: 0 0 0.75em; }
-  /* line 102, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-  .card .card-stats {
-    -webkit-align-self: flex-end;
-    -moz-align-self: flex-end;
-    align-self: flex-end;
-    -ms-flex-item-align: end;
-    bottom: 0.5em;
-    overflow: auto;
-    padding: 0.75em;
-    position: absolute; }
-    /* line 109, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-    .card .card-stats ul {
-      padding: 0; }
-    /* line 113, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-    .card .card-stats li {
-      border-right: 1px solid rgba(51, 51, 51, 0.2);
-      color: #6f99d5;
-      display: inline;
-      float: left;
-      font-size: 1.2em;
-      font-weight: 800;
-      line-height: 1.1em;
-      padding: 0 0.7em; }
-      /* line 123, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-      .card .card-stats li:first-child {
-        padding-left: 0; }
-      /* line 127, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-      .card .card-stats li:last-child {
-        border-right: 0; }
-      /* line 131, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-      .card .card-stats li span {
-        color: #333;
-        display: block;
-        font-size: 0.7em;
-        font-weight: normal; }
-  /* line 140, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .card:focus, .card:hover {
     background-color: white; }
-    /* line 144, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .card:focus .card-image img, .card:hover .card-image img {
       background: #e2daac; }
-    /* line 148, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    /* line 81, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .card:focus .card-header, .card:hover .card-header {
       background-color: white; }
-  /* line 153, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  /* line 86, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .card:active {
     background-color: #f6f6f6; }
-    /* line 156, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    /* line 89, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .card:active .card-header {
       background-color: #f6f6f6; }
 
@@ -4201,6 +4138,41 @@ button {
     padding: .1em .5em;
     text-shadow: 0 0 1px black; }
 
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_ribbon.scss */
+.ribbon-box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #bbb;
+  position: relative; }
+
+/* line 7, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_ribbon.scss */
+.ribbon-wrapper {
+  height: 85px;
+  width: 85px;
+  overflow: hidden;
+  position: absolute;
+  right: -1px;
+  top: -1px; }
+  /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_ribbon.scss */
+  .ribbon-wrapper .ribbon {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #477dca;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 800;
+    left: -5px;
+    line-height: 1.5em;
+    padding: 2px 7px;
+    position: relative;
+    text-align: center;
+    top: 15px;
+    width: 120px; }
+
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-bar.scss */
 form.search-bar {
   position: relative; }
@@ -4447,6 +4419,35 @@ form.search-bar {
       /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
       .label-switch input[type="checkbox"]:checked + .checkbox:after {
         left: 22px; }
+
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_stats.scss */
+.stats {
+  padding: 0.75em; }
+  /* line 10, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_stats.scss */
+  .stats ul {
+    padding: 0; }
+  /* line 14, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_stats.scss */
+  .stats li {
+    border-right: 1px solid rgba(51, 51, 51, 0.2);
+    color: #6f99d5;
+    display: inline;
+    float: left;
+    font-size: 1.2em;
+    font-weight: 800;
+    line-height: 1.1em;
+    padding: 0 0.7em; }
+    /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_stats.scss */
+    .stats li:first-child {
+      padding-left: 0; }
+    /* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_stats.scss */
+    .stats li:last-child {
+      border-right: 0; }
+  /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_stats.scss */
+  .stats span {
+    color: #333;
+    display: block;
+    font-size: 0.7em;
+    font-weight: normal; }
 
 /* line 100, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_texture-legend.scss */
 .texture-examples {

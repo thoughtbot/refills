@@ -2393,6 +2393,84 @@ $(window).scroll (e) -&gt;
 </div>
     </section>
 
+    <section id="ribbon" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Ribbon</h6></div>
+        <div class="refill-centering">
+          <div class="ribbon-box">
+  <div class="ribbon-wrapper">
+    <div class="ribbon">Ribbon</div>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;div class=&quot;ribbon-box&quot;&gt;
+  &lt;div class=&quot;ribbon-wrapper&quot;&gt;
+    &lt;div class=&quot;ribbon&quot;&gt;Ribbon&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.ribbon-box {
+  @include size(100px);
+  border: 1px solid #bbb;
+  position: relative;
+}
+
+.ribbon-wrapper {
+  $base-accent-color: #477dca !default;
+  $ribbon-background: $base-accent-color;
+  $ribbon-size: 85px;
+
+  @include size($ribbon-size);
+  overflow: hidden;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+
+  .ribbon {
+    @include transform(rotate(45deg));
+    background-color: $ribbon-background;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 800;
+    left: -5px;
+    line-height: 1.5em;
+    padding: 2px 7px;
+    position: relative;
+    text-align: center;
+    top: 15px;
+    width: 120px;
+  }
+}
+</code></pre>
+</td>
+
+
+
+  </tr>
+</table>
+</div>
+    </section>
+
     <section id="video" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Responsive Video Embed</h6></div>
@@ -2823,6 +2901,94 @@ $(window).scroll (e) -&gt;
         }
       }
     }
+  }
+}
+</code></pre>
+</td>
+
+
+
+  </tr>
+</table>
+</div>
+    </section>
+
+    <section id="stats" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Stats</h6></div>
+        <div class="refill-centering"><div class="stats">
+  <ul>
+    <li>98<span>Items</span></li>
+    <li>298<span>Things</span></li>
+    <li>923<span>Objects</span></li>
+    <li>98<span>More</span></li>
+  </ul>
+</div>
+</div>
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;div class=&quot;stats&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;98&lt;span&gt;Items&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;298&lt;span&gt;Things&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;923&lt;span&gt;Objects&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;98&lt;span&gt;More&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.stats {
+  $base-spacing: 1.5em !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  $base-accent-color: #477dca !default;
+  $stats-color: lighten($base-accent-color, 10%);
+
+  padding: $base-spacing / 2;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    border-right: 1px solid transparentize($base-font-color, 0.8);
+    color: $stats-color;
+    display: inline;
+    float: left;
+    font-size: 1.2em;
+    font-weight: 800;
+    line-height: 1.1em;
+    padding: 0 0.7em;
+
+    &amp;:first-child {
+      padding-left: 0;
+    }
+
+    &amp;:last-child {
+      border-right: 0;
+    }
+  }
+
+  span {
+    color: $base-font-color;
+    display: block;
+    font-size: 0.7em;
+    font-weight: normal;
   }
 }
 </code></pre>
