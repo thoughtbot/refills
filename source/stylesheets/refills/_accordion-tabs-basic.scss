@@ -31,37 +31,37 @@
       // Rightmost link style in tab mode
       }
     }
+  }
 
-    a.tab-link {
-    // Link style in list mode
+  .tab-link {
+  // Link style in list mode
 
-      @include media($tab-mode) {
-      // Link style in tab mode
-      }
-
-      &:hover {
-      // Link hover
-      }
-
-      &:focus {
-      // Link focus
-      }
-
-      &.is-active {
-      // Active list item
-        @include media($tab-mode) {
-          // Active tab
-        }
-      }
+    @include media($tab-mode) {
+    // Link style in tab mode
     }
 
-    .tab-content {
-      display: none;
-      width: 100%;
+    &:hover {
+    // Link hover
+    }
 
+    &:focus {
+    // Link focus
+    }
+
+    &.is-active {
+    // Active list item
       @include media($tab-mode) {
-      float: left;
+        // Active tab
       }
+    }
+  }
+
+  .tab-content {
+    display: none;
+    width: 100%;
+
+    @include media($tab-mode) {
+      float: left;
     }
   }
 }
