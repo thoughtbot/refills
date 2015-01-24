@@ -2,7 +2,7 @@
   @include clearfix;
   background: $base-background-color;
   border-radius: $base-border-radius;
-  border: 1px solid silver;
+  border: $base-border;
   box-shadow: $base-shadow;
   line-height: $base-line-height;
   margin-bottom: 4em;

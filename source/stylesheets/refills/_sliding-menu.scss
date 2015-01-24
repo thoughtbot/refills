@@ -63,7 +63,7 @@
 }
 
 .sliding-menu-button {
-  @include button(flat, #477DCA);
+  @include button(flat, $action-color-dark);
   padding: 10px 16px;
   display: inline-block;
   cursor: pointer;
