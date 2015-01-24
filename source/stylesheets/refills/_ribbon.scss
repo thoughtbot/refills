@@ -1,11 +1,11 @@
 .ribbon-box {
   @include size(100px);
-  border: 1px solid #bbb;
+  background: $base-box-color;
+  border: $base-border;
   position: relative;
 }
 
 .ribbon-wrapper {
-  $action-color-dark: #477dca !default;
   $ribbon-background: $action-color-dark;
   $ribbon-size: 85px;
 

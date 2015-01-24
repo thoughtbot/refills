@@ -1,17 +1,10 @@
 .dropdown {
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $base-line-height: 1.5em !default;
-  $base-background-color: white !default;
-  $dark-color: #333 !default;
-  $large-screen: em(860) !default;
-  $base-font-color-dark: $dark-color !default;
   $dropdown-color: $base-font-color-dark;
   $dropdown-description-color: lighten($dropdown-color, 40%);
-  $dropdown-border: 1px solid silver;
+  $dropdown-border: $base-border;
   $dropdown-background: $base-background-color;
   $dropdown-background-hover: darken($dropdown-background, 3%);
-  $dropdown-inner-border: 1px solid silver;
+  $dropdown-inner-border: $base-border;
   $dropdown-height: 40px;
   $dropdown-padding: 1em;
   $dropdown-distance-from-menu: 50px;
@@ -104,7 +97,7 @@
       font-size: 1.4em;
       pointer-events: none;
       text-shadow: 0 -2px 2px transparentize(black, 0.7);
-      top: -0.7em;
+      top: -0.9em;
     }
   }
 

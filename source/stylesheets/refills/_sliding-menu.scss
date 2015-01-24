@@ -1,13 +1,11 @@
 .sliding-menu-content {  
-  $action-color-dark: #477DCA !default;
-  $dark-color: #333 !default;
   $sliding-menu-border-color: $dark-color;
-  $sliding-menu-background: lighten($sliding-menu-border-color, 5%);
-  $sliding-menu-color: #fff;
-  $sliding-menu-border: 1px solid $sliding-menu-border-color;
+  $sliding-menu-background: $base-box-color;
+  $sliding-menu-color: $base-font-color-dark;
+  $sliding-menu-border: $base-border;
   $sliding-menu-background-hover: $action-color-dark;
-  $sliding-menu-color-hover: #fff;
-  $sliding-menu-background-focus: lighten($sliding-menu-background, 5%);
+  $sliding-menu-color-hover: $base-font-color-light;
+  $sliding-menu-background-focus: $base-font-color-light;
 
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);

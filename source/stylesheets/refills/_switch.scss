@@ -1,6 +1,4 @@
 .label-switch {  
-  $action-color-dark: #477DCA !default;
-  $base-background-color: white !default;
   $switch-width: 52px;
   $switch-padding: 2px;
   $switch-height: 32px;
@@ -8,9 +6,10 @@
   $knob-size: $switch-height - ($switch-padding * 2);
   $knob-radius: $switch-height - ($switch-padding * 2);
   $knob-width: $knob-size;
-  $switch-background: $base-background-color;
-  $switch-border-background: darken($base-background-color, 9%);
-  $switch-shadow: 0 2px 5px transparentize(black, 0.6);
+  $knob-background: $base-font-color-light;
+  $switch-background: $base-box-color;
+  $switch-border-background: $base-border-color;
+  $switch-shadow: $base-shadow;
 
   border-radius: $switch-radius;
   cursor: pointer;
@@ -51,7 +50,7 @@
         @include position(absolute, 2px 0 0 2px);
         @include transition(all 0.3s ease);
         @include size($knob-size);
-        background: $switch-background;
+        background: $knob-background;
         border-radius: $knob-radius;
         box-shadow: $switch-shadow;
         content: "";

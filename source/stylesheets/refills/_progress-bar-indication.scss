@@ -1,17 +1,11 @@
 .progress-bar-indication {  
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $base-background-color: white !default;
-  $base-line-height: 1.5em !default;
-  $action-color-dark: #477DCA !default;
-  $progress-border-color: $base-border-color;
-  $progress-border: 1px solid $progress-border-color;
+  $progress-border: $base-border;
+  $progress-background: $base-box-color;
   $progress-meter-border-color: $action-color-dark;
   $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
   $progress-meter-color: $progress-meter-border-color;
-  $progress-background: darken($base-background-color, 5);
   $progress-animation-duration: 0.7s;
-  $progress-color: white;
+  $progress-color: $base-font-color-light;
 
   background-color: $progress-background;
   border-radius: $base-border-radius;
@@ -26,7 +20,8 @@
     background-repeat: repeat-x;
     background-size: 40px 40px;
     border-bottom-right-radius: 0;
-    border-radius: $base-border-radius /1.5;
+    border-top-left-radius: $base-border-radius /1.5;
+    border-top-right-radius: $base-border-radius /1.5;
     border-top-right-radius: 0;
     border: $progress-meter-border;
     display: block;
@@ -40,7 +35,6 @@
     line-height: $base-line-height;
     margin: 0;
     padding: .1em .5em;
-    line-height: $base-line-height;
     text-shadow: 0 0 1px black;
   }
 }

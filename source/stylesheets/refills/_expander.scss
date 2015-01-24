@@ -1,16 +1,7 @@
 .expander {  
-  $base-font-size: 1em !default;
-  $base-line-height: 1.5em !default;
-  $base-spacing: 1.5em !default;
-  $action-color-dark: #477DCA !default;
-  $action-color-dark: $action-color-dark !default;
-  $dark-color: #333 !default;
-  $light-color: #DDD !default;
-  $base-font-color-dark: $dark-color !default;
   $expander-arrow-width: 0.7em;
-  $expander-toggle-size: 1em;
+  $expander-toggle-size: $base-font-size;
   $expander-toggle-arrow-size: $expander-toggle-size;
-  $expander-toggle-margin: 1em;
 
   width: 60%;
 
@@ -20,7 +11,7 @@
     color: $action-color-dark;
     cursor: pointer;
     display: block;
-    font-size: $expander-toggle-size;
+    font-size: $base-font-size;
     margin-bottom: $expander-toggle-size;
     padding-bottom: $expander-toggle-size / 4;
     text-decoration: none;
