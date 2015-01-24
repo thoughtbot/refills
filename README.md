@@ -11,9 +11,9 @@
 
 ## Requirements
 
-- [Sass](https://github.com/sass/sass) 3.3+
-- [Bourbon](https://github.com/thoughtbot/bourbon) 4.0+
-- [Neat](https://github.com/thoughtbot/neat) 1.6+
+- [Sass](https://github.com/sass/sass) 3.4+
+- [Bourbon](https://github.com/thoughtbot/bourbon) 4.1+
+- [Neat](https://github.com/thoughtbot/neat) 1.7+
 
 ## Installation
 
