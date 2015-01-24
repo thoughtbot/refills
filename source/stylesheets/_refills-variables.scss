@@ -28,7 +28,7 @@ $success-color: #e6efc2;
 
 // Font Colors
 $base-font-color-dark: $dark-color;
-$base-font-color-light: transparentize(#fff, .2);
+$base-font-color-light: #fff;
 $action-color-dark: #477dca;
 $action-color-light: lighten($action-color-dark, 25);
 
@@ -48,10 +48,12 @@ $medium-screen: em(640);
 $large-screen: em(860);
 
 // $inset-color ? For accordion
-// $inset-inner-shadow ?
+// $inset-inner-shadow ? progress bar
 // $theme-color ? for card image etc
 // link hover color
 
 //transparentize($base-font-color-light, 0.5) change!
 
 // change all variable values and see what breaks!
+
+// check if there are margin-bottom: 0 0 0 0;

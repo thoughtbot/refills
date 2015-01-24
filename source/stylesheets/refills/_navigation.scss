@@ -1,7 +1,7 @@
 header.navigation {
   $navigation-padding: $base-spacing;
   $navigation-background: $dark-color;
-  $navigation-color: $base-font-color-light;
+  $navigation-color: transparentize($base-font-color-light, .2);
   $navigation-color-hover: transparentize($base-font-color-light, 0.5);
   $navigation-height: 60px;
   $navigation-nav-button-background: $action-color-dark;

@@ -1,13 +1,10 @@
 .stats {
-  $base-spacing: 1.5em !default;
-  $dark-color: #333 !default;
-  $base-font-color-dark: $dark-color !default;
-  $action-color-dark: #477dca !default;
-  $stats-color: lighten($action-color-dark, 10%);
+  $stats-color: $action-color-dark;
 
   padding: $base-spacing / 2;
 
   ul {
+    @include clearfix;
     padding: 0;
   }
 

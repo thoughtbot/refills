@@ -1,20 +1,7 @@
 .modal {
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $base-background-color: white !default;
-  $base-font-size: 1em !default;
-  $base-line-height: 1.5em !default;
-  $action-color-dark: #477DCA !default;
-  $dark-color: #333 !default;
-  $light-color: #DDD !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
-  $base-font-color-dark: $dark-color !default;
-  $modal-padding: 3em;
+  $modal-padding: $base-spacing;
   $modal-background: $base-background-color;
   $modal-close-color: $light-color;
-  $modal-image-height: 135px;
-  $modal-image-width: $modal-image-height;
   $modal-trigger-image-width: 300px;
 
   label {
@@ -108,7 +95,7 @@
 
     h1 {
       color: $base-font-color-dark;
-      margin-bottom: 0 0 0.6em 0;
+      margin: 0 0 0.6em 0;
       text-align: left;
       text-transform: capitalize;
     }

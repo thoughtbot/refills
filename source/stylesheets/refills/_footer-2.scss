@@ -97,7 +97,7 @@
 
       @include media($large-screen) {
         float: right;
-        margin: $small-spacing 0 0 $base-spacing;
+        margin: 0 0 0 $base-spacing;
       }
 
       li {

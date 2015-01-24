@@ -1,7 +1,6 @@
 form.search-bar {  
-  $search-bar-border-color: $base-border-color;
-  $search-bar-border: 1px solid $search-bar-border-color;
-  $search-bar-background: lighten($search-bar-border-color, 10%);
+  $search-bar-border: $base-border;
+  $search-bar-background: $base-background-color;
 
   position: relative;
 
