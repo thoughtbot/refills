@@ -1,4 +1,5 @@
 .accordion-tabs {
+  $tab-link-color: $dark-color;
   $tab-border: $base-border;
   $tab-content-background: $base-box-color;
   $tab-active-background: $tab-content-background;
@@ -42,7 +43,7 @@
   .tab-link {
     background-color: $tab-inactive-color;
     border-top: $tab-border;
-    color: $dark-color;
+    color: $tab-link-color;
     display: block;
     font-weight: bold;
     padding: $base-spacing/2 $gutter/2;
