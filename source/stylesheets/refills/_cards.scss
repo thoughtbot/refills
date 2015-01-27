@@ -8,7 +8,7 @@
     $card-background: $base-box-color;
     $card-header-background: $card-background;
     $card-hover-background: lighten($card-background, 5%);
-    $card-image-background: #DBD199;
+    $card-image-background: #dbd199;
     $card-image-hover-background: lighten($card-image-background, 5%);
     $card-margin: $small-spacing;
 
@@ -16,45 +16,12 @@
     @include flex-grow(1);
     @include transition (all 0.2s ease-in-out);
     background-color: $card-background;
-    border-radius: $base-border-radius;
     border: $card-border;
+    border-radius: $base-border-radius;
     box-shadow: $base-shadow;
     cursor: pointer;
     margin: 0 $card-margin $base-spacing $card-margin;
     position: relative;
-
-    .card-image {
-      overflow: hidden;
-      max-height: 150px;
-
-      img {
-        @include transition (all 0.2s ease-in-out);
-        background: $card-image-background;
-        border-top-left-radius: $base-border-radius;
-        border-top-right-radius: $base-border-radius;
-        width: 100%;
-      }
-    }
-
-    .card-header {
-      @include transition (all 0.2s ease-in-out);
-      background-color: $card-header-background;
-      border-bottom: $card-border;
-      border-radius: $base-border-radius $base-border-radius 0 0;
-      font-weight: bold;
-      line-height: 1.5em;
-      padding: ($base-spacing / 3) ($base-spacing / 2);
-    }
-
-    .card-copy {
-      font-size: 0.9em;
-      line-height: 1.5em;
-      padding: ($base-spacing / 2) ($base-spacing / 2);
-
-      p {
-        margin: 0 0 ($base-spacing / 2);
-      }
-    }
     
     &:focus,
     &:hover {
@@ -75,6 +42,39 @@
       .card-header {
         background-color: $card-background;
       }
+    }
+  }
+  
+  .card-image {
+    max-height: 150px;
+    overflow: hidden;
+
+    img {
+      @include transition (all 0.2s ease-in-out);
+      background: $card-image-background;
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      width: 100%;
+    }
+  }
+
+  .card-header {
+    @include transition (all 0.2s ease-in-out);
+    background-color: $card-header-background;
+    border-bottom: $card-border;
+    border-radius: $base-border-radius $base-border-radius 0 0;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: ($base-spacing / 3) ($base-spacing / 2);
+  }
+
+  .card-copy {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: ($base-spacing / 2) ($base-spacing / 2);
+
+    p {
+      margin: 0 0 ($base-spacing / 2);
     }
   }
 }
