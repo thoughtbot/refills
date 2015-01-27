@@ -1,17 +1,17 @@
 .cards {
+  $card-border: $base-border;
+  $card-background: $base-box-color;
+  $card-header-background: $card-background;
+  $card-hover-background: lighten($card-background, 5%);
+  $card-image-background: #dbd199;
+  $card-image-hover-background: lighten($card-image-background, 5%);
+  $card-margin: $small-spacing;
+
   @include display(flex);
   @include flex-wrap(wrap);
   @include justify-content(space-between);
 
   .card {
-    $card-border: $base-border;
-    $card-background: $base-box-color;
-    $card-header-background: $card-background;
-    $card-hover-background: lighten($card-background, 5%);
-    $card-image-background: #dbd199;
-    $card-image-hover-background: lighten($card-image-background, 5%);
-    $card-margin: $small-spacing;
-
     @include flex-basis(15em);
     @include flex-grow(1);
     @include transition (all 0.2s ease-in-out);
@@ -44,7 +44,7 @@
       }
     }
   }
-  
+
   .card-image {
     max-height: 150px;
     overflow: hidden;
