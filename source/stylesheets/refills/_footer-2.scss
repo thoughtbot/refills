@@ -25,9 +25,9 @@
 // }
 
 .footer-2 {
-  $footer-background: $dark-color;
-  $footer-link-color: $base-font-color-light;
-  $footer-link-color-hover: transparentize($base-font-color-light, 0.5);
+  $footer-background: $base-box-color;
+  $footer-color: $base-font-color-on-box;
+  $footer-color-hover: transparentize($base-font-color-on-box, 0.5);
 
   background: $footer-background;
   padding: $base-spacing;
@@ -73,12 +73,12 @@
   }
 
   ul li a {
-    color: $footer-link-color;
+    color: $footer-color;
     text-decoration: none;
 
     &:focus,
     &:hover {
-      color: $footer-link-color-hover;
+      color: $footer-color-hover;
     }
   }
 

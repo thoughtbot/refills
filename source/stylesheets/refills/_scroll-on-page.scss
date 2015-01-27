@@ -1,4 +1,5 @@
 .scroll-on-page {
+  color: $base-font-color-on-background;
   display: inline-block;
 
   a {
@@ -13,7 +14,7 @@
   }
 
   .scroll-on-page-link {
-    border-bottom: 1px solid transparentize($action-color-dark, 0.8);
+    border-bottom: $base-border;
     display: block;
     margin-right: $base-spacing;
     outline: none;
@@ -30,7 +31,6 @@
     }
 
     p {
-      color: $base-font-color-dark;
       line-height: $base-line-height;
     }
 

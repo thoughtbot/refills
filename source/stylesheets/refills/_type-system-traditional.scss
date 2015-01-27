@@ -18,7 +18,7 @@ article.type-system-traditional {
   }
 
   p {
-    color: $base-font-color-dark;
+    color: $base-font-color-on-background;
     line-height: $base-line-height;
   }
 
@@ -86,7 +86,7 @@ article.type-system-traditional {
   }
 
   p.date {
-    color: transparentize($base-font-color-dark, 0.6);
+    color: transparentize($base-font-color-on-background, 0.6);
     font-family: $serif;
     font-style: italic;
     margin-bottom: .3em;

@@ -1,11 +1,11 @@
 .sliding-menu-content {  
-  $sliding-menu-border-color: $dark-color;
+  $sliding-menu-border-color: $base-font-color-on-box;
   $sliding-menu-background: $base-box-color;
-  $sliding-menu-color: $base-font-color-dark;
+  $sliding-menu-color: $base-font-color-on-background;
   $sliding-menu-border: $base-border;
   $sliding-menu-background-hover: $action-color-dark;
-  $sliding-menu-color-hover: $base-font-color-light;
-  $sliding-menu-background-focus: $base-font-color-light;
+  $sliding-menu-color-hover: $base-font-color-on-box;
+  $sliding-menu-background-focus: $base-font-color-on-box;
 
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);

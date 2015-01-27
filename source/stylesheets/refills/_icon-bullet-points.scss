@@ -3,6 +3,7 @@
 
   @include display(flex);
   @include flex-wrap(wrap);
+  color: $base-font-color-on-background;
   margin-bottom: $base-line-height;
   margin: 1em;
   overflow: auto;
@@ -40,7 +41,7 @@
   }
 
   h2 {
-    border-bottom: 1px solid transparentize($base-font-color-dark, 0.8);
+    border-bottom: 1px solid transparentize($base-font-color-on-background, 0.8);
     display: inline-block;
     font-size: $icon-bullet-size / 2.5;
     margin: 0 0 ($icon-bullet-size / 6) 0;
@@ -52,7 +53,6 @@
   }
 
   p {
-    color: $base-font-color-dark;
     line-height: $base-line-height;
   }
 

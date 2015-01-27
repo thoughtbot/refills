@@ -1,5 +1,6 @@
 .accordion-tabs {
-  $tab-link-color: $dark-color;
+  $tab-link-color: $base-font-color-on-box;
+  $tab-color: $base-font-color-on-box;
   $tab-border: $base-border;
   $tab-content-background: $base-box-color;
   $tab-active-background: $tab-content-background;
@@ -7,6 +8,7 @@
   $tab-mode: $medium-screen;
 
   @include clearfix;
+  color: $tab-color;
   line-height: 1.5;
   margin-bottom: $base-spacing;
   padding: 0;

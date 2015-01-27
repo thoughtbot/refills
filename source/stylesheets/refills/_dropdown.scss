@@ -1,5 +1,5 @@
 .dropdown {
-  $dropdown-color: $base-font-color-dark;
+  $dropdown-color: $base-font-color-on-background;
   $dropdown-description-color: lighten($dropdown-color, 40%);
   $dropdown-border: $base-border;
   $dropdown-background: $base-background-color;
@@ -64,7 +64,7 @@
   }
 
   .dropdown-button:after {
-    color: $base-font-color-dark;
+    color: $base-font-color-on-background;
     content: "\25BE";
     display: block;
     position: absolute;

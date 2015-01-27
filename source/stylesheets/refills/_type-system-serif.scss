@@ -19,7 +19,7 @@ article.type-system-serif {
   }
 
   p {
-    color: $base-font-color-dark;
+    color: $base-font-color-on-background;
     line-height: $base-line-height;
   }
 
@@ -84,7 +84,7 @@ article.type-system-serif {
   }
 
   p.date {
-    color: transparentize($base-font-color-dark, .6);
+    color: transparentize($base-font-color-on-background, .6);
     font-family: $serif-2;
     font-size: 0.9em;
     font-style: italic;

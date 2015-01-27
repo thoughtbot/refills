@@ -1,10 +1,10 @@
 .button-group {  
   $button-group-background: $base-background-color;
-  $button-group-color: $base-font-color-dark;
+  $button-group-color: $base-font-color-on-background;
   $button-group-border: $base-border;
   $button-group-inner-border: $base-border;
   $button-group-background-checked: $action-color-dark;
-  $button-group-color-checked: $base-font-color-light;
+  $button-group-color-checked: $base-font-color-on-box;
   $button-group-border-checked: darken($button-group-background-checked, 15%);
 
   input {

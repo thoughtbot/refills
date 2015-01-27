@@ -9,7 +9,7 @@
   }
 
   li {
-    border-right: 1px solid transparentize($base-font-color-dark, 0.8);
+    border-right: 1px solid transparentize($base-font-color-on-background, 0.8);
     color: $stats-color;
     display: inline;
     float: left;
@@ -28,7 +28,7 @@
   }
 
   span {
-    color: $base-font-color-dark;
+    color: $base-font-color-on-background;
     display: block;
     font-size: 0.7em;
     font-weight: normal;

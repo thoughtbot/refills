@@ -52,7 +52,7 @@
 
   a.vertical-tab-accordion-heading,
   a.vertical-tab {
-    color: $dark-color;
+    color: $base-font-color-on-box;
   }
 
   .vertical-tab:focus {
@@ -79,7 +79,7 @@
     padding: $base-spacing $gutter;
 
     p {
-      color: $base-font-color-dark;
+      color: $base-font-color-on-background;
       line-height: $base-line-height;
     }
 

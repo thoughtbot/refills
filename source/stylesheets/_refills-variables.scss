@@ -17,7 +17,7 @@ $base-z-index: 0;
 
 // Colors
 $dark-color: #333;
-$light-color: #ddd;
+$light-color: #fff;
 $base-background-color: #fff;
 
 // Notification Colors
@@ -27,16 +27,16 @@ $notice-color: #e5edf8;
 $success-color: #e6efc2;
 
 // Font Colors
-$base-font-color-dark: $dark-color;
-$base-font-color-light: #fff;
+$base-font-color-on-background: tomato;
+$base-font-color-on-box: teal;
 $action-color-dark: #477dca;
 $action-color-light: lighten($action-color-dark, 25);
 
 // Box (General Element)
-$base-border-color: $light-color;
+$base-box-color: darken($base-background-color, 3%);
+$base-border-color: darken($base-box-color, 10%);
 $base-border: 1px solid $base-border-color;
-$base-box-color: lighten($base-border-color, 10);
-$base-shadow: 0 1px 2px transparentize($dark-color, 0.8);
+$base-shadow: 0 1px 2px transparentize($base-font-color-on-box, 0.8);
 
 // Forms
 $form-background: #fff;
@@ -52,7 +52,7 @@ $large-screen: em(860);
 // $theme-color ? for card image etc
 // link hover color
 
-//transparentize($base-font-color-light, 0.5) change!
+//transparentize($base-font-color-on-box, 0.5) change!
 
 // change all variable values and see what breaks!
 

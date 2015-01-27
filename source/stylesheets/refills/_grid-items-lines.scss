@@ -8,7 +8,7 @@
   $grid-item-border: $base-border; 
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
-  $grid-item-color: $base-font-color-dark;
+  $grid-item-color: $base-font-color-on-background;
   $grid-item-height: 14em;
 
   @include clearfix;
@@ -42,7 +42,6 @@
       display: block;
       height: 2.5em;
       margin-bottom: 1.2em;
-      opacity: 0.2;
     }
 
   .grid-item h1 {

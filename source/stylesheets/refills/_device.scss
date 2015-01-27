@@ -5,16 +5,14 @@
   $device-screen-height: 25em;
   $device-background: darken(gray, 40%);
   $device-backside-background: darken($device-background, 10%);
-  $device-text-color: $base-font-color-light;
+  $device-text-color: $base-font-color-on-box;
   $device-background-top: #162C4C;
   $device-background-bottom: #0A120D;
   $gradient-angle: 10deg;
-  $device-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
   $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg';
 
-  @include background(url($device-image), linear-gradient($gradient-angle, $device-background-bottom, $device-background-top), no-repeat $device-background-top scroll);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: $base-box-color;
+  border: $base-border;
   min-height: 20em;
   width: 100%;
 

@@ -1,8 +1,8 @@
 .footer {
-  $footer-background: $dark-color;
-  $footer-color: $base-font-color-light;
-  $footer-link-color: $base-font-color-light;
-  $footer-link-color-hover: transparentize($base-font-color-light, 0.5);
+  $footer-color: $base-font-color-on-box;
+  $footer-background: $base-box-color;
+  $footer-link-color: $base-font-color-on-box;
+  $footer-link-color-hover: transparentize($base-font-color-on-box, 0.5);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;

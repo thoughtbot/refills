@@ -543,7 +543,7 @@ footer.refills-footer {
   $refills-spacing: 1.5em;
   $refills-accent-color: #477dca;
   $refills-link-color: $refills-accent-color;
-  $dark-color: #333;
+  $base-font-color-on-box: #333;
   $light-color: #ddd;
   $refills-line-height: 1.5em;
 
@@ -587,7 +587,7 @@ footer.refills-footer {
     .tab-link-type-system {
       background-color: transparent;
       border-bottom: 1px solid $tab-border-color;
-      color: $dark-color;
+      color: $base-font-color-on-box;
       display: block;
       font-size: 0.9em;
       font-weight: 200;

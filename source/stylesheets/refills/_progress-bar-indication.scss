@@ -5,7 +5,7 @@
   $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
   $progress-meter-color: $progress-meter-border-color;
   $progress-animation-duration: 0.7s;
-  $progress-color: $base-font-color-light;
+  $progress-color: $base-font-color-on-box;
 
   background-color: $progress-background;
   border-radius: $base-border-radius;

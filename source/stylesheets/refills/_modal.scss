@@ -94,14 +94,14 @@
     }
 
     h1 {
-      color: $base-font-color-dark;
+      color: $base-font-color-on-background;
       margin: 0 0 0.6em 0;
       text-align: left;
       text-transform: capitalize;
     }
 
     p {
-      color: $base-font-color-dark;
+      color: $base-font-color-on-background;
       line-height: $base-line-height;
     }
 
@@ -110,7 +110,7 @@
     }
 
     .modal-content {
-      color: $base-font-color-dark;
+      color: $base-font-color-on-background;
 
       @include media($medium-screen) {
         @include columns(2 8em);

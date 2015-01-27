@@ -1,6 +1,6 @@
 .tooltip-item {  
   $tooltip-background: $base-background-color;
-  $tooltip-color: $base-font-color-dark;
+  $tooltip-color: $base-font-color-on-background;
   $tooltip-max-width: 16em;
   $tooltip-arrow-width: 8px;
   $tooltip-shadow: $base-shadow;
@@ -40,7 +40,7 @@
     z-index: 10;
 
     p {
-      color: $base-font-color-dark;
+      color: $base-font-color-on-background;
       line-height: $base-line-height;
       margin: 0;
     }

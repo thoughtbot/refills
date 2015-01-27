@@ -1,6 +1,7 @@
 .comment {
+  $comment-color: $base-font-color-on-background;
   $comment-image-width: 4em;
-  $comment-color: $base-font-color-dark;
+  $comment-color: $base-font-color-on-background;
   $comment-background: lighten($action-color-dark, 15%);
   $comment-detail-color: transparentize($comment-color, 0.5);
   $comment-image-vert-alignment: top;
@@ -37,6 +38,7 @@
   }
 
   .comment-content {
+    color: $comment-color;
     width: 100%;
 
     h1 {

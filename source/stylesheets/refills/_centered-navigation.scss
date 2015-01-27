@@ -1,9 +1,9 @@
 .centered-navigation {
   $centered-navigation-padding: $small-spacing;
   $centered-navigation-logo-height: 2em;
-  $centered-navigation-background: $dark-color;
-  $centered-navigation-color: transparentize($base-font-color-light, .2);
-  $centered-navigation-color-hover: transparentize($base-font-color-light, 0.5);
+  $centered-navigation-background: $base-box-color;
+  $centered-navigation-color: $base-font-color-on-box;
+  $centered-navigation-color-hover: transparentize($base-font-color-on-box, 0.5);
   $centered-navigation-height: 60px;
   $centered-navigation-item-padding: 1em;
   $centered-navigation-submenu-padding: 1em;
@@ -12,7 +12,7 @@
   $horizontal-bar-mode: $large-screen;
 
   background-color: $centered-navigation-background;
-  border-bottom: 1px solid darken($centered-navigation-background, 6%);
+  border-bottom: $base-border;
   min-height: $centered-navigation-height;
   width: 100%;
   z-index: 9999;
