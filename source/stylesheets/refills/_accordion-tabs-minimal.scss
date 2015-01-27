@@ -1,9 +1,9 @@
 .accordion-tabs-minimal {
   $tab-link-color: $base-font-color-on-background;
   $tab-color: $base-font-color-on-background;
-  $tab-border: $base-border;
-  $tab-active-background: $base-background-color;
-  $tab-inactive-color: $base-background-color;
+  $tab-border: $base-outline;
+  $tab-active-background: $base-background;
+  $tab-inactive-color: $base-background;
   $tab-mode: $medium-screen;
 
   @include clearfix;

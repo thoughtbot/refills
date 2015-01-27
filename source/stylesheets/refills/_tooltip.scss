@@ -1,15 +1,16 @@
 .tooltip-item {  
-  $tooltip-background: $base-background-color;
+  $tooltip-border: $base-outline;
+  $tooltip-background: $base-background;
   $tooltip-color: $base-font-color-on-background;
   $tooltip-max-width: 16em;
   $tooltip-arrow-width: 8px;
-  $tooltip-shadow: $base-shadow;
+  $tooltip-shadow: $base-box-shadow;
   $tooltip-distance-from-item: 3em;
   $tooltip-arrow-distance-from-box: -1.3em;
 
   background: $tooltip-background;
   border-radius: $base-border-radius;
-  border: $base-border;
+  border: $tooltip-border;
   display: inline-block;
   padding: 0.5em 1em;
   position: relative;

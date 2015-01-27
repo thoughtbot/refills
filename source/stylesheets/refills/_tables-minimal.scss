@@ -1,13 +1,15 @@
 .table-minimal {
-  $table-border-color: $base-border-color;
-  $table-border: $base-border;
-  $table-background: $base-background-color;
-  $table-header-background: $base-background-color;
+  $table-color: $base-font-color-on-background;
+  $table-border-color: $base-outline-color;
+  $table-border: $base-outline;
+  $table-background: $base-background;
+  $table-header-background: $base-background;
   $table-hover-background: darken($table-background, 2);
   $table-stripe-background: darken($table-background, 4);
   $table-stripe-background-hover: darken($table-stripe-background, 5);
   $table-padding: .75em 1em;
 
+  color: $table-color;
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;

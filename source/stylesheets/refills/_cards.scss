@@ -1,7 +1,7 @@
 .cards {
   $card-color: $base-font-color-on-box;
   $card-border: $base-border;
-  $card-background: $base-box-color;
+  $card-background: $base-box-background;
   $card-header-background: $card-background;
   $card-hover-background: lighten($card-background, 5%);
   $card-image-background: #dbd199;
@@ -19,7 +19,7 @@
     background-color: $card-background;
     border: $card-border;
     border-radius: $base-border-radius;
-    box-shadow: $base-shadow;
+    box-shadow: $base-box-shadow;
     color: $card-color;
     cursor: pointer;
     margin: 0 $card-margin $base-spacing $card-margin;

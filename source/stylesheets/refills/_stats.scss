@@ -1,5 +1,6 @@
 .stats {
   $stats-color: $action-color-dark;
+  $stats-text-color: $base-font-color-on-background;
 
   padding: $base-spacing / 2;
 
@@ -28,7 +29,7 @@
   }
 
   span {
-    color: $base-font-color-on-background;
+    color: $stats-text-color;
     display: block;
     font-size: 0.7em;
     font-weight: normal;

@@ -1,10 +1,11 @@
 .accordion-tabs {
   $tab-link-color: $base-font-color-on-box;
   $tab-color: $base-font-color-on-box;
+  $tab-color-inactive: $base-font-color-on-background;
   $tab-border: $base-border;
-  $tab-content-background: $base-box-color;
+  $tab-content-background: $base-box-background;
   $tab-active-background: $tab-content-background;
-  $tab-inactive-color: $base-background-color;
+  $tab-inactive-color: $base-background;
   $tab-mode: $medium-screen;
 
   @include clearfix;
@@ -75,6 +76,9 @@
         border-bottom-color: $tab-active-background;
         margin-bottom: -1px;
       }
+    }
+    &:not(.is-active) {
+      color: $tab-color-inactive;
     }
   }
 

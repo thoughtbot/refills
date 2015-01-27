@@ -6,10 +6,10 @@
   $knob-size: $switch-height - ($switch-padding * 2);
   $knob-radius: $switch-height - ($switch-padding * 2);
   $knob-width: $knob-size;
-  $knob-background: $base-font-color-on-box;
-  $switch-background: $base-box-color;
-  $switch-border-background: $base-border-color;
-  $switch-shadow: $base-shadow;
+  $knob-background: $base-background;
+  $switch-background: $base-background-inset;
+  $switch-border-background: $base-outline-color;
+  $switch-shadow: $base-box-shadow;
 
   border-radius: $switch-radius;
   cursor: pointer;

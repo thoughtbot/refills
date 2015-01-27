@@ -1,9 +1,11 @@
-.side-image {  
+.side-image {
+  $side-image-color: $base-font-color-on-box;
   $side-image-background-top: #B5EBEB;
   $side-image-background-bottom: #5DAC5D;
-  $side-image-content-background: $base-box-color;
+  $side-image-content-background: $base-box-background;
   $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
 
+  color: $side-image-color;
   background: $side-image-content-background;
 
   @include media($large-screen) {
@@ -52,7 +54,6 @@
     }
 
     p {
-      color: $base-font-color-on-background;
       line-height: $base-line-height;
       margin-bottom: 3em;
     }

@@ -1,11 +1,12 @@
 .hover-tile-outer {
   $hover-tile-height: 10em;
+  $hover-tile-color: $base-font-color-on-box;
 
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
   background-position: top;
   background-size: cover;
-  background-color: beige;
-  border: $base-border;
+  background-color: $base-box-background;
+  color: $hover-tile-color;
   cursor: pointer;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
@@ -26,7 +27,6 @@
   .hover-tile {
     @include transition(all, 0.2s ease-in-out);
     background: inherit;
-    color: white;
     height: inherit;
     overflow: hidden;
     padding: $base-spacing;
@@ -35,13 +35,12 @@
   .hover-tile-hidden {
     background: transparentize(#000, 0.5);
 
-    p {
-      color: transparentize(#fff, 0.3);
-      line-height: $base-line-height;
-    }
-
     h4 {
       margin: 0 0 0.5em 0;
+    }
+    
+    p {
+      line-height: $base-line-height;
     }
   }
 }

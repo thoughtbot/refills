@@ -11,7 +11,7 @@
   $gradient-angle: 10deg;
   $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg';
 
-  background: $base-box-color;
+  background: $base-box-background;
   border: $base-border;
   min-height: 20em;
   width: 100%;
@@ -78,7 +78,7 @@
         background-image: url($device-screen-image);
         background-size: cover;
         border-radius: 0.2em;
-        box-shadow: inset $base-shadow;
+        box-shadow: inset $base-box-shadow;
         margin: auto;
       }
     }

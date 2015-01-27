@@ -1,6 +1,6 @@
 .footer {
   $footer-color: $base-font-color-on-box;
-  $footer-background: $base-box-color;
+  $footer-background: $base-box-background;
   $footer-link-color: $base-font-color-on-box;
   $footer-link-color-hover: transparentize($base-font-color-on-box, 0.5);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);

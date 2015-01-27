@@ -3,9 +3,9 @@
 }
 
 .grid-items-lines {
-  $grid-items-background: $base-background-color;
-  $grid-item-background: $base-background-color;
-  $grid-item-border: $base-border; 
+  $grid-items-background: $base-background;
+  $grid-item-background: $base-background;
+  $grid-item-border: $base-outline; 
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
   $grid-item-color: $base-font-color-on-background;

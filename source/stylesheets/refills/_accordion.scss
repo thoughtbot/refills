@@ -1,10 +1,10 @@
 .accordion {  
-  $accordion-menu-color: $base-font-color-on-background;
+  $accordion-menu-color: $base-font-color-on-box;
   $accordion-menu-border: $base-border;
-  $accordion-menu-background: $base-box-color;
+  $accordion-menu-background: $base-box-background;
   $accordion-menu-hover: lighten($accordion-menu-background, 2%);
   $accordion-menu-sub-background: darken($accordion-menu-background, 5%);
-  $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6%);
+  $accordion-menu-sub-inset: $base-box-shadow-inset;
   $accordion-menu-sub-hover: lighten($accordion-menu-sub-background, 2%);
   $accordion-menu-list-padding: $small-spacing $gutter;
   
@@ -47,7 +47,7 @@
 
       &:first-child {
         border-top: $accordion-menu-border;
-        box-shadow: inset $base-shadow;
+        box-shadow: $accordion-menu-sub-inset;
       }
       
       &:focus,

@@ -1,6 +1,6 @@
 .ribbon-box {
   @include size(100px);
-  background: $base-box-color;
+  background: $base-box-background;
   border: $base-border;
   position: relative;
 }
@@ -18,7 +18,7 @@
   .ribbon {
     @include transform(rotate(45deg));
     background-color: $ribbon-background;
-    box-shadow: $base-shadow;
+    box-shadow: $base-box-shadow;
     color: #fff;
     font-size: 0.8em;
     font-weight: 800;

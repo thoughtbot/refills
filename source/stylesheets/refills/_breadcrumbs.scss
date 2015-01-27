@@ -1,8 +1,8 @@
 .breadcrumb {   
-  $breadcrumb-border: $base-border;
+  $breadcrumb-border: $base-outline;
   $breadcrumb-height: $base-spacing * 1.5;
-  $breadcrumb-arrow-color: $base-border-color;
-  $breadcrumb-background: $base-background-color;
+  $breadcrumb-arrow-color: $base-outline-color;
+  $breadcrumb-background: $base-background;
   $breadcrumb-inactive-hover-color: $breadcrumb-background;
   $breadcrumb-color: $base-font-color-on-background;
   $breadcrumb-color-hover: $action-color-dark;

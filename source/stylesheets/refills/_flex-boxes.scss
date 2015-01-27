@@ -1,7 +1,7 @@
 .flex-boxes {
   $flex-box-color: $base-font-color-on-box;
   $flex-box-border: $base-border;
-  $flex-box-background: $base-box-color;
+  $flex-box-background: $base-box-background;
   $flex-box-gutter: 0.4em;
   $flex-box-width: 18em;
 
@@ -19,7 +19,7 @@
     @include align-self(stretch);
     background: $flex-box-background;
     border-radius: $base-border-radius;
-    box-shadow: inset 0 0 1px $base-border-color, $base-shadow;
+    box-shadow: inset 0 0 1px $base-border-color, $base-box-shadow;
     color: $flex-box-color;
     display: block;
     margin: $flex-box-gutter;

@@ -1,8 +1,10 @@
-.search-tools {  
+.search-tools { 
+  $search-tools-color: $base-font-color-on-box; 
   $search-tools-border: $base-border;
-  $search-tools-background: $base-box-color;
+  $search-tools-background: $base-box-background;
 
   @include clearfix;
+  color: $search-tools-color;
   background: $search-tools-background;
   border-radius: $base-border-radius;
   border: $search-tools-border;

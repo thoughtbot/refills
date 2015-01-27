@@ -1,6 +1,6 @@
 form.search-bar {  
-  $search-bar-border: $base-border;
-  $search-bar-background: $base-background-color;
+  $search-bar-border: $base-outline;
+  $search-bar-background: $base-background-inset;
 
   position: relative;
 
@@ -8,10 +8,11 @@ form.search-bar {
     @include appearance(none);
     @include box-sizing(border-box);
     @include transition(border-color);
-    background-color: white;
+    background: $search-bar-background;
     border-radius: $base-border-radius;
     border-radius: $base-border-radius;
-    border: $base-border;
+    border: $search-bar-border;
+    box-shadow: $base-background-inset-shadow;
     display: block;
     font-size: 1em;
     font-style: italic;

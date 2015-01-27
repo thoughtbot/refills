@@ -1,6 +1,6 @@
 header.navigation {
   $navigation-padding: $base-spacing;
-  $navigation-background: $base-box-color;
+  $navigation-background: $base-box-background;
   $navigation-color: $base-font-color-on-box;
   $navigation-color-hover: transparentize($base-font-color-on-box, 0.5);
   $navigation-height: 60px;

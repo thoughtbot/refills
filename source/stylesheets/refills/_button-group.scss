@@ -1,10 +1,10 @@
 .button-group {  
-  $button-group-background: $base-background-color;
+  $button-group-background: $base-background;
   $button-group-color: $base-font-color-on-background;
-  $button-group-border: $base-border;
-  $button-group-inner-border: $base-border;
-  $button-group-background-checked: $action-color-dark;
-  $button-group-color-checked: $base-font-color-on-box;
+  $button-group-border: $base-outline;
+  $button-group-inner-border: $base-outline;
+  $button-group-background-checked: $base-background-inset;
+  $button-group-color-checked: $base-font-color-on-background;
   $button-group-border-checked: darken($button-group-background-checked, 15%);
 
   input {
@@ -75,7 +75,7 @@
     input:checked + .button-group-item {
       background: $button-group-background-checked;
       border: 1px solid $button-group-border-checked;
-      box-shadow: inset 0 1px 2px darken($button-group-background-checked, 10%);
+      box-shadow: $base-background-inset-shadow;
       color: $button-group-color-checked;
     }
   }

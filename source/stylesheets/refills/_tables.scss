@@ -1,13 +1,15 @@
 .tables {
+  $table-color: $base-font-color-on-box;
   $table-border-color: $base-border-color;
   $table-border: $base-border;
-  $table-background: $base-box-color;
+  $table-background: $base-box-background;
   $table-header-background: lighten($table-background, 10%);
   $table-hover-background: darken($table-background, 5%);
   $table-stripe-background: lighten($table-background, 2%);
   $table-stripe-background-hover: darken($table-stripe-background, 5%);
   $table-padding: 0.75em $small-spacing;
 
+  color: $table-color;
   border-collapse: separate;
   border-left: 0px;
   border-radius: $base-border-radius;

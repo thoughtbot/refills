@@ -1,14 +1,17 @@
 .vertical-tabs-container {
+  $tab-color: $base-font-color-on-box;
+  $tab-color-inactive: $base-font-color-on-box;
   $tab-border-color: $base-border-color;
   $tab-border: $base-border;
   $tab-border-radius: $base-border-radius;
-  $tab-content-background: $base-box-color;
-  $tab-active-color: $tab-content-background;
-  $tab-inactive-color: $base-background-color;
+  $tab-content-background: $base-box-background;
+  $tab-active-background: $tab-content-background;
+  $tab-inactive-background: $base-box-background-inset;
   $vertical-tabs-height: em(300);
   $vertical-tab-mode: $medium-screen;
 
   @include clearfix;
+  color: $tab-color;
   border-radius: $tab-border-radius;
   border: $tab-border;
   margin-bottom: $base-spacing;
@@ -27,7 +30,7 @@
     display: none;
 
     @include media($vertical-tab-mode) {
-      background-color: $tab-inactive-color;
+      background-color: $tab-inactive-background;
       display: inline;
       float: left;
       height: $vertical-tabs-height;
@@ -52,7 +55,12 @@
 
   a.vertical-tab-accordion-heading,
   a.vertical-tab {
-    color: $base-font-color-on-box;
+    color: $tab-color-inactive;
+  }
+
+  a.vertical-tab-accordion-heading.is-active,
+  a.vertical-tab.is-active {
+    color: $tab-color;
   }
 
   .vertical-tab:focus {
@@ -79,7 +87,6 @@
     padding: $base-spacing $gutter;
 
     p {
-      color: $base-font-color-on-background;
       line-height: $base-line-height;
     }
 
@@ -90,7 +97,7 @@
   }
 
   .vertical-tab-accordion-heading {
-    background-color: $tab-inactive-color;
+    background-color: $tab-inactive-background;
     border-top: $tab-border;
     cursor: pointer;
     display: block;
@@ -107,7 +114,7 @@
     }
 
     &.is-active {
-      background: $tab-active-color;
+      background: $tab-active-background;
       border-bottom: none;
     }
 

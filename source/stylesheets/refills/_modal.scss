@@ -1,8 +1,11 @@
 .modal {
+  $modal-color: $base-font-color-on-background;
   $modal-padding: $base-spacing;
-  $modal-background: $base-background-color;
-  $modal-close-color: $light-color;
+  $modal-background: $base-background;
+  $modal-close-color: $base-font-color-on-background;
   $modal-trigger-image-width: 300px;
+
+  color: $modal-color;
 
   label {
     cursor: pointer;
@@ -94,14 +97,12 @@
     }
 
     h1 {
-      color: $base-font-color-on-background;
       margin: 0 0 0.6em 0;
       text-align: left;
       text-transform: capitalize;
     }
 
     p {
-      color: $base-font-color-on-background;
       line-height: $base-line-height;
     }
 
@@ -110,21 +111,8 @@
     }
 
     .modal-content {
-      color: $base-font-color-on-background;
-
       @include media($medium-screen) {
         @include columns(2 8em);
-      }
-    }
-
-    a.cta {
-      color: white;
-      display: inline-block;
-      margin-right: 0.5em;
-      margin-top: 1em;
-
-      &:last-child {
-        padding: 0 2em;
       }
     }
   }

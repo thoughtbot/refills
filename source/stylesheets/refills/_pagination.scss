@@ -1,8 +1,8 @@
 .pagination {  
   $pagination-border: $base-border;
-  $pagination-background: $base-box-color;
+  $pagination-background: $base-box-background;
   $pagination-hover-background: lighten($pagination-background, 5);
-  $pagination-color: $base-font-color-on-background;
+  $pagination-color: $base-font-color-on-box;
 
   text-align: center;
 

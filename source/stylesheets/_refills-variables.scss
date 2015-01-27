@@ -18,7 +18,11 @@ $base-z-index: 0;
 // Colors
 $dark-color: #333;
 $light-color: #fff;
-$base-background-color: #fff;
+
+// Background
+$base-background: #fff;
+$base-background-inset: darken($base-background, 4%);
+$base-background-inset-shadow: inset 0 0 2px darken($base-background, 20%);
 
 // Notification Colors
 $alert-color: #fff6bf;
@@ -27,16 +31,22 @@ $notice-color: #e5edf8;
 $success-color: #e6efc2;
 
 // Font Colors
-$base-font-color-on-background: tomato;
-$base-font-color-on-box: teal;
+$base-font-color-on-background: silver;
+$base-font-color-on-box: dimgray;
 $action-color-dark: #477dca;
 $action-color-light: lighten($action-color-dark, 25);
 
-// Box (General Element)
-$base-box-color: darken($base-background-color, 3%);
-$base-border-color: darken($base-box-color, 10%);
+// Box
+$base-box-background: lighten(black, 20); //darken($base-background, 3%);
+$base-border-color: black; //darken($base-box-background, 10%);
 $base-border: 1px solid $base-border-color;
-$base-shadow: 0 1px 2px transparentize($base-font-color-on-box, 0.8);
+$base-box-background-inset: darken($base-box-background, 5%);
+$base-box-shadow: 0 1px 2px transparentize($base-font-color-on-box, 0.8);
+$base-box-shadow-inset: inset 0 2px 2px darken($base-box-background, 10%);
+
+// Outline
+$base-outline-color: transparentize($base-border-color, 0.8);
+$base-outline: 1px solid $base-outline-color;
 
 // Forms
 $form-background: #fff;
@@ -47,13 +57,26 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color-dar
 $medium-screen: em(640);
 $large-screen: em(860);
 
-// $inset-color ? For accordion
+// $inset-color ? For accordion. 
+// well. on background.
 // $inset-inner-shadow ? progress bar
 // $theme-color ? for card image etc
 // link hover color
+
 
 //transparentize($base-font-color-on-box, 0.5) change!
 
 // change all variable values and see what breaks!
 
 // check if there are margin-bottom: 0 0 0 0;
+
+
+body {
+  @include font-feature-settings("kern","liga","frac", "pnum");
+  -webkit-font-smoothing: antialiased;
+  background-color: $base-background;
+  // color: $base-font-color-on-background;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}

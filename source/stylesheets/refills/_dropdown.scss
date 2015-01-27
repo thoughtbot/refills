@@ -1,10 +1,10 @@
 .dropdown {
   $dropdown-color: $base-font-color-on-background;
-  $dropdown-description-color: lighten($dropdown-color, 40%);
-  $dropdown-border: $base-border;
-  $dropdown-background: $base-background-color;
+  $dropdown-description-color: $base-font-color-on-background;
+  $dropdown-border: $base-outline;
+  $dropdown-inner-border: $base-outline;
+  $dropdown-background: $base-background;
   $dropdown-background-hover: darken($dropdown-background, 3%);
-  $dropdown-inner-border: $base-border;
   $dropdown-height: 40px;
   $dropdown-padding: 1em;
   $dropdown-distance-from-menu: 50px;
@@ -44,6 +44,7 @@
     border-top: $dropdown-border;
     border-right: $dropdown-border;
     border-bottom: $dropdown-border;
+    color: $dropdown-color;
     cursor: pointer;
     float: right;
     font-size: 0.7em;
@@ -77,7 +78,7 @@
     background: $dropdown-background;
     border-radius: $base-border-radius;
     border: $dropdown-border;
-    box-shadow: $base-shadow;
+    box-shadow: $base-box-shadow;
     color: $dropdown-color;
     cursor: pointer;
     display: none;

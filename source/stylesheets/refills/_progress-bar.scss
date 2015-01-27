@@ -1,16 +1,15 @@
 .progress-bar {
   $progress-border-color: $base-border-color;
-  $progress-border: $base-border;
+  $progress-border: $base-outline;
   $progress-meter-border-color: $action-color-dark;
-  $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
   $progress-meter-color: $progress-meter-border-color;
-  $progress-background: darken($base-background-color, 5);
+  $progress-background: $base-background-inset;
   $progress-animation-duration: 0.7s;
   $progress-height: 30px;
 
   background-color: $progress-background;
   border: $progress-border;
-  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
+  box-shadow: $base-background-inset-shadow;
   border-radius: $base-border-radius;
   height: $progress-height;
   margin: 0 auto;
@@ -29,7 +28,6 @@
                                                       transparent 75%));
     background-size: 40px 40px;
     background-repeat: repeat-x;
-    border: $progress-meter-border;
     border-radius: $base-border-radius / 1.5;
     display: block;
     height: 100%;
