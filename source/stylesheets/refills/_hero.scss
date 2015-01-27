@@ -23,7 +23,6 @@
   .hero-inner {
     @include outer-container;
     @include clearfix;
-    color: $hero-color;
     margin: auto;
     padding: 3.5em;
     text-align: center;
@@ -32,6 +31,7 @@
       text-align: center;
       
       h1 {
+        color: $hero-color;
         font-size: 1.6em;
         margin-bottom: 0.5em;
 
@@ -41,6 +41,7 @@
       }
 
       p {
+        color: $hero-color;
         font-weight: 200;
         line-height: 1.4em;
         margin: 0 auto 3em auto; 
