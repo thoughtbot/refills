@@ -31,10 +31,10 @@ article.type-system-traditional {
     border-bottom: 2px solid;
     display: inline-block;
     font-family: $sans-serif;
-    font-size: .7em;
+    font-size: 0.7em;
     font-weight: 800;
     margin-bottom: 2em;
-    padding: .1em 0;
+    padding: 0.1em 0;
     text-align: left;
     text-transform: uppercase;
   }
@@ -55,7 +55,7 @@ article.type-system-traditional {
     font-size: 1.3em;
     font-weight: 400;
     line-height: 1.25em;
-    margin-bottom: .9em;
+    margin-bottom: 0.9em;
 
     @include media($medium-screen) {
       font-size: 1.5em;
@@ -89,7 +89,7 @@ article.type-system-traditional {
     color: transparentize($base-font-color-on-background, 0.6);
     font-family: $serif;
     font-style: italic;
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
   }
 
   p {

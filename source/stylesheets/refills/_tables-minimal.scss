@@ -4,10 +4,10 @@
   $table-border: $base-outline;
   $table-background: $base-background;
   $table-header-background: $base-background;
-  $table-hover-background: darken($table-background, 2);
-  $table-stripe-background: darken($table-background, 4);
-  $table-stripe-background-hover: darken($table-stripe-background, 5);
-  $table-padding: .75em 1em;
+  $table-hover-background: darken($table-background, 2%);
+  $table-stripe-background: darken($table-background, 4%);
+  $table-stripe-background-hover: darken($table-stripe-background, 5%);
+  $table-padding: 0.75em 1em;
 
   color: $table-color;
   border-collapse: separate;
@@ -44,12 +44,12 @@
       button {
         @include button(flat, $action-color-dark);
         display: inline-block;
-        font-size: .7em;
+        font-size: 0.7em;
         line-height: $base-line-height;
-        margin-bottom: .3em;
+        margin-bottom: 0.3em;
         margin-right: 0.5em;
         outline: none;
-        padding: .3em 1em;
+        padding: 0.3em 1em;
         width: 100%;
 
         @include media($medium-screen) {

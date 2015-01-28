@@ -1,6 +1,7 @@
 .stats {
   $stats-color: $action-color-dark;
   $stats-text-color: $base-font-color-on-background;
+  $stats-borders: $base-outline;
 
   padding: $base-spacing / 2;
 
@@ -10,12 +11,12 @@
   }
 
   li {
-    border-right: 1px solid transparentize($base-font-color-on-background, 0.8);
+    border-right: $stats-borders;
     color: $stats-color;
     display: inline;
     float: left;
     font-size: 1.2em;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.1em;
     padding: 0 0.7em;
 
