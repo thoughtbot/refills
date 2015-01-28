@@ -23,10 +23,10 @@ $light-color: #fff;
 $base-background: #fff;
 $base-background-inset: darken($base-background, 4%);
 $base-background-inset-shadow: inset 0 0 2px darken($base-background, 20%);
-$base-font-color-on-background: silver;
+$base-font-color-on-background: $dark-color;
 
 // Outline on background
-$base-outline-color: transparentize($base-border-color, 0.8);
+$base-outline-color: darken($base-background, 15%);
 $base-outline: 1px solid $base-outline-color;
 
 // Notification Colors
@@ -37,16 +37,16 @@ $success-color: #e6efc2;
 
 // Font Colors
 $action-color-dark: #477dca;
-$action-color-light: lighten($action-color-dark, 25);
+$action-color-light: lighten($action-color-dark, 25%);
 
 // Box
-$base-box-background: lighten(black, 20); //darken($base-background, 3%);
-$base-border-color: black; //darken($base-box-background, 10%);
+$base-box-background: darken($base-background, 3%);
+$base-border-color: darken($base-box-background, 15%);
 $base-border: 1px solid $base-border-color;
+$base-font-color-on-box:  #000;
 $base-box-background-inset: darken($base-box-background, 5%);
 $base-box-shadow: 0 1px 2px transparentize($base-font-color-on-box, 0.8);
 $base-box-shadow-inset: inset 0 2px 2px darken($base-box-background, 10%);
-$base-font-color-on-box: dimgray;
 
 
 // Forms
@@ -58,7 +58,6 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color-dar
 $medium-screen: em(640);
 $large-screen: em(860);
 
-// change all variable values and see what breaks!
 
 body {
   @include font-feature-settings("kern","liga","frac", "pnum");

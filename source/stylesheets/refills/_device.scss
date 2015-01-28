@@ -27,20 +27,13 @@
     }
 
     h4 {
-      border-bottom: 1px solid transparentize($device-text-color, 0.7);
       font-size: 1.5em;
-      margin: 0 0 0.5em 0;
-      padding-bottom: 0.5em;
+      margin: 0 0 $small-spacing 0;
     }
 
     p {
       line-height: 1.5em;
       margin-bottom: 1.5em;
-    }
-
-    button {
-      @include button(flat, $action-color-dark);
-      padding: 0.7em 1em;
     }
   }
 

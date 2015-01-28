@@ -1,6 +1,7 @@
 .hover-tile-outer {
   $hover-tile-height: 10em;
   $hover-tile-color: $base-font-color-on-box;
+  $hover-tile-background: $base-box-background;
 
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
   background-position: top;
@@ -33,14 +34,10 @@
   }
 
   .hover-tile-hidden {
-    background: transparentize(#000, 0.5);
+    background: $hover-tile-background;
 
     h4 {
       margin: 0 0 0.5em 0;
-    }
-    
-    p {
-      line-height: $base-line-height;
     }
   }
 }

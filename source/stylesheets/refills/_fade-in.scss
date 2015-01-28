@@ -1,10 +1,10 @@
 .fade-in-element {
   @include clearfix;
-  background: $base-background;
+  background: $base-box-background;
   border-radius: $base-border-radius;
-  border: $base-outline;
+  border: $base-border;
   box-shadow: $base-box-shadow;
-  color: $base-font-color-on-background;
+  color: $base-font-color-on-box;
   line-height: $base-line-height;
   margin-bottom: 4em;
   line-height: $base-line-height;
