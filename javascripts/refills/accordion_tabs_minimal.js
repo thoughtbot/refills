@@ -6,7 +6,7 @@ $(document).ready(function () {
   $('.accordion-tabs-minimal').on('click', 'li > a', function(event) {
     if (!$(this).hasClass('is-active')) {
       event.preventDefault();
-      var accordionTabs = $(this).closest('.accordion-tabs-minimal')
+      var accordionTabs = $(this).closest('.accordion-tabs-minimal');
       accordionTabs.find('.is-open').removeClass('is-open').hide();
 
       $(this).next().toggleClass('is-open').toggle();

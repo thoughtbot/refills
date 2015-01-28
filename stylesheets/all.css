@@ -2091,65 +2091,6 @@ section.inner-content {
     margin-bottom: 0.58333em;
     padding-top: 0.5em; }
 
-/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
-.intro-text {
-  margin-bottom: 5em;
-  margin-top: 4em;
-  padding: 1em;
-  text-align: center; }
-  /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
-  .intro-text p {
-    color: #333;
-    line-height: 1.5em; }
-  /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
-  .intro-text a {
-    text-decoration: none;
-    color: #477DCA; }
-  /* line 29, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
-  .intro-text h3 {
-    background: #477DCA;
-    color: white;
-    display: inline-block;
-    font-size: 0.7em;
-    font-weight: 800;
-    margin-bottom: 2em;
-    padding: 0.3em 0.6em;
-    text-transform: uppercase; }
-    @media screen and (min-width: 53.75em) {
-      /* line 29, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
-      .intro-text h3 {
-        margin-bottom: 3.3em; } }
-  /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
-  .intro-text h4 {
-    color: #666666;
-    font-size: 1.3em;
-    font-weight: 300;
-    line-height: 1.4em;
-    margin: 0 auto 1em; }
-    @media screen and (min-width: 53.75em) {
-      /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
-      .intro-text h4 {
-        font-size: 1.7em;
-        line-height: 1.4em;
-        margin: 0 auto 1em;
-        width: 60%; } }
-  /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
-  .intro-text p {
-    margin: auto; }
-    @media screen and (min-width: 53.75em) {
-      /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
-      .intro-text p {
-        width: 60%; } }
-    /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
-    .intro-text p a {
-      font-size: 0.8em;
-      font-weight: 400;
-      text-transform: uppercase; }
-      /* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_intro-text.scss */
-      .intro-text p a span {
-        font-size: 1.3em;
-        line-height: 0; }
-
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_maps.scss */
 #map_canvas {
   height: 400px;
