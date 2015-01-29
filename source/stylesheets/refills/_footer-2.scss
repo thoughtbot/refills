@@ -30,13 +30,13 @@
   $footer-color-hover: transparentize($base-font-color-on-box, 0.5);
 
   background: $footer-background;
+  display: inline-block;
   padding: $base-spacing;
   width: 100%;
-  display: inline-block;
 
   .footer-logo {
-    margin-right: $base-spacing;
     margin-bottom: $small-spacing;
+    margin-right: $base-spacing;
 
     @include media($large-screen) {
       float: left;
@@ -50,14 +50,14 @@
 
   ul {
     line-height: 1.5em;
-    margin: 0 0 $small-spacing 0;
+    margin: 0 0 $small-spacing;
     padding: 0;
     
     @include media($large-screen) {
       float: left;
       line-height: 1.8em;
-      margin-left: 0;
       margin-bottom: 0;
+      margin-left: 0;
     }
   }
 
@@ -93,7 +93,7 @@
     }
 
     ul.footer-social {
-      margin: $small-spacing 0 0 0;
+      margin: $small-spacing 0 0;
 
       @include media($large-screen) {
         float: right;
@@ -101,8 +101,8 @@
       }
 
       li {
-        font-size: $base-font-size;
         float: left;
+        font-size: $base-font-size;
         line-height: 0;
         margin: 0;
         padding-right: 0.7em;
