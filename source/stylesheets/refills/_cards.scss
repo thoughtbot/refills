@@ -22,7 +22,7 @@
     box-shadow: $base-box-shadow;
     color: $card-color;
     cursor: pointer;
-    margin: 0 $card-margin $base-spacing $card-margin;
+    margin: 0 $card-margin $base-spacing;
     position: relative;
     
     &:focus,

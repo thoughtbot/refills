@@ -6,14 +6,14 @@
   $device-background: darken(gray, 40%);
   $device-backside-background: darken($device-background, 10%);
   $device-text-color: $base-font-color-on-box;
-  $device-background-top: #162C4C;
-  $device-background-bottom: #0A120D;
+  $device-background-top: #162c4c;
+  $device-background-bottom: #0a120d;
   $gradient-angle: 10deg;
   $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg';
 
   background: $base-box-background;
-  border-radius: $base-border-radius;
   border: $base-border;
+  border-radius: $base-border-radius;
   min-height: 20em;
   width: 100%;
 
@@ -29,7 +29,7 @@
 
     h4 {
       font-size: 1.5em;
-      margin: 0 0 $small-spacing 0;
+      margin: 0 0 $small-spacing;
     }
 
     p {
