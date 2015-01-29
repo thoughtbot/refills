@@ -3,7 +3,7 @@
   $sliding-menu-background: $base-box-background;
   $sliding-menu-color: $base-font-color-on-box;
   $sliding-menu-border: $base-border;
-  $sliding-menu-background-hover: $action-color-dark;
+  $sliding-menu-background-hover: $action-color-on-background;
   $sliding-menu-color-hover: $base-font-color-on-box;
   $sliding-menu-background-focus: $base-font-color-on-box;
 
@@ -63,7 +63,7 @@
 }
 
 .sliding-menu-button {
-  @include button(flat, $action-color-dark);
+  @include button(flat, $action-color-on-background);
   padding: 10px 16px;
   display: inline-block;
   cursor: pointer;

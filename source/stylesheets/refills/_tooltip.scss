@@ -1,16 +1,19 @@
 .tooltip-item {  
   $tooltip-border: $base-outline;
-  $tooltip-background: $base-background;
-  $tooltip-color: $base-font-color-on-background;
+  $tooltip-background: $base-box-background;
+  $tooltip-color: $base-font-color-on-box;
   $tooltip-max-width: 16em;
   $tooltip-arrow-width: 8px;
   $tooltip-shadow: $base-box-shadow;
   $tooltip-distance-from-item: 3em;
-  $tooltip-arrow-distance-from-box: -1.3em;
+  $tooltip-arrow-distance-from-box: -23px;
+  $tooltip-trigger-background: $base-background;
+  $tooltip-trigger-color: $base-font-color-on-background;
 
-  background: $tooltip-background;
+  background: $tooltip-trigger-background;
   border-radius: $base-border-radius;
   border: $tooltip-border;
+  color: $tooltip-trigger-color;
   display: inline-block;
   padding: 0.5em 1em;
   position: relative;
@@ -26,7 +29,7 @@
     @include position(absolute, null 0 $tooltip-distance-from-item 0);
     @include transition (all 0.2s ease-in-out);
     background-color: $tooltip-background;
-    background: #fff;
+    background: $tooltip-background;
     border-radius: $base-border-radius;
     box-shadow: $tooltip-shadow;
     color: $tooltip-color;
@@ -41,7 +44,6 @@
     z-index: 10;
 
     p {
-      color: $base-font-color-on-background;
       line-height: $base-line-height;
       margin: 0;
     }

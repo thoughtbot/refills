@@ -1,7 +1,7 @@
 .progress-bar {
   $progress-border-color: $base-border-color;
   $progress-border: $base-outline;
-  $progress-meter-border-color: $action-color-dark;
+  $progress-meter-border-color: $action-color-on-background;
   $progress-meter-color: $progress-meter-border-color;
   $progress-background: $base-background-inset;
   $progress-animation-duration: 0.7s;

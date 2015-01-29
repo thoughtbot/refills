@@ -60,7 +60,7 @@
 
     &:checked {
       + .checkbox {
-        background: $action-color-dark;
+        background: $action-color-on-background;
 
         &:before {
           @include transform(scale(0));

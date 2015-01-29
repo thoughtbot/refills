@@ -1,7 +1,7 @@
 .progress-bar-indication {  
   $progress-border: $base-outline;
   $progress-background: $base-background-inset;
-  $progress-meter-border-color: $action-color-dark;
+  $progress-meter-border-color: $action-color-on-background;
   $progress-meter-border: $base-outline;
   $progress-meter-color: $progress-meter-border-color;
   $progress-animation-duration: 0.7s;
@@ -10,7 +10,7 @@
   background-color: $progress-background;
   border-radius: $base-border-radius;
   border: $progress-border;
-  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
+  box-shadow: $base-background-inset-shadow;
   margin: 0 auto;
   width: 100%;
 

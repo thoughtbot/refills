@@ -9,7 +9,7 @@
   .expander-trigger {
     @include user-select(none);
     border-bottom: $base-outline;
-    color: $action-color-dark;
+    color: $action-color-on-background;
     cursor: pointer;
     display: block;
     font-size: $base-font-size;

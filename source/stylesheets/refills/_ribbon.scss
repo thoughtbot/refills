@@ -6,7 +6,7 @@
 }
 
 .ribbon-wrapper {
-  $ribbon-background: $action-color-dark;
+  $ribbon-background: $action-color-on-box;
   $ribbon-size: 85px;
 
   @include size($ribbon-size);

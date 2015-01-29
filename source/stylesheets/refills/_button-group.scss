@@ -74,7 +74,7 @@
 
     input:checked + .button-group-item {
       background: $button-group-background-checked;
-      border: 1px solid $button-group-border-checked;
+      border: $base-outline;
       box-shadow: $base-background-inset-shadow;
       color: $button-group-color-checked;
     }

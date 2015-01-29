@@ -67,7 +67,7 @@
 }
 
 button {
-  @include button(flat, $action-color-dark);
+  @include button(flat, $action-color-on-background);
   display: block;
   margin: auto;
   outline: none;

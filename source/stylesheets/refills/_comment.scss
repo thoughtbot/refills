@@ -2,7 +2,7 @@
   $comment-color: $base-font-color-on-background;
   $comment-image-width: 4em;
   $comment-color: $base-font-color-on-background;
-  $comment-background: lighten($action-color-dark, 15%);
+  $comment-background: $action-color-on-background;
   $comment-detail-color: transparentize($comment-color, 0.5);
   $comment-image-vert-alignment: top;
 

@@ -44,7 +44,7 @@
       &:hover,
       &:focus {
         background: $pagination-hover-background;
-        color: $action-color-dark;
+        color: $action-color-on-background;
       }
 
       &:active {

@@ -22,7 +22,7 @@
   }
 
   a {
-    color: $action-color-dark;
+    color: $action-color-on-background;
     text-decoration: none;
   }
 
@@ -106,7 +106,7 @@
 
     &:focus,
     &:hover {
-      color: $action-color-dark;
+      color: $action-color-on-background;
     }
 
     &:first-child {
