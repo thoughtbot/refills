@@ -10,7 +10,7 @@ header.navigation {
   $navigation-search-background: lighten($navigation-background, 5);
   $navigation-search-border: 1px solid darken($navigation-background, 5);
   $navigation-active-link-color: transparentize($base-font-color-on-box, 0.5);
-  $navigation-submenu-padding: 1em;
+  $navigation-submenu-padding: $navigation-padding;
   $navigation-submenu-width: 12em;
   $horizontal-bar-mode: $large-screen;
 
@@ -48,7 +48,7 @@ header.navigation {
     font-weight: 700;
     line-height: $navigation-height;
     margin: 0;
-    padding-right: 1em;
+    padding-right: $navigation-padding;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -102,7 +102,7 @@ header.navigation {
     display: block;
     line-height: $navigation-height;
     overflow: hidden;
-    padding-right: 0.8em;
+    padding-right: $navigation-padding;
     text-align: right;
     width: 100%;
     z-index: 9999;
@@ -151,7 +151,7 @@ header.navigation {
     }
 
     a {
-      margin-right: $navigation-submenu-padding;
+      margin-right: $navigation-padding;
     }
 
     > a {
@@ -170,7 +170,7 @@ header.navigation {
     padding-right: 0;
 
     a {
-      padding-right: 0.8em;
+      padding-right: $navigation-padding;
     }
 
     > a {
@@ -255,28 +255,19 @@ header.navigation {
   // Elements on the far right
 
   .navigation-tools {
-    background: #505050;
+    background: $base-box-background;
+    border-top: $base-border;
     clear: both;
     display: block;
     height: $navigation-height;
-    padding-left: $navigation-padding / 2;
-    padding-right: $navigation-padding;
+    padding: 0 $navigation-padding;
 
     @include media($large-screen) {
       background: transparent;
+      border: none;
       clear: none;
       float: right;
     }
-  }
-
-  .sign-up {
-    @include button(flat, $action-color-dark);
-    display: inline;
-    float: right;
-    font-size: 0.8em;
-    margin-top: 1em;
-    padding: 0.75em 1em;
-    text-transform: uppercase;
   }
 
   // Search bar
@@ -287,8 +278,8 @@ header.navigation {
     $search-bar-background: lighten($search-bar-border-color, 10%);
 
     float: left;
-    padding: 0.85em 0.6em 0.7em 0.6em;
-    width: 60%;
+    padding: 0.85em 0 0.7em;
+    width: 100%;
 
     form {
       position: relative;

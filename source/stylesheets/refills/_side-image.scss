@@ -42,25 +42,9 @@
       margin-bottom: 0.9em;
     }
 
-    h4 {
-      background: #BBB;
-      color: white;
-      display: inline-block;
-      font-size: 0.75em;
-      font-weight: 800;
-      margin-bottom: 1.3em;
-      padding: 3px 8px;
-      text-transform: uppercase;
-    }
-
     p {
       line-height: $base-line-height;
       margin-bottom: 3em;
-    }
-
-    button {
-      @include button(flat, $action-color-dark);
-      padding: 0.7em 1em;
     }
   }
 
