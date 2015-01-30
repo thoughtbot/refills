@@ -11,9 +11,9 @@
   $vertical-tab-mode: $medium-screen;
 
   @include clearfix;
-  color: $tab-color;
   border: $tab-border;
   border-radius: $tab-border-radius;
+  color: $tab-color;
   margin-bottom: $base-spacing;
   overflow: hidden;
 
@@ -53,13 +53,13 @@
     }
   }
 
-  a.vertical-tab-accordion-heading,
-  a.vertical-tab {
+  .vertical-tab-accordion-heading,
+  .vertical-tab {
     color: $tab-color-inactive;
   }
 
-  a.vertical-tab-accordion-heading.is-active,
-  a.vertical-tab.is-active {
+  .vertical-tab-accordion-heading.is-active,
+  .vertical-tab.is-active {
     color: $tab-color;
   }
 
