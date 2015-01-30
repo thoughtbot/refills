@@ -9,9 +9,9 @@
   $table-stripe-background-hover: darken($table-stripe-background, 5%);
   $table-padding: 0.75em 1em;
 
-  color: $table-color;
   border-collapse: separate;
   border-spacing: 0;
+  color: $table-color;
   width: 100%;
 
   tbody {

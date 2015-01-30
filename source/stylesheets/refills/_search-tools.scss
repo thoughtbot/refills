@@ -6,8 +6,8 @@
   @include clearfix;
   color: $search-tools-color;
   background: $search-tools-background;
-  border-radius: $base-border-radius;
   border: $search-tools-border;
+  border-radius: $base-border-radius;
   padding: $gutter / 2;
 
   ol {

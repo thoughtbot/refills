@@ -5,8 +5,8 @@
   $side-image-content-background: $base-box-background;
   $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
 
-  color: $side-image-color;
   background: $side-image-content-background;
+  color: $side-image-color;
 
   @include media($large-screen) {
     @include row(table);
@@ -43,7 +43,6 @@
     }
 
     p {
-      line-height: $base-line-height;
       margin-bottom: 3em;
     }
   }

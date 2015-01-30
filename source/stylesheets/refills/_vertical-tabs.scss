@@ -86,10 +86,6 @@
     background-color: $tab-content-background;
     padding: $base-spacing $gutter;
 
-    p {
-      line-height: $base-line-height;
-    }
-
     @include media($vertical-tab-mode) {
       border: none;
       display: none;
