@@ -6,4 +6,12 @@ $(function() {
       $("body").removeClass("modal-open");
     }
   });
+
+  $(".modal-window").on("click", function() {
+    $(".modal-state:checked").prop("checked", false).change();
+  });
+
+  $(".modal-inner").on("click", function(e) {
+    e.stopPropagation();
+  });
 });

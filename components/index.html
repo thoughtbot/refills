@@ -1877,6 +1877,14 @@ $success-color: #e6efc2 !default;
       $(&quot;body&quot;).removeClass(&quot;modal-open&quot;);
     }
   });
+
+  $(&quot;.modal-window&quot;).on(&quot;click&quot;, function() {
+    $(&quot;.modal-state:checked&quot;).prop(&quot;checked&quot;, false).change();
+  });
+
+  $(&quot;.modal-inner&quot;).on(&quot;click&quot;, function(e) {
+    e.stopPropagation();
+  });
 });
 </code></pre>
 </td>
@@ -1892,6 +1900,14 @@ $success-color: #e6efc2 !default;
       $(&quot;body&quot;).addClass &quot;modal-open&quot;
     else
       $(&quot;body&quot;).removeClass &quot;modal-open&quot;
+    return
+
+  $(&quot;.modal-window&quot;).on &quot;click&quot;, -&gt;
+    $(&quot;.modal-state:checked&quot;).prop(&quot;checked&quot;, false).change()
+    return
+
+  $(&quot;.modal-inner&quot;).on &quot;click&quot;, (e) -&gt;
+    e.stopPropagation()
     return
 
   return
