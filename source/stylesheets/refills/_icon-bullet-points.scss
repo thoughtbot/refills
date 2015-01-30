@@ -44,7 +44,7 @@
     border-bottom: 1px solid transparentize($base-font-color-on-background, 0.8);
     display: inline-block;
     font-size: $icon-bullet-size / 2.5;
-    margin: 0 0 ($icon-bullet-size / 6) 0;
+    margin: 0 0 ($icon-bullet-size / 6);
     padding-top: $icon-bullet-size / 7;
   }
 

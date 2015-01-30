@@ -8,9 +8,9 @@
   $progress-height: 30px;
 
   background-color: $progress-background;
+  border-radius: $base-border-radius;
   border: $progress-border;
   box-shadow: $base-background-inset-shadow;
-  border-radius: $base-border-radius;
   height: $progress-height;
   margin: 0 auto;
   padding: 2px;

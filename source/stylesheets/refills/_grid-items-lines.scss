@@ -39,30 +39,31 @@
   }
 
   .grid-item img {
-      display: block;
-      height: 2.5em;
-      margin-bottom: 1.2em;
-    }
+    display: block;
+    height: 2.5em;
+    margin-bottom: 1.2em;
+  }
 
   .grid-item h1 {
-      color: $grid-item-color;
-      font-size: 1.3em;
-      margin-bottom: 0.4em;
-    }
+    color: $grid-item-color;
+    font-size: 1.3em;
+    margin-bottom: 0.4em;
+  }
 
   .grid-item p {
-      color: transparentize($grid-item-color, 0.4);
-      line-height: 1.5em;
+    color: transparentize($grid-item-color, 0.4);
+    line-height: 1.5em;
       
-      @include media($medium-screen) {
-        max-width: 70%;
-      }
+    @include media($medium-screen) {
+      max-width: 70%;
     }
+  }
 
   .grid-item-big {
     @include media($large-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }
+    
     p {
       @include media($medium-screen) {
         max-width: 60%;
