@@ -83,7 +83,7 @@ article.type-system-serif {
   }
 
   p.date {
-    color: transparentize($base-font-color-on-background, .6);
+    color: transparentize($base-font-color-on-background, 0.6);
     font-family: $serif-2;
     font-size: 0.9em;
     font-style: italic;

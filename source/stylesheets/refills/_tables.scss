@@ -11,10 +11,9 @@
 
   color: $table-color;
   border-collapse: separate;
-  border-left: 0px;
+  border: $table-border;
   border-radius: $base-border-radius;
   border-spacing: 0;
-  border: $table-border;
   width: 100%;
 
   tbody {

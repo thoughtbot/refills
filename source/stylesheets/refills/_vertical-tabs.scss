@@ -12,8 +12,8 @@
 
   @include clearfix;
   color: $tab-color;
-  border-radius: $tab-border-radius;
   border: $tab-border;
+  border-radius: $tab-border-radius;
   margin-bottom: $base-spacing;
   overflow: hidden;
 
@@ -100,6 +100,10 @@
     font-weight: bold;
     padding: $small-spacing;
 
+    @include media($vertical-tab-mode) {
+      display: none;
+    }
+
     &:focus,
     &:hover {
       color: $action-color-on-background;
@@ -112,10 +116,6 @@
     &.is-active {
       background: $tab-active-background;
       border-bottom: none;
-    }
-
-    @include media($vertical-tab-mode) {
-      display: none;
     }
   }
 }
