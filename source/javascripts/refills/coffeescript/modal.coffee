@@ -1,5 +1,5 @@
 $ ->
-  $("#modal-1").on "click", ->
+  $("#modal-1").on "change", ->
     if $(this).is(":checked")
       $("body").addClass "modal-open"
     else
