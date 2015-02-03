@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  $('.js-menu-trigger,.js-menu-screen').on('click touchstart',function (e) {
-    $('.js-menu,.js-menu-screen').toggleClass('is-visible');
+  $('.sliding-menu-button, .sliding-menu-fade-screen').on('click touchstart',function (e) {
+    $('.sliding-menu-content, .sliding-menu-fade-screen').toggleClass('is-visible');
     e.preventDefault();
   });
 });

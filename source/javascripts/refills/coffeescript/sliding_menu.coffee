@@ -1,8 +1,6 @@
 $(document).ready ->
-  $(".js-menu-trigger,.js-menu-screen").on "click touchstart", (e) ->
-    $(".js-menu,.js-menu-screen").toggleClass "is-visible"
+  $('.sliding-menu-button, .sliding-menu-fade-screen').on 'click touchstart', (e) ->
+    $('.sliding-menu-content, .sliding-menu-fade-screen').toggleClass 'is-visible'
     e.preventDefault()
     return
-
   return
-
