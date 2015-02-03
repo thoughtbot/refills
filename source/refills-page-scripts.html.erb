@@ -49,7 +49,7 @@
           return $(this).children("pre").hasClass("language-javascript");
         }).last();
       } else if ($(this).hasClass("copy-variables")) {
-        var cells = $(this).parent().children("table").find("td.snippet");
+        var cells = $(this).parent().children("table").find("td");
         var cell = cells.filter(function(index) {
           return $(this).children("pre").hasClass("language-scss")
         }).last();
