@@ -339,6 +339,20 @@ section.refill {
 
 // Snippet
 
+.snippets > a {
+  background: #38363E;
+  color: white;
+  text-decoration: none;
+  border-radius: 2em;
+  max-width: 20em;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.24);
+  margin: 0 auto 3em;
+  
+  &:hover {
+    background: lighten(#38363E, 10%);
+  }
+}
+
 .refill-snippet {
   margin-top: 4.5em;
   padding: 0 1em;
