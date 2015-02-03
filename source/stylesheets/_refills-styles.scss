@@ -339,20 +339,6 @@ section.refill {
 
 // Snippet
 
-.snippets > a {
-  background: #38363E;
-  color: white;
-  text-decoration: none;
-  border-radius: 2em;
-  max-width: 20em;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.24);
-  margin: 0 auto 3em;
-  
-  &:hover {
-    background: lighten(#38363E, 10%);
-  }
-}
-
 .refill-snippet {
   margin-top: 4.5em;
   padding: 0 1em;
@@ -396,81 +382,99 @@ pre[class*="language-"] {
       border-bottom: 0;
     }
 
-    .snippet:nth-last-child(2) {
+    .snippet-javascript:nth-child(4) {
       display: none;
     }
 
-    .snippet:last-child {
+    .snippet-scss:last-child {
       display: none;
     }
-
   }
 }
 
+.copy-variables {
+  @include linear-gradient(white, whitesmoke);
+  border-radius: 2em;
+  border: 1px solid whitesmoke;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.24);
+  color: dimgray;
+  display: block;
+  font-weight: 600;
+  margin: 0 auto 3em;
+  max-width: 20em;
+  padding: 0.8em;
+  text-align: center;
+  text-decoration: none;
 
-.snippet {
+  &:hover {
+    background: darken(#fff, 10%);
+  }
+}
+
+.snippet-markup .copy-source {
+  background: #e98065;     
+}
+
+.snippet-scss .copy-source {
+  background: #55a1d4;     
+}
+
+.snippet-javascript .copy-source:nth-of-type(1) {
+  background: #e9c05b;     
+}
+
+.snippet-javascript .copy-source:nth-of-type(2) {
+  background: #89b981;     
+}
+
+div[class*="snippet-"] {
 
   @include media($refills-medium-screen) {
     margin-bottom: 2em;
   }
+}
 
-  .copy-source-container {
-    min-height: 3.4em;
+.copy-source-container {
+  min-height: 3.4em;
 
-    @include media($refills-medium-screen) {
-      min-height: 2.5em;
-    }
-
-    @include media($refills-large-screen) {
-      min-height: 1em;
-    }
+  @include media($refills-medium-screen) {
+    min-height: 2.5em;
   }
 
-  &:nth-of-type(1) .copy-source {
-    background: #e98065;     
+  @include media($refills-large-screen) {
+    min-height: 1em;
   }
+}
 
-  &:nth-of-type(2) .copy-source {
-    background: #55a1d4;     
-  }
-
-  &:nth-of-type(3) .copy-source:nth-of-type(1) {
-    background: #e9c05b;     
-  }
-
-  &:nth-of-type(3) .copy-source:nth-of-type(2) {
-    background: #89b981;     
-  }
-
-  .copy-source {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    color: #fff;
-    display: inline-block;
-    font-size: 0.5em;
-    font-weight: 800;
-    padding: 0.4em 1em;
-    text-transform: uppercase;
-
-    &:hover,
-    &:active {
-      background-color: lighten(#333, 20%);
-      color: #fff;
-    }
-  }
+.copy-source-container .copy-source {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.5em;
+  font-weight: 800;
+  padding: 0.4em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
 
   a {
     text-decoration: none;
   }
 
-  code {
-    font-size: 0.6em;
-    line-height: 1.4em;
-    max-height: em(400);
-    overflow: scroll;
+  &:hover,
+  &:active {
+    background-color: lighten(#333, 20%);
+    color: #fff;
   }
+}
+
+code {
+  font-size: 0.6em;
+  line-height: 1.4em;
+  max-height: em(400);
+  overflow: scroll;
 }
 
 .token.variable {
