@@ -35,6 +35,12 @@ module SnippetHelpers
     end
   end
 
+  class ScssVariableSnippet < ScssSnippet
+    def path_segments
+      [SOURCE_DIR, "stylesheets", "_#{name}.scss"]
+    end
+  end
+
   class JavaScriptSnippet < Snippet
     def path_segments
       [SOURCE_DIR, 'javascripts', 'refills', "#{name.underscore}.js"]
@@ -61,8 +67,11 @@ module SnippetHelpers
     end
   end
 
-  def code_for(snippet_name)
-    partial 'code', locals: { snippets: snippets_for(snippet_name) }
+  def code_for(snippet_name, variable_name = "refills-variables")
+    partial 'code', locals: {
+      snippets: snippets_for(snippet_name),
+      variables: variable_for(variable_name),
+    }
   end
 
   private
@@ -76,6 +85,10 @@ module SnippetHelpers
     ].map do |snippet_factory|
       render_snippet snippet_factory.new(name)
     end.join("\n")
+  end
+
+  def variable_for(variable_name)
+    render_snippet ScssVariableSnippet.new(variable_name)
   end
 
   def render_snippet(snippet)

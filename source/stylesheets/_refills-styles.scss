@@ -374,15 +374,22 @@ pre[class*="language-"] {
   line-height: 1em;
 }
 
-.snippets-table {
+.snippets {
   display: none;
 
-  td {
-    border-bottom: 0;
-  }
+  .snippets-table {
+    td {
+      border-bottom: 0;
+    }
 
-  .snippet:nth-child(4n) {
-    display: none;
+    .snippet:nth-last-child(2) {
+      display: none;
+    }
+
+    .snippet:last-child {
+      display: none;
+    }
+
   }
 }
 
