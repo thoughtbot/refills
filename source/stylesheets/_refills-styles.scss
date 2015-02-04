@@ -376,28 +376,28 @@ pre[class*="language-"] {
 
 .snippets {
   display: none;
+}
 
-  .snippets-table {
-    td {
-      border-bottom: 0;
-    }
+.snippets-table {
+  td {
+    border-bottom: 0;
+  }
 
-    .snippet-javascript:nth-child(4) {
-      display: none;
-    }
+  .snippet-javascript:nth-child(4) {
+    display: none;
+  }
 
-    .snippet-scss:last-child {
-      display: none;
-    }
+  .snippet-scss:last-child {
+    display: none;
   }
 }
 
 .copy-variables {
-  @include linear-gradient(white, whitesmoke);
+  @include linear-gradient(#fff, #f5f5f5);
+  border: 1px solid #f5f5f5;
   border-radius: 2em;
-  border: 1px solid whitesmoke;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.24);
-  color: dimgray;
+  color: #696969;
   display: block;
   font-weight: 600;
   margin: 0 auto 3em;
@@ -427,7 +427,7 @@ pre[class*="language-"] {
   background: #89b981;     
 }
 
-div[class*="snippet-"] {
+[class*="snippet-"] {
 
   @include media($refills-medium-screen) {
     margin-bottom: 2em;

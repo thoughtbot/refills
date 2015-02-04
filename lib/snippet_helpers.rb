@@ -68,7 +68,7 @@ module SnippetHelpers
   end
 
   def code_for(snippet_name, variable_name = "refills-variables")
-    partial 'code', locals: {
+    partial "code", locals: {
       snippets: snippets_for(snippet_name),
       variables: variable_for(variable_name),
     }
