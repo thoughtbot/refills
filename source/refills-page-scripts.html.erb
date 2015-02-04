@@ -44,7 +44,7 @@
     client.on('dataRequested', function(client, args) {
 
       if ($(this).hasClass("copy-coffee")) {
-        var cells = $(this).parents("tr").find("td.snippet");
+        var cells = $(this).parents("tr").find("td");
         var cell = cells.filter(function(index) {
           return $(this).children("pre").hasClass("language-javascript");
         }).last();
@@ -54,7 +54,7 @@
           return $(this).children("pre").hasClass("language-scss")
         }).last();
       } else {
-        var cell = $(this).parents("td.snippet");
+        var cell = $(this).parents("td");
       }
 
       var code = cell.children("pre").text();
