@@ -1,4 +1,4 @@
-.search-tools {  
+.search-tools {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
@@ -9,7 +9,7 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
+
   ol {
     margin: 0;
     padding: 0;
@@ -25,6 +25,12 @@
     display: block;
     font-weight: bold;
     margin-bottom: $base-spacing / 4;
+
+    &.summary {
+      // Give some padding for the "Clear" button
+      // This is the approximate computed width that button (plus some)
+      padding-right: 4.5em;
+    }
   }
   //////////////////////////////////////////////////////////////////////////////////
 
@@ -66,12 +72,6 @@
         cursor: pointer;
         font-weight: 400;
         margin-bottom: 0;
-
-        &.summary {
-          // Give some padding for the "Clear" button
-          // This is the approximate computed width that button (plus some)
-          padding-right: 4.5em;
-        }
       }
     }
 
