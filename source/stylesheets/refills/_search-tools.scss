@@ -66,6 +66,12 @@
         cursor: pointer;
         font-weight: 400;
         margin-bottom: 0;
+
+        &.summary {
+          // Give some padding for the "Clear" button
+          // This is the approximate computed width that button (plus some)
+          padding-right: 4.5em;
+        }
       }
     }
 
