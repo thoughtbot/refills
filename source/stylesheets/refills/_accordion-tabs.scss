@@ -15,8 +15,8 @@
   padding: 0;
 
   @include media(max-width $tab-mode) {
-    border-radius: $tab-border-radius;
     border: $tab-border;
+    border-radius: $tab-border-radius;
   }
 
   .tab-header-and-content {
@@ -54,9 +54,9 @@
 
     @include media($tab-mode) {
       @include inline-block;
+      border-top: 0;
       border-top-left-radius: $tab-border-radius;
       border-top-right-radius: $tab-border-radius;
-      border-top: 0;
     }
 
     &:hover {
@@ -86,10 +86,10 @@
     width: 100%;
 
     @include media($tab-mode) {
+      border: $tab-border;
       border-bottom-left-radius: $tab-border-radius;
       border-bottom-right-radius: $tab-border-radius;
       border-top-right-radius: $tab-border-radius;
-      border: $tab-border;
       float: left;
     }
   }
