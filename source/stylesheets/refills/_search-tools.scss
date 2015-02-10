@@ -25,12 +25,6 @@
     display: block;
     font-weight: bold;
     margin-bottom: $base-spacing / 4;
-
-    &.summary {
-      // Give some padding for the "Clear" button
-      // This is the approximate computed width that button (plus some)
-      padding-right: 4.5em;
-    }
   }
   //////////////////////////////////////////////////////////////////////////////////
 
@@ -88,14 +82,19 @@
       @include position(absolute, 5px 5px auto auto);
       font-size: 0.7em;
     }
+  }
 
-    .hide-options {
-      margin-bottom: 0;
 
-      ol, button {
-        display: none;
-      }
+  .hide-options {
+    margin-bottom: 0;
+
+    ol, button {
+      display: none;
     }
+  }
+
+  .summary {
+    padding-right: 4.5em;
   }
 
   .trigger {
@@ -107,13 +106,13 @@
 
     button {
       @include button(flat, $base-accent-color);
-      margin-top: 1em;
+      margin-top: 0;
       padding-bottom: 0.5em;
       padding-top: 0.5em;
       width: 100%;
 
       @include media($large-screen) {
-        margin-top: 1.55em;
+        margin-top: 1.4em;
       }
     }
   }
