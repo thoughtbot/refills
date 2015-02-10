@@ -1,0 +1,65 @@
+.accordion-tabs-basic {
+  $medium-screen: em(640) !default;
+  $tab-mode: $medium-screen;
+
+  @include clearfix;
+  padding: 0;
+  // Overall styles list mode
+
+  @include media(max-width $tab-mode) {
+  // Overall styles tab mode
+  }
+
+  .tab-header-and-content {
+    list-style: none;
+
+    @include media($tab-mode) {
+      display: inline;
+    }
+
+    &:first-child .tab-link {
+    // Top link style in list mode
+
+      @include media(max-width $tab-mode) {
+      // First link style in tab mode
+      }
+    }
+
+    &:last-child .tab-link {
+    // Last link style in list mode
+
+      @include media(max-width $tab-mode) {
+      // Rightmost link style in tab mode
+      }
+    }
+  }
+
+  .tab-link {
+  // Link style in list mode
+
+    @include media($tab-mode) {
+    }
+
+    &:hover {
+    }
+
+    &:focus {
+    }
+
+    &.is-active {
+    // Active list item
+      @include media($tab-mode) {
+        // Active tab
+      }
+    }
+  }
+
+  .tab-content {
+    display: none;
+    width: 100%;
+
+    @include media($tab-mode) {
+      float: left;
+    }
+  }
+}
