@@ -30,8 +30,7 @@
 
   @include display(flex);
   @include flex-wrap(wrap);
-  margin-bottom: $base-line-height;
-  margin: 1em;
+  // margin: 1em;
   overflow: auto;
 
   .bullet {
@@ -48,25 +47,13 @@
     width: $icon-bullet-size;
   }
 
-  .bullet-icon-1 {
-    background: $base-accent-color;
-  }
-
-  .bullet-icon-2 {
-    background: adjust-hue($base-accent-color, -50%);
-  }
-
-  .bullet-icon-3 {
-    background: adjust-hue($base-accent-color, -140%);
-  }
-
   .bullet-content {
     margin-left: $icon-bullet-size * 1.4;
     margin-bottom: 2em;
   }
 
   h2 {
-    border-bottom: 1px solid transparentize($base-font-color, 0.8);
+    // border-bottom: 1px solid transparentize($base-font-color, 0.8);
     display: inline-block;
     font-size: $icon-bullet-size / 2.5;
     margin-bottom: $icon-bullet-size / 6;
