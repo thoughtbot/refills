@@ -3570,7 +3570,7 @@ button {
   transition: all 0.4s ease-in-out;
   opacity: 1; }
 
-/* line 26, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+/* line 27, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
 .flash-alert {
   background-color: #fff6bf;
   color: #8c7800;
@@ -3581,12 +3581,13 @@ button {
   text-align: center; }
   /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
   .flash-alert a {
-    color: #594c00; }
-    /* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+    color: #594c00;
+    text-decoration: underline; }
+    /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
     .flash-alert a:focus, .flash-alert a:hover {
       color: black; }
 
-/* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+/* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
 .flash-error {
   background-color: #fbe3e4;
   color: #96151b;
@@ -3597,12 +3598,13 @@ button {
   text-align: center; }
   /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
   .flash-error a {
-    color: #6a0f13; }
-    /* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+    color: #6a0f13;
+    text-decoration: underline; }
+    /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
     .flash-error a:focus, .flash-error a:hover {
       color: #110203; }
 
-/* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+/* line 35, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
 .flash-notice {
   background-color: #e5edf8;
   color: #244e87;
@@ -3613,12 +3615,13 @@ button {
   text-align: center; }
   /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
   .flash-notice a {
-    color: #19375f; }
-    /* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+    color: #19375f;
+    text-decoration: underline; }
+    /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
     .flash-notice a:focus, .flash-notice a:hover {
       color: #04080e; }
 
-/* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+/* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
 .flash-success {
   background-color: #e6efc2;
   color: #56651a;
@@ -3629,8 +3632,9 @@ button {
   text-align: center; }
   /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
   .flash-success a {
-    color: #333c10; }
-    /* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
+    color: #333c10;
+    text-decoration: underline; }
+    /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flashes.scss */
     .flash-success a:focus, .flash-success a:hover {
       color: black; }
 
@@ -3912,10 +3916,6 @@ button {
 /* line 162, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
 .modal-open {
   overflow: hidden; }
-
-/* line 166, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-.modal-closed {
-  overflow: auto; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_pagination.scss */
 .pagination {

@@ -4015,7 +4015,7 @@ jQuery -&gt;
     var summary = 'All';
     var checked = this._checkboxes().filter(':checked');
 
-    if (checked.length &gt; 0) {
+    if (checked.length &gt; 0 &amp;&amp; checked.length &lt; this._checkboxes().length) {
       summary = this._labelsFor(checked).join(', ');
     }
 

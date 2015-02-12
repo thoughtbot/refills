@@ -2034,7 +2034,7 @@ var Filter = (function() {
     var summary = 'All';
     var checked = this._checkboxes().filter(':checked');
 
-    if (checked.length > 0) {
+    if (checked.length > 0 && checked.length < this._checkboxes().length) {
       summary = this._labelsFor(checked).join(', ');
     }
 
