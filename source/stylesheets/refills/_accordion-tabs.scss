@@ -1,6 +1,5 @@
 .accordion-tabs {
-  $medium-screen: em(640) !default;
-  $tab-mode: $medium-screen;
+  $large-screen: em(860) !default;
 
   @include clearfix;
   padding: 0;
@@ -8,23 +7,28 @@
   .tab-header-and-content {
     list-style: none;
 
-    @include media($tab-mode) {
+    @include media($large-screen) {
       display: inline;
     }
   }
 
-  .tab-link a {
-    display: inline-block;
+  .tab-link {
+    display: block;
+
+    @include media($large-screen) {
+      display: inline-block;
+    }
   }
 
   .is-active {
+    color: #ff0000;
   }
 
   .tab-content {
     display: none;
     width: 100%;
 
-    @include media($tab-mode) {
+    @include media($large-screen) {
       float: left;
     }
   }
