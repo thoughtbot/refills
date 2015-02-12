@@ -11,12 +11,28 @@ title: Refills
 
   <div id="example">
 
+    <section id="accordion" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Accordion</h6></div>
+        <div class="refill-centering"><%= partial "accordion" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for("accordion") %></div>
+    </section>
+
     <section id="accordion-tabs" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Accordion / Tabs</h6></div>
-        <%= partial "accordion_tabs" %>
+        <div class="refill-smaller"><%= partial "accordion_tabs" %></div>
       </div>
       <div class="refill-snippet"><%= code_for("accordion_tabs") %></div>
+    </section>
+
+    <section id="button-group" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Button Group</h6></div>
+        <div class="refill-centering"><%= partial "button_group" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for("button_group") %></div>
     </section>
 
     <section id="cards" class="refill">
