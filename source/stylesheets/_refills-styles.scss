@@ -30,16 +30,16 @@ $refills-color: lighten(desaturate(teal, 60%), 40%);
 $refills-accent-color: #477dca;
 $refills-nav-height: 60px;
 $refills-logo-color: #93e9be;
-$refills-anchor-color: #f55481;
-$refills-hero-background: #e7f1ec;
+$refills-anchor-color: #00ceb2;
+$refills-hero-background: whitesmoke;
 $refills-highlight-color: #bbb295;
-$refills-narrow-sans: "Oswald", sans-serif;
+$refills-narrow-sans: 'VT323', sans-serif;
 $refills-white-shadow: 0 1px 1px transparentize(#fff, 0.6);
 $refills-medium-screen: em(640);
 $refills-large-screen: em(860);
 
-$refills-serif: "Lusitana", $georgia;
-$refills-second-serif: $georgia;
+$refills-serif: "VT323", $georgia;
+$refills-second-serif: 'VT323';
 
 @mixin refills-inset {
   background: darken($refills-hero-background, 2%);
@@ -64,13 +64,13 @@ body {
   width: 100%;
 
   @include media($refills-medium-screen) {
-    margin-bottom: 4em;
+    // margin-bottom: 4em;
     padding: 6em 0;
   }
 
   @include media($refills-large-screen) {
-    margin-bottom: 4em;
-    padding: 6em 0 11em 0;
+    // margin-bottom: 4em;
+    padding: 6em 0;
   }
 
   .refills-logo {
@@ -225,10 +225,6 @@ ul.refills-menu {
   &:hover {
     color: darken($refills-hero-background, 20%);
   }
-}
-
-#example {
-  padding-top: 6em;
 }
 
 // Refill section
