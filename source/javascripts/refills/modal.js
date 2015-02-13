@@ -1,5 +1,5 @@
 $(function() {
-  $("#modal-1").on("click", function() {
+  $("#modal-1").on("change", function() {
     if ($(this).is(":checked")) {
       $("body").addClass("modal-open");
     } else {
@@ -7,7 +7,7 @@ $(function() {
     }
   });
 
-  $(".modal-window").on("click", function() {
+  $(".modal-fade-screen, .modal-close").on("click", function() {
     $(".modal-state:checked").prop("checked", false).change();
   });
 
