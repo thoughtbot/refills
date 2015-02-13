@@ -1,0 +1,36 @@
+.sliding-panel-content {  
+  $sliding-panel-width: 220px;
+
+  @include position(fixed, 0px auto 0px 0px);
+  @include size($sliding-panel-width 100%);
+  @include transform(translateX(- $sliding-panel-width));
+  @include transition(all 0.25s linear);
+  background: #fff;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 999999;
+
+  &.is-visible {
+    @include transform(translateX(0));
+  }
+}
+
+.sliding-panel-fade-screen {
+  @include position(fixed, 0px 0px 0px 0px);
+  @include transition;
+  background: #000;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+
+  &.is-visible {
+    opacity: 0.4;
+    visibility: visible;
+  }
+}
+
+.sliding-panel-close {
+  cursor: pointer;
+}
+
+// Based on code by Diego Eis

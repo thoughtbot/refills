@@ -1,4 +1,4 @@
-.centered-navigation {
+.navigation-centered {
   $large-screen: em(860) !default;
   $centered-navigation-height: 60px;
   $centered-navigation-logo-height: 2em;
@@ -19,22 +19,36 @@
     }
   }
 
-  .centered-navigation-mobile-menu {
+  .navigation-centered-mobile-menu {
     float: right;
+    padding-top: 0.5em;
 
     @include media ($large-screen) {
       display: none;
     }
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
   // Nav menu
-  .centered-navigation-wrapper {
-    @include outer-container;
+  .navigation-centered-wrapper {
     @include clearfix;
+    @include outer-container;
     position: relative;
   }
 
-  ul.centered-navigation-menu {
+  ul.navigation-centered-menu {
     clear: both;
     display: none;
     margin: 0 auto;
@@ -51,6 +65,20 @@
       text-align: center;
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // Nav items
   ul li.nav-link {
@@ -75,6 +103,13 @@
     }
   }
 
+
+
+
+
+
+
+  // Centered logo
   li.logo.nav-link {
     display: none;
     line-height: 0;

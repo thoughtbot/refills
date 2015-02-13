@@ -42,13 +42,25 @@ title: Refills
       </div>
       <div class="refill-snippet"><%= code_for("cards") %></div>
     </section>
-
-    <section id="centered-navigation" class="refill">
+    
+    <section id="comment" class="refill">
       <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Centered Navigation</h6></div>
-        <%= partial "centered_navigation" %>
+        <div class="line-behind-text"><h6>Comments</h6></div>
+        <div class="refill-centering">
+          <div class="refill-smaller"><%= partial "comment" %></div>
+        </div>
       </div>
-      <div class="refill-snippet"><%= code_for("centered_navigation") %></div>
+      <div class="refill-snippet"><%= code_for("comment") %></div>
+    </section>
+
+    <section id="expander" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Expander</h6></div>
+        <div class="refill-centering">
+          <%= partial "expander" %>
+        </div>
+      </div>
+      <div class="refill-snippet"><%= code_for("expander") %></div>
     </section>
 
     <section id="hover-menu" class="refill">
@@ -59,14 +71,29 @@ title: Refills
       <div class="refill-snippet"><%= code_for("hover_menu") %></div>
     </section>
 
-    <section id="comment" class="refill">
+    <section id="navigation" class="refill">
       <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Comments</h6></div>
-        <div class="refill-centering">
-          <div class="refill-smaller"><%= partial "comment" %></div>
-        </div>
+        <div class="line-behind-text"><h6>Navigation</h6></div>
+        <div class="refill-centering"><%= partial "navigation" %></div>
       </div>
-      <div class="refill-snippet"><%= code_for("comment") %></div>
+      <div class="refill-snippet"><%= code_for("navigation") %></div>
+    </section>
+
+    <section id="navigation-centered" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Navigation: Centered</h6></div>
+        <%= partial "navigation_centered" %>
+      </div>
+      <div class="refill-snippet"><%= code_for("navigation_centered") %></div>
+    </section>
+
+
+    <section id="modal" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Modal</h6></div>
+        <div class="refill-centering"><%= partial "modal" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for("modal") %></div>
     </section>
 
     <section id="scroll-on-page" class="refill">
@@ -79,6 +106,23 @@ title: Refills
       <div class="refill-snippet"><%= code_for("scroll_on_page") %></div>
     </section>
 
+    <section id="search-bar" class="refill">
+     <div class="refills-wrapper">
+       <div class="line-behind-text"><h6>Search bar</h6></div>
+       <div class="refill-centering">
+         <div class="refill-smaller"><%= partial "search_bar" %></div>
+       </div>
+     </div>
+     <div class="refill-snippet"><%= code_for("search_bar") %></div>
+    </section>
+
+    <section id="sliding-panel" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Sliding Panel</h6></div>
+        <div class="refill-centering"><%= partial "sliding_panel" %></div>
+      </div>
+      <div class="refill-snippet"><%= code_for("sliding_panel") %></div>
+    </section>
 
   </div> 
 </div>
