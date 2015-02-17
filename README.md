@@ -3,7 +3,7 @@
 [![Gem Version](http://img.shields.io/gem/v/refills.svg?style=flat)](https://rubygems.org/gems/refills)
 [![Build Status](https://travis-ci.org/thoughtbot/refills.svg?branch=master)](https://travis-ci.org/thoughtbot/refills)
 
-## Prepackaged patterns and components built with Bourbon and Neat
+## Components and patterns built with Bourbon and Neat
 
 - **[Examples & Code Snippets](http://refills.bourbon.io)**
 - **[Changelog](https://github.com/thoughtbot/refills/releases)**
@@ -76,7 +76,7 @@ body {
 - [Bourbon](https://github.com/thoughtbot/bourbon): A simple and lightweight mixin library for Sass
 - [Neat](https://github.com/thoughtbot/neat): A lightweight semantic grid framework for Sass and Bourbon
 - [Bitters](https://github.com/thoughtbot/bitters): Scaffold styles, variables and structure for Bourbon projects
-- [Refills](https://github.com/thoughtbot/refills): Prepackaged patterns and components built with Bourbon, Neat and Bitters
+- [Refills](https://github.com/thoughtbot/refills): Components and patterns built with Bourbon and Neat
 
 ## Credits
 
