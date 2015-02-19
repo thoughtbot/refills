@@ -323,11 +323,6 @@
             }
             
             top = $('<a href="#" class="' + base.options.goTopClass + '" title="' + text + '">' + text + '</a>');
-            goTop.append(top);
-            goTop.children('a.' + base.options.goTopClass).click(function() {
-                base.$body.animate({scrollTop: (base.$topNode.offset().top - base.options.goTopBaseHeight)}, base.options.scrollSpeed);
-                return false;
-            });
         };
         
         /*
