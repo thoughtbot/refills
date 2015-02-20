@@ -54,6 +54,16 @@ title: Refills
       <div class="refill-snippet"><%= code_for("comment") %></div>
     </section>
 
+    <section id="dropdown" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Dropdown</h6></div>
+        <div class="refill-centering">
+          <%= partial "dropdown" %>
+        </div>
+      </div>
+      <div class="refill-snippet"><%= code_for("dropdown") %></div>
+    </section>
+
     <section id="expander" class="refill">
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Expander</h6></div>
@@ -139,6 +149,14 @@ title: Refills
         <div class="refill-centering"><%= partial "tooltip" %></div>
       </div>
       <div class="refill-snippet"><%= code_for("tooltip") %></div>
+    </section>
+
+    <section id="vertical-tabs" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Vertical Tabs</h6></div>
+        <%= partial "vertical_tabs" %>
+      </div>
+      <div class="refill-snippet"><%= code_for("vertical_tabs") %></div>
     </section>
 
   </div> 

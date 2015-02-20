@@ -1,6 +1,5 @@
 .scroll-on-page {
   $large-screen: em(860) !default;
-  display: inline-block;
 
   aside {
     @include media($large-screen) {

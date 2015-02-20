@@ -30,8 +30,8 @@ $refills-color: lighten(desaturate(teal, 60%), 40%);
 $refills-accent-color: #477dca;
 $refills-nav-height: 60px;
 $refills-logo-color: #93e9be;
-$refills-anchor-color: #8DFF8D;
-$refills-hero-background: #2B3932;
+$refills-anchor-color: #67C167;
+$refills-hero-background: #fff;
 $refills-highlight-color: #bbb295;
 $refills-narrow-sans: 'VT323', sans-serif;
 $refills-white-shadow: 0 1px 1px transparentize(#fff, 0.6);
@@ -64,12 +64,10 @@ body {
   width: 100%;
 
   @include media($refills-medium-screen) {
-    // margin-bottom: 4em;
     padding: 6em 0;
   }
 
   @include media($refills-large-screen) {
-    // margin-bottom: 4em;
     padding: 6em 0;
   }
 
@@ -100,7 +98,7 @@ body {
   }
 
   h2 {
-    color: #8DFF8D;
+    color: #67C167;
     font-family: $refills-second-serif;
     font-size: 1.4em;
     font-weight: 100;
@@ -110,16 +108,17 @@ body {
     line-height: 1.4em;
 
     @include media($refills-medium-screen) {
-      font-size: 2em;
+      font-size: 3em;
+      line-height: 1em;
       margin-bottom: 1em;
       max-width: 90%;
     }
 
     @include media($refills-large-screen) {
-      font-size: 3em;
+      font-size: 5em;
       margin-bottom: 0.8em;
-      line-height: 1.3em;
-      max-width: 35%;
+      line-height: 0.9em;
+      max-width: 45%;
     }
   }
 
