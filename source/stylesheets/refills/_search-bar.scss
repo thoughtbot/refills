@@ -31,12 +31,12 @@ form.search-bar {
   }
 
   button[type=submit] {
-    @include button(flat, $base-accent-color);
     @include position(absolute, 0em 0em 0em null);
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+    border-bottom-right-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
     outline: none;
-    padding: 5px 10px;
+    border: none;
+    padding: 5px 15px;
 
     img {
       height: 12px;

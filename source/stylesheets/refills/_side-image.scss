@@ -69,11 +69,6 @@
       color: gray;
       margin-bottom: 3em;
     }
-
-    button {
-      @include button(flat, $base-accent-color);
-      padding: 0.7em 1em;
-    }
   }
 
   @include reset-display();

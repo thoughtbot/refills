@@ -1,6 +1,6 @@
-.sliding-menu-content {  
+.sliding-menu-content { 
   ///////////////////////////////////////////////////////////////////////////////////
-  $base-accent-color: #477DCA !default;
+  $base-accent-color: #477dca !default;
   $dark-gray: #333 !default;
 
   ul {
@@ -71,16 +71,8 @@
 }
 
 .sliding-menu-button {
-  @include button(flat, #477DCA);
-  padding: 10px 16px;
-  display: inline-block;
+  font-weight: 800;
   cursor: pointer;
-  position: relative;
-  outline: none;
-
-  img {
-    height: 1.3em;
-  }
 }
 
 // Based on code by Diego Eis
