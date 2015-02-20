@@ -54,7 +54,6 @@ body {
 }
 
 .refills-header {
-  @extend .refills-header;
   @include clearfix;
   background-color: $refills-hero-background;
   clear: both;
@@ -104,21 +103,21 @@ body {
     font-size: 1.4em;
     font-weight: 100;
     margin: 0 auto 2em auto;
-    max-width: 90%;
+    max-width: 80%;
     text-align: center;
     line-height: 1.4em;
 
     @include media($refills-medium-screen) {
       font-size: 2em;
       margin-bottom: 1em;
-      max-width: 90%;
+      max-width: 80%;
     }
 
     @include media($refills-large-screen) {
       font-size: 3em;
       margin-bottom: 0.8em;
       line-height: 1.3em;
-      max-width: 55%;
+      max-width: 45%;
     }
   }
 
