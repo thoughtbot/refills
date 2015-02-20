@@ -1,13 +1,7 @@
 .hero {  
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-radius: 3px !default;
-  $base-accent-color: #477DCA !default;
-  $large-screen: em(860) !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
   $hero-background-top: #7F99BE; 
   $hero-background-bottom: #20392B;
-  $hero-color: white;
+  $hero-color: $light-color;
   $gradient-angle: 10deg;
   $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
 
@@ -45,7 +39,6 @@
 
       p {
         font-weight: 200;
-        line-height: 1.4em;
         margin: 0 auto 3em auto; 
 
         @include media($large-screen) {
@@ -56,7 +49,7 @@
     }
 
     button {
-      @include button(flat, $base-accent-color);
+      @include button(flat, $action-color-on-background);
       padding: 0.7em 1em;
     }
   }

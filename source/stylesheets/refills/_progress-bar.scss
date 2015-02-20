@@ -1,25 +1,16 @@
 .progress-bar {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-color: gainsboro !default;
-  $base-background-color: white !default;
-  $base-border-radius: 3px !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
   $progress-border-color: $base-border-color;
-  $progress-border: 1px solid $progress-border-color;
-  $progress-meter-border-color: $base-accent-color;
-  $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
+  $progress-border: $base-outline;
+  $progress-meter-border-color: $action-color-on-background;
   $progress-meter-color: $progress-meter-border-color;
-  $progress-background: darken($base-background-color, 5);
+  $progress-background: $base-background-inset;
   $progress-animation-duration: 0.7s;
   $progress-height: 30px;
 
   background-color: $progress-background;
-  border: $progress-border;
-  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
   border-radius: $base-border-radius;
+  border: $progress-border;
+  box-shadow: $base-background-inset-shadow;
   height: $progress-height;
   margin: 0 auto;
   padding: 2px;
@@ -37,7 +28,6 @@
                                                       transparent 75%));
     background-size: 40px 40px;
     background-repeat: repeat-x;
-    border: $progress-meter-border;
     border-radius: $base-border-radius / 1.5;
     display: block;
     height: 100%;

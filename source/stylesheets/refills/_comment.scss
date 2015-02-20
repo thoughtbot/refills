@@ -1,17 +1,8 @@
 .comment {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-radius: 3px !default;
-  $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $comment-gutter: 1.4em;
-  $comment-image-padding: 0.7em;
+  $comment-color: $base-font-color-on-background;
   $comment-image-width: 4em;
-  $comment-color: $base-font-color;
-  $comment-background: lighten($base-accent-color, 15%);
+  $comment-color: $base-font-color-on-background;
+  $comment-background: $action-color-on-background;
   $comment-detail-color: transparentize($comment-color, 0.5);
   $comment-image-vert-alignment: top;
 
@@ -28,7 +19,7 @@
   }
 
   .comment-image {
-    padding-right: $comment-gutter;
+    padding-right: $gutter;
 
     > img {
       background: $comment-background;
@@ -36,7 +27,7 @@
       display: block;
       height: auto;
       max-width: none;
-      padding: $comment-image-padding;
+      padding: $small-spacing;
       width: $comment-image-width;
     }
 
@@ -47,16 +38,16 @@
   }
 
   .comment-content {
+    color: $comment-color;
     width: 100%;
 
     h1 {
       font-size: 1em;
-      margin: 0 0 0.5em 0;
+      margin: 0 0 0.5em;
     }
 
     p {
-      line-height: 1.5em;
-      margin-bottom: 0.5em;
+      margin: 0 0 0.5em;
     }
 
     p.comment-detail {

@@ -25,14 +25,14 @@
   $('a.js-show-code').on('click', function(e){
     $(this).hide();
     $(this).siblings('.js-hide-code').css('display', 'inline-block');
-    $(this).parent().siblings('.snippets-table').show();
+    $(this).parent().siblings('.snippets').show();
     e.preventDefault();
   })
 
   $('a.js-hide-code').on('click', function(e) {
     $(this).hide();
     $(this).siblings('.js-show-code').css("display", "inline-block");
-    $(this).parent().siblings('.snippets-table').hide();
+    $(this).parent().siblings('.snippets').hide();
     e.preventDefault();
   });
 </script>
@@ -40,12 +40,21 @@
 <!-- Copy Code -->
 <script>
   $(document).ready( function() {
-    client = new ZeroClipboard($('.copy-source'), {moviePath: '/images/ZeroClipboard.swf'})
+    client = new ZeroClipboard($('.copy-source'), {moviePath: '/images/ZeroClipboard.swf'});
     client.on('dataRequested', function(client, args) {
+
       if ($(this).hasClass("copy-coffee")) {
-        var cell = $(this).parents("tr").find("td.snippet").last();
+        var cells = $(this).parents("tr").find("td");
+        var cell = cells.filter(function(index) {
+          return $(this).children("pre").hasClass("language-javascript");
+        }).last();
+      } else if ($(this).hasClass("copy-variables")) {
+        var cells = $(this).parent().children("table").find("td");
+        var cell = cells.filter(function(index) {
+          return $(this).children("pre").hasClass("language-scss")
+        }).last();
       } else {
-        var cell = $(this).parents("td.snippet");
+        var cell = $(this).parents("td");
       }
 
       var code = cell.children("pre").text();

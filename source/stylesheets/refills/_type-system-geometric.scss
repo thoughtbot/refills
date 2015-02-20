@@ -1,21 +1,16 @@
 article.type-system-geometric {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-radius: 3px !default;
-  $base-line-height: 1.5em !default;
-  $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
-  $medium-screen: em(640) !default;
-  $base-font-color: $dark-gray !default;
-  
+  $sans-serif: 'Questrial', sans-serif;
+  $serif: 'Sanchez', serif;
+
+  @include clearfix;
+  text-align: left;
+
   h1, h2, h3, p {
     margin: 0;
   }
 
   hr {
-    border-bottom: 1px solid $light-gray;
+    border-bottom: 1px solid $light-color;
     border-left: none;
     border-right: none;
     border-top: none;
@@ -23,22 +18,14 @@ article.type-system-geometric {
   }
 
   p {
-    color: $base-font-color;
-    line-height: $base-line-height;
+    color: $base-font-color-on-background;
   }
 
   a {
-    color: $base-link-color;
+    color: $action-color-on-background;
     text-decoration: none;
   }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $sans-serif: 'Questrial', sans-serif;
-  $serif: 'Sanchez', serif;
-
-  @include clearfix;
-  text-align: left;
-
+  
   .type {
     border-bottom: 1px solid;
     display: inline-block;
@@ -94,7 +81,7 @@ article.type-system-geometric {
   }
 
   p.date {
-    color: transparentize($base-font-color, 0.6);
+    color: transparentize($base-font-color-on-background, 0.6);
     font-family: $serif;
     font-size: 0.9em;
     font-style: italic;
@@ -104,7 +91,6 @@ article.type-system-geometric {
   p {
     font-family: $sans-serif;
     font-size: 1.05em;
-    line-height: 1.5em;
     margin-bottom: 1.5em;
   }
 

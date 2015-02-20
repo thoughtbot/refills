@@ -1,15 +1,6 @@
 form.search-bar {  
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $search-bar-border-color: $base-border-color;
-  $search-bar-border: 1px solid $search-bar-border-color;
-  $search-bar-background: lighten($search-bar-border-color, 10%);
+  $search-bar-border: $base-outline;
+  $search-bar-background: $base-background-inset;
 
   position: relative;
 
@@ -17,10 +8,11 @@ form.search-bar {
     @include appearance(none);
     @include box-sizing(border-box);
     @include transition(border-color);
-    background-color: white;
+    background: $search-bar-background;
     border-radius: $base-border-radius;
     border-radius: $base-border-radius;
-    border: 1px solid $base-border-color;
+    border: $search-bar-border;
+    box-shadow: $base-background-inset-shadow;
     display: block;
     font-size: 1em;
     font-style: italic;
@@ -31,7 +23,7 @@ form.search-bar {
   }
 
   button[type=submit] {
-    @include button(flat, $base-accent-color);
+    @include button(flat, $action-color-on-background);
     @include position(absolute, 0em 0em 0em null);
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;

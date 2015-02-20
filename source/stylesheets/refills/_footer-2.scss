@@ -25,40 +25,18 @@
 // }
 
 .footer-2 {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
-  
-  ul {
-    margin: 0;
-    padding: 0;
-    line-height: 1.5em;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $footer-background: desaturate(darken($base-accent-color, 20%), 30%);
-  $footer-color: white;
-  $footer-link-color: transparentize($footer-color, 0.6);
-  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+  $footer-background: $base-box-background;
+  $footer-color: $base-font-color-on-box;
+  $footer-color-hover: transparentize($base-font-color-on-box, 0.5);
 
   background: $footer-background;
+  display: inline-block;
   padding: $base-spacing;
   width: 100%;
-  display: inline-block;
 
   .footer-logo {
-    margin-right: 1em;
-    margin-bottom: 1em;
+    margin-bottom: $small-spacing;
+    margin-right: $base-spacing;
 
     @include media($large-screen) {
       float: left;
@@ -71,19 +49,22 @@
   } 
 
   ul {
-    margin-bottom: 1em;
+    line-height: 1.5em;
+    margin: 0 0 $small-spacing;
+    padding: 0;
     
     @include media($large-screen) {
       float: left;
       line-height: 1.8em;
-      margin-left: 1em;
       margin-bottom: 0;
+      margin-left: 0;
     }
   }
 
   ul li {
     font-weight: 800;
-    padding-right: 1em;
+    list-style: none;
+    padding-right: $small-spacing;
 
     @include media($large-screen) {
       display: inline;
@@ -92,11 +73,12 @@
   }
 
   ul li a {
-    color: $footer-link-color;
+    color: $footer-color;
+    text-decoration: none;
 
     &:focus,
     &:hover {
-      color: transparentize($footer-color, 0);
+      color: $footer-color-hover;
     }
   }
 
@@ -111,17 +93,18 @@
     }
 
     ul.footer-social {
-      margin-top: 1em;
+      margin: $small-spacing 0 0;
 
       @include media($large-screen) {
         float: right;
-        margin-top: 0;
+        margin: 0 0 0 $base-spacing;
       }
 
       li {
-        font-size: 1em;
         float: left;
+        font-size: $base-font-size;
         line-height: 0;
+        margin: 0;
         padding-right: 0.7em;
 
         &:last-child {

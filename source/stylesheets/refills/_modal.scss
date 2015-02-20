@@ -1,33 +1,11 @@
 .modal {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $base-background-color: white !default;
-  $base-font-size: 1em !default;
-  $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
-
-  h1 {
-    margin: 0;
-  }
-
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $modal-padding: 3em;
-  $modal-background: $base-background-color;
-  $modal-close-color: $light-gray;
-  $modal-image-height: 135px;
-  $modal-image-width: $modal-image-height;
+  $modal-color: $base-font-color-on-background;
+  $modal-padding: $base-spacing;
+  $modal-background: $base-background;
+  $modal-close-color: $base-font-color-on-background;
   $modal-trigger-image-width: 300px;
+
+  color: $modal-color;
 
   label {
     cursor: pointer;
@@ -45,7 +23,7 @@
   }
 
   .modal-trigger {
-    @include button(flat, $base-accent-color);
+    @include button(flat, $action-color-on-background);
     padding: 0.8em 1em;
   }
 
@@ -119,8 +97,7 @@
     }
 
     h1 {
-      color: $base-font-color;
-      margin-bottom: 0.6em;
+      margin: 0 0 0.6em;
       text-align: left;
       text-transform: capitalize;
     }
@@ -130,21 +107,8 @@
     }
 
     .modal-content {
-      color: $base-font-color;
-
       @include media($medium-screen) {
         @include columns(2 8em);
-      }
-    }
-
-    a.cta {
-      color: white;
-      display: inline-block;
-      margin-right: 0.5em;
-      margin-top: 1em;
-
-      &:last-child {
-        padding: 0 2em;
       }
     }
   }

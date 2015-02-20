@@ -1,24 +1,15 @@
 .accordion-tabs {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $base-background-color: white !default;
-  $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
-  $medium-screen: em(640) !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $tab-border: 1px solid $base-border-color;
-  $tab-content-background: lighten($light-gray, 10);
+  $tab-link-color: $base-font-color-on-box;
+  $tab-color: $base-font-color-on-box;
+  $tab-color-inactive: $base-font-color-on-background;
+  $tab-border: $base-border;
+  $tab-content-background: $base-box-background;
   $tab-active-background: $tab-content-background;
-  $tab-inactive-color: $base-background-color;
-  $tab-inactive-hover-color: darken($light-gray, 5);
+  $tab-inactive-color: $base-background;
   $tab-mode: $medium-screen;
 
   @include clearfix;
+  color: $tab-color;
   line-height: 1.5;
   margin-bottom: $base-spacing;
   padding: 0;
@@ -55,10 +46,10 @@
   .tab-link {
     background-color: $tab-inactive-color;
     border-top: $tab-border;
-    color: $dark-gray;
+    color: $tab-link-color;
     display: block;
     font-weight: bold;
-    padding: $base-spacing/2 $gutter/2;
+    padding: ($base-spacing / 2) $gutter;
     text-decoration: none;
 
     @include media($tab-mode) {
@@ -69,7 +60,7 @@
     }
 
     &:hover {
-      color: $base-link-color;
+      color: $action-color-on-background;
     }
 
     &:focus {
@@ -85,6 +76,9 @@
         border-bottom-color: $tab-active-background;
         margin-bottom: -1px;
       }
+    }
+    &:not(.is-active) {
+      color: $tab-color-inactive;
     }
   }
 

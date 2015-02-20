@@ -1,38 +1,13 @@
 .bullets {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
-  
-  padding: 0;
-
-  h2 {
-    margin: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-
-  img {
-    max-width: 100%;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $icon-bullet-size: 3.5em;
 
   @include display(flex);
   @include flex-wrap(wrap);
+  color: $base-font-color-on-background;
   margin-bottom: $base-line-height;
   margin: 1em;
   overflow: auto;
+  padding: 0;
 
   .bullet {
     @include flex-basis(20em);
@@ -40,7 +15,7 @@
   }
 
   .bullet-icon {
-    background: $base-accent-color;
+    background: $action-color-on-background;
     border-radius: 50%;
     float: left;
     height: $icon-bullet-size;
@@ -49,15 +24,15 @@
   }
 
   .bullet-icon-1 {
-    background: $base-accent-color;
+    background: $action-color-on-background;
   }
 
   .bullet-icon-2 {
-    background: adjust-hue($base-accent-color, -50%);
+    background: adjust-hue($action-color-on-background, -50%);
   }
 
   .bullet-icon-3 {
-    background: adjust-hue($base-accent-color, -140%);
+    background: adjust-hue($action-color-on-background, -140%);
   }
 
   .bullet-content {
@@ -66,10 +41,18 @@
   }
 
   h2 {
-    border-bottom: 1px solid transparentize($base-font-color, 0.8);
+    border-bottom: 1px solid transparentize($base-font-color-on-background, 0.8);
     display: inline-block;
     font-size: $icon-bullet-size / 2.5;
-    margin-bottom: $icon-bullet-size / 6;
+    margin: 0 0 ($icon-bullet-size / 6);
     padding-top: $icon-bullet-size / 7;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  img {
+    max-width: 100%;
   }
 }

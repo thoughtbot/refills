@@ -1,0 +1,69 @@
+// Typography
+$base-font-family: $helvetica;
+$header-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$dark-color: #333;
+$light-color: #fff;
+
+// Background
+$base-background: #343434;
+$base-background-inset: darken($base-background, 4%);
+$base-background-inset-shadow: inset 0 0 2px darken($base-background, 20%);
+$base-font-color-on-background: #a2a2a2;
+
+// Outline on background
+$base-outline-color: lighten($base-background, 15%);
+$base-outline: 1px solid $base-outline-color;
+
+// Notification Colors
+$alert-color: #fff6bf;
+$error-color: #fbe3e4;
+$notice-color: #e5edf8;
+$success-color: #e6efc2;
+
+// Font Colors
+$action-color-on-background: #f39176;
+$action-color-on-box: #d98169;
+
+// Box
+$base-box-background: #4e4e4e;
+$base-border-color: darken($base-box-background, 15%);
+$base-border: 1px solid $base-border-color;
+$base-font-color-on-box: #c7c7c7;
+$base-box-background-inset: darken($base-box-background, 5%);
+$base-box-shadow: 0 1px 2px transparentize(#000, 0.8);
+$base-box-shadow-inset: inset 0 2px 2px darken($base-box-background, 10%);
+
+
+// Forms
+$form-background: #fff;
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color-on-background, $lightness: -5%, $alpha: -0.3);
+
+// Media
+$medium-screen: em(640);
+$large-screen: em(860);
+
+
+body {
+  @include font-feature-settings("kern", "liga", "frac", "pnum");
+  background-color: $base-background;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  line-height: $base-line-height;
+}

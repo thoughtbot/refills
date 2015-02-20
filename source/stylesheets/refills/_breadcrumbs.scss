@@ -1,24 +1,11 @@
 .breadcrumb {   
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $base-background-color: white !default;
-  $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $medium-gray: #999 !default;
-  $light-gray: #DDD !default;
-  $medium-screen: em(640) !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $breadcrumb-border-color: $base-border-color;
-  $breadcrumb-border: 1px solid $breadcrumb-border-color;
+  $breadcrumb-border: $base-outline;
   $breadcrumb-height: $base-spacing * 1.5;
-  $breadcrumb-arrow-color: $breadcrumb-border-color;
-  $breadcrumb-background: $base-background-color;
+  $breadcrumb-arrow-color: $base-outline-color;
+  $breadcrumb-background: $base-background;
   $breadcrumb-inactive-hover-color: $breadcrumb-background;
-  $breadcrumb-color: $medium-gray;
-  $breadcrumb-color-hover: $base-accent-color;
+  $breadcrumb-color: $base-font-color-on-background;
+  $breadcrumb-color-hover: $action-color-on-background;
   $breadcrumb-color-active: $breadcrumb-color;
 
   display: inline-block;

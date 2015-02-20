@@ -1,21 +1,17 @@
 article.type-system-serif {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-radius: 3px !default;
-  $base-line-height: 1.5em !default;
-  $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
-  $medium-screen: em(640) !default;
-  $base-font-color: $dark-gray !default;
+  $serif: 'Lusitana', serif;
+  $serif-2: 'Merriweather', serif;
+  $sans-serif: 'Merriweather Sans', sans-serif;
+
+  @include clearfix;
+  text-align: left;
   
   h1, h2, h3, p {
     margin: 0;
   }
 
   hr {
-    border-bottom: 1px solid $light-gray;
+    border-bottom: 1px solid $light-color;
     border-left: none;
     border-right: none;
     border-top: none;
@@ -23,22 +19,13 @@ article.type-system-serif {
   }
 
   p {
-    color: $base-font-color;
-    line-height: $base-line-height;
+    color: $base-font-color-on-background;
   }
 
   a {
-    color: $base-link-color;
+    color: $action-color-on-background;
     text-decoration: none;
   }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $serif: 'Lusitana', serif;
-  $serif-2: 'Merriweather', serif;
-  $sans-serif: 'Merriweather Sans', sans-serif;
-
-  @include clearfix;
-  text-align: left;
 
   .type {
     border-bottom: 1px solid;
@@ -92,11 +79,11 @@ article.type-system-serif {
     font-size: 1.4em;
     font-weight: 400;
     line-height: 1.3em;
-    margin-bottom: .4em;
+    margin-bottom: 0.4em;
   }
 
   p.date {
-    color: transparentize($base-font-color, .6);
+    color: transparentize($base-font-color-on-background, 0.6);
     font-family: $serif-2;
     font-size: 0.9em;
     font-style: italic;
