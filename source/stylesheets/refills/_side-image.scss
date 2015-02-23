@@ -1,21 +1,7 @@
 .side-image {  
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
-  $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
-  
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $side-image-background-top: #B5EBEB;
   $side-image-background-bottom: #5DAC5D;
-  $side-image-content-background: #F9F9F9;
+  $side-image-content-background: $base-box-color;
   $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
 
   background: $side-image-content-background;
@@ -66,12 +52,13 @@
     }
 
     p {
-      color: gray;
+      color: $base-font-color-dark;
+      line-height: $base-line-height;
       margin-bottom: 3em;
     }
 
     button {
-      @include button(flat, $base-accent-color);
+      @include button(flat, $action-color-dark);
       padding: 0.7em 1em;
     }
   }

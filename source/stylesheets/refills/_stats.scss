@@ -1,18 +1,15 @@
 .stats {
-  $base-spacing: 1.5em !default;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
-  $base-accent-color: #477dca !default;
-  $stats-color: lighten($base-accent-color, 10%);
+  $stats-color: $action-color-dark;
 
   padding: $base-spacing / 2;
 
   ul {
+    @include clearfix;
     padding: 0;
   }
 
   li {
-    border-right: 1px solid transparentize($base-font-color, 0.8);
+    border-right: 1px solid transparentize($base-font-color-dark, 0.8);
     color: $stats-color;
     display: inline;
     float: left;
@@ -31,7 +28,7 @@
   }
 
   span {
-    color: $base-font-color;
+    color: $base-font-color-dark;
     display: block;
     font-size: 0.7em;
     font-weight: normal;
