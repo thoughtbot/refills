@@ -1,0 +1,24 @@
+<div class="refills-unstyled">
+
+  <a class="js-menu-trigger-refills refills-menu-anchor fixedsticky">
+    <img src="/images/menu.png" alt="Menu icon">
+  </a>
+  <div class="js-menu-screen-refills refills-menu-screen"></div>
+
+  <%= partial "refills-hero" %>
+  <%= partial "refills-menu" %>
+
+  <div id="example">
+  
+  <section id="accordion" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Accordion</h6></div>
+      <div class="refill-centering"><%= partial "unstyled/accordion" %></div>
+    </div>
+    <div class="refill-snippet"><%= code_for("unstyled/accordion") %></div>
+  </section>
+
+  </div>
+</div>
+    
+<%= partial "refills-page-scripts" %>

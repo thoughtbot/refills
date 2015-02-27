@@ -1,0 +1,17 @@
+.accordion {  
+  > li > a {
+    font-weight: normal;
+  }
+
+  ul.submenu {
+    display: none;
+  }
+
+  .is-expanded {
+    > a {
+      color: red;
+    }
+
+    display: block;
+  }
+}

@@ -2,8 +2,9 @@ module SnippetHelpers
   SOURCE_DIR = File.expand_path('../../source', __FILE__)
 
   class Snippet
-    def initialize(name)
+    def initialize(name, namespace: "")
       @name = name
+      @namespace = namespace
     end
 
     def path
@@ -12,12 +13,12 @@ module SnippetHelpers
 
     private
 
-    attr_reader :name
+    attr_reader :name, :namespace
   end
 
   class HtmlSnippet < Snippet
     def path_segments
-      [SOURCE_DIR, "_#{name.underscore}.html.erb"]
+      [SOURCE_DIR, namespace, "_#{name.underscore}.html.erb"]
     end
 
     def language
@@ -27,7 +28,7 @@ module SnippetHelpers
 
   class ScssSnippet < Snippet
     def path_segments
-      [SOURCE_DIR, 'stylesheets', 'refills', "_#{name.dasherize}.scss"]
+      [SOURCE_DIR, "stylesheets", "refills", namespace, "_#{name.dasherize}.scss"]
     end
 
     def language
@@ -37,7 +38,7 @@ module SnippetHelpers
 
   class JavaScriptSnippet < Snippet
     def path_segments
-      [SOURCE_DIR, 'javascripts', 'refills', "#{name.underscore}.js"]
+      [SOURCE_DIR, "javascripts", "refills", namespace, "#{name.underscore}.js"]
     end
 
     def language
@@ -52,6 +53,7 @@ module SnippetHelpers
         "javascripts",
         "refills",
         "coffeescript",
+        namespace,
         "#{name.underscore}.coffee"
       ]
     end
@@ -74,7 +76,13 @@ module SnippetHelpers
       JavaScriptSnippet,
       CoffeeScriptSnippet,
     ].map do |snippet_factory|
-      render_snippet snippet_factory.new(name)
+      if name.include?("/")
+        *namespace, file = name.split("/")
+      else
+        namespace = []
+        file = name
+      end
+      render_snippet snippet_factory.new(file, namespace: namespace)
     end.join("\n")
   end
 

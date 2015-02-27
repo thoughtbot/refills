@@ -1,0 +1,101 @@
+  .refills-header {
+  @include clearfix;
+  background-color: $refills-hero-background;
+  clear: both;
+  margin-bottom: 1em;
+  padding: 5em 0 8em;
+  text-align: center;
+  width: 100%;
+
+  @include media($refills-medium-screen) {
+    margin-bottom: 4em;
+    padding: 6em 0 10em;
+  }
+
+  @include media($refills-large-screen) {
+    border-bottom: 2px solid darken($refills-hero-background, 5%);
+    margin-bottom: 4em;
+    padding: 6em 0 11em 0;
+  }
+
+  .refills-logo {
+    display: inline-block;
+    margin: 0 auto 1.4em auto;
+
+    @include media($refills-medium-screen) {
+      max-height: 8em;
+      max-width: 8em;
+    }
+
+    img {
+      background: $refills-body-background-color;
+      border-radius: 50%;
+      margin-bottom: 1em;
+      max-height: 5em;
+      max-width: 5em;
+      padding: 0.3em;
+
+      @include media($refills-medium-screen) {
+        margin-bottom: 2em;
+        max-height: 8em;
+        max-width: 8em;
+        padding: 0.5em;
+      }
+    }
+  }
+
+  h2 {
+    font-family: $refills-second-serif;
+    font-size: 1.4em;
+    font-weight: 100;
+    line-height: 1.4em;
+    margin: 0 auto 2em auto;
+    max-width: 80%;
+    text-align: center;
+
+    @include media($refills-medium-screen) {
+      font-size: 2em;
+      margin-bottom: 1em;
+      max-width: 80%;
+    }
+
+    @include media($refills-large-screen) {
+      font-size: 3em;
+      line-height: 1.3em;
+      margin-bottom: 0.8em;
+      max-width: 45%;
+    }
+  }
+
+  h3 {
+    font-size: 1.3em;
+    font-weight: 200;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  a {
+    color: $refills-anchor-color;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: lighten($refills-anchor-color, 10%);
+    }
+  }
+
+  p {
+    @include refills-inset;
+    border-radius: 30px;
+    color: darken(desaturate($refills-logo-color, 50%), 15%);
+    display: inline;
+    font-family: $refills-narrow-sans;
+    font-size: 0.8em;
+    font-weight: 400;
+    padding: 0.5em 1.4em;
+
+    @include media($refills-large-screen) {
+      font-size: 0.8em;
+    }
+  }
+}

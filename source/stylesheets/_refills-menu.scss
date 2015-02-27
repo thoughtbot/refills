@@ -1,0 +1,92 @@
+ul.refills-menu {
+  font-weight: normal;
+  margin-bottom: 5em;
+  margin: -3em auto 0.7em auto;
+  padding: 0;
+  text-align: center;
+
+  @include media($refills-medium-screen) {
+    margin: -6em auto 0.4em auto;
+  }
+
+  @include media($refills-large-screen) {
+    margin: -6.7em auto 0.8em auto;
+  }
+
+  .menu-item {
+    display: inline;
+
+    a {
+      @include refills-inset;
+      border-radius: 3px;
+      color: darken($refills-hero-background, 35%);
+      font-family: $refills-narrow-sans;
+      font-weight: 300;
+      font-size: 0.8em;
+      padding: 0.5em 1em 1.5em;
+      text-decoration: none;
+
+      @include media($refills-medium-screen) {
+        font-size: 1em;
+        padding: 0.5em 1.8em 1.3em;
+      }
+
+      @include media($refills-large-screen) {
+        font-size: 1.2em;
+        padding: 0.7em 2.7em 2em;
+      }
+
+      &:hover {
+        color: darken($refills-hero-background, 30%);
+      }
+    }
+  }
+}
+
+.refills-patterns li.patterns a {
+  background: $refills-body-background-color;
+  box-shadow: none;
+
+  &:hover {
+    color: darken($refills-hero-background, 20%);
+  }
+}
+
+.refills-components li.components a {
+  background: $refills-body-background-color;
+  box-shadow: none;
+
+  &:hover {
+    color: darken($refills-hero-background, 20%);
+  }
+}
+
+.refills-type-systems li.type-systems a {
+  background: $refills-body-background-color;
+  box-shadow: none;
+
+  &:hover {
+    color: darken($refills-hero-background, 20%);
+  }
+}
+
+.refills-unstyled li.unstyled a {
+  background: $refills-body-background-color;
+  box-shadow: none;
+
+  &:hover {
+    color: darken($refills-hero-background, 20%);
+  }
+}
+
+.menu-item.unstyled {
+  position: relative;
+}
+
+.menu-item.unstyled:after {
+  @include transform(scale(0.4) rotate(13deg));
+  content: url('/images/new.svg');
+  position: absolute;
+  right: -42px;
+  top: -63px;
+}

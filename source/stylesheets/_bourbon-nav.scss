@@ -4,12 +4,16 @@ nav.bourbon {
   @include clearfix;
   background-color: $bourbon-nav-background-color;
   padding: 0 2em 0 1em;
+  text-rendering: optimizeLegibility;
 
   @include media(max-width em(510)) {
     padding: 0;
   };
 
   ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     text-align: center;
 
     @include media(em(901)) {
@@ -29,6 +33,7 @@ nav.bourbon {
     display: inline-block;
     font-weight: bold;
     padding: 1em 1em 1em 3em;
+    text-decoration: none;
 
     @include media(max-width em(515)) {
       padding: 0.75em 0.5em;
@@ -71,6 +76,7 @@ nav.bourbon {
     color: rgba(#fff, 0.6);
     float: right;
     font-size: 1em;
+    margin: 0;
 
     @include media(max-width em(900)) {
       display: none;
@@ -78,6 +84,7 @@ nav.bourbon {
 
     a {
       padding: 1em 0;
+      text-decoration: none;
 
       &:hover {
         background-color: transparent;
