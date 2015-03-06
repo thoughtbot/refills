@@ -1,0 +1,42 @@
+.dropdown {
+  $large-screen: em(640) !default;
+  $dropdown-distance-from-menu: 50px;
+
+  .dropdown-container {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+  }
+
+  .dropdown-description {
+    float: left;
+    padding-right: 1em;
+  }
+
+  .dropdown-button {
+    cursor: pointer;
+    float: right;
+    position: relative;
+  }
+
+  .dropdown-button:after {
+    display: block;
+    position: absolute;
+  }
+
+  .dropdown-menu {
+    @include transition (all 0.2s ease-in-out);
+    cursor: pointer;
+    display: none;
+    overflow: show;
+    position: absolute;
+    text-align: left;
+    top: $dropdown-distance-from-menu;
+    width: 228px;
+    z-index: 99999;
+  }
+
+  .show-menu {
+    display: block;
+  }
+}
