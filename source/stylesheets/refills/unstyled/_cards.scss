@@ -6,15 +6,15 @@
   .card {
     @include flex-basis(20em);
     @include flex-grow(1);
-    margin: 0 1em 0 1em;
+    margin: 0 1em;
+  }
+  
+  .card-image {
+    max-height: 150px;
+    overflow: hidden;
 
-    .card-image {
-      overflow: hidden;
-      max-height: 150px;
-
-      img {
-        width: 100%;
-      }
+    img {
+      width: 100%;
     }
   }
 }
