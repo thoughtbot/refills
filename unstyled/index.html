@@ -638,6 +638,107 @@
 </div>
   </section>
 
+  <section id="dropdown" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Dropdown</h6></div>
+      <div class="refill-centering">
+        <div class="dropdown">
+  <div class="dropdown-container">
+    <p class="dropdown-description">Description</p>
+    <p class="dropdown-button">Click to Select</p>
+    <ul class="dropdown-menu dropdown-select">
+      <li>Dropdown Menu Item</li>
+      <li>Another Item</li>
+      <li>Item Three</li>
+      <li>The Last One</li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;div class=&quot;dropdown-container&quot;&gt;
+    &lt;p class=&quot;dropdown-description&quot;&gt;Description&lt;/p&gt;
+    &lt;p class=&quot;dropdown-button&quot;&gt;Click to Select&lt;/p&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-select&quot;&gt;
+      &lt;li&gt;Dropdown Menu Item&lt;/li&gt;
+      &lt;li&gt;Another Item&lt;/li&gt;
+      &lt;li&gt;Item Three&lt;/li&gt;
+      &lt;li&gt;The Last One&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.dropdown {
+  $large-screen: em(640) !default;
+  $dropdown-distance-from-menu: 50px;
+
+  .dropdown-container {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+  }
+
+  .dropdown-description {
+    float: left;
+    padding-right: 1em;
+  }
+
+  .dropdown-button {
+    cursor: pointer;
+    float: right;
+    position: relative;
+  }
+
+  .dropdown-button:after {
+    display: block;
+    position: absolute;
+  }
+
+  .dropdown-menu {
+    @include transition (all 0.2s ease-in-out);
+    cursor: pointer;
+    display: none;
+    overflow: show;
+    position: absolute;
+    text-align: left;
+    top: $dropdown-distance-from-menu;
+    width: 228px;
+    z-index: 99999;
+  }
+
+  .show-menu {
+    display: block;
+  }
+}
+</code></pre>
+</td>
+
+
+
+  </tr>
+</table>
+</div>
+  </section>
+
   </div>
 </div>
     

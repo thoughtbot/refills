@@ -6453,3 +6453,37 @@ section.inner-content {
   /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_comment.scss */
   .unstyled .comment .comment-content {
     width: 100%; }
+/* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_dropdown.scss */
+.unstyled .dropdown .dropdown-container {
+  display: inline-block;
+  position: relative;
+  text-align: center; }
+/* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_dropdown.scss */
+.unstyled .dropdown .dropdown-description {
+  float: left;
+  padding-right: 1em; }
+/* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_dropdown.scss */
+.unstyled .dropdown .dropdown-button {
+  cursor: pointer;
+  float: right;
+  position: relative; }
+/* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_dropdown.scss */
+.unstyled .dropdown .dropdown-button:after {
+  display: block;
+  position: absolute; }
+/* line 27, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_dropdown.scss */
+.unstyled .dropdown .dropdown-menu {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: none;
+  overflow: show;
+  position: absolute;
+  text-align: left;
+  top: 50px;
+  width: 228px;
+  z-index: 99999; }
+/* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_dropdown.scss */
+.unstyled .dropdown .show-menu {
+  display: block; }
