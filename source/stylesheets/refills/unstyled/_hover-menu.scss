@@ -1,0 +1,60 @@
+.hover-menu {
+  $large-screen: em(860) !default;
+  $submenu-width: 12em;
+
+  overflow: visible;
+  padding-right: 0;
+
+  @include media($large-screen) {
+    position: relative;
+  }
+
+  .hover-menu-item {
+    left: 0;
+    position: relative;
+
+    &::after {
+      content: "›";
+      padding-left: 0.5em;
+    }
+  }
+
+  .submenu {
+    display: none;
+    margin: 0;
+    padding-left: 0;
+
+    @include media($large-screen) {
+      left: 0;
+      position: absolute;
+    }
+  }
+
+  .submenu li {
+    display: block;
+    padding-right: 0;
+  }
+
+  .submenu li a {
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+
+    @include media($large-screen) {
+      text-align: left;
+      width: $submenu-width;
+    }
+  }
+
+  .submenu .submenu {
+    @include media($large-screen) {
+      left: $submenu-width;
+      top: 0;
+    }
+  }
+
+  &:focus > .submenu,
+  &:hover > .submenu {
+    display: block;
+  }
+}
