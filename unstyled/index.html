@@ -311,6 +311,105 @@
 </div>
     </section>
 
+    <section id="button-group" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Button Group</h6></div>
+        <div class="refill-centering"><div class="button-group">
+  <label>
+    <input type="radio" name="button-group" value="item" checked>
+    <span class="button-group-item">Item</span>
+  </label>
+  <label>
+    <input type="radio" name="button-group" value="other-item">
+    <span class="button-group-item">Other But Longer Item</span>
+  </label>
+  <label>
+    <input type="radio" name="button-group" value="other-item">
+    <span class="button-group-item">Third</span>
+  </label>
+  <label>
+    <input type="radio" name="button-group" value="third">
+    <span class="button-group-item">Last Item</span>
+  </label>
+</div>
+</div>
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;div class=&quot;button-group&quot;&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;button-group&quot; value=&quot;item&quot; checked&gt;
+    &lt;span class=&quot;button-group-item&quot;&gt;Item&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;button-group&quot; value=&quot;other-item&quot;&gt;
+    &lt;span class=&quot;button-group-item&quot;&gt;Other But Longer Item&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;button-group&quot; value=&quot;other-item&quot;&gt;
+    &lt;span class=&quot;button-group-item&quot;&gt;Third&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;button-group&quot; value=&quot;third&quot;&gt;
+    &lt;span class=&quot;button-group-item&quot;&gt;Last Item&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.button-group {  
+  $large-screen: em(860) !default;
+
+  input {
+    display: none;
+  }
+
+  label {
+    font-weight: normal;
+
+    @include media($large-screen) {
+      float: left;
+      padding: 0 0.5em;
+    }
+  }
+
+  .button-group-item {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+
+    @include media($large-screen) {
+      width: auto;
+    }
+  }
+
+  input:checked + .button-group-item {
+    color: #ff0000;
+  }
+}
+</code></pre>
+</td>
+
+
+
+  </tr>
+</table>
+</div>
+    </section>
+
   </div>
 </div>
     
