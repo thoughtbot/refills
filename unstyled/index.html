@@ -537,6 +537,107 @@
 </div>
     </section>
 
+  <section id="comment" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Comments</h6></div>
+      <div class="refill-centering">
+        <div class="refill-smaller"><div class="comment">
+  <div class="comment-image">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png" alt="Logo image">
+  </div>
+  <div class="comment-content">
+    <h4>First Comment Title or Author</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.</p>
+  </div>
+</div>
+
+<div class="comment">
+  <div class="comment-image">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="Logo image">
+  </div>
+  <div class="comment-content">
+    <h4>Another One</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.</p>
+  </div>
+</div>
+</div>
+      </div>
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;div class=&quot;comment&quot;&gt;
+  &lt;div class=&quot;comment-image&quot;&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png&quot; alt=&quot;Logo image&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;comment-content&quot;&gt;
+    &lt;h4&gt;First Comment Title or Author&lt;/h4&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;comment&quot;&gt;
+  &lt;div class=&quot;comment-image&quot;&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png&quot; alt=&quot;Logo image&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;comment-content&quot;&gt;
+    &lt;h4&gt;Another One&lt;/h4&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.comment {
+  display: table;
+  width: 100%;
+
+  .comment-image,
+  .comment-content {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .comment-image {
+    padding-right: $gutter;
+
+    img {
+      height: 3em;
+      max-width: none;
+    }
+
+    .comment-reverse-order &amp; {
+      padding-left: 10px;
+      padding-right: 0;
+    }
+  }
+
+  .comment-content {
+    width: 100%;
+  }
+}
+</code></pre>
+</td>
+
+
+
+  </tr>
+</table>
+</div>
+  </section>
+
   </div>
 </div>
     

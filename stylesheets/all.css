@@ -6430,3 +6430,26 @@ section.inner-content {
     /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_cards.scss */
     .unstyled .cards .card-image img {
       width: 100%; }
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_comment.scss */
+.unstyled .comment {
+  display: table;
+  width: 100%; }
+  /* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_comment.scss */
+  .unstyled .comment .comment-image,
+  .unstyled .comment .comment-content {
+    display: table-cell;
+    vertical-align: top; }
+  /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_comment.scss */
+  .unstyled .comment .comment-image {
+    padding-right: 1.618em; }
+    /* line 14, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_comment.scss */
+    .unstyled .comment .comment-image img {
+      height: 3em;
+      max-width: none; }
+    /* line 19, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_comment.scss */
+    .comment-reverse-order .unstyled .comment .comment-image {
+      padding-left: 10px;
+      padding-right: 0; }
+  /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_comment.scss */
+  .unstyled .comment .comment-content {
+    width: 100%; }
