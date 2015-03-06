@@ -6330,3 +6330,37 @@ section.inner-content {
   /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_accordion.scss */
   .unstyled .accordion .is-expanded > a {
     color: red; }
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_accordion-tabs.scss */
+.unstyled .accordion-tabs {
+  padding: 0; }
+  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .unstyled .accordion-tabs::after {
+    clear: both;
+    content: "";
+    display: table; }
+  /* line 7, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_accordion-tabs.scss */
+  .unstyled .accordion-tabs .tab-header-and-content {
+    list-style: none; }
+    @media screen and (min-width: 53.75em) {
+      /* line 7, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_accordion-tabs.scss */
+      .unstyled .accordion-tabs .tab-header-and-content {
+        display: inline; } }
+  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_accordion-tabs.scss */
+  .unstyled .accordion-tabs .tab-link {
+    display: block;
+    padding-right: 1em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_accordion-tabs.scss */
+      .unstyled .accordion-tabs .tab-link {
+        display: inline-block; } }
+  /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_accordion-tabs.scss */
+  .unstyled .accordion-tabs .is-active {
+    color: #ff0000; }
+  /* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_accordion-tabs.scss */
+  .unstyled .accordion-tabs .tab-content {
+    display: none;
+    width: 100%; }
+    @media screen and (min-width: 53.75em) {
+      /* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_accordion-tabs.scss */
+      .unstyled .accordion-tabs .tab-content {
+        float: left; } }
