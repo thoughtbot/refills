@@ -1,0 +1,30 @@
+.button-group {  
+  $large-screen: em(860) !default;
+
+  input {
+    display: none;
+  }
+
+  label {
+    font-weight: normal;
+
+    @include media($large-screen) {
+      float: left;
+      padding: 0 0.5em;
+    }
+  }
+
+  .button-group-item {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+
+    @include media($large-screen) {
+      width: auto;
+    }
+  }
+
+  input:checked + .button-group-item {
+    color: #ff0000;
+  }
+}
