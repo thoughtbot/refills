@@ -6422,11 +6422,11 @@ section.inner-content {
     -moz-flex-grow: 1;
     flex-grow: 1;
     -ms-flex-positive: 1;
-    margin: 0 1em 0 1em; }
-    /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_cards.scss */
-    .unstyled .cards .card .card-image {
-      overflow: hidden;
-      max-height: 150px; }
-      /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_cards.scss */
-      .unstyled .cards .card .card-image img {
-        width: 100%; }
+    margin: 0 1em; }
+  /* line 12, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_cards.scss */
+  .unstyled .cards .card-image {
+    max-height: 150px;
+    overflow: hidden; }
+    /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_cards.scss */
+    .unstyled .cards .card-image img {
+      width: 100%; }
