@@ -410,6 +410,133 @@
 </div>
     </section>
 
+    <section id="cards" class="refill">
+      <div class="refills-wrapper">
+        <div class="line-behind-text"><h6>Cards</h6></div>
+        <div class="refill-centering"><div class="cards">
+  <div class="card">
+    <div class="card-image">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+    </div>
+    <div class="card-header">
+      <h4>First Card</h4>
+    </div>
+    <div class="card-copy">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-image">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-4.png" alt="">
+    </div>
+    <div class="card-header">
+      <h4>Another Card</h4>
+    </div>
+    <div class="card-copy">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-image">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
+    </div>
+    <div class="card-header">
+      <h4>The Last Card</h4>
+    </div>
+    <div class="card-copy">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
+  </div>
+</div>
+</div>
+      </div>
+      <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;div class=&quot;cards&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-image&quot;&gt;
+      &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-header&quot;&gt;
+      &lt;h4&gt;First Card&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-copy&quot;&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-image&quot;&gt;
+      &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-4.png&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-header&quot;&gt;
+      &lt;h4&gt;Another Card&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-copy&quot;&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-image&quot;&gt;
+      &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-header&quot;&gt;
+      &lt;h4&gt;The Last Card&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-copy&quot;&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.cards {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+
+  .card {
+    @include flex-basis(20em);
+    @include flex-grow(1);
+    margin: 0 1em 0 1em;
+
+    .card-image {
+      overflow: hidden;
+      max-height: 150px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+</code></pre>
+</td>
+
+
+
+  </tr>
+</table>
+</div>
+    </section>
+
   </div>
 </div>
     

@@ -6387,3 +6387,46 @@ section.inner-content {
 /* line 27, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_button-group.scss */
 .unstyled .button-group input:checked + .button-group-item {
   color: #ff0000; }
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_cards.scss */
+.unstyled .cards {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+  /* line 6, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_cards.scss */
+  .unstyled .cards .card {
+    -webkit-flex-basis: 20em;
+    -moz-flex-basis: 20em;
+    flex-basis: 20em;
+    -ms-flex-preferred-size: 20em;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    flex-grow: 1;
+    -ms-flex-positive: 1;
+    margin: 0 1em 0 1em; }
+    /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_cards.scss */
+    .unstyled .cards .card .card-image {
+      overflow: hidden;
+      max-height: 150px; }
+      /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_cards.scss */
+      .unstyled .cards .card .card-image img {
+        width: 100%; }
