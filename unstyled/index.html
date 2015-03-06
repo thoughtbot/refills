@@ -739,6 +739,131 @@
 </div>
   </section>
 
+  <section id="footer" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Footer</h6></div>
+      <div class="refill-centering"><!--<div class="wrapper-for-content-outside-of-footer">
+   Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
+</div>-->
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-logo">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png" alt="Logo image">
+  </div>
+    <ul>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+      <li><a href="javascript:void(0)">Products</a></li>
+    </ul>
+</footer>
+</div>
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;!--&lt;div class=&quot;wrapper-for-content-outside-of-footer&quot;&gt;
+   Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
+&lt;/div&gt;--&gt;
+
+&lt;footer class=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;
+  &lt;div class=&quot;footer-logo&quot;&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png&quot; alt=&quot;Logo image&quot;&gt;
+  &lt;/div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/footer&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">// Uncomment this for a sticky footer.
+//
+// .wrapper-for-content-outside-of-footer {
+//   min-height: 100%;
+//   height: auto !important;
+//   height: 100%;
+//   margin: 0 auto -4em;
+// }
+
+// html, body {
+//  height: 100%;
+// }
+
+// .wrapper-for-content-outside-of-footer:after {
+//   content: &quot;&quot;;
+//   display: block;
+// }
+
+// .footer, .wrapper-for-content-outside-of-footer:after {
+//   $large-screen: em(860) !default;
+//   height: 12em;
+
+//   @include media($large-screen) {
+//     height: 4em;
+//   }
+// }
+
+.footer {
+  $large-screen: em(860) !default;
+
+  .footer-logo {
+    margin-bottom: 1em;
+    margin-right: 1em;
+
+    @include media($large-screen) {
+      float: left;
+      margin-bottom: 0;
+    }
+
+    img {
+      height: 2.2em;
+    } 
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+
+    @include media($large-screen) {
+      float: left;
+      padding-top: 0.3em;
+    }
+
+    li {
+      line-height: 1.5em;
+      padding-right: 1em;
+
+      @include media($large-screen) {
+        display: inline;
+        text-align: left;
+      }
+    }
+  }
+}
+</code></pre>
+</td>
+
+
+
+  </tr>
+</table>
+</div>
+  </section>
+
   </div>
 </div>
     
