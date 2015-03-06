@@ -17,7 +17,7 @@
       }}();
     </script>
   </head>
-  <body class="refills-page-scripts refills-page-scripts_index">
+  <body class="unstyled unstyled_index">
     <nav class="bourbon">
       <ul>
         <li><a href="//bourbon.io" class="bourbon">Bourbon</a></li>
@@ -29,7 +29,145 @@
     </nav>
     <section class="container">
       <section class="inner-content">
-        <!-- Type System tabs -->
+        <div class="refills-unstyled">
+
+  <a class="js-menu-trigger-refills refills-menu-anchor fixedsticky">
+    <img src="/images/menu.png" alt="Menu icon">
+  </a>
+  <div class="js-menu-screen-refills refills-menu-screen"></div>
+
+  <div class="refills-header">
+  <div class="refills-logo">
+    <img src="/images/refills-logo.svg" alt="Refills logo">
+  </div>
+  <h2>Components and patterns built with <a href="//bourbon.io">Bourbon</a> and <a href="//neat.bourbon.io">Neat</a>.</h2>
+  <p>Managed by <a href="http://thoughtbot.com">thoughtbot</a>, instructions at <a href="//github.com/thoughtbot/refills">GitHub</a></p>
+</div>
+
+  <ul class="refills-menu">
+  <li class="menu-item patterns"><a href="../">Patterns</a></li>
+  <li class="menu-item components"><a href="../components/">Components</a></li>
+  <li class="menu-item type-systems"><a href="../type-systems/">Type Systems</a></li>
+  <li class="menu-item unstyled"><a href="./">Unstyled</a></li>
+</ul>
+
+
+  <div id="example">
+  
+  <section id="accordion" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Accordion</h6></div>
+      <div class="refill-centering"><ul class="accordion">
+  <li>
+    <a href="javascript:void(0)" class="js-accordion-trigger">Accordion Item</a>
+    <ul class="submenu">
+      <li>
+        <a href="javascript:void(0)">Sub Item 1</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">Sub Item 2</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="javascript:void(0)" class="js-accordion-trigger">Another Item</a>
+    <ul class="submenu">
+      <li>
+        <a href="javascript:void(0)">Sub Item 1</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">Sub Item 2</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;ul class=&quot;accordion&quot;&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;js-accordion-trigger&quot;&gt;Accordion Item&lt;/a&gt;
+    &lt;ul class=&quot;submenu&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;javascript:void(0)&quot;&gt;Sub Item 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;javascript:void(0)&quot;&gt;Sub Item 2&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;js-accordion-trigger&quot;&gt;Another Item&lt;/a&gt;
+    &lt;ul class=&quot;submenu&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;javascript:void(0)&quot;&gt;Sub Item 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;javascript:void(0)&quot;&gt;Sub Item 2&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.accordion {  
+  &gt; li &gt; a {
+    font-weight: normal;
+  }
+
+  ul.submenu {
+    display: none;
+  }
+
+  .is-expanded {
+    &gt; a {
+      color: red;
+    }
+
+    display: block;
+  }
+}
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$('.js-accordion-trigger').bind('click', function(e){
+  jQuery(this).parent().find('.submenu').slideToggle('fast');
+  jQuery(this).parent().toggleClass('is-expanded');
+  e.preventDefault();
+});
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+  </section>
+
+  </div>
+</div>
+    
+<!-- Type System tabs -->
 <script>
   var $tabs, $toggles, ACTIVE_CLASS;
 
@@ -102,12 +240,13 @@
   });
 </script>
 
+
         <footer class="refills-footer">
           <ul class="footer-links">
             <li><a href="../">Patterns</a></li>
             <li><a href="../components/">Components</a></li>
             <li><a href="../type-systems/">Type Systems</a></li>
-            <li><a href="../unstyled/">Unstyled Components</a></li>
+            <li><a href="./">Unstyled Components</a></li>
           </ul>
           <div class="refills-footer-logo">
             <img src="/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">

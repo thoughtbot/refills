@@ -1769,6 +1769,11 @@ $('.js-accordion-trigger').bind('click', function(e){
   jQuery(this).parent().toggleClass('is-expanded');
   e.preventDefault();
 });
+$('.accordion-base-trigger').bind('click', function(e){
+  jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
+  jQuery(this).parent().toggleClass('is-expanded');
+  e.preventDefault();
+});
 $(document).ready(function () {
   $('.accordion-tabs').each(function(index) {
     $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
@@ -1816,6 +1821,11 @@ $(function() {
       $(this).removeClass(animationClasses);
     });
   });
+});
+$('.base-accordion-trigger').bind('click', function(e){
+  jQuery(this).parent().find('.submenu').slideToggle('fast');
+  jQuery(this).parent().toggleClass('is-expanded');
+  e.preventDefault();
 });
 $(document).ready(function() {
   var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
