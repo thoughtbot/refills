@@ -1,0 +1,36 @@
+.tooltip-item {  
+  display: inline-block;
+  position: relative;
+  text-align: center;
+
+  &:focus,
+  &:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .tooltip {
+    @include position(absolute, null 0 3em 0);
+    @include transition (all 0.2s ease-in-out);
+    background: whitesmoke;
+    width: 12em;
+    margin-left: -2em;
+    opacity: 0;
+    text-align: center;
+    visibility: hidden;
+    z-index: 10;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &:after {
+      @include position(absolute, null 0 null 0);
+      bottom: -1em;
+      color: whitesmoke;
+      content: '▼';
+      font-size: 1.4em;
+      text-align: center;
+    }
+  }
+}
