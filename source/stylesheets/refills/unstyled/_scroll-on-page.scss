@@ -1,0 +1,22 @@
+.scroll-on-page {
+  $large-screen: em(860) !default;
+
+  aside {
+    @include media($large-screen) {
+      @include span-columns(4);
+    }
+  }
+
+  .scroll-on-page-link {
+    display: block;
+    outline: none;
+  }
+
+  article {
+    @include media($large-screen) {
+      @include span-columns(8);
+    }
+  }
+}
+
+// Based on code by http://codepen.io/xmark/
