@@ -1,4 +1,4 @@
-.sliding-menu-content {  
+.sliding-panel-content {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
@@ -17,37 +17,37 @@
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $sliding-menu-border-color: $dark-gray;
-  $sliding-menu-background: lighten($sliding-menu-border-color, 5%);
-  $sliding-menu-color: #fff;
-  $sliding-menu-border: 1px solid $sliding-menu-border-color;
-  $sliding-menu-background-hover: $base-accent-color;
-  $sliding-menu-color-hover: #fff;
-  $sliding-menu-background-focus: lighten($sliding-menu-background, 5%);
+  $sliding-panel-border-color: $dark-gray;
+  $sliding-panel-background: lighten($sliding-panel-border-color, 5%);
+  $sliding-panel-color: #fff;
+  $sliding-panel-border: 1px solid $sliding-panel-border-color;
+  $sliding-panel-background-hover: $base-accent-color;
+  $sliding-panel-color-hover: #fff;
+  $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
 
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
   @include transform(translateX(-220px));
   @include transition(all 0.25s linear);
-  background: $sliding-menu-background;
+  background: $sliding-panel-background;
   z-index: 999999;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
   li a {
-    border-bottom: $sliding-menu-border;
-    color: $sliding-menu-color;
+    border-bottom: $sliding-panel-border;
+    color: $sliding-panel-color;
     display: block;
     font-weight: bold;
     padding: 1em;
 
     &:focus {
-      background-color: $sliding-menu-background-focus;
+      background-color: $sliding-panel-background-focus;
     }
 
     &:hover {
-      background-color: $sliding-menu-background-hover;
-      color: $sliding-menu-color-hover;
+      background-color: $sliding-panel-background-hover;
+      color: $sliding-panel-color-hover;
     }
   }
 
@@ -56,7 +56,7 @@
   }
 }
 
-.sliding-menu-fade-screen {
+.sliding-panel-fade-screen {
   @include position(fixed, 0px 0px 0px 0px);
   @include transition;
   background: black;
@@ -70,7 +70,7 @@
   }
 }
 
-.sliding-menu-button {
+.sliding-panel-button {
   @include button(flat, #477DCA);
   padding: 10px 16px;
   display: inline-block;
