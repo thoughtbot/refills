@@ -49,7 +49,7 @@
     padding: 0.8em 1em;
   }
 
-  .modal-window { // overlay
+  .modal-fade-screen { // overlay
     @include transition(opacity 0.25s ease);
     @include position(fixed, 0px 0px 0px 0px);
     background: rgba(0,0,0, 0.85);
@@ -149,12 +149,12 @@
     }
   }
 
-  .modal-state:checked + .modal-window {
+  .modal-state:checked + .modal-fade-screen {
     opacity: 1;
     visibility: visible;
   }
 
-  .modal-state:checked + .modal-window .modal-inner {
+  .modal-state:checked + .modal-fade-screen .modal-inner {
     top: 0.5em;
   }
 }
