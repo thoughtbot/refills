@@ -1,0 +1,93 @@
+.navigation-centered {
+  $large-screen: em(860) !default;
+  $centered-navigation-height: 60px;
+  $centered-navigation-logo-height: 2em;
+
+  width: 100%;
+
+  // Mobile view
+  .mobile-logo {
+    display: inline;
+    float: left;
+    
+    @include media($large-screen) {
+      display: none;
+    }
+
+    img {
+      max-height: $centered-navigation-logo-height;
+    }
+  }
+
+  .navigation-centered-mobile-menu {
+    float: right;
+    padding-top: 0.5em;
+
+    @include media ($large-screen) {
+      display: none;
+    }
+  }
+
+  // Nav menu
+  .navigation-centered-wrapper {
+    @include clearfix;
+    @include outer-container;
+    position: relative;
+  }
+
+  ul.navigation-centered-menu {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+
+    &.show {
+      display: block;
+    }
+
+    @include media ($large-screen) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  // Nav items
+  ul li.nav-link {
+    display: block;
+    text-align: right;
+    width: 100%;
+
+    a {
+      display: inline-block;
+    }
+
+    &:last-child a {
+      padding-right: 0;
+    }
+
+    @include media($large-screen) {
+      display: inline;
+
+      a {
+        padding-right: 1em;
+      }
+    }
+  }
+
+  // Centered logo
+  li.logo.nav-link {
+    display: none;
+    line-height: 0;
+
+    @include media($large-screen) {
+      display: inline;
+    }
+  }
+
+  .logo img {
+    margin-bottom: -$centered-navigation-logo-height / 3;
+    max-height: $centered-navigation-logo-height;
+  }
+}
