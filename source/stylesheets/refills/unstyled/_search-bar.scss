@@ -1,0 +1,26 @@
+.search-bar {
+  width: 100%;
+
+  form {  
+    position: relative;
+  }
+
+  input {
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  button {
+    @include position(absolute, 0 0 0 null);
+    padding: 5px 10px;
+
+  }
+  
+  img {
+    height: 12px;
+    opacity: 0.7;
+  }
+}
