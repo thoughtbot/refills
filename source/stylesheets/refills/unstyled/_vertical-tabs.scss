@@ -1,0 +1,53 @@
+.vertical-tabs-container {
+  $large-screen: em(640) !default;
+  $vertical-tabs-height: em(100);
+
+  @include clearfix;
+
+  .vertical-tabs {
+    display: none;
+
+    @include media($large-screen) {
+      display: inline;
+      float: left;
+      height: $vertical-tabs-height;
+      width: 20%;
+    }
+  }
+
+  .vertical-tab {
+    @include media($large-screen) {
+      display: block;
+
+      &.is-active {
+        color: #ff0000;
+      }
+    }
+  }
+
+  .vertical-tab-content-container {
+    display: block;
+
+    @include media($large-screen) {
+      @include size(80% $vertical-tabs-height);
+      display: inline-block;
+    }
+  }
+
+  .vertical-tab-content {
+    @include media($large-screen) {
+      display: none;
+    }
+  }
+
+  .vertical-tab-accordion-heading {
+    cursor: pointer;
+    display: block;
+
+    @include media($large-screen) {
+      display: none;
+    }
+  }
+}
+
+// Based on code by Jett Miller jettmiller.net
