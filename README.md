@@ -25,6 +25,7 @@ for updates.
 2. Go to the [Refills website](http://refills.bourbon.io), click “Show Code” under the component or pattern that you want and copy-paste it into your project.
 
 3. Customize: Most of the components and patterns have a set of Sass variables that allow you to quickly tweak the look and feel.
+4. For Typography: These override some of the styles specified in the _variables.scss and _typography.scss partials in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won’t need the wrapping class .type-system-name.
 
 ## Installation for Ruby on Rails
 
