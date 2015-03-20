@@ -732,6 +732,25 @@
 </code></pre>
 </td>
 
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(document).ready(function(){
+  $(&quot;.dropdown-button&quot;).click(function() {
+    $(&quot;.dropdown-menu&quot;).toggleClass(&quot;show-menu&quot;);
+    $(&quot;.dropdown-menu &gt; li&quot;).click(function(){
+      $(&quot;.dropdown-menu&quot;).removeClass(&quot;show-menu&quot;);
+    });
+    $(&quot;.dropdown-menu.dropdown-select &gt; li&quot;).click(function() {
+      $(&quot;.dropdown-button&quot;).html($(this).html());
+    });
+  });
+});
+
+</code></pre>
+</td>
 
 
   </tr>
