@@ -6483,6 +6483,19 @@ section.inner-content {
 /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_dropdown.scss */
 .unstyled .dropdown .show-menu {
   display: block; }
+/* line 2, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_expander.scss */
+.unstyled .expander .expander-trigger {
+  display: block; }
+  /* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_expander.scss */
+  .unstyled .expander .expander-trigger:before {
+    content: "\25BC";
+    margin-right: 0.5em; }
+/* line 12, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_expander.scss */
+.unstyled .expander .expander-hidden:before {
+  content: "\25BA"; }
+/* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_expander.scss */
+.unstyled .expander .expander-hidden + .expander-content {
+  display: none; }
 /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_footer.scss */
 .unstyled .footer .footer-logo {
   margin-bottom: 1em;
