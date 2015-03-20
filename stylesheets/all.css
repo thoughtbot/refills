@@ -6614,6 +6614,52 @@ section.inner-content {
   .unstyled .search-bar img {
     height: 12px;
     opacity: 0.7; }
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_switch.scss */
+.unstyled .switch {
+  cursor: pointer;
+  display: inline-block;
+  position: relative; }
+  /* line 12, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_switch.scss */
+  .unstyled .switch input {
+    display: none; }
+    /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_switch.scss */
+    .unstyled .switch input + .checkbox {
+      height: 32px;
+      width: 52px;
+      border: 1px solid #000;
+      cursor: pointer;
+      position: relative;
+      width: 52px;
+      z-index: 0; }
+      /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_switch.scss */
+      .unstyled .switch input + .checkbox::before {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        bottom: 0;
+        left: 2px;
+        content: "";
+        width: 48px;
+        z-index: 1; }
+      /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_switch.scss */
+      .unstyled .switch input + .checkbox::after {
+        position: absolute;
+        top: 1px;
+        right: 0;
+        bottom: 0;
+        left: 1px;
+        height: 28px;
+        width: 28px;
+        background-color: #000;
+        content: "";
+        transition: all 0.3s ease;
+        z-index: 2; }
+    /* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_switch.scss */
+    .unstyled .switch input:checked + .checkbox {
+      background-color: #aaa; }
+      /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_switch.scss */
+      .unstyled .switch input:checked + .checkbox::after {
+        left: 21px; }
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_tooltip.scss */
 .unstyled .tooltip-item {
   display: inline-block;

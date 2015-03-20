@@ -1159,6 +1159,97 @@
 </table>
 </div>
    
+  <section id="switch" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Switch</h6></div>
+      <div class="refill-centering"><label class="switch">
+  <input type="checkbox" />
+  <div class="checkbox"></div>
+</label>
+</div>
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;label class=&quot;switch&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; /&gt;
+  &lt;div class=&quot;checkbox&quot;&gt;&lt;/div&gt;
+&lt;/label&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.switch {  
+  $switch-width: 52px;
+  $switch-padding: 2px;
+  $switch-height: 32px;
+  $knob-size: $switch-height - ($switch-padding * 2);
+  $knob-width: $knob-size;
+
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+
+  input {
+    display: none;
+
+    + .checkbox {
+      @include size($switch-width $switch-height);
+      border: 1px solid #000;
+      cursor: pointer;
+      position: relative;
+      width: $switch-width;
+      z-index: 0;
+
+      &amp;::before {
+        @include position(absolute, $switch-padding 0 0 $switch-padding);
+        content: &quot;&quot;;
+        width: $switch-width - ($switch-padding * 2);
+        z-index: 1;
+      }
+
+      &amp;::after {
+        @include position(absolute, 1px 0 0 1px);
+        @include size($knob-size);
+        background-color: #000;
+        content: &quot;&quot;;
+        transition: all 0.3s ease;
+        z-index: 2;
+      }
+    }
+
+    &amp;:checked {
+      + .checkbox {
+        background-color: #aaa;
+
+        &amp;::after {
+          left: $switch-width - $knob-width - ($switch-padding * 2) + 1px;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+</td>
+
+
+
+  </tr>
+</table>
+</div>
+  </section>
+  
   <section id="tooltip" class="refill">
     <div class="refills-wrapper">
       <div class="line-behind-text"><h6>Tooltip</h6></div>
@@ -1426,7 +1517,7 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
   </tr>
 </table>
 </div>
-  </section>
+
 
   </div>
 </div>
