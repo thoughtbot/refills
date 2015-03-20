@@ -1950,8 +1950,11 @@ function parallax(){
       var defaults = {
         selector: 'a.scroll-on-page-link'
       };
-      if (typeof options == 'string') defaults.selector = options;
-      var options = jQuery.extend(defaults, options);
+      if (typeof options == 'string') {
+        defaults.selector = options;
+      }
+
+      options = jQuery.extend(defaults, options);
       return jQuery(options.selector).click(function (e) {
         var jumpobj = jQuery(this);
         var target = jumpobj.attr('href');
@@ -1959,11 +1962,11 @@ function parallax(){
         var offset = jQuery(target).offset().top;
         jQuery('html,body').animate({
           scrollTop: offset
-        }, thespeed, 'swing')
+        }, thespeed, 'swing');
         e.preventDefault();
-      })
+      });
     }
-  }
+  };
 })(jQuery);
 
 
