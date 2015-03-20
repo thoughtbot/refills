@@ -2,16 +2,12 @@
 @import url(vendor/normalize.css);
 @import url(vendor/fixedsticky.css);
 @import url(vendor/prism.css);
-/* line 4, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_box-sizing.scss */
+/* line 4, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_box-sizing.scss */
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
+/* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
   box-sizing: inherit; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-styles.scss */
@@ -21,7 +17,7 @@ body {
   background: #fff;
   min-width: 320px; }
 
-/* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+/* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
 .menu-wrapper::after {
   clear: both;
   content: "";
@@ -47,7 +43,7 @@ body {
   padding: 5em 0 8em;
   text-align: center;
   width: 100%; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .refills-header::after {
     clear: both;
     content: "";
@@ -238,7 +234,7 @@ section.refill {
   margin-bottom: 2em;
   padding-bottom: 1em;
   position: relative; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   section.refill::after {
     clear: both;
     content: "";
@@ -255,7 +251,7 @@ section.refill {
   margin-left: auto;
   margin-right: auto;
   padding: 1em; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .refills-wrapper::after {
     clear: both;
     content: "";
@@ -463,7 +459,7 @@ footer.refills-footer {
     display: block;
     height: 60px;
     margin: auto; }
-    /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
     footer.refills-footer img::after {
       clear: both;
       content: "";
@@ -500,7 +496,7 @@ nav.bourbon {
   background-color: #5b5e63;
   padding: 0 2em 0 1em;
   text-rendering: optimizeLegibility; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   nav.bourbon::after {
     clear: both;
     content: "";
@@ -737,7 +733,7 @@ section.inner-content {
   line-height: 1.5;
   margin-bottom: 1.5em;
   padding: 0; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .refills-patterns .accordion-tabs::after {
     clear: both;
     content: "";
@@ -817,7 +813,7 @@ section.inner-content {
 .refills-patterns .accordion-tabs-minimal {
   line-height: 1.5;
   padding: 0; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .refills-patterns .accordion-tabs-minimal::after {
     clear: both;
     content: "";
@@ -1008,12 +1004,12 @@ section.inner-content {
     margin-right: auto;
     position: relative;
     z-index: 999; }
-    /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
     .refills-patterns .centered-navigation .centered-navigation-wrapper::after {
       clear: both;
       content: "";
       display: table; }
-    /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
     .refills-patterns .centered-navigation .centered-navigation-wrapper::after {
       clear: both;
       content: "";
@@ -1271,15 +1267,15 @@ section.inner-content {
       text-decoration: none;
       background-clip: padding-box;
       padding: 0.7em 1em; }
-      /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .device-background .device-text button:hover:not(:disabled) {
         background-color: #578ad4;
         cursor: pointer; }
-      /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .device-background .device-text button:active:not(:disabled), .refills-patterns .device-background .device-text button:focus:not(:disabled) {
         background-color: #3c71bb;
         cursor: pointer; }
-      /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .device-background .device-text button:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -1353,7 +1349,7 @@ section.inner-content {
   /* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_flex-boxes.scss */
   .refills-patterns .flex-boxes a {
     text-decoration: none; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .refills-patterns .flex-boxes::after {
     clear: both;
     content: "";
@@ -1468,7 +1464,7 @@ section.inner-content {
   /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
   .refills-patterns .footer .footer-links {
     margin-bottom: 1.5em; }
-    /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
     .refills-patterns .footer .footer-links::after {
       clear: both;
       content: "";
@@ -1487,16 +1483,16 @@ section.inner-content {
         display: block;
         margin-right: 2.35765%;
         width: 23.23176%; }
-        /* line 87, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+        /* line 89, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
         .refills-patterns .footer ul:last-child {
           margin-right: 0; }
-        /* line 78, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_omega.scss */
+        /* line 78, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
         .refills-patterns .footer ul:nth-child(3n) {
           margin-right: 0; }
-        /* line 83, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_omega.scss */
+        /* line 83, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
         .refills-patterns .footer ul:nth-child(3n+1) {
           clear: left; }
-        /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+        /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
         .refills-patterns .footer ul::after {
           clear: both;
           content: "";
@@ -1626,7 +1622,7 @@ section.inner-content {
 /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-items.scss */
 .refills-patterns .grid-items a {
   text-decoration: none; }
-/* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+/* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
 .refills-patterns .grid-items::after {
   clear: both;
   content: "";
@@ -1766,7 +1762,7 @@ section.inner-content {
   /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_grid-items-lines.scss */
   .refills-patterns .grid-items-lines a {
     text-decoration: none; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .refills-patterns .grid-items-lines::after {
     clear: both;
     content: "";
@@ -1855,12 +1851,12 @@ section.inner-content {
     margin: auto;
     padding: 3.5em;
     text-align: center; }
-    /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
     .refills-patterns .hero .hero-inner::after {
       clear: both;
       content: "";
       display: table; }
-    /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
     .refills-patterns .hero .hero-inner::after {
       clear: both;
       content: "";
@@ -1899,15 +1895,15 @@ section.inner-content {
       text-decoration: none;
       background-clip: padding-box;
       padding: 0.7em 1em; }
-      /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .hero .hero-inner button:hover:not(:disabled) {
         background-color: #578ad4;
         cursor: pointer; }
-      /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .hero .hero-inner button:active:not(:disabled), .refills-patterns .hero .hero-inner button:focus:not(:disabled) {
         background-color: #3c71bb;
         cursor: pointer; }
-      /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .hero .hero-inner button:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -2019,12 +2015,12 @@ section.inner-content {
     margin-right: auto;
     position: relative;
     z-index: 9999; }
-    /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
     .refills-patterns header.navigation .navigation-wrapper::after {
       clear: both;
       content: "";
       display: table; }
-    /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
     .refills-patterns header.navigation .navigation-wrapper::after {
       clear: both;
       content: "";
@@ -2249,15 +2245,15 @@ section.inner-content {
     margin-top: 1em;
     padding: 0.75em 1em;
     text-transform: uppercase; }
-    /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+    /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
     .refills-patterns header.navigation .sign-up:hover:not(:disabled) {
       background-color: #578ad4;
       cursor: pointer; }
-    /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+    /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
     .refills-patterns header.navigation .sign-up:active:not(:disabled), .refills-patterns header.navigation .sign-up:focus:not(:disabled) {
       background-color: #3c71bb;
       cursor: pointer; }
-    /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+    /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
     .refills-patterns header.navigation .sign-up:disabled {
       opacity: 0.5;
       cursor: not-allowed; }
@@ -2316,23 +2312,23 @@ section.inner-content {
         position: absolute;
         right: 0.3em;
         top: 0.3em; }
-        /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+        /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .refills-patterns header.navigation .search-bar form button[type=submit]:hover:not(:disabled) {
           background-color: #4d4d4d;
           cursor: pointer; }
-        /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+        /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .refills-patterns header.navigation .search-bar form button[type=submit]:active:not(:disabled), .refills-patterns header.navigation .search-bar form button[type=submit]:focus:not(:disabled) {
           background-color: #333333;
           cursor: pointer; }
-        /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+        /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .refills-patterns header.navigation .search-bar form button[type=submit]:hover:not(:disabled) {
           background-color: #504949;
           cursor: pointer; }
-        /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+        /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .refills-patterns header.navigation .search-bar form button[type=submit]:active:not(:disabled), .refills-patterns header.navigation .search-bar form button[type=submit]:focus:not(:disabled) {
           background-color: #333333;
           cursor: pointer; }
-        /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+        /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .refills-patterns header.navigation .search-bar form button[type=submit]:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
@@ -2371,7 +2367,7 @@ section.inner-content {
       display: block;
       margin-right: 2.35765%;
       width: 31.76157%; }
-      /* line 87, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 89, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       .refills-patterns .scroll-on-page aside:last-child {
         margin-right: 0; } }
   /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_scroll-on-page.scss */
@@ -2397,7 +2393,7 @@ section.inner-content {
       display: block;
       margin-right: 2.35765%;
       width: 65.88078%; }
-      /* line 87, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+      /* line 89, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       .refills-patterns .scroll-on-page article:last-child {
         margin-right: 0; } }
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
@@ -2420,7 +2416,7 @@ section.inner-content {
     display: block;
     font-weight: bold;
     margin-bottom: 0.375em; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .refills-patterns .search-tools::after {
     clear: both;
     content: "";
@@ -2436,7 +2432,7 @@ section.inner-content {
         margin-right: 2.35765%;
         width: 27.49666%;
         margin-bottom: 0; }
-        /* line 87, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+        /* line 89, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
         .refills-patterns .search-tools .filter:last-child {
           margin-right: 0; } }
     /* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
@@ -2505,29 +2501,29 @@ section.inner-content {
       bottom: auto;
       left: auto;
       font-size: 0.7em; }
-      /* line 137, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 137, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .search-tools .filter button:hover:not(:disabled) {
         box-shadow: inset 0 1px 0 0 white;
         cursor: pointer;
         background-color: #f2f2f2;
         background-image: -webkit-linear-gradient(#f2f2f2, #dbdbdb);
         background-image: linear-gradient(#f2f2f2, #dbdbdb); }
-      /* line 153, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 153, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .search-tools .filter button:active:not(:disabled), .refills-patterns .search-tools .filter button:focus:not(:disabled) {
         border: 1px solid #dbdbdb;
         box-shadow: inset 0 0 8px 4px #d4d4d4, inset 0 0 8px 4px #d4d4d4; }
-      /* line 137, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 137, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .search-tools .filter button:hover:not(:disabled) {
         box-shadow: inset 0 1px 0 0 white;
         cursor: pointer;
         background-color: #f2f2f2;
         background-image: -webkit-linear-gradient(#f2f2f2, #ded8d8);
         background-image: linear-gradient(#f2f2f2, #ded8d8); }
-      /* line 153, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 153, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .search-tools .filter button:active:not(:disabled), .refills-patterns .search-tools .filter button:focus:not(:disabled) {
         border: 1px solid #dfd8d8;
         box-shadow: inset 0 0 8px 4px #d7d1d1, inset 0 0 8px 4px #d7d1d1; }
-      /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .search-tools .filter button:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -2547,7 +2543,7 @@ section.inner-content {
         display: block;
         margin-right: 2.35765%;
         width: 10.43705%; }
-        /* line 87, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/neat-1.7.1/app/assets/stylesheets/grid/_span-columns.scss */
+        /* line 89, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
         .refills-patterns .search-tools .trigger:last-child {
           margin-right: 0; } }
     /* line 102, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
@@ -2566,15 +2562,15 @@ section.inner-content {
       padding-bottom: 0.5em;
       padding-top: 0.5em;
       width: 100%; }
-      /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .search-tools .trigger button:hover:not(:disabled) {
         background-color: #578ad4;
         cursor: pointer; }
-      /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .search-tools .trigger button:active:not(:disabled), .refills-patterns .search-tools .trigger button:focus:not(:disabled) {
         background-color: #3c71bb;
         cursor: pointer; }
-      /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .search-tools .trigger button:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -2654,15 +2650,15 @@ section.inner-content {
       text-decoration: none;
       background-clip: padding-box;
       padding: 0.7em 1em; }
-      /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .side-image .side-image-content button:hover:not(:disabled) {
         background-color: #578ad4;
         cursor: pointer; }
-      /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .side-image .side-image-content button:active:not(:disabled), .refills-patterns .side-image .side-image-content button:focus:not(:disabled) {
         background-color: #3c71bb;
         cursor: pointer; }
-      /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+      /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
       .refills-patterns .side-image .side-image-content button:disabled {
         opacity: 0.5;
         cursor: not-allowed; }
@@ -2742,15 +2738,15 @@ section.inner-content {
         outline: none;
         padding: 0.3em 1em;
         width: 100%; }
-        /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+        /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .refills-patterns .tables tbody td button:hover:not(:disabled) {
           background-color: #578ad4;
           cursor: pointer; }
-        /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+        /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .refills-patterns .tables tbody td button:active:not(:disabled), .refills-patterns .tables tbody td button:focus:not(:disabled) {
           background-color: #3c71bb;
           cursor: pointer; }
-        /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+        /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .refills-patterns .tables tbody td button:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
@@ -2809,15 +2805,15 @@ section.inner-content {
         outline: none;
         padding: .3em 1em;
         width: 100%; }
-        /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+        /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .refills-patterns .table-minimal tbody td button:hover:not(:disabled) {
           background-color: #578ad4;
           cursor: pointer; }
-        /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+        /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .refills-patterns .table-minimal tbody td button:active:not(:disabled), .refills-patterns .table-minimal tbody td button:focus:not(:disabled) {
           background-color: #3c71bb;
           cursor: pointer; }
-        /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+        /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
         .refills-patterns .table-minimal tbody td button:disabled {
           opacity: 0.5;
           cursor: not-allowed; }
@@ -2843,7 +2839,7 @@ section.inner-content {
   .refills-patterns .vertical-tabs-container a {
     text-decoration: none;
     color: #477DCA; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .refills-patterns .vertical-tabs-container::after {
     clear: both;
     content: "";
@@ -3047,15 +3043,15 @@ section.inner-content {
   outline: none;
   padding: 0.8em 1em;
   text-align: center; }
-  /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+  /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .refills-components button:hover:not(:disabled) {
     background-color: #578ad4;
     cursor: pointer; }
-  /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+  /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .refills-components button:active:not(:disabled), .refills-components button:focus:not(:disabled) {
     background-color: #3c71bb;
     cursor: pointer; }
-  /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+  /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .refills-components button:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
@@ -3418,7 +3414,7 @@ section.inner-content {
   .refills-components .fade-in-element p {
     color: #333;
     line-height: 1.5em; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .refills-components .fade-in-element::after {
     clear: both;
     content: "";
@@ -3633,15 +3629,15 @@ section.inner-content {
   text-decoration: none;
   background-clip: padding-box;
   padding: 0.8em 1em; }
-  /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+  /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .refills-components .modal .modal-trigger:hover:not(:disabled) {
     background-color: #578ad4;
     cursor: pointer; }
-  /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+  /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .refills-components .modal .modal-trigger:active:not(:disabled), .refills-components .modal .modal-trigger:focus:not(:disabled) {
     background-color: #3c71bb;
     cursor: pointer; }
-  /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+  /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .refills-components .modal .modal-trigger:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
@@ -4009,15 +4005,15 @@ section.inner-content {
     border-top-left-radius: 0;
     outline: none;
     padding: 5px 10px; }
-    /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+    /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
     .refills-components form.search-bar button[type=submit]:hover:not(:disabled) {
       background-color: #578ad4;
       cursor: pointer; }
-    /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+    /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
     .refills-components form.search-bar button[type=submit]:active:not(:disabled), .refills-components form.search-bar button[type=submit]:focus:not(:disabled) {
       background-color: #3c71bb;
       cursor: pointer; }
-    /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+    /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
     .refills-components form.search-bar button[type=submit]:disabled {
       opacity: 0.5;
       cursor: not-allowed; }
@@ -4112,15 +4108,15 @@ section.inner-content {
   cursor: pointer;
   position: relative;
   outline: none; }
-  /* line 351, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+  /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .refills-components .sliding-menu-button:hover:not(:disabled) {
     background-color: #578ad4;
     cursor: pointer; }
-  /* line 362, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+  /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .refills-components .sliding-menu-button:active:not(:disabled), .refills-components .sliding-menu-button:focus:not(:disabled) {
     background-color: #3c71bb;
     cursor: pointer; }
-  /* line 59, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+  /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
   .refills-components .sliding-menu-button:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
@@ -4238,12 +4234,12 @@ section.inner-content {
   border: 1px solid silver;
   margin-bottom: 3em;
   padding: 1em; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .refills-components .texture-examples::after {
     clear: both;
     content: "";
     display: table; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .refills-components .texture-examples .texture-examples-container::after {
     clear: both;
     content: "";
@@ -5646,7 +5642,7 @@ section.inner-content {
   .type-systems article.type-system-geometric a {
     color: #477DCA;
     text-decoration: none; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .type-systems article.type-system-geometric::after {
     clear: both;
     content: "";
@@ -5757,7 +5753,7 @@ section.inner-content {
   .type-systems article.type-system-rounded a {
     color: #477DCA;
     text-decoration: none; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .type-systems article.type-system-rounded::after {
     clear: both;
     content: "";
@@ -5870,7 +5866,7 @@ section.inner-content {
   .type-systems article.type-system-sans a {
     color: #477DCA;
     text-decoration: none; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .type-systems article.type-system-sans::after {
     clear: both;
     content: "";
@@ -5987,7 +5983,7 @@ section.inner-content {
   .type-systems article.type-system-serif a {
     color: #477DCA;
     text-decoration: none; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .type-systems article.type-system-serif::after {
     clear: both;
     content: "";
@@ -6104,7 +6100,7 @@ section.inner-content {
   .type-systems article.type-system-slab a {
     color: #477DCA;
     text-decoration: none; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .type-systems article.type-system-slab::after {
     clear: both;
     content: "";
@@ -6218,7 +6214,7 @@ section.inner-content {
   .type-systems article.type-system-traditional a {
     color: #477DCA;
     text-decoration: none; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .type-systems article.type-system-traditional::after {
     clear: both;
     content: "";
@@ -6333,7 +6329,7 @@ section.inner-content {
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_accordion-tabs.scss */
 .unstyled .accordion-tabs {
   padding: 0; }
-  /* line 9, /Users/Magnus/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .unstyled .accordion-tabs::after {
     clear: both;
     content: "";
@@ -6517,3 +6513,27 @@ section.inner-content {
       .unstyled .footer ul li {
         display: inline;
         text-align: left; } }
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_search-bar.scss */
+.unstyled .search-bar {
+  width: 100%; }
+  /* line 4, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_search-bar.scss */
+  .unstyled .search-bar form {
+    position: relative; }
+  /* line 8, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_search-bar.scss */
+  .unstyled .search-bar input {
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    position: relative;
+    width: 100%; }
+  /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_search-bar.scss */
+  .unstyled .search-bar button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px 10px; }
+  /* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_search-bar.scss */
+  .unstyled .search-bar img {
+    height: 12px;
+    opacity: 0.7; }

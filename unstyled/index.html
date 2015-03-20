@@ -864,6 +864,83 @@
 </div>
   </section>
 
+  <section id="search-bar" class="refill">
+   <div class="refills-wrapper">
+     <div class="line-behind-text"><h6>Search bar</h6></div>
+     <div class="refill-centering">
+       <div class="refill-smaller"><div class="search-bar">
+  <form role="search">
+    <input type="search" placeholder="Enter Search">
+    <button type="submit">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon-black.png" alt="Search Icon">
+    </button>
+  </form>
+</div>
+</div>
+     </div>
+   </div>
+   <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;div class=&quot;search-bar&quot;&gt;
+  &lt;form role=&quot;search&quot;&gt;
+    &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot;&gt;
+    &lt;button type=&quot;submit&quot;&gt;
+      &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon-black.png&quot; alt=&quot;Search Icon&quot;&gt;
+    &lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.search-bar {
+  width: 100%;
+
+  form {  
+    position: relative;
+  }
+
+  input {
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  button {
+    @include position(absolute, 0 0 0 null);
+    padding: 5px 10px;
+
+  }
+  
+  img {
+    height: 12px;
+    opacity: 0.7;
+  }
+}
+</code></pre>
+</td>
+
+
+
+  </tr>
+</table>
+</div>
+  </section>
+
   </div>
 </div>
     
