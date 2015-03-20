@@ -6652,3 +6652,46 @@ section.inner-content {
   /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_tooltip.scss */
   .unstyled .tooltip-item .tooltip-content {
     margin-bottom: 0; }
+/* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+.unstyled .vertical-tabs-container::after {
+  clear: both;
+  content: "";
+  display: table; }
+/* line 7, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_vertical-tabs.scss */
+.unstyled .vertical-tabs-container .vertical-tabs {
+  display: none; }
+  @media screen and (min-width: 40em) {
+    /* line 7, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_vertical-tabs.scss */
+    .unstyled .vertical-tabs-container .vertical-tabs {
+      display: inline;
+      float: left;
+      height: 6.25em;
+      width: 20%; } }
+@media screen and (min-width: 40em) {
+  /* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_vertical-tabs.scss */
+  .unstyled .vertical-tabs-container .vertical-tab {
+    display: block; }
+    /* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_vertical-tabs.scss */
+    .unstyled .vertical-tabs-container .vertical-tab.is-active {
+      color: #ff0000; } }
+/* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_vertical-tabs.scss */
+.unstyled .vertical-tabs-container .vertical-tab-content-container {
+  display: block; }
+  @media screen and (min-width: 40em) {
+    /* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_vertical-tabs.scss */
+    .unstyled .vertical-tabs-container .vertical-tab-content-container {
+      height: 6.25em;
+      width: 80%;
+      display: inline-block; } }
+@media screen and (min-width: 40em) {
+  /* line 37, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_vertical-tabs.scss */
+  .unstyled .vertical-tabs-container .vertical-tab-content {
+    display: none; } }
+/* line 43, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_vertical-tabs.scss */
+.unstyled .vertical-tabs-container .vertical-tab-accordion-heading {
+  cursor: pointer;
+  display: block; }
+  @media screen and (min-width: 40em) {
+    /* line 43, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_vertical-tabs.scss */
+    .unstyled .vertical-tabs-container .vertical-tab-accordion-heading {
+      display: none; } }
