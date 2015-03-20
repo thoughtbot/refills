@@ -864,6 +864,158 @@
 </div>
   </section>
 
+  <section id="modal" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Modal</h6></div>
+      <div class="refill-centering"><div class="modal">
+  <label for="modal-1">
+    <div class="modal-trigger">Click for Modal</div>
+  </label>
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal-fade-screen">
+    <div class="modal-inner">
+      <div class="modal-close" for="modal-1">Close</div>
+      <div class="modal-content">Modal Content</div>
+    </div>
+  </div>
+</div>
+</div>
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;div class=&quot;modal&quot;&gt;
+  &lt;label for=&quot;modal-1&quot;&gt;
+    &lt;div class=&quot;modal-trigger&quot;&gt;Click for Modal&lt;/div&gt;
+  &lt;/label&gt;
+  &lt;input class=&quot;modal-state&quot; id=&quot;modal-1&quot; type=&quot;checkbox&quot; /&gt;
+  &lt;div class=&quot;modal-fade-screen&quot;&gt;
+    &lt;div class=&quot;modal-inner&quot;&gt;
+      &lt;div class=&quot;modal-close&quot; for=&quot;modal-1&quot;&gt;Close&lt;/div&gt;
+      &lt;div class=&quot;modal-content&quot;&gt;Modal Content&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.modal {
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+
+  label {
+    cursor: pointer;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+
+  .modal-state {
+    display: none;
+  }
+
+  .modal-fade-screen { // overlay
+    @include position(fixed, 0 0 0 0);
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    visibility: hidden;
+    z-index: 99999;
+
+    @include media($large-screen) {
+      padding-top: 10em;
+    }
+  }
+
+  .modal-bg {
+    @include position(absolute, 0 0 0 0);
+    cursor: pointer;
+  }
+
+  .modal-close {
+    cursor: pointer;
+  }
+
+  .modal-inner {
+    background-color: #fff;
+    margin: auto;
+    max-height: 95%;
+    overflow: auto;
+    position: relative;
+    top: 0.5em;
+    transition: opacity 0.25s ease;
+    width: 95%;
+
+    @include media($medium-screen) {
+      max-height: 70%;
+      width: 60%;
+    }
+
+    @include media($large-screen) {
+      width: 50%;
+    }
+  }
+
+  .modal-state:checked + .modal-fade-screen {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-closed {
+  overflow: auto;
+}
+
+// Based on code by Kasper Mikiewicz
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(function() {
+  $(&quot;#modal-1&quot;).on(&quot;change&quot;, function() {
+    if ($(this).is(&quot;:checked&quot;)) {
+      $(&quot;body&quot;).addClass(&quot;modal-open&quot;);
+    } else {
+      $(&quot;body&quot;).removeClass(&quot;modal-open&quot;);
+    }
+  });
+
+  $(&quot;.modal-fade-screen, .modal-close&quot;).on(&quot;click&quot;, function() {
+    $(&quot;.modal-state:checked&quot;).prop(&quot;checked&quot;, false).change();
+  });
+
+  $(&quot;.modal-inner&quot;).on(&quot;click&quot;, function(e) {
+    e.stopPropagation();
+  });
+});
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+  </section>
+
   <section id="search-bar" class="refill">
    <div class="refills-wrapper">
      <div class="line-behind-text"><h6>Search bar</h6></div>
@@ -1023,7 +1175,6 @@
   </tr>
 </table>
 </div>
-  </section>
 
   </div>
 </div>

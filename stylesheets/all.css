@@ -3642,7 +3642,7 @@ section.inner-content {
     opacity: 0.5;
     cursor: not-allowed; }
 /* line 52, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-.refills-components .modal .modal-window {
+.refills-components .modal .modal-fade-screen {
   -webkit-transition: opacity 0.25s ease;
   -moz-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
@@ -3659,10 +3659,10 @@ section.inner-content {
   z-index: 99999999999; }
   @media screen and (min-width: 53.75em) {
     /* line 52, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-    .refills-components .modal .modal-window {
+    .refills-components .modal .modal-fade-screen {
       padding-top: 10em; } }
   /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-  .refills-components .modal .modal-window .modal-bg {
+  .refills-components .modal .modal-fade-screen .modal-bg {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -3758,11 +3758,11 @@ section.inner-content {
     .refills-components .modal .modal-inner a.cta:last-child {
       padding: 0 2em; }
 /* line 152, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-.refills-components .modal .modal-state:checked + .modal-window {
+.refills-components .modal .modal-state:checked + .modal-fade-screen {
   opacity: 1;
   visibility: visible; }
 /* line 157, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
-.refills-components .modal .modal-state:checked + .modal-window .modal-inner {
+.refills-components .modal .modal-state:checked + .modal-fade-screen .modal-inner {
   top: 0.5em; }
 /* line 162, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
 .refills-components .modal-open {
@@ -6513,6 +6513,70 @@ section.inner-content {
       .unstyled .footer ul li {
         display: inline;
         text-align: left; } }
+/* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
+.unstyled .modal label {
+  cursor: pointer;
+  font-weight: normal;
+  margin-bottom: 0; }
+/* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
+.unstyled .modal .modal-state {
+  display: none; }
+/* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
+.unstyled .modal .modal-fade-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  visibility: hidden;
+  z-index: 99999; }
+  @media screen and (min-width: 53.75em) {
+    /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
+    .unstyled .modal .modal-fade-screen {
+      padding-top: 10em; } }
+/* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
+.unstyled .modal .modal-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer; }
+/* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
+.unstyled .modal .modal-close {
+  cursor: pointer; }
+/* line 37, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
+.unstyled .modal .modal-inner {
+  background-color: #fff;
+  margin: auto;
+  max-height: 95%;
+  overflow: auto;
+  position: relative;
+  top: 0.5em;
+  transition: opacity 0.25s ease;
+  width: 95%; }
+  @media screen and (min-width: 40em) {
+    /* line 37, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
+    .unstyled .modal .modal-inner {
+      max-height: 70%;
+      width: 60%; } }
+  @media screen and (min-width: 53.75em) {
+    /* line 37, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
+    .unstyled .modal .modal-inner {
+      width: 50%; } }
+/* line 57, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
+.unstyled .modal .modal-state:checked + .modal-fade-screen {
+  opacity: 1;
+  visibility: visible; }
+/* line 63, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
+.unstyled .modal-open {
+  overflow: hidden; }
+/* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
+.unstyled .modal-closed {
+  overflow: auto; }
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_search-bar.scss */
 .unstyled .search-bar {
   width: 100%; }

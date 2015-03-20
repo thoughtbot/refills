@@ -1650,7 +1650,7 @@ $success-color: #e6efc2 !default;
     <div class="modal-trigger">Click for Modal</div>
   </label>
   <input class="modal-state" id="modal-1" type="checkbox" />
-  <div class="modal-window">
+  <div class="modal-fade-screen">
     <div class="modal-inner">
       <label class="modal-close" for="modal-1"></label>
       <h1>Modal Title</h1>
@@ -1677,7 +1677,7 @@ $success-color: #e6efc2 !default;
     &lt;div class=&quot;modal-trigger&quot;&gt;Click for Modal&lt;/div&gt;
   &lt;/label&gt;
   &lt;input class=&quot;modal-state&quot; id=&quot;modal-1&quot; type=&quot;checkbox&quot; /&gt;
-  &lt;div class=&quot;modal-window&quot;&gt;
+  &lt;div class=&quot;modal-fade-screen&quot;&gt;
     &lt;div class=&quot;modal-inner&quot;&gt;
       &lt;label class=&quot;modal-close&quot; for=&quot;modal-1&quot;&gt;&lt;/label&gt;
       &lt;h1&gt;Modal Title&lt;/h1&gt;
@@ -1744,7 +1744,7 @@ $success-color: #e6efc2 !default;
     padding: 0.8em 1em;
   }
 
-  .modal-window { // overlay
+  .modal-fade-screen { // overlay
     @include transition(opacity 0.25s ease);
     @include position(fixed, 0px 0px 0px 0px);
     background: rgba(0,0,0, 0.85);
@@ -1844,12 +1844,12 @@ $success-color: #e6efc2 !default;
     }
   }
 
-  .modal-state:checked + .modal-window {
+  .modal-state:checked + .modal-fade-screen {
     opacity: 1;
     visibility: visible;
   }
 
-  .modal-state:checked + .modal-window .modal-inner {
+  .modal-state:checked + .modal-fade-screen .modal-inner {
     top: 0.5em;
   }
 }
@@ -1876,7 +1876,7 @@ $success-color: #e6efc2 !default;
     }
   });
 
-  $(&quot;.modal-window&quot;).on(&quot;click&quot;, function() {
+  $(&quot;.modal-fade-screen, .modal-close&quot;).on(&quot;click&quot;, function() {
     $(&quot;.modal-state:checked&quot;).prop(&quot;checked&quot;, false).change();
   });
 
