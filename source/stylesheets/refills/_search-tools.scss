@@ -1,4 +1,4 @@
-.search-tools {  
+.search-tools {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
@@ -9,7 +9,7 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
+
   ol {
     margin: 0;
     padding: 0;
@@ -82,14 +82,19 @@
       @include position(absolute, 5px 5px auto auto);
       font-size: 0.7em;
     }
+  }
 
-    .hide-options {
-      margin-bottom: 0;
 
-      ol, button {
-        display: none;
-      }
+  .hide-options {
+    margin-bottom: 0;
+
+    ol, button {
+      display: none;
     }
+  }
+
+  .summary {
+    padding-right: 4.5em;
   }
 
   .trigger {
@@ -101,13 +106,13 @@
 
     button {
       @include button(flat, $base-accent-color);
-      margin-top: 1em;
+      margin-top: 0;
       padding-bottom: 0.5em;
       padding-top: 0.5em;
       width: 100%;
 
       @include media($large-screen) {
-        margin-top: 1.55em;
+        margin-top: 1.4em;
       }
     }
   }
