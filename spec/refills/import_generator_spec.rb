@@ -29,7 +29,7 @@ describe Refills::ImportGenerator, type: :generator do
     search_bar: %w[scss erb],
     search_tools: %w[scss js erb],
     side_image: %w[scss erb],
-    sliding_menu: %w[scss js erb],
+    sliding_panel: %w[scss js erb],
     snippet: %w[erb],
     switch: %w[scss erb],
     tables: %w[scss erb],
