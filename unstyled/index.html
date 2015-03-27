@@ -1102,6 +1102,173 @@
 </div>
   </section>
   
+  <section id="navigation" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Navigation</h6></div>
+      <div class="refill-centering"><header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="javascript:void(0)" class="logo">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png" alt="Logo Image">
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">Menu</a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Testimonials</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Sign up</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+</div>
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;header class=&quot;navigation&quot; role=&quot;banner&quot;&gt;
+  &lt;div class=&quot;navigation-wrapper&quot;&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;logo&quot;&gt;
+      &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png&quot; alt=&quot;Logo Image&quot;&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;navigation-menu-button&quot; id=&quot;js-mobile-menu&quot;&gt;Menu&lt;/a&gt;
+    &lt;nav role=&quot;navigation&quot;&gt;
+      &lt;ul id=&quot;js-navigation-menu&quot; class=&quot;navigation-menu show&quot;&gt;
+        &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Testimonials&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sign up&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.navigation {
+  $large-screen: em(860) !default;
+  $large-screen: $large-screen;
+
+  // Mobile view
+  .navigation-menu-button {
+    display: block;
+    float: right;
+    margin: 0;
+    padding-top: 0.5em;
+
+    @include media ($large-screen) {
+      display: none;
+    }
+  }
+
+  // Nav menu
+  .navigation-wrapper {
+    @include clearfix;
+    position: relative;
+  }
+
+  .logo {
+    float: left;
+
+    img {
+      max-height: 2em;
+      padding-right: 1em;
+    }
+  }
+
+  nav {
+    float: none;
+
+    @include media ($large-screen) {
+      float: left;
+      line-height: 1.5em;
+      padding-top: 0.3em;
+    }
+  }
+
+  ul.navigation-menu {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+
+    @include media ($large-screen) {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    &amp;.show {
+      display: block;
+    }
+  }
+
+  // Nav items
+  ul li.nav-link {
+    display: block;
+    text-align: right;
+    width: 100%;
+
+    @include media ($large-screen) {
+      background: transparent;
+      display: inline;
+      text-decoration: none;
+      width: auto;
+    }
+  }
+
+  li.nav-link a {
+    display: inline-block;
+
+    @include media ($large-screen) {
+      padding-right: 1em;
+    }
+  }
+}
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(document).ready(function() {
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass(&quot;show&quot;);
+
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+});
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+  </section>
+  
   <section id="navigation-centered" class="refill">
     <div class="refills-wrapper">
       <div class="line-behind-text"><h6>Navigation: Centered</h6></div>
@@ -1965,7 +2132,7 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
 </table>
 </div>
   </section>
-  
+
   </div>
 </div>
     

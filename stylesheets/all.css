@@ -6589,6 +6589,76 @@ section.inner-content {
 /* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
 .unstyled .modal-closed {
   overflow: auto; }
+/* line 6, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+.unstyled .navigation .navigation-menu-button {
+  display: block;
+  float: right;
+  margin: 0;
+  padding-top: 0.5em; }
+  @media screen and (min-width: 53.75em) {
+    /* line 6, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+    .unstyled .navigation .navigation-menu-button {
+      display: none; } }
+/* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+.unstyled .navigation .navigation-wrapper {
+  position: relative; }
+  /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+  .unstyled .navigation .navigation-wrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
+/* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+.unstyled .navigation .logo {
+  float: left; }
+  /* line 26, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+  .unstyled .navigation .logo img {
+    max-height: 2em;
+    padding-right: 1em; }
+/* line 32, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+.unstyled .navigation nav {
+  float: none; }
+  @media screen and (min-width: 53.75em) {
+    /* line 32, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+    .unstyled .navigation nav {
+      float: left;
+      line-height: 1.5em;
+      padding-top: 0.3em; } }
+/* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+.unstyled .navigation ul.navigation-menu {
+  clear: both;
+  display: none;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0;
+  width: 100%; }
+  @media screen and (min-width: 53.75em) {
+    /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+    .unstyled .navigation ul.navigation-menu {
+      display: block;
+      margin: 0;
+      padding: 0; } }
+  /* line 56, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+  .unstyled .navigation ul.navigation-menu.show {
+    display: block; }
+/* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+.unstyled .navigation ul li.nav-link {
+  display: block;
+  text-align: right;
+  width: 100%; }
+  @media screen and (min-width: 53.75em) {
+    /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+    .unstyled .navigation ul li.nav-link {
+      background: transparent;
+      display: inline;
+      text-decoration: none;
+      width: auto; } }
+/* line 75, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+.unstyled .navigation li.nav-link a {
+  display: inline-block; }
+  @media screen and (min-width: 53.75em) {
+    /* line 75, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation.scss */
+    .unstyled .navigation li.nav-link a {
+      padding-right: 1em; } }
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
 .unstyled .navigation-centered {
   width: 100%; }
