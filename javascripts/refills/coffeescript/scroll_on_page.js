@@ -4,21 +4,21 @@
       jump: function(options) {
         var defaults;
         defaults = {
-          selector: "a.scroll-on-page-link"
+          selector: 'a.scroll-on-page-link'
         };
-        if (typeof options === "string") {
+        if (typeof options === 'string') {
           defaults.selector = options;
         }
         options = jQuery.extend(defaults, options);
         return jQuery(options.selector).click(function(e) {
           var jumpobj, offset, target, thespeed;
           jumpobj = jQuery(this);
-          target = jumpobj.attr("href");
+          target = jumpobj.attr('href');
           thespeed = 1000;
           offset = jQuery(target).offset().top;
-          jQuery("html,body").animate({
+          jQuery('html,body').animate({
             scrollTop: offset
-          }, thespeed, "swing");
+          }, thespeed, 'swing');
           e.preventDefault();
         });
       }

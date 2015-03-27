@@ -908,13 +908,12 @@ section.inner-content {
   box-shadow: 0 2px 4px #e6e6e6;
   cursor: pointer;
   margin: 0 1em 1.5em 1em;
-  position: relative;
   position: relative; }
-  /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .refills-patterns .card .card-image {
     overflow: hidden;
     max-height: 150px; }
-    /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    /* line 43, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .refills-patterns .card .card-image img {
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
@@ -923,7 +922,7 @@ section.inner-content {
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
       width: 100%; }
-  /* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  /* line 52, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .refills-patterns .card .card-header {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -934,27 +933,27 @@ section.inner-content {
     font-weight: bold;
     line-height: 1.5em;
     padding: 0.5em 0.75em; }
-  /* line 63, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .refills-patterns .card .card-copy {
     font-size: 0.9em;
     line-height: 1.5em;
     padding: 0.75em 0.75em; }
-    /* line 68, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    /* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .refills-patterns .card .card-copy p {
       margin: 0 0 0.75em; }
-  /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  /* line 72, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .refills-patterns .card:focus, .refills-patterns .card:hover {
     background-color: white; }
-    /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    /* line 76, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .refills-patterns .card:focus .card-image img, .refills-patterns .card:hover .card-image img {
       background: #e2daac; }
-    /* line 81, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    /* line 80, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .refills-patterns .card:focus .card-header, .refills-patterns .card:hover .card-header {
       background-color: white; }
-  /* line 86, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  /* line 85, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .refills-patterns .card:active {
     background-color: #f6f6f6; }
-    /* line 89, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    /* line 88, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .refills-patterns .card:active .card-header {
       background-color: #f6f6f6; }
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
@@ -4021,8 +4020,8 @@ section.inner-content {
     .refills-components form.search-bar button[type=submit] img {
       height: 12px;
       opacity: 0.7; }
-/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
-.refills-components .sliding-menu-content {
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-panel.scss */
+.refills-components .sliding-panel-content {
   position: fixed;
   top: 0px;
   right: auto;
@@ -4042,39 +4041,39 @@ section.inner-content {
   z-index: 999999;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch; }
-  /* line 6, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
-  .refills-components .sliding-menu-content ul {
+  /* line 6, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-panel.scss */
+  .refills-components .sliding-panel-content ul {
     padding: 0;
     margin: 0; }
-  /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
-  .refills-components .sliding-menu-content li {
+  /* line 11, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-panel.scss */
+  .refills-components .sliding-panel-content li {
     list-style: none; }
-  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
-  .refills-components .sliding-menu-content a {
+  /* line 15, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-panel.scss */
+  .refills-components .sliding-panel-content a {
     text-decoration: none; }
-  /* line 37, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
-  .refills-components .sliding-menu-content li a {
+  /* line 37, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-panel.scss */
+  .refills-components .sliding-panel-content li a {
     border-bottom: 1px solid #333;
     color: #fff;
     display: block;
     font-weight: bold;
     padding: 1em; }
-    /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
-    .refills-components .sliding-menu-content li a:focus {
+    /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-panel.scss */
+    .refills-components .sliding-panel-content li a:focus {
       background-color: #4d4d4d; }
-    /* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
-    .refills-components .sliding-menu-content li a:hover {
+    /* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-panel.scss */
+    .refills-components .sliding-panel-content li a:hover {
       background-color: #477dca;
       color: #fff; }
-  /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
-  .refills-components .sliding-menu-content.is-visible {
+  /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-panel.scss */
+  .refills-components .sliding-panel-content.is-visible {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0); }
-/* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
-.refills-components .sliding-menu-fade-screen {
+/* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-panel.scss */
+.refills-components .sliding-panel-fade-screen {
   position: fixed;
   top: 0px;
   right: 0px;
@@ -4087,12 +4086,12 @@ section.inner-content {
   opacity: 0;
   visibility: hidden;
   z-index: 999998; }
-  /* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
-  .refills-components .sliding-menu-fade-screen.is-visible {
+  /* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-panel.scss */
+  .refills-components .sliding-panel-fade-screen.is-visible {
     opacity: 0.4;
     visibility: visible; }
-/* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
-.refills-components .sliding-menu-button {
+/* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-panel.scss */
+.refills-components .sliding-panel-button {
   background-color: #477DCA;
   border-radius: 3px;
   border: none;
@@ -4109,19 +4108,19 @@ section.inner-content {
   position: relative;
   outline: none; }
   /* line 351, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
-  .refills-components .sliding-menu-button:hover:not(:disabled) {
+  .refills-components .sliding-panel-button:hover:not(:disabled) {
     background-color: #578ad4;
     cursor: pointer; }
   /* line 362, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
-  .refills-components .sliding-menu-button:active:not(:disabled), .refills-components .sliding-menu-button:focus:not(:disabled) {
+  .refills-components .sliding-panel-button:active:not(:disabled), .refills-components .sliding-panel-button:focus:not(:disabled) {
     background-color: #3c71bb;
     cursor: pointer; }
   /* line 59, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
-  .refills-components .sliding-menu-button:disabled {
+  .refills-components .sliding-panel-button:disabled {
     opacity: 0.5;
     cursor: not-allowed; }
-  /* line 81, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-menu.scss */
-  .refills-components .sliding-menu-button img {
+  /* line 81, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_sliding-panel.scss */
+  .refills-components .sliding-panel-button img {
     height: 1.3em; }
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_switch.scss */
 .refills-components .label-switch {
@@ -6765,3 +6764,52 @@ section.inner-content {
     /* line 89, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
     .unstyled .scroll-on-page article:last-child {
       margin-right: 0; } }
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_sliding-panel.scss */
+.unstyled .sliding-panel-content {
+  position: fixed;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 220px;
+  -webkit-transform: translateX(-220px);
+  -moz-transform: translateX(-220px);
+  -ms-transform: translateX(-220px);
+  -o-transform: translateX(-220px);
+  transform: translateX(-220px);
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  z-index: 999999; }
+  /* line 13, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_sliding-panel.scss */
+  .unstyled .sliding-panel-content.is-visible {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+/* line 18, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_sliding-panel.scss */
+.unstyled .sliding-panel-fade-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  background: #000;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999; }
+  /* line 26, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_sliding-panel.scss */
+  .unstyled .sliding-panel-fade-screen.is-visible {
+    opacity: 0.4;
+    visibility: visible; }
+/* line 32, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_sliding-panel.scss */
+.unstyled .sliding-panel-close {
+  cursor: pointer; }

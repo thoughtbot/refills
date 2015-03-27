@@ -2084,8 +2084,8 @@ $(function() {
   Filter.enhance();
 });
 $(document).ready(function(){
-  $('.js-menu-trigger,.js-menu-screen').on('click touchstart',function (e) {
-    $('.js-menu,.js-menu-screen').toggleClass('is-visible');
+  $('.sliding-panel-button,.sliding-panel-fade-screen,.sliding-panel-close').on('click touchstart',function (e) {
+    $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass('is-visible');
     e.preventDefault();
   });
 });

@@ -269,24 +269,21 @@
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$(document).ready -&gt;
-  $(&quot;.accordion-tabs&quot;).each (index) -&gt;
-    $(this).children(&quot;li&quot;).first().children(&quot;a&quot;).addClass(&quot;is-active&quot;).next().addClass(&quot;is-open&quot;).show()
+  $('.accordion-tabs').each -&gt;
+    $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show()
     return
-
-  $(&quot;.accordion-tabs&quot;).on &quot;click&quot;, &quot;li &gt; a&quot;, (event) -&gt;
-    unless $(this).hasClass(&quot;is-active&quot;)
+  $('.accordion-tabs').on 'click', 'li &gt; a', (event) -&gt;
+    if !$(this).hasClass('is-active')
       event.preventDefault()
-      accordionTabs = $(this).closest(&quot;.accordion-tabs&quot;)
-      accordionTabs.find(&quot;.is-open&quot;).removeClass(&quot;is-open&quot;).hide()
-      $(this).next().toggleClass(&quot;is-open&quot;).toggle()
-      accordionTabs.find(&quot;.is-active&quot;).removeClass &quot;is-active&quot;
-      $(this).addClass &quot;is-active&quot;
+      accordionTabs = $(this).closest('.accordion-tabs')
+      accordionTabs.find('.is-open').removeClass('is-open').hide()
+      $(this).next().toggleClass('is-open').toggle()
+      accordionTabs.find('.is-active').removeClass 'is-active'
+      $(this).addClass 'is-active'
     else
       event.preventDefault()
     return
-
   return
-
 </code></pre>
 </td>
 
@@ -476,24 +473,21 @@
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$(document).ready -&gt;
-  $(&quot;.accordion-tabs-minimal&quot;).each (index) -&gt;
-    $(this).children(&quot;li&quot;).first().children(&quot;a&quot;).addClass(&quot;is-active&quot;).next().addClass(&quot;is-open&quot;).show()
+  $('.accordion-tabs-minimal').each (index) -&gt;
+    $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show()
     return
-
-  $(&quot;.accordion-tabs-minimal&quot;).on &quot;click&quot;, &quot;li &gt; a&quot;, (event) -&gt;
-    unless $(this).hasClass(&quot;is-active&quot;)
+  $('.accordion-tabs-minimal').on 'click', 'li &gt; a', (event) -&gt;
+    if !$(this).hasClass('is-active')
       event.preventDefault()
-      accordionTabs = $(this).closest(&quot;.accordion-tabs-minimal&quot;)
-      accordionTabs.find(&quot;.is-open&quot;).removeClass(&quot;is-open&quot;).hide()
-      $(this).next().toggleClass(&quot;is-open&quot;).toggle()
-      accordionTabs.find(&quot;.is-active&quot;).removeClass &quot;is-active&quot;
-      $(this).addClass &quot;is-active&quot;
+      accordionTabs = $(this).closest('.accordion-tabs-minimal')
+      accordionTabs.find('.is-open').removeClass('is-open').hide()
+      $(this).next().toggleClass('is-open').toggle()
+      accordionTabs.find('.is-active').removeClass 'is-active'
+      $(this).addClass 'is-active'
     else
       event.preventDefault()
     return
-
   return
-
 </code></pre>
 </td>
 
@@ -635,7 +629,6 @@
   box-shadow: 0 2px 4px darken($base-background-color, 10%);
   cursor: pointer;
   margin: 0 $card-margin $base-spacing $card-margin;
-  position: relative;
   position: relative;
 
   .card-image {
@@ -1102,18 +1095,16 @@
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$(document).ready -&gt;
-  menuToggle = $(&quot;#js-centered-navigation-mobile-menu&quot;).unbind()
-  $(&quot;#js-centered-navigation-menu&quot;).removeClass &quot;show&quot;
-  menuToggle.on &quot;click&quot;, (e) -&gt;
+  menuToggle = $('#js-centered-navigation-mobile-menu').unbind()
+  $('#js-centered-navigation-menu').removeClass 'show'
+  menuToggle.on 'click', (e) -&gt;
     e.preventDefault()
-    $(&quot;#js-centered-navigation-menu&quot;).slideToggle -&gt;
-      $(&quot;#js-centered-navigation-menu&quot;).removeAttr &quot;style&quot;  if $(&quot;#js-centered-navigation-menu&quot;).is(&quot;:hidden&quot;)
+    $('#js-centered-navigation-menu').slideToggle -&gt;
+      if $('#js-centered-navigation-menu').is(':hidden')
+        $('#js-centered-navigation-menu').removeAttr 'style'
       return
-
     return
-
   return
-
 </code></pre>
 </td>
 
@@ -3458,18 +3449,16 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$(document).ready -&gt;
-  menuToggle = $(&quot;#js-mobile-menu&quot;).unbind()
-  $(&quot;#js-navigation-menu&quot;).removeClass &quot;show&quot;
-  menuToggle.on &quot;click&quot;, (e) -&gt;
+  menuToggle = $('#js-mobile-menu').unbind()
+  $('#js-navigation-menu').removeClass 'show'
+  menuToggle.on 'click', (e) -&gt;
     e.preventDefault()
-    $(&quot;#js-navigation-menu&quot;).slideToggle -&gt;
-      $(&quot;#js-navigation-menu&quot;).removeAttr &quot;style&quot;  if $(&quot;#js-navigation-menu&quot;).is(&quot;:hidden&quot;)
+    $('#js-navigation-menu').slideToggle -&gt;
+      if $('#js-navigation-menu').is(':hidden')
+        $('#js-navigation-menu').removeAttr 'style'
       return
-
     return
-
   return
-
 </code></pre>
 </td>
 
@@ -3653,29 +3642,24 @@ jQuery(function(){
       <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
-  <pre><code class="language-javascript">((jQuery) -&gt;
+  <pre><code class="language-javascript">do (jQuery) -&gt;
   jQuery.mark = jump: (options) -&gt;
-    defaults = selector: &quot;a.scroll-on-page-link&quot;
-    defaults.selector = options  if typeof options is &quot;string&quot;
+    defaults = selector: 'a.scroll-on-page-link'
+    if typeof options == 'string'
+      defaults.selector = options
     options = jQuery.extend(defaults, options)
     jQuery(options.selector).click (e) -&gt;
       jumpobj = jQuery(this)
-      target = jumpobj.attr(&quot;href&quot;)
+      target = jumpobj.attr('href')
       thespeed = 1000
       offset = jQuery(target).offset().top
-      jQuery(&quot;html,body&quot;).animate
-        scrollTop: offset
-      , thespeed, &quot;swing&quot;
+      jQuery('html,body').animate { scrollTop: offset }, thespeed, 'swing'
       e.preventDefault()
       return
-
-
   return
-) jQuery
 jQuery -&gt;
   jQuery.mark.jump()
   return
-
 </code></pre>
 </td>
 
@@ -4063,92 +4047,7 @@ $(function() {
       <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
-  <pre><code class="language-javascript">Filter = (-&gt;
-  Filter = (element) -&gt;
-    @_element = $(element)
-    @_optionsContainer = @_element.find(@constructor.optionsContainerSelector)
-    return
-  Filter.selector = &quot;.filter&quot;
-  Filter.optionsContainerSelector = &quot;&gt; div&quot;
-  Filter.hideOptionsClass = &quot;hide-options&quot;
-  Filter.enhance = -&gt;
-    klass = this
-    $(klass.selector).each -&gt;
-      new klass(this).enhance()
-
-
-  Filter::enhance = -&gt;
-    @_buildUI()
-    @_bindEvents()
-    return
-
-  Filter::_buildUI = -&gt;
-    @_summaryElement = $(&quot;&lt;label&gt;&lt;/label&gt;&quot;).addClass(&quot;summary&quot;).attr(&quot;data-role&quot;, &quot;summary&quot;).prependTo(@_optionsContainer)
-    @_clearSelectionButton = $(&quot;&lt;button&gt;&lt;/button&gt;&quot;).text(&quot;Clear&quot;).attr(&quot;type&quot;, &quot;button&quot;).insertAfter(@_summaryElement)
-    @_optionsContainer.addClass @constructor.hideOptionsClass
-    @_updateSummary()
-    return
-
-  Filter::_bindEvents = -&gt;
-    self = this
-    @_summaryElement.click -&gt;
-      self._toggleOptions()
-      return
-
-    @_clearSelectionButton.click -&gt;
-      self._clearSelection()
-      return
-
-    @_checkboxes().change -&gt;
-      self._updateSummary()
-      return
-
-    $(&quot;body&quot;).click (e) -&gt;
-      inFilter = $(e.target).closest(self.constructor.selector).length &gt; 0
-      self._allOptionsContainers().addClass self.constructor.hideOptionsClass  unless inFilter
-      return
-
-    return
-
-  Filter::_toggleOptions = -&gt;
-    @_allOptionsContainers().not(@_optionsContainer).addClass @constructor.hideOptionsClass
-    @_optionsContainer.toggleClass @constructor.hideOptionsClass
-    return
-
-  Filter::_updateSummary = -&gt;
-    summary = &quot;All&quot;
-    checked = @_checkboxes().filter(&quot;:checked&quot;)
-    summary = @_labelsFor(checked).join(&quot;, &quot;)  if checked.length &gt; 0
-    @_summaryElement.text summary
-    return
-
-  Filter::_clearSelection = -&gt;
-    @_checkboxes().each -&gt;
-      $(this).prop &quot;checked&quot;, false
-      return
-
-    @_updateSummary()
-    return
-
-  Filter::_checkboxes = -&gt;
-    @_element.find &quot;:checkbox&quot;
-
-  Filter::_labelsFor = (inputs) -&gt;
-    inputs.map(-&gt;
-      id = $(this).attr(&quot;id&quot;)
-      $(&quot;label[for='&quot; + id + &quot;']&quot;).text()
-    ).get()
-
-  Filter::_allOptionsContainers = -&gt;
-    $ @constructor.selector + &quot; &quot; + @constructor.optionsContainerSelector
-
-  Filter
-)()
-$ -&gt;
-  Filter.enhance()
-  return
-
-</code></pre>
+  <pre><code class="language-javascript"></code></pre>
 </td>
 
   </tr>
@@ -4934,34 +4833,34 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
       <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
-  <pre><code class="language-javascript">$(&quot;.js-vertical-tab-content&quot;).hide()
-$(&quot;.js-vertical-tab-content:first&quot;).show()
+  <pre><code class="language-javascript">$('.js-vertical-tab-content').hide()
+$('.js-vertical-tab-content:first').show()
 
-# if in tab mode 
-$(&quot;.js-vertical-tab&quot;).click (event) -&gt;
+### if in tab mode ###
+
+$('.js-vertical-tab').click (event) -&gt;
   event.preventDefault()
-  $(&quot;.js-vertical-tab-content&quot;).hide()
-  activeTab = $(this).attr(&quot;rel&quot;)
-  $(&quot;#&quot; + activeTab).show()
-  $(&quot;.js-vertical-tab&quot;).removeClass &quot;is-active&quot;
-  $(this).addClass &quot;is-active&quot;
-  $(&quot;.js-vertical-tab-accordion-heading&quot;).removeClass &quot;is-active&quot;
-  $(&quot;.js-vertical-tab-accordion-heading[rel^='&quot; + activeTab + &quot;']&quot;).addClass &quot;is-active&quot;
+  $('.js-vertical-tab-content').hide()
+  activeTab = $(this).attr('rel')
+  $('#' + activeTab).show()
+  $('.js-vertical-tab').removeClass 'is-active'
+  $(this).addClass 'is-active'
+  $('.js-vertical-tab-accordion-heading').removeClass 'is-active'
+  $('.js-vertical-tab-accordion-heading[rel^=\'' + activeTab + '\']').addClass 'is-active'
   return
 
+### if in accordion mode ###
 
-# if in accordion mode 
-$(&quot;.js-vertical-tab-accordion-heading&quot;).click (event) -&gt;
+$('.js-vertical-tab-accordion-heading').click (event) -&gt;
   event.preventDefault()
-  $(&quot;.js-vertical-tab-content&quot;).hide()
-  accordion_activeTab = $(this).attr(&quot;rel&quot;)
-  $(&quot;#&quot; + accordion_activeTab).show()
-  $(&quot;.js-vertical-tab-accordion-heading&quot;).removeClass &quot;is-active&quot;
-  $(this).addClass &quot;is-active&quot;
-  $(&quot;.js-vertical-tab&quot;).removeClass &quot;is-active&quot;
-  $(&quot;.js-vertical-tab[rel^='&quot; + accordion_activeTab + &quot;']&quot;).addClass &quot;is-active&quot;
+  $('.js-vertical-tab-content').hide()
+  accordion_activeTab = $(this).attr('rel')
+  $('#' + accordion_activeTab).show()
+  $('.js-vertical-tab-accordion-heading').removeClass 'is-active'
+  $(this).addClass 'is-active'
+  $('.js-vertical-tab').removeClass 'is-active'
+  $('.js-vertical-tab[rel^=\'' + accordion_activeTab + '\']').addClass 'is-active'
   return
-
 </code></pre>
 </td>
 

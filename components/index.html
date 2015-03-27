@@ -232,12 +232,11 @@
       <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
-  <pre><code class="language-javascript">$(&quot;.js-accordion-trigger&quot;).bind &quot;click&quot;, (e) -&gt;
-  jQuery(this).parent().find(&quot;.submenu&quot;).slideToggle &quot;fast&quot; # apply the toggle to the ul
-  jQuery(this).parent().toggleClass &quot;is-expanded&quot;
+  <pre><code class="language-javascript">$('.js-accordion-trigger').bind 'click', (e) -&gt;
+  jQuery(this).parent().find('.submenu').slideToggle 'fast'
+  jQuery(this).parent().toggleClass 'is-expanded'
   e.preventDefault()
   return
-
 </code></pre>
 </td>
 
@@ -389,17 +388,14 @@ button {
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$ -&gt;
-  animationClasses = &quot;animated alternate iteration zoomOut&quot;
-  animationEnd = &quot;webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend&quot;
-  $(&quot;.animate-trigger&quot;).on &quot;click&quot;, -&gt;
-    $(&quot;.animate-target&quot;).addClass(animationClasses).one animationEnd, -&gt;
+  animationClasses = 'animated alternate iteration zoomOut'
+  animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
+  $('.animate-trigger').on 'click', -&gt;
+    $('.animate-target').addClass(animationClasses).one animationEnd, -&gt;
       $(this).removeClass animationClasses
       return
-
     return
-
   return
-
 </code></pre>
 </td>
 
@@ -1023,20 +1019,16 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$(document).ready -&gt;
-  $(&quot;.dropdown-button&quot;).click -&gt;
-    $(&quot;.dropdown-menu&quot;).toggleClass &quot;show-menu&quot;
-    $(&quot;.dropdown-menu &gt; li&quot;).click -&gt;
-      $(&quot;.dropdown-menu&quot;).removeClass &quot;show-menu&quot;
+  $('.dropdown-button').click -&gt;
+    $('.dropdown-menu').toggleClass 'show-menu'
+    $('.dropdown-menu &gt; li').click -&gt;
+      $('.dropdown-menu').removeClass 'show-menu'
       return
-
-    $(&quot;.dropdown-menu.dropdown-select &gt; li&quot;).click -&gt;
-      $(&quot;.dropdown-button&quot;).html $(this).html()
+    $('.dropdown-menu.dropdown-select &gt; li').click -&gt;
+      $('.dropdown-button').html $(this).html()
       return
-
     return
-
   return
-
 </code></pre>
 </td>
 
@@ -1163,14 +1155,12 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$(document).ready -&gt;
-  expanderTrigger = document.getElementById(&quot;js-expander-trigger&quot;)
-  expanderContent = document.getElementById(&quot;js-expander-content&quot;)
-  $(&quot;#js-expander-trigger&quot;).click -&gt;
-    $(this).toggleClass &quot;expander-hidden&quot;
+  expanderTrigger = document.getElementById('js-expander-trigger')
+  expanderContent = document.getElementById('js-expander-content')
+  $('#js-expander-trigger').click -&gt;
+    $(this).toggleClass 'expander-hidden'
     return
-
   return
-
 </code></pre>
 </td>
 
@@ -1296,10 +1286,10 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$(document).ready -&gt;
-  element = document.getElementById(&quot;js-fadeInElement&quot;)
-  $(element).addClass &quot;js-fade-element-hide&quot;
+  element = document.getElementById('js-fadeInElement')
+  $(element).addClass 'js-fade-element-hide'
   $(window).scroll -&gt;
-    if $(&quot;#js-fadeInElement&quot;).length &gt; 0
+    if $('#js-fadeInElement').length &gt; 0
       elementTopToPageTop = $(element).offset().top
       windowTopToPageTop = $(window).scrollTop()
       windowInnerHeight = window.innerHeight
@@ -1307,14 +1297,12 @@ $success-color: #e6efc2 !default;
       elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop
       distanceFromBottomToAppear = 300
       if elementTopToWindowBottom &gt; distanceFromBottomToAppear
-        $(element).addClass &quot;js-fade-element-show&quot;
+        $(element).addClass 'js-fade-element-show'
       else if elementTopToWindowBottom &lt; 0
-        $(element).removeClass &quot;js-fade-element-show&quot;
-        $(element).addClass &quot;js-fade-element-hide&quot;
+        $(element).removeClass 'js-fade-element-show'
+        $(element).addClass 'js-fade-element-hide'
     return
-
   return
-
 </code></pre>
 </td>
 
@@ -1893,23 +1881,19 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$ -&gt;
-  $(&quot;#modal-1&quot;).on &quot;change&quot;, -&gt;
-    if $(this).is(&quot;:checked&quot;)
-      $(&quot;body&quot;).addClass &quot;modal-open&quot;
+  $('#modal-1').on 'change', -&gt;
+    if $(this).is(':checked')
+      $('body').addClass 'modal-open'
     else
-      $(&quot;body&quot;).removeClass &quot;modal-open&quot;
+      $('body').removeClass 'modal-open'
     return
-
-  $(&quot;.modal-window&quot;).on &quot;click&quot;, -&gt;
-    $(&quot;.modal-state:checked&quot;).prop(&quot;checked&quot;, false).change()
+  $('.modal-fade-screen, .modal-close').on 'click', -&gt;
+    $('.modal-state:checked').prop('checked', false).change()
     return
-
-  $(&quot;.modal-inner&quot;).on &quot;click&quot;, (e) -&gt;
+  $('.modal-inner').on 'click', (e) -&gt;
     e.stopPropagation()
     return
-
   return
-
 </code></pre>
 </td>
 
@@ -2174,9 +2158,9 @@ function parallax(){
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">parallax = -&gt;
-  if $(&quot;#js-parallax-window&quot;).length &gt; 0
-    plxBackground = $(&quot;#js-parallax-background&quot;)
-    plxWindow = $(&quot;#js-parallax-window&quot;)
+  if $('#js-parallax-window').length &gt; 0
+    plxBackground = $('#js-parallax-background')
+    plxWindow = $('#js-parallax-window')
     plxWindowTopToPageTop = $(plxWindow).offset().top
     windowTopToPageTop = $(window).scrollTop()
     plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop
@@ -2185,16 +2169,17 @@ function parallax(){
     plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop
     plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop
     plxSpeed = 0.35
-    plxBackground.css &quot;top&quot;, -(plxWindowTopToWindowTop * plxSpeed) + &quot;px&quot;
+    plxBackground.css 'top', -(plxWindowTopToWindowTop * plxSpeed) + 'px'
   return
+
 $(document).ready -&gt;
-  parallax()  if $(&quot;#js-parallax-window&quot;).length
+  if $('#js-parallax-window').length
+    parallax()
   return
-
 $(window).scroll (e) -&gt;
-  parallax()  if $(&quot;#js-parallax-window&quot;).length
+  if $('#js-parallax-window').length
+    parallax()
   return
-
 </code></pre>
 </td>
 
@@ -2650,14 +2635,14 @@ $(window).scroll (e) -&gt;
 </div>
     </section>
 
-    <section id="sliding-menu" class="refill">
+    <section id="sliding-panel" class="refill">
       <div class="refills-wrapper">
-        <div class="line-behind-text"><h6>Sliding Menu</h6></div>
-        <div class="refill-centering"><button type="button" class="js-menu-trigger sliding-menu-button">
+        <div class="line-behind-text"><h6>Sliding Panel</h6></div>
+        <div class="refill-centering"><button type="button" class="js-menu-trigger sliding-panel-button">
   <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
 </button>
 
-<nav class="js-menu sliding-menu-content">
+<nav class="js-menu sliding-panel-content">
   <ul>
     <li><a href="javascript:void(0)">Item 1</a></li>
     <li><a href="javascript:void(0)">Item 2</a></li>
@@ -2665,7 +2650,7 @@ $(window).scroll (e) -&gt;
   </ul>
 </nav>
 
-<div class="js-menu-screen sliding-menu-fade-screen"></div>
+<div class="js-menu-screen sliding-panel-fade-screen"></div>
 </div>
       </div>
       <div class="refill-snippet"><div class="refill-control">
@@ -2679,11 +2664,11 @@ $(window).scroll (e) -&gt;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
   </div>
-  <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;js-menu-trigger sliding-menu-button&quot;&gt;
+  <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;js-menu-trigger sliding-panel-button&quot;&gt;
   &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png&quot; alt=&quot;Menu Icon&quot;&gt;
 &lt;/button&gt;
 
-&lt;nav class=&quot;js-menu sliding-menu-content&quot;&gt;
+&lt;nav class=&quot;js-menu sliding-panel-content&quot;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
@@ -2691,7 +2676,7 @@ $(window).scroll (e) -&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
 
-&lt;div class=&quot;js-menu-screen sliding-menu-fade-screen&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;js-menu-screen sliding-panel-fade-screen&quot;&gt;&lt;/div&gt;
 </code></pre>
 </td>
 
@@ -2699,7 +2684,7 @@ $(window).scroll (e) -&gt;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.sliding-menu-content {  
+  <pre><code class="language-scss">.sliding-panel-content {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
@@ -2718,37 +2703,37 @@ $(window).scroll (e) -&gt;
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $sliding-menu-border-color: $dark-gray;
-  $sliding-menu-background: lighten($sliding-menu-border-color, 5%);
-  $sliding-menu-color: #fff;
-  $sliding-menu-border: 1px solid $sliding-menu-border-color;
-  $sliding-menu-background-hover: $base-accent-color;
-  $sliding-menu-color-hover: #fff;
-  $sliding-menu-background-focus: lighten($sliding-menu-background, 5%);
+  $sliding-panel-border-color: $dark-gray;
+  $sliding-panel-background: lighten($sliding-panel-border-color, 5%);
+  $sliding-panel-color: #fff;
+  $sliding-panel-border: 1px solid $sliding-panel-border-color;
+  $sliding-panel-background-hover: $base-accent-color;
+  $sliding-panel-color-hover: #fff;
+  $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
 
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
   @include transform(translateX(-220px));
   @include transition(all 0.25s linear);
-  background: $sliding-menu-background;
+  background: $sliding-panel-background;
   z-index: 999999;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
   li a {
-    border-bottom: $sliding-menu-border;
-    color: $sliding-menu-color;
+    border-bottom: $sliding-panel-border;
+    color: $sliding-panel-color;
     display: block;
     font-weight: bold;
     padding: 1em;
 
     &amp;:focus {
-      background-color: $sliding-menu-background-focus;
+      background-color: $sliding-panel-background-focus;
     }
 
     &amp;:hover {
-      background-color: $sliding-menu-background-hover;
-      color: $sliding-menu-color-hover;
+      background-color: $sliding-panel-background-hover;
+      color: $sliding-panel-color-hover;
     }
   }
 
@@ -2757,7 +2742,7 @@ $(window).scroll (e) -&gt;
   }
 }
 
-.sliding-menu-fade-screen {
+.sliding-panel-fade-screen {
   @include position(fixed, 0px 0px 0px 0px);
   @include transition;
   background: black;
@@ -2771,7 +2756,7 @@ $(window).scroll (e) -&gt;
   }
 }
 
-.sliding-menu-button {
+.sliding-panel-button {
   @include button(flat, #477DCA);
   padding: 10px 16px;
   display: inline-block;
@@ -2794,8 +2779,8 @@ $(window).scroll (e) -&gt;
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$(document).ready(function(){
-  $('.js-menu-trigger,.js-menu-screen').on('click touchstart',function (e) {
-    $('.js-menu,.js-menu-screen').toggleClass('is-visible');
+  $('.sliding-panel-button,.sliding-panel-fade-screen,.sliding-panel-close').on('click touchstart',function (e) {
+    $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass('is-visible');
     e.preventDefault();
   });
 });
@@ -2808,13 +2793,11 @@ $(window).scroll (e) -&gt;
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$(document).ready -&gt;
-  $(&quot;.js-menu-trigger,.js-menu-screen&quot;).on &quot;click touchstart&quot;, (e) -&gt;
-    $(&quot;.js-menu,.js-menu-screen&quot;).toggleClass &quot;is-visible&quot;
+  $('.sliding-panel-button,.sliding-panel-fade-screen,.sliding-panel-close').on 'click touchstart', (e) -&gt;
+    $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass 'is-visible'
     e.preventDefault()
     return
-
   return
-
 </code></pre>
 </td>
 

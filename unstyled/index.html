@@ -1678,6 +1678,106 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
 </div>
   </section>
 
+  <section id="sliding-panel" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Sliding Panel</h6></div>
+      <div class="refill-centering"><button type="button" class="sliding-panel-button">
+  Click for Sliding Panel
+</button>
+
+<nav class="sliding-panel-content">
+  <div class="sliding-panel-close">Close Panel</div>
+</nav>
+
+<div class="sliding-panel-fade-screen"></div>
+</div>
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;sliding-panel-button&quot;&gt;
+  Click for Sliding Panel
+&lt;/button&gt;
+
+&lt;nav class=&quot;sliding-panel-content&quot;&gt;
+  &lt;div class=&quot;sliding-panel-close&quot;&gt;Close Panel&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;div class=&quot;sliding-panel-fade-screen&quot;&gt;&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.sliding-panel-content {  
+  $sliding-panel-width: 220px;
+
+  @include position(fixed, 0 auto 0 0);
+  @include size($sliding-panel-width 100%);
+  @include transform(translateX(- $sliding-panel-width));
+  @include transition(all 0.25s linear);
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  z-index: 999999;
+
+  &amp;.is-visible {
+    @include transform(translateX(0));
+  }
+}
+
+.sliding-panel-fade-screen {
+  @include position(fixed, 0 0 0 0);
+  @include transition;
+  background: #000;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+
+  &amp;.is-visible {
+    opacity: 0.4;
+    visibility: visible;
+  }
+}
+
+.sliding-panel-close {
+  cursor: pointer;
+}
+
+// Based on code by Diego Eis
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
+      <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
+  </div>
+  <pre><code class="language-javascript">$(document).ready(function(){
+  $('.sliding-panel-button,.sliding-panel-fade-screen,.sliding-panel-close').on('click touchstart',function (e) {
+    $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass('is-visible');
+    e.preventDefault();
+  });
+});
+</code></pre>
+</td>
+
+
+  </tr>
+</table>
+</div>
+  </section>
+
   </div>
 </div>
     
