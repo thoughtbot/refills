@@ -6589,6 +6589,90 @@ section.inner-content {
 /* line 67, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
 .unstyled .modal-closed {
   overflow: auto; }
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+.unstyled .navigation-centered {
+  width: 100%; }
+  /* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+  .unstyled .navigation-centered .mobile-logo {
+    display: inline;
+    float: left; }
+    @media screen and (min-width: 53.75em) {
+      /* line 9, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+      .unstyled .navigation-centered .mobile-logo {
+        display: none; } }
+    /* line 17, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+    .unstyled .navigation-centered .mobile-logo img {
+      max-height: 2em; }
+  /* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+  .unstyled .navigation-centered .navigation-centered-mobile-menu {
+    float: right;
+    padding-top: 0.5em; }
+    @media screen and (min-width: 53.75em) {
+      /* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+      .unstyled .navigation-centered .navigation-centered-mobile-menu {
+        display: none; } }
+  /* line 32, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+  .unstyled .navigation-centered .navigation-centered-wrapper {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; }
+    /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    .unstyled .navigation-centered .navigation-centered-wrapper::after {
+      clear: both;
+      content: "";
+      display: table; }
+    /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
+    .unstyled .navigation-centered .navigation-centered-wrapper::after {
+      clear: both;
+      content: "";
+      display: table; }
+  /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+  .unstyled .navigation-centered ul.navigation-centered-menu {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%; }
+    /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+    .unstyled .navigation-centered ul.navigation-centered-menu.show {
+      display: block; }
+    @media screen and (min-width: 53.75em) {
+      /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+      .unstyled .navigation-centered ul.navigation-centered-menu {
+        display: block;
+        text-align: center; } }
+  /* line 57, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+  .unstyled .navigation-centered ul li.nav-link {
+    display: block;
+    text-align: right;
+    width: 100%; }
+    /* line 62, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+    .unstyled .navigation-centered ul li.nav-link a {
+      display: inline-block; }
+    /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+    .unstyled .navigation-centered ul li.nav-link:last-child a {
+      padding-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      /* line 57, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+      .unstyled .navigation-centered ul li.nav-link {
+        display: inline; }
+        /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+        .unstyled .navigation-centered ul li.nav-link a {
+          padding-right: 1em; } }
+  /* line 80, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+  .unstyled .navigation-centered li.logo.nav-link {
+    display: none;
+    line-height: 0; }
+    @media screen and (min-width: 53.75em) {
+      /* line 80, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+      .unstyled .navigation-centered li.logo.nav-link {
+        display: inline; } }
+  /* line 89, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_navigation-centered.scss */
+  .unstyled .navigation-centered .logo img {
+    margin-bottom: -0.66667em;
+    max-height: 2em; }
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_search-bar.scss */
 .unstyled .search-bar {
   width: 100%; }
