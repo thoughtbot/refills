@@ -1,5 +1,5 @@
 .label-switch {  
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $base-background-color: white !default;
   $switch-width: 52px;
   $switch-padding: 2px;
@@ -61,7 +61,7 @@
 
     &:checked {
       + .checkbox {
-        background: $base-accent-color;
+        background: $action-color;
 
         &:before {
           @include transform(scale(0));

@@ -1,4 +1,4 @@
-$base-accent-color: #477dca !default;
+$action-color: #477dca !default;
 
 .animated {
   @include animation-duration(1s);
@@ -69,7 +69,7 @@ $base-accent-color: #477dca !default;
 }
 
 button {
-  @include button(flat, $base-accent-color);
+  @include button(flat, $action-color);
   display: block;
   margin: auto;
   outline: none;

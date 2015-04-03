@@ -1,13 +1,13 @@
-.sliding-menu-content {  
-  $base-accent-color: #477DCA !default;
+.sliding-panel-content {  
+  $action-color: #477DCA !default;
   $dark-gray: #333 !default;
-  $sliding-menu-border-color: $dark-gray;
-  $sliding-menu-background: lighten($sliding-menu-border-color, 5%);
-  $sliding-menu-color: #fff;
-  $sliding-menu-border: 1px solid $sliding-menu-border-color;
-  $sliding-menu-background-hover: $base-accent-color;
-  $sliding-menu-color-hover: #fff;
-  $sliding-menu-background-focus: lighten($sliding-menu-background, 5%);
+  $sliding-panel-border-color: $dark-gray;
+  $sliding-panel-background: lighten($sliding-panel-border-color, 5%);
+  $sliding-panel-color: #fff;
+  $sliding-panel-border: 1px solid $sliding-panel-border-color;
+  $sliding-panel-background-hover: $action-color;
+  $sliding-panel-color-hover: #fff;
+  $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
 
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);

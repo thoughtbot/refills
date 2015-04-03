@@ -3,10 +3,10 @@
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $progress-border-color: $base-border-color;
   $progress-border: 1px solid $progress-border-color;
-  $progress-meter-border-color: $base-accent-color;
+  $progress-meter-border-color: $action-color;
   $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
   $progress-meter-color: $progress-meter-border-color;
   $progress-background: darken($base-background-color, 5);

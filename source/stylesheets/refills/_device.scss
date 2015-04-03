@@ -1,6 +1,6 @@
 .device-background {
   $base-border-radius: 3px !default;
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $large-screen: em(860) !default;
   $device-padding-vertical: 5em;
   $device-padding-horizontal: 0.4em;
@@ -34,7 +34,7 @@
     h4 {
       border-bottom: 1px solid transparentize($device-text-color, 0.7);
       font-size: 1.5em;
-      margin-bottom: 0 0 0.5em 0;
+      margin: 0 0 0.5em 0;
       padding-bottom: 0.5em;
     }
 
@@ -44,7 +44,7 @@
     }
 
     button {
-      @include button(flat, $base-accent-color);
+      @include button(flat, $action-color);
       padding: 0.7em 1em;
     }
   }

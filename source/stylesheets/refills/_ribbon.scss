@@ -5,8 +5,8 @@
 }
 
 .ribbon-wrapper {
-  $base-accent-color: #477dca !default;
-  $ribbon-background: $base-accent-color;
+  $action-color: #477dca !default;
+  $ribbon-background: $action-color;
   $ribbon-size: 85px;
 
   @include size($ribbon-size);

@@ -3,8 +3,8 @@
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $medium-gray: #999 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
@@ -15,7 +15,7 @@
   $breadcrumb-background: $base-background-color;
   $breadcrumb-inactive-hover-color: $breadcrumb-background;
   $breadcrumb-color: $medium-gray;
-  $breadcrumb-color-hover: $base-accent-color;
+  $breadcrumb-color-hover: $action-color;
   $breadcrumb-color-active: $breadcrumb-color;
 
   display: inline-block;

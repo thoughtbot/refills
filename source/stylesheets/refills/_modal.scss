@@ -4,7 +4,7 @@
   $base-background-color: white !default;
   $base-font-size: 1em !default;
   $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
@@ -33,7 +33,7 @@
   }
 
   .modal-trigger {
-    @include button(flat, $base-accent-color);
+    @include button(flat, $action-color);
     padding: 0.8em 1em;
   }
 

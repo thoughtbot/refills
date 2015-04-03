@@ -1,7 +1,7 @@
 .side-image {  
   $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
@@ -64,7 +64,7 @@
     }
 
     button {
-      @include button(flat, $base-accent-color);
+      @include button(flat, $action-color);
       padding: 0.7em 1em;
     }
   }

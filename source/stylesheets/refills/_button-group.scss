@@ -5,8 +5,8 @@
   $base-spacing: 1.5em !default;
   $base-font-size: 1em !default;
   $base-background-color: white !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
@@ -14,7 +14,7 @@
   $button-group-color: lighten($base-font-color, 30%);
   $button-group-border: 1px solid silver;
   $button-group-inner-border: 1px solid lighten(silver, 18%);
-  $button-group-background-checked: $base-accent-color;
+  $button-group-background-checked: $action-color;
   $button-group-color-checked: white;
   $button-group-border-checked: darken($button-group-background-checked, 15%);
 

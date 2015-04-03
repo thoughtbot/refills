@@ -1,7 +1,7 @@
 .bullets {
   $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
   $icon-bullet-size: 3.5em;
@@ -19,7 +19,7 @@
   }
 
   .bullet-icon {
-    background: $base-accent-color;
+    background: $action-color;
     border-radius: 50%;
     float: left;
     height: $icon-bullet-size;
@@ -28,15 +28,15 @@
   }
 
   .bullet-icon-1 {
-    background: $base-accent-color;
+    background: $action-color;
   }
 
   .bullet-icon-2 {
-    background: adjust-hue($base-accent-color, -50%);
+    background: adjust-hue($action-color, -50%);
   }
 
   .bullet-icon-3 {
-    background: adjust-hue($base-accent-color, -140%);
+    background: adjust-hue($action-color, -140%);
   }
 
   .bullet-content {

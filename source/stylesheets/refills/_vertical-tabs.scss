@@ -4,8 +4,8 @@
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
@@ -109,7 +109,7 @@
 
     &:focus,
     &:hover {
-      color: $base-accent-color;
+      color: $action-color;
     }
 
     &:first-child {

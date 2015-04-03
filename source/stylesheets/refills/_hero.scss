@@ -1,6 +1,6 @@
 .hero {  
   $base-border-radius: 3px !default;
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $large-screen: em(860) !default;
   $hero-background-top: #7F99BE; 
   $hero-background-bottom: #20392B;
@@ -53,7 +53,7 @@
     }
 
     button {
-      @include button(flat, $base-accent-color);
+      @include button(flat, $action-color);
       padding: 0.7em 1em;
     }
   }

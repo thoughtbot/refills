@@ -2,8 +2,8 @@
   $base-spacing: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  $base-accent-color: #477dca !default;
-  $stats-color: lighten($base-accent-color, 10%);
+  $action-color: #477dca !default;
+  $stats-color: lighten($action-color, 10%);
 
   padding: $base-spacing / 2;
 
