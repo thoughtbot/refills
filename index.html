@@ -129,18 +129,15 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.accordion-tabs {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
   $tab-border: 1px solid $base-border-color;
   $tab-content-background: lighten($light-gray, 10);
   $tab-active-background: $tab-content-background;
@@ -364,16 +361,13 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.accordion-tabs-minimal {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-background-color: white !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $medium-screen: em(640) !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
   $tab-link-color: $dark-gray;
   $tab-border: 1px solid $base-border-color;
   $tab-active-background: $base-background-color;
@@ -600,17 +594,14 @@
 }
 
 .card {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
   $card-border-color: $base-border-color;
   $card-border: 1px solid $card-border-color;
   $card-background: lighten($card-border-color, 10%);
@@ -799,13 +790,10 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.centered-navigation {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
   $centered-navigation-background: #E7F1EC;
@@ -1181,19 +1169,16 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.comment {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
   $comment-gutter: 1.4em;
   $comment-image-padding: 0.7em;
   $comment-image-width: 4em;
   $comment-color: $base-font-color;
-  $comment-background: lighten($base-accent-color, 15%);
+  $comment-background: lighten($action-color, 15%);
   $comment-detail-color: transparentize($comment-color, 0.5);
   $comment-image-vert-alignment: top;
 
@@ -1303,21 +1288,9 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.device-background {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $large-screen: em(860) !default;
-
-  p {
-    line-height: 1.5em;
-  }
-
-  h4 {
-    font-size: 1.5em;
-    margin: 0;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $device-padding-vertical: 5em;
   $device-padding-horizontal: 0.4em;
   $device-screen-width: 14em;
@@ -1349,16 +1322,18 @@
 
     h4 {
       border-bottom: 1px solid transparentize($device-text-color, 0.7);
-      margin-bottom: 0.5em;
+      font-size: 1.5em;
+      margin: 0 0 0.5em 0;
       padding-bottom: 0.5em;
     }
 
     p {
+      line-height: 1.5em;
       margin-bottom: 1.5em;
     }
 
     button {
-      @include button(flat, $base-accent-color);
+      @include button(flat, $action-color);
       padding: 0.7em 1em;
     }
   }
@@ -1501,18 +1476,11 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.flex-boxes {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $base-font-color: $dark-gray !default;
-  
-  a {
-    text-decoration: none;
-  }  
-  //////////////////////////////////////////////////////////////////////////////////
-
   $flex-box-border-color: $light-gray;
   $flex-box-border: 1px solid $flex-box-border-color;
   $flex-box-background: lighten($light-gray, 10%);
@@ -1545,6 +1513,7 @@
     display: block;
     margin: $flex-box-gutter;
     padding: 2em 2em 3em 2em;
+    text-decoration: none;
 
     @for $i from 1 to 7 { // assign colors from $flex-box-top-colors list
       &amp;:nth-child(#{$i}) {
@@ -1674,27 +1643,11 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.footer {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  
-  ul {
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
-    line-height: 1.5em;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $footer-background: desaturate(darken($base-accent-color, 20%), 30%);
+  $footer-background: desaturate(darken($action-color, 20%), 30%);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
@@ -1723,6 +1676,7 @@
 
   ul {
     margin-bottom: $base-spacing * 2;
+    padding: 0;
 
     @include media($medium-screen) {
       @include span-columns(3);
@@ -1732,6 +1686,8 @@
   }
 
   li {
+    line-height: 1.5em;
+    list-style: none;
     text-align: center;
 
     @include media($medium-screen) {
@@ -1741,6 +1697,7 @@
 
   li a {
     color: $footer-link-color;
+    text-decoration: none;
 
     &amp;:focus,
     &amp;:hover {
@@ -1892,28 +1849,11 @@
 // }
 
 .footer-2 {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  
-  ul {
-    margin: 0;
-    padding: 0;
-    line-height: 1.5em;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $footer-background: desaturate(darken($base-accent-color, 20%), 30%);
+  $footer-background: desaturate(darken($action-color, 20%), 30%);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
@@ -1938,7 +1878,9 @@
   } 
 
   ul {
-    margin-bottom: 1em;
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 0;
     
     @include media($large-screen) {
       float: left;
@@ -1950,6 +1892,7 @@
 
   ul li {
     font-weight: 800;
+    list-style: none;
     padding-right: 1em;
 
     @include media($large-screen) {
@@ -1960,6 +1903,7 @@
 
   ul li a {
     color: $footer-link-color;
+    text-decoration: none;
 
     &amp;:focus,
     &amp;:hover {
@@ -1978,7 +1922,7 @@
     }
 
     ul.footer-social {
-      margin-top: 1em;
+      margin: 1em 0 0 0;
 
       @include media($large-screen) {
         float: right;
@@ -1989,6 +1933,7 @@
         font-size: 1em;
         float: left;
         line-height: 0;
+        margin: 0;
         padding-right: 0.7em;
 
         &amp;:last-child {
@@ -2121,25 +2066,14 @@
 }
 
 .grid-items {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $base-background-color: white !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  
-  p {
-    line-height: 1.5em;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $grid-items-background: $base-background-color;
-  $grid-item-background: desaturate($base-accent-color, 30%);
+  $grid-item-background: desaturate($action-color, 30%);
   $grid-item-colors: 
-    desaturate($base-accent-color, 30%), 
+    desaturate($action-color, 30%), 
     #3581A5, 
     #5FBEBE,
     #98C79A,
@@ -2168,6 +2102,7 @@
     outline: none;
     padding: 2em;
     text-align: center;
+    text-decoration: none;
     width: 100%;
 
     @include media($large-screen) {
@@ -2205,6 +2140,7 @@
     }
 
   .grid-item p {
+      line-height: 1.5em;
       margin: auto;
       color: transparentize($grid-item-color, 0.3);
       
@@ -2354,23 +2290,12 @@
 }
 
 .grid-items-lines {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-background-color: white !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-
-  p {
-    line-height: 1.5em;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $grid-items-background: $base-background-color;
   $grid-item-background: $base-background-color;
   $grid-item-border: 1px solid transparentize($base-font-color, 0.8); 
@@ -2393,6 +2318,7 @@
     overflow: hidden;
     outline: none;
     padding: 2em;
+    text-decoration: none;
     width: 100%;
 
     @include media($large-screen) {
@@ -2420,6 +2346,7 @@
 
   .grid-item p {
       color: transparentize($grid-item-color, 0.4);
+      line-height: 1.5em;
       
       @include media($medium-screen) {
         max-width: 70%;
@@ -2511,12 +2438,9 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.hero {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $large-screen: em(860) !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
   $hero-background-top: #7F99BE; 
   $hero-background-bottom: #20392B;
   $hero-color: white;
@@ -2568,7 +2492,7 @@
     }
 
     button {
-      @include button(flat, $base-accent-color);
+      @include button(flat, $action-color);
       padding: 0.7em 1em;
     }
   }
@@ -2667,17 +2591,57 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.bullets {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  
+  $icon-bullet-size: 3.5em;
+
+  @include display(flex);
+  @include flex-wrap(wrap);
+  margin-bottom: $base-line-height;
+  margin: 1em;
+  overflow: auto;
   padding: 0;
 
+  .bullet {
+    @include flex-basis(20em);
+    @include flex-grow(1);
+  }
+
+  .bullet-icon {
+    background: $action-color;
+    border-radius: 50%;
+    float: left;
+    height: $icon-bullet-size;
+    padding: $icon-bullet-size / 4;
+    width: $icon-bullet-size;
+  }
+
+  .bullet-icon-1 {
+    background: $action-color;
+  }
+
+  .bullet-icon-2 {
+    background: adjust-hue($action-color, -50%);
+  }
+
+  .bullet-icon-3 {
+    background: adjust-hue($action-color, -140%);
+  }
+
+  .bullet-content {
+    margin-left: $icon-bullet-size * 1.4;
+    margin-bottom: 2em;
+  }
+
   h2 {
-    margin: 0;
+    border-bottom: 1px solid transparentize($base-font-color, 0.8);
+    display: inline-block;
+    font-size: $icon-bullet-size / 2.5;
+    margin: 0 0 ($icon-bullet-size / 6) 0;
+    padding-top: $icon-bullet-size / 7;
   }
 
   li {
@@ -2691,54 +2655,6 @@
 
   img {
     max-width: 100%;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $icon-bullet-size: 3.5em;
-
-  @include display(flex);
-  @include flex-wrap(wrap);
-  margin-bottom: $base-line-height;
-  margin: 1em;
-  overflow: auto;
-
-  .bullet {
-    @include flex-basis(20em);
-    @include flex-grow(1);
-  }
-
-  .bullet-icon {
-    background: $base-accent-color;
-    border-radius: 50%;
-    float: left;
-    height: $icon-bullet-size;
-    padding: $icon-bullet-size / 4;
-    width: $icon-bullet-size;
-  }
-
-  .bullet-icon-1 {
-    background: $base-accent-color;
-  }
-
-  .bullet-icon-2 {
-    background: adjust-hue($base-accent-color, -50%);
-  }
-
-  .bullet-icon-3 {
-    background: adjust-hue($base-accent-color, -140%);
-  }
-
-  .bullet-content {
-    margin-left: $icon-bullet-size * 1.4;
-    margin-bottom: 2em;
-  }
-
-  h2 {
-    border-bottom: 1px solid transparentize($base-font-color, 0.8);
-    display: inline-block;
-    font-size: $icon-bullet-size / 2.5;
-    margin-bottom: $icon-bullet-size / 6;
-    padding-top: $icon-bullet-size / 7;
   }
 }
 </code></pre>
@@ -3068,24 +2984,17 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">header.navigation {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
-  
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;
   $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
   $navigation-height: 60px;
-  $navigation-nav-button-background: $base-accent-color;
+  $navigation-nav-button-background: $action-color;
   $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
   $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20%);
   $navigation-search-background: lighten($navigation-background, 5);
@@ -3199,6 +3108,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       color: $navigation-color;
       display: inline-block;
       font-weight: 400;
+      text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
         padding-right: 1em;
@@ -3349,7 +3259,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   }
 
   .sign-up {
-    @include button(flat, $base-accent-color);
+    @include button(flat, $action-color);
     display: inline;
     float: right;
     font-size: 0.8em;
@@ -3541,27 +3451,20 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.scroll-on-page {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
+
+  display: inline-block;
 
   a {
     color: $base-link-color;
     text-decoration: none;
   }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  display: inline-block;
 
   aside {
     @include media($large-screen) {
@@ -3584,6 +3487,11 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   article {
     h4 {
       margin: 0 0 0.5em 0;
+    }
+
+    p {
+      color: $base-font-color;
+      line-height: $base-line-height;
     }
 
     section p:last-of-type {
@@ -3808,17 +3716,24 @@ jQuery -&gt;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.search-tools {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
+  $search-tools-border-color: $base-border-color;
+  $search-tools-background: lighten($search-tools-border-color, 10%);
+
+  @include clearfix;
+  background: $search-tools-background;
+  border-radius: $base-border-radius;
+  border: 1px solid $search-tools-border-color;
+  padding: $gutter / 2;
+
   ol {
     margin: 0;
     padding: 0;
@@ -3835,16 +3750,6 @@ jQuery -&gt;
     font-weight: bold;
     margin-bottom: $base-spacing / 4;
   }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $search-tools-border-color: $base-border-color;
-  $search-tools-background: lighten($search-tools-border-color, 10%);
-
-  @include clearfix;
-  background: $search-tools-background;
-  border-radius: $base-border-radius;
-  border: 1px solid $search-tools-border-color;
-  padding: $gutter / 2;
 
   .filter {
     margin-bottom: 1em;
@@ -3909,7 +3814,7 @@ jQuery -&gt;
     }
 
     button {
-      @include button(flat, $base-accent-color);
+      @include button(flat, $action-color);
       margin-top: 1em;
       padding-bottom: 0.5em;
       padding-top: 0.5em;
@@ -4099,20 +4004,12 @@ $(function() {
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.side-image {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $side-image-background-top: #B5EBEB;
   $side-image-background-bottom: #5DAC5D;
   $side-image-content-background: #F9F9F9;
@@ -4166,12 +4063,13 @@ $(function() {
     }
 
     p {
-      color: gray;
+      color: $base-font-color;
+      line-height: $base-line-height;
       margin-bottom: 3em;
     }
 
     button {
-      @include button(flat, $base-accent-color);
+      @include button(flat, $action-color);
       padding: 0.7em 1em;
     }
   }
@@ -4274,26 +4172,17 @@ $(function() {
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.tables {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
-  width: 100%;
-
-  th {
-    text-align: left;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
   $table-background: lighten($table-border-color, 12%);
@@ -4308,6 +4197,7 @@ $(function() {
   border-radius: $base-border-radius;
   border-spacing: 0;
   border: $table-border;
+  width: 100%;
 
   tbody {
     background-color: $table-background;
@@ -4349,6 +4239,7 @@ $(function() {
       border-bottom: 0px;
       border-left: 1px solid $table-border-color;
       padding: $table-padding;
+      text-align: left;
 
       &amp;:first-child {
         border-left: none;
@@ -4370,7 +4261,7 @@ $(function() {
       }
 
       button {
-        @include button(flat, $base-accent-color);
+        @include button(flat, $action-color);
         display: inline-block;
         font-size: 0.7em;
         line-height: $base-line-height;
@@ -4478,31 +4369,18 @@ $(function() {
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.table-minimal {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
-  width: 100%;
-
-  th {
-    text-align: left;
-  }
-
-  td {
-    line-height: $base-line-height;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
   $table-background: $base-background-color;
@@ -4514,6 +4392,7 @@ $(function() {
 
   border-collapse: separate;
   border-spacing: 0;
+  width: 100%;
 
   tbody {
     tr:hover &gt; td, tr:hover &gt; th {
@@ -4529,6 +4408,7 @@ $(function() {
       background-color: $table-header-background;
       border-bottom: 0px;
       padding: $table-padding;
+      text-align: left;
     }
   }
 
@@ -4538,10 +4418,11 @@ $(function() {
     td {
       border-bottom: 0px;
       border-top: 1px solid $table-border-color;
+      line-height: $base-line-height;
       padding: $table-padding;
 
       button {
-        @include button(flat, $base-accent-color);
+        @include button(flat, $action-color);
         display: inline-block;
         font-size: .7em;
         line-height: $base-line-height;
@@ -4653,33 +4534,16 @@ $(function() {
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.vertical-tabs-container {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
-  
-  li {
-    list-style: none;
-  }
-
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-
-  a {
-    text-decoration: none;
-    color: $base-link-color;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
   $tab-border-radius: $base-border-radius;
@@ -4694,6 +4558,15 @@ $(function() {
   border: $tab-border;
   margin-bottom: $base-spacing;
   overflow: hidden;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: $base-link-color;
+    text-decoration: none;
+  }
 
   .vertical-tabs {
     display: none;
@@ -4750,6 +4623,11 @@ $(function() {
     background-color: $tab-content-background;
     padding: $base-spacing $gutter;
 
+    p {
+      color: $base-font-color;
+      line-height: $base-line-height;
+    }
+
     @include media($vertical-tab-mode) {
       border: none;
       display: none;
@@ -4766,7 +4644,7 @@ $(function() {
 
     &amp;:focus,
     &amp;:hover {
-      color: $base-accent-color;
+      color: $action-color;
     }
 
     &amp;:first-child {

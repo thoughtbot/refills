@@ -126,35 +126,11 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.accordion {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  
-  margin: 0;
-  padding: 0;
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $accordion-menu-border-color: $base-border-color;
   $accordion-menu-color: $base-font-color;
   $accordion-menu-border: 1px solid $accordion-menu-border-color;
@@ -167,15 +143,23 @@
   
   background-color: $accordion-menu-background;
   border: $accordion-menu-border;
-  margin-bottom: $base-spacing;
+  margin: 0 0 $base-spacing 0;
+  padding: 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
 
   li {
     border-bottom: $accordion-menu-border;
+    list-style: none;
 
     &gt; a {
       color: $accordion-menu-color;
       display: block;
       padding: $accordion-menu-list-padding;
+      text-decoration: none;
     }
 
     &amp;:last-child {
@@ -283,7 +267,7 @@
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">$base-accent-color: #477dca !default;
+  <pre><code class="language-scss">$action-color: #477dca !default;
 
 .animated {
   @include animation-duration(1s);
@@ -354,7 +338,7 @@
 }
 
 button {
-  @include button(flat, $base-accent-color);
+  @include button(flat, $action-color);
   display: block;
   margin: auto;
   outline: none;
@@ -526,18 +510,15 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.breadcrumb {   
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $medium-gray: #999 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
   $breadcrumb-border-color: $base-border-color;
   $breadcrumb-border: 1px solid $breadcrumb-border-color;
   $breadcrumb-height: $base-spacing * 1.5;
@@ -545,7 +526,7 @@ $success-color: #e6efc2 !default;
   $breadcrumb-background: $base-background-color;
   $breadcrumb-inactive-hover-color: $breadcrumb-background;
   $breadcrumb-color: $medium-gray;
-  $breadcrumb-color-hover: $base-accent-color;
+  $breadcrumb-color-hover: $action-color;
   $breadcrumb-color-active: $breadcrumb-color;
 
   display: inline-block;
@@ -690,25 +671,22 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.button-group {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
   $base-font-size: 1em !default;
   $base-background-color: white !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
   $button-group-background: $base-background-color;
   $button-group-color: lighten($base-font-color, 30%);
   $button-group-border: 1px solid silver;
   $button-group-inner-border: 1px solid lighten(silver, 18%);
-  $button-group-background-checked: $base-accent-color;
+  $button-group-background-checked: $action-color;
   $button-group-color-checked: white;
   $button-group-border-checked: darken($button-group-background-checked, 15%);
 
@@ -845,7 +823,6 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.dropdown {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -853,19 +830,6 @@ $success-color: #e6efc2 !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
-  line-height: $base-line-height;
-
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $dropdown-color: $base-font-color;
   $dropdown-description-color: lighten($dropdown-color, 40%);
   $dropdown-border: 1px solid silver;
@@ -876,6 +840,8 @@ $success-color: #e6efc2 !default;
   $dropdown-padding: 1em;
   $dropdown-distance-from-menu: 50px;
   $dropdown-arrow-top-distance: 0;
+
+  line-height: $base-line-height;
 
   .dropdown-container {
     display: inline-block;
@@ -946,7 +912,9 @@ $success-color: #e6efc2 !default;
     color: $dropdown-color;
     cursor: pointer;
     display: none;
+    margin: 0;
     overflow: show;
+    padding: 0;
     position: absolute;
     right: 0;
     top: $dropdown-distance-from-menu;
@@ -967,6 +935,7 @@ $success-color: #e6efc2 !default;
   .dropdown-menu li {
     border-bottom: $dropdown-inner-border;
     color: $dropdown-color; 
+    list-style: none;
     padding: $dropdown-padding / 2;
   }
 
@@ -1075,27 +1044,14 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.expander {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-font-size: 1em !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $base-font-color: $dark-gray !default;
-  
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-
-  a {
-    color: $base-link-color;
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $expander-arrow-width: 0.7em;
   $expander-toggle-size: 1em;
   $expander-toggle-arrow-size: $expander-toggle-size;
@@ -1106,17 +1062,24 @@ $success-color: #e6efc2 !default;
   .expander-trigger {
     @include user-select(none);
     border-bottom: 1px solid $light-gray;
+    color: $base-link-color;
     cursor: pointer;
     display: block;
     font-size: $expander-toggle-size;
     margin-bottom: $expander-toggle-size;
     padding-bottom: $expander-toggle-size / 4;
+    text-decoration: none;
 
     &amp;:before {
       font-size: $expander-arrow-width;
       content: &quot;\25BC&quot;;
       margin-right: 0.5em;
     }
+  }
+
+  .expander-content p {
+    color: $base-font-color;
+    line-height: $base-line-height;
   }
 
   .expander-hidden {
@@ -1209,7 +1172,6 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.fade-in-element {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
@@ -1218,24 +1180,21 @@ $success-color: #e6efc2 !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
   
-  line-height: $base-line-height;
-
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   @include clearfix;
   background: $base-background-color;
   border-radius: $base-border-radius;
   border: 1px solid silver;
   box-shadow: 0 2px 2px transparentize(black, 0.8);
+  line-height: $base-line-height;
   margin-bottom: 4em;
   padding: $base-spacing;
   text-align: center;
   width: 100%;
 
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
 }
 
 .js-fade-element-hide {
@@ -1457,20 +1416,9 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.hover-tile-outer {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-line-height: 1.5em !default;
   $medium-screen: em(640) !default;
-  
-  h4 {
-    margin: 0;
-  }
-
-  p {
-    line-height: $base-line-height;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $hover-tile-height: 10em;
 
   background: url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot;);
@@ -1509,10 +1457,11 @@ $success-color: #e6efc2 !default;
 
     p {
       color: transparentize(#fff, 0.3);
+      line-height: $base-line-height;
     }
 
     h4 {
-      margin-bottom: 0.5em;
+      margin: 0 0 0.5em 0;
     }
   }
 }
@@ -1682,29 +1631,17 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.modal {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-font-size: 1em !default;
   $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-
-  h1 {
-    margin: 0;
-  }
-
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $modal-padding: 3em;
   $modal-background: $base-background-color;
   $modal-close-color: $light-gray;
@@ -1728,7 +1665,7 @@ $success-color: #e6efc2 !default;
   }
 
   .modal-trigger {
-    @include button(flat, $base-accent-color);
+    @include button(flat, $action-color);
     padding: 0.8em 1em;
   }
 
@@ -1803,9 +1740,14 @@ $success-color: #e6efc2 !default;
 
     h1 {
       color: $base-font-color;
-      margin-bottom: 0.6em;
+      margin-bottom: 0 0 0.6em 0;
       text-align: left;
       text-transform: capitalize;
+    }
+
+    p {
+      color: $base-font-color;
+      line-height: $base-line-height;
     }
 
     .modal-intro {
@@ -1960,30 +1902,14 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.pagination {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-spacing: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $pagination-border-color: $base-border-color;
   $pagination-border: 1px solid $pagination-border-color;
   $pagination-background: lighten($pagination-border-color, 10);
@@ -1994,10 +1920,13 @@ $success-color: #e6efc2 !default;
 
   ul {
     display: inline;
+    margin: 0;
+    padding: 0;
     text-align: center;
-
+    
     li {
       display: inline;
+      list-style: none;
     }
 
     ul li {
@@ -2022,6 +1951,7 @@ $success-color: #e6efc2 !default;
       color: $pagination-color;
       outline: none;
       padding: ($base-spacing / 4) ($gutter / 2);
+      text-decoration: none;
 
       &amp;:hover,
       &amp;:focus {
@@ -2218,17 +2148,14 @@ $(window).scroll (e) -&gt;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.progress-bar {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-background-color: white !default;
   $base-border-radius: 3px !default;
-  $base-accent-color: #477DCA !default;
-  $base-link-color: $base-accent-color !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
+  $action-color: #477DCA !default;
+  $base-link-color: $action-color !default;
   $progress-border-color: $base-border-color;
   $progress-border: 1px solid $progress-border-color;
-  $progress-meter-border-color: $base-accent-color;
+  $progress-meter-border-color: $action-color;
   $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
   $progress-meter-color: $progress-meter-border-color;
   $progress-background: darken($base-background-color, 5);
@@ -2348,21 +2275,14 @@ $(window).scroll (e) -&gt;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.progress-bar-indication {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
-
-  p {
-    line-height: $base-line-height;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
+  $action-color: #477DCA !default;
   $progress-border-color: $base-border-color;
   $progress-border: 1px solid $progress-border-color;
-  $progress-meter-border-color: $base-accent-color;
+  $progress-meter-border-color: $action-color;
   $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
   $progress-meter-color: $progress-meter-border-color;
   $progress-background: darken($base-background-color, 5);
@@ -2393,6 +2313,7 @@ $(window).scroll (e) -&gt;
   p {
     color: $progress-color;    
     font-weight: 800;
+    line-height: $base-line-height;
     margin: 0;
     padding: .1em .5em;
     text-shadow: 0 0 1px black;
@@ -2450,8 +2371,8 @@ $(window).scroll (e) -&gt;
 }
 
 .ribbon-wrapper {
-  $base-accent-color: #477dca !default;
-  $ribbon-background: $base-accent-color;
+  $action-color: #477dca !default;
+  $ribbon-background: $action-color;
   $ribbon-size: 85px;
 
   @include size($ribbon-size);
@@ -2584,7 +2505,7 @@ $(window).scroll (e) -&gt;
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   //////////////////////////////////////////////////////////////////////////////////
 
@@ -2612,7 +2533,7 @@ $(window).scroll (e) -&gt;
   }
 
   button[type=submit] {
-    @include button(flat, $base-accent-color);
+    @include button(flat, $action-color);
     @include position(absolute, 0em 0em 0em null);
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
@@ -2685,29 +2606,13 @@ $(window).scroll (e) -&gt;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.sliding-panel-content {  
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $dark-gray: #333 !default;
-
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
   $sliding-panel-border-color: $dark-gray;
   $sliding-panel-background: lighten($sliding-panel-border-color, 5%);
   $sliding-panel-color: #fff;
   $sliding-panel-border: 1px solid $sliding-panel-border-color;
-  $sliding-panel-background-hover: $base-accent-color;
+  $sliding-panel-background-hover: $action-color;
   $sliding-panel-color-hover: #fff;
   $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
 
@@ -2720,12 +2625,22 @@ $(window).scroll (e) -&gt;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
   li a {
     border-bottom: $sliding-panel-border;
     color: $sliding-panel-color;
     display: block;
     font-weight: bold;
     padding: 1em;
+    text-decoration: none;
 
     &amp;:focus {
       background-color: $sliding-panel-background-focus;
@@ -2838,11 +2753,8 @@ $(window).scroll (e) -&gt;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.label-switch {  
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-accent-color: #477DCA !default;
+  $action-color: #477DCA !default;
   $base-background-color: white !default;
-  //////////////////////////////////////////////////////////////////////////////////
-
   $switch-width: 52px;
   $switch-padding: 2px;
   $switch-height: 32px;
@@ -2903,7 +2815,7 @@ $(window).scroll (e) -&gt;
 
     &amp;:checked {
       + .checkbox {
-        background: $base-accent-color;
+        background: $action-color;
 
         &amp;:before {
           @include transform(scale(0));
@@ -2969,8 +2881,8 @@ $(window).scroll (e) -&gt;
   $base-spacing: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  $base-accent-color: #477dca !default;
-  $stats-color: lighten($base-accent-color, 10%);
+  $action-color: #477dca !default;
+  $stats-color: lighten($action-color, 10%);
 
   padding: $base-spacing / 2;
 
@@ -3239,20 +3151,11 @@ $(window).scroll (e) -&gt;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.tooltip-item {  
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
-  
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-    margin: 0;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
+  $base-font-color: $dark-gray !default;  
   $tooltip-background: white;
   $tooltip-color: $base-font-color;
   $tooltip-max-width: 16em;
@@ -3294,7 +3197,9 @@ $(window).scroll (e) -&gt;
     z-index: 10;
 
     p {
-      margin-bottom: 0;
+      color: $base-font-color;
+      line-height: $base-line-height;
+      margin: 0;
     }
 
     &amp;:after {
