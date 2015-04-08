@@ -1,8 +1,11 @@
 # Contributing
 
-You are more than welcome to submit any component or pattern you can’t find in
-the library, or feel free to send requests for content you’d like to see. When
-submitting a pull request, please think of these style guides:
+We love pull requests from everyone. By participating in this project, you
+agree to abide by the thoughtbot [code of conduct].
+
+[code of conduct]: https://thoughtbot.com/open-source-code-of-conduct
+
+When submitting a pull request, please think of these style guides:
 
 ## HTML.erb
 
