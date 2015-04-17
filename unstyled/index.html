@@ -758,6 +758,73 @@
 </div>
   </section>
 
+  <section id="expander" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Expander</h6></div>
+      <div class="refill-centering">
+        <div class="expander">
+  <a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden">Expandable section</a>
+  <div id="js-expander-content" class="expander-content">
+    <p>Lorem ipsum dolor sit.</p>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;div class=&quot;expander&quot;&gt;
+  &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-expander-trigger&quot; class=&quot;expander-trigger expander-hidden&quot;&gt;Expandable section&lt;/a&gt;
+  &lt;div id=&quot;js-expander-content&quot; class=&quot;expander-content&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.expander {  
+  .expander-trigger {
+    display: block;
+
+    &amp;:before {
+      content: &quot;\25BC&quot;;
+      margin-right: 0.5em;
+    }
+  }
+
+  .expander-hidden {
+    &amp;:before {
+      content: &quot;\25BA&quot;;
+    }
+  }
+
+  .expander-hidden + .expander-content {
+    display: none;
+  }
+}
+</code></pre>
+</td>
+
+
+
+  </tr>
+</table>
+</div>
+  </section>
+
   <section id="footer" class="refill">
     <div class="refills-wrapper">
       <div class="line-behind-text"><h6>Footer</h6></div>
@@ -871,73 +938,6 @@
         text-align: left;
       }
     }
-  }
-}
-</code></pre>
-</td>
-
-
-
-  </tr>
-</table>
-</div>
-  </section>
-
-  <section id="expander" class="refill">
-    <div class="refills-wrapper">
-      <div class="line-behind-text"><h6>Expander</h6></div>
-      <div class="refill-centering">
-        <div class="expander">
-  <a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden">Expandable section</a>
-  <div id="js-expander-content" class="expander-content">
-    <p>Lorem ipsum dolor sit.</p>
-  </div>
-</div>
-
-      </div>
-    </div>
-    <div class="refill-snippet"><div class="refill-control">
-  <a href="#" class="js-show-code">Show Code</a>
-  <a href="#" class="js-hide-code">Hide Code</a>
-</div>
-
-<table class="snippets-table">
-  <tr>
-    <td class="snippet">
-  <div class="copy-source-container">
-      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
-  </div>
-  <pre><code class="language-markup">&lt;div class=&quot;expander&quot;&gt;
-  &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-expander-trigger&quot; class=&quot;expander-trigger expander-hidden&quot;&gt;Expandable section&lt;/a&gt;
-  &lt;div id=&quot;js-expander-content&quot; class=&quot;expander-content&quot;&gt;
-    &lt;p&gt;Lorem ipsum dolor sit.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-</td>
-
-<td class="snippet">
-  <div class="copy-source-container">
-      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
-  </div>
-  <pre><code class="language-scss">.expander {  
-  .expander-trigger {
-    display: block;
-
-    &amp;:before {
-      content: &quot;\25BC&quot;;
-      margin-right: 0.5em;
-    }
-  }
-
-  .expander-hidden {
-    &amp;:before {
-      content: &quot;\25BA&quot;;
-    }
-  }
-
-  .expander-hidden + .expander-content {
-    display: none;
   }
 }
 </code></pre>
@@ -1262,6 +1262,123 @@
 });
 </code></pre>
 </td>
+
+
+  </tr>
+</table>
+</div>
+  </section>
+
+  <section id="hover-menu" class="refill">
+    <div class="refills-wrapper">
+      <div class="line-behind-text"><h6>Navigation Hover Menu</h6></div>
+      <div class="refill-centering"><li class="nav-link hover-menu">
+  <a href="javascript:void(0)">More</a>
+  <ul class="submenu">
+    <li class="hover-menu">
+      <a href="javascript:void(0)" class="hover-menu-item">Item with submenu</a>
+      <ul class="submenu">
+        <li><a href="javascript:void(0)">Submenu Item</a></li>
+        <li><a href="javascript:void(0)">Another Item</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+</div>
+    </div>
+    <div class="refill-snippet"><div class="refill-control">
+  <a href="#" class="js-show-code">Show Code</a>
+  <a href="#" class="js-hide-code">Hide Code</a>
+</div>
+
+<table class="snippets-table">
+  <tr>
+    <td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
+  </div>
+  <pre><code class="language-markup">&lt;li class=&quot;nav-link hover-menu&quot;&gt;
+  &lt;a href=&quot;javascript:void(0)&quot;&gt;More&lt;/a&gt;
+  &lt;ul class=&quot;submenu&quot;&gt;
+    &lt;li class=&quot;hover-menu&quot;&gt;
+      &lt;a href=&quot;javascript:void(0)&quot; class=&quot;hover-menu-item&quot;&gt;Item with submenu&lt;/a&gt;
+      &lt;ul class=&quot;submenu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Submenu Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another Item&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;
+</code></pre>
+</td>
+
+<td class="snippet">
+  <div class="copy-source-container">
+      <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
+  </div>
+  <pre><code class="language-scss">.hover-menu {
+  $large-screen: em(860) !default;
+  $submenu-width: 12em;
+
+  overflow: visible;
+  padding-right: 0;
+
+  @include media($large-screen) {
+    position: relative;
+  }
+
+  .hover-menu-item {
+    left: 0;
+    position: relative;
+
+    &amp;::after {
+      content: &quot;›&quot;;
+      padding-left: 0.5em;
+    }
+  }
+
+  .submenu {
+    display: none;
+    margin: 0;
+    padding-left: 0;
+
+    @include media($large-screen) {
+      left: 0;
+      position: absolute;
+    }
+  }
+
+  .submenu li {
+    display: block;
+    padding-right: 0;
+  }
+
+  .submenu li a {
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+
+    @include media($large-screen) {
+      text-align: left;
+      width: $submenu-width;
+    }
+  }
+
+  .submenu .submenu {
+    @include media($large-screen) {
+      left: $submenu-width;
+      top: 0;
+    }
+  }
+
+  &amp;:focus &gt; .submenu,
+  &amp;:hover &gt; .submenu {
+    display: block;
+  }
+}
+</code></pre>
+</td>
+
 
 
   </tr>
@@ -2132,7 +2249,7 @@ $(&quot;.js-vertical-tab-accordion-heading&quot;).click(function(event) {
 </table>
 </div>
   </section>
-
+  
   </div>
 </div>
     

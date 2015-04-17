@@ -6448,6 +6448,54 @@ section.inner-content {
       .unstyled .footer ul li {
         display: inline;
         text-align: left; } }
+/* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_hover-menu.scss */
+.unstyled .hover-menu {
+  overflow: visible;
+  padding-right: 0; }
+  @media screen and (min-width: 53.75em) {
+    /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_hover-menu.scss */
+    .unstyled .hover-menu {
+      position: relative; } }
+  /* line 12, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_hover-menu.scss */
+  .unstyled .hover-menu .hover-menu-item {
+    left: 0;
+    position: relative; }
+    /* line 16, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_hover-menu.scss */
+    .unstyled .hover-menu .hover-menu-item::after {
+      content: "›";
+      padding-left: 0.5em; }
+  /* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_hover-menu.scss */
+  .unstyled .hover-menu .submenu {
+    display: none;
+    margin: 0;
+    padding-left: 0; }
+    @media screen and (min-width: 53.75em) {
+      /* line 22, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_hover-menu.scss */
+      .unstyled .hover-menu .submenu {
+        left: 0;
+        position: absolute; } }
+  /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_hover-menu.scss */
+  .unstyled .hover-menu .submenu li {
+    display: block;
+    padding-right: 0; }
+  /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_hover-menu.scss */
+  .unstyled .hover-menu .submenu li a {
+    display: inline-block;
+    text-align: right;
+    width: 100%; }
+    @media screen and (min-width: 53.75em) {
+      /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_hover-menu.scss */
+      .unstyled .hover-menu .submenu li a {
+        text-align: left;
+        width: 12em; } }
+  @media screen and (min-width: 53.75em) {
+    /* line 49, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_hover-menu.scss */
+    .unstyled .hover-menu .submenu .submenu {
+      left: 12em;
+      top: 0; } }
+  /* line 56, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_hover-menu.scss */
+  .unstyled .hover-menu:focus > .submenu, .unstyled .hover-menu:hover > .submenu {
+    display: block; }
 /* line 5, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/unstyled/_modal.scss */
 .unstyled .modal label {
   cursor: pointer;
