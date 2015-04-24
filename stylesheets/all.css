@@ -3449,18 +3449,18 @@ section.inner-content {
     /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
     .refills-components .hover-tile-outer {
       width: 40%; } }
-  /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
+  /* line 21, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
   .refills-components .hover-tile-outer .hover-tile-container {
     height: 10em;
     overflow: hidden; }
-  /* line 25, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
+  /* line 26, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
   .refills-components .hover-tile-outer .hover-tile-container:hover > .hover-tile {
     -webkit-transform: translate(0, -100%);
     -moz-transform: translate(0, -100%);
     -ms-transform: translate(0, -100%);
     -o-transform: translate(0, -100%);
     transform: translate(0, -100%); }
-  /* line 29, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
+  /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
   .refills-components .hover-tile-outer .hover-tile {
     -webkit-transition: all, 0.2s ease-in-out;
     -moz-transition: all, 0.2s ease-in-out;
@@ -3470,14 +3470,14 @@ section.inner-content {
     height: inherit;
     overflow: hidden;
     padding: 1.5em; }
-  /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
+  /* line 39, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
   .refills-components .hover-tile-outer .hover-tile-hidden {
     background: rgba(0, 0, 0, 0.5); }
-    /* line 41, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
+    /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
     .refills-components .hover-tile-outer .hover-tile-hidden p {
       color: rgba(255, 255, 255, 0.7);
       line-height: 1.5em; }
-    /* line 46, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
+    /* line 47, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_hover-tile-animation.scss */
     .refills-components .hover-tile-outer .hover-tile-hidden h4 {
       margin: 0 0 0.5em 0; }
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_image-gradient-dynamic.scss */
