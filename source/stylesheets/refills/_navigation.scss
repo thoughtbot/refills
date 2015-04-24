@@ -275,8 +275,8 @@ header.navigation {
   .sign-up {
     @extend button;
     color: $navigation-color;
+    float: right;
     line-height: $navigation-height;
     text-decoration: none;
-    float: right;
   }
 }

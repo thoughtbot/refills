@@ -45,7 +45,7 @@
   p {
     font-weight: 200;
     line-height: 1.4em;
-    margin: 0 auto 3em auto; 
+    margin: 0 auto 3em; 
 
     @include media($large-screen) {
       font-size: 1.1em;
