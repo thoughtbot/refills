@@ -27,34 +27,29 @@
     margin: auto;
     padding: 3.5em;
     text-align: center;
+  }
 
-    .hero-copy {
-      text-align: center;
-      
-      h1 {
-        font-size: 1.6em;
-        margin-bottom: 0.5em;
+  .hero-copy {
+    text-align: center;
+  }
 
-        @include media($large-screen) {
-          font-size: 1.8em;
-        }
-      }
+  h1 {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
 
-      p {
-        font-weight: 200;
-        line-height: 1.4em;
-        margin: 0 auto 3em auto; 
-
-        @include media($large-screen) {
-          font-size: 1.1em;
-          max-width: 40%;
-        }
-      }
+    @include media($large-screen) {
+      font-size: 1.8em;
     }
+  }
 
-    button {
-      @include button(flat, $action-color);
-      padding: 0.7em 1em;
+  p {
+    font-weight: 200;
+    line-height: 1.4em;
+    margin: 0 auto 3em auto; 
+
+    @include media($large-screen) {
+      font-size: 1.1em;
+      max-width: 40%;
     }
   }
 }

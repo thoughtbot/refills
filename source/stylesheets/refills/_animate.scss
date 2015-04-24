@@ -68,11 +68,7 @@ $action-color: #477dca !default;
   text-align: center;
 }
 
-button {
-  @include button(flat, $action-color);
-  display: block;
-  margin: auto;
-  outline: none;
-  padding: 0.8em 1em;
-  text-align: center;
+.animate-trigger {
+  font-weight: 800;
+  cursor: pointer;
 }
