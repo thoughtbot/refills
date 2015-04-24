@@ -146,7 +146,7 @@ header.navigation {
   li.more.nav-link {
     padding-right: 0;
 
-    @include media($large-screen) {
+    @include media($horizontal-bar-mode) {
       padding-right: $navigation-submenu-padding;
     }
 
@@ -181,7 +181,7 @@ header.navigation {
       padding-right: 1.6em;
       position: relative;
 
-      @include media($large-screen) {
+      @include media($horizontal-bar-mode) {
         margin-right: $navigation-submenu-padding;
       }
 
@@ -266,7 +266,7 @@ header.navigation {
     padding-left: $navigation-padding / 2;
     padding-right: $navigation-padding;
 
-    @include media($large-screen) {
+    @include media($horizontal-bar-mode) {
       background: transparent;
       clear: none;
       float: right;
@@ -309,7 +309,7 @@ header.navigation {
         padding: 0.5em 0.8em;
         width: 100%;
 
-        @include media($large-screen) {
+        @include media($horizontal-bar-mode) {
           width: 100%;
         }
       }
