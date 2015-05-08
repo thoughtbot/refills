@@ -632,7 +632,7 @@ section.inner-content {
   z-index: 9999; }
   /* line 20, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .refills-menu-anchor.fixedsticky-on {
-    margin-top: -3.5em; }
+    margin-top: 0; }
   /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-nav.scss */
   .refills-menu-anchor.fixedsticky-off {
     position: fixed; }
