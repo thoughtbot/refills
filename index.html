@@ -242,8 +242,7 @@
   $('.accordion-tabs').each(function(index) {
     $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
   });
-
-  $('.accordion-tabs').on('click', 'li &gt; a', function(event) {
+  $('.accordion-tabs').on('click', 'li &gt; a.tab-link', function(event) {
     if (!$(this).hasClass('is-active')) {
       event.preventDefault();
       var accordionTabs = $(this).closest('.accordion-tabs');
@@ -443,8 +442,7 @@
   $('.accordion-tabs-minimal').each(function(index) {
     $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
   });
-
-  $('.accordion-tabs-minimal').on('click', 'li &gt; a', function(event) {
+  $('.accordion-tabs-minimal').on('click', 'li &gt; a.tab-link', function(event) {
     if (!$(this).hasClass('is-active')) {
       event.preventDefault();
       var accordionTabs = $(this).closest('.accordion-tabs-minimal');
@@ -526,7 +524,7 @@
       The Last Card
     </div>
     <div class="card-copy">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     </div>
   </div>
 </div>
