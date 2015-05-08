@@ -2,8 +2,7 @@ $(document).ready(function () {
   $('.accordion-tabs').each(function(index) {
     $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
   });
-
-  $('.accordion-tabs').on('click', 'li > a', function(event) {
+  $('.accordion-tabs').on('click', 'li > a.tab-link', function(event) {
     if (!$(this).hasClass('is-active')) {
       event.preventDefault();
       var accordionTabs = $(this).closest('.accordion-tabs');
