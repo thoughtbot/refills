@@ -19,7 +19,7 @@
   $card-header-background: $card-background;
   $card-margin: 1em;
   $card-image-hover-opacity: 0.7;
-  $card-image-hover-color: orange;
+  $card-image-hover-color: #ffa500;
 
   @include flex-basis(15em);
   @include flex-grow(1);
