@@ -1,11 +1,11 @@
 $(document).ready ->
-  $('.dropdown-button').click ->
-    $('.dropdown-menu').toggleClass 'show-menu'
-    $('.dropdown-menu > li').click ->
-      $('.dropdown-menu').removeClass 'show-menu'
-      return
-    $('.dropdown-menu.dropdown-select > li').click ->
-      $('.dropdown-button').html $(this).html()
+  $(".dropdown-button").click ->
+    $button = $(this)
+    $menu = $button.siblings(".dropdown-menu")
+    $menu.toggleClass "show-menu"
+    $menu.children("li").click ->
+      $menu.removeClass "show-menu"
+      $button.html $(this).html()
       return
     return
   return
