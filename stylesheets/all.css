@@ -912,17 +912,19 @@ section.inner-content {
   /* line 36, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .refills-patterns .card .card-image {
     overflow: hidden;
-    max-height: 150px; }
-    /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    height: 150px;
+    max-height: 150px;
+    background-color: #F8F2B4; }
+    /* line 42, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .refills-patterns .card .card-image img {
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
-      background: #DBD199;
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
-      width: 100%; }
-  /* line 49, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+      width: 100%;
+      opacity: 1; }
+  /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .refills-patterns .card .card-header {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -933,27 +935,24 @@ section.inner-content {
     font-weight: bold;
     line-height: 1.5em;
     padding: 0.5em 0.75em; }
-  /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  /* line 61, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .refills-patterns .card .card-copy {
     font-size: 0.9em;
     line-height: 1.5em;
     padding: 0.75em 0.75em; }
-    /* line 64, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .refills-patterns .card .card-copy p {
       margin: 0 0 0.75em; }
-  /* line 69, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+  /* line 71, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .refills-patterns .card:focus, .refills-patterns .card:hover {
-    background-color: white; }
-    /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-    .refills-patterns .card:focus .card-image img, .refills-patterns .card:hover .card-image img {
-      background: #e2daac; }
-    /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
-    .refills-patterns .card:focus .card-header, .refills-patterns .card:hover .card-header {
-      background-color: white; }
-  /* line 82, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    cursor: pointer; }
+    /* line 75, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    .refills-patterns .card:focus img, .refills-patterns .card:hover img {
+      opacity: 0.7; }
+  /* line 80, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
   .refills-patterns .card:active {
     background-color: #f6f6f6; }
-    /* line 85, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
+    /* line 83, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_cards.scss */
     .refills-patterns .card:active .card-header {
       background-color: #f6f6f6; }
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_centered-navigation.scss */
