@@ -8,34 +8,35 @@
 
   background: $phone-background;
   border-radius: (1.2em * $ratio);
-  padding: $phone-padding;
   box-shadow: 0 0 1px transparentize(black, 0.4), inset 0 3px 0 white;
+  padding: $phone-padding;
   width: $phone-screen-width + (2 * $phone-padding);
 
   .phone-speaker {
-    height: (0.3em * $ratio);
-    width: $phone-screen-width * 0.2;
     background: #ABABAB;
-    box-shadow: 0 2px 0 white, inset 0 0 1px transparentize(black, 0.6);
     border-radius: 1em;
+    box-shadow: 0 2px 0 white, inset 0 0 1px transparentize(black, 0.6);
+    height: (0.3em * $ratio);
     margin: (1em * $ratio) auto;    
+    width: $phone-screen-width * 0.2;
   }
 
   .phone-screen {
-    width: auto;
-    height: $phone-screen-height;
     background: url('https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg');
     background-size: cover;
     border-radius: 0.2em;
     box-shadow: 0 3px 0 white, inset 0 0 1px transparentize(black, 0.6);
+    height: $phone-screen-height;
     margin: auto;
+    width: auto;
   }
 
   .phone-button {
-    height: $phone-screen-width * 0.15;
-    width: $phone-screen-width * 0.15;
-    border: 2px solid transparentize(#404040, 0.9);
     border-radius: 50%;
+    border: 2px solid transparentize(#404040, 0.9);
+    box-shadow: 0 2px 0 white, inset 0 0 1px transparentize(black, 0.6);
+    height: $phone-screen-width * 0.15;
     margin: (0.5em * $ratio) auto;
+    width: $phone-screen-width * 0.15;
   }
 }
