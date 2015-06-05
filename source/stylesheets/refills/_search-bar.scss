@@ -30,11 +30,14 @@ form.search-bar {
     width: 100%;
   }
 
-  button[type=submit] {
-    @include button(flat, $action-color);
+  button[type=submit] {    
     @include position(absolute, 0em 0em 0em null);
+    background: $action-color;
     border-bottom-left-radius: 0;
+    border-bottom-right-radius: $base-border-radius;
     border-top-left-radius: 0;
+    border-top-right-radius: $base-border-radius;
+    border: 0;
     outline: none;
     padding: 5px 10px;
 

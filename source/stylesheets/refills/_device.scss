@@ -42,11 +42,6 @@
       line-height: 1.5em;
       margin-bottom: 1.5em;
     }
-
-    button {
-      @include button(flat, $action-color);
-      padding: 0.7em 1em;
-    }
   }
 
   .device {

@@ -62,11 +62,6 @@
       line-height: $base-line-height;
       margin-bottom: 3em;
     }
-
-    button {
-      @include button(flat, $action-color);
-      padding: 0.7em 1em;
-    }
   }
 
   @include reset-display();

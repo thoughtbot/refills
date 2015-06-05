@@ -38,7 +38,7 @@
     margin-bottom: 1em;
 
     @include media($large-screen) {
-      @include span-columns(3.5);
+      @include span-columns(4);
       margin-bottom: 0;
     }
 
@@ -75,7 +75,7 @@
     }
 
     button {
-      @include button(simple, lighten($search-tools-background, 10%));
+      @extend button;
       @include position(absolute, 5px 5px auto auto);
       font-size: 0.7em;
     }
@@ -85,26 +85,6 @@
 
       ol, button {
         display: none;
-      }
-    }
-  }
-
-  .trigger {
-    width: 100%;
-
-    @include media($large-screen) {
-      @include span-columns(1.5);
-    }
-
-    button {
-      @include button(flat, $action-color);
-      margin-top: 1em;
-      padding-bottom: 0.5em;
-      padding-top: 0.5em;
-      width: 100%;
-
-      @include media($large-screen) {
-        margin-top: 1.55em;
       }
     }
   }

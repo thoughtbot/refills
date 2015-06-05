@@ -60,19 +60,15 @@ $action-color: #477dca !default;
 /////////////////////////////////////////////////////////////
 
 .animate-target {
-  @include size(6em);
   -webkit-transform-style: preserve-3d;
+  @include size(6em);
   border-radius: 50%;
   border: 22px solid #e2e2e3;
   margin: 0 auto 3em;
   text-align: center;
 }
 
-button {
-  @include button(flat, $action-color);
-  display: block;
-  margin: auto;
-  outline: none;
-  padding: 0.8em 1em;
-  text-align: center;
+.animate-trigger {
+  cursor: pointer;
+  font-weight: 800;
 }

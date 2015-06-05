@@ -4,7 +4,6 @@
   $base-background-color: white !default;
   $base-font-size: 1em !default;
   $base-line-height: 1.5em !default;
-  $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
@@ -33,7 +32,7 @@
   }
 
   .modal-trigger {
-    @include button(flat, $action-color);
+    font-weight: 800;
     padding: 0.8em 1em;
   }
 
@@ -106,25 +105,12 @@
       width: 50%;
     }
 
-    h1 {
-      color: $base-font-color;
-      margin-bottom: 0 0 0.6em 0;
-      text-align: left;
-      text-transform: capitalize;
-    }
-
     p {
       color: $base-font-color;
       line-height: $base-line-height;
     }
 
-    .modal-intro {
-      font-weight: 800;
-    }
-
     .modal-content {
-      color: $base-font-color;
-
       @include media($medium-screen) {
         @include columns(2 8em);
       }
