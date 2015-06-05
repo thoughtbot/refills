@@ -1247,7 +1247,6 @@
   <div class="device-text">
     <h4>Text about App or Device</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, recusandae? Deserunt repellendus.</p>
-    <button>Learn More</button>
   </div>
   <div class="device">
     <div class="screen"></div>
@@ -1270,7 +1269,6 @@
   &lt;div class=&quot;device-text&quot;&gt;
     &lt;h4&gt;Text about App or Device&lt;/h4&gt;
     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, recusandae? Deserunt repellendus.&lt;/p&gt;
-    &lt;button&gt;Learn More&lt;/button&gt;
   &lt;/div&gt;
   &lt;div class=&quot;device&quot;&gt;
     &lt;div class=&quot;screen&quot;&gt;&lt;/div&gt;
@@ -1326,11 +1324,6 @@
     p {
       line-height: 1.5em;
       margin-bottom: 1.5em;
-    }
-
-    button {
-      @include button(flat, $action-color);
-      padding: 0.7em 1em;
     }
   }
 
@@ -2399,7 +2392,6 @@
 			<h1>Short description of Product</h1>
 			<p>A few reasons why this product is worth using, who it's for and why they need it.</p>	
 		</div>
-    <button>Learn More</button>
 	</div>
 </div>
 
@@ -2423,7 +2415,6 @@
 			&lt;h1&gt;Short description of Product&lt;/h1&gt;
 			&lt;p&gt;A few reasons why this product is worth using, who it's for and why they need it.&lt;/p&gt;	
 		&lt;/div&gt;
-    &lt;button&gt;Learn More&lt;/button&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -2485,11 +2476,6 @@
           max-width: 40%;
         }
       }
-    }
-
-    button {
-      @include button(flat, $action-color);
-      padding: 0.7em 1em;
     }
   }
 }
@@ -2911,7 +2897,6 @@ https://developers.google.com/maps/documentation/javascript/tutorial
           </button>
         </form>
       </div>
-      <a href="javascript:void(0)" class="sign-up">Sign Up</a>
     </div>
   </div>
 </header>
@@ -2968,7 +2953,6 @@ https://developers.google.com/maps/documentation/javascript/tutorial
           &lt;/button&gt;
         &lt;/form&gt;
       &lt;/div&gt;
-      &lt;a href=&quot;javascript:void(0)&quot; class=&quot;sign-up&quot;&gt;Sign Up&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/header&gt;
@@ -3244,24 +3228,12 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     clear: both;
     display: block;
     height: $navigation-height;
-    padding-left: $navigation-padding / 2;
-    padding-right: $navigation-padding;
 
     @include media($horizontal-bar-mode) {
       background: transparent;
       clear: none;
       float: right;
     }
-  }
-
-  .sign-up {
-    @include button(flat, $action-color);
-    display: inline;
-    float: right;
-    font-size: 0.8em;
-    margin-top: 1em;
-    padding: 0.75em 1em;
-    text-transform: uppercase;
   }
 
   // Search bar
@@ -3272,7 +3244,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     $search-bar-background: lighten($search-bar-border-color, 10%);
 
     float: left;
-    padding: 0.85em 0.6em 0.7em 0.6em;
+    padding: 0.85em 0.85em 0.7em 0.6em;
     width: 60%;
 
     form {
@@ -3296,7 +3268,8 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       }
 
       button[type=submit] {
-        @include button(flat, $navigation-search-background);
+        background: $navigation-search-background;
+        border: none;
         bottom: 0.3em;
         left: auto;
         outline: none;
@@ -3576,61 +3549,63 @@ jQuery -&gt;
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Search Tools</h6></div>
         <div class="search-tools">
-  <div class="filter">
-    <label>Colors</label>
-    <div>
-      <ol>
-        <li>
-          <input id="red" type="checkbox">
-          <label for="red">Red</label>
-        </li>
-        <li>
-          <input id="green" type="checkbox">
-          <label for="green">Green</label>
-        </li>
-        <li>
-          <input id="blue" type="checkbox">
-          <label for="blue">Blue</label>
-        </li>
-      </ol>
+  <div class="filters">
+    <div class="filter">
+      <label>Colors</label>
+      <div>
+        <ol>
+          <li>
+            <input id="red" type="checkbox">
+            <label for="red">Red</label>
+          </li>
+          <li>
+            <input id="green" type="checkbox">
+            <label for="green">Green</label>
+          </li>
+          <li>
+            <input id="blue" type="checkbox">
+            <label for="blue">Blue</label>
+          </li>
+        </ol>
+      </div>
     </div>
-  </div>
-  <div class="filter">
-    <label>Sizes</label>
-    <div>
-      <ol>
-        <li>
-          <input id="small" type="checkbox">
-          <label for="small">Small</label>
-        </li>
-        <li>
-          <input id="medium" type="checkbox">
-          <label for="medium">Medium</label>
-        </li>
-        <li>
-          <input id="large" type="checkbox">
-          <label for="large">Large</label>
-        </li>
-      </ol>
+    <div class="filter">
+      <label>Sizes</label>
+      <div>
+        <ol>
+          <li>
+            <input id="small" type="checkbox">
+            <label for="small">Small</label>
+          </li>
+          <li>
+            <input id="medium" type="checkbox">
+            <label for="medium">Medium</label>
+          </li>
+          <li>
+            <input id="large" type="checkbox">
+            <label for="large">Large</label>
+          </li>
+        </ol>
+      </div>
     </div>
-  </div>
-  <div class="filter">
-    <label>Lengths</label>
-    <div>
-      <ol>
-        <li>
-          <input id="short" type="checkbox">
-          <label for="short">Short</label>
-        </li>
-        <li>
-          <input id="long" type="checkbox">
-          <label for="long">Long</label>
-        </li>
-      </ol>
+    <div class="filter">
+      <label>Lengths</label>
+      <div>
+        <ol>
+          <li>
+            <input id="short" type="checkbox">
+            <label for="short">Short</label>
+          </li>
+          <li>
+            <input id="long" type="checkbox">
+            <label for="long">Long</label>
+          </li>
+        </ol>
+      </div>
     </div>
-  </div>
-  <div class="trigger">
-    <button>Update</button>
+    <div class="filter trigger">
+      <button>Update</button>
+    </div>
   </div>
 </div>
 
@@ -3647,61 +3622,63 @@ jQuery -&gt;
       <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
   </div>
   <pre><code class="language-markup">&lt;div class=&quot;search-tools&quot;&gt;
-  &lt;div class=&quot;filter&quot;&gt;
-    &lt;label&gt;Colors&lt;/label&gt;
-    &lt;div&gt;
-      &lt;ol&gt;
-        &lt;li&gt;
-          &lt;input id=&quot;red&quot; type=&quot;checkbox&quot;&gt;
-          &lt;label for=&quot;red&quot;&gt;Red&lt;/label&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;input id=&quot;green&quot; type=&quot;checkbox&quot;&gt;
-          &lt;label for=&quot;green&quot;&gt;Green&lt;/label&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;input id=&quot;blue&quot; type=&quot;checkbox&quot;&gt;
-          &lt;label for=&quot;blue&quot;&gt;Blue&lt;/label&gt;
-        &lt;/li&gt;
-      &lt;/ol&gt;
+  &lt;div class=&quot;filters&quot;&gt;
+    &lt;div class=&quot;filter&quot;&gt;
+      &lt;label&gt;Colors&lt;/label&gt;
+      &lt;div&gt;
+        &lt;ol&gt;
+          &lt;li&gt;
+            &lt;input id=&quot;red&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;red&quot;&gt;Red&lt;/label&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;input id=&quot;green&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;green&quot;&gt;Green&lt;/label&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;input id=&quot;blue&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;blue&quot;&gt;Blue&lt;/label&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;filter&quot;&gt;
-    &lt;label&gt;Sizes&lt;/label&gt;
-    &lt;div&gt;
-      &lt;ol&gt;
-        &lt;li&gt;
-          &lt;input id=&quot;small&quot; type=&quot;checkbox&quot;&gt;
-          &lt;label for=&quot;small&quot;&gt;Small&lt;/label&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;input id=&quot;medium&quot; type=&quot;checkbox&quot;&gt;
-          &lt;label for=&quot;medium&quot;&gt;Medium&lt;/label&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;input id=&quot;large&quot; type=&quot;checkbox&quot;&gt;
-          &lt;label for=&quot;large&quot;&gt;Large&lt;/label&gt;
-        &lt;/li&gt;
-      &lt;/ol&gt;
+    &lt;div class=&quot;filter&quot;&gt;
+      &lt;label&gt;Sizes&lt;/label&gt;
+      &lt;div&gt;
+        &lt;ol&gt;
+          &lt;li&gt;
+            &lt;input id=&quot;small&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;small&quot;&gt;Small&lt;/label&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;input id=&quot;medium&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;medium&quot;&gt;Medium&lt;/label&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;input id=&quot;large&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;large&quot;&gt;Large&lt;/label&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;filter&quot;&gt;
-    &lt;label&gt;Lengths&lt;/label&gt;
-    &lt;div&gt;
-      &lt;ol&gt;
-        &lt;li&gt;
-          &lt;input id=&quot;short&quot; type=&quot;checkbox&quot;&gt;
-          &lt;label for=&quot;short&quot;&gt;Short&lt;/label&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;input id=&quot;long&quot; type=&quot;checkbox&quot;&gt;
-          &lt;label for=&quot;long&quot;&gt;Long&lt;/label&gt;
-        &lt;/li&gt;
-      &lt;/ol&gt;
+    &lt;div class=&quot;filter&quot;&gt;
+      &lt;label&gt;Lengths&lt;/label&gt;
+      &lt;div&gt;
+        &lt;ol&gt;
+          &lt;li&gt;
+            &lt;input id=&quot;short&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;short&quot;&gt;Short&lt;/label&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;input id=&quot;long&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;long&quot;&gt;Long&lt;/label&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;trigger&quot;&gt;
-    &lt;button&gt;Update&lt;/button&gt;
+    &lt;div class=&quot;filter trigger&quot;&gt;
+      &lt;button&gt;Update&lt;/button&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -3724,11 +3701,14 @@ jQuery -&gt;
   $search-tools-border-color: $base-border-color;
   $search-tools-background: lighten($search-tools-border-color, 10%);
 
+  @include display(flex);
+  @include justify-content(space-between);
   @include clearfix;
   background: $search-tools-background;
   border-radius: $base-border-radius;
   border: 1px solid $search-tools-border-color;
-  padding: $gutter / 2;
+  padding: $gutter ($gutter / 2);
+  width: 100%;
 
   ol {
     margin: 0;
@@ -3747,11 +3727,23 @@ jQuery -&gt;
     margin-bottom: $base-spacing / 4;
   }
 
-  .filter {
-    margin-bottom: 1em;
+  .filters {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    width: 100%;
 
     @include media($large-screen) {
-      @include span-columns(3.5);
+      @include flex-direction(row);
+    }
+  }
+
+  .filter {
+    @include flex-shrink(1);
+    @include flex-grow(1);
+    margin: 0 0.2em 1em 0.2em;
+
+    @include media($large-screen) {
       margin-bottom: 0;
     }
 
@@ -3787,8 +3779,7 @@ jQuery -&gt;
       }
     }
 
-    button {
-      @include button(simple, lighten($search-tools-background, 10%));
+    button.clear {
       @include position(absolute, 5px 5px auto auto);
       font-size: 0.7em;
     }
@@ -3803,22 +3794,13 @@ jQuery -&gt;
   }
 
   .trigger {
-    width: 100%;
-
-    @include media($large-screen) {
-      @include span-columns(1.5);
-    }
-
+    margin-top: 1.5em;
+    
     button {
-      @include button(flat, $action-color);
-      margin-top: 1em;
-      padding-bottom: 0.5em;
-      padding-top: 0.5em;
+      display: block;
       width: 100%;
-
-      @include media($large-screen) {
-        margin-top: 1.55em;
-      }
+      padding: .5em 1em;
+      text-align: center;
     }
   }
 }
@@ -3859,7 +3841,7 @@ jQuery -&gt;
       attr('data-role', 'summary').
       prependTo(this._optionsContainer);
 
-    this._clearSelectionButton = $('&lt;button&gt;&lt;/button&gt;').
+    this._clearSelectionButton = $('&lt;button class=clear&gt;&lt;/button&gt;').
       text('Clear').
       attr('type', 'button').
       insertAfter(this._summaryElement);
@@ -3966,7 +3948,6 @@ $(function() {
       <h1>Message with a gradient image</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam assumenda nihil suscipit obcaecati sit, cum quod corporis adipisci ipsam, fugiat, quae error. Eaque commodi, dicta quidem explicabo mollitia inventore quibusdam.
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam assumenda nihil suscipit obcaecati sit, cum quod corporis adipisci ipsam, fugiat, quae error. Eaque commodi, dicta quidem explicabo mollitia inventore quibusdam.</p>
-      <button>Read more</button>
   </div>
 </div>
 
@@ -3989,7 +3970,6 @@ $(function() {
       &lt;h1&gt;Message with a gradient image&lt;/h1&gt;
       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam assumenda nihil suscipit obcaecati sit, cum quod corporis adipisci ipsam, fugiat, quae error. Eaque commodi, dicta quidem explicabo mollitia inventore quibusdam.
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam assumenda nihil suscipit obcaecati sit, cum quod corporis adipisci ipsam, fugiat, quae error. Eaque commodi, dicta quidem explicabo mollitia inventore quibusdam.&lt;/p&gt;
-      &lt;button&gt;Read more&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -4062,11 +4042,6 @@ $(function() {
       color: $base-font-color;
       line-height: $base-line-height;
       margin-bottom: 3em;
-    }
-
-    button {
-      @include button(flat, $action-color);
-      padding: 0.7em 1em;
     }
   }
 
@@ -4257,7 +4232,6 @@ $(function() {
       }
 
       button {
-        @include button(flat, $action-color);
         display: inline-block;
         font-size: 0.7em;
         line-height: $base-line-height;
@@ -4418,7 +4392,6 @@ $(function() {
       padding: $table-padding;
 
       button {
-        @include button(flat, $action-color);
         display: inline-block;
         font-size: .7em;
         line-height: $base-line-height;

@@ -27,7 +27,7 @@ var Filter = (function() {
       attr('data-role', 'summary').
       prependTo(this._optionsContainer);
 
-    this._clearSelectionButton = $('<button></button>').
+    this._clearSelectionButton = $('<button class=clear></button>').
       text('Clear').
       attr('type', 'button').
       insertAfter(this._summaryElement);

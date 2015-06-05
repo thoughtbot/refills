@@ -338,7 +338,6 @@
 }
 
 button {
-  @include button(flat, $action-color);
   display: block;
   margin: auto;
   outline: none;
@@ -1666,7 +1665,6 @@ $success-color: #e6efc2 !default;
   }
 
   .modal-trigger {
-    @include button(flat, $action-color);
     padding: 0.8em 1em;
   }
 
@@ -2561,7 +2559,7 @@ $(window).scroll (e) -&gt;
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Sliding Panel</h6></div>
         <div class="refill-centering"><button type="button" class="js-menu-trigger sliding-panel-button">
-  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
+  Click for Sliding Panel
 </button>
 
 <nav class="js-menu sliding-panel-content">
@@ -2587,7 +2585,7 @@ $(window).scroll (e) -&gt;
       <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
   </div>
   <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;js-menu-trigger sliding-panel-button&quot;&gt;
-  &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png&quot; alt=&quot;Menu Icon&quot;&gt;
+  Click for Sliding Panel
 &lt;/button&gt;
 
 &lt;nav class=&quot;js-menu sliding-panel-content&quot;&gt;
@@ -2673,7 +2671,6 @@ $(window).scroll (e) -&gt;
 }
 
 .sliding-panel-button {
-  @include button(flat, #477DCA);
   padding: 10px 16px;
   display: inline-block;
   cursor: pointer;
