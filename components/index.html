@@ -967,18 +967,18 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
-  <pre><code class="language-javascript">$(document).ready(function(){
+  <pre><code class="language-javascript">$(document).ready(function() {
   $(&quot;.dropdown-button&quot;).click(function() {
-    $(&quot;.dropdown-menu&quot;).toggleClass(&quot;show-menu&quot;);
-    $(&quot;.dropdown-menu &gt; li&quot;).click(function(){
-      $(&quot;.dropdown-menu&quot;).removeClass(&quot;show-menu&quot;);
-    });
-    $(&quot;.dropdown-menu.dropdown-select &gt; li&quot;).click(function() {
-      $(&quot;.dropdown-button&quot;).html($(this).html());
+    var $button, $menu;
+    $button = $(this);
+    $menu = $button.siblings(&quot;.dropdown-menu&quot;);
+    $menu.toggleClass(&quot;show-menu&quot;);
+    $menu.children(&quot;li&quot;).click(function() {
+      $menu.removeClass(&quot;show-menu&quot;);
+      $button.html($(this).html());
     });
   });
 });
-
 </code></pre>
 </td>
 
@@ -988,13 +988,13 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$(document).ready -&gt;
-  $('.dropdown-button').click -&gt;
-    $('.dropdown-menu').toggleClass 'show-menu'
-    $('.dropdown-menu &gt; li').click -&gt;
-      $('.dropdown-menu').removeClass 'show-menu'
-      return
-    $('.dropdown-menu.dropdown-select &gt; li').click -&gt;
-      $('.dropdown-button').html $(this).html()
+  $(&quot;.dropdown-button&quot;).click -&gt;
+    $button = $(this)
+    $menu = $button.siblings(&quot;.dropdown-menu&quot;)
+    $menu.toggleClass &quot;show-menu&quot;
+    $menu.children(&quot;li&quot;).click -&gt;
+      $menu.removeClass &quot;show-menu&quot;
+      $button.html $(this).html()
       return
     return
   return

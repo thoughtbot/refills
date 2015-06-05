@@ -1833,18 +1833,18 @@ $(document).ready(function() {
     });
   });
 });
-$(document).ready(function(){
+$(document).ready(function() {
   $(".dropdown-button").click(function() {
-    $(".dropdown-menu").toggleClass("show-menu");
-    $(".dropdown-menu > li").click(function(){
-      $(".dropdown-menu").removeClass("show-menu");
-    });
-    $(".dropdown-menu.dropdown-select > li").click(function() {
-      $(".dropdown-button").html($(this).html());
+    var $button, $menu;
+    $button = $(this);
+    $menu = $button.siblings(".dropdown-menu");
+    $menu.toggleClass("show-menu");
+    $menu.children("li").click(function() {
+      $menu.removeClass("show-menu");
+      $button.html($(this).html());
     });
   });
 });
-
 $(document).ready(function() {
   var expanderTrigger = document.getElementById("js-expander-trigger");
   var expanderContent = document.getElementById("js-expander-content");
