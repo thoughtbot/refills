@@ -69,7 +69,6 @@ $action-color: #477dca !default;
 }
 
 button {
-  @include button(flat, $action-color);
   display: block;
   margin: auto;
   outline: none;

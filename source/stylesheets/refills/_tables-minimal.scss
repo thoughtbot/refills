@@ -52,7 +52,6 @@
       padding: $table-padding;
 
       button {
-        @include button(flat, $action-color);
         display: inline-block;
         font-size: .7em;
         line-height: $base-line-height;

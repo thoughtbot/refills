@@ -33,7 +33,6 @@
   }
 
   .modal-trigger {
-    @include button(flat, $action-color);
     padding: 0.8em 1em;
   }
 

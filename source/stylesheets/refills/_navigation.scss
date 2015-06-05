@@ -263,24 +263,12 @@ header.navigation {
     clear: both;
     display: block;
     height: $navigation-height;
-    padding-left: $navigation-padding / 2;
-    padding-right: $navigation-padding;
 
     @include media($horizontal-bar-mode) {
       background: transparent;
       clear: none;
       float: right;
     }
-  }
-
-  .sign-up {
-    @include button(flat, $action-color);
-    display: inline;
-    float: right;
-    font-size: 0.8em;
-    margin-top: 1em;
-    padding: 0.75em 1em;
-    text-transform: uppercase;
   }
 
   // Search bar
@@ -291,7 +279,7 @@ header.navigation {
     $search-bar-background: lighten($search-bar-border-color, 10%);
 
     float: left;
-    padding: 0.85em 0.6em 0.7em 0.6em;
+    padding: 0.85em 0.85em 0.7em 0.6em;
     width: 60%;
 
     form {
@@ -315,7 +303,8 @@ header.navigation {
       }
 
       button[type=submit] {
-        @include button(flat, $navigation-search-background);
+        background: $navigation-search-background;
+        border: none;
         bottom: 0.3em;
         left: auto;
         outline: none;
