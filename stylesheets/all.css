@@ -3308,11 +3308,11 @@ section.inner-content {
   -moz-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
   position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background: rgba(0, 0, 0, 0.85);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
   opacity: 0;
   padding-top: 0.6em;
   text-align: left;
@@ -3325,10 +3325,10 @@ section.inner-content {
   /* line 53, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
   .refills-components .modal .modal-fade-screen .modal-bg {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     cursor: pointer; }
 /* line 59, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
 .refills-components .modal .modal-close {
@@ -3337,7 +3337,7 @@ section.inner-content {
   right: 1.5em;
   height: 1.5em;
   width: 1.5em;
-  background: white;
+  background: #fff;
   cursor: pointer; }
   /* line 65, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
   .refills-components .modal .modal-close:after, .refills-components .modal .modal-close:before {
@@ -3353,7 +3353,7 @@ section.inner-content {
     transform: rotate(45deg);
     height: 1.5em;
     width: 0.15em;
-    background: #DDD;
+    background: #ddd;
     content: '';
     display: block;
     margin: -3px 0 0 -1px; }
@@ -3372,7 +3372,7 @@ section.inner-content {
   -webkit-transition: opacity 0.25s ease;
   -moz-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
-  background: white;
+  background: #fff;
   border-radius: 3px;
   margin-top: 0;
   margin: auto;
@@ -3415,7 +3415,7 @@ section.inner-content {
         columns: 2 8em; } }
   /* line 132, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_modal.scss */
   .refills-components .modal .modal-inner a.cta {
-    color: white;
+    color: #fff;
     display: inline-block;
     margin-right: 0.5em;
     margin-top: 1em; }

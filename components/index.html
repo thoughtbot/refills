@@ -1631,14 +1631,14 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.modal {
-  $base-border-color: gainsboro !default;
+  $base-border-color: #dcdcdc !default;
   $base-border-radius: 3px !default;
-  $base-background-color: white !default;
+  $base-background-color: #fff !default;
   $base-font-size: 1em !default;
   $base-line-height: 1.5em !default;
-  $action-color: #477DCA !default;
+  $action-color: #477dca !default;
   $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
+  $light-gray: #ddd !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
@@ -1670,8 +1670,8 @@ $success-color: #e6efc2 !default;
 
   .modal-fade-screen { // overlay
     @include transition(opacity 0.25s ease);
-    @include position(fixed, 0px 0px 0px 0px);
-    background: rgba(0,0,0, 0.85);
+    @include position(fixed, 0);
+    background-color: rgba(#000, 0.85);
     opacity: 0;
     padding-top: 0.6em;
     text-align: left;
@@ -1683,7 +1683,7 @@ $success-color: #e6efc2 !default;
     }
 
     .modal-bg {
-      @include position(absolute, 0px 0px 0px 0px);
+      @include position(absolute, 0);
       cursor: pointer;
     }
   }
@@ -1762,7 +1762,7 @@ $success-color: #e6efc2 !default;
     }
 
     a.cta {
-      color: white;
+      color: $base-background-color;
       display: inline-block;
       margin-right: 0.5em;
       margin-top: 1em;
