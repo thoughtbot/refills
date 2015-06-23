@@ -8,6 +8,7 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
+  $clear-button-width: 4em;
   $search-tools-border-color: $base-border-color;
   $search-tools-background: lighten($search-tools-border-color, 10%);
 
@@ -19,11 +20,6 @@
   border: 1px solid $search-tools-border-color;
   padding: $gutter ($gutter / 2);
   width: 100%;
-
-  ol {
-    margin: 0;
-    padding: 0;
-  }
 
   li {
     font-size: 0.8em;
@@ -65,7 +61,7 @@
       border: 1px solid $base-border-color;
       font-size: 1em;
       margin-bottom: $base-spacing / 2;
-      padding: ($base-spacing / 3) ($base-spacing / 3);
+      padding: ($base-spacing / 3) $clear-button-width ($base-spacing / 3) ($base-spacing / 3);
       position: relative;
       width: 100%;
 
@@ -80,8 +76,9 @@
       }
     }
 
-    ol {
-      margin-top: 1em;
+    .filter-list {
+      margin: 1em 0 0;
+      padding: 0;
 
       label {
         display: inline;
@@ -90,6 +87,7 @@
 
     button.clear {
       @include position(absolute, 5px 5px auto auto);
+      max-width: $clear-button-width;
       font-size: 0.7em;
     }
 
