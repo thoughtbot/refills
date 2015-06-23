@@ -3,7 +3,6 @@
   $base-background-color: white !default;
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
-  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $medium-screen: em(640) !default;
   $tab-link-color: $dark-gray;
@@ -40,7 +39,7 @@
     }
 
     &:hover {
-      color: $base-link-color;
+      color: $action-color;
     }
 
     &:focus {

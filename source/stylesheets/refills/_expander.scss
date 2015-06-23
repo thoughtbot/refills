@@ -3,7 +3,6 @@
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
-  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
   $base-font-color: $dark-gray !default;
@@ -17,7 +16,7 @@
   .expander-trigger {
     @include user-select(none);
     border-bottom: 1px solid $light-gray;
-    color: $base-link-color;
+    color: $action-color;
     cursor: pointer;
     display: block;
     font-size: $expander-toggle-size;

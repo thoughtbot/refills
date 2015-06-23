@@ -3,7 +3,6 @@
   $base-border-radius: 3px !default;
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
-  $base-link-color: $action-color !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
@@ -53,7 +52,7 @@
       &:hover,
       &:focus {
         background: $pagination-hover-background;
-        color: $base-link-color;
+        color: $action-color;
       }
 
       &:active {
