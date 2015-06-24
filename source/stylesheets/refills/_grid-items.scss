@@ -64,32 +64,32 @@
   }
 
   .grid-item img {
-      display: block;
-      height: 3em;
-      margin-bottom: 1em;
-      margin: auto;
-    }
+    display: block;
+    height: 3em;
+    margin: 0 auto 1em;
+  }
 
   .grid-item h1 {
-      color: $grid-item-color;
-      font-size: 1.3em;
-      margin-bottom: 0.4em;
-    }
+    color: $grid-item-color;
+    font-size: 1.3em;
+    margin-bottom: 0.4em;
+  }
 
   .grid-item p {
-      line-height: 1.5em;
-      margin: auto;
-      color: transparentize($grid-item-color, 0.3);
-      
-      @include media($medium-screen) {
-        max-width: 70%;
-      }
+    color: transparentize($grid-item-color, 0.3);
+    line-height: 1.5em;
+    margin: auto;
+    
+    @include media($medium-screen) {
+      max-width: 70%;
     }
+  }
 
   .grid-item-big {
     @include media($large-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }
+    
     p {
       @include media($medium-screen) {
         max-width: 60%;

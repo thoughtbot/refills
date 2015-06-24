@@ -12,6 +12,7 @@ article.type-system-serif {
   $sans-serif: 'Merriweather Sans', sans-serif;
 
   @include clearfix;
+  font-family: $serif-2;
   text-align: left;
   
   h1, h2, h3, p {

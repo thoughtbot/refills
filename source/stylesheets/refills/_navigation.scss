@@ -50,10 +50,10 @@ header.navigation {
     color: $navigation-color;
     display: block;
     float: right;
-    font-weight: 700;
     line-height: $navigation-height;
     margin: 0;
     padding-right: 1em;
+    text-decoration: none;
     text-transform: uppercase;
 
     @include media ($horizontal-bar-mode) {
@@ -122,7 +122,6 @@ header.navigation {
     a {
       color: $navigation-color;
       display: inline-block;
-      font-weight: 400;
       text-decoration: none;
 
       @include media ($horizontal-bar-mode) {

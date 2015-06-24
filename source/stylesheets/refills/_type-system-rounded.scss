@@ -11,6 +11,7 @@ article.type-system-rounded {
   $sans-serif-2: 'Varela Round', sans-serif;
 
   @include clearfix;
+  font-family: $sans-serif;
   text-align: left;
   
   h1, h2, h3, p {
