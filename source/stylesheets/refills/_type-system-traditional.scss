@@ -35,6 +35,15 @@ article.type-system-traditional {
     text-decoration: none;
   }
 
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $sans-serif: 'Noto Sans', sans-serif;
+  $serif: 'Radley', serif;
+
+  @include clearfix;
+  font-family: $sans-serif;
+  text-align: left;
+
   .type {
     border-bottom: 2px solid;
     display: inline-block;

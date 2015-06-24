@@ -35,6 +35,15 @@ article.type-system-sans {
     text-decoration: none;
   }
 
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $sans-serif: 'PT Sans', sans-serif;
+  $sans-serif-2: 'Titillium Web', sans-serif;
+
+  @include clearfix;
+  font-family: $sans-serif;
+  text-align: left;
+
   .type {
     border-bottom: 1px solid;
     display: inline-block;

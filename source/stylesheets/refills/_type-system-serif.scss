@@ -36,6 +36,16 @@ article.type-system-serif {
     text-decoration: none;
   }
 
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $serif: 'Lusitana', serif;
+  $serif-2: 'Merriweather', serif;
+  $sans-serif: 'Merriweather Sans', sans-serif;
+
+  @include clearfix;
+  font-family: $serif-2;
+  text-align: left;
+
   .type {
     border-bottom: 1px solid;
     display: inline-block;

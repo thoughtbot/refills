@@ -34,7 +34,16 @@ article.type-system-geometric {
     color: $action-color;
     text-decoration: none;
   }
-  
+
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $sans-serif: 'Questrial', sans-serif;
+  $serif: 'Sanchez', serif;
+
+  @include clearfix;
+  font-family: $sans-serif;
+  text-align: left;
+
   .type {
     border-bottom: 1px solid;
     display: inline-block;

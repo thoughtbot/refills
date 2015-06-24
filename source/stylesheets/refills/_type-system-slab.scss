@@ -34,6 +34,14 @@ article.type-system-slab {
     color: $action-color;
     text-decoration: none;
   }
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $sans-serif: 'Open Sans', sans-serif;
+  $serif: 'Roboto Slab', serif;
+
+  @include clearfix;
+  font-family: $serif;
+  text-align: left;
 
   .type {
     border-bottom: 1px solid;

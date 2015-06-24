@@ -22,7 +22,6 @@
   width: 100%;
 
   .device-text {
-    color: $device-text-color;
     padding: 2em;
 
     @include media($large-screen) {
@@ -35,11 +34,13 @@
       border-bottom: 1px solid transparentize($device-text-color, 0.7);
       font-size: 1.5em;
       margin: 0 0 0.5em 0;
+      color: $device-text-color;
       padding-bottom: 0.5em;
     }
 
     p {
       line-height: 1.5em;
+      color: $device-text-color;
       margin-bottom: 1.5em;
     }
   }

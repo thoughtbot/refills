@@ -53,16 +53,15 @@
     img {
       display: block;
       height: 3em;
-      margin-bottom: 2em;
-      margin: auto;
+      margin: 0 auto 1em;
       opacity: 0.4;
     }
 
     .flex-title {
       color: $flex-box-color;
       font-size: 1.2em;
-      font-weight: 800;
-      margin-bottom: 0.5em;
+      font-weight: 700;
+      margin: 0 0 0.5em;
     }
 
     p {

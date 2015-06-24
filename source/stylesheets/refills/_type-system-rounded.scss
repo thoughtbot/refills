@@ -35,6 +35,15 @@ article.type-system-rounded {
     text-decoration: none;
   }
 
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $sans-serif: 'Nunito', sans-serif;
+  $sans-serif-2: 'Varela Round', sans-serif;
+
+  @include clearfix;
+  font-family: $sans-serif;
+  text-align: left;
+
   .type {
     border-bottom: 1px solid;
     display: inline-block;
