@@ -2,6 +2,7 @@
   $lid-background: darken(#fff, 5);
   $inset-shadow: inset 0 0px 1px transparentize(#000, 0.8);
   $laptop-size-ratio: 1.5;
+  $laptop-shrink-ratio: 0.5;
   $bottom-width: 22em * $laptop-size-ratio;
   $laptop-lid-width: 17em * $laptop-size-ratio;
   $screen-height: 137px * $laptop-size-ratio;
@@ -14,52 +15,75 @@
   $shadow-height: 4px * $laptop-size-ratio;
   $shadow-width: 25em * $laptop-size-ratio; 
   $shadow-distance: -1px * $laptop-size-ratio;
-  $outlines: 1px solid #c0c0c0;
+  $laptop-outlines: 1px solid #c0c0c0;
+  $medium-screen: em(640) !default;
 
   margin: auto;
   position: relative;
 
   .laptop-lid {
     background: $lid-background;
-    border-radius: $radius-outer $radius-outer 0 0;
-    border: $outlines;
+    border-radius: ($radius-outer * $laptop-shrink-ratio) ($radius-outer * $laptop-shrink-ratio) 0 0;
+    border: $laptop-outlines;
     box-shadow: inset 0 2px 0 #fff;
     margin: auto auto -1px;
-    padding: $padding-screen;
-    width: $laptop-lid-width;
+    padding: $padding-screen * $laptop-shrink-ratio;
+    width: $laptop-lid-width * $laptop-shrink-ratio;
+
+    @include media($medium-screen) {
+      border-radius: $radius-outer $radius-outer 0 0;
+      padding: $padding-screen;
+      width: $laptop-lid-width;      
+    }
   }
 
   .laptop-screen {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot2.jpg");
     background-size: 100%;
-    border-radius: 0.2em;
+    border-radius: 0.2em * $laptop-shrink-ratio;
     box-shadow: inset 0 0px 1px transparentize(#000, 0.2);
-    height: $screen-height;
+    height: $screen-height * $laptop-shrink-ratio;
     margin: auto;
     width: auto;
+
+    @include media($medium-screen) {
+      border-radius: 0.2em;
+      height: $screen-height;
+    }
   }
 
   .laptop-bottom {
     background: $lid-background;
     border-radius: 0 0 $radius-bottom $radius-bottom;
-    border: $outlines;
+    border: $laptop-outlines;
     box-shadow: inset 0 2px 2px #fff;
-    height: $bottom-height;
+    height: $bottom-height * $laptop-shrink-ratio;
     margin: auto;
     position: relative;
-    width: $bottom-width;
+    width: $bottom-width * $laptop-shrink-ratio;
+
+    @include media($medium-screen) {
+      height: $bottom-height;
+      width: $bottom-width;
+    }
 
     &:before {
       background: #d8dbe1;
       border-radius: 0 0 5px 5px;
       box-shadow: 0 2px 1px #fff;
       content: "";
-      height: $bottom-detail-height;
+      height: $bottom-detail-height * $laptop-shrink-ratio;
       left: 50%; 
-      margin-left: -($bottom-detail-width/2);
+      margin-left: -($bottom-detail-width/2 * $laptop-shrink-ratio);
       position: absolute;
       top: 0;
-      width: $bottom-detail-width;
+      width: $bottom-detail-width * $laptop-shrink-ratio;
+
+      @include media($medium-screen) {
+        height: $bottom-detail-height;
+        margin-left: -($bottom-detail-width/2);
+        width: $bottom-detail-width;
+      }
     }
   }
 
@@ -68,6 +92,10 @@
     border-radius: $shadow-height;
     height: $shadow-height;
     margin: $shadow-distance auto 0;
-    width: $shadow-width;
+    width: $shadow-width * $laptop-shrink-ratio;
+
+    @include media($medium-screen) {
+      width: $shadow-width;
+    }
   }
 }
