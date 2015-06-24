@@ -1,6 +1,6 @@
 .laptop {
-  $lid-background: darken(white, 5);
-  $inset-shadow: inset 0 0px 1px transparentize(black, 0.8);
+  $lid-background: darken(#fff, 5);
+  $inset-shadow: inset 0 0px 1px transparentize(#000, 0.8);
   $laptop-size-ratio: 1.5;
   $bottom-width: 22em * $laptop-size-ratio;
   $laptop-lid-width: 17em * $laptop-size-ratio;
@@ -14,7 +14,7 @@
   $shadow-height: 4px * $laptop-size-ratio;
   $shadow-width: 25em * $laptop-size-ratio; 
   $shadow-distance: -1px * $laptop-size-ratio;
-  $outlines: 1px solid silver;
+  $outlines: 1px solid #c0c0c0;
 
   margin: auto;
   position: relative;
@@ -23,17 +23,17 @@
     background: $lid-background;
     border-radius: $radius-outer $radius-outer 0 0;
     border: $outlines;
-    box-shadow: inset 0 2px 0 white;
+    box-shadow: inset 0 2px 0 #fff;
     margin: auto auto -1px;
     padding: $padding-screen;
     width: $laptop-lid-width;
   }
 
   .laptop-screen {
-    background: url('https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot2.jpg');
+    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/refills-screenshot2.jpg");
     background-size: 100%;
     border-radius: 0.2em;
-    box-shadow: inset 0 0px 1px transparentize(black, 0.2);
+    box-shadow: inset 0 0px 1px transparentize(#000, 0.2);
     height: $screen-height;
     margin: auto;
     width: auto;
@@ -43,7 +43,7 @@
     background: $lid-background;
     border-radius: 0 0 $radius-bottom $radius-bottom;
     border: $outlines;
-    box-shadow: inset 0 2px 2px white;
+    box-shadow: inset 0 2px 2px #fff;
     height: $bottom-height;
     margin: auto;
     position: relative;
@@ -52,7 +52,7 @@
     &:before {
       background: #d8dbe1;
       border-radius: 0 0 5px 5px;
-      box-shadow: 0 2px 1px white;
+      box-shadow: 0 2px 1px #fff;
       content: "";
       height: $bottom-detail-height;
       left: 50%; 
@@ -64,7 +64,7 @@
   }
 
   .laptop-shadow {
-    background: transparentize(black, 0.97);
+    background: transparentize(#000, 0.97);
     border-radius: $shadow-height;
     height: $shadow-height;
     margin: $shadow-distance auto 0;
