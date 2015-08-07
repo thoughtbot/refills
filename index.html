@@ -389,7 +389,6 @@
     border-top: $tab-border;
     color: $tab-link-color;
     display: block;
-    font-weight: 400;
     padding: ($base-spacing / 2) $gutter;
     text-decoration: none;
 
@@ -828,7 +827,6 @@
     color: $centered-navigation-color;
     display: block;
     float: right;
-    font-weight: 700;
     line-height: $centered-navigation-height;
     margin: 0;
     padding-right: $centered-navigation-submenu-padding;
@@ -1302,7 +1300,6 @@
   width: 100%;
 
   .device-text {
-    color: $device-text-color;
     padding: 2em;
 
     @include media($large-screen) {
@@ -1313,12 +1310,14 @@
 
     h4 {
       border-bottom: 1px solid transparentize($device-text-color, 0.7);
+      color: $device-text-color;
       font-size: 1.5em;
       margin: 0 0 0.5em 0;
       padding-bottom: 0.5em;
     }
 
     p {
+      color: $device-text-color;
       line-height: 1.5em;
       margin-bottom: 1.5em;
     }
@@ -1516,15 +1515,13 @@
     img {
       display: block;
       height: 3em;
-      margin-bottom: 2em;
-      margin: auto;
+      margin: 0 auto 1em;
       opacity: 0.4;
     }
 
     .flex-title {
       color: $flex-box-color;
       font-size: 1.2em;
-      font-weight: 800;
       margin-bottom: 0.5em;
     }
 
@@ -1694,7 +1691,6 @@
   li h3 {
     color: $footer-color;
     font-size: 1em;
-    font-weight: 800;
     margin-bottom: 0.4em;
   }  
 
@@ -1877,7 +1873,6 @@
   }
 
   ul li {
-    font-weight: 800;
     list-style: none;
     padding-right: 1em;
 
@@ -1904,7 +1899,6 @@
 
     li {
       font-size: 0.8em;
-      font-weight: 400;
     }
 
     ul.footer-social {
@@ -2113,32 +2107,32 @@
   }
 
   .grid-item img {
-      display: block;
-      height: 3em;
-      margin-bottom: 1em;
-      margin: auto;
-    }
+    display: block;
+    height: 3em;
+    margin: 0 auto 1em;
+  }
 
   .grid-item h1 {
-      color: $grid-item-color;
-      font-size: 1.3em;
-      margin-bottom: 0.4em;
-    }
+    color: $grid-item-color;
+    font-size: 1.3em;
+    margin-bottom: 0.4em;
+  }
 
   .grid-item p {
-      line-height: 1.5em;
-      margin: auto;
-      color: transparentize($grid-item-color, 0.3);
-      
-      @include media($medium-screen) {
-        max-width: 70%;
-      }
+    color: transparentize($grid-item-color, 0.3);
+    line-height: 1.5em;
+    margin: auto;
+    
+    @include media($medium-screen) {
+      max-width: 70%;
     }
+  }
 
   .grid-item-big {
     @include media($large-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }
+    
     p {
       @include media($medium-screen) {
         max-width: 60%;
@@ -2446,7 +2440,6 @@
   .hero-inner {
     @include outer-container;
     @include clearfix;
-    color: $hero-color;
     margin: auto;
     padding: 3.5em;
     text-align: center;
@@ -2455,6 +2448,7 @@
       text-align: center;
       
       h1 {
+        color: $hero-color;
         font-size: 1.6em;
         margin-bottom: 0.5em;
 
@@ -2464,7 +2458,7 @@
       }
 
       p {
-        font-weight: 200;
+        color: $hero-color;
         line-height: 1.4em;
         margin: 0 auto 3em auto; 
 
@@ -3011,10 +3005,10 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     color: $navigation-color;
     display: block;
     float: right;
-    font-weight: 700;
     line-height: $navigation-height;
     margin: 0;
     padding-right: 1em;
+    text-decoration: none;
     text-transform: uppercase;
 
     @include media ($horizontal-bar-mode) {
@@ -3083,7 +3077,6 @@ https://developers.google.com/maps/documentation/javascript/tutorial
     a {
       color: $navigation-color;
       display: inline-block;
-      font-weight: 400;
       text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
@@ -3761,7 +3754,6 @@ jQuery -&gt;
 
       label {
         cursor: pointer;
-        font-weight: 400;
         margin-bottom: 0;
       }
     }
@@ -4026,7 +4018,6 @@ $(function() {
       color: white;
       display: inline-block;
       font-size: 0.75em;
-      font-weight: 800;
       margin-bottom: 1.3em;
       padding: 3px 8px;
       text-transform: uppercase;
