@@ -3,7 +3,7 @@
   $large-screen: em(860) !default;
   $ratio-small: 1;
   $ratio-large: 1.6;
-  $inset-shadow: inset 0 1px 4px transparentize(black, 0.8);
+  $inset-shadow: inset 0 1px 4px transparentize(#000, 0.8);
   $phone-padding: 0.4em;
   $phone-screen-width: 8.5em;
   $phone-screen-height: 15em;
@@ -11,7 +11,7 @@
 
   background: $phone-background;
   border-radius: (1.2em * $ratio-small);
-  box-shadow: 0 0 1px transparentize(black, 0.4), inset 0 3px 0 white;
+  box-shadow: 0 0 1px transparentize(#000, 0.4), inset 0 3px 0 #fff;
   padding: $phone-padding * $ratio-small;
   width: $phone-screen-width * $ratio-small + (2 * $phone-padding * $ratio-small);
 
@@ -24,7 +24,7 @@
   .phone-speaker {
     background: #ABABAB;
     border-radius: 1em * $ratio-small;
-    box-shadow: 0 2px 0 white, inset 0 0 1px transparentize(black, 0.6);
+    box-shadow: 0 2px 0 #fff, inset 0 0 1px transparentize(#000, 0.6);
     height: (0.3em * $ratio-small);
     margin: (1em * $ratio-small) auto;    
     width: $phone-screen-width * $ratio-small * 0.2;
@@ -40,7 +40,7 @@
     background: url('https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg');
     background-size: cover;
     border-radius: 0.1em * $ratio-small;
-    box-shadow: 0 3px 0 white, inset 0 0 1px transparentize(black, 0.6);
+    box-shadow: 0 3px 0 #fff, inset 0 0 1px transparentize(#000, 0.6);
     height: $phone-screen-height * $ratio-small;
     margin: auto;
     width: auto;
@@ -54,7 +54,7 @@
   .phone-button {
     border-radius: 50%;
     border: 2px solid transparentize(#404040, 0.9);
-    box-shadow: 0 2px 0 white, inset 0 0 1px transparentize(black, 0.6);
+    box-shadow: 0 2px 0 #fff, inset 0 0 1px transparentize(#000, 0.6);
     height: $phone-screen-width * $ratio-small * 0.15;
     margin: (0.5em * $ratio-small) auto;
     width: $phone-screen-width * $ratio-small * 0.15;
