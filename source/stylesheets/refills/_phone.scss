@@ -37,7 +37,7 @@
   }
 
   .phone-screen {
-    background: url('https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg');
+    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg");
     background-size: cover;
     border-radius: 0.1em * $ratio-small;
     box-shadow: 0 3px 0 #fff, inset 0 0 1px transparentize(#000, 0.6);
