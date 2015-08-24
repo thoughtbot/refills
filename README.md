@@ -30,7 +30,7 @@ Alternative to copy-pasting manually, we also have a Refills gem that allows you
 
   ```ruby
   
-  gem 'refills', :git => "github.com/JsusMillan/refills.git", :branch => "refills-haml"
+gem 'refills', :git => "git://github.com/JsusMillan/refills.git", :branch => "refills-haml"
 
   ```
 
