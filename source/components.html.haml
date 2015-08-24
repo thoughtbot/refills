@@ -1,0 +1,162 @@
+\---
+title: Components
+\---
+.refills-components
+  %a.js-menu-trigger-refills.refills-menu-anchor.fixedsticky
+    %img{:alt => "Menu icon", :src => "/images/menu.png"}/
+  .js-menu-screen-refills.refills-menu-screen
+  = partial "refills-hero"
+  = partial "refills-menu"
+  #example
+    %section#accordion.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Accordion
+        .refill-centering= partial "accordion"
+      .refill-snippet= code_for("accordion")
+    %section#animate.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Animate
+        .refill-centering
+          = partial "animate"
+          = partial "animate_info"
+      .refill-snippet= code_for("animate")
+    %section#badges.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Badges
+        .refill-centering= partial "badges"
+      .refill-snippet= code_for("badges")
+    %section#breadcrumbs.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Breadcrumbs
+        .refill-centering= partial "breadcrumbs"
+      .refill-snippet= code_for("breadcrumbs")
+    %section#button-group.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Button Group
+        .refill-centering= partial "button_group"
+      .refill-snippet= code_for("button_group")
+    %section#dropdown.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Dropdown
+        .refill-centering
+          = partial "dropdown"
+      .refill-snippet= code_for("dropdown")
+    %section#expander.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Expander
+        .refill-centering
+          = partial "expander"
+      .refill-snippet= code_for("expander")
+    %section#fade-in.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Fade In
+        .refill-centering
+          .refill-smaller= partial "fade_in"
+      .refill-snippet= code_for("fade_in")
+    %section#flashes.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Flashes
+        .refill-centering= partial "flashes"
+      .refill-snippet= code_for("flashes")
+    %section#hover-tile-animation.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Hover Tile Animation
+        .refill-centering= partial "hover_tile_animation"
+      .refill-snippet= code_for("hover_tile_animation")
+    %section#image-gradient.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Image with gradient overlays
+        .refill-centering= partial "image_gradient_dynamic"
+      .refill-snippet= code_for("image_gradient_dynamic")
+    %section#modal.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Modal
+        .refill-centering= partial "modal"
+      .refill-snippet= code_for("modal")
+    %section#pagination.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Pagination
+        = partial "pagination"
+      .refill-snippet= code_for("pagination")
+    %section#parallax.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Parallax
+        = partial "parallax"
+      .refill-snippet= code_for("parallax")
+    %section#progress-bar.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Progress Bars
+        .refill-centering
+          .refill-smaller= partial "progress_bar"
+      .refill-snippet= code_for("progress_bar")
+      .refills-wrapper
+        .refill-centering
+          .refill-smaller= partial "progress_bar_indication"
+      .refill-snippet= code_for("progress_bar_indication")
+    %section#ribbon.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Ribbon
+        .refill-centering
+          = partial "ribbon"
+      .refill-snippet= code_for("ribbon")
+    %section#video.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Responsive Video Embed
+        = partial "video"
+      .refill-snippet= code_for("video")
+    %section#search-bar.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Search bar
+        .refill-centering
+          .refill-smaller= partial "search_bar"
+      .refill-snippet= code_for("search_bar")
+    %section#sliding-panel.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Sliding Panel
+        .refill-centering= partial "sliding_panel"
+      .refill-snippet= code_for("sliding_panel")
+    %section#switch.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Switch
+        .refill-centering= partial "switch"
+      .refill-snippet= code_for("switch")
+    %section#stats.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Stats
+        .refill-centering= partial "stats"
+      .refill-snippet= code_for("stats")
+    %section#textures.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Textures
+        = partial "texture-legend"
+        = partial "textures"
+      .refill-snippet= code_for("textures")
+    %section#tooltip.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Tooltip
+        .refill-centering= partial "tooltip"
+      .refill-snippet= code_for("tooltip")
+= partial "refills-page-scripts"

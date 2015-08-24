@@ -18,7 +18,7 @@ module SnippetHelpers
 
   class HtmlSnippet < Snippet
     def path_segments
-      [SOURCE_DIR, namespace, "_#{name.underscore}.html.erb"]
+      [SOURCE_DIR, namespace, "_#{name.underscore}.html.haml"]
     end
 
     def language

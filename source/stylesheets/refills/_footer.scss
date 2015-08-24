@@ -22,23 +22,33 @@
   } 
 
   .footer-links {
-    @include display(flex);
-    @include justify-content(center);
-    @include flex-wrap(wrap);
+    @include clearfix;
     margin-bottom: $base-spacing;
+
+    @include media($medium-screen) {
+      @include shift(3);
+    }
   }
 
   ul {
-    @include flex-basis(13em);
-    @include flex-shrink(0);
     margin-bottom: $base-spacing * 2;
     padding: 0;
+
+    @include media($medium-screen) {
+      @include span-columns(3);
+      @include omega(3n);
+      @include clearfix;
+    }
   }
 
   li {
     line-height: 1.5em;
     list-style: none;
     text-align: center;
+
+    @include media($medium-screen) {
+      text-align: left;
+    }
   }
 
   li a {
