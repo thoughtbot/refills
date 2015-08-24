@@ -37,7 +37,7 @@ module Refills
     end
 
     def partial_name
-      "_#{snippet.underscore}.html.erb"
+      "_#{snippet.underscore}.html.haml"
     end
 
     def stylesheet_name
