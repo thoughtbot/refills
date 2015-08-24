@@ -68,7 +68,7 @@ describe Refills::ImportGenerator, type: :generator do
       it "imports ERB template for #{snippet.humanize}" do
         run_generator [ snippet ]
 
-        assert_file "app/views/refills/_#{snippet.underscore}.html.erb"
+        assert_file "app/views/refills/_#{snippet.underscore}.html.haml"
       end
     end
 

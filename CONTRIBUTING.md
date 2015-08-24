@@ -5,7 +5,7 @@ agree to abide by the thoughtbot [code of conduct]. Here’s a quick guide:
 
 [code of conduct]: https://thoughtbot.com/open-source-code-of-conduct
 
-## HTML.erb
+## html.haml
 
 - Make sure that each component or pattern is independent of other components
   and patterns in the Refills library. There should be no dependencies between
