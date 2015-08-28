@@ -210,8 +210,6 @@ pre[class*="language-"] {
 }
 
 .refill-smaller {
-  @include media($refills-large-screen) {
-    margin: auto;
-    width: 70%;
-  }
+  margin: auto;
+  width: 70%;
 }
