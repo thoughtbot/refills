@@ -267,7 +267,7 @@
   $('.accordion-tabs').each -&gt;
     $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show()
     return
-  $('.accordion-tabs').on 'click', 'li &gt; a', (event) -&gt;
+  $('.accordion-tabs').on 'click', 'li &gt; a.tab-link', (event) -&gt;
     if !$(this).hasClass('is-active')
       event.preventDefault()
       accordionTabs = $(this).closest('.accordion-tabs')
@@ -465,7 +465,7 @@
   $('.accordion-tabs-minimal').each (index) -&gt;
     $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show()
     return
-  $('.accordion-tabs-minimal').on 'click', 'li &gt; a', (event) -&gt;
+  $('.accordion-tabs-minimal').on 'click', 'li &gt; a.tab-link', (event) -&gt;
     if !$(this).hasClass('is-active')
       event.preventDefault()
       accordionTabs = $(this).closest('.accordion-tabs-minimal')

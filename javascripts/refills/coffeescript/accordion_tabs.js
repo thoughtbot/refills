@@ -3,7 +3,7 @@
     $('.accordion-tabs').each(function() {
       $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
     });
-    $('.accordion-tabs').on('click', 'li > a', function(event) {
+    $('.accordion-tabs').on('click', 'li > a.tab-link', function(event) {
       var accordionTabs;
       if (!$(this).hasClass('is-active')) {
         event.preventDefault();

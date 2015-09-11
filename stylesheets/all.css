@@ -426,11 +426,10 @@ pre[class*="language-"] {
   max-height: 25em;
   overflow: scroll; }
 
-@media screen and (min-width: 53.75em) {
-  /* line 212, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refill.scss */
-  .refill-smaller {
-    margin: auto;
-    width: 70%; } }
+/* line 212, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refill.scss */
+.refill-smaller {
+  margin: auto;
+  width: 70%; }
 
 /* line 1, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/_refills-footer.scss */
 footer.refills-footer {
