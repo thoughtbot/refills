@@ -2,7 +2,7 @@ $(document).ready ->
   $('.accordion-tabs-minimal').each (index) ->
     $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show()
     return
-  $('.accordion-tabs-minimal').on 'click', 'li > a', (event) ->
+  $('.accordion-tabs-minimal').on 'click', 'li > a.tab-link', (event) ->
     if !$(this).hasClass('is-active')
       event.preventDefault()
       accordionTabs = $(this).closest('.accordion-tabs-minimal')
