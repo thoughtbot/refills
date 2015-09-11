@@ -1416,68 +1416,65 @@ section.inner-content {
       height: 3em; }
   /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
   .refills-patterns .footer .footer-links {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-bottom: 1.5em; }
-    /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
-    .refills-patterns .footer .footer-links::after {
-      clear: both;
-      content: "";
-      display: table; }
-    @media screen and (min-width: 40em) {
-      /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
-      .refills-patterns .footer .footer-links {
-        margin-left: 25.58941%; } }
-  /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
+  /* line 31, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
   .refills-patterns .footer ul {
+    -webkit-flex-basis: 13em;
+    -moz-flex-basis: 13em;
+    flex-basis: 13em;
+    -ms-flex-preferred-size: 13em;
+    -webkit-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    flex-shrink: 0;
+    -ms-flex-negative: 0;
     margin-bottom: 3em;
     padding: 0; }
-    @media screen and (min-width: 40em) {
-      /* line 33, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
-      .refills-patterns .footer ul {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 23.23176%; }
-        /* line 89, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
-        .refills-patterns .footer ul:last-child {
-          margin-right: 0; }
-        /* line 78, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
-        .refills-patterns .footer ul:nth-child(3n) {
-          margin-right: 0; }
-        /* line 83, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
-        .refills-patterns .footer ul:nth-child(3n+1) {
-          clear: left; }
-        /* line 9, /Users/Magnus/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
-        .refills-patterns .footer ul::after {
-          clear: both;
-          content: "";
-          display: table; } }
-  /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
+  /* line 38, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
   .refills-patterns .footer li {
     line-height: 1.5em;
     list-style: none;
     text-align: center; }
-    @media screen and (min-width: 40em) {
-      /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
-      .refills-patterns .footer li {
-        text-align: left; } }
-  /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
+  /* line 44, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
   .refills-patterns .footer li a {
     color: rgba(255, 255, 255, 0.4);
     text-decoration: none; }
-    /* line 58, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
+    /* line 48, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
     .refills-patterns .footer li a:focus, .refills-patterns .footer li a:hover {
       color: white; }
-  /* line 64, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
+  /* line 54, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
   .refills-patterns .footer li h3 {
     color: white;
     font-size: 1em;
     margin-bottom: 0.4em; }
-  /* line 70, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
+  /* line 60, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
   .refills-patterns .footer hr {
     border: 1px solid rgba(255, 255, 255, 0.1);
     margin: 0 auto 1.5em;
     width: 12em; }
-  /* line 76, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
+  /* line 66, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_footer.scss */
   .refills-patterns .footer p {
     color: rgba(255, 255, 255, 0.4);
     font-size: 0.9em;
@@ -2262,21 +2259,17 @@ section.inner-content {
     clear: both;
     content: "";
     display: table; }
-  /* line 23, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
-  .refills-patterns .search-tools ol {
-    margin: 0;
-    padding: 0; }
-  /* line 28, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+  /* line 24, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
   .refills-patterns .search-tools li {
     font-size: 0.8em;
     line-height: 1.5em;
     list-style: none; }
-  /* line 34, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+  /* line 30, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
   .refills-patterns .search-tools label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.375em; }
-  /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+  /* line 36, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
   .refills-patterns .search-tools .filters {
     display: -webkit-box;
     display: -moz-box;
@@ -2303,7 +2296,7 @@ section.inner-content {
     -ms-flex-pack: justify;
     width: 100%; }
     @media screen and (min-width: 53.75em) {
-      /* line 40, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+      /* line 36, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
       .refills-patterns .search-tools .filters {
         -webkit-box-orient: horizontal;
         -moz-box-orient: horizontal;
@@ -2312,7 +2305,7 @@ section.inner-content {
         -moz-flex-direction: row;
         flex-direction: row;
         -ms-flex-direction: row; } }
-  /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+  /* line 47, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
   .refills-patterns .search-tools .filter {
     -webkit-flex-shrink: 1;
     -moz-flex-shrink: 1;
@@ -2324,10 +2317,10 @@ section.inner-content {
     -ms-flex-positive: 1;
     margin: 0 0.2em 1em 0.2em; }
     @media screen and (min-width: 53.75em) {
-      /* line 51, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+      /* line 47, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
       .refills-patterns .search-tools .filter {
         margin-bottom: 0; } }
-    /* line 60, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+    /* line 56, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
     .refills-patterns .search-tools .filter > div {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -2340,40 +2333,42 @@ section.inner-content {
       border: 1px solid gainsboro;
       font-size: 1em;
       margin-bottom: 0.75em;
-      padding: 0.5em 0.5em;
+      padding: 0.5em 4em 0.5em 0.5em;
       position: relative;
       width: 100%; }
-      /* line 72, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+      /* line 68, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
       .refills-patterns .search-tools .filter > div:focus, .refills-patterns .search-tools .filter > div:hover {
         border-color: #c3c3c3; }
-      /* line 77, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+      /* line 73, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
       .refills-patterns .search-tools .filter > div label {
         cursor: pointer;
         margin-bottom: 0; }
-    /* line 83, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
-    .refills-patterns .search-tools .filter ol {
-      margin-top: 1em; }
-      /* line 86, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
-      .refills-patterns .search-tools .filter ol label {
+    /* line 79, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+    .refills-patterns .search-tools .filter .filter-list {
+      margin: 1em 0 0;
+      padding: 0; }
+      /* line 83, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+      .refills-patterns .search-tools .filter .filter-list label {
         display: inline; }
-    /* line 91, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+    /* line 88, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
     .refills-patterns .search-tools .filter button.clear {
       position: absolute;
       top: 5px;
       right: 5px;
       bottom: auto;
       left: auto;
+      max-width: 4em;
       font-size: 0.7em; }
-    /* line 96, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+    /* line 94, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
     .refills-patterns .search-tools .filter .hide-options {
       margin-bottom: 0; }
-      /* line 99, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+      /* line 97, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
       .refills-patterns .search-tools .filter .hide-options ol, .refills-patterns .search-tools .filter .hide-options button {
         display: none; }
-  /* line 105, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+  /* line 103, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
   .refills-patterns .search-tools .trigger {
     margin-top: 1.5em; }
-    /* line 108, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
+    /* line 106, /Users/Magnus/Documents/thoughtbot/refills/source/stylesheets/refills/_search-tools.scss */
     .refills-patterns .search-tools .trigger button {
       display: block;
       width: 100%;

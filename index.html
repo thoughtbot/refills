@@ -1649,33 +1649,23 @@
   } 
 
   .footer-links {
-    @include clearfix;
+    @include display(flex);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
     margin-bottom: $base-spacing;
-
-    @include media($medium-screen) {
-      @include shift(3);
-    }
   }
 
   ul {
+    @include flex-basis(13em);
+    @include flex-shrink(0);
     margin-bottom: $base-spacing * 2;
     padding: 0;
-
-    @include media($medium-screen) {
-      @include span-columns(3);
-      @include omega(3n);
-      @include clearfix;
-    }
   }
 
   li {
     line-height: 1.5em;
     list-style: none;
     text-align: center;
-
-    @include media($medium-screen) {
-      text-align: left;
-    }
   }
 
   li a {
@@ -3541,7 +3531,7 @@ jQuery -&gt;
     <div class="filter">
       <label>Colors</label>
       <div>
-        <ol>
+        <ol class="filter-list">
           <li>
             <input id="red" type="checkbox">
             <label for="red">Red</label>
@@ -3560,7 +3550,7 @@ jQuery -&gt;
     <div class="filter">
       <label>Sizes</label>
       <div>
-        <ol>
+        <ol class="filter-list">
           <li>
             <input id="small" type="checkbox">
             <label for="small">Small</label>
@@ -3579,7 +3569,7 @@ jQuery -&gt;
     <div class="filter">
       <label>Lengths</label>
       <div>
-        <ol>
+        <ol class="filter-list">
           <li>
             <input id="short" type="checkbox">
             <label for="short">Short</label>
@@ -3614,7 +3604,7 @@ jQuery -&gt;
     &lt;div class=&quot;filter&quot;&gt;
       &lt;label&gt;Colors&lt;/label&gt;
       &lt;div&gt;
-        &lt;ol&gt;
+        &lt;ol class=&quot;filter-list&quot;&gt;
           &lt;li&gt;
             &lt;input id=&quot;red&quot; type=&quot;checkbox&quot;&gt;
             &lt;label for=&quot;red&quot;&gt;Red&lt;/label&gt;
@@ -3633,7 +3623,7 @@ jQuery -&gt;
     &lt;div class=&quot;filter&quot;&gt;
       &lt;label&gt;Sizes&lt;/label&gt;
       &lt;div&gt;
-        &lt;ol&gt;
+        &lt;ol class=&quot;filter-list&quot;&gt;
           &lt;li&gt;
             &lt;input id=&quot;small&quot; type=&quot;checkbox&quot;&gt;
             &lt;label for=&quot;small&quot;&gt;Small&lt;/label&gt;
@@ -3652,7 +3642,7 @@ jQuery -&gt;
     &lt;div class=&quot;filter&quot;&gt;
       &lt;label&gt;Lengths&lt;/label&gt;
       &lt;div&gt;
-        &lt;ol&gt;
+        &lt;ol class=&quot;filter-list&quot;&gt;
           &lt;li&gt;
             &lt;input id=&quot;short&quot; type=&quot;checkbox&quot;&gt;
             &lt;label for=&quot;short&quot;&gt;Short&lt;/label&gt;
@@ -3686,6 +3676,7 @@ jQuery -&gt;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
+  $clear-button-width: 4em;
   $search-tools-border-color: $base-border-color;
   $search-tools-background: lighten($search-tools-border-color, 10%);
 
@@ -3697,11 +3688,6 @@ jQuery -&gt;
   border: 1px solid $search-tools-border-color;
   padding: $gutter ($gutter / 2);
   width: 100%;
-
-  ol {
-    margin: 0;
-    padding: 0;
-  }
 
   li {
     font-size: 0.8em;
@@ -3743,7 +3729,7 @@ jQuery -&gt;
       border: 1px solid $base-border-color;
       font-size: 1em;
       margin-bottom: $base-spacing / 2;
-      padding: ($base-spacing / 3) ($base-spacing / 3);
+      padding: ($base-spacing / 3) $clear-button-width ($base-spacing / 3) ($base-spacing / 3);
       position: relative;
       width: 100%;
 
@@ -3758,8 +3744,9 @@ jQuery -&gt;
       }
     }
 
-    ol {
-      margin-top: 1em;
+    .filter-list {
+      margin: 1em 0 0;
+      padding: 0;
 
       label {
         display: inline;
@@ -3768,6 +3755,7 @@ jQuery -&gt;
 
     button.clear {
       @include position(absolute, 5px 5px auto auto);
+      max-width: $clear-button-width;
       font-size: 0.7em;
     }
 
