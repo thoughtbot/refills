@@ -3288,7 +3288,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   </div>
   <pre><code class="language-javascript">$(document).ready(function() {
   var menuToggle = $('#js-mobile-menu').unbind();
-  $('#js-navigation-menu').removeClass(&quot;show&quot;);
+  $('#js-navigation-menu').hide().show(0);
 
   menuToggle.on('click', function(e) {
     e.preventDefault();
