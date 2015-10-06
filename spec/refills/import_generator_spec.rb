@@ -2,49 +2,49 @@ require "spec_helper"
 
 describe Refills::ImportGenerator, type: :generator do
   SNIPPETS = {
-    accordion: %w[scss js erb],
-    accordion_tabs: %w[scss js erb],
-    animate: %w[scss js erb],
-    badges: %w[scss erb],
-    breadcrumbs: %w[scss erb],
-    button_group: %w[scss erb],
-    cards: %w[scss erb],
-    centered_navigation: %w[scss js erb],
-    code: %w[erb],
-    comment: %w[scss erb],
-    device: %w[scss erb],
-    dropdown: %w[scss js erb],
-    footer: %w[scss erb],
-    grid_items: %w[scss erb],
-    grid_items_lines: %w[scss erb],
-    hero: %w[scss erb],
-    hover_tile_animation: %w[scss erb],
-    icon_bullet_points: %w[scss erb],
-    image_gradient_dynamic: %w[scss erb],
-    modal: %w[scss js erb],
-    navigation: %w[scss js erb],
-    pagination: %w[scss erb],
-    progress_bar: %w[scss erb],
-    progress_bar_indication: %w[scss erb],
-    search_bar: %w[scss erb],
-    search_tools: %w[scss js erb],
-    side_image: %w[scss erb],
-    sliding_panel: %w[scss js erb],
-    snippet: %w[erb],
-    switch: %w[scss erb],
-    tables: %w[scss erb],
-    tables_minimal: %w[scss erb],
+    accordion: %w[scss js haml],
+    accordion_tabs: %w[scss js haml],
+    animate: %w[scss js haml],
+    badges: %w[scss haml],
+    breadcrumbs: %w[scss haml],
+    button_group: %w[scss haml],
+    cards: %w[scss haml],
+    centered_navigation: %w[scss js haml],
+    code: %w[haml],
+    comment: %w[scss haml],
+    device: %w[scss haml],
+    dropdown: %w[scss js haml],
+    footer: %w[scss haml],
+    grid_items: %w[scss haml],
+    grid_items_lines: %w[scss haml],
+    hero: %w[scss haml],
+    hover_tile_animation: %w[scss haml],
+    icon_bullet_points: %w[scss haml],
+    image_gradient_dynamic: %w[scss haml],
+    modal: %w[scss js haml],
+    navigation: %w[scss js haml],
+    pagination: %w[scss haml],
+    progress_bar: %w[scss haml],
+    progress_bar_indication: %w[scss haml],
+    search_bar: %w[scss haml],
+    search_tools: %w[scss js haml],
+    side_image: %w[scss haml],
+    sliding_panel: %w[scss js haml],
+    snippet: %w[haml],
+    switch: %w[scss haml],
+    tables: %w[scss haml],
+    tables_minimal: %w[scss haml],
     "texture-legend" => %w[scss],
-    textures: %w[scss erb],
-    tooltip: %w[scss erb],
-    type_system_geometric: %w[scss erb],
-    type_system_rounded: %w[scss erb],
-    type_system_sans: %w[scss erb],
-    type_system_serif: %w[scss erb],
-    type_system_slab: %w[scss erb],
-    type_system_traditional: %w[scss erb],
-    vertical_tabs: %w[scss js erb],
-    video: %w[scss erb],
+    textures: %w[scss haml],
+    tooltip: %w[scss haml],
+    type_system_geometric: %w[scss haml],
+    type_system_rounded: %w[scss haml],
+    type_system_sans: %w[scss haml],
+    type_system_serif: %w[scss haml],
+    type_system_slab: %w[scss haml],
+    type_system_traditional: %w[scss haml],
+    vertical_tabs: %w[scss js haml],
+    video: %w[scss haml],
   }
 
   destination File.expand_path("../../tmp", File.dirname(__FILE__))
@@ -64,11 +64,11 @@ describe Refills::ImportGenerator, type: :generator do
       end
     end
 
-    if templates.include?("erb")
-      it "imports ERB template for #{snippet.humanize}" do
+    if templates.include?("haml")
+      it "imports haml template for #{snippet.humanize}" do
         run_generator [ snippet ]
 
-        assert_file "app/views/refills/_#{snippet.underscore}.html.erb"
+        assert_file "app/views/refills/_#{snippet.underscore}.html.haml"
       end
     end
 

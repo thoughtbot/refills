@@ -1,0 +1,127 @@
+\---
+title: Patterns
+\---
+.refills-patterns
+  %a.js-menu-trigger-refills.refills-menu-anchor.fixedsticky
+    %img{:alt => "Menu icon", :src => "/images/menu.png"}/
+  .js-menu-screen-refills.refills-menu-screen
+  = partial "refills-hero"
+  = partial "refills-menu"
+  #example
+    %section#accordion-tabs.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Accordion / Tabs
+        = partial "accordion_tabs"
+      .refill-snippet= code_for("accordion_tabs")
+      .refills-wrapper
+        = partial "accordion_tabs_minimal"
+      .refill-snippet= code_for("accordion_tabs_minimal")
+    %section#cards.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Cards
+        .refill-centering= partial "cards"
+      .refill-snippet= code_for("cards")
+    %section#centered-navigation.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Centered Navigation
+        = partial "centered_navigation"
+      .refill-snippet= code_for("centered_navigation")
+    %section#comment.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Comments
+        .refill-centering
+          .refill-smaller= partial "comment"
+      .refill-snippet= code_for("comment")
+    %section#device.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Device
+        = partial "device"
+      .refill-snippet= code_for("device")
+    %section#flex-boxes.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Flex Boxes
+        = partial "flex_boxes"
+      .refill-snippet= code_for("flex_boxes")
+    %section#footer.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Footers
+        .refill-centering= partial "footer"
+      .refill-snippet= code_for("footer")
+      .refills-wrapper
+        .refill-centering= partial "footer_2"
+      .refill-snippet= code_for("footer_2")
+    %section#grid-items.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Grid Items
+        .refill-centering= partial "grid_items"
+      .refill-snippet= code_for("grid_items")
+      .refills-wrapper
+        .refill-centering= partial "grid_items_lines"
+      .refill-snippet= code_for("grid_items_lines")
+    %section#hero.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Hero Unit
+        = partial "hero"
+      .refill-snippet= code_for("hero")
+    %section#icon-bullet-points.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Icon Bullet Points
+        = partial "icon_bullet_points"
+      .refill-snippet= code_for("icon_bullet_points")
+    %section#maps.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Maps
+        = partial "maps"
+      .refill-snippet= code_for("maps")
+    %section#navigation.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Navigation
+        = partial "navigation"
+      .refill-snippet= code_for("navigation")
+    %section#scroll-on-page.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Scroll On Page
+        .refill-centering
+          .refill-smaller= partial "scroll_on_page"
+      .refill-snippet= code_for("scroll_on_page")
+    %section#search-tools.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Search Tools
+        = partial "search_tools"
+      .refill-snippet= code_for("search_tools")
+    %section#side-image.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Side Image
+        = partial "side_image"
+      .refill-snippet= code_for("side_image")
+    %section#tables.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Tables
+        = partial "tables"
+      .refill-snippet= code_for("tables")
+      .refills-wrapper
+        = partial "tables_minimal"
+      .refill-snippet= code_for("tables_minimal")
+    %section#vertical-tabs.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Vertical Tabs
+        = partial "vertical_tabs"
+      .refill-snippet= code_for("vertical_tabs")
+= partial "refills-page-scripts"

@@ -1,0 +1,121 @@
+.refills-unstyled
+  %a.js-menu-trigger-refills.refills-menu-anchor.fixedsticky
+    %img{:alt => "Menu icon", :src => "/images/menu.png"}/
+  .js-menu-screen-refills.refills-menu-screen
+  = partial "refills-hero"
+  = partial "refills-menu"
+  #example
+    %section#accordion.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Accordion
+        .refill-centering= partial "unstyled/accordion"
+      .refill-snippet= code_for("unstyled/accordion")
+    %section#accordion-tabs.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Accordion / Tabs
+        .refill-smaller= partial "unstyled/accordion_tabs"
+      .refill-snippet= code_for("unstyled/accordion_tabs")
+    %section#button-group.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Button Group
+        .refill-centering= partial "unstyled/button_group"
+      .refill-snippet= code_for("unstyled/button_group")
+    %section#cards.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Cards
+        .refill-centering= partial "unstyled/cards"
+      .refill-snippet= code_for("unstyled/cards")
+    %section#comment.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Comments
+        .refill-centering
+          .refill-smaller= partial "unstyled/comment"
+      .refill-snippet= code_for("unstyled/comment")
+    %section#dropdown.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Dropdown
+        .refill-centering
+          = partial "unstyled/dropdown"
+      .refill-snippet= code_for("unstyled/dropdown")
+    %section#expander.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Expander
+        .refill-centering
+          = partial "unstyled/expander"
+      .refill-snippet= code_for("unstyled/expander")
+    %section#footer.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Footer
+        .refill-centering= partial "unstyled/footer"
+      .refill-snippet= code_for("unstyled/footer")
+    %section#modal.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Modal
+        .refill-centering= partial "unstyled/modal"
+      .refill-snippet= code_for("unstyled/modal")
+    %section#navigation.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Navigation
+        .refill-centering= partial "unstyled/navigation"
+      .refill-snippet= code_for("unstyled/navigation")
+    %section#hover-menu.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Navigation Hover Menu
+        .refill-centering= partial "unstyled/hover_menu"
+      .refill-snippet= code_for("unstyled/hover_menu")
+    %section#navigation-centered.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Navigation: Centered
+        = partial "unstyled/navigation_centered"
+      .refill-snippet= code_for("unstyled/navigation_centered")
+    %section#search-bar.refill
+      .refills-wrapper
+        .line-behind-text
+          %h6 Search bar
+        .refill-centering
+          .refill-smaller= partial "unstyled/search_bar"
+      .refill-snippet= code_for("unstyled/search_bar")
+      %section#scroll-on-page.refill
+        .refills-wrapper
+          .line-behind-text
+            %h6 Scroll On Page
+          .refill-centering
+            .refill-smaller= partial "unstyled/scroll_on_page"
+        .refill-snippet= code_for("unstyled/scroll_on_page")
+      %section#switch.refill
+        .refills-wrapper
+          .line-behind-text
+            %h6 Switch
+          .refill-centering= partial "unstyled/switch"
+        .refill-snippet= code_for("unstyled/switch")
+      %section#tooltip.refill
+        .refills-wrapper
+          .line-behind-text
+            %h6 Tooltip
+          .refill-centering= partial "unstyled/tooltip"
+        .refill-snippet= code_for("unstyled/tooltip")
+      %section#vertical-tabs.refill
+        .refills-wrapper
+          .line-behind-text
+            %h6 Vertical Tabs
+          = partial "unstyled/vertical_tabs"
+        .refill-snippet= code_for("unstyled/vertical_tabs")
+      %section#sliding-panel.refill
+        .refills-wrapper
+          .line-behind-text
+            %h6 Sliding Panel
+          .refill-centering= partial "unstyled/sliding_panel"
+        .refill-snippet= code_for("unstyled/sliding_panel")
+= partial "refills-page-scripts"

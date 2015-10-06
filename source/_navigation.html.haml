@@ -1,0 +1,41 @@
+%body
+  %header.navigation{:role => "banner"}
+    .navigation-wrapper
+      %a.logo{:href => "javascript:void(0)"}
+        %img{:alt => "Logo Image", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png"}/
+      %a#js-mobile-menu.navigation-menu-button{:href => "javascript:void(0)"} MENU
+      %nav{:role => "navigation"}
+        %ul#js-navigation-menu.navigation-menu.show
+          %li.nav-link
+            %a{:href => "javascript:void(0)"} Products
+          %li.nav-link
+            %a{:href => "javascript:void(0)"} About Us
+          %li.nav-link
+            %a{:href => "javascript:void(0)"} Contact
+          %li.nav-link.more
+            %a{:href => "javascript:void(0)"} More
+            %ul.submenu
+              %li
+                %a{:href => "javascript:void(0)"} Submenu Item
+              %li
+                %a{:href => "javascript:void(0)"} Another Item
+              %li.more
+                %a{:href => "javascript:void(0)"} Item with submenu
+                %ul.submenu
+                  %li
+                    %a{:href => "javascript:void(0)"} Sub-submenu Item
+                  %li
+                    %a{:href => "javascript:void(0)"} Another Item
+              %li.more
+                %a{:href => "javascript:void(0)"} Another submenu
+                %ul.submenu
+                  %li
+                    %a{:href => "javascript:void(0)"} Sub-submenu
+                  %li
+                    %a{:href => "javascript:void(0)"} An Item
+      .navigation-tools
+        .search-bar
+          %form{:role => "search"}
+            %input{:placeholder => "Enter Search", :type => "search"}/
+            %button{:type => "submit"}
+              %img{:alt => "Search Icon", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png"}/

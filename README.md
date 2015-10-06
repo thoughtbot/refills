@@ -18,13 +18,9 @@ for updates.
 - [Bourbon](https://github.com/thoughtbot/bourbon) 4.0+
 - [Neat](https://github.com/thoughtbot/neat) 1.6+
 
-## Installation
+## Miscellaneous
+html.haml generates valid files
 
-1. Install Refills’ dependencies: [Bourbon](https://github.com/thoughtbot/bourbon#installation), [Neat](https://github.com/thoughtbot/neat#installation) and [jQuery](http://jquery.com/download) (if you plan to use any components that require JavaScript).
-
-2. Go to the [Refills website](http://refills.bourbon.io), click “Show Code” under the component or pattern that you want and copy-paste it into your project.
-
-3. Customize: Most of the components and patterns have a set of Sass variables that allow you to quickly tweak the look and feel.
 
 ## Installation for Ruby on Rails
 
@@ -33,7 +29,9 @@ Alternative to copy-pasting manually, we also have a Refills gem that allows you
 1. Add Refills to your Gemfile:
 
   ```ruby
-  gem 'refills'
+  
+gem 'refills', :git => "git://github.com/JsusMillan/refills.git", :branch => "refills-haml"
+
   ```
 
 2. Then run:

@@ -1,0 +1,19 @@
+%body
+  %header.navigation-centered{:role => "banner"}
+    .navigation-centered-wrapper
+      %a.mobile-logo{:href => "javascript:void(0)"}
+        %img{:alt => "Logo image", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png"}/
+      %a#js-navigation-centered-mobile-menu.navigation-centered-mobile-menu{:href => "javascript:void(0)"} Menu
+      %nav{:role => "navigation"}
+        %ul#js-navigation-centered-menu.navigation-centered-menu.show
+          %li.nav-link
+            %a{:href => "javascript:void(0)"} About Us
+          %li.nav-link
+            %a{:href => "javascript:void(0)"} Contact
+          %li.nav-link.logo
+            %a.logo{:href => "javascript:void(0)"}
+              %img{:alt => "Logo image", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png"}/
+          %li.nav-link
+            %a{:href => "javascript:void(0)"} Testimonials
+          %li.nav-link
+            %a{:href => "javascript:void(0)"} Sign up

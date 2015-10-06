@@ -1,0 +1,14 @@
+.refills-header
+  .refills-logo
+    %img{:alt => "Refills logo", :src => "/images/refills-logo.svg"}/
+  %h2
+    Components and patterns built with
+    %a{:href => "//bourbon.io"} Bourbon
+    and
+    = succeed "." do
+      %a{:href => "//neat.bourbon.io"} Neat
+  %p
+    Managed by
+    = succeed "," do
+      %a{:href => "http://thoughtbot.com"} thoughtbot
+    %a{:href => "//github.com/thoughtbot/refills"} GitHub

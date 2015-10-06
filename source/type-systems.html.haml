@@ -1,0 +1,54 @@
+\---
+title: Type Systems
+\---
+.refills-type-systems
+  %a.js-menu-trigger-refills.refills-menu-anchor.fixedsticky
+    %img{:alt => "Menu icon", :src => "/images/menu.png"}/
+  .js-menu-screen-refills.refills-menu-screen
+  = partial "refills-hero"
+  = partial "refills-menu"
+  #example
+    #type-systems
+      %section.refill
+        .refills-wrapper
+          .line-behind-text
+            %h6 Geometric
+          .refill-smaller
+            .refill-centering= partial "type_system_geometric"
+          .refill-snippet= code_for("type_system_geometric")
+      %section.refill
+        .refills-wrapper
+          .line-behind-text
+            %h6 Rounded Sans Serif
+          .refill-smaller
+            .refill-centering= partial "type_system_rounded"
+          .refill-snippet= code_for("type_system_rounded")
+      %section.refill
+        .refills-wrapper
+          .line-behind-text
+            %h6 Sans Serif
+          .refill-smaller
+            .refill-centering= partial "type_system_sans"
+          .refill-snippet= code_for("type_system_sans")
+      %section.refill
+        .refills-wrapper
+          .line-behind-text
+            %h6 Serif
+          .refill-smaller
+            .refill-centering= partial "type_system_serif"
+          .refill-snippet= code_for("type_system_serif")
+      %section.refill
+        .refills-wrapper
+          .line-behind-text
+            %h6 Slab Serif
+          .refill-smaller
+            .refill-centering= partial "type_system_slab"
+          .refill-snippet= code_for("type_system_slab")
+      %section.refill
+        .refills-wrapper
+          .line-behind-text
+            %h6 Traditional
+          .refill-smaller
+            .refill-centering= partial "type_system_traditional"
+          .refill-snippet= code_for("type_system_traditional")
+= partial "refills-page-scripts"

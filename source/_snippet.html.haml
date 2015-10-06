@@ -1,0 +1,11 @@
+%td.snippet
+  .copy-source-container
+    - if language == :javascript
+      %a.copy-source{:href => "javascript:void(0)"} Copy JavaScript
+      %a.copy-source.copy-coffee{:href => "javascript:void(0)"} Copy CoffeeScript
+    - elsif language == :markup
+      %a.copy-source{:href => "javascript:void(0)"} Copy HTML
+    - else
+      %a.copy-source{:href => "javascript:void(0)"} Copy Scss
+  %pre
+    %code{:class => "language-#{language}"}!= snippet
