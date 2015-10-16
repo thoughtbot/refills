@@ -33,7 +33,7 @@ Alternative to copy-pasting manually, we also have a Refills gem that allows you
 1. Add Refills to your Gemfile:
 
   ```ruby
-  gem 'refills'
+  gem "refills", group: :development
   ```
 
 2. Then run:
