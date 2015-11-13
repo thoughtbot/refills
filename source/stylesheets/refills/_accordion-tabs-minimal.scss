@@ -33,8 +33,8 @@
     text-decoration: none;
 
     @include media($tab-mode) {
-      @include inline-block;
       border-top: 0;
+      display: inline-block;
     }
 
     &:hover {

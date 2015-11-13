@@ -284,10 +284,10 @@ header.navigation {
       position: relative;
 
       input[type=search] {
-        @include box-sizing(border-box);
         background: $navigation-search-background;
-        border-radius: $base-border-radius * 2;
         border: $navigation-search-border;
+        border-radius: $base-border-radius * 2;
+        box-sizing: border-box;
         color: $navigation-color;
         font-size: 0.9em;
         font-style: italic;
@@ -325,7 +325,7 @@ header.navigation {
       width: 16em;
 
       input {
-        @include box-sizing(border-box);
+        box-sizing: border-box;
         display: block;
       }
     }

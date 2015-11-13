@@ -21,14 +21,14 @@
   width: 100%;
 
   > span.meter {
-    @include box-sizing(border-box);
     background-color: $progress-meter-color;
     background-repeat: repeat-x;
     background-size: 40px 40px;
     border-bottom-right-radius: 0;
+    border: $progress-meter-border;
     border-radius: $base-border-radius /1.5;
     border-top-right-radius: 0;
-    border: $progress-meter-border;
+    box-sizing: border-box;
     display: block;
     height: 100%;
     width: 60%;

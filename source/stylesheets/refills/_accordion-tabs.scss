@@ -58,10 +58,10 @@
     text-decoration: none;
 
     @include media($tab-mode) {
-      @include inline-block;
-      border-top: 0;
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
+      border-top: 0;
+      display: inline-block;
     }
 
     &:hover {

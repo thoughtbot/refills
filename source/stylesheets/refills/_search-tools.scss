@@ -54,11 +54,11 @@
     }
 
     > div {
-      @include box-sizing(border-box);
       @include transition(border-color);
       background-color: white;
-      border-radius: $base-border-radius;
       border: 1px solid $base-border-color;
+      border-radius: $base-border-radius;
+      box-sizing: border-box;
       font-size: 1em;
       margin-bottom: $base-spacing / 2;
       padding: ($base-spacing / 3) $clear-button-width ($base-spacing / 3) ($base-spacing / 3);
