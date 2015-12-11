@@ -38,7 +38,15 @@
 
   <div class="refills-header">
   <div class="refills-logo">
-    <img src="/images/refills-logo.svg" alt="Refills logo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="612.4px" height="612.4px" viewBox="0 0 612.4 612.4">
+  <path d="M306.2,34.9c149.4,0,271.3,121.4,271.3,271.3c0,149.4-121.4,271.3-271.3,271.3S34.9,456.1,34.9,306.2
+    S156.4,34.9,306.2,34.9 M306.2,0C137.2,0,0,137.2,0,306.2s137.2,306.2,306.2,306.2s306.2-137.2,306.2-306.2
+    C612,136.7,475.3,0,306.2,0L306.2,0z"/>
+  <path d="M598,213.6c-3.5-10.9-7.4-21.4-11.8-31.5h-560c-4.4,10-8.3,21-11.8,31.5H598z"/>
+  <path d="M610.7,276.5c-0.9-10.5-2.6-21.4-4.8-31.5H6.1c-2.2,10.5-3.5,21-4.8,31.5H610.7z"/>
+  <path d="M0,308.4C1.3,476.6,137.6,612,306.2,612c168.2,0,304.9-135.9,306.2-303.6H0z"/>
+</svg>
+
   </div>
   <h2>Components and patterns built with <a href="//bourbon.io">Bourbon</a> and <a href="//neat.bourbon.io">Neat</a>.</h2>
   <p>Managed by <a href="http://thoughtbot.com">thoughtbot</a>, instructions at <a href="//github.com/thoughtbot/refills">GitHub</a></p>
@@ -1732,7 +1740,6 @@ $success-color: #e6efc2 !default;
 
     h1 {
       color: $base-font-color;
-      margin-bottom: 0 0 0.6em 0;
       text-align: left;
       text-transform: capitalize;
     }
@@ -2458,7 +2465,7 @@ $(window).scroll (e) -&gt;
           <div class="refill-smaller"><form class="search-bar" role="search">
   <input type="search" placeholder="Enter Search" />
   <button type="submit">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon-black.png" alt="Search Icon">
   </button>
 </form>
 </div>
@@ -2478,7 +2485,7 @@ $(window).scroll (e) -&gt;
   <pre><code class="language-markup">&lt;form class=&quot;search-bar&quot; role=&quot;search&quot;&gt;
   &lt;input type=&quot;search&quot; placeholder=&quot;Enter Search&quot; /&gt;
   &lt;button type=&quot;submit&quot;&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png&quot; alt=&quot;Search Icon&quot;&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon-black.png&quot; alt=&quot;Search Icon&quot;&gt;
   &lt;/button&gt;
 &lt;/form&gt;
 </code></pre>
@@ -2490,11 +2497,9 @@ $(window).scroll (e) -&gt;
   </div>
   <pre><code class="language-scss">form.search-bar {  
   ///////////////////////////////////////////////////////////////////////////////////
+  $base-spacing: 1.5em !default;
   $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
-  $action-color: #477DCA !default;
-  $dark-gray: #333 !default;
   //////////////////////////////////////////////////////////////////////////////////
 
   $search-bar-border-color: $base-border-color;
@@ -2505,12 +2510,10 @@ $(window).scroll (e) -&gt;
 
   input[type=search] {
     @include appearance(none);
-    @include box-sizing(border-box);
     @include transition(border-color);
     background-color: white;
-    border-radius: $base-border-radius;
-    border-radius: $base-border-radius;
     border: 1px solid $base-border-color;
+    box-sizing: border-box;
     display: block;
     font-size: 1em;
     font-style: italic;
@@ -2521,10 +2524,7 @@ $(window).scroll (e) -&gt;
   }
 
   button[type=submit] {
-    @include button(flat, $action-color);
     @include position(absolute, 0em 0em 0em null);
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
     outline: none;
     padding: 5px 10px;
 
