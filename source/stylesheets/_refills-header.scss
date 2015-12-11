@@ -22,23 +22,15 @@
     display: inline-block;
     margin: 0 auto 1.4em auto;
 
-    @include media($refills-medium-screen) {
-      max-height: 8em;
-      max-width: 8em;
-    }
-
-    img {
+    svg {
+      @include size(80px);
       background: $refills-body-background-color;
       border-radius: 50%;
-      margin-bottom: 1em;
-      max-height: 5em;
-      max-width: 5em;
+      fill: $refills-logo-color;
       padding: 0.3em;
 
       @include media($refills-medium-screen) {
-        margin-bottom: 2em;
-        max-height: 8em;
-        max-width: 8em;
+        @include size(120px);
         padding: 0.5em;
       }
     }

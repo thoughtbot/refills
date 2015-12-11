@@ -19,7 +19,7 @@ ul.refills-menu {
     a {
       @include refills-inset;
       border-radius: 3px;
-      color: darken($refills-hero-background, 35%);
+      color: $refills-secondary-anchor-color;
       font-family: $refills-narrow-sans;
       font-weight: 300;
       font-size: 0.8em;
@@ -37,7 +37,7 @@ ul.refills-menu {
       }
 
       &:hover {
-        color: darken($refills-hero-background, 30%);
+        color: lighten($refills-secondary-anchor-color, 10%);
       }
     }
   }

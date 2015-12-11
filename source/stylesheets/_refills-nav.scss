@@ -7,13 +7,14 @@ section.inner-content {
 .refills-menu-anchor {
   @include position(fixed, 4.5em null null 1em);
   @include size(50px);
-  border: 1px solid darken(desaturate(#93e9be, 50), 15%);
+  border: 1px solid $refills-secondary-anchor-color;
   border-radius: 50%;
   cursor: pointer;
   display: inline-block;
-  font-size: 1em;
-  padding: 0.7em 1em;
+  fill: $refills-secondary-anchor-color;
   margin-bottom: 1.5em;
+  padding-top: 0.9em;
+  text-align: center;
   transition: all 0.2s ease-in-out;
   z-index: 9999;
 
