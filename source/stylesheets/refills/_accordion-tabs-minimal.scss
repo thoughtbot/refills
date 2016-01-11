@@ -1,22 +1,22 @@
 .accordion-tabs-minimal {
-  $base-border-color: gainsboro !default;
-  $base-background-color: white !default;
+  $base-border-color: #dcdcdc !default;
+  $base-background-color: #fff !default;
   $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
+  $action-color: #477dca !default;
   $dark-gray: #333 !default;
   $medium-screen: em(640) !default;
   $tab-link-color: $dark-gray;
   $tab-border: 1px solid $base-border-color;
   $tab-active-background: $base-background-color;
   $tab-inactive-color: $base-background-color;
-  $tab-inactive-hover-color: silver;
+  $tab-inactive-hover-color: #c0c0c0;
   $tab-mode: $medium-screen;
 
   @include clearfix;
   line-height: 1.5;
   padding: 0;
 
-  li.tab-header-and-content {
+  .tab-header-and-content {
     list-style: none;
 
     @include media($tab-mode) {
@@ -24,7 +24,7 @@
     }
   }
 
-  a.tab-link {
+  .tab-link {
     background-color: $tab-inactive-color;
     border-top: $tab-border;
     color: $tab-link-color;
