@@ -7,7 +7,7 @@
     <meta name="description" content="Components and patterns built with Bourbon and Neat.">
     <title>Refills - Patterns</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800">
-    <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/all.css" rel="stylesheet" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="/javascripts/jquery.erToc.js"></script>
     <script type="text/javascript">
@@ -54,14 +54,16 @@
 
   </div>
   <h2>Components and patterns built with <a href="//bourbon.io">Bourbon</a> and <a href="//neat.bourbon.io">Neat</a>.</h2>
-  <p>Managed by <a href="http://thoughtbot.com">thoughtbot</a>, instructions at <a href="//github.com/thoughtbot/refills">GitHub</a></p>
+  <a href="//empties.bourbon.io" class="empties-banner">New Library! Try out Empties: the unstyled Refills.</a>
+  <div>
+    <p>Managed by <a href="http://thoughtbot.com">thoughtbot</a>, instructions at <a href="//github.com/thoughtbot/refills">GitHub</a></p>
+  </div>
 </div>
 
   <ul class="refills-menu">
   <li class="menu-item patterns"><a href="./">Patterns</a></li>
   <li class="menu-item components"><a href="components/">Components</a></li>
   <li class="menu-item type-systems"><a href="type-systems/">Type Systems</a></li>
-  <li class="menu-item unstyled"><a href="unstyled/">Unstyled</a></li>
 </ul>
 
 
@@ -143,13 +145,13 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.accordion-tabs {
-  $base-border-color: gainsboro !default;
+  $base-border-color: #dcdcdc !default;
   $base-border-radius: 3px !default;
-  $base-background-color: white !default;
+  $base-background-color: #fff !default;
   $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
+  $action-color: #477dca !default;
   $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
+  $light-gray: #ddd !default;
   $medium-screen: em(640) !default;
   $tab-border: 1px solid $base-border-color;
   $tab-content-background: lighten($light-gray, 10);
@@ -164,8 +166,8 @@
   padding: 0;
 
   @include media(max-width $tab-mode) {
-    border-radius: $base-border-radius;
     border: $tab-border;
+    border-radius: $base-border-radius;
   }
 
   .tab-header-and-content {
@@ -198,14 +200,14 @@
     color: $dark-gray;
     display: block;
     font-weight: bold;
-    padding: $base-spacing/2 $gutter/2;
+    padding: ($base-spacing / 2) ($gutter / 2);
     text-decoration: none;
 
     @include media($tab-mode) {
       @include inline-block;
+      border-top: 0;
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
-      border-top: 0;
     }
 
     &amp;:hover {
@@ -235,10 +237,10 @@
     width: 100%;
 
     @include media($tab-mode) {
+      border: $tab-border;
       border-bottom-left-radius: $base-border-radius;
       border-bottom-right-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
-      border: $tab-border;
       float: left;
     }
   }
@@ -373,24 +375,24 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.accordion-tabs-minimal {
-  $base-border-color: gainsboro !default;
-  $base-background-color: white !default;
+  $base-border-color: #dcdcdc !default;
+  $base-background-color: #fff !default;
   $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
+  $action-color: #477dca !default;
   $dark-gray: #333 !default;
   $medium-screen: em(640) !default;
   $tab-link-color: $dark-gray;
   $tab-border: 1px solid $base-border-color;
   $tab-active-background: $base-background-color;
   $tab-inactive-color: $base-background-color;
-  $tab-inactive-hover-color: silver;
+  $tab-inactive-hover-color: #c0c0c0;
   $tab-mode: $medium-screen;
 
   @include clearfix;
   line-height: 1.5;
   padding: 0;
 
-  li.tab-header-and-content {
+  .tab-header-and-content {
     list-style: none;
 
     @include media($tab-mode) {
@@ -398,7 +400,7 @@
     }
   }
 
-  a.tab-link {
+  .tab-link {
     background-color: $tab-inactive-color;
     border-top: $tab-border;
     color: $tab-link-color;
@@ -4781,7 +4783,7 @@ $('.js-vertical-tab-accordion-heading').click (event) -&gt;
             <li><a href="./">Patterns</a></li>
             <li><a href="components/">Components</a></li>
             <li><a href="type-systems/">Type Systems</a></li>
-            <li><a href="unstyled/">Unstyled Components</a></li>
+            <li><a href="/unstyled.html">Unstyled Components</a></li>
           </ul>
           <div class="refills-footer-logo">
             <img src="/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
@@ -4848,5 +4850,5 @@ $('.js-vertical-tab-accordion-heading').click (event) -&gt;
       bittersMap.init();
     </script>
   </body>
-  <script src="javascripts/all.js" type="text/javascript"></script>
+  <script src="javascripts/all.js"></script>
 </html>
