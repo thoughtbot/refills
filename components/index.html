@@ -1016,8 +1016,8 @@ $success-color: #e6efc2 !default;
         <div class="line-behind-text"><h6>Expander</h6></div>
         <div class="refill-centering">
           <div class="expander">
-  <a href="javascript:void(0)" id="js-expander-trigger" class="expander-trigger expander-hidden">Expandable section</a>
-  <div id="js-expander-content" class="expander-content">
+  <a href="javascript:void(0)" class="expander-trigger expander-hidden">Expandable section</a>
+  <div class="expander-content">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
   </div>
 </div>
@@ -1036,8 +1036,8 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
   </div>
   <pre><code class="language-markup">&lt;div class=&quot;expander&quot;&gt;
-  &lt;a href=&quot;javascript:void(0)&quot; id=&quot;js-expander-trigger&quot; class=&quot;expander-trigger expander-hidden&quot;&gt;Expandable section&lt;/a&gt;
-  &lt;div id=&quot;js-expander-content&quot; class=&quot;expander-content&quot;&gt;
+  &lt;a href=&quot;javascript:void(0)&quot; class=&quot;expander-trigger expander-hidden&quot;&gt;Expandable section&lt;/a&gt;
+  &lt;div class=&quot;expander-content&quot;&gt;
     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -1106,10 +1106,7 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
   <pre><code class="language-javascript">$(document).ready(function() {
-  var expanderTrigger = document.getElementById(&quot;js-expander-trigger&quot;);
-  var expanderContent = document.getElementById(&quot;js-expander-content&quot;);
-
-  $('#js-expander-trigger').click(function(){
+  $('.expander-trigger').click(function(){
     $(this).toggleClass(&quot;expander-hidden&quot;);
   });
 });
