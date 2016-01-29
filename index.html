@@ -204,10 +204,10 @@
     text-decoration: none;
 
     @include media($tab-mode) {
-      @include inline-block;
-      border-top: 0;
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
+      border-top: 0;
+      display: inline-block;
     }
 
     &amp;:hover {
@@ -409,8 +409,8 @@
     text-decoration: none;
 
     @include media($tab-mode) {
-      @include inline-block;
       border-top: 0;
+      display: inline-block;
     }
 
     &amp;:hover {
@@ -3245,10 +3245,10 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       position: relative;
 
       input[type=search] {
-        @include box-sizing(border-box);
         background: $navigation-search-background;
-        border-radius: $base-border-radius * 2;
         border: $navigation-search-border;
+        border-radius: $base-border-radius * 2;
+        box-sizing: border-box;
         color: $navigation-color;
         font-size: 0.9em;
         font-style: italic;
@@ -3286,7 +3286,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       width: 16em;
 
       input {
-        @include box-sizing(border-box);
+        box-sizing: border-box;
         display: block;
       }
     }
@@ -3737,11 +3737,11 @@ jQuery -&gt;
     }
 
     &gt; div {
-      @include box-sizing(border-box);
       @include transition(border-color);
       background-color: white;
-      border-radius: $base-border-radius;
       border: 1px solid $base-border-color;
+      border-radius: $base-border-radius;
+      box-sizing: border-box;
       font-size: 1em;
       margin-bottom: $base-spacing / 2;
       padding: ($base-spacing / 3) $clear-button-width ($base-spacing / 3) ($base-spacing / 3);

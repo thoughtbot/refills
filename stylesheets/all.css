@@ -785,10 +785,10 @@ section.inner-content {
     @media screen and (min-width: 40em) {
       /* line 51, /Users/magnus/Documents/refills/source/stylesheets/refills/_accordion-tabs.scss */
       .refills-patterns .accordion-tabs .tab-link {
-        display: inline-block;
-        border-top: 0;
         border-top-left-radius: 3px;
-        border-top-right-radius: 3px; } }
+        border-top-right-radius: 3px;
+        border-top: 0;
+        display: inline-block; } }
     /* line 67, /Users/magnus/Documents/refills/source/stylesheets/refills/_accordion-tabs.scss */
     .refills-patterns .accordion-tabs .tab-link:hover {
       color: #477dca; }
@@ -846,8 +846,8 @@ section.inner-content {
     @media screen and (min-width: 40em) {
       /* line 27, /Users/magnus/Documents/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
       .refills-patterns .accordion-tabs-minimal .tab-link {
-        display: inline-block;
-        border-top: 0; } }
+        border-top: 0;
+        display: inline-block; } }
     /* line 40, /Users/magnus/Documents/refills/source/stylesheets/refills/_accordion-tabs-minimal.scss */
     .refills-patterns .accordion-tabs-minimal .tab-link:hover {
       color: #477dca; }
@@ -2149,12 +2149,10 @@ section.inner-content {
       position: relative; }
       /* line 286, /Users/magnus/Documents/refills/source/stylesheets/refills/_navigation.scss */
       .refills-patterns header.navigation .search-bar form input[type=search] {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
         background: #404040;
-        border-radius: 6px;
         border: 1px solid #262626;
+        border-radius: 6px;
+        box-sizing: border-box;
         color: rgba(255, 255, 255, 0.7);
         font-size: 0.9em;
         font-style: italic;
@@ -2189,8 +2187,6 @@ section.inner-content {
         width: 16em; }
         /* line 327, /Users/magnus/Documents/refills/source/stylesheets/refills/_navigation.scss */
         .refills-patterns header.navigation .search-bar input {
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
           box-sizing: border-box;
           display: block; } }
 /* line 1, /Users/magnus/Documents/refills/source/stylesheets/refills/_scroll-on-page.scss */
@@ -2331,15 +2327,13 @@ section.inner-content {
         margin-bottom: 0; } }
     /* line 56, /Users/magnus/Documents/refills/source/stylesheets/refills/_search-tools.scss */
     .refills-patterns .search-tools .filter > div {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
       -webkit-transition: border-color;
       -moz-transition: border-color;
       transition: border-color;
       background-color: white;
-      border-radius: 3px;
       border: 1px solid gainsboro;
+      border-radius: 3px;
+      box-sizing: border-box;
       font-size: 1em;
       margin-bottom: 0.75em;
       padding: 0.5em 4em 0.5em 0.5em;
@@ -3495,16 +3489,14 @@ section.inner-content {
     -webkit-animation: progress 0.7s linear infinite;
     -moz-animation: progress 0.7s linear infinite;
     animation: progress 0.7s linear infinite;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-color: #477dca;
     background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%);
     background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%);
-    background-size: 40px 40px;
+    background-color: #477dca;
     background-repeat: repeat-x;
+    background-size: 40px 40px;
     border: 1px solid #2c5999;
     border-radius: 2px;
+    box-sizing: border-box;
     display: block;
     height: 100%;
     width: 60%; }
@@ -3543,16 +3535,14 @@ section.inner-content {
   width: 100%; }
   /* line 23, /Users/magnus/Documents/refills/source/stylesheets/refills/_progress-bar-indication.scss */
   .refills-components .progress-bar-indication > span.meter {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     background-color: #477dca;
     background-repeat: repeat-x;
     background-size: 40px 40px;
     border-bottom-right-radius: 0;
+    border: 1px solid #2c5999;
     border-radius: 2px;
     border-top-right-radius: 0;
-    border: 1px solid #2c5999;
+    box-sizing: border-box;
     display: block;
     height: 100%;
     width: 60%; }
