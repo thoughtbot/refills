@@ -2809,8 +2809,8 @@ section.inner-content {
   /* line 24, /Users/magnus/Documents/refills/source/stylesheets/refills/_breadcrumbs.scss */
   .refills-components .breadcrumb a {
     background-color: white;
-    border-left: 0;
     border: 1px solid gainsboro;
+    border-left: 0;
     color: #999;
     display: inline-block;
     font-size: 0.8em;
