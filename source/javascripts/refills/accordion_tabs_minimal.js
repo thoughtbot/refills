@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $('.accordion-tabs-minimal').each(function(index) {
     $(this).children('li').each(function() {
-      $a = $(this).find('a')
+      var $a = $(this).find('a');
       if ($a.hasClass('is-active')) {
         $a.addClass('is-active').next().addClass('is-open').show();
       }
