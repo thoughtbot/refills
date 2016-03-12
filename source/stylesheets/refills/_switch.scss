@@ -35,7 +35,7 @@
       width: $switch-width;
       z-index: 0;
 
-      &:before {
+      &::before {
         @include position(absolute, 2px 0 0 2px);
         background: $switch-background;
         border-radius: $switch-radius;
@@ -47,7 +47,7 @@
         z-index: 1;
       }
 
-      &:after {
+      &::after {
         @include position(absolute, 2px 0 0 2px);
         @include size($knob-size);
         background: $switch-background;
@@ -63,11 +63,11 @@
       + .checkbox {
         background: $action-color;
 
-        &:before {
+        &::before {
           transform: scale(0);
         }
 
-        &:after {
+        &::after {
           left: $switch-width - $knob-width - ($switch-padding);
         }
       }

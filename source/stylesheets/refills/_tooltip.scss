@@ -50,7 +50,7 @@
       margin: 0;
     }
 
-    &:after {
+    &::after {
       @include position(absolute, null 0 null 0);
       border: $tooltip-arrow-width solid transparent;
       bottom: $tooltip-arrow-distance-from-box;

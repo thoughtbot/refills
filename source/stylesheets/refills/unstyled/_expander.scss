@@ -1,15 +1,15 @@
-.expander {  
+.expander {
   .expander-trigger {
     display: block;
 
-    &:before {
+    &::before {
       content: "\25BC";
       margin-right: 0.5em;
     }
   }
 
   .expander-hidden {
-    &:before {
+    &::before {
       content: "\25BA";
     }
   }

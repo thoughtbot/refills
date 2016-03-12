@@ -1,4 +1,4 @@
-.expander {  
+.expander {
   $base-font-size: 1em !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
@@ -24,7 +24,7 @@
     padding-bottom: $expander-toggle-size / 4;
     text-decoration: none;
 
-    &:before {
+    &::before {
       font-size: $expander-arrow-width;
       content: "\25BC";
       margin-right: 0.5em;
@@ -37,7 +37,7 @@
   }
 
   .expander-hidden {
-    &:before {
+    &::before {
       font-size: $expander-arrow-width;
       content: "\25BA";
     }

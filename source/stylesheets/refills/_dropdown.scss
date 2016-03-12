@@ -69,7 +69,7 @@
     background-color: $dropdown-background-hover;
   }
 
-  .dropdown-button:after {
+  .dropdown-button::after {
     color: $base-font-color;
     content: "\25BE";
     display: block;
@@ -96,7 +96,7 @@
     width: 228px;
     z-index: 99999;
 
-    &:before {
+    &::before {
       @include position(absolute, 0 1em 0 0);
       color: $dropdown-background;
       content: "\25b2";

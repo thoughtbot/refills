@@ -11,12 +11,12 @@
 //  height: 100%;
 // }
 
-// .wrapper-for-content-outside-of-footer:after {
+// .wrapper-for-content-outside-of-footer::after {
 //   content: "";
 //   display: block;
 // }
 
-// .footer-2, .wrapper-for-content-outside-of-footer:after {
+// .footer-2, .wrapper-for-content-outside-of-footer::after {
 //   height: 17em;
 
 //   @include media($large-screen) {
@@ -51,13 +51,13 @@
 
   .footer-logo img {
     height: 1.6em;
-  } 
+  }
 
   ul {
     line-height: 1.5em;
     margin: 0 0 1em 0;
     padding: 0;
-    
+
     @include media($large-screen) {
       float: left;
       line-height: 1.8em;

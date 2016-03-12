@@ -83,7 +83,7 @@ ul.refills-menu {
   position: relative;
 }
 
-.menu-item.unstyled:after {
+.menu-item.unstyled::after {
   content: url('/images/new.svg');
   position: absolute;
   right: -42px;

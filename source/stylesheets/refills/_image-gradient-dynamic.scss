@@ -45,7 +45,7 @@
     display: block;
     @include position(absolute, 0);
 
-    &:after {
+    &::after {
       @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left),
         transparentize($image-gradient-color-right, $transparency-right));
       @include position(absolute, 0);

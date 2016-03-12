@@ -11,12 +11,12 @@
 //  height: 100%;
 // }
 
-// .wrapper-for-content-outside-of-footer:after {
+// .wrapper-for-content-outside-of-footer::after {
 //   content: "";
 //   display: block;
 // }
 
-// .footer, .wrapper-for-content-outside-of-footer:after {
+// .footer, .wrapper-for-content-outside-of-footer::after {
 //   $large-screen: em(860) !default;
 //   height: 12em;
 
@@ -39,7 +39,7 @@
 
     img {
       height: 2.2em;
-    } 
+    }
   }
 
   ul {

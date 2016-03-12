@@ -160,7 +160,7 @@ header.navigation {
       padding-right: 0.6em;
     }
 
-    > a:after {
+    > a::after {
       @include position(absolute, auto -0.4em auto auto);
       content: '\25BE';
       color: $navigation-color;
@@ -183,7 +183,7 @@ header.navigation {
         margin-right: $navigation-submenu-padding;
       }
 
-      &:after {
+      &::after {
         content: '›';
         font-size: 1.2em;
         position: absolute;

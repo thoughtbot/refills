@@ -166,7 +166,7 @@
       padding-right: 0.6em;
     }
 
-    > a:after {
+    > a::after {
       @include position(absolute, auto -0.4em auto auto);
       color: $centered-navigation-color;
       content: "\25BE";
@@ -189,7 +189,7 @@
         margin-right: $centered-navigation-submenu-padding;
       }
 
-      &:after {
+      &::after {
         content: "›";
         font-size: 1.2em;
         position: absolute;

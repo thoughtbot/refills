@@ -62,8 +62,8 @@
     background: $modal-background;
     cursor: pointer;
 
-    &:after,
-    &:before {
+    &::after,
+    &::before {
       @include position(absolute, 3px 3px 0 50%);
       @include size(0.15em 1.5em);
       background: $modal-close-color;
@@ -73,12 +73,12 @@
       transform: rotate(45deg);
     }
 
-    &:hover:after,
-    &:hover:before {
+    &:hover::after,
+    &:hover::before {
       background: darken($modal-close-color, 10%);
     }
 
-    &:before {
+    &::before {
       transform: rotate(-45deg);
     }
   }
