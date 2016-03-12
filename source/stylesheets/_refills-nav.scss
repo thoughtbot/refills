@@ -41,10 +41,10 @@ section.inner-content {
 }
 
 .refills-menu-screen {
-  @include position(fixed, 0 0 0 0);
-  @include transition;
+  @include position(fixed, 0);
   background-color: teal;
   opacity: 0;
+  transition: all 0.15s ease-out;
   visibility: hidden;
   z-index: 999998;
 
@@ -63,12 +63,11 @@ section.inner-content {
   $base-line-height: 1.5em !default;
   @include position(fixed, 0 auto 0 0);
   @include size(220px 100%);
-  @include transform(translateX(-220px));
-  @include transition(all 0.2s linear);
   background-color: black;
-  overflow-y: auto;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  transform: translateX(-220px);
   transition: all 0.2s linear;
   z-index: 999999;
 
@@ -104,6 +103,6 @@ section.inner-content {
   }
 
   &.is-visible {
-    @include transform(translateX(0));
+    transform: translateX(0);
   }
 }

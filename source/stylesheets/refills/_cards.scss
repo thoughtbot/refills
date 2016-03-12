@@ -22,15 +22,14 @@
 
   @include flex-basis(15em);
   @include flex-grow(1);
-  @include transition (all 0.2s ease-in-out);
   background-color: $card-background;
-  border-radius: $base-border-radius;
   border: $card-border;
+  border-radius: $base-border-radius;
   box-shadow: 0 2px 4px darken($base-background-color, 10%);
   cursor: pointer;
   margin: 0 $card-margin $base-spacing $card-margin;
   position: relative;
-
+  transition: all 0.2s ease-in-out;
 
   .card-image {
     overflow: hidden;
@@ -39,22 +38,22 @@
     background-color: $card-image-hover-color;
 
     img {
-      @include transition (all 0.2s ease-in-out);
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
-      width: 100%;
       opacity: 1;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
     }
   }
 
   .card-header {
-    @include transition (all 0.2s ease-in-out);
     background-color: $card-header-background;
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
     line-height: 1.5em;
     padding: ($base-spacing / 3) ($base-spacing / 2);
+    transition: all 0.2s ease-in-out;
   }
 
   .card-copy {

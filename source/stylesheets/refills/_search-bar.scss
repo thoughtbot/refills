@@ -1,4 +1,4 @@
-form.search-bar {  
+form.search-bar {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-spacing: 1.5em !default;
   $base-border-color: gainsboro !default;
@@ -13,7 +13,6 @@ form.search-bar {
 
   input[type=search] {
     @include appearance(none);
-    @include transition(border-color);
     background-color: white;
     border: 1px solid $base-border-color;
     box-sizing: border-box;
@@ -23,6 +22,7 @@ form.search-bar {
     margin: 0;
     padding: ($base-spacing / 3) ($base-spacing / 3);
     position: relative;
+    transition: border-color;
     width: 100%;
   }
 

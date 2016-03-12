@@ -37,12 +37,12 @@
   }
 
   .modal-fade-screen { // overlay
-    @include transition(opacity 0.25s ease);
     @include position(fixed, 0);
     background-color: rgba(#000, 0.85);
     opacity: 0;
     padding-top: 0.6em;
     text-align: left;
+    transition: opacity 0.25s ease;
     visibility: hidden;
     z-index: 99999999999;
 
@@ -65,12 +65,12 @@
     &:after,
     &:before {
       @include position(absolute, 3px 3px 0 50%);
-      @include transform(rotate(45deg));
       @include size(0.15em 1.5em);
       background: $modal-close-color;
       content: '';
       display: block;
       margin: -3px 0 0 -1px;
+      transform: rotate(45deg);
     }
 
     &:hover:after,
@@ -79,12 +79,11 @@
     }
 
     &:before {
-      @include transform(rotate(-45deg));
+      transform: rotate(-45deg);
     }
   }
 
   .modal-inner {
-    @include transition(opacity 0.25s ease);
     background: $modal-background;
     border-radius: $base-border-radius;
     margin-top: 0;
@@ -93,6 +92,7 @@
     overflow: auto;
     padding: $modal-padding / 2;
     position: relative;
+    transition: opacity 0.25s ease;
     width: 95%;
 
     @include media($medium-screen) {

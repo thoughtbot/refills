@@ -9,12 +9,12 @@
   $large-screen: em(860) !default;
   $grid-items-background: $base-background-color;
   $grid-item-background: desaturate($action-color, 30%);
-  $grid-item-colors: 
-    desaturate($action-color, 30%), 
-    #3581A5, 
+  $grid-item-colors:
+    desaturate($action-color, 30%),
+    #3581A5,
     #5FBEBE,
     #98C79A,
-    #A7A891, 
+    #A7A891,
     #BDCC97,
     #979EA0;
   $grid-item-border-size: 9px;
@@ -24,9 +24,8 @@
   $grid-item-height: 14em;
 
   @include clearfix;
-    
+
   .grid-item {
-    @include transition (all 0.2s ease-in-out);
     background: $grid-item-background;
     border-bottom: $grid-item-border-size solid $grid-items-background;
     border-left: ($grid-item-border-size / 2) solid $grid-items-background;
@@ -40,6 +39,7 @@
     padding: 2em;
     text-align: center;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
     width: 100%;
 
     @include media($large-screen) {
@@ -79,7 +79,7 @@
     color: transparentize($grid-item-color, 0.3);
     line-height: 1.5em;
     margin: auto;
-    
+
     @include media($medium-screen) {
       max-width: 70%;
     }
@@ -89,11 +89,11 @@
     @include media($large-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }
-    
+
     p {
       @include media($medium-screen) {
         max-width: 60%;
-      }  
+      }
     }
   }
 

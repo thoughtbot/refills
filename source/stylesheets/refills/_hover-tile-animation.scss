@@ -13,7 +13,7 @@
   cursor: pointer;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
-  
+
   @include media($medium-screen) {
     width: 40%;
   }
@@ -24,16 +24,16 @@
   }
 
   .hover-tile-container:hover > .hover-tile {
-    @include transform(translate(0, -100%));
+    transform: translate(0, -100%);
   }
 
   .hover-tile {
-    @include transition(all, 0.2s ease-in-out);
     background: inherit;
     color: white;
     height: inherit;
     overflow: hidden;
     padding: $base-spacing;
+    transition: all 0.2s ease-in-out;
   }
 
   .hover-tile-hidden {

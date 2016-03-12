@@ -79,7 +79,6 @@
   }
 
   .dropdown-menu {
-    @include transition (all 0.2s ease-in-out);
     background: $dropdown-background;
     border-radius: $base-border-radius;
     border: $dropdown-border;
@@ -93,6 +92,7 @@
     position: absolute;
     right: 0;
     top: $dropdown-distance-from-menu;
+    transition: all 0.2s ease-in-out;
     width: 228px;
     z-index: 99999;
 
@@ -109,7 +109,7 @@
 
   .dropdown-menu li {
     border-bottom: $dropdown-inner-border;
-    color: $dropdown-color; 
+    color: $dropdown-color;
     list-style: none;
     padding: $dropdown-padding / 2;
   }

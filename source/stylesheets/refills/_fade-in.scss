@@ -6,7 +6,7 @@
   $base-spacing: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  
+
   @include clearfix;
   background: $base-background-color;
   border-radius: $base-border-radius;
@@ -29,6 +29,6 @@
 }
 
 .js-fade-element-show {
-  @include transition (all 0.4s ease-in-out);
   opacity: 1;
+  transition: all 0.4s ease-in-out;
 }

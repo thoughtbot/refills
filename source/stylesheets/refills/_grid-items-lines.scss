@@ -11,7 +11,7 @@
   $base-font-color: $dark-gray !default;
   $grid-items-background: $base-background-color;
   $grid-item-background: $base-background-color;
-  $grid-item-border: 1px solid transparentize($base-font-color, 0.8); 
+  $grid-item-border: 1px solid transparentize($base-font-color, 0.8);
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
   $grid-item-color: $base-font-color;
@@ -19,9 +19,8 @@
 
   @include clearfix;
   position: relative;
-    
+
   .grid-item {
-    @include transition (all 0.2s ease-in-out);
     background: $grid-item-background;
     border-bottom: $grid-item-border;
     border-right: $grid-item-border;
@@ -32,6 +31,7 @@
     outline: none;
     padding: 2em;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
     width: 100%;
 
     @include media($large-screen) {
@@ -60,7 +60,7 @@
   .grid-item p {
       color: transparentize($grid-item-color, 0.4);
       line-height: 1.5em;
-      
+
       @include media($medium-screen) {
         max-width: 70%;
       }
@@ -73,7 +73,7 @@
     p {
       @include media($medium-screen) {
         max-width: 60%;
-      }  
+      }
     }
   }
 

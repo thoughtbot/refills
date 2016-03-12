@@ -1,4 +1,4 @@
-.sliding-panel-content {  
+.sliding-panel-content {
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $sliding-panel-border-color: $dark-gray;
@@ -11,12 +11,12 @@
 
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
-  @include transform(translateX(-220px));
-  @include transition(all 0.25s linear);
   background: $sliding-panel-background;
-  z-index: 999999;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  transform: translateX(-220px);
+  transition: all 0.25s linear;
+  z-index: 999999;
 
   ul {
     padding: 0;
@@ -46,15 +46,15 @@
   }
 
   &.is-visible {
-    @include transform(translateX(0));
+    transform: translateX(0);
   }
 }
 
 .sliding-panel-fade-screen {
   @include position(fixed, 0px 0px 0px 0px);
-  @include transition;
   background: black;
   opacity: 0;
+  transition: all 0.2s ease-in-out;
   visibility: hidden;
   z-index: 999998;
 

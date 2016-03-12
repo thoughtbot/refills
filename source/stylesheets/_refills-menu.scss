@@ -84,9 +84,9 @@ ul.refills-menu {
 }
 
 .menu-item.unstyled:after {
-  @include transform(scale(0.4) rotate(13deg));
   content: url('/images/new.svg');
   position: absolute;
   right: -42px;
   top: -63px;
+  transform: scale(0.4) rotate(13deg);
 }

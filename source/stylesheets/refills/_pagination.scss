@@ -1,4 +1,4 @@
-.pagination {  
+.pagination {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-spacing: 1.5em !default;
@@ -19,7 +19,7 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    
+
     li {
       display: inline;
       list-style: none;
@@ -27,7 +27,7 @@
 
     ul li {
       display: none;
-      
+
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3) {
@@ -40,7 +40,6 @@
     }
 
     li a {
-      @include transition (all 0.2s ease-in-out);
       background: $pagination-background;
       border-radius: $base-border-radius;
       border: $pagination-border;
@@ -48,6 +47,7 @@
       outline: none;
       padding: ($base-spacing / 4) ($gutter / 2);
       text-decoration: none;
+      transition: all 0.2s ease-in-out;
 
       &:hover,
       &:focus {

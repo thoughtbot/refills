@@ -10,10 +10,10 @@
   $flex-box-gutter: 0.4em;
   $flex-box-width: 18em;
   $flex-box-color: transparentize($base-font-color, 0.3);
-  $flex-box-top-colors: 
-    tomato, 
-    #72BFBF, 
-    #92B1E3, 
+  $flex-box-top-colors:
+    tomato,
+    #72BFBF,
+    #92B1E3,
     #E3D743,
     #CCC,
     #F6C05C;
@@ -27,7 +27,6 @@
     text-align: center;
 
   .flex-box {
-    @include transition (all 0.2s ease-in-out);
     @include flex(2 2 15em);
     @include align-self(stretch);
     background: $flex-box-background;
@@ -37,12 +36,13 @@
     margin: $flex-box-gutter;
     padding: 2em 2em 3em 2em;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
 
     @for $i from 1 to 7 { // assign colors from $flex-box-top-colors list
       &:nth-child(#{$i}) {
         $color-from-list: nth($flex-box-top-colors, $i);
         border-top: 6px solid $color-from-list;
-        
+
         &:focus,
         &:hover {
           background-color: transparentize($color-from-list, 0.9);

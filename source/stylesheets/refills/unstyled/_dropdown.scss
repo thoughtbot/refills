@@ -25,13 +25,13 @@
   }
 
   .dropdown-menu {
-    @include transition (all 0.2s ease-in-out);
     cursor: pointer;
     display: none;
     overflow: show;
     position: absolute;
     text-align: left;
     top: $dropdown-distance-from-menu;
+    transition: all 0.2s ease-in-out;
     width: 228px;
     z-index: 99999;
   }
