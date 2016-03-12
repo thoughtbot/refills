@@ -2,7 +2,7 @@
 button {
   @include appearance(none);
   background-color: $action-color;
-  border: none;
+  border: 0;
   border-radius: $base-border-radius;
   color: #fff;
   cursor: pointer;

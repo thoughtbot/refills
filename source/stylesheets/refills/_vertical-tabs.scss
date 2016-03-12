@@ -65,15 +65,15 @@
   }
 
   .vertical-tab:focus {
-    outline: none; 
+    outline: none;
   }
 
   .vertical-tab-content-container {
     display: block;
     margin: 0 auto;
 
-    & a:focus { 
-      outline: none; 
+    & a:focus {
+      outline: none;
     }
 
     @include media($vertical-tab-mode) {
@@ -93,7 +93,7 @@
     }
 
     @include media($vertical-tab-mode) {
-      border: none;
+      border: 0;
       display: none;
     }
   }
@@ -112,12 +112,12 @@
     }
 
     &:first-child {
-      border-top: none;
+      border-top: 0;
     }
 
     &.is-active {
       background: $tab-active-color;
-      border-bottom: none;
+      border-bottom: 0;
     }
 
     @include media($vertical-tab-mode) {

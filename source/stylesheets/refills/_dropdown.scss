@@ -124,7 +124,7 @@
   }
 
   .dropdown-menu li:last-child {
-    border: none;
+    border: 0;
     border-bottom-left-radius: $base-border-radius;
     border-bottom-right-radius: $base-border-radius;
   }

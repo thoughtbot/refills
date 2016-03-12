@@ -13,16 +13,16 @@ article.type-system-traditional {
   @include clearfix;
   font-family: $sans-serif;
   text-align: left;
-  
+
   h1, h2, h3, p {
     margin: 0;
   }
 
   hr {
     border-bottom: 1px solid $light-gray;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
     margin: $base-spacing 0;
   }
 
@@ -113,7 +113,7 @@ article.type-system-traditional {
       font-style: italic;
     }
   }
-  
+
   a.read-more {
     display: inline-block;
     font-family: $sans-serif;

@@ -68,7 +68,7 @@
       text-align: left;
 
       &:first-child {
-        border-left: none;
+        border-left: 0;
       }
     }
   }
@@ -83,7 +83,7 @@
       padding: $table-padding;
 
       &:first-child {
-        border-left: none;
+        border-left: 0;
       }
 
       button {

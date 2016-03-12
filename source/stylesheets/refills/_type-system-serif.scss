@@ -14,16 +14,16 @@ article.type-system-serif {
   @include clearfix;
   font-family: $serif-2;
   text-align: left;
-  
+
   h1, h2, h3, p {
     margin: 0;
   }
 
   hr {
     border-bottom: 1px solid $light-gray;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
     margin: $base-spacing 0;
   }
 
@@ -130,7 +130,7 @@ article.type-system-serif {
       top: -1px;
     }
   }
-  
+
   hr {
     width: 3em;
   }

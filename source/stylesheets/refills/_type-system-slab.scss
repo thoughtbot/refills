@@ -13,16 +13,16 @@ article.type-system-slab {
   @include clearfix;
   font-family: $serif;
   text-align: left;
-  
+
   h1, h2, h3, p {
     margin: 0;
   }
 
   hr {
     border-bottom: 1px solid $light-gray;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
     margin: $base-spacing 0;
   }
 
@@ -86,7 +86,7 @@ article.type-system-slab {
    font-size: 1em;
    font-weight: 600;
    line-height: 1.4em;
-   margin-bottom: 0.5em; 
+   margin-bottom: 0.5em;
    text-transform: uppercase;
   }
 
