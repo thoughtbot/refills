@@ -95,8 +95,8 @@
   .empties-banner {
     $empties-color: #776faa;
     background-color: $empties-color;
-    border-radius: 5px;
     border: 1px solid darken(transparentize($empties-color, 0.1), 10%);
+    border-radius: 5px;
     box-shadow: 0 2px 0 darken(transparentize($empties-color, 0.7), 10%);
     color: lighten(#c8c0ff, 8);
     display: inline-block;

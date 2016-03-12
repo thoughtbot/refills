@@ -18,11 +18,11 @@
   $table-stripe-background-hover: darken($table-stripe-background, 5%);
   $table-padding: 0.75em 1em;
 
+  border: $table-border;
   border-collapse: separate;
   border-left: 0;
   border-radius: $base-border-radius;
   border-spacing: 0;
-  border: $table-border;
   width: 100%;
 
   tbody {

@@ -7,8 +7,8 @@
 
   @include display(flex);
   @include flex-wrap(wrap);
-  margin-bottom: $base-line-height;
   margin: 1em;
+  margin-bottom: $base-line-height;
   overflow: auto;
   padding: 0;
 
@@ -39,8 +39,8 @@
   }
 
   .bullet-content {
-    margin-left: $icon-bullet-size * 1.4;
     margin-bottom: 2em;
+    margin-left: $icon-bullet-size * 1.4;
   }
 
   h2 {

@@ -1,4 +1,4 @@
-.button-group {  
+.button-group {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -57,8 +57,7 @@
     }
 
     &:first-child .button-group-item {
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
+      @include border-top-radius($base-border-radius);
       border-top: $button-group-border;
 
       @include media($large-screen) {
@@ -70,8 +69,7 @@
     }
 
     &:last-child .button-group-item {
-      border-bottom-left-radius: $base-border-radius;
-      border-bottom-right-radius: $base-border-radius;
+      @include border-bottom-radius($base-border-radius);
       border-bottom: $button-group-border;
 
       @include media($large-screen) {

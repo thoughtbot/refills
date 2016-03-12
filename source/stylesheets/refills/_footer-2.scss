@@ -35,13 +35,13 @@
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
+  display: inline-block;
   padding: $base-spacing;
   width: 100%;
-  display: inline-block;
 
   .footer-logo {
-    margin-right: 1em;
     margin-bottom: 1em;
+    margin-right: 1em;
 
     @include media($large-screen) {
       float: left;
@@ -61,8 +61,8 @@
     @include media($large-screen) {
       float: left;
       line-height: 1.8em;
-      margin-left: 1em;
       margin-bottom: 0;
+      margin-left: 1em;
     }
   }
 
@@ -104,8 +104,8 @@
       }
 
       li {
-        font-size: 1em;
         float: left;
+        font-size: 1em;
         line-height: 0;
         margin: 0;
         padding-right: 0.7em;

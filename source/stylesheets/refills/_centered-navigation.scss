@@ -70,12 +70,12 @@
   }
 
   ul.centered-navigation-menu {
-    -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
     display: none;
     margin: 0 auto;
     overflow: visible;
     padding: 0;
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
     width: 100%;
     z-index: 99999;
 

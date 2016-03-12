@@ -99,8 +99,8 @@
 
 .texture-examples {
   @include clearfix;
-  border-radius: 6px;
   border: 1px solid silver;
+  border-radius: 6px;
   margin-bottom: 3em;
   padding: 1em;
 
@@ -177,8 +177,8 @@
     $texture-legend-top-background: lighten(#ddf0ef, 1%);
     $texture-legend-bottom-background: darken(#ddf0ef, 10%);
     float: left;
-    margin-bottom: 1em;
     margin: 0 0.95% 1em 0.95%;
+    margin-bottom: 1em;
     width: 14.7%;
 
     .example-normal {

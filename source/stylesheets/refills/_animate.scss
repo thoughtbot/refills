@@ -17,7 +17,7 @@ $action-color: #477dca !default;
   }
 }
 
-// Tweak the keyframes below. Or swap them with another animation pattern at 
+// Tweak the keyframes below. Or swap them with another animation pattern at
 // https://github.com/daneden/animate.css/tree/master/source
 
 @-webkit-keyframes zoomOut {
@@ -61,11 +61,11 @@ $action-color: #477dca !default;
 
 .animate-target {
   @include size(6em);
-  -webkit-transform-style: preserve-3d;
-  border-radius: 50%;
   border: 22px solid #e2e2e3;
+  border-radius: 50%;
   margin: 0 auto 3em;
   text-align: center;
+  -webkit-transform-style: preserve-3d;
 }
 
 button {

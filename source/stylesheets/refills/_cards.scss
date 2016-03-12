@@ -32,14 +32,13 @@
   transition: all 0.2s ease-in-out;
 
   .card-image {
-    overflow: hidden;
+    background-color: $card-image-hover-color;
     height: 150px;
     max-height: 150px;
-    background-color: $card-image-hover-color;
+    overflow: hidden;
 
     img {
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
+      @include border-top-radius($base-border-radius);
       opacity: 1;
       transition: all 0.2s ease-in-out;
       width: 100%;

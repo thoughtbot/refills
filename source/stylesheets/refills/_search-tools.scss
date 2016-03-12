@@ -16,8 +16,8 @@
   @include justify-content(space-between);
   @include clearfix;
   background: $search-tools-background;
-  border-radius: $base-border-radius;
   border: 1px solid $search-tools-border-color;
+  border-radius: $base-border-radius;
   padding: $gutter ($gutter / 2);
   width: 100%;
 
@@ -87,8 +87,8 @@
 
     button.clear {
       @include position(absolute, 5px 5px auto auto);
-      max-width: $clear-button-width;
       font-size: 0.7em;
+      max-width: $clear-button-width;
     }
 
     .hide-options {
@@ -105,9 +105,9 @@
 
     button {
       display: block;
-      width: 100%;
       padding: 0.5em 1em;
       text-align: center;
+      width: 100%;
     }
   }
 }

@@ -25,8 +25,8 @@
     text-decoration: none;
 
     &::before {
-      font-size: $expander-arrow-width;
       content: "\25BC";
+      font-size: $expander-arrow-width;
       margin-right: 0.5em;
     }
   }
@@ -38,8 +38,8 @@
 
   .expander-hidden {
     &::before {
-      font-size: $expander-arrow-width;
       content: "\25BA";
+      font-size: $expander-arrow-width;
     }
   }
 

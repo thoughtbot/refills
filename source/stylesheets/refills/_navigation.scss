@@ -162,8 +162,8 @@ header.navigation {
 
     > a::after {
       @include position(absolute, auto -0.4em auto auto);
-      content: '\25BE';
       color: $navigation-color;
+      content: '\25BE';
     }
   }
 

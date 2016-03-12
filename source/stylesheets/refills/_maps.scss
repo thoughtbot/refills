@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-#map_canvas img { 
+#map_canvas img {
   max-width: none; // to prevent UI control bug
 }
 
@@ -13,8 +13,8 @@
 
 #map_canvas .firstHeading {
   font-size: 1em;
-  line-height: 1em;
   font-weight: bold;
+  line-height: 1em;
   margin: 0;
 }
 

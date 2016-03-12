@@ -40,8 +40,8 @@ section.refill {
 
 .line-behind-text {
   border-bottom: 1px solid #cacaca;
-  text-align: center;
   margin-bottom: 4.5em;
+  text-align: center;
 }
 
 .line-behind-text h6 {
@@ -163,19 +163,19 @@ pre[class*="language-"] {
   }
 
   &:nth-of-type(1) .copy-source {
-    background: #e98065;     
+    background: #e98065;
   }
 
   &:nth-of-type(2) .copy-source {
-    background: #55a1d4;     
+    background: #55a1d4;
   }
 
   &:nth-of-type(3) .copy-source:nth-of-type(1) {
-    background: #e9c05b;     
+    background: #e9c05b;
   }
 
   &:nth-of-type(3) .copy-source:nth-of-type(2) {
-    background: #89b981;     
+    background: #89b981;
   }
 
   .copy-source {

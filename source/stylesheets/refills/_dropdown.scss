@@ -27,8 +27,8 @@
 
   .dropdown-description {
     background: $dropdown-background;
-    border-bottom-left-radius: $base-border-radius;
     border-bottom: $dropdown-border;
+    border-bottom-left-radius: $base-border-radius;
     border-left: $dropdown-border;
     border-top-left-radius: $base-border-radius;
     border-top: $dropdown-border;
@@ -46,11 +46,11 @@
 
   .dropdown-button {
     background: $dropdown-background;
-    border-bottom-right-radius: $base-border-radius;
-    border-top-right-radius: $base-border-radius;
-    border-top: $dropdown-border;
-    border-right: $dropdown-border;
     border-bottom: $dropdown-border;
+    border-bottom-right-radius: $base-border-radius;
+    border-right: $dropdown-border;
+    border-top: $dropdown-border;
+    border-top-right-radius: $base-border-radius;
     cursor: pointer;
     float: right;
     font-size: 0.7em;
@@ -80,8 +80,8 @@
 
   .dropdown-menu {
     background: $dropdown-background;
-    border-radius: $base-border-radius;
     border: $dropdown-border;
+    border-radius: $base-border-radius;
     box-shadow: 0 2px 2px transparentize(black, 0.8);
     color: $dropdown-color;
     cursor: pointer;

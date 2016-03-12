@@ -58,8 +58,7 @@
     text-decoration: none;
 
     @include media($tab-mode) {
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
+      @include border-top-radius($base-border-radius);
       border-top: 0;
       display: inline-block;
     }

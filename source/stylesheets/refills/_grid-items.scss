@@ -34,8 +34,8 @@
     cursor: pointer;
     float: left;
     height: $grid-item-height;
-    overflow: hidden;
     outline: none;
+    overflow: hidden;
     padding: 2em;
     text-align: center;
     text-decoration: none;
@@ -55,8 +55,8 @@
         &:focus,
         &:hover {
           background-color: darken($background-from-list, 10%);
-          background-repeat: no-repeat;
           background-position: top;
+          background-repeat: no-repeat;
           background-size: cover;
         }
       }
