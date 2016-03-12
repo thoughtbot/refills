@@ -43,12 +43,12 @@
     @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top),
       transparentize($image-gradient-color-bottom, $transparency-bottom));
     display: block;
-    @include position(absolute, 0px 0px 0px 0px);
+    @include position(absolute, 0);
 
     &:after {
       @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left),
         transparentize($image-gradient-color-right, $transparency-right));
-      @include position(absolute, 0px 0px 0px 0px);
+      @include position(absolute, 0);
       content: '';
       display: block;
     }

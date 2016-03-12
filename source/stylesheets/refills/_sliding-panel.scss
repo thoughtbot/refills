@@ -51,7 +51,7 @@
 }
 
 .sliding-panel-fade-screen {
-  @include position(fixed, 0px 0px 0px 0px);
+  @include position(fixed, 0);
   background: black;
   opacity: 0;
   transition: all 0.2s ease-in-out;

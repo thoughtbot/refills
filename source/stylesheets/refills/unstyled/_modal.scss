@@ -13,7 +13,7 @@
   }
 
   .modal-fade-screen { // overlay
-    @include position(fixed, 0 0 0 0);
+    @include position(fixed, 0);
     background-color: rgba(0, 0, 0, 0.85);
     opacity: 0;
     transition: opacity 0.25s ease;
@@ -26,7 +26,7 @@
   }
 
   .modal-bg {
-    @include position(absolute, 0 0 0 0);
+    @include position(absolute, 0);
     cursor: pointer;
   }
 
