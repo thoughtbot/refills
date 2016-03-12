@@ -1,6 +1,7 @@
-scss:
-  enabled: true
 java_script:
   enabled: true
 ruby:
+  enabled: true
+scss:
+  config_file: .scss-lint.yml
   enabled: true
