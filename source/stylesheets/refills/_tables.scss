@@ -19,7 +19,7 @@
   $table-padding: 0.75em 1em;
 
   border-collapse: separate;
-  border-left: 0px;
+  border-left: 0;
   border-radius: $base-border-radius;
   border-spacing: 0;
   border: $table-border;
@@ -62,7 +62,7 @@
   thead {
     th {
       background-color: $table-header-background;
-      border-bottom: 0px;
+      border-bottom: 0;
       border-left: 1px solid $table-border-color;
       padding: $table-padding;
       text-align: left;
@@ -77,7 +77,7 @@
     background-color: $table-background;
 
     td {
-      border-bottom: 0px;
+      border-bottom: 0;
       border-left: 1px solid $table-border-color;
       border-top: 1px solid $table-border-color;
       padding: $table-padding;

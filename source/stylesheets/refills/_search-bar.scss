@@ -27,7 +27,7 @@ form.search-bar {
   }
 
   button[type=submit] {
-    @include position(absolute, 0em 0em 0em null);
+    @include position(absolute, 0 0 0 null);
     outline: none;
     padding: 5px 10px;
 

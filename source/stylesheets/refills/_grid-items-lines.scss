@@ -80,7 +80,7 @@
   // this, below, might not be the most beautiful solution but it removes the outer borders by using the background color.
   .bottom-cover {
     background: $grid-items-background;
-    bottom: 0px;
+    bottom: 0;
     height: 3px;
     position: absolute;
     width: 100%;
@@ -90,7 +90,7 @@
     background: $grid-items-background;
     height: 100%;
     position: absolute;
-    right: 0px;
+    right: 0;
     width: 4px;
   }
 }

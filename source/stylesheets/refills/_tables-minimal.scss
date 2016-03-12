@@ -35,7 +35,7 @@
   thead {
     th {
       background-color: $table-header-background;
-      border-bottom: 0px;
+      border-bottom: 0;
       padding: $table-padding;
       text-align: left;
     }
@@ -45,7 +45,7 @@
     background-color: $table-background;
 
     td {
-      border-bottom: 0px;
+      border-bottom: 0;
       border-top: 1px solid $table-border-color;
       line-height: $base-line-height;
       padding: $table-padding;

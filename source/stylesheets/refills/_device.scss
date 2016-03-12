@@ -53,11 +53,11 @@
       background: $device-background;
       border-radius: 2em;
       box-shadow:
-        1px 0px lighten($device-backside-background, 20%),
-        4px 0px lighten($device-backside-background, 2%),
-        7px 0px $device-backside-background,
-        10px 0px $device-backside-background,
-        13px 0px $device-backside-background;
+        1px 0 lighten($device-backside-background, 20%),
+        4px 0 lighten($device-backside-background, 2%),
+        7px 0 $device-backside-background,
+        10px 0 $device-backside-background,
+        13px 0 $device-backside-background;
       display: block;
       float: right;
       margin-bottom: -12em;
@@ -65,12 +65,12 @@
       padding: $device-padding-vertical 0;
       transform:
         perspective(800px)
-        translateX(0px)
+        translateX(0)
         translateY(-100px)
         translateZ(50px)
-        rotateX(0deg)
+        rotateX(0)
         rotateY(-20deg)
-        rotateZ(-0deg)
+        rotateZ(0)
       ;
       width: $device-screen-width + (2 * $device-padding-horizontal);
       z-index: 99999;

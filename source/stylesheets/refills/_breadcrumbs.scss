@@ -1,4 +1,4 @@
-.breadcrumb {   
+.breadcrumb {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
@@ -58,7 +58,7 @@
 
     &:after,
     &:before {
-      @include position(absolute, 0px auto 0px 100%);
+      @include position(absolute, 0 auto 0 100%);
       border-bottom: $breadcrumb-height / 2 solid transparent;
       border-left: $breadcrumb-height / 4 solid transparent;
       border-top: $breadcrumb-height / 2 solid transparent;
