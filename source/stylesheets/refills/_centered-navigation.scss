@@ -31,8 +31,8 @@
 
     img {
       max-height: $centered-navigation-height;
-      opacity: .6;
-      padding: .8em 0;
+      opacity: 0.6;
+      padding: 0.8em 0;
     }
 
     @include media($horizontal-bar-mode) {
@@ -240,7 +240,7 @@
         &:last-child > a {
           border-bottom-left-radius: $base-border-radius;
           border-bottom-right-radius: $base-border-radius;
-          padding-bottom: .7em;
+          padding-bottom: 0.7em;
         }
       }
 

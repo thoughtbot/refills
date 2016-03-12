@@ -1,4 +1,4 @@
-.progress-bar-indication {  
+.progress-bar-indication {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
@@ -35,10 +35,10 @@
   }
 
   p {
-    color: $progress-color;    
+    color: $progress-color;
     line-height: $base-line-height;
     margin: 0;
-    padding: .1em .5em;
+    padding: 0.1em 0.5em;
     text-shadow: 0 0 1px black;
   }
 }

@@ -1,4 +1,4 @@
-@mixin texture($gradient-angle, $bg-color-1, $bg-color-2, $texture-number, $inverted) { $texture-list: 
+@mixin texture($gradient-angle, $bg-color-1, $bg-color-2, $texture-number, $inverted) { $texture-list:
   "paper.png"             // Fabric and paper
   "rice_paper.png"
   "noise_lines.png"
@@ -44,7 +44,7 @@
   "pinstripe.png"
   "line_horizontal1.png"
   "line_horizontal2.png"
-  "linen.png" 
+  "linen.png"
   "vintage_speckles.png"   // Patina and irregular
   "subtle_grunge.png"
   "old_wall.png"
@@ -58,7 +58,7 @@
   "subtle_surface.png"
   "dust.png"
   "light_alu.png"
-  "corrugation.png" 
+  "corrugation.png"
   "kindajean.png"           // Diagonal
   "line_diagonal1.png"
   "line_diagonal2.png"
@@ -118,7 +118,7 @@
 
   h4 {
     color: gray;
-    font-size: .8em;
+    font-size: 0.8em;
     font-weight: 200;
     line-height: 2.2em;
     margin: 0;
@@ -130,7 +130,7 @@
     clear: both;
     display: block;
     padding-top: 2em;
-    text-align: center;    
+    text-align: center;
   }
 
   a {
@@ -182,12 +182,12 @@
     width: 14.7%;
 
     .example-normal {
-      @include texture(180deg, $texture-legend-top-background, $texture-legend-bottom-background, $i, 0); 
-      // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
+      @include texture(180deg, $texture-legend-top-background, $texture-legend-bottom-background, $i, 0);
+      // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal
     }
     .example-inverted {
-      @include texture(180deg, $texture-legend-top-background, $texture-legend-bottom-background, $i, 1); 
-      // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
+      @include texture(180deg, $texture-legend-top-background, $texture-legend-bottom-background, $i, 1);
+      // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal
     }
   }
 }
