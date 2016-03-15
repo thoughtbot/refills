@@ -4,7 +4,7 @@
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
+  $action-color: #477dca !default;
   $dark-gray: #333 !default;
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
@@ -18,8 +18,8 @@
   $vertical-tab-mode: $medium-screen;
 
   @include clearfix;
-  border-radius: $tab-border-radius;
   border: $tab-border;
+  border-radius: $tab-border-radius;
   margin-bottom: $base-spacing;
   overflow: hidden;
 

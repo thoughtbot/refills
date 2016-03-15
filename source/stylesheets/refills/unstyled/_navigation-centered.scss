@@ -9,7 +9,7 @@
   .mobile-logo {
     display: inline;
     float: left;
-    
+
     @include media($large-screen) {
       display: none;
     }

@@ -1,4 +1,4 @@
-@mixin texture($gradient-angle, $bg-color-1, $bg-color-2, $texture-number, $inverted) { $texture-list: 
+@mixin texture($gradient-angle, $bg-color-1, $bg-color-2, $texture-number, $inverted) { $texture-list:
   "paper.png"             // Fabric and paper
   "rice_paper.png"
   "noise_lines.png"
@@ -44,7 +44,7 @@
   "pinstripe.png"
   "line_horizontal1.png"
   "line_horizontal2.png"
-  "linen.png" 
+  "linen.png"
   "vintage_speckles.png"   // Patina and irregular
   "subtle_grunge.png"
   "old_wall.png"
@@ -58,7 +58,7 @@
   "subtle_surface.png"
   "dust.png"
   "light_alu.png"
-  "corrugation.png" 
+  "corrugation.png"
   "kindajean.png"           // Diagonal
   "line_diagonal1.png"
   "line_diagonal2.png"
@@ -106,16 +106,16 @@
   width: 100%;
 
   .texture-normal {
-    // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
-    @include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 1); 
+    // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal
+    @include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 1);
     float: left;
     height: 5em;
     width: 50%;
   }
 
   .texture-inverted {
-    // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
-    @include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 0); 
+    // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal
+    @include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 0);
     float: left;
     height: 5em;
     width: 50%;

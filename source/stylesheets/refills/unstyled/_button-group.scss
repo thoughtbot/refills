@@ -1,4 +1,4 @@
-.button-group {  
+.button-group {
   $large-screen: em(860) !default;
 
   input {
@@ -25,6 +25,6 @@
   }
 
   input:checked + .button-group-item {
-    color: #ff0000;
+    color: #f00;
   }
 }

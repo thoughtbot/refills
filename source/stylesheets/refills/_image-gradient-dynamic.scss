@@ -15,11 +15,11 @@
   width: 100%;
 
   img {
-   height: auto;
-   left: 0;
-   position: relative;
-   top: 0;
-   width: 100%;
+    height: auto;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
   }
 
   .copy {
@@ -42,14 +42,14 @@
   .overlay {
     @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top),
       transparentize($image-gradient-color-bottom, $transparency-bottom));
-    display: block;
     @include position(absolute, 0);
+    display: block;
 
     &::after {
       @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left),
         transparentize($image-gradient-color-right, $transparency-right));
       @include position(absolute, 0);
-      content: '';
+      content: "";
       display: block;
     }
   }

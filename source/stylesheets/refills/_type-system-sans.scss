@@ -2,19 +2,22 @@ article.type-system-sans {
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
+  $action-color: #477dca !default;
   $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
+  $light-gray: #ddd !default;
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
-  $sans-serif: 'PT Sans', sans-serif;
-  $sans-serif-2: 'Titillium Web', sans-serif;
+  $sans-serif: "PT Sans", sans-serif;
+  $sans-serif-2: "Titillium Web", sans-serif;
 
   @include clearfix;
   font-family: $sans-serif;
   text-align: left;
 
-  h1, h2, h3, p {
+  h1,
+  h2,
+  h3,
+  p {
     margin: 0;
   }
 
@@ -73,9 +76,9 @@ article.type-system-sans {
   }
 
   code {
-    background: #F7F7F7;
+    background: #f7f7f7;
     border-radius: $base-border-radius * 1.5;
-    border: 1px solid #E0E0E0;
+    border: 1px solid #e0e0e0;
     font-family: monaco;
     font-size: 0.65em;
     font-style: normal;
@@ -84,12 +87,12 @@ article.type-system-sans {
   }
 
   h3 {
-   font-family: $sans-serif-2;
-   font-size: 1em;
-   font-weight: 700;
-   line-height: 1.4em;
-   margin-bottom: 0.5em;
-   text-transform: uppercase;
+    font-family: $sans-serif-2;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.4em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
   }
 
   p.date {
