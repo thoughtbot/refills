@@ -40,15 +40,27 @@
   }
 
   .overlay {
-    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top),
-      transparentize($image-gradient-color-bottom, $transparency-bottom));
     @include position(absolute, 0);
+    background-color: transparentize(
+      $image-gradient-color-top,
+      $transparency-top
+    );
+    background-image: linear-gradient($vertical-angle,
+      transparentize($image-gradient-color-top, $transparency-top),
+      transparentize($image-gradient-color-bottom, $transparency-bottom)
+    );
     display: block;
 
     &::after {
-      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left),
-        transparentize($image-gradient-color-right, $transparency-right));
       @include position(absolute, 0);
+      background-color: transparentize(
+        $image-gradient-color-left,
+        $transparency-right
+      );
+      background-image: linear-gradient($horizontal-angle,
+        transparentize($image-gradient-color-left, $transparency-left),
+        transparentize($image-gradient-color-right, $transparency-right)
+      );
       content: "";
       display: block;
     }
