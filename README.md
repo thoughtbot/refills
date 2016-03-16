@@ -15,7 +15,8 @@ for updates.
 ## Requirements
 
 - [Sass](https://github.com/sass/sass) 3.3+
-- [Bourbon](https://github.com/thoughtbot/bourbon) 4.0+
+- [Bourbon](https://github.com/thoughtbot/bourbon) 4 (Refills is not currently
+  compatible with Bourbon 5)
 - [Neat](https://github.com/thoughtbot/neat) 1.6+
 
 ## Installation
