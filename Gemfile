@@ -1,14 +1,17 @@
 source "https://rubygems.org"
 
-gem "middleman", "~> 3.4"
+ruby "2.3.0"
+
 gem "bourbon", "~> 4.2"
+gem "middleman", "~> 4.1"
 gem "middleman-gh-pages", "~> 0.3"
 gem "middleman-livereload", "~> 3.4"
+gem "middleman-sprockets", "= 4.0.0.rc.1"
 gem "neat", "~> 1.7"
-gem "sass", "~> 3.4"
+gem "sassc", "~> 1.8"
 
 group :test do
-  gem "rspec"
-  gem "generator_spec", github: "stevehodgkiss/generator_spec", tag: "0.9.3"
+  gem "generator_spec", "~> 0.9.3"
   gem "railties"
+  gem "rspec"
 end

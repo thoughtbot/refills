@@ -1,18 +1,8 @@
-require 'erubis'
-require 'lib/snippet_helpers'
-
 activate :directory_indexes
 
-set :css_dir, 'stylesheets'
-set :images_dir, 'images'
-set :js_dir, 'javascripts'
-
-helpers SnippetHelpers
-
-ready do
-  sprockets.append_path 'vendor/stylesheets'
-  sprockets.append_path 'vendor/javascripts'
-end
+set :css_dir, "stylesheets"
+set :images_dir, "images"
+set :js_dir, "javascripts"
 
 configure :development do
   activate :livereload
