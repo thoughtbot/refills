@@ -1,8 +1,5 @@
 [![Refills](http://images.thoughtbot.com/bourbon/refills-logo.svg)](http://refills.bourbon.io)
 
-[![Gem Version](http://img.shields.io/gem/v/refills.svg?style=flat)](https://rubygems.org/gems/refills)
-[![Build Status](https://travis-ci.org/thoughtbot/refills.svg?branch=master)](https://travis-ci.org/thoughtbot/refills)
-
 ## Components and patterns built with Bourbon and Neat
 
 - **[Examples & Code Snippets](http://refills.bourbon.io)**
