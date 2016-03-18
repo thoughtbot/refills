@@ -63,7 +63,7 @@
   // Nav menu
 
   .centered-navigation-wrapper {
-    @include outer-container;
+    @include outer-container($refills-max-width);
     @include clearfix;
     position: relative;
     z-index: 999;

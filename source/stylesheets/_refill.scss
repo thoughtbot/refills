@@ -12,7 +12,7 @@ section.refill {
 }
 
 .refills-wrapper {
-  @include outer-container;
+  @include outer-container($refills-max-width);
   padding: 1em;
 
   h1.main-header {
