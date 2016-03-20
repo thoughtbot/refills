@@ -14,7 +14,6 @@
   width: 60%;
 
   .expander-trigger {
-    @include user-select(none);
     border-bottom: 1px solid $light-gray;
     color: $action-color;
     cursor: pointer;
@@ -23,6 +22,7 @@
     margin-bottom: $expander-toggle-size;
     padding-bottom: $expander-toggle-size / 4;
     text-decoration: none;
+    user-select: none;
 
     &::before {
       content: "\25BC";
