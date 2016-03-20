@@ -18,21 +18,21 @@
     #CCC,
     #F6C05C;
 
-    @include clearfix;
-    @include display(flex);
-    @include justify-content(center);
-    @include align-items(stretch);
-    @include flex-wrap(wrap);
-    clear: both;
-    text-align: center;
+  @include clearfix;
+  align-items: stretch;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 
   .flex-box {
-    @include flex(2 2 15em);
-    @include align-self(stretch);
+    align-self: stretch;
     background: $flex-box-background;
     border-radius: $base-border-radius;
     box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10%);
     display: block;
+    flex: 2 2 15em;
     margin: $flex-box-gutter;
     padding: 2em 2em 3em 2em;
     text-decoration: none;
@@ -71,6 +71,6 @@
   }
 
   .flex-box-big {
-    @include flex(1 1 40em);
+    flex: 1 1 40em;
   }
 }

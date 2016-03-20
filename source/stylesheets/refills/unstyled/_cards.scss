@@ -1,14 +1,14 @@
 .cards {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include justify-content(space-between);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   .card {
-    @include flex-basis(20em);
-    @include flex-grow(1);
+    flex-basis: 20em;
+    flex-grow: 1;
     margin: 0 1em;
   }
-  
+
   .card-image {
     max-height: 150px;
     overflow: hidden;
