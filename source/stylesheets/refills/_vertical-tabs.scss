@@ -14,7 +14,7 @@
   $tab-content-background: lighten($tab-border-color, 10%);
   $tab-active-color: $tab-content-background;
   $tab-inactive-color: $base-background-color;
-  $vertical-tabs-height: em(300);
+  $vertical-tabs-height: 18.75em;
   $vertical-tab-mode: $medium-screen;
 
   @include clearfix;
@@ -77,7 +77,7 @@
     }
 
     @include media($vertical-tab-mode) {
-      @include size(80% $vertical-tabs-height);
+      @include size(80%, $vertical-tabs-height);
       background-color: $tab-content-background;
       display: inline-block;
     }

@@ -2,7 +2,7 @@
   $sliding-panel-width: 220px;
 
   @include position(fixed, 0 auto 0 0);
-  @include size($sliding-panel-width 100%);
+  @include size($sliding-panel-width, 100%);
   background: #fff;
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;

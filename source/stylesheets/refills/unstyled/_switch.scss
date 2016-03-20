@@ -1,4 +1,4 @@
-.switch {  
+.switch {
   $switch-width: 52px;
   $switch-padding: 2px;
   $switch-height: 32px;
@@ -13,7 +13,7 @@
     display: none;
 
     + .checkbox {
-      @include size($switch-width $switch-height);
+      @include size($switch-width, $switch-height);
       border: 1px solid #000;
       cursor: pointer;
       position: relative;

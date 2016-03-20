@@ -10,7 +10,7 @@
   $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
 
   @include position(fixed, 0 auto 0 0);
-  @include size(220px 100%);
+  @include size(220px, 100%);
   background: $sliding-panel-background;
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;

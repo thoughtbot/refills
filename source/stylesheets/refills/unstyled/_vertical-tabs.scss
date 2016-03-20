@@ -29,7 +29,7 @@
     display: block;
 
     @include media($large-screen) {
-      @include size(80% $vertical-tabs-height);
+      @include size(80%, $vertical-tabs-height);
       display: inline-block;
     }
   }

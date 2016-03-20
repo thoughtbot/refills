@@ -65,7 +65,7 @@
     &::after,
     &::before {
       @include position(absolute, 3px 3px 0 50%);
-      @include size(0.15em 1.5em);
+      @include size(0.15em, 1.5em);
       background: $modal-close-color;
       content: "";
       display: block;

@@ -27,7 +27,7 @@ section.inner-content {
   }
 
   img {
-    @include size(30px 26px);
+    @include size(30px, 26px);
     max-width: 100%;
   }
 }
@@ -62,7 +62,7 @@ section.inner-content {
 .er_toc {
   $base-line-height: 1.5em !default;
   @include position(fixed, 0 auto 0 0);
-  @include size(220px 100%);
+  @include size(220px, 100%);
   background-color: black;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
