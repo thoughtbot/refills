@@ -60,7 +60,7 @@ nav.bourbon {
       &.#{$site} {
         background-image: url("/images/bourbon-nav/#{$site}.png");
 
-        @include hidpi {
+        @media only screen and (min-resolution: 125dpi) {
           background-image: url("/images/bourbon-nav/#{$site}@2x.png");
           background-size: 20%;
         }
