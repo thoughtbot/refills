@@ -6,18 +6,18 @@
   $action-color: #477DCA !default;
 
   $dark-gray: #333 !default;
-  $large-screen: em(860) !default;
+  $large-screen: 53.75em !default;
   $base-font-color: $dark-gray !default;
   $clear-button-width: 4em;
   $search-tools-border-color: $base-border-color;
   $search-tools-background: lighten($search-tools-border-color, 10%);
 
-  @include display(flex);
-  @include justify-content(space-between);
   @include clearfix;
   background: $search-tools-background;
   border: 1px solid $search-tools-border-color;
   border-radius: $base-border-radius;
+  display: flex;
+  justify-content: space-between;
   padding: $gutter ($gutter / 2);
   width: 100%;
 
@@ -34,19 +34,19 @@
   }
 
   .filters {
-    @include display(flex);
-    @include flex-direction(column);
-    @include justify-content(space-between);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
 
     @include media($large-screen) {
-      @include flex-direction(row);
+      flex-direction: row;
     }
   }
 
   .filter {
-    @include flex-shrink(1);
-    @include flex-grow(1);
+    flex-grow: 1;
+    flex-shrink: 1;
     margin: 0 0.2em 1em 0.2em;
 
     @include media($large-screen) {

@@ -3,7 +3,7 @@
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
-  $large-screen: em(860) !default;
+  $large-screen: 53.75em !default;
   $base-font-color: $dark-gray !default;
 
   display: inline-block;
@@ -42,7 +42,7 @@
     }
 
     section p:last-of-type {
-      margin-bottom: 2em; 
+      margin-bottom: 2em;
     }
 
     @include media($large-screen) {

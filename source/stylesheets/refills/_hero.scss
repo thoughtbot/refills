@@ -1,14 +1,16 @@
 .hero {
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
-  $large-screen: em(860) !default;
+  $large-screen: 53.75em !default;
   $hero-background-top: #7F99BE;
   $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
+  $hero-image: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png";
 
-  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+  background: url($hero-image),
+              linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top),
+              no-repeat $hero-background-top scroll;
   background-color: #324766;
   background-position: top;
   background-repeat: no-repeat;

@@ -1,6 +1,6 @@
 .modal {
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
+  $medium-screen: 40em !default;
+  $large-screen: 53.75em !default;
 
   label {
     cursor: pointer;
@@ -14,7 +14,7 @@
 
   .modal-fade-screen { // overlay
     @include position(fixed, 0);
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(#000, 0.85);
     opacity: 0;
     transition: opacity 0.25s ease;
     visibility: hidden;

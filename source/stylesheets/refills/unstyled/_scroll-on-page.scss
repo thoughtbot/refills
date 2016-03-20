@@ -1,5 +1,5 @@
 .scroll-on-page {
-  $large-screen: em(860) !default;
+  $large-screen: 53.75em !default;
 
   aside {
     @include media($large-screen) {

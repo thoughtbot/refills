@@ -1,6 +1,6 @@
 .vertical-tabs-container {
-  $large-screen: em(640) !default;
-  $vertical-tabs-height: em(100);
+  $large-screen: 40em !default;
+  $vertical-tabs-height: 6.25em;
 
   @include clearfix;
 

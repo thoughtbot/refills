@@ -6,7 +6,7 @@
   $action-color: #477dca !default;
   $dark-gray: #333 !default;
   $light-gray: #ddd !default;
-  $medium-screen: em(640) !default;
+  $medium-screen: 40em !default;
   $tab-border: 1px solid $base-border-color;
   $tab-content-background: lighten($light-gray, 10);
   $tab-active-background: $tab-content-background;

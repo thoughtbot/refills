@@ -22,14 +22,16 @@
   width: 100%;
 
   > span.meter {
-    @include animation(progress $progress-animation-duration linear infinite);
-    @include background-image(linear-gradient(-45deg, rgba(255,255,255, 0.15) 25%,
-                                                      transparent 25%,
-                                                      transparent 50%,
-                                                      rgba(255,255,255, 0.15) 50%,
-                                                      rgba(255,255,255, 0.15) 75%,
-                                                      transparent 75%));
+    animation: progress $progress-animation-duration linear infinite;
     background-color: $progress-meter-color;
+    background-image: linear-gradient(
+                        -45deg, rgba(#fff, 0.15) 25%,
+                        transparent 25%,
+                        transparent 50%,
+                        rgba(#fff, 0.15) 50%,
+                        rgba(#fff, 0.15) 75%,
+                        transparent 75%
+                      );
     background-repeat: repeat-x;
     background-size: 40px 40px;
     border: $progress-meter-border;

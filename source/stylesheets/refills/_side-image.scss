@@ -1,8 +1,8 @@
-.side-image {  
+.side-image {
   $base-line-height: 1.5em !default;
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
-  $large-screen: em(860) !default;
+  $large-screen: 53.75em !default;
   $base-font-color: $dark-gray !default;
   $side-image-background-top: #B5EBEB;
   $side-image-background-bottom: #5DAC5D;
@@ -16,7 +16,9 @@
   }
 
   .images-wrapper {
-    @include background(url('https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
+    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"),
+                linear-gradient($side-image-background-top, $side-image-background-bottom),
+                no-repeat $side-image-background-top scroll;
     background-color: $side-image-background-top;
     background-size: cover;
     border-bottom: $side-image-border;

@@ -1,7 +1,7 @@
 .device-background {
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
-  $large-screen: em(860) !default;
+  $large-screen: 53.75em !default;
   $device-padding-vertical: 5em;
   $device-padding-horizontal: 0.4em;
   $device-screen-width: 14em;
@@ -12,10 +12,12 @@
   $device-background-top: #162C4C;
   $device-background-bottom: #0A120D;
   $gradient-angle: 10deg;
-  $device-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
-  $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg';
+  $device-image: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png";
+  $device-screen-image: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg";
 
-  @include background(url($device-image), linear-gradient($gradient-angle, $device-background-bottom, $device-background-top), no-repeat $device-background-top scroll);
+  background: url($device-image),
+              linear-gradient($gradient-angle, $device-background-bottom, $device-background-top),
+              no-repeat $device-background-top scroll;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 20em;

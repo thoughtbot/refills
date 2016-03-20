@@ -7,8 +7,8 @@
   $action-color: #477dca !default;
   $dark-gray: #333 !default;
   $light-gray: #ddd !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
+  $medium-screen: 40em !default;
+  $large-screen: 53.75em !default;
   $base-font-color: $dark-gray !default;
   $modal-padding: 3em;
   $modal-background: $base-background-color;
@@ -124,7 +124,7 @@
       color: $base-font-color;
 
       @include media($medium-screen) {
-        @include columns(2 8em);
+        columns: 2 8em;
       }
     }
 

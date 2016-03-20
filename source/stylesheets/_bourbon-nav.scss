@@ -6,7 +6,7 @@ nav.bourbon {
   padding: 0 2em 0 1em;
   text-rendering: optimizeLegibility;
 
-  @include media(max-width em(510)) {
+  @include media(max-width 32em) {
     padding: 0;
   };
 
@@ -16,7 +16,7 @@ nav.bourbon {
     padding: 0;
     text-align: center;
 
-    @include media(em(901)) {
+    @include media(56.25em) {
       float: left;
       text-align: left;
     };
@@ -35,12 +35,12 @@ nav.bourbon {
     padding: 1em 1em 1em 3em;
     text-decoration: none;
 
-    @include media(max-width em(515)) {
+    @include media(max-width 32em) {
       padding: 0.75em 0.5em;
       text-align: center;
     };
 
-    @include media(max-width em(900)){
+    @include media(max-width 56.25em) {
       display: block;
     };
 
@@ -60,12 +60,12 @@ nav.bourbon {
       &.#{$site} {
         background-image: url("/images/bourbon-nav/#{$site}.png");
 
-        @include hidpi {
+        @media only screen and (min-resolution: 125dpi) {
           background-image: url("/images/bourbon-nav/#{$site}@2x.png");
           background-size: 20%;
         }
 
-        @include media(max-width em(515)) {
+        @include media(max-width 32em) {
           background-image: none;
         };
       }
@@ -78,7 +78,7 @@ nav.bourbon {
     font-size: 1em;
     margin: 0;
 
-    @include media(max-width em(900)) {
+    @include media(max-width 56.25em) {
       display: none;
     };
 
