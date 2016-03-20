@@ -124,7 +124,7 @@
       color: $base-font-color;
 
       @include media($medium-screen) {
-        @include columns(2 8em);
+        columns: 2 8em;
       }
     }
 
