@@ -1,19 +1,19 @@
 $action-color: #477dca !default;
 
 .animated {
-  @include animation-duration(1s);
-  @include animation-fill-mode(both);
+  animation-duration: 1s;
+  animation-fill-mode: both;
 
   &.infinite {
-    @include animation-iteration-count(infinite);
+    animation-iteration-count: infinite;
   }
 
   &.alternate {
-    @include animation-direction(alternate);
+    animation-direction: alternate;
   }
 
   &.iteration {
-    @include animation-iteration-count(2);
+    animation-iteration-count: 2;
   }
 }
 
