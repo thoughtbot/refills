@@ -17,7 +17,7 @@
 // }
 
 // .footer, .wrapper-for-content-outside-of-footer::after {
-//   $large-screen: em(860) !default;
+//   $large-screen: 53.75em !default;
 //   height: 12em;
 
 //   @include media($large-screen) {
@@ -26,7 +26,7 @@
 // }
 
 .footer {
-  $large-screen: em(860) !default;
+  $large-screen: 53.75em !default;
 
   .footer-logo {
     margin-bottom: 1em;

@@ -5,8 +5,8 @@
 .grid-items {
   $action-color: #477DCA !default;
   $base-background-color: white !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
+  $medium-screen: 40em !default;
+  $large-screen: 53.75em !default;
   $grid-items-background: $base-background-color;
   $grid-item-background: desaturate($action-color, 30%);
   $grid-item-colors:
