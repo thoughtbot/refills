@@ -16,6 +16,11 @@ for updates.
   compatible with Bourbon 5)
 - [Neat](https://github.com/thoughtbot/neat) 1.6+
 
+It’s recommended that you use [Autoprefixer], as Refills do not come packaged
+with vendor prefixes.
+
+[Autoprefixer]: https://github.com/postcss/autoprefixer
+
 ## Installation
 
 1. Install Refills’ dependencies: [Bourbon](https://github.com/thoughtbot/bourbon#installation), [Neat](https://github.com/thoughtbot/neat#installation) and [jQuery](http://jquery.com/download) (if you plan to use any components that require JavaScript).
