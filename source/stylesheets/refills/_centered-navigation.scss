@@ -63,7 +63,7 @@
   // Nav menu
 
   .centered-navigation-wrapper {
-    @include outer-container($refills-max-width);
+    @include outer-container;
     @include clearfix;
     position: relative;
     z-index: 999;
@@ -134,7 +134,7 @@
     display: none;
     line-height: 0;
 
-    @include media($large-screen) {
+    @include media($horizontal-bar-mode) {
       display: inline;
     }
   }
@@ -218,9 +218,16 @@
       top: 1.5em;
     }
 
-    .submenu {
+    .submenu.fly-out-right {
       @include media($horizontal-bar-mode) {
         left: $centered-navigation-submenu-width - 0.2em;
+        top: 0;
+      }
+    }
+
+    .submenu.fly-out-left {
+      @include media($horizontal-bar-mode) {
+        left: -$centered-navigation-submenu-width + 0.2em;
         top: 0;
       }
     }
