@@ -212,6 +212,20 @@ header.navigation {
       top: 1.5em;
     }
 
+    .submenu.fly-out-right {
+      @include media($horizontal-bar-mode) {
+        left: $navigation-submenu-width - 0.2em;
+        top: 0;
+      }
+    }
+
+    .submenu.fly-out-left {
+      @include media($horizontal-bar-mode) {
+        left: -$navigation-submenu-width + 0.2em;;
+        top: 0;
+      }
+    }
+
     .submenu {
       @include media($horizontal-bar-mode) {
         left: $navigation-submenu-width - 0.2em;
