@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800">
     <link href="stylesheets/all.css" rel="stylesheet" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="/javascripts/jquery.erToc.js"></script>
+    <script src="javascripts/jquery.erToc.js"></script>
     <script type="text/javascript">
-      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
       analytics.load("zqKH1nPNSA5uCwV1XiBz3LvGfPH6Muq9");
       analytics.page()
       }}();
@@ -204,8 +204,7 @@
     text-decoration: none;
 
     @include media($tab-mode) {
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
+      @include border-top-radius($base-border-radius);
       border-top: 0;
       display: inline-block;
     }
@@ -622,39 +621,37 @@
 
   @include flex-basis(15em);
   @include flex-grow(1);
-  @include transition (all 0.2s ease-in-out);
   background-color: $card-background;
-  border-radius: $base-border-radius;
   border: $card-border;
+  border-radius: $base-border-radius;
   box-shadow: 0 2px 4px darken($base-background-color, 10%);
   cursor: pointer;
   margin: 0 $card-margin $base-spacing $card-margin;
   position: relative;
-
+  transition: all 0.2s ease-in-out;
 
   .card-image {
-    overflow: hidden;
+    background-color: $card-image-hover-color;
     height: 150px;
     max-height: 150px;
-    background-color: $card-image-hover-color;
+    overflow: hidden;
 
     img {
-      @include transition (all 0.2s ease-in-out);
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
-      width: 100%;
+      @include border-top-radius($base-border-radius);
       opacity: 1;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
     }
   }
 
   .card-header {
-    @include transition (all 0.2s ease-in-out);
     background-color: $card-header-background;
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
     line-height: 1.5em;
     padding: ($base-spacing / 3) ($base-spacing / 2);
+    transition: all 0.2s ease-in-out;
   }
 
   .card-copy {
@@ -714,18 +711,18 @@
           </a>
         </li>
         <li class="nav-link"><a href="javascript:void(0)">Testimonials</a></li>
-        <li class="nav-link more"><a href="javascript:void(0)">More</a>
+        <li id="js-centered-more" class="nav-link more"><a href="javascript:void(0)">More</a>
           <ul class="submenu">
             <li><a href="javascript:void(0)">Submenu Item</a></li>
             <li><a href="javascript:void(0)">Another Item</a></li>
             <li class="more"><a href="javascript:void(0)">Item with submenu</a>
-              <ul class="submenu">
+              <ul class="submenu fly-out-right">
                 <li><a href="javascript:void(0)">Sub-submenu Item</a></li>
                 <li><a href="javascript:void(0)">Another Item</a></li>
               </ul>
             </li>
             <li class="more"><a href="javascript:void(0)">Another submenu</a>
-              <ul class="submenu">
+              <ul class="submenu fly-out-right">
                 <li><a href="javascript:void(0)">Sub-submenu</a></li>
                 <li><a href="javascript:void(0)">An Item</a></li>
               </ul>
@@ -767,18 +764,18 @@
           &lt;/a&gt;
         &lt;/li&gt;
         &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Testimonials&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;nav-link more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;More&lt;/a&gt;
+        &lt;li id=&quot;js-centered-more&quot; class=&quot;nav-link more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;More&lt;/a&gt;
           &lt;ul class=&quot;submenu&quot;&gt;
             &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Submenu Item&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another Item&lt;/a&gt;&lt;/li&gt;
             &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Item with submenu&lt;/a&gt;
-              &lt;ul class=&quot;submenu&quot;&gt;
+              &lt;ul class=&quot;submenu fly-out-right&quot;&gt;
                 &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sub-submenu Item&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another Item&lt;/a&gt;&lt;/li&gt;
               &lt;/ul&gt;
             &lt;/li&gt;
             &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another submenu&lt;/a&gt;
-              &lt;ul class=&quot;submenu&quot;&gt;
+              &lt;ul class=&quot;submenu fly-out-right&quot;&gt;
                 &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Sub-submenu&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;An Item&lt;/a&gt;&lt;/li&gt;
               &lt;/ul&gt;
@@ -830,8 +827,8 @@
 
     img {
       max-height: $centered-navigation-height;
-      opacity: .6;
-      padding: .8em 0;
+      opacity: 0.6;
+      padding: 0.8em 0;
     }
 
     @include media($horizontal-bar-mode) {
@@ -869,12 +866,12 @@
   }
 
   ul.centered-navigation-menu {
-    -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
     display: none;
     margin: 0 auto;
     overflow: visible;
     padding: 0;
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
     width: 100%;
     z-index: 99999;
 
@@ -933,7 +930,7 @@
     display: none;
     line-height: 0;
 
-    @include media($large-screen) {
+    @include media($horizontal-bar-mode) {
       display: inline;
     }
   }
@@ -965,7 +962,7 @@
       padding-right: 0.6em;
     }
 
-    &gt; a:after {
+    &gt; a::after {
       @include position(absolute, auto -0.4em auto auto);
       color: $centered-navigation-color;
       content: &quot;\25BE&quot;;
@@ -988,7 +985,7 @@
         margin-right: $centered-navigation-submenu-padding;
       }
 
-      &amp;:after {
+      &amp;::after {
         content: &quot;›&quot;;
         font-size: 1.2em;
         position: absolute;
@@ -1017,9 +1014,16 @@
       top: 1.5em;
     }
 
-    .submenu {
+    .submenu.fly-out-right {
       @include media($horizontal-bar-mode) {
         left: $centered-navigation-submenu-width - 0.2em;
+        top: 0;
+      }
+    }
+
+    .submenu.fly-out-left {
+      @include media($horizontal-bar-mode) {
+        left: -$centered-navigation-submenu-width + 0.2em;
         top: 0;
       }
     }
@@ -1039,7 +1043,7 @@
         &amp;:last-child &gt; a {
           border-bottom-left-radius: $base-border-radius;
           border-bottom-right-radius: $base-border-radius;
-          padding-bottom: .7em;
+          padding-bottom: 0.7em;
         }
       }
 
@@ -1068,19 +1072,37 @@
       <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
-  <pre><code class="language-javascript">$(document).ready(function() {
-  var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
-  $('#js-centered-navigation-menu').removeClass(&quot;show&quot;);
-  
-  menuToggle.on('click', function(e) {
+  <pre><code class="language-javascript">$(window).resize(function() {
+  var more = document.getElementById(&quot;js-centered-more&quot;);
+  var windowWidth = $(window).width();
+  var moreLeftSideToPageLeftSide = $(more).offset().left;
+  var moreLeftSideToPageRightSide = windowWidth - moreLeftSideToPageLeftSide;
+
+  if (moreLeftSideToPageRightSide &lt; 330) {
+    $(&quot;#js-centered-more .submenu .submenu&quot;).removeClass(&quot;fly-out-right&quot;);
+    $(&quot;#js-centered-more .submenu .submenu&quot;).addClass(&quot;fly-out-left&quot;);
+  }
+
+  if (moreLeftSideToPageRightSide &gt; 330) {
+    $(&quot;#js-centered-more .submenu .submenu&quot;).removeClass(&quot;fly-out-left&quot;);
+    $(&quot;#js-centered-more .submenu .submenu&quot;).addClass(&quot;fly-out-right&quot;);
+  }
+});
+
+$(document).ready(function() {
+  $(window).trigger(&quot;resize&quot;);
+  var menuToggle = $(&quot;#js-centered-navigation-mobile-menu&quot;).unbind();
+  $(&quot;#js-centered-navigation-menu&quot;).removeClass(&quot;show&quot;);
+
+  menuToggle.on(&quot;click&quot;, function(e) {
     e.preventDefault();
-    $('#js-centered-navigation-menu').slideToggle(function(){
-      if($('#js-centered-navigation-menu').is(':hidden')) {
-        $('#js-centered-navigation-menu').removeAttr('style');
+    $(&quot;#js-centered-navigation-menu&quot;).slideToggle(function(){
+      if($(&quot;#js-centered-navigation-menu&quot;).is(&quot;:hidden&quot;)) {
+        $(&quot;#js-centered-navigation-menu&quot;).removeAttr(&quot;style&quot;);
       }
     });
   });
-});
+}); 
 </code></pre>
 </td>
 
@@ -1215,8 +1237,8 @@
     }
 
     .comment-reverse-order &amp; {
-      padding-right: 0;
       padding-left: 10px;
+      padding-right: 0;
     }
   }
 
@@ -1303,7 +1325,7 @@
   $device-background: darken(gray, 40%);
   $device-backside-background: darken($device-background, 10%);
   $device-text-color: white;
-  $device-background-top: #162C4C; 
+  $device-background-top: #162C4C;
   $device-background-bottom: #0A120D;
   $gradient-angle: 10deg;
   $device-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
@@ -1344,27 +1366,28 @@
     position: relative;
 
     @include media($large-screen) {
-      @include transform(
-        perspective(800px) 
-        translateX(0px) 
-        translateY(-100px) 
-        translateZ(50px) 
-        rotateX(0deg) 
-        rotateY(-20deg) 
-        rotateZ(-0deg));
       background: $device-background;
       border-radius: 2em;
-      box-shadow: 
-        1px 0px lighten($device-backside-background, 20%), 
-        4px 0px lighten($device-backside-background, 2%),
-        7px 0px $device-backside-background,
-        10px 0px $device-backside-background,
-        13px 0px $device-backside-background;
+      box-shadow:
+        1px 0 lighten($device-backside-background, 20%),
+        4px 0 lighten($device-backside-background, 2%),
+        7px 0 $device-backside-background,
+        10px 0 $device-backside-background,
+        13px 0 $device-backside-background;
       display: block;
       float: right;
       margin-bottom: -12em;
       margin-right: 5em;
       padding: $device-padding-vertical 0;
+      transform:
+        perspective(800px)
+        translateX(0)
+        translateY(-100px)
+        translateZ(50px)
+        rotateX(0)
+        rotateY(-20deg)
+        rotateZ(0)
+      ;
       width: $device-screen-width + (2 * $device-padding-horizontal);
       z-index: 99999;
 
@@ -1488,10 +1511,10 @@
   $flex-box-gutter: 0.4em;
   $flex-box-width: 18em;
   $flex-box-color: transparentize($base-font-color, 0.3);
-  $flex-box-top-colors: 
-    tomato, 
-    #72BFBF, 
-    #92B1E3, 
+  $flex-box-top-colors:
+    tomato,
+    #72BFBF,
+    #92B1E3,
     #E3D743,
     #CCC,
     #F6C05C;
@@ -1505,7 +1528,6 @@
     text-align: center;
 
   .flex-box {
-    @include transition (all 0.2s ease-in-out);
     @include flex(2 2 15em);
     @include align-self(stretch);
     background: $flex-box-background;
@@ -1515,12 +1537,13 @@
     margin: $flex-box-gutter;
     padding: 2em 2em 3em 2em;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
 
     @for $i from 1 to 7 { // assign colors from $flex-box-top-colors list
       &amp;:nth-child(#{$i}) {
         $color-from-list: nth($flex-box-top-colors, $i);
         border-top: 6px solid $color-from-list;
-        
+
         &amp;:focus,
         &amp;:hover {
           background-color: transparentize($color-from-list, 0.9);
@@ -1823,12 +1846,12 @@
 //  height: 100%;
 // }
 
-// .wrapper-for-content-outside-of-footer:after {
+// .wrapper-for-content-outside-of-footer::after {
 //   content: &quot;&quot;;
 //   display: block;
 // }
 
-// .footer-2, .wrapper-for-content-outside-of-footer:after {
+// .footer-2, .wrapper-for-content-outside-of-footer::after {
 //   height: 17em;
 
 //   @include media($large-screen) {
@@ -1847,13 +1870,13 @@
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
+  display: inline-block;
   padding: $base-spacing;
   width: 100%;
-  display: inline-block;
 
   .footer-logo {
-    margin-right: 1em;
     margin-bottom: 1em;
+    margin-right: 1em;
 
     @include media($large-screen) {
       float: left;
@@ -1863,18 +1886,18 @@
 
   .footer-logo img {
     height: 1.6em;
-  } 
+  }
 
   ul {
     line-height: 1.5em;
     margin: 0 0 1em 0;
     padding: 0;
-    
+
     @include media($large-screen) {
       float: left;
       line-height: 1.8em;
-      margin-left: 1em;
       margin-bottom: 0;
+      margin-left: 1em;
     }
   }
 
@@ -1916,8 +1939,8 @@
       }
 
       li {
-        font-size: 1em;
         float: left;
+        font-size: 1em;
         line-height: 0;
         margin: 0;
         padding-right: 0.7em;
@@ -2058,12 +2081,12 @@
   $large-screen: em(860) !default;
   $grid-items-background: $base-background-color;
   $grid-item-background: desaturate($action-color, 30%);
-  $grid-item-colors: 
-    desaturate($action-color, 30%), 
-    #3581A5, 
+  $grid-item-colors:
+    desaturate($action-color, 30%),
+    #3581A5,
     #5FBEBE,
     #98C79A,
-    #A7A891, 
+    #A7A891,
     #BDCC97,
     #979EA0;
   $grid-item-border-size: 9px;
@@ -2073,9 +2096,8 @@
   $grid-item-height: 14em;
 
   @include clearfix;
-    
+
   .grid-item {
-    @include transition (all 0.2s ease-in-out);
     background: $grid-item-background;
     border-bottom: $grid-item-border-size solid $grid-items-background;
     border-left: ($grid-item-border-size / 2) solid $grid-items-background;
@@ -2084,11 +2106,12 @@
     cursor: pointer;
     float: left;
     height: $grid-item-height;
-    overflow: hidden;
     outline: none;
+    overflow: hidden;
     padding: 2em;
     text-align: center;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
     width: 100%;
 
     @include media($large-screen) {
@@ -2099,13 +2122,13 @@
       &amp;:nth-child(#{$i}) {
         $background-from-list: nth($grid-item-colors, $i);
         background-color: $background-from-list;
-        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%);
+        box-shadow: inset 0 0 1px 2px darken($background-from-list, 10%);
 
         &amp;:focus,
         &amp;:hover {
           background-color: darken($background-from-list, 10%);
-          background-repeat: no-repeat;
           background-position: top;
+          background-repeat: no-repeat;
           background-size: cover;
         }
       }
@@ -2128,7 +2151,7 @@
     color: transparentize($grid-item-color, 0.3);
     line-height: 1.5em;
     margin: auto;
-    
+
     @include media($medium-screen) {
       max-width: 70%;
     }
@@ -2138,11 +2161,11 @@
     @include media($large-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }
-    
+
     p {
       @include media($medium-screen) {
         max-width: 60%;
-      }  
+      }
     }
   }
 
@@ -2284,7 +2307,7 @@
   $base-font-color: $dark-gray !default;
   $grid-items-background: $base-background-color;
   $grid-item-background: $base-background-color;
-  $grid-item-border: 1px solid transparentize($base-font-color, 0.8); 
+  $grid-item-border: 1px solid transparentize($base-font-color, 0.8);
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
   $grid-item-color: $base-font-color;
@@ -2292,19 +2315,19 @@
 
   @include clearfix;
   position: relative;
-    
+
   .grid-item {
-    @include transition (all 0.2s ease-in-out);
     background: $grid-item-background;
     border-bottom: $grid-item-border;
     border-right: $grid-item-border;
     cursor: pointer;
     float: left;
     height: $grid-item-height;
-    overflow: hidden;
     outline: none;
+    overflow: hidden;
     padding: 2em;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
     width: 100%;
 
     @include media($large-screen) {
@@ -2333,7 +2356,7 @@
   .grid-item p {
       color: transparentize($grid-item-color, 0.4);
       line-height: 1.5em;
-      
+
       @include media($medium-screen) {
         max-width: 70%;
       }
@@ -2346,14 +2369,14 @@
     p {
       @include media($medium-screen) {
         max-width: 60%;
-      }  
+      }
     }
   }
 
   // this, below, might not be the most beautiful solution but it removes the outer borders by using the background color.
   .bottom-cover {
     background: $grid-items-background;
-    bottom: 0px;
+    bottom: 0;
     height: 3px;
     position: absolute;
     width: 100%;
@@ -2363,7 +2386,7 @@
     background: $grid-items-background;
     height: 100%;
     position: absolute;
-    right: 0px;
+    right: 0;
     width: 4px;
   }
 }
@@ -2421,11 +2444,11 @@
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.hero {  
+  <pre><code class="language-scss">.hero {
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
   $large-screen: em(860) !default;
-  $hero-background-top: #7F99BE; 
+  $hero-background-top: #7F99BE;
   $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
@@ -2444,7 +2467,7 @@
   }
 
   .hero-inner {
-    @include outer-container;
+    @include outer-container($refills-max-width);
     @include clearfix;
     margin: auto;
     padding: 3.5em;
@@ -2452,7 +2475,7 @@
 
     .hero-copy {
       text-align: center;
-      
+
       h1 {
         color: $hero-color;
         font-size: 1.6em;
@@ -2466,7 +2489,7 @@
       p {
         color: $hero-color;
         line-height: 1.4em;
-        margin: 0 auto 3em auto; 
+        margin: 0 auto 3em auto;
 
         @include media($large-screen) {
           font-size: 1.1em;
@@ -2578,8 +2601,8 @@
 
   @include display(flex);
   @include flex-wrap(wrap);
-  margin-bottom: $base-line-height;
   margin: 1em;
+  margin-bottom: $base-line-height;
   overflow: auto;
   padding: 0;
 
@@ -2610,8 +2633,8 @@
   }
 
   .bullet-content {
-    margin-left: $icon-bullet-size * 1.4;
     margin-bottom: 2em;
+    margin-left: $icon-bullet-size * 1.4;
   }
 
   h2 {
@@ -2821,7 +2844,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   width: 100%;
 }
 
-#map_canvas img { 
+#map_canvas img {
   max-width: none; // to prevent UI control bug
 }
 
@@ -2831,8 +2854,8 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 
 #map_canvas .firstHeading {
   font-size: 1em;
-  line-height: 1em;
   font-weight: bold;
+  line-height: 1em;
   margin: 0;
 }
 
@@ -2864,7 +2887,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
         <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
         <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
         <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
-        <li class="nav-link more"><a href="javascript:void(0)">More</a>
+        <li id="js-navigation-more" class="nav-link more"><a href="javascript:void(0)">More</a>
           <ul class="submenu">
             <li><a href="javascript:void(0)">Submenu Item</a></li>
             <li><a href="javascript:void(0)">Another Item</a></li>
@@ -2920,7 +2943,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
         &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
         &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
         &lt;li class=&quot;nav-link&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;nav-link more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;More&lt;/a&gt;
+        &lt;li id=&quot;js-navigation-more&quot; class=&quot;nav-link more&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;More&lt;/a&gt;
           &lt;ul class=&quot;submenu&quot;&gt;
             &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Submenu Item&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Another Item&lt;/a&gt;&lt;/li&gt;
@@ -2988,7 +3011,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 
   .navigation-wrapper {
     @include clearfix;
-    @include outer-container;
+    @include outer-container($refills-max-width);
     position: relative;
     z-index: 9999;
   }
@@ -3121,10 +3144,10 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       padding-right: 0.6em;
     }
 
-    &gt; a:after {
+    &gt; a::after {
       @include position(absolute, auto -0.4em auto auto);
-      content: '\25BE';
       color: $navigation-color;
+      content: &quot;\25BE&quot;;
     }
   }
 
@@ -3144,8 +3167,8 @@ https://developers.google.com/maps/documentation/javascript/tutorial
         margin-right: $navigation-submenu-padding;
       }
 
-      &amp;:after {
-        content: '›';
+      &amp;::after {
+        content: &quot;›&quot;;
         font-size: 1.2em;
         position: absolute;
         right: $navigation-submenu-padding / 2;
@@ -3171,6 +3194,20 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       left: -$navigation-submenu-padding;
       position: absolute;
       top: 1.5em;
+    }
+
+    .submenu.fly-out-right {
+      @include media($horizontal-bar-mode) {
+        left: $navigation-submenu-width - 0.2em;
+        top: 0;
+      }
+    }
+
+    .submenu.fly-out-left {
+      @include media($horizontal-bar-mode) {
+        left: -$navigation-submenu-width + 0.2em;
+        top: 0;
+      }
     }
 
     .submenu {
@@ -3263,7 +3300,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
 
       button[type=submit] {
         background: $navigation-search-background;
-        border: none;
+        border: 0;
         bottom: 0.3em;
         left: auto;
         outline: none;
@@ -3300,19 +3337,36 @@ https://developers.google.com/maps/documentation/javascript/tutorial
       <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
-  <pre><code class="language-javascript">$(document).ready(function() {
-  var menuToggle = $('#js-mobile-menu').unbind();
-  $('#js-navigation-menu').removeClass(&quot;show&quot;);
+  <pre><code class="language-javascript">$(window).resize(function() {
+  var more = document.getElementById(&quot;js-navigation-more&quot;);
+  var windowWidth = $(window).width();
+  var moreLeftSideToPageLeftSide = $(more).offset().left;
+  var moreLeftSideToPageRightSide = windowWidth - moreLeftSideToPageLeftSide;
 
-  menuToggle.on('click', function(e) {
+  if (moreLeftSideToPageRightSide &lt; 330) {
+    $(&quot;#js-navigation-more .submenu .submenu&quot;).removeClass(&quot;fly-out-right&quot;);
+    $(&quot;#js-navigation-more .submenu .submenu&quot;).addClass(&quot;fly-out-left&quot;);
+  }
+
+  if (moreLeftSideToPageRightSide &gt; 330) {
+    $(&quot;#js-navigation-more .submenu .submenu&quot;).removeClass(&quot;fly-out-left&quot;);
+    $(&quot;#js-navigation-more .submenu .submenu&quot;).addClass(&quot;fly-out-right&quot;);
+  }
+});
+
+$(document).ready(function() {
+  var menuToggle = $(&quot;#js-mobile-menu&quot;).unbind();
+  $(&quot;#js-navigation-menu&quot;).removeClass(&quot;show&quot;);
+
+  menuToggle.on(&quot;click&quot;, function(e) {
     e.preventDefault();
-    $('#js-navigation-menu').slideToggle(function(){
-      if($('#js-navigation-menu').is(':hidden')) {
-        $('#js-navigation-menu').removeAttr('style');
+    $(&quot;#js-navigation-menu&quot;).slideToggle(function(){
+      if($(&quot;#js-navigation-menu&quot;).is(&quot;:hidden&quot;)) {
+        $(&quot;#js-navigation-menu&quot;).removeAttr(&quot;style&quot;);
       }
     });
   });
-});
+}); 
 </code></pre>
 </td>
 
@@ -3681,13 +3735,13 @@ jQuery -&gt;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.search-tools {  
+  <pre><code class="language-scss">.search-tools {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
-  
+
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
@@ -3699,8 +3753,8 @@ jQuery -&gt;
   @include justify-content(space-between);
   @include clearfix;
   background: $search-tools-background;
-  border-radius: $base-border-radius;
   border: 1px solid $search-tools-border-color;
+  border-radius: $base-border-radius;
   padding: $gutter ($gutter / 2);
   width: 100%;
 
@@ -3737,7 +3791,6 @@ jQuery -&gt;
     }
 
     &gt; div {
-      @include transition(border-color);
       background-color: white;
       border: 1px solid $base-border-color;
       border-radius: $base-border-radius;
@@ -3746,6 +3799,7 @@ jQuery -&gt;
       margin-bottom: $base-spacing / 2;
       padding: ($base-spacing / 3) $clear-button-width ($base-spacing / 3) ($base-spacing / 3);
       position: relative;
+      transition: border-color;
       width: 100%;
 
       &amp;:focus,
@@ -3770,8 +3824,8 @@ jQuery -&gt;
 
     button.clear {
       @include position(absolute, 5px 5px auto auto);
-      max-width: $clear-button-width;
       font-size: 0.7em;
+      max-width: $clear-button-width;
     }
 
     .hide-options {
@@ -3785,12 +3839,12 @@ jQuery -&gt;
 
   .trigger {
     margin-top: 1.5em;
-    
+
     button {
       display: block;
-      width: 100%;
-      padding: .5em 1em;
+      padding: 0.5em 1em;
       text-align: center;
+      width: 100%;
     }
   }
 }
@@ -4150,11 +4204,11 @@ $(function() {
   $table-stripe-background-hover: darken($table-stripe-background, 5%);
   $table-padding: 0.75em 1em;
 
+  border: $table-border;
   border-collapse: separate;
-  border-left: 0px;
+  border-left: 0;
   border-radius: $base-border-radius;
   border-spacing: 0;
-  border: $table-border;
   width: 100%;
 
   tbody {
@@ -4194,13 +4248,13 @@ $(function() {
   thead {
     th {
       background-color: $table-header-background;
-      border-bottom: 0px;
+      border-bottom: 0;
       border-left: 1px solid $table-border-color;
       padding: $table-padding;
       text-align: left;
 
       &amp;:first-child {
-        border-left: none;
+        border-left: 0;
       }
     }
   }
@@ -4209,13 +4263,13 @@ $(function() {
     background-color: $table-background;
 
     td {
-      border-bottom: 0px;
+      border-bottom: 0;
       border-left: 1px solid $table-border-color;
       border-top: 1px solid $table-border-color;
       padding: $table-padding;
 
       &amp;:first-child {
-        border-left: none;
+        border-left: 0;
       }
 
       button {
@@ -4344,7 +4398,7 @@ $(function() {
   $table-hover-background: darken($table-background, 2);
   $table-stripe-background: darken($table-background, 4);
   $table-stripe-background-hover: darken($table-stripe-background, 5);
-  $table-padding: .75em 1em;
+  $table-padding: 0.75em 1em;
 
   border-collapse: separate;
   border-spacing: 0;
@@ -4362,7 +4416,7 @@ $(function() {
   thead {
     th {
       background-color: $table-header-background;
-      border-bottom: 0px;
+      border-bottom: 0;
       padding: $table-padding;
       text-align: left;
     }
@@ -4372,19 +4426,19 @@ $(function() {
     background-color: $table-background;
 
     td {
-      border-bottom: 0px;
+      border-bottom: 0;
       border-top: 1px solid $table-border-color;
       line-height: $base-line-height;
       padding: $table-padding;
 
       button {
         display: inline-block;
-        font-size: .7em;
+        font-size: 0.7em;
         line-height: $base-line-height;
-        margin-bottom: .3em;
+        margin-bottom: 0.3em;
         margin-right: 0.5em;
         outline: none;
-        padding: .3em 1em;
+        padding: 0.3em 1em;
         width: 100%;
 
         @include media($medium-screen) {
@@ -4494,7 +4548,7 @@ $(function() {
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
+  $action-color: #477dca !default;
   $dark-gray: #333 !default;
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
@@ -4508,8 +4562,8 @@ $(function() {
   $vertical-tab-mode: $medium-screen;
 
   @include clearfix;
-  border-radius: $tab-border-radius;
   border: $tab-border;
+  border-radius: $tab-border-radius;
   margin-bottom: $base-spacing;
   overflow: hidden;
 
@@ -4555,15 +4609,15 @@ $(function() {
   }
 
   .vertical-tab:focus {
-    outline: none; 
+    outline: none;
   }
 
   .vertical-tab-content-container {
     display: block;
     margin: 0 auto;
 
-    &amp; a:focus { 
-      outline: none; 
+    &amp; a:focus {
+      outline: none;
     }
 
     @include media($vertical-tab-mode) {
@@ -4583,7 +4637,7 @@ $(function() {
     }
 
     @include media($vertical-tab-mode) {
-      border: none;
+      border: 0;
       display: none;
     }
   }
@@ -4602,12 +4656,12 @@ $(function() {
     }
 
     &amp;:first-child {
-      border-top: none;
+      border-top: 0;
     }
 
     &amp;.is-active {
       background: $tab-active-color;
-      border-bottom: none;
+      border-bottom: 0;
     }
 
     @include media($vertical-tab-mode) {
@@ -4785,7 +4839,7 @@ $('.js-vertical-tab-accordion-heading').click (event) -&gt;
             <li><a href="type-systems/">Type Systems</a></li>
           </ul>
           <div class="refills-footer-logo">
-            <img src="/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
+            <img src="images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
           </div>
           <p>Refills is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>.</p>
           <p>Copyright &copy; 2014&ndash;2015 <a href="//thoughtbot.com">thoughtbot, inc</a>. Refills is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/refills/blob/master/LICENSE.md">license</a>.</p>

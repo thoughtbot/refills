@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800">
     <link href="../stylesheets/all.css" rel="stylesheet" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="/javascripts/jquery.erToc.js"></script>
+    <script src="../javascripts/jquery.erToc.js"></script>
     <script type="text/javascript">
-      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"../analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
       analytics.load("zqKH1nPNSA5uCwV1XiBz3LvGfPH6Muq9");
       analytics.page()
       }}();
@@ -32,7 +32,7 @@
         <div class="refills-type-systems">
 
   <a class="js-menu-trigger-refills refills-menu-anchor fixedsticky">
-    <img src="/images/menu.png" alt="Menu icon">
+    <img src="../images/menu.png" alt="Menu icon">
   </a>
   <div class="js-menu-screen-refills refills-menu-screen"></div>
 
@@ -150,9 +150,9 @@
 
   hr {
     border-bottom: 1px solid $light-gray;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
     margin: $base-spacing 0;
   }
 
@@ -165,7 +165,7 @@
     color: $action-color;
     text-decoration: none;
   }
-  
+
   .type {
     border-bottom: 1px solid;
     display: inline-block;
@@ -253,7 +253,7 @@
       top: -1px;
     }
   }
-  
+
   hr {
     width: 3em;
   }
@@ -337,27 +337,30 @@
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
+  $action-color: #477dca !default;
   $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
+  $light-gray: #ddd !default;
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
-  $sans-serif: 'Nunito', sans-serif;
-  $sans-serif-2: 'Varela Round', sans-serif;
+  $sans-serif: &quot;Nunito&quot;, sans-serif;
+  $sans-serif-2: &quot;Varela Round&quot;, sans-serif;
 
   @include clearfix;
   font-family: $sans-serif;
   text-align: left;
-  
-  h1, h2, h3, p {
+
+  h1,
+  h2,
+  h3,
+  p {
     margin: 0;
   }
 
   hr {
     border-bottom: 1px solid $light-gray;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
     margin: $base-spacing 0;
   }
 
@@ -462,7 +465,7 @@
       top: -1px;
     }
   }
-  
+
   hr {
     width: 3em;
   }
@@ -546,27 +549,30 @@
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
+  $action-color: #477dca !default;
   $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
+  $light-gray: #ddd !default;
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
-  $sans-serif: 'PT Sans', sans-serif;
-  $sans-serif-2: 'Titillium Web', sans-serif;
+  $sans-serif: &quot;PT Sans&quot;, sans-serif;
+  $sans-serif-2: &quot;Titillium Web&quot;, sans-serif;
 
   @include clearfix;
   font-family: $sans-serif;
   text-align: left;
-  
-  h1, h2, h3, p {
+
+  h1,
+  h2,
+  h3,
+  p {
     margin: 0;
   }
 
   hr {
     border-bottom: 1px solid $light-gray;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
     margin: $base-spacing 0;
   }
 
@@ -617,9 +623,9 @@
   }
 
   code {
-    background: #F7F7F7;
+    background: #f7f7f7;
     border-radius: $base-border-radius * 1.5;
-    border: 1px solid #E0E0E0;
+    border: 1px solid #e0e0e0;
     font-family: monaco;
     font-size: 0.65em;
     font-style: normal;
@@ -628,12 +634,12 @@
   }
 
   h3 {
-   font-family: $sans-serif-2;
-   font-size: 1em;
-   font-weight: 700;
-   line-height: 1.4em;
-   margin-bottom: 0.5em; 
-   text-transform: uppercase;
+    font-family: $sans-serif-2;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.4em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
   }
 
   p.date {
@@ -772,16 +778,16 @@
   @include clearfix;
   font-family: $serif-2;
   text-align: left;
-  
+
   h1, h2, h3, p {
     margin: 0;
   }
 
   hr {
     border-bottom: 1px solid $light-gray;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
     margin: $base-spacing 0;
   }
 
@@ -847,11 +853,11 @@
     font-size: 1.4em;
     font-weight: 400;
     line-height: 1.3em;
-    margin-bottom: .4em;
+    margin-bottom: 0.4em;
   }
 
   p.date {
-    color: transparentize($base-font-color, .6);
+    color: transparentize($base-font-color, 0.6);
     font-family: $serif-2;
     font-size: 0.9em;
     font-style: italic;
@@ -888,7 +894,7 @@
       top: -1px;
     }
   }
-  
+
   hr {
     width: 3em;
   }
@@ -984,16 +990,16 @@
   @include clearfix;
   font-family: $serif;
   text-align: left;
-  
+
   h1, h2, h3, p {
     margin: 0;
   }
 
   hr {
     border-bottom: 1px solid $light-gray;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
     margin: $base-spacing 0;
   }
 
@@ -1057,7 +1063,7 @@
    font-size: 1em;
    font-weight: 600;
    line-height: 1.4em;
-   margin-bottom: 0.5em; 
+   margin-bottom: 0.5em;
    text-transform: uppercase;
   }
 
@@ -1193,16 +1199,16 @@
   @include clearfix;
   font-family: $sans-serif;
   text-align: left;
-  
+
   h1, h2, h3, p {
     margin: 0;
   }
 
   hr {
     border-bottom: 1px solid $light-gray;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
     margin: $base-spacing 0;
   }
 
@@ -1220,10 +1226,10 @@
     border-bottom: 2px solid;
     display: inline-block;
     font-family: $sans-serif;
-    font-size: .7em;
+    font-size: 0.7em;
     font-weight: 800;
     margin-bottom: 2em;
-    padding: .1em 0;
+    padding: 0.1em 0;
     text-align: left;
     text-transform: uppercase;
   }
@@ -1244,7 +1250,7 @@
     font-size: 1.3em;
     font-weight: 400;
     line-height: 1.25em;
-    margin-bottom: .9em;
+    margin-bottom: 0.9em;
 
     @include media($medium-screen) {
       font-size: 1.5em;
@@ -1278,7 +1284,7 @@
     color: transparentize($base-font-color, 0.6);
     font-family: $serif;
     font-style: italic;
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
   }
 
   p {
@@ -1293,7 +1299,7 @@
       font-style: italic;
     }
   }
-  
+
   a.read-more {
     display: inline-block;
     font-family: $sans-serif;
@@ -1419,7 +1425,7 @@
             <li><a href="./">Type Systems</a></li>
           </ul>
           <div class="refills-footer-logo">
-            <img src="/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
+            <img src="../images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
           </div>
           <p>Refills is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>.</p>
           <p>Copyright &copy; 2014&ndash;2015 <a href="//thoughtbot.com">thoughtbot, inc</a>. Refills is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/refills/blob/master/LICENSE.md">license</a>.</p>

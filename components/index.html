@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300,700|Lusitana:400,700|Open+Sans:400,800">
     <link href="../stylesheets/all.css" rel="stylesheet" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="/javascripts/jquery.erToc.js"></script>
+    <script src="../javascripts/jquery.erToc.js"></script>
     <script type="text/javascript">
-      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"../analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
       analytics.load("zqKH1nPNSA5uCwV1XiBz3LvGfPH6Muq9");
       analytics.page()
       }}();
@@ -32,7 +32,7 @@
         <div class="refills-components">
 
   <a class="js-menu-trigger-refills refills-menu-anchor fixedsticky">
-    <img src="/images/menu.png" alt="Menu icon">
+    <img src="../images/menu.png" alt="Menu icon">
   </a>
   <div class="js-menu-screen-refills refills-menu-screen"></div>
 
@@ -135,7 +135,7 @@
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.accordion {  
+  <pre><code class="language-scss">.accordion {
   $base-border-color: gainsboro !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
@@ -150,7 +150,7 @@
   $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6%);
   $accordion-menu-sub-hover: lighten($accordion-menu-sub-background, 2%);
   $accordion-menu-list-padding: ($base-spacing / 2) $gutter;
-  
+
   background-color: $accordion-menu-background;
   border: $accordion-menu-border;
   margin: 0 0 $base-spacing 0;
@@ -173,7 +173,7 @@
     }
 
     &amp;:last-child {
-      border: none;
+      border: 0;
     }
 
     &amp;:focus,
@@ -192,7 +192,7 @@
         border-top: $accordion-menu-border;
         box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
       }
-      
+
       &amp;:focus,
       &amp;:hover {
         background-color: $accordion-menu-sub-hover;
@@ -296,7 +296,7 @@
   }
 }
 
-// Tweak the keyframes below. Or swap them with another animation pattern at 
+// Tweak the keyframes below. Or swap them with another animation pattern at
 // https://github.com/daneden/animate.css/tree/master/source
 
 @-webkit-keyframes zoomOut {
@@ -340,11 +340,11 @@
 
 .animate-target {
   @include size(6em);
-  -webkit-transform-style: preserve-3d;
-  border-radius: 50%;
   border: 22px solid #e2e2e3;
+  border-radius: 50%;
   margin: 0 auto 3em;
   text-align: center;
+  -webkit-transform-style: preserve-3d;
 }
 
 button {
@@ -401,7 +401,7 @@ button {
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Badges</h6></div>
         <div class="refill-centering"><div>
-  <span class="badge">4</span>
+  <span class="badge-default">4</span>
   <span class="badge-alert">4</span>
   <span class="badge-error">4</span>
   <span class="badge-notice">4</span>
@@ -421,7 +421,7 @@ button {
       <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
   </div>
   <pre><code class="language-markup">&lt;div&gt;
-  &lt;span class=&quot;badge&quot;&gt;4&lt;/span&gt;
+  &lt;span class=&quot;badge-default&quot;&gt;4&lt;/span&gt;
   &lt;span class=&quot;badge-alert&quot;&gt;4&lt;/span&gt;
   &lt;span class=&quot;badge-error&quot;&gt;4&lt;/span&gt;
   &lt;span class=&quot;badge-notice&quot;&gt;4&lt;/span&gt;
@@ -434,41 +434,25 @@ button {
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">$badge-font-size: 0.75em !default;
-$medium-gray: #999 !default;
-$alert-color: #fff6bf !default;
-$error-color: #fbe3e4 !default;
-$notice-color: #e5edf8 !default;
-$success-color: #e6efc2 !default;
+  <pre><code class="language-scss">$small-font-size: 0.75em;
+$badges: (
+  &quot;alert&quot;: #fff6bf,
+  &quot;default&quot;: #999,
+  &quot;error&quot;: #fbe3e4,
+  &quot;notice&quot;: #e5edf8,
+  &quot;success&quot;: #e6efc2,
+) !default;
 
-@mixin badge($color: $medium-gray) {
-  background-color: $color;
-  border-radius: $badge-font-size * 5;
-  color: darken($color, 60%);
-  display: inline-block;
-  font-size: $badge-font-size;
-  line-height: 1;
-  padding: 0.4em 1.2em;
-}
-
-.badge {
-  @include badge;
-}
-
-.badge-alert {
-  @include badge($alert-color);
-}
-
-.badge-error {
-  @include badge($error-color);
-}
-
-.badge-notice {
-  @include badge($notice-color);
-}
-
-.badge-success {
-  @include badge($success-color);
+@each $badge-type, $color in $badges {
+  .badge-#{$badge-type} {
+    background-color: $color;
+    border-radius: $small-font-size * 5;
+    color: darken($color, 60%);
+    display: inline-block;
+    font-size: $small-font-size;
+    line-height: 1;
+    padding: 0.4em 1.2em;
+  }
 }
 </code></pre>
 </td>
@@ -517,7 +501,7 @@ $success-color: #e6efc2 !default;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.breadcrumb {   
+  <pre><code class="language-scss">.breadcrumb {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
@@ -575,29 +559,30 @@ $success-color: #e6efc2 !default;
       color: $breadcrumb-color-hover;
     }
 
-    &amp;:after,
-    &amp;:before {
-      @include position(absolute, 0px auto 0px 100%);
+    &amp;::after,
+    &amp;::before {
+      @include position(absolute, 0 auto 0 100%);
       border-bottom: $breadcrumb-height / 2 solid transparent;
       border-left: $breadcrumb-height / 4 solid transparent;
       border-top: $breadcrumb-height / 2 solid transparent;
-      content: '';
+      content: &quot;&quot;;
       display: block;
       margin: auto;
       z-index: 2;
     }
 
-    &amp;:last-child:after,
-    &amp;:last-child:before {
-       border: none;
+    &amp;:last-child::after,
+    &amp;:last-child::before {
+       border: 0;
     }
 
-    &amp;:before {
+    &amp;::before {
       border-left-color: $breadcrumb-arrow-color;
       margin-left: 1px;
       z-index: 1;
     }
-    &amp;:after {
+
+    &amp;::after {
       border-left-color: $breadcrumb-background;
     }
 
@@ -607,7 +592,6 @@ $success-color: #e6efc2 !default;
     }
   }
 }
-
 </code></pre>
 </td>
 
@@ -677,7 +661,7 @@ $success-color: #e6efc2 !default;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.button-group {  
+  <pre><code class="language-scss">.button-group {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -736,8 +720,7 @@ $success-color: #e6efc2 !default;
     }
 
     &amp;:first-child .button-group-item {
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
+      @include border-top-radius($base-border-radius);
       border-top: $button-group-border;
 
       @include media($large-screen) {
@@ -749,8 +732,7 @@ $success-color: #e6efc2 !default;
     }
 
     &amp;:last-child .button-group-item {
-      border-bottom-left-radius: $base-border-radius;
-      border-bottom-right-radius: $base-border-radius;
+      @include border-bottom-radius($base-border-radius);
       border-bottom: $button-group-border;
 
       @include media($large-screen) {
@@ -857,8 +839,8 @@ $success-color: #e6efc2 !default;
 
   .dropdown-description {
     background: $dropdown-background;
-    border-bottom-left-radius: $base-border-radius;
     border-bottom: $dropdown-border;
+    border-bottom-left-radius: $base-border-radius;
     border-left: $dropdown-border;
     border-top-left-radius: $base-border-radius;
     border-top: $dropdown-border;
@@ -876,11 +858,11 @@ $success-color: #e6efc2 !default;
 
   .dropdown-button {
     background: $dropdown-background;
-    border-bottom-right-radius: $base-border-radius;
-    border-top-right-radius: $base-border-radius;
-    border-top: $dropdown-border;
-    border-right: $dropdown-border;
     border-bottom: $dropdown-border;
+    border-bottom-right-radius: $base-border-radius;
+    border-right: $dropdown-border;
+    border-top: $dropdown-border;
+    border-top-right-radius: $base-border-radius;
     cursor: pointer;
     float: right;
     font-size: 0.7em;
@@ -899,7 +881,7 @@ $success-color: #e6efc2 !default;
     background-color: $dropdown-background-hover;
   }
 
-  .dropdown-button:after {
+  .dropdown-button::after {
     color: $base-font-color;
     content: &quot;\25BE&quot;;
     display: block;
@@ -909,10 +891,9 @@ $success-color: #e6efc2 !default;
   }
 
   .dropdown-menu {
-    @include transition (all 0.2s ease-in-out);
     background: $dropdown-background;
-    border-radius: $base-border-radius;
     border: $dropdown-border;
+    border-radius: $base-border-radius;
     box-shadow: 0 2px 2px transparentize(black, 0.8);
     color: $dropdown-color;
     cursor: pointer;
@@ -923,10 +904,11 @@ $success-color: #e6efc2 !default;
     position: absolute;
     right: 0;
     top: $dropdown-distance-from-menu;
+    transition: all 0.2s ease-in-out;
     width: 228px;
     z-index: 99999;
 
-    &amp;:before {
+    &amp;::before {
       @include position(absolute, 0 1em 0 0);
       color: $dropdown-background;
       content: &quot;\25b2&quot;;
@@ -939,7 +921,7 @@ $success-color: #e6efc2 !default;
 
   .dropdown-menu li {
     border-bottom: $dropdown-inner-border;
-    color: $dropdown-color; 
+    color: $dropdown-color;
     list-style: none;
     padding: $dropdown-padding / 2;
   }
@@ -954,7 +936,7 @@ $success-color: #e6efc2 !default;
   }
 
   .dropdown-menu li:last-child {
-    border: none;
+    border: 0;
     border-bottom-left-radius: $base-border-radius;
     border-bottom-right-radius: $base-border-radius;
   }
@@ -1048,7 +1030,7 @@ $success-color: #e6efc2 !default;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.expander {  
+  <pre><code class="language-scss">.expander {
   $base-font-size: 1em !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
@@ -1074,9 +1056,9 @@ $success-color: #e6efc2 !default;
     padding-bottom: $expander-toggle-size / 4;
     text-decoration: none;
 
-    &amp;:before {
-      font-size: $expander-arrow-width;
+    &amp;::before {
       content: &quot;\25BC&quot;;
+      font-size: $expander-arrow-width;
       margin-right: 0.5em;
     }
   }
@@ -1087,9 +1069,9 @@ $success-color: #e6efc2 !default;
   }
 
   .expander-hidden {
-    &amp;:before {
-      font-size: $expander-arrow-width;
+    &amp;::before {
       content: &quot;\25BA&quot;;
+      font-size: $expander-arrow-width;
     }
   }
 
@@ -1180,11 +1162,11 @@ $success-color: #e6efc2 !default;
   $base-spacing: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  
+
   @include clearfix;
   background: $base-background-color;
-  border-radius: $base-border-radius;
   border: 1px solid silver;
+  border-radius: $base-border-radius;
   box-shadow: 0 2px 2px transparentize(black, 0.8);
   line-height: $base-line-height;
   margin-bottom: 4em;
@@ -1203,8 +1185,8 @@ $success-color: #e6efc2 !default;
 }
 
 .js-fade-element-show {
-  @include transition (all 0.4s ease-in-out);
   opacity: 1;
+  transition: all 0.4s ease-in-out;
 }
 </code></pre>
 </td>
@@ -1325,44 +1307,32 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">$base-spacing: 1.5em !default;
-$alert-color: #fff6bf !default;
-$error-color: #fbe3e4 !default;
-$notice-color: #e5edf8 !default;
-$success-color: #e6efc2 !default;
+$flashes: (
+  &quot;alert&quot;: #fff6bf,
+  &quot;error&quot;: #fbe3e4,
+  &quot;notice&quot;: #e5edf8,
+  &quot;success&quot;: #e6efc2,
+) !default;
 
-@mixin flash($color) {
-  background-color: $color;
-  color: darken($color, 60%);
-  display: block;
-  margin-bottom: $base-spacing / 2;
-  padding: $base-spacing / 2;
-  text-align: center;
+@each $flash-type, $color in $flashes {
+  .flash-#{$flash-type} {
+    background-color: $color;
+    color: shade($color, 60%);
+    display: block;
+    margin-bottom: $base-spacing / 2;
+    padding: $base-spacing / 2;
+    text-align: center;
 
-  a {
-    color: darken($color, 70%);
-    text-decoration: underline;
+    a {
+      color: shade($color, 70%);
+      text-decoration: underline;
 
-    &amp;:focus,
-    &amp;:hover {
-      color: darken($color, 90%);
+      &amp;:focus,
+      &amp;:hover {
+        color: shade($color, 90%);
+      }
     }
   }
-}
-
-.flash-alert {
-  @include flash($alert-color);
-}
-
-.flash-error {
-  @include flash($error-color);
-}
-
-.flash-notice {
-  @include flash($notice-color);
-}
-
-.flash-success {
-  @include flash($success-color);
 }
 </code></pre>
 </td>
@@ -1423,14 +1393,14 @@ $success-color: #e6efc2 !default;
   $base-spacing: 1.5em;
 
   background: url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot;);
+  background-color: beige;
   background-position: top;
   background-size: cover;
-  background-color: beige;
   border: 1px solid $base-border-color;
   cursor: pointer;
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
-  
+
   @include media($medium-screen) {
     width: 40%;
   }
@@ -1441,16 +1411,16 @@ $success-color: #e6efc2 !default;
   }
 
   .hover-tile-container:hover &gt; .hover-tile {
-    @include transform(translate(0, -100%));
+    transform: translate(0, -100%);
   }
 
   .hover-tile {
-    @include transition(all, 0.2s ease-in-out);
     background: inherit;
     color: white;
     height: inherit;
     overflow: hidden;
     padding: $base-spacing;
+    transition: all 0.2s ease-in-out;
   }
 
   .hover-tile-hidden {
@@ -1514,36 +1484,36 @@ $success-color: #e6efc2 !default;
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.image-gradient-dynamic {
-  $image-gradient-color-top: red; 
+  $image-gradient-color-top: red;
   $transparency-top: 0.9;
-  $image-gradient-color-bottom: green; 
+  $image-gradient-color-bottom: green;
   $transparency-bottom: 0.6;
   $vertical-angle: 0deg;
-  $image-gradient-color-left: teal; 
+  $image-gradient-color-left: teal;
   $transparency-left: 0.8;
-  $image-gradient-color-right: yellow; 
+  $image-gradient-color-right: yellow;
   $transparency-right: 0.8;
   $horizontal-angle: 90deg;
-  
+
   line-height: 0;
   position: relative;
   width: 100%;
 
   img {
-   height: auto;
-   left: 0; 
-   position: relative;
-   top: 0;
-   width: 100%;
+    height: auto;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
   }
 
   .copy {
-    @include transform(translate(-50%, -50%));
     left: 50%;
     margin: auto;
     position: absolute;
     text-align: center;
     top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 999;
 
     p {
@@ -1555,16 +1525,28 @@ $success-color: #e6efc2 !default;
   }
 
   .overlay {
-    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top), 
-      transparentize($image-gradient-color-bottom, $transparency-bottom));
+    @include position(absolute, 0);
+    background-color: transparentize(
+      $image-gradient-color-top,
+      $transparency-top
+    );
+    background-image: linear-gradient($vertical-angle,
+      transparentize($image-gradient-color-top, $transparency-top),
+      transparentize($image-gradient-color-bottom, $transparency-bottom)
+    );
     display: block;
-    @include position(absolute, 0px 0px 0px 0px);
 
-    &amp;:after {
-      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left), 
-        transparentize($image-gradient-color-right, $transparency-right));
-      @include position(absolute, 0px 0px 0px 0px);
-      content: '';
+    &amp;::after {
+      @include position(absolute, 0);
+      background-color: transparentize(
+        $image-gradient-color-left,
+        $transparency-right
+      );
+      background-image: linear-gradient($horizontal-angle,
+        transparentize($image-gradient-color-left, $transparency-left),
+        transparentize($image-gradient-color-right, $transparency-right)
+      );
+      content: &quot;&quot;;
       display: block;
     }
   }
@@ -1669,12 +1651,12 @@ $success-color: #e6efc2 !default;
   }
 
   .modal-fade-screen { // overlay
-    @include transition(opacity 0.25s ease);
     @include position(fixed, 0);
     background-color: rgba(#000, 0.85);
     opacity: 0;
     padding-top: 0.6em;
     text-align: left;
+    transition: opacity 0.25s ease;
     visibility: hidden;
     z-index: 99999999999;
 
@@ -1694,37 +1676,37 @@ $success-color: #e6efc2 !default;
     background: $modal-background;
     cursor: pointer;
 
-    &amp;:after,
-    &amp;:before {
+    &amp;::after,
+    &amp;::before {
       @include position(absolute, 3px 3px 0 50%);
-      @include transform(rotate(45deg));
       @include size(0.15em 1.5em);
       background: $modal-close-color;
-      content: '';
+      content: &quot;&quot;;
       display: block;
       margin: -3px 0 0 -1px;
+      transform: rotate(45deg);
     }
 
-    &amp;:hover:after,
-    &amp;:hover:before {
+    &amp;:hover::after,
+    &amp;:hover::before {
       background: darken($modal-close-color, 10%);
     }
 
-    &amp;:before {
-      @include transform(rotate(-45deg));
+    &amp;::before {
+      transform: rotate(-45deg);
     }
   }
 
   .modal-inner {
-    @include transition(opacity 0.25s ease);
     background: $modal-background;
     border-radius: $base-border-radius;
-    margin-top: 0;
     margin: auto;
+    margin-top: 0;
     max-height: 95%;
     overflow: auto;
     padding: $modal-padding / 2;
     position: relative;
+    transition: opacity 0.25s ease;
     width: 95%;
 
     @include media($medium-screen) {
@@ -1899,7 +1881,7 @@ $success-color: #e6efc2 !default;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.pagination {  
+  <pre><code class="language-scss">.pagination {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-spacing: 1.5em !default;
@@ -1920,7 +1902,7 @@ $success-color: #e6efc2 !default;
     margin: 0;
     padding: 0;
     text-align: center;
-    
+
     li {
       display: inline;
       list-style: none;
@@ -1928,7 +1910,7 @@ $success-color: #e6efc2 !default;
 
     ul li {
       display: none;
-      
+
       &amp;:nth-child(1),
       &amp;:nth-child(2),
       &amp;:nth-child(3) {
@@ -1941,7 +1923,6 @@ $success-color: #e6efc2 !default;
     }
 
     li a {
-      @include transition (all 0.2s ease-in-out);
       background: $pagination-background;
       border-radius: $base-border-radius;
       border: $pagination-border;
@@ -1949,6 +1930,7 @@ $success-color: #e6efc2 !default;
       outline: none;
       padding: ($base-spacing / 4) ($gutter / 2);
       text-decoration: none;
+      transition: all 0.2s ease-in-out;
 
       &amp;:hover,
       &amp;:focus {
@@ -2160,8 +2142,8 @@ $(window).scroll (e) -&gt;
 
   background-color: $progress-background;
   border: $progress-border;
-  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
   border-radius: $base-border-radius;
+  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
   height: $progress-height;
   margin: 0 auto;
   padding: 2px;
@@ -2189,46 +2171,46 @@ $(window).scroll (e) -&gt;
 
 @-webkit-keyframes progress {
   0% {
-    background-position: 0px 0px;
+    background-position: 0 0;
   }
   100% {
-    background-position: 40px 0px;
+    background-position: 40px 0;
   }
 }
 
 @-moz-keyframes progress {
   0% {
-    background-position: 0px 0px;
+    background-position: 0 0;
   }
   100% {
-    background-position: 40px 0px;
+    background-position: 40px 0;
   }
 }
 
 @-ms-keyframes progress {
   0% {
-    background-position: 0px 0px;
+    background-position: 0 0;
   }
   100% {
-    background-position: 40px 0px;
+    background-position: 40px 0;
   }
 }
 
 @-o-keyframes progress {
   0% {
-    background-position: 0px 0px;
+    background-position: 0 0;
   }
   100% {
-    background-position: 40px 0px;
+    background-position: 40px 0;
   }
 }
 
 @keyframes progress {
   0% {
-    background-position: 0px 0px;
+    background-position: 0 0;
   }
   100% {
-    background-position: 40px 0px;
+    background-position: 40px 0;
   }
 }
 </code></pre>
@@ -2270,7 +2252,7 @@ $(window).scroll (e) -&gt;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.progress-bar-indication {  
+  <pre><code class="language-scss">.progress-bar-indication {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
@@ -2296,8 +2278,8 @@ $(window).scroll (e) -&gt;
     background-color: $progress-meter-color;
     background-repeat: repeat-x;
     background-size: 40px 40px;
-    border-bottom-right-radius: 0;
     border: $progress-meter-border;
+    border-bottom-right-radius: 0;
     border-radius: $base-border-radius /1.5;
     border-top-right-radius: 0;
     box-sizing: border-box;
@@ -2307,10 +2289,10 @@ $(window).scroll (e) -&gt;
   }
 
   p {
-    color: $progress-color;    
+    color: $progress-color;
     line-height: $base-line-height;
     margin: 0;
-    padding: .1em .5em;
+    padding: 0.1em 0.5em;
     text-shadow: 0 0 1px black;
   }
 }
@@ -2377,9 +2359,8 @@ $(window).scroll (e) -&gt;
   top: -1px;
 
   .ribbon {
-    @include transform(rotate(45deg));
     background-color: $ribbon-background;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     color: #fff;
     font-size: 0.8em;
     left: -5px;
@@ -2388,6 +2369,7 @@ $(window).scroll (e) -&gt;
     position: relative;
     text-align: center;
     top: 15px;
+    transform: rotate(45deg);
     width: 120px;
   }
 }
@@ -2443,7 +2425,7 @@ $(window).scroll (e) -&gt;
   embed,
   object,
   iframe {
-    @include position(absolute, 0px null null 0px);
+    @include position(absolute, 0 null null 0);
     @include size(100%);
   }
 }
@@ -2494,7 +2476,7 @@ $(window).scroll (e) -&gt;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">form.search-bar {  
+  <pre><code class="language-scss">form.search-bar {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-spacing: 1.5em !default;
   $base-border-color: gainsboro !default;
@@ -2509,7 +2491,6 @@ $(window).scroll (e) -&gt;
 
   input[type=search] {
     @include appearance(none);
-    @include transition(border-color);
     background-color: white;
     border: 1px solid $base-border-color;
     box-sizing: border-box;
@@ -2519,11 +2500,12 @@ $(window).scroll (e) -&gt;
     margin: 0;
     padding: ($base-spacing / 3) ($base-spacing / 3);
     position: relative;
+    transition: border-color;
     width: 100%;
   }
 
   button[type=submit] {
-    @include position(absolute, 0em 0em 0em null);
+    @include position(absolute, 0 0 0 null);
     outline: none;
     padding: 5px 10px;
 
@@ -2592,7 +2574,7 @@ $(window).scroll (e) -&gt;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.sliding-panel-content {  
+  <pre><code class="language-scss">.sliding-panel-content {
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $sliding-panel-border-color: $dark-gray;
@@ -2603,14 +2585,14 @@ $(window).scroll (e) -&gt;
   $sliding-panel-color-hover: #fff;
   $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
 
-  @include position(fixed, 0px auto 0px 0px);
+  @include position(fixed, 0 auto 0 0);
   @include size(220px 100%);
-  @include transform(translateX(-220px));
-  @include transition(all 0.25s linear);
   background: $sliding-panel-background;
-  z-index: 999999;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  transform: translateX(-220px);
+  transition: all 0.25s linear;
+  z-index: 999999;
 
   ul {
     padding: 0;
@@ -2640,15 +2622,15 @@ $(window).scroll (e) -&gt;
   }
 
   &amp;.is-visible {
-    @include transform(translateX(0));
+    transform: translateX(0);
   }
 }
 
 .sliding-panel-fade-screen {
-  @include position(fixed, 0px 0px 0px 0px);
-  @include transition;
+  @include position(fixed, 0);
   background: black;
   opacity: 0;
+  transition: all 0.2s ease-in-out;
   visibility: hidden;
   z-index: 999998;
 
@@ -2659,11 +2641,11 @@ $(window).scroll (e) -&gt;
 }
 
 .sliding-panel-button {
-  padding: 10px 16px;
-  display: inline-block;
   cursor: pointer;
-  position: relative;
+  display: inline-block;
   outline: none;
+  padding: 10px 16px;
+  position: relative;
 
   img {
     height: 1.3em;
@@ -2738,7 +2720,7 @@ $(window).scroll (e) -&gt;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.label-switch {  
+  <pre><code class="language-scss">.label-switch {
   $action-color: #477DCA !default;
   $base-background-color: white !default;
   $switch-width: 52px;
@@ -2763,38 +2745,38 @@ $(window).scroll (e) -&gt;
     display: none;
 
     + .checkbox {
-      @include transition(all 0.3s ease);
       background: $switch-border-background;
+      border: 0;
       border-radius: $switch-radius;
-      border: none;
       cursor: pointer;
       height: $switch-height;
       margin: 0;
       padding: 0;
       position: relative;
+      transition: all 0.3s ease;
       width: $switch-width;
       z-index: 0;
 
-      &amp;:before {
+      &amp;::before {
         @include position(absolute, 2px 0 0 2px);
-        @include transform(scale(1));
-        @include transition(all 0.3s ease);
         background: $switch-background;
         border-radius: $switch-radius;
         content: &quot;&quot;;
         height: $knob-radius;
+        transform: scale(1);
+        transition: all 0.3s ease;
         width: $switch-width - ($switch-padding * 2);
         z-index: 1;
       }
 
-      &amp;:after {
+      &amp;::after {
         @include position(absolute, 2px 0 0 2px);
-        @include transition(all 0.3s ease);
         @include size($knob-size);
         background: $switch-background;
         border-radius: $knob-radius;
         box-shadow: $switch-shadow;
         content: &quot;&quot;;
+        transition: all 0.3s ease;
         z-index: 2;
       }
     }
@@ -2803,11 +2785,11 @@ $(window).scroll (e) -&gt;
       + .checkbox {
         background: $action-color;
 
-        &amp;:before {
-          @include transform(scale(0));
+        &amp;::before {
+          transform: scale(0);
         }
 
-        &amp;:after {
+        &amp;::after {
           left: $switch-width - $knob-width - ($switch-padding);
         }
       }
@@ -2967,7 +2949,7 @@ $(window).scroll (e) -&gt;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">@mixin texture($gradient-angle, $bg-color-1, $bg-color-2, $texture-number, $inverted) { $texture-list: 
+  <pre><code class="language-scss">@mixin texture($gradient-angle, $bg-color-1, $bg-color-2, $texture-number, $inverted) { $texture-list:
   &quot;paper.png&quot;             // Fabric and paper
   &quot;rice_paper.png&quot;
   &quot;noise_lines.png&quot;
@@ -3013,7 +2995,7 @@ $(window).scroll (e) -&gt;
   &quot;pinstripe.png&quot;
   &quot;line_horizontal1.png&quot;
   &quot;line_horizontal2.png&quot;
-  &quot;linen.png&quot; 
+  &quot;linen.png&quot;
   &quot;vintage_speckles.png&quot;   // Patina and irregular
   &quot;subtle_grunge.png&quot;
   &quot;old_wall.png&quot;
@@ -3027,7 +3009,7 @@ $(window).scroll (e) -&gt;
   &quot;subtle_surface.png&quot;
   &quot;dust.png&quot;
   &quot;light_alu.png&quot;
-  &quot;corrugation.png&quot; 
+  &quot;corrugation.png&quot;
   &quot;kindajean.png&quot;           // Diagonal
   &quot;line_diagonal1.png&quot;
   &quot;line_diagonal2.png&quot;
@@ -3075,16 +3057,16 @@ $(window).scroll (e) -&gt;
   width: 100%;
 
   .texture-normal {
-    // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
-    @include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 1); 
+    // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal
+    @include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 1);
     float: left;
     height: 5em;
     width: 50%;
   }
 
   .texture-inverted {
-    // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal  
-    @include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 0); 
+    // gradient color 1, gradient color 2, gradient angle, texture-number, 0=inverted or 1=normal
+    @include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 0);
     float: left;
     height: 5em;
     width: 50%;
@@ -3135,12 +3117,12 @@ $(window).scroll (e) -&gt;
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.tooltip-item {  
+  <pre><code class="language-scss">.tooltip-item {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;  
+  $base-font-color: $dark-gray !default;
   $tooltip-background: white;
   $tooltip-color: $base-font-color;
   $tooltip-max-width: 16em;
@@ -3150,8 +3132,8 @@ $(window).scroll (e) -&gt;
   $tooltip-arrow-distance-from-box: -1.3em;
 
   background: $tooltip-background;
-  border-radius: $base-border-radius;
   border: 1px solid $base-border-color;
+  border-radius: $base-border-radius;
   display: inline-block;
   padding: 0.5em 1em;
   position: relative;
@@ -3165,7 +3147,6 @@ $(window).scroll (e) -&gt;
 
   .tooltip {
     @include position(absolute, null 0 $tooltip-distance-from-item 0);
-    @include transition (all 0.2s ease-in-out);
     background-color: $tooltip-background;
     background: #fff;
     border-radius: $base-border-radius;
@@ -3178,6 +3159,7 @@ $(window).scroll (e) -&gt;
     opacity: 0;
     padding: 1em;
     text-align: center;
+    transition: all 0.2s ease-in-out;
     visibility: hidden;
     z-index: 10;
 
@@ -3187,12 +3169,12 @@ $(window).scroll (e) -&gt;
       margin: 0;
     }
 
-    &amp;:after {
-      @include position(absolute, null 0 null 0);
+    &amp;::after {
+      @include position(absolute, null 0);
       border: $tooltip-arrow-width solid transparent;
       bottom: $tooltip-arrow-distance-from-box;
       color: $tooltip-background;
-      content: '▼';
+      content: &quot;▼&quot;;
       font-size: 1.4em;
       margin-left: -$tooltip-arrow-width;
       text-align: center;
@@ -3294,7 +3276,7 @@ $(window).scroll (e) -&gt;
             <li><a href="../type-systems/">Type Systems</a></li>
           </ul>
           <div class="refills-footer-logo">
-            <img src="/images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
+            <img src="../images/ralph-gray.png" alt="thoughtbot Ralph logo mark">
           </div>
           <p>Refills is maintained and funded by <a href="//thoughtbot.com">thoughtbot, inc</a>.</p>
           <p>Copyright &copy; 2014&ndash;2015 <a href="//thoughtbot.com">thoughtbot, inc</a>. Refills is free software, and may be redistributed under the terms specified in the <a href="//github.com/thoughtbot/refills/blob/master/LICENSE.md">license</a>.</p>
