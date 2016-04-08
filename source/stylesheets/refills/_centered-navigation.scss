@@ -31,8 +31,8 @@
 
     img {
       max-height: $centered-navigation-height;
-      opacity: .6;
-      padding: .8em 0;
+      opacity: 0.6;
+      padding: 0.8em 0;
     }
 
     @include media($horizontal-bar-mode) {
@@ -70,12 +70,12 @@
   }
 
   ul.centered-navigation-menu {
-    -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
     display: none;
     margin: 0 auto;
     overflow: visible;
     padding: 0;
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
     width: 100%;
     z-index: 99999;
 
@@ -166,7 +166,7 @@
       padding-right: 0.6em;
     }
 
-    > a:after {
+    > a::after {
       @include position(absolute, auto -0.4em auto auto);
       color: $centered-navigation-color;
       content: "\25BE";
@@ -189,7 +189,7 @@
         margin-right: $centered-navigation-submenu-padding;
       }
 
-      &:after {
+      &::after {
         content: "›";
         font-size: 1.2em;
         position: absolute;
@@ -206,10 +206,6 @@
       padding-right: $centered-navigation-submenu-padding;
       position: relative;
     }
-  }
-
-  .hej {
-    background: red !important;
   }
 
   ul.submenu {

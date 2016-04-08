@@ -221,7 +221,7 @@ header.navigation {
 
     .submenu.fly-out-left {
       @include media($horizontal-bar-mode) {
-        left: -$navigation-submenu-width + 0.2em;;
+        left: -$navigation-submenu-width + 0.2em;
         top: 0;
       }
     }
