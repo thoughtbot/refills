@@ -14,7 +14,7 @@
 
   .modal-fade-screen { // overlay
     @include position(fixed, 0);
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(#000, 0.85);
     opacity: 0;
     transition: opacity 0.25s ease;
     visibility: hidden;
