@@ -280,19 +280,19 @@
   <pre><code class="language-scss">$action-color: #477dca !default;
 
 .animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  @include animation-duration(1s);
+  @include animation-fill-mode(both);
 
   &amp;.infinite {
-    animation-iteration-count: infinite;
+    @include animation-iteration-count(infinite);
   }
 
   &amp;.alternate {
-    animation-direction: alternate;
+    @include animation-direction(alternate);
   }
 
   &amp;.iteration {
-    animation-iteration-count: 2;
+    @include animation-iteration-count(2);
   }
 }
 
@@ -509,7 +509,7 @@ $badges: (
   $action-color: #477DCA !default;
   $medium-gray: #999 !default;
   $light-gray: #DDD !default;
-  $medium-screen: 40em !default;
+  $medium-screen: em(640) !default;
   $breadcrumb-border-color: $base-border-color;
   $breadcrumb-border: 1px solid $breadcrumb-border-color;
   $breadcrumb-height: $base-spacing * 1.5;
@@ -670,7 +670,7 @@ $badges: (
   $base-background-color: white !default;
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
-  $large-screen: 53.75em !default;
+  $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   $button-group-background: $base-background-color;
   $button-group-color: lighten($base-font-color, 30%);
@@ -816,7 +816,7 @@ $badges: (
   $base-line-height: 1.5em !default;
   $base-background-color: white !default;
   $dark-gray: #333 !default;
-  $large-screen: 53.75em !default;
+  $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   $dropdown-color: $base-font-color;
   $dropdown-description-color: lighten($dropdown-color, 40%);
@@ -1046,6 +1046,7 @@ $badges: (
   width: 60%;
 
   .expander-trigger {
+    @include user-select(none);
     border-bottom: 1px solid $light-gray;
     color: $action-color;
     cursor: pointer;
@@ -1054,7 +1055,6 @@ $badges: (
     margin-bottom: $expander-toggle-size;
     padding-bottom: $expander-toggle-size / 4;
     text-decoration: none;
-    user-select: none;
 
     &amp;::before {
       content: &quot;\25BC&quot;;
@@ -1388,7 +1388,7 @@ $flashes: (
   <pre><code class="language-scss">.hover-tile-outer {
   $base-border-color: gainsboro !default;
   $base-line-height: 1.5em !default;
-  $medium-screen: 40em !default;
+  $medium-screen: em(640) !default;
   $hover-tile-height: 10em;
   $base-spacing: 1.5em;
 
@@ -1621,8 +1621,8 @@ $flashes: (
   $action-color: #477dca !default;
   $dark-gray: #333 !default;
   $light-gray: #ddd !default;
-  $medium-screen: 40em !default;
-  $large-screen: 53.75em !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   $modal-padding: 3em;
   $modal-background: $base-background-color;
@@ -1738,7 +1738,7 @@ $flashes: (
       color: $base-font-color;
 
       @include media($medium-screen) {
-        columns: 2 8em;
+        @include columns(2 8em);
       }
     }
 
@@ -1887,7 +1887,7 @@ $flashes: (
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
-  $large-screen: 53.75em !default;
+  $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   $pagination-border-color: $base-border-color;
   $pagination-border: 1px solid $pagination-border-color;
@@ -2150,16 +2150,14 @@ $(window).scroll (e) -&gt;
   width: 100%;
 
   &gt; span.meter {
-    animation: progress $progress-animation-duration linear infinite;
+    @include animation(progress $progress-animation-duration linear infinite);
+    @include background-image(linear-gradient(-45deg, rgba(255,255,255, 0.15) 25%,
+                                                      transparent 25%,
+                                                      transparent 50%,
+                                                      rgba(255,255,255, 0.15) 50%,
+                                                      rgba(255,255,255, 0.15) 75%,
+                                                      transparent 75%));
     background-color: $progress-meter-color;
-    background-image: linear-gradient(
-                        -45deg, rgba(#fff, 0.15) 25%,
-                        transparent 25%,
-                        transparent 50%,
-                        rgba(#fff, 0.15) 50%,
-                        rgba(#fff, 0.15) 75%,
-                        transparent 75%
-                      );
     background-repeat: repeat-x;
     background-size: 40px 40px;
     border: $progress-meter-border;
@@ -2362,7 +2360,7 @@ $(window).scroll (e) -&gt;
 
   .ribbon {
     background-color: $ribbon-background;
-    box-shadow: 0 0 3px rgba(#000, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     color: #fff;
     font-size: 0.8em;
     left: -5px;
@@ -2492,7 +2490,7 @@ $(window).scroll (e) -&gt;
   position: relative;
 
   input[type=search] {
-    appearance: none;
+    @include appearance(none);
     background-color: white;
     border: 1px solid $base-border-color;
     box-sizing: border-box;
@@ -3042,15 +3040,11 @@ $(window).scroll (e) -&gt;
   &quot;noisy_grid_simple.png&quot;;
 
   @if ($inverted == 1) {
-    background: url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/#{nth($texture-list, $texture-number)}&quot;),
-                linear-gradient($gradient-angle, $bg-color-1, $bg-color-2),
-                center no-repeat $bg-color-1 scroll;
+    @include background(url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/#{nth($texture-list, $texture-number)}&quot;), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), center no-repeat $bg-color-1 scroll);
   }
 
   @else {
-    background: url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/#{nth($texture-list, $texture-number)}&quot;),
-                linear-gradient($gradient-angle, $bg-color-1, $bg-color-2),
-                center no-repeat $bg-color-1 scroll;
+    @include background(url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/#{nth($texture-list, $texture-number)}&quot;), linear-gradient($gradient-angle, $bg-color-1, $bg-color-2), center no-repeat $bg-color-1 scroll);
   }
 }
 

@@ -152,7 +152,7 @@
   $action-color: #477dca !default;
   $dark-gray: #333 !default;
   $light-gray: #ddd !default;
-  $medium-screen: 40em !default;
+  $medium-screen: em(640) !default;
   $tab-border: 1px solid $base-border-color;
   $tab-content-background: lighten($light-gray, 10);
   $tab-active-background: $tab-content-background;
@@ -379,7 +379,7 @@
   $base-spacing: 1.5em !default;
   $action-color: #477dca !default;
   $dark-gray: #333 !default;
-  $medium-screen: 40em !default;
+  $medium-screen: em(640) !default;
   $tab-link-color: $dark-gray;
   $tab-border: 1px solid $base-border-color;
   $tab-active-background: $base-background-color;
@@ -598,9 +598,9 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
 }
 
 .card {
@@ -619,13 +619,13 @@
   $card-image-hover-opacity: 0.7;
   $card-image-hover-color: #F8F2B4;
 
+  @include flex-basis(15em);
+  @include flex-grow(1);
   background-color: $card-background;
   border: $card-border;
   border-radius: $base-border-radius;
   box-shadow: 0 2px 4px darken($base-background-color, 10%);
   cursor: pointer;
-  flex-basis: 15em;
-  flex-grow: 1;
   margin: 0 $card-margin $base-spacing $card-margin;
   position: relative;
   transition: all 0.2s ease-in-out;
@@ -797,7 +797,7 @@
   <pre><code class="language-scss">.centered-navigation {
   $base-border-radius: 3px !default;
   $dark-gray: #333 !default;
-  $large-screen: 53.75em !default;
+  $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
@@ -1317,7 +1317,7 @@ $(document).ready(function() {
   <pre><code class="language-scss">.device-background {
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
-  $large-screen: 53.75em !default;
+  $large-screen: em(860) !default;
   $device-padding-vertical: 5em;
   $device-padding-horizontal: 0.4em;
   $device-screen-width: 14em;
@@ -1328,12 +1328,10 @@ $(document).ready(function() {
   $device-background-top: #162C4C;
   $device-background-bottom: #0A120D;
   $gradient-angle: 10deg;
-  $device-image: &quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot;;
-  $device-screen-image: &quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg&quot;;
+  $device-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
+  $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg';
 
-  background: url($device-image),
-              linear-gradient($gradient-angle, $device-background-bottom, $device-background-top),
-              no-repeat $device-background-top scroll;
+  @include background(url($device-image), linear-gradient($gradient-angle, $device-background-bottom, $device-background-top), no-repeat $device-background-top scroll);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 20em;
@@ -1521,21 +1519,21 @@ $(document).ready(function() {
     #CCC,
     #F6C05C;
 
-  @include clearfix;
-  align-items: stretch;
-  clear: both;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
+    @include clearfix;
+    @include display(flex);
+    @include justify-content(center);
+    @include align-items(stretch);
+    @include flex-wrap(wrap);
+    clear: both;
+    text-align: center;
 
   .flex-box {
-    align-self: stretch;
+    @include flex(2 2 15em);
+    @include align-self(stretch);
     background: $flex-box-background;
     border-radius: $base-border-radius;
     box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10%);
     display: block;
-    flex: 2 2 15em;
     margin: $flex-box-gutter;
     padding: 2em 2em 3em 2em;
     text-decoration: none;
@@ -1574,7 +1572,7 @@ $(document).ready(function() {
   }
 
   .flex-box-big {
-    flex: 1 1 40em;
+    @include flex(1 1 40em);
   }
 }
 </code></pre>
@@ -1669,8 +1667,8 @@ $(document).ready(function() {
   <pre><code class="language-scss">.footer {
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
-  $medium-screen: 40em !default;
-  $large-screen: 53.75em !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
   $footer-background: desaturate(darken($action-color, 20%), 30%);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
@@ -1687,18 +1685,18 @@ $(document).ready(function() {
     img {
       height: 3em;
     }
-  }
+  } 
 
   .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include display(flex);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
     margin-bottom: $base-spacing;
   }
 
   ul {
-    flex-basis: 13em;
-    flex-shrink: 0;
+    @include flex-basis(13em);
+    @include flex-shrink(0);
     margin-bottom: $base-spacing * 2;
     padding: 0;
   }
@@ -1723,7 +1721,7 @@ $(document).ready(function() {
     color: $footer-color;
     font-size: 1em;
     margin-bottom: 0.4em;
-  }
+  }  
 
   hr {
     border: 1px solid transparentize($footer-disclaimer-color, 0.3);
@@ -1864,8 +1862,8 @@ $(document).ready(function() {
 .footer-2 {
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
-  $medium-screen: 40em !default;
-  $large-screen: 53.75em !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
   $footer-background: desaturate(darken($action-color, 20%), 30%);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
@@ -2079,8 +2077,8 @@ $(document).ready(function() {
 .grid-items {
   $action-color: #477DCA !default;
   $base-background-color: white !default;
-  $medium-screen: 40em !default;
-  $large-screen: 53.75em !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
   $grid-items-background: $base-background-color;
   $grid-item-background: desaturate($action-color, 30%);
   $grid-item-colors:
@@ -2304,8 +2302,8 @@ $(document).ready(function() {
   $base-background-color: white !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
-  $medium-screen: 40em !default;
-  $large-screen: 53.75em !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   $grid-items-background: $base-background-color;
   $grid-item-background: $base-background-color;
@@ -2449,16 +2447,14 @@ $(document).ready(function() {
   <pre><code class="language-scss">.hero {
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
-  $large-screen: 53.75em !default;
+  $large-screen: em(860) !default;
   $hero-background-top: #7F99BE;
   $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: &quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot;;
+  $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
 
-  background: url($hero-image),
-              linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top),
-              no-repeat $hero-background-top scroll;
+  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
   background-color: #324766;
   background-position: top;
   background-repeat: no-repeat;
@@ -2603,16 +2599,16 @@ $(document).ready(function() {
   $base-font-color: $dark-gray !default;
   $icon-bullet-size: 3.5em;
 
-  display: flex;
-  flex-wrap: wrap;
+  @include display(flex);
+  @include flex-wrap(wrap);
   margin: 1em;
   margin-bottom: $base-line-height;
   overflow: auto;
   padding: 0;
 
   .bullet {
-    flex-basis: 20em;
-    flex-grow: 1;
+    @include flex-basis(20em);
+    @include flex-grow(1);
   }
 
   .bullet-icon {
@@ -2991,7 +2987,7 @@ https://developers.google.com/maps/documentation/javascript/tutorial
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
-  $large-screen: 53.75em !default;
+  $large-screen: em(860) !default;
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;
   $navigation-color: transparentize(white, 0.3);
@@ -3476,7 +3472,7 @@ $(document).ready(function() {
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
-  $large-screen: 53.75em !default;
+  $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
 
   display: inline-block;
@@ -3515,7 +3511,7 @@ $(document).ready(function() {
     }
 
     section p:last-of-type {
-      margin-bottom: 2em;
+      margin-bottom: 2em; 
     }
 
     @include media($large-screen) {
@@ -3747,18 +3743,18 @@ jQuery -&gt;
   $action-color: #477DCA !default;
 
   $dark-gray: #333 !default;
-  $large-screen: 53.75em !default;
+  $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   $clear-button-width: 4em;
   $search-tools-border-color: $base-border-color;
   $search-tools-background: lighten($search-tools-border-color, 10%);
 
+  @include display(flex);
+  @include justify-content(space-between);
   @include clearfix;
   background: $search-tools-background;
   border: 1px solid $search-tools-border-color;
   border-radius: $base-border-radius;
-  display: flex;
-  justify-content: space-between;
   padding: $gutter ($gutter / 2);
   width: 100%;
 
@@ -3775,19 +3771,19 @@ jQuery -&gt;
   }
 
   .filters {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(space-between);
     width: 100%;
 
     @include media($large-screen) {
-      flex-direction: row;
+      @include flex-direction(row);
     }
   }
 
   .filter {
-    flex-grow: 1;
-    flex-shrink: 1;
+    @include flex-shrink(1);
+    @include flex-grow(1);
     margin: 0 0.2em 1em 0.2em;
 
     @include media($large-screen) {
@@ -4027,11 +4023,11 @@ $(function() {
   <div class="copy-source-container">
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
-  <pre><code class="language-scss">.side-image {
+  <pre><code class="language-scss">.side-image {  
   $base-line-height: 1.5em !default;
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
-  $large-screen: 53.75em !default;
+  $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   $side-image-background-top: #B5EBEB;
   $side-image-background-bottom: #5DAC5D;
@@ -4045,9 +4041,7 @@ $(function() {
   }
 
   .images-wrapper {
-    background: url(&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot;),
-                linear-gradient($side-image-background-top, $side-image-background-bottom),
-                no-repeat $side-image-background-top scroll;
+    @include background(url('https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
     background-color: $side-image-background-top;
     background-size: cover;
     border-bottom: $side-image-border;
@@ -4198,8 +4192,8 @@ $(function() {
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
-  $medium-screen: 40em !default;
-  $large-screen: 53.75em !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
@@ -4394,8 +4388,8 @@ $(function() {
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $light-gray: #DDD !default;
-  $medium-screen: 40em !default;
-  $large-screen: 53.75em !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
@@ -4556,7 +4550,7 @@ $(function() {
   $base-spacing: 1.5em !default;
   $action-color: #477dca !default;
   $dark-gray: #333 !default;
-  $medium-screen: 40em !default;
+  $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
   $tab-border-color: $base-border-color;
   $tab-border: 1px solid $tab-border-color;
