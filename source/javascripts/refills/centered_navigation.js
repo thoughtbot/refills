@@ -1,4 +1,5 @@
-$(window).resize(function() {
+$(window).on("load resize",function(e) {
+
   var more = document.getElementById("js-centered-more");
   var windowWidth = $(window).width();
   var moreLeftSideToPageLeftSide = $(more).offset().left;
@@ -13,10 +14,7 @@ $(window).resize(function() {
     $("#js-centered-more .submenu .submenu").removeClass("fly-out-left");
     $("#js-centered-more .submenu .submenu").addClass("fly-out-right");
   }
-});
 
-$(document).ready(function() {
-  $(window).trigger("resize");
   var menuToggle = $("#js-centered-navigation-mobile-menu").unbind();
   $("#js-centered-navigation-menu").removeClass("show");
 
