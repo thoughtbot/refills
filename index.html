@@ -1072,7 +1072,8 @@
       <a href="javascript:void(0)" class="copy-source">Copy JavaScript</a>
       <a href="javascript:void(0)" class="copy-source copy-coffee">Copy CoffeeScript</a>
   </div>
-  <pre><code class="language-javascript">$(window).resize(function() {
+  <pre><code class="language-javascript">$(window).on(&quot;load resize&quot;,function(e) {
+
   var more = document.getElementById(&quot;js-centered-more&quot;);
   var windowWidth = $(window).width();
   var moreLeftSideToPageLeftSide = $(more).offset().left;
@@ -1087,10 +1088,7 @@
     $(&quot;#js-centered-more .submenu .submenu&quot;).removeClass(&quot;fly-out-left&quot;);
     $(&quot;#js-centered-more .submenu .submenu&quot;).addClass(&quot;fly-out-right&quot;);
   }
-});
 
-$(document).ready(function() {
-  $(window).trigger(&quot;resize&quot;);
   var menuToggle = $(&quot;#js-centered-navigation-mobile-menu&quot;).unbind();
   $(&quot;#js-centered-navigation-menu&quot;).removeClass(&quot;show&quot;);
 
