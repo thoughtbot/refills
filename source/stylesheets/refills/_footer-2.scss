@@ -1,4 +1,5 @@
 // Uncomment this for a sticky footer.
+// $large-screen: 53.75em !default;
 //
 // .wrapper-for-content-outside-of-footer {
 //   min-height: 100%;
@@ -35,7 +36,7 @@
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
-  display: inline-block;
+  display: block;
   padding: $base-spacing;
   width: 100%;
 
