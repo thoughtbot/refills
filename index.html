@@ -2407,14 +2407,10 @@
       <div class="refills-wrapper">
         <div class="line-behind-text"><h6>Hero Unit</h6></div>
         <div class="hero">
-	<div class="hero-inner">
-    <a href="" class="hero-logo"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png
-" alt="Logo Image"></a>
-		<div class="hero-copy">
-			<h1>Short description of Product</h1>
-			<p>A few reasons why this product is worth using, who it's for and why they need it.</p>	
-		</div>
-	</div>
+  <div class="hero-content">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png" alt="Logo Image" class="hero-logo">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni modi doloremque excepturi laudantium maxime explicabo cumque deleniti voluptate deserunt.</p>
+  </div>
 </div>
 
       </div>
@@ -2430,14 +2426,10 @@
       <a href="javascript:void(0)" class="copy-source">Copy HTML</a>
   </div>
   <pre><code class="language-markup">&lt;div class=&quot;hero&quot;&gt;
-	&lt;div class=&quot;hero-inner&quot;&gt;
-    &lt;a href=&quot;&quot; class=&quot;hero-logo&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png
-&quot; alt=&quot;Logo Image&quot;&gt;&lt;/a&gt;
-		&lt;div class=&quot;hero-copy&quot;&gt;
-			&lt;h1&gt;Short description of Product&lt;/h1&gt;
-			&lt;p&gt;A few reasons why this product is worth using, who it's for and why they need it.&lt;/p&gt;	
-		&lt;/div&gt;
-	&lt;/div&gt;
+  &lt;div class=&quot;hero-content&quot;&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png&quot; alt=&quot;Logo Image&quot; class=&quot;hero-logo&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni modi doloremque excepturi laudantium maxime explicabo cumque deleniti voluptate deserunt.&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 </td>
@@ -2447,60 +2439,33 @@
       <a href="javascript:void(0)" class="copy-source">Copy Scss</a>
   </div>
   <pre><code class="language-scss">.hero {
-  $base-border-radius: 3px !default;
-  $action-color: #477DCA !default;
-  $large-screen: 53.75em !default;
-  $hero-background-top: #7F99BE;
-  $hero-background-bottom: #20392B;
-  $hero-color: white;
-  $gradient-angle: 10deg;
-  $hero-image: &quot;https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png&quot;;
+  $large-screen: 50em !default;
+  align-items: center;
+  background: image-url(&quot;background-image.png&quot;);
+  background-position: right;
+  background-size: none;
+  display: flex;
+  justify-content: center;
+  min-height: 25em;
+  padding: 2em;
 
-  background: url($hero-image),
-              linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top),
-              no-repeat $hero-background-top scroll;
-  background-color: #324766;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 3em;
-
-  .hero-logo img {
-    height: 4em;
-    margin-bottom: 1em;
+  @include media($large-screen) {
+    background-position: left;
+    background-size: cover;
+    justify-content: flex-end;
   }
 
-  .hero-inner {
-    @include outer-container($refills-max-width);
-    @include clearfix;
-    margin: auto;
-    padding: 3.5em;
+  .hero-content {
+    max-width: 20em;
     text-align: center;
 
-    .hero-copy {
-      text-align: center;
-
-      h1 {
-        color: $hero-color;
-        font-size: 1.6em;
-        margin-bottom: 0.5em;
-
-        @include media($large-screen) {
-          font-size: 1.8em;
-        }
-      }
-
-      p {
-        color: $hero-color;
-        line-height: 1.4em;
-        margin: 0 auto 3em auto;
-
-        @include media($large-screen) {
-          font-size: 1.1em;
-          max-width: 40%;
-        }
-      }
+    @include media($large-screen) {
+      text-align: left;
     }
+  }
+
+  .hero-logo {
+    margin: auto;
   }
 }
 </code></pre>

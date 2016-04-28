@@ -1385,48 +1385,39 @@ section.inner-content {
     right: 0;
     width: 4px; }
 .refills-patterns .hero {
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), -webkit-linear-gradient(80deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
-  background-color: #324766;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 3em; }
-  .refills-patterns .hero .hero-logo img {
-    height: 4em;
-    margin-bottom: 1em; }
-  .refills-patterns .hero .hero-inner {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto;
-    margin: auto;
-    padding: 3.5em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(../images/background-image.png);
+  background-position: right;
+  background-size: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 25em;
+  padding: 2em; }
+  @media screen and (min-width: 50em) {
+    .refills-patterns .hero {
+      background-position: left;
+      background-size: cover;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
+  .refills-patterns .hero .hero-content {
+    max-width: 20em;
     text-align: center; }
-    .refills-patterns .hero .hero-inner::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .refills-patterns .hero .hero-inner::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .refills-patterns .hero .hero-inner .hero-copy {
-      text-align: center; }
-      .refills-patterns .hero .hero-inner .hero-copy h1 {
-        color: white;
-        font-size: 1.6em;
-        margin-bottom: 0.5em; }
-        @media screen and (min-width: 53.75em) {
-          .refills-patterns .hero .hero-inner .hero-copy h1 {
-            font-size: 1.8em; } }
-      .refills-patterns .hero .hero-inner .hero-copy p {
-        color: white;
-        line-height: 1.4em;
-        margin: 0 auto 3em auto; }
-        @media screen and (min-width: 53.75em) {
-          .refills-patterns .hero .hero-inner .hero-copy p {
-            font-size: 1.1em;
-            max-width: 40%; } }
+    @media screen and (min-width: 50em) {
+      .refills-patterns .hero .hero-content {
+        text-align: left; } }
+  .refills-patterns .hero .hero-logo {
+    margin: auto; }
 .refills-patterns .bullets {
   display: -webkit-box;
   display: -webkit-flex;
