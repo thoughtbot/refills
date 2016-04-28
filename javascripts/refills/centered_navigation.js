@@ -1,18 +1,20 @@
 $(window).on("load resize",function(e) {
-
   var more = document.getElementById("js-centered-more");
-  var windowWidth = $(window).width();
-  var moreLeftSideToPageLeftSide = $(more).offset().left;
-  var moreLeftSideToPageRightSide = windowWidth - moreLeftSideToPageLeftSide;
 
-  if (moreLeftSideToPageRightSide < 330) {
-    $("#js-centered-more .submenu .submenu").removeClass("fly-out-right");
-    $("#js-centered-more .submenu .submenu").addClass("fly-out-left");
-  }
+  if ($(more).length > 0) {
+    var windowWidth = $(window).width();
+    var moreLeftSideToPageLeftSide = $(more).offset().left;
+    var moreLeftSideToPageRightSide = windowWidth - moreLeftSideToPageLeftSide;
 
-  if (moreLeftSideToPageRightSide > 330) {
-    $("#js-centered-more .submenu .submenu").removeClass("fly-out-left");
-    $("#js-centered-more .submenu .submenu").addClass("fly-out-right");
+    if (moreLeftSideToPageRightSide < 330) {
+      $("#js-centered-more .submenu .submenu").removeClass("fly-out-right");
+      $("#js-centered-more .submenu .submenu").addClass("fly-out-left");
+    }
+
+    if (moreLeftSideToPageRightSide > 330) {
+      $("#js-centered-more .submenu .submenu").removeClass("fly-out-left");
+      $("#js-centered-more .submenu .submenu").addClass("fly-out-right");
+    }
   }
 
   var menuToggle = $("#js-centered-navigation-mobile-menu").unbind();
