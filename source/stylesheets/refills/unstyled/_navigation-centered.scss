@@ -31,7 +31,6 @@
   // Nav menu
   .navigation-centered-wrapper {
     @include clearfix;
-    @include outer-container($refills-max-width);
     position: relative;
   }
 

@@ -27,7 +27,6 @@ header.navigation {
 
   .navigation-wrapper {
     @include clearfix;
-    @include outer-container($refills-max-width);
     position: relative;
     z-index: 9999;
   }
