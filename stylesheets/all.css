@@ -1160,7 +1160,7 @@ section.inner-content {
     text-align: center; }
 .refills-patterns .footer-2 {
   background: #40526b;
-  display: inline-block;
+  display: block;
   padding: 1.5em;
   width: 100%; }
   .refills-patterns .footer-2 .footer-logo {
