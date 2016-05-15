@@ -78,7 +78,7 @@
       z-index: 99999;
 
       .screen {
-        @include size($device-screen-width $device-screen-height);
+        @include size($device-screen-width, $device-screen-height);
         background-image: url($device-screen-image);
         background-size: cover;
         border-radius: 0.2em;
