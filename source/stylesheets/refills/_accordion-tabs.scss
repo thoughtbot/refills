@@ -19,29 +19,24 @@
   margin-bottom: $base-spacing;
   padding: 0;
 
-  @include media(max-width $tab-mode) {
-    border: $tab-border;
+  @media (min-width: $tab-mode) {
     border-radius: $base-border-radius;
   }
 
   .tab-header-and-content {
     list-style: none;
 
-    @include media($tab-mode) {
+    @media (min-width: $tab-mode) {
       display: inline;
     }
 
     &:first-child .tab-link {
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
-
-      @include media(max-width $tab-mode) {
-        border-top: 0;
-      }
     }
 
     &:last-child .tab-link {
-      @include media(max-width $tab-mode) {
+      @media (min-width: $tab-mode) {
         border-bottom-left-radius: $base-border-radius;
         border-bottom-right-radius: $base-border-radius;
       }
@@ -57,7 +52,7 @@
     padding: ($base-spacing / 2) ($gutter / 2);
     text-decoration: none;
 
-    @include media($tab-mode) {
+    @media (min-width: $tab-mode) {
       @include border-top-radius($base-border-radius);
       border-top: 0;
       display: inline-block;
@@ -74,7 +69,7 @@
     &.is-active {
       background-color: $tab-active-background;
 
-      @include media($tab-mode) {
+      @media (min-width: $tab-mode) {
         background-color: $tab-active-background;
         border: $tab-border;
         border-bottom-color: $tab-active-background;
@@ -89,7 +84,7 @@
     padding: $base-spacing $gutter;
     width: 100%;
 
-    @include media($tab-mode) {
+    @media (min-width: $tab-mode) {
       border: $tab-border;
       border-bottom-left-radius: $base-border-radius;
       border-bottom-right-radius: $base-border-radius;
