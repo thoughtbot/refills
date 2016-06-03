@@ -8,7 +8,7 @@
   label {
     font-weight: normal;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       float: left;
       padding: 0 0.5em;
     }
@@ -19,7 +19,7 @@
     display: inline-block;
     width: 100%;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       width: auto;
     }
   }

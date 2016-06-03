@@ -11,7 +11,7 @@
 
   background: $side-image-content-background;
 
-  @include media($large-screen) {
+  @media (min-width: $large-screen) {
     @include row(table);
   }
 
@@ -26,7 +26,7 @@
     min-height: 12em;
     padding: 3em;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       @include span-columns(4);
       background-position: bottom;
       background-size: cover;
@@ -38,7 +38,7 @@
     @include span-columns(12);
     padding: 1em 1em 4em 1em;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       @include span-columns(8);
       padding: 4em 4em 8em 4em;
     }

@@ -5,7 +5,7 @@
   overflow: visible;
   padding-right: 0;
 
-  @include media($large-screen) {
+  @media (min-width: $large-screen) {
     position: relative;
   }
 
@@ -24,7 +24,7 @@
     margin: 0;
     padding-left: 0;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       left: 0;
       position: absolute;
     }
@@ -40,14 +40,14 @@
     text-align: right;
     width: 100%;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       text-align: left;
       width: $submenu-width;
     }
   }
 
   .submenu .submenu {
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       left: $submenu-width;
       top: 0;
     }

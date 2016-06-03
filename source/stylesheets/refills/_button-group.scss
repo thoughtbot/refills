@@ -24,7 +24,7 @@
   label {
     margin-bottom: 0;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       float: left;
     }
 
@@ -42,7 +42,7 @@
       padding: 0.75em 1em;
       width: 100%;
 
-      @include media($large-screen) {
+      @media (min-width: $large-screen) {
         border-bottom: $button-group-border;
         border-left: 0;
         border-right: $button-group-inner-border;
@@ -60,7 +60,7 @@
       @include border-top-radius($base-border-radius);
       border-top: $button-group-border;
 
-      @include media($large-screen) {
+      @media (min-width: $large-screen) {
         border-bottom-left-radius: $base-border-radius;
         border-left: $button-group-border;
         border-top-left-radius: $base-border-radius;
@@ -72,7 +72,7 @@
       @include border-bottom-radius($base-border-radius);
       border-bottom: $button-group-border;
 
-      @include media($large-screen) {
+      @media (min-width: $large-screen) {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: $base-border-radius;
         border-right: $button-group-border;

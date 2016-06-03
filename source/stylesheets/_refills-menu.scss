@@ -4,11 +4,11 @@ ul.refills-menu {
   padding: 0;
   text-align: center;
 
-  @include media($refills-medium-screen) {
+  @media (min-width: $refills-medium-screen) {
     margin: -6em auto 0.4em auto;
   }
 
-  @include media($refills-large-screen) {
+  @media (min-width: $refills-large-screen) {
     margin: -6.7em auto 0.8em auto;
   }
 
@@ -25,12 +25,12 @@ ul.refills-menu {
       padding: 0.5em 1em 1.5em;
       text-decoration: none;
 
-      @include media($refills-medium-screen) {
+      @media (min-width: $refills-medium-screen) {
         font-size: 1em;
         padding: 0.5em 1.8em 1.3em;
       }
 
-      @include media($refills-large-screen) {
+      @media (min-width: $refills-large-screen) {
         font-size: 1.2em;
         padding: 0.7em 2.7em 2em;
       }

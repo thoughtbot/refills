@@ -39,7 +39,7 @@
     justify-content: space-between;
     width: 100%;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       flex-direction: row;
     }
   }
@@ -49,7 +49,7 @@
     flex-shrink: 1;
     margin: 0 0.2em 1em 0.2em;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       margin-bottom: 0;
     }
 

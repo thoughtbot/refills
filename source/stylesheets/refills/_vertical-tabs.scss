@@ -35,7 +35,7 @@
   .vertical-tabs {
     display: none;
 
-    @include media($vertical-tab-mode) {
+    @media (min-width: $vertical-tab-mode) {
       background-color: $tab-inactive-color;
       display: inline;
       float: left;
@@ -45,7 +45,7 @@
   }
 
   .vertical-tab {
-    @include media($vertical-tab-mode) {
+    @media (min-width: $vertical-tab-mode) {
       border-bottom: $tab-border;
       display: block;
       font-weight: bold;
@@ -76,7 +76,7 @@
       outline: none;
     }
 
-    @include media($vertical-tab-mode) {
+    @media (min-width: $vertical-tab-mode) {
       @include size(80% $vertical-tabs-height);
       background-color: $tab-content-background;
       display: inline-block;
@@ -92,7 +92,7 @@
       line-height: $base-line-height;
     }
 
-    @include media($vertical-tab-mode) {
+    @media (min-width: $vertical-tab-mode) {
       border: 0;
       display: none;
     }
@@ -120,7 +120,7 @@
       border-bottom: 0;
     }
 
-    @include media($vertical-tab-mode) {
+    @media (min-width: $vertical-tab-mode) {
       display: none;
     }
   }

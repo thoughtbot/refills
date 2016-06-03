@@ -13,8 +13,7 @@ agree to abide by the thoughtbot [code of conduct]. Here’s a quick guide:
 
 ## Sass
 
-All components and patterns should be fully responsive and follow the [Neat
-examples](http://neat.bourbon.io/examples).
+All components and patterns should be fully responsive.
 
 Avoid more than 2 levels of nesting for clarity and legibility of code.
 
@@ -29,7 +28,7 @@ component/pattern drastically:
 ```scss
 $tab-mode: $medium-screen;
 
-@include media($tab-mode) { // $tab-mode is the same as $medium-screen here
+@media (min-width: $tab-mode) { // $tab-mode is the same as $medium-screen here
   border-radius: 0;
 }
 ```

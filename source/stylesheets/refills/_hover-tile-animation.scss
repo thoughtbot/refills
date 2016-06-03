@@ -14,7 +14,7 @@
   height: $hover-tile-height;
   margin-bottom: $base-line-height;
 
-  @include media($medium-screen) {
+  @media (min-width: $medium-screen) {
     width: 40%;
   }
 

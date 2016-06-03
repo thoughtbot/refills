@@ -35,7 +35,7 @@
       padding: 0.8em 0;
     }
 
-    @include media($horizontal-bar-mode) {
+    @media (min-width: $horizontal-bar-mode) {
       display: none;
     }
   }
@@ -50,7 +50,7 @@
     text-decoration: none;
     text-transform: uppercase;
 
-    @include media ($horizontal-bar-mode) {
+    @media (min-width: $horizontal-bar-mode) {
       display: none;
     }
 
@@ -83,7 +83,7 @@
       display: block;
     }
 
-    @include media ($horizontal-bar-mode) {
+    @media (min-width: $horizontal-bar-mode) {
       display: block;
       text-align: center;
     }
@@ -92,7 +92,7 @@
   // The nav items
 
   .nav-link:first-child {
-    @include media($horizontal-bar-mode) {
+    @media (min-width: $horizontal-bar-mode) {
       margin-left: $centered-navigation-item-nudge;
     }
   }
@@ -119,7 +119,7 @@
       }
     }
 
-    @include media($horizontal-bar-mode) {
+    @media (min-width: $horizontal-bar-mode) {
       background: transparent;
       display: inline;
       line-height: $centered-navigation-height;
@@ -134,7 +134,7 @@
     display: none;
     line-height: 0;
 
-    @include media($horizontal-bar-mode) {
+    @media (min-width: $horizontal-bar-mode) {
       display: inline;
     }
   }
@@ -150,7 +150,7 @@
   li.more.nav-link {
     padding-right: 0;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       padding-right: $centered-navigation-submenu-padding;
     }
 
@@ -185,7 +185,7 @@
       padding-right: 1.6em;
       position: relative;
 
-      @include media($large-screen) {
+      @media (min-width: $large-screen) {
         margin-right: $centered-navigation-submenu-padding;
       }
 
@@ -202,7 +202,7 @@
       display: block;
     }
 
-    @include media($horizontal-bar-mode) {
+    @media (min-width: $horizontal-bar-mode) {
       padding-right: $centered-navigation-submenu-padding;
       position: relative;
     }
@@ -212,21 +212,21 @@
     display: none;
     padding-left: 0;
 
-    @include media($horizontal-bar-mode) {
+    @media (min-width: $horizontal-bar-mode) {
       left: -$centered-navigation-submenu-padding;
       position: absolute;
       top: 1.5em;
     }
 
     .submenu.fly-out-right {
-      @include media($horizontal-bar-mode) {
+      @media (min-width: $horizontal-bar-mode) {
         left: $centered-navigation-submenu-width - 0.2em;
         top: 0;
       }
     }
 
     .submenu.fly-out-left {
-      @include media($horizontal-bar-mode) {
+      @media (min-width: $horizontal-bar-mode) {
         left: -$centered-navigation-submenu-width + 0.2em;
         top: 0;
       }
@@ -236,7 +236,7 @@
       display: block;
       padding-right: 0;
 
-      @include media($horizontal-bar-mode) {
+      @media (min-width: $horizontal-bar-mode) {
         line-height: $centered-navigation-height / 1.3;
 
         &:first-child > a {
@@ -258,7 +258,7 @@
         text-decoration: none;
         width: 100%;
 
-        @include media($horizontal-bar-mode) {
+        @media (min-width: $horizontal-bar-mode) {
           background-color: $centered-navigation-background;
           padding-left: $centered-navigation-submenu-padding;
           text-align: left;

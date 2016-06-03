@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.version       = Refills::VERSION
   s.authors       = ['Christian Reuter', 'Joël Quenneville', 'Lisa Sy', 'Magnus Gyllensward', 'Paul Smith', 'Tyson Gach']
   s.email         = 'design+bourbon@thoughtbot.com'
-  s.description   = 'Components and patterns built with Bourbon and Neat.'
-  s.summary       = 'Components and patterns built with Bourbon and Neat.'
+  s.description   = 'Components and patterns built with Bourbon.'
+  s.summary       = 'Components and patterns built with Bourbon.'
   s.homepage      = 'http://refills.bourbon.io'
   s.license       = 'MIT'
 

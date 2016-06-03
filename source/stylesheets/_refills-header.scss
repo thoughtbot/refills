@@ -7,12 +7,12 @@
   text-align: center;
   width: 100%;
 
-  @include media($refills-medium-screen) {
+  @media (min-width: $refills-medium-screen) {
     margin-bottom: 4em;
     padding: 6em 0 8em;
   }
 
-  @include media($refills-large-screen) {
+  @media (min-width: $refills-large-screen) {
     border-bottom: 2px solid darken($refills-hero-background, 5%);
     margin-bottom: 4em;
     padding: 6em 0 8em;
@@ -29,7 +29,7 @@
       fill: $refills-logo-color;
       padding: 0.3em;
 
-      @include media($refills-medium-screen) {
+      @media (min-width: $refills-medium-screen) {
         @include size(120px);
         padding: 0.5em;
       }
@@ -45,13 +45,13 @@
     max-width: 80%;
     text-align: center;
 
-    @include media($refills-medium-screen) {
+    @media (min-width: $refills-medium-screen) {
       font-size: 2em;
       margin-bottom: 1em;
       max-width: 80%;
     }
 
-    @include media($refills-large-screen) {
+    @media (min-width: $refills-large-screen) {
       font-size: 3em;
       line-height: 1.3em;
       margin-bottom: 0.8em;
@@ -87,7 +87,7 @@
     margin-bottom: 2em;
     padding: 0.5em 1.4em;
 
-    @include media($refills-large-screen) {
+    @media (min-width: $refills-large-screen) {
       font-size: 0.8em;
     }
   }

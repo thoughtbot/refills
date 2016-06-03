@@ -39,7 +39,7 @@
     margin: 0;
     padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       font-size: 1em;
     }
   }
@@ -59,7 +59,7 @@
     padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
     position: relative;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       font-size: 1em;
       padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
     }

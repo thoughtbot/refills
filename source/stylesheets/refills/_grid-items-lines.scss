@@ -34,7 +34,7 @@
     transition: all 0.2s ease-in-out;
     width: 100%;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       @include grid-item-columns($grid-item-columns);
     }
 
@@ -61,17 +61,17 @@
       color: transparentize($grid-item-color, 0.4);
       line-height: 1.5em;
 
-      @include media($medium-screen) {
+      @media (min-width: $medium-screen) {
         max-width: 70%;
       }
     }
 
   .grid-item-big {
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }
     p {
-      @include media($medium-screen) {
+      @media (min-width: $medium-screen) {
         max-width: 60%;
       }
     }

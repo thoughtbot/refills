@@ -34,7 +34,7 @@
         display: inline;
       }
 
-      @include media($large-screen) {
+      @media (min-width: $large-screen) {
         display: inline;
       }
     }

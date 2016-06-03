@@ -83,7 +83,7 @@
       border-left-color: $breadcrumb-background;
     }
 
-    @include media($medium-screen) {
+    @media (min-width: $medium-screen) {
       font-size: 1em;
       padding: 0 ($breadcrumb-height / 2) 0 ($breadcrumb-height / 1.5);
     }

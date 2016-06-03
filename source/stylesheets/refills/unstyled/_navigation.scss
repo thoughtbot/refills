@@ -9,7 +9,7 @@
     margin: 0;
     padding-top: 0.5em;
 
-    @include media ($large-screen) {
+    @media (min-width: $large-screen) {
       display: none;
     }
   }
@@ -32,7 +32,7 @@
   nav {
     float: none;
 
-    @include media ($large-screen) {
+    @media (min-width: $large-screen) {
       float: left;
       line-height: 1.5em;
       padding-top: 0.3em;
@@ -47,7 +47,7 @@
     padding: 0;
     width: 100%;
 
-    @include media ($large-screen) {
+    @media (min-width: $large-screen) {
       display: block;
       margin: 0;
       padding: 0;
@@ -64,7 +64,7 @@
     text-align: right;
     width: 100%;
 
-    @include media ($large-screen) {
+    @media (min-width: $large-screen) {
       background: transparent;
       display: inline;
       text-decoration: none;
@@ -75,7 +75,7 @@
   li.nav-link a {
     display: inline-block;
 
-    @include media ($large-screen) {
+    @media (min-width: $large-screen) {
       padding-right: 1em;
     }
   }

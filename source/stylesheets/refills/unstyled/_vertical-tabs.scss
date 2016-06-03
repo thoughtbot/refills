@@ -7,7 +7,7 @@
   .vertical-tabs {
     display: none;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       display: inline;
       float: left;
       height: $vertical-tabs-height;
@@ -16,7 +16,7 @@
   }
 
   .vertical-tab {
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       display: block;
 
       &.is-active {
@@ -28,14 +28,14 @@
   .vertical-tab-content-container {
     display: block;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       @include size(80% $vertical-tabs-height);
       display: inline-block;
     }
   }
 
   .vertical-tab-content {
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       display: none;
     }
   }
@@ -44,7 +44,7 @@
     cursor: pointer;
     display: block;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       display: none;
     }
   }

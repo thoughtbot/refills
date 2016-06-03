@@ -54,7 +54,7 @@ article.type-system-slab {
     font-weight: 400;
     margin-bottom: 0.6em;
 
-    @include media($medium-screen) {
+    @media (min-width: $medium-screen) {
       font-size: 2.4em;
     }
   }
@@ -66,7 +66,7 @@ article.type-system-slab {
     line-height: 1.5em;
     margin-bottom: 1.2em;
 
-    @include media($medium-screen) {
+    @media (min-width: $medium-screen) {
       font-size: 1.3em;
     }
   }

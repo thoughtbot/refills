@@ -46,7 +46,7 @@
     visibility: hidden;
     z-index: 99999999999;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       padding-top: 10em;
     }
 
@@ -95,13 +95,13 @@
     transition: opacity 0.25s ease;
     width: 95%;
 
-    @include media($medium-screen) {
+    @media (min-width: $medium-screen) {
       max-height: 70%;
       padding: $modal-padding;
       width: 60%;
     }
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       width: 50%;
     }
 
@@ -123,7 +123,7 @@
     .modal-content {
       color: $base-font-color;
 
-      @include media($medium-screen) {
+      @media (min-width: $medium-screen) {
         columns: 2 8em;
       }
     }
