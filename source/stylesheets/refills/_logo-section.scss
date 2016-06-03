@@ -1,0 +1,25 @@
+.logo-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em;
+
+  li {
+    align-self: center;
+    list-style: none;
+    padding: 2em;
+    text-align: center;
+
+    .square-logo {
+      max-height: 5em;
+    }
+
+    .wide-logo {
+      max-width: 10em;
+    }
+
+    .wider-logo {
+      max-width: 15em;
+    }
+  }
+}
