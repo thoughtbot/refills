@@ -61,10 +61,10 @@
       color: transparentize($grid-item-color, 0.4);
       line-height: 1.5em;
 
-      @media (min-width: $medium-screen) {
-        max-width: 70%;
-      }
+    @media (min-width: $medium-screen) {
+      max-width: 70%;
     }
+  }
 
   .grid-item-big {
     @media (min-width: $large-screen) {
