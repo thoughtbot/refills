@@ -27,7 +27,7 @@
   .dropdown-menu {
     cursor: pointer;
     display: none;
-    overflow: show;
+    overflow: visible;
     position: absolute;
     text-align: left;
     top: $dropdown-distance-from-menu;
