@@ -55,7 +55,7 @@ article.type-system-serif {
     font-weight: 700;
     margin-bottom: 0.5em;
 
-    @include media($medium-screen) {
+    @media (min-width: $medium-screen) {
       font-size: 2.6em;
     }
   }
@@ -68,7 +68,7 @@ article.type-system-serif {
     line-height: 1.6em;
     margin-bottom: 0.9em;
 
-    @include media($medium-screen) {
+    @media (min-width: $medium-screen) {
       font-size: 1.2em;
     }
   }

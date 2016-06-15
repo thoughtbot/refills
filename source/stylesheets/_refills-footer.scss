@@ -14,7 +14,7 @@ footer.refills-footer {
     line-height: 1.5em;
     margin: 0 1em;
 
-    @include media($refills-large-screen) {
+    @media (min-width: $refills-large-screen) {
       font-size: 1em;
     }
   }
@@ -40,7 +40,7 @@ footer.refills-footer {
     padding: 0.6em;
     text-transform: uppercase;
 
-    @include media($refills-large-screen) {
+    @media (min-width: $refills-large-screen) {
       font-size: 1em;
       padding: 1em;
     }

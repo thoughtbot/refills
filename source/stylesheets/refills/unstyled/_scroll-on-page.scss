@@ -2,7 +2,7 @@
   $large-screen: 53.75em !default;
 
   aside {
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       @include span-columns(4);
     }
   }
@@ -13,7 +13,7 @@
   }
 
   article {
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       @include span-columns(8);
     }
   }

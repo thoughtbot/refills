@@ -146,18 +146,18 @@ pre[class*="language-"] {
 }
 
 .snippet {
-  @include media($refills-medium-screen) {
+  @media (min-width: $refills-medium-screen) {
     margin-bottom: 2em;
   }
 
   .copy-source-container {
     min-height: 3.4em;
 
-    @include media($refills-medium-screen) {
+    @media (min-width: $refills-medium-screen) {
       min-height: 2.5em;
     }
 
-    @include media($refills-large-screen) {
+    @media (min-width: $refills-large-screen) {
       min-height: 1em;
     }
   }

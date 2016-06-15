@@ -9,7 +9,7 @@
   min-height: 25em;
   padding: 2em;
 
-  @include media($large-screen) {
+  @media (min-width: $large-screen) {
     background-position: left;
     background-size: cover;
     justify-content: flex-end;
@@ -19,7 +19,7 @@
     max-width: 20em;
     text-align: center;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       text-align: left;
     }
   }

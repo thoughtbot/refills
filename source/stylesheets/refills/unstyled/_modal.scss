@@ -20,7 +20,7 @@
     visibility: hidden;
     z-index: 99999;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       padding-top: 10em;
     }
   }
@@ -44,12 +44,12 @@
     transition: opacity 0.25s ease;
     width: 95%;
 
-    @include media($medium-screen) {
+    @media (min-width: $medium-screen) {
       max-height: 70%;
       width: 60%;
     }
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       width: 50%;
     }
   }

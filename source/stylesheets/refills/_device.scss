@@ -26,7 +26,7 @@
   .device-text {
     padding: 2em;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       float: left;
       max-width: 50%;
       padding: 4em;
@@ -51,7 +51,7 @@
     display: none;
     position: relative;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       background: $device-background;
       border-radius: 2em;
       box-shadow:

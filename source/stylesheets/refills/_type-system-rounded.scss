@@ -56,7 +56,7 @@ article.type-system-rounded {
     font-size: 1.8em;
     margin-bottom: 0.5em;
 
-    @include media($medium-screen) {
+    @media (min-width: $medium-screen) {
       font-size: 2.4em;
     }
   }
@@ -68,7 +68,7 @@ article.type-system-rounded {
     line-height: 1.4em;
     margin-bottom: 0.9em;
 
-    @include media($medium-screen) {
+    @media (min-width: $medium-screen) {
       font-size: 1.4em;
     }
   }

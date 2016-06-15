@@ -23,7 +23,7 @@ body {
   position: relative;
   width: 100%;
 
-  @include media($refills-large-screen) {
+  @media (min-width: $refills-large-screen) {
     padding-top: 3em;
   }
 }

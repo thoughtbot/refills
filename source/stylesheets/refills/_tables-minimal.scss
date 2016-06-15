@@ -60,7 +60,7 @@
         padding: 0.3em 1em;
         width: 100%;
 
-        @include media($medium-screen) {
+        @media (min-width: $medium-screen) {
           margin-bottom: 0;
           width: auto;
         }

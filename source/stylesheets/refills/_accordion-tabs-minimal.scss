@@ -19,7 +19,7 @@
   .tab-header-and-content {
     list-style: none;
 
-    @include media($tab-mode) {
+    @media (min-width: $tab-mode) {
       display: inline;
     }
   }
@@ -32,7 +32,7 @@
     padding: ($base-spacing / 2) $gutter;
     text-decoration: none;
 
-    @include media($tab-mode) {
+    @media (min-width: $tab-mode) {
       border-top: 0;
       display: inline-block;
     }
@@ -48,7 +48,7 @@
     &.is-active {
       border-bottom: 0;
 
-      @include media($tab-mode) {
+      @media (min-width: $tab-mode) {
         border: $tab-border;
         border-bottom-color: $tab-active-background;
         margin-bottom: -1px;
@@ -61,7 +61,7 @@
     padding: $base-spacing $gutter;
     width: 100%;
 
-    @include media($tab-mode) {
+    @media (min-width: $tab-mode) {
       border-top: $tab-border;
       float: left;
     }

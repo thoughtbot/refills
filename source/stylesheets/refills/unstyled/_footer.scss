@@ -20,7 +20,7 @@
 //   $large-screen: 53.75em !default;
 //   height: 12em;
 
-//   @include media($large-screen) {
+//   @media (min-width: $large-screen) {
 //     height: 4em;
 //   }
 // }
@@ -32,7 +32,7 @@
     margin-bottom: 1em;
     margin-right: 1em;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       float: left;
       margin-bottom: 0;
     }
@@ -46,7 +46,7 @@
     margin: 0;
     padding-left: 0;
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       float: left;
       padding-top: 0.3em;
     }
@@ -55,7 +55,7 @@
       line-height: 1.5em;
       padding-right: 1em;
 
-      @include media($large-screen) {
+      @media (min-width: $large-screen) {
         display: inline;
         text-align: left;
       }

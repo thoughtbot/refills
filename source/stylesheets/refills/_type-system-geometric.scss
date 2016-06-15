@@ -54,7 +54,7 @@ article.type-system-geometric {
     font-weight: 700;
     margin-bottom: 0.5em;
 
-    @include media($medium-screen) {
+    @media (min-width: $medium-screen) {
       font-size: 2.6em;
     }
   }
@@ -67,7 +67,7 @@ article.type-system-geometric {
     line-height: 1.4em;
     margin-bottom: 1.1em;
 
-    @include media($medium-screen) {
+    @media (min-width: $medium-screen) {
       font-size: 1.3em;
     }
   }

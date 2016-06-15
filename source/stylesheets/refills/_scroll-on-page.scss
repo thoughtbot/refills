@@ -14,7 +14,7 @@
   }
 
   aside {
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       @include span-columns(4);
     }
   }
@@ -45,7 +45,7 @@
       margin-bottom: 2em;
     }
 
-    @include media($large-screen) {
+    @media (min-width: $large-screen) {
       @include span-columns(8);
     }
   }

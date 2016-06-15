@@ -1,6 +1,6 @@
 [![Refills](http://images.thoughtbot.com/bourbon/refills-logo.svg)](http://refills.bourbon.io)
 
-## Components and patterns built with Bourbon and Neat
+## Components and patterns built with Bourbon
 
 - **[Examples & Code Snippets](http://refills.bourbon.io)**
 - **[Changelog](https://github.com/thoughtbot/refills/releases)**
@@ -14,7 +14,6 @@ for updates.
 - [Sass](https://github.com/sass/sass) 3.3+
 - [Bourbon](https://github.com/thoughtbot/bourbon) 4 (Refills is not currently
   compatible with Bourbon 5)
-- [Neat](https://github.com/thoughtbot/neat) 1.6+
 
 It’s recommended that you use [Autoprefixer], as Refills do not come packaged
 with vendor prefixes.
@@ -23,7 +22,7 @@ with vendor prefixes.
 
 ## Installation
 
-1. Install Refills’ dependencies: [Bourbon](https://github.com/thoughtbot/bourbon#installation), [Neat](https://github.com/thoughtbot/neat#installation) and [jQuery](http://jquery.com/download) (if you plan to use any components that require JavaScript).
+1. Install Refills’ dependencies: [Bourbon](https://github.com/thoughtbot/bourbon#installation) and [jQuery](http://jquery.com/download) (if you plan to use any components that require JavaScript).
 
 2. Go to the [Refills website](http://refills.bourbon.io), click “Show Code” under the component or pattern that you want and copy-paste it into your project.
 
@@ -82,7 +81,7 @@ body {
 - [Bourbon](https://github.com/thoughtbot/bourbon): A simple and lightweight mixin library for Sass
 - [Neat](https://github.com/thoughtbot/neat): A lightweight semantic grid framework for Sass and Bourbon
 - [Bitters](https://github.com/thoughtbot/bitters): Scaffold styles, variables and structure for Bourbon projects
-- [Refills](https://github.com/thoughtbot/refills): Components and patterns built with Bourbon and Neat
+- [Refills](https://github.com/thoughtbot/refills): Components and patterns built with Bourbon
 
 ## License
 
