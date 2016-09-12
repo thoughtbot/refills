@@ -94,7 +94,7 @@ Whenever code for Refills is borrowed or inspired by existing code, we try to cr
 
 ## About thoughtbot
 
-[<img src="http://thoughtbot.github.io/images/signature.svg" width="250" alt="thoughtbot logo">][hire]
+[<img src="http://presskit.thoughtbot.com/images/signature.svg" width="250" alt="thoughtbot logo">][hire]
 
 Refills is maintained and funded by thoughtbot, inc.
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
