@@ -1,7 +1,0 @@
-general:
-  branches:
-    ignore:
-      - gh-pages
-test:
-  override:
-    - bundle exec rake
