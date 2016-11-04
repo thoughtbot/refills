@@ -1,13 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.7.1)
+    activesupport (5.0.0.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
-      json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.4.0)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
     backports (3.6.8)
     bourbon (5.0.0.beta.7)
       sass (~> 3.4.22)
@@ -38,24 +38,23 @@ GEM
     hashie (3.4.6)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
-    json (1.8.3)
     kramdown (1.12.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     memoist (0.15.0)
-    middleman (4.1.10)
+    middleman (4.1.11)
       coffee-script (~> 2.2)
       compass-import-once (= 1.0.5)
       haml (>= 4.0.5)
       kramdown (~> 1.2)
-      middleman-cli (= 4.1.10)
-      middleman-core (= 4.1.10)
+      middleman-cli (= 4.1.11)
+      middleman-core (= 4.1.11)
       sass (>= 3.4.0, < 4.0)
-    middleman-cli (4.1.10)
+    middleman-cli (4.1.11)
       thor (>= 0.17.0, < 2.0)
-    middleman-core (4.1.10)
-      activesupport (~> 4.2)
+    middleman-core (4.1.11)
+      activesupport (>= 4.2, < 5.1)
       addressable (~> 2.3)
       backports (~> 3.6)
       bundler (~> 1.1)
@@ -72,10 +71,10 @@ GEM
       memoist (~> 0.14)
       padrino-helpers (~> 0.13.0)
       parallel
-      rack (>= 1.4.5, < 2.0)
+      rack (>= 1.4.5, < 3)
       sass (>= 3.4)
       servolux
-      tilt (~> 1.4.1)
+      tilt (~> 2.0)
       uglifier (~> 3.0)
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
@@ -92,7 +91,8 @@ GEM
     padrino-support (0.13.3.3)
       activesupport (>= 3.1)
     parallel (1.9.0)
-    rack (1.6.4)
+    public_suffix (2.0.3)
+    rack (2.0.1)
     rack-livereload (0.3.16)
       rack
     rb-fsevent (0.9.8)
@@ -102,7 +102,7 @@ GEM
     servolux (0.12.0)
     thor (0.19.1)
     thread_safe (0.3.5)
-    tilt (1.4.1)
+    tilt (2.0.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.3)
@@ -117,5 +117,8 @@ DEPENDENCIES
   middleman-livereload
   neat (~> 2.0.0.beta.1)
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.11.2
+   1.12.3
