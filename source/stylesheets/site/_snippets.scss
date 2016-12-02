@@ -1,0 +1,55 @@
+.snippets {
+  @include grid-container;
+  @include margin($base-spacing null);
+  background-color: $secondary-background-color;
+  border-bottom: $base-border;
+  border-top: $base-border;
+  padding-top: $base-spacing;
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+.snippet {
+  @include grid-column(12);
+  border: $base-border;
+  margin-bottom: $base-spacing;
+
+  @media screen and (min-width: 720px) {
+    @include grid-column(4);
+  }
+}
+
+.snippet-title {
+  background-color: $secondary-background-color;
+  border-bottom: $base-border;
+  font-size: $base-font-size;
+  margin-bottom: 0;
+  padding: $small-spacing;
+}
+
+.snippet-code {
+  @include margin(0 null);
+  background-color: $base-background-color;
+  height: 20em;
+  overflow: auto;
+  padding: $small-spacing;
+}
+
+.snippets-toggle-button {
+  background-color: $base-background-color;
+  border: 1px solid $action-color;
+  color: $action-color;
+  display: none;
+  font-size: modular-scale(-1);
+  margin-top: $small-spacing;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    background-color: $base-background-color;
+    border-color: shade($action-color, 20%);
+    color: shade($action-color, 20%);
+  }
+}
