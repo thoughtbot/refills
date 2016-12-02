@@ -1,0 +1,16 @@
+.refill {
+  border-top: 2px solid $base-border-color;
+  margin-bottom: $x-large-spacing;
+  padding-top: $base-spacing;
+}
+
+.refill-wrapper {
+  align-items: center;
+  background-color: $secondary-background-color;
+  border: $base-border;
+  display: flex;
+  justify-content: space-around;
+  margin-top: $base-spacing;
+  min-height: $x-large-spacing * 3;
+  padding: $large-spacing;
+}

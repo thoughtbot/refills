@@ -3,8 +3,16 @@
 @import "normalize";
 @import "bourbon";
 @import "base/base";
-@import "neat";
 
-// Site
-@import "banner";
-@import "container";
+// Refills use a clean bitters install and are grid agnostic
+@import "refills/example";
+
+// Site Setup
+@import "neat";
+@import "site/variables";
+
+// Site Components
+@import "site/banner";
+@import "site/container";
+@import "site/project-description";
+@import "site/refills";

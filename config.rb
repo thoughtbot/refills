@@ -1,3 +1,5 @@
+activate :sprockets
+
 configure :development do
   activate :livereload
 end

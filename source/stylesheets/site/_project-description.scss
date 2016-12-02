@@ -1,0 +1,5 @@
+.project-description {
+  @include padding($large-spacing null);
+  font-family: $serif-font-family;
+  font-size: modular-scale(1);
+}
