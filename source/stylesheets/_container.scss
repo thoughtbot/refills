@@ -1,0 +1,5 @@
+.container {
+  @include margin(null auto);
+  @include padding(null $base-spacing);
+  max-width: 42em;
+}
