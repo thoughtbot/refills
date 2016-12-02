@@ -1,9 +1,9 @@
 $_banner-background-color: #e7f1ec;
 $_banner-link-color: #f55481;
-$_banner-logo-size: $base-spacing * 4;
+$_banner-logo-size: $x-large-spacing;
 
 .banner {
-  @include padding(6em null);
+  @include padding($x-large-spacing null);
   background-color: $_banner-background-color;
   text-align: center;
 }
@@ -17,8 +17,8 @@ $_banner-logo-size: $base-spacing * 4;
 }
 
 .banner-title {
-  font-family: $font-stack-georgia;
-  font-size: 2.25em;
+  font-family: $serif-font-family;
+  font-size: modular-scale(3);
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   line-height: 1.3;

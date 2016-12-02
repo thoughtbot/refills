@@ -1,0 +1,10 @@
+// Spacing
+$x-small-spacing: $small-spacing / 2;
+$large-spacing: $base-spacing * 2;
+$x-large-spacing: $large-spacing * 2;
+
+// Colors
+$secondary-background-color: tint($base-border-color, 90%);
+
+// Font Stacks
+$serif-font-family: $font-stack-georgia;
