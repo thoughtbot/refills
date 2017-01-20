@@ -8,6 +8,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
+    autoprefixer-rails (6.6.1)
+      execjs
     backports (3.6.8)
     bourbon (5.0.0.beta.7)
       sass (~> 3.4.22)
@@ -51,6 +53,9 @@ GEM
       middleman-cli (= 4.1.14)
       middleman-core (= 4.1.14)
       sass (>= 3.4.0, < 4.0)
+    middleman-autoprefixer (2.7.1)
+      autoprefixer-rails (>= 6.5.2, < 7.0.0)
+      middleman-core (>= 3.3.3)
     middleman-cli (4.1.14)
       thor (>= 0.17.0, < 2.0)
     middleman-core (4.1.14)
@@ -123,6 +128,7 @@ PLATFORMS
 DEPENDENCIES
   bourbon (~> 5.0.0.beta.7)
   middleman (>= 4.0.0)
+  middleman-autoprefixer (~> 2.7.1)
   middleman-livereload
   middleman-sprockets (~> 4.1.0)
   neat (~> 2.0.0.beta.2)

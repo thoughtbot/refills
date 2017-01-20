@@ -1,3 +1,4 @@
+activate :autoprefixer
 activate :sprockets
 
 configure :development do
