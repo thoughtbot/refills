@@ -1,20 +1,19 @@
-.example-wrapper {
+.dropdown {
   position: relative;
 }
 
-.example {
+.dropdown-menu {
   @include position(absolute, 100% null null 0);
   background-color: $base-background-color;
   border: $base-border;
-  display: none;
   margin-top: $small-spacing;
   min-width: 12em;
 
-  &.is-open {
-    display: block;
+  &[aria-hidden="true"] {
+    display: none;
   }
 }
 
-.example-item {
+.dropdown-menu-item {
   padding: 0.5em;
 }
