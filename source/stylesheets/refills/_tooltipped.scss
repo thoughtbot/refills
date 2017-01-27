@@ -1,0 +1,21 @@
+.tooltipped {
+  position: relative;
+
+  &::after {
+    @include padding(0.5em $small-spacing);
+    @include position(absolute, null null 100% 0);
+    background-color: $base-background-color;
+    border: $base-border;
+    color: $base-font-color;
+    content: attr(aria-label);
+    display: none;
+    font-size: modular-scale(-1);
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    display: inline-block;
+  }
+}

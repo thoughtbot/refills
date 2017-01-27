@@ -6,12 +6,30 @@
         Dropdowns are used to display popup context menus or sub-level menus
         without a page refresh.
       </p>
-
       <div class="refill-wrapper">
         <%= partial "refills/dropdown" %>
       </div>
     </div>
-
     <%= code_for("dropdown") %>
+  </li>
+
+  <li class="refill">
+    <div class="container">
+      <h2 class="refill-title">Tooltipped</h2>
+      <p>
+        Tooltips are used to add descriptive text to interactive elements which
+        are otherwise lacking descriptive text, like icon links and buttons that
+        are only represented graphically.
+      </p>
+      <p>
+        Tooltipped elements are not JavaScript dependent, because we don't need
+        to update state for ARIA. We are instead able to toggle their display
+        with CSS on the element's hover or focus states.
+      </p>
+      <div class="refill-wrapper">
+        <%= partial "refills/tooltipped" %>
+      </div>
+    </div>
+    <%= code_for("tooltipped") %>
   </li>
 </ul>
