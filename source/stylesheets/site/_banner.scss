@@ -1,11 +1,18 @@
-$_banner-background-color: #e7f1ec;
-$_banner-link-color: #f55481;
 $_banner-logo-size: $x-large-spacing;
 
 .banner {
   @include padding($x-large-spacing null);
-  background-color: $_banner-background-color;
+  background-color: $tertiary-background-color;
   text-align: center;
+
+  a {
+    color: $accent-color;
+
+    &:hover,
+    &:focus {
+      color: $hover-accent-color;
+    }
+  }
 }
 
 .banner-logo {
@@ -23,13 +30,4 @@ $_banner-logo-size: $x-large-spacing;
   font-weight: 400;
   line-height: 1.3;
   margin-bottom: $base-spacing;
-}
-
-.banner-link {
-  color: $_banner-link-color;
-
-  &:hover,
-  &:focus {
-    color: shade($_banner-link-color, 20%);
-  }
 }

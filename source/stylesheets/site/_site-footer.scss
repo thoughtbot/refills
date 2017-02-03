@@ -1,0 +1,14 @@
+.site-footer {
+  @include padding($large-spacing null);
+  background-color: tint($tertiary-background-color, 70%);
+  border-top: 3px solid $tertiary-background-color;
+
+  a {
+    color: $accent-color;
+
+    &:hover,
+    &:focus {
+      color: $hover-accent-color;
+    }
+  }
+}

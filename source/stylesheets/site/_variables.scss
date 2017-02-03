@@ -5,6 +5,9 @@ $x-large-spacing: $large-spacing * 2;
 
 // Colors
 $secondary-background-color: tint($base-border-color, 90%);
+$tertiary-background-color: #e7f1ec;
+$accent-color: #f55481;
+$hover-accent-color: shade($accent-color, 20%);
 
 // Font Stacks
 $serif-font-family: $font-stack-georgia;
