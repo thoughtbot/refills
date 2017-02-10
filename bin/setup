@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Run this script to setup the app
+
+# Exit if any subcommand fails
+set -e
+
+# Set up Ruby dependencies
+gem install bundler --conservative
+bundle check || bundle install
