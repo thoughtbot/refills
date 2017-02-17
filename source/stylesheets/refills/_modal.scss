@@ -1,0 +1,27 @@
+.modal-wrapper {
+  @include position(fixed, 0);
+  z-index: 10;
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+.modal-overlay {
+  @include size(100%);
+  background-color: rgba($dark-gray, 0.75);
+}
+
+.modal {
+  @include position(fixed, 50% null null 50%);
+  background-color: $base-background-color;
+  max-width: calc(100% - #{$base-spacing} * 2);
+  overflow: auto;
+  padding: $base-spacing;
+  transform: translate(-50%, -50%);
+  width: 42em;
+}
+
+.modal-close-button {
+  @include position(absolute, $small-spacing $small-spacing null null);
+}

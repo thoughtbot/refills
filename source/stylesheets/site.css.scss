@@ -7,6 +7,7 @@
 // Refills use a clean bitters install and are grid agnostic
 @import "refills/dropdown";
 @import "refills/tooltipped";
+@import "refills/modal";
 
 // Site Setup
 @import "site/variables";
@@ -16,6 +17,7 @@
 @import "site/container";
 @import "site/layout";
 @import "site/project-description";
+@import "site/references";
 @import "site/refills";
 @import "site/row";
 @import "site/site-footer";
