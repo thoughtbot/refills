@@ -15,6 +15,38 @@
 
   <li class="row">
     <div class="container refill-body">
+      <h2 class="refill-title">Modal</h2>
+      <p>
+        Modals, or generic dialogs, are used to overlay content for progressive
+        disclosure.
+      </p>
+      <p>
+        This implementation focuses into the modal when opened, and refocuses on
+        the open button once closed, allowing them to be separated in the DOM
+        without losing place or context. The modal can be closed on
+        <code>Escape</code>, or clicking outside of it.
+      </p>
+      <p>
+        Further enancements should hide the rest of the body's content for
+        screen readers when a modal is open, and "trap" tabbable keyboard focus
+        within the modal. A plugin like
+        <a href="https://github.com/ianmcburnie/jquery-keyboard-trap">jquery-keyboard-trap</a>
+        can help achieve the latter.
+      </p>
+      <p class="references">
+        References:
+        <a href="https://ebay.gitbooks.io/mindpatterns/content/disclosure/dialog.html">eBay Mind patterns</a>,
+        <a href="http://edenspiekermann.github.io/a11y-dialog/">A11y Dialog</a>.
+      </p>
+      <div class="refill-wrapper">
+        <%= partial "refills/modal" %>
+      </div>
+    </div>
+    <%= code_for("modal") %>
+  </li>
+
+  <li class="row">
+    <div class="container refill-body">
       <h2 class="refill-title">Tooltipped</h2>
       <p>
         Tooltips are used to add descriptive text to interactive elements which

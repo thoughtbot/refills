@@ -1,0 +1,26 @@
+<button data-open-modal="example-modal">Open Modal</button>
+
+<div data-modal="example-modal"
+     aria-labelledby="example-modal-title"
+     class="modal-wrapper"
+     role="dialog"
+     aria-hidden="true">
+  <div class="modal-overlay" data-close-modal></div>
+  <div role="document" class="modal">
+    <header role="banner">
+      <h1 id="example-modal-title">This here is a modal</h2>
+      <button data-close-modal
+              class="modal-close-button"
+              aria-label="Close this dialog window">
+        &times;
+      </button>
+    </header>
+    <div>
+      <p>
+        Nulla malesuada consectetur nunc et aliquet. Integer et ante rhoncus,
+        tristique quam ut, posuere risus. Nulla finibus finibus porta.
+        Suspendisse finibus ultricies felis, a tempor dui varius ut.
+      </p>
+    </div>
+  </div>
+</div>
