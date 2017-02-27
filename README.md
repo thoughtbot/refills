@@ -92,16 +92,18 @@ Copyright © 2014–2015 [thoughtbot, inc](http://thoughtbot.com). Refills is fr
 
 Whenever code for Refills is borrowed or inspired by existing code, we try to credit the original developer/designer in our source code. [Let us know](mailto:design+bourbon@thoughtbot.com) if you think any credit is absent.
 
-## About thoughtbot
+## About
 
-[<img src="http://thoughtbot.github.io/images/signature.svg" width="250" alt="thoughtbot logo">][hire]
+Refills is maintained by the thoughtbot design team. It is funded by
+[thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are
+trademarks of thoughtbot, inc.
 
-Refills is maintained and funded by thoughtbot, inc.
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
+[![thoughtbot][thoughtbot-logo]][thoughtbot]
 
-We love open source software!
-See [our other projects][community]
-or [hire us][hire] to design, develop, and grow your product.
+We love open-source software! See [our other projects][community] or
+[hire us][hire] to design, develop, and grow your product.
 
+[thoughtbot]: https://thoughtbot.com?utm_source=github
+[thoughtbot-logo]: http://presskit.thoughtbot.com/images/thoughtbot-logo-for-readmes.svg
 [community]: https://thoughtbot.com/community?utm_source=github
 [hire]: https://thoughtbot.com/hire-us?utm_source=github
