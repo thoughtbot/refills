@@ -13,7 +13,7 @@ for updates.
 
 - [Sass] 3.3+
 - [Bourbon] 5.0+
-- [Neat] 1.6+
+- [Neat] < 2.0, >= 1.6 (Refills is not currently compatible with Neat 2.0)
 
 It’s recommended that you use [Autoprefixer], as Refills do not come packaged
 with vendor prefixes.
