@@ -1,0 +1,19 @@
+$_notice-color: #fff6bf;
+
+.refills-notice {
+  background-color: $_notice-color;
+  border-radius: 3px;
+  color: shade($_notice-color, 60%);
+  padding: 2em 1em;
+  text-align: center;
+
+  a {
+    color: shade($_notice-color, 70%);
+    text-decoration: underline;
+
+    &:focus,
+    &:hover {
+      color: shade($_notice-color, 90%);
+    }
+  }
+}
