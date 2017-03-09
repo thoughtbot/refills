@@ -9,7 +9,7 @@ gem "middleman-gh-pages", "~> 0.3"
 gem "middleman-livereload", "~> 3.4"
 gem "middleman-sprockets", "~> 4.1"
 gem "neat", "~> 1.8"
-gem "sassc", "~> 1.8"
+gem "sassc", "~> 1.11"
 
 group :test do
   gem "generator_spec", "~> 0.9.3"
