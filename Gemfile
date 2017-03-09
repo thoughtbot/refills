@@ -8,7 +8,7 @@ gem "middleman-autoprefixer", "~> 2.7"
 gem "middleman-gh-pages", "~> 0.3"
 gem "middleman-livereload", "~> 3.4"
 gem "middleman-sprockets", "~> 4.1"
-gem "neat", "~> 1.7"
+gem "neat", "~> 1.8"
 gem "sassc", "~> 1.8"
 
 group :test do
