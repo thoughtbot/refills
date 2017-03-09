@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.3.0"
+ruby "2.3.3"
 
 gem "bourbon", "~> 5.0.0.beta.6"
 gem "middleman", "~> 4.1"
