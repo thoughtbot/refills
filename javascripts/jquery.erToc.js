@@ -7,7 +7,6 @@
  * Testd on: jQuery 1.4+, IE 6+, Firefox, Chrome, Safari, Oprea
  * erToc is a jQuery plugin that will automatically generate a table of contents for your page.
  */
-
 (function($) {
     $.erToc = function(el, options) {
         var base = this;

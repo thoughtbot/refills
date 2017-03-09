@@ -17,7 +17,7 @@ body {
 .menu-wrapper::after {
   clear: both;
   content: "";
-  display: table; }
+  display: block; }
 
 #example {
   background: #fff;
@@ -39,7 +39,7 @@ body {
   .refills-header::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   @media screen and (min-width: 40em) {
     .refills-header {
       margin-bottom: 4em;
@@ -65,7 +65,7 @@ body {
           width: 120px;
           padding: 0.5em; } }
   .refills-header h2 {
-    font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+    font-family: "Georgia", "Times", "Times New Roman", serif;
     font-size: 1.4em;
     font-weight: 100;
     line-height: 1.4em;
@@ -194,6 +194,18 @@ ul.refills-menu {
   -webkit-transform: scale(0.4) rotate(13deg);
           transform: scale(0.4) rotate(13deg); }
 
+.refills-notice {
+  background-color: #fff6bf;
+  border-radius: 3px;
+  color: #66624c;
+  padding: 2em 1em;
+  text-align: center; }
+  .refills-notice a {
+    color: #4d4a39;
+    text-decoration: underline; }
+    .refills-notice a:focus, .refills-notice a:hover {
+      color: #1a1913; }
+
 section.refill {
   margin-bottom: 2em;
   padding-bottom: 1em;
@@ -201,7 +213,7 @@ section.refill {
   section.refill::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   section.refill > h3 {
     margin-bottom: 1.3em;
     margin-top: 1em;
@@ -215,7 +227,7 @@ section.refill {
   .refills-wrapper::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .refills-wrapper h1.main-header {
     background-color: #82caca;
     display: inline-block;
@@ -313,6 +325,7 @@ pre[class*="language-"] {
 @media screen and (min-width: 40em) {
   .snippet {
     margin-bottom: 2em; } }
+
 .snippet .copy-source-container {
   min-height: 3.4em; }
   @media screen and (min-width: 40em) {
@@ -321,14 +334,19 @@ pre[class*="language-"] {
   @media screen and (min-width: 53.75em) {
     .snippet .copy-source-container {
       min-height: 1em; } }
+
 .snippet:nth-of-type(1) .copy-source {
   background: #e98065; }
+
 .snippet:nth-of-type(2) .copy-source {
   background: #55a1d4; }
+
 .snippet:nth-of-type(3) .copy-source:nth-of-type(1) {
   background: #e9c05b; }
+
 .snippet:nth-of-type(3) .copy-source:nth-of-type(2) {
   background: #89b981; }
+
 .snippet .copy-source {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 0;
@@ -343,8 +361,10 @@ pre[class*="language-"] {
   .snippet .copy-source:hover, .snippet .copy-source:active {
     background-color: #666666;
     color: #fff; }
+
 .snippet a {
   text-decoration: none; }
+
 .snippet code {
   font-size: 0.6em;
   line-height: 1.4em;
@@ -379,7 +399,7 @@ footer.refills-footer {
     footer.refills-footer img::after {
       clear: both;
       content: "";
-      display: table; }
+      display: block; }
   footer.refills-footer .footer-links {
     border-top: 2px solid;
     display: inline-block;
@@ -409,7 +429,7 @@ nav.bourbon {
   nav.bourbon::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   @media screen and (max-width: 32em) {
     nav.bourbon {
       padding: 0; } }
@@ -595,7 +615,7 @@ section.inner-content {
   .refills-patterns .accordion-tabs::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   @media screen and (max-width: 40em) {
     .refills-patterns .accordion-tabs {
       border: 1px solid #dcdcdc;
@@ -653,13 +673,14 @@ section.inner-content {
         border-bottom-right-radius: 3px;
         border-top-right-radius: 3px;
         float: left; } }
+
 .refills-patterns .accordion-tabs-minimal {
   line-height: 1.5;
   padding: 0; }
   .refills-patterns .accordion-tabs-minimal::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .refills-patterns .accordion-tabs-minimal .tab-header-and-content {
     list-style: none; }
     @media screen and (min-width: 40em) {
@@ -695,29 +716,26 @@ section.inner-content {
       .refills-patterns .accordion-tabs-minimal .tab-content {
         border-top: 1px solid #dcdcdc;
         float: left; } }
+
 .refills-patterns .cards {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+
 .refills-patterns .card {
   background-color: #f6f6f6;
   border: 1px solid gainsboro;
   border-radius: 3px;
   box-shadow: 0 2px 4px #e6e6e6;
   cursor: pointer;
-  -webkit-flex-basis: 15em;
-      -ms-flex-preferred-size: 15em;
-          flex-basis: 15em;
+  -ms-flex-preferred-size: 15em;
+      flex-basis: 15em;
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin: 0 1em 1.5em 1em;
@@ -759,6 +777,7 @@ section.inner-content {
     background-color: #f6f6f6; }
     .refills-patterns .card:active .card-header {
       background-color: #f6f6f6; }
+
 .refills-patterns .centered-navigation {
   background-color: #E7F1EC;
   border-bottom: 1px solid #d4e6dd;
@@ -800,11 +819,11 @@ section.inner-content {
     .refills-patterns .centered-navigation .centered-navigation-wrapper::after {
       clear: both;
       content: "";
-      display: table; }
+      display: block; }
     .refills-patterns .centered-navigation .centered-navigation-wrapper::after {
       clear: both;
       content: "";
-      display: table; }
+      display: block; }
   .refills-patterns .centered-navigation ul.centered-navigation-menu {
     clear: both;
     display: none;
@@ -891,7 +910,8 @@ section.inner-content {
         font-size: 1.2em;
         position: absolute;
         right: 0.5em; }
-    .refills-patterns .centered-navigation li.more:focus > .submenu, .refills-patterns .centered-navigation li.more:hover > .submenu {
+    .refills-patterns .centered-navigation li.more:focus > .submenu,
+    .refills-patterns .centered-navigation li.more:hover > .submenu {
       display: block; }
     @media screen and (min-width: 53.75em) {
       .refills-patterns .centered-navigation li.more {
@@ -938,6 +958,7 @@ section.inner-content {
             padding-left: 1em;
             text-align: left;
             width: 12em; } }
+
 .refills-patterns .comment {
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   display: table;
@@ -973,6 +994,7 @@ section.inner-content {
       color: rgba(51, 51, 51, 0.5);
       font-size: 0.9em;
       font-style: italic; }
+
 .refills-patterns .device-background {
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), -webkit-linear-gradient(80deg, #0A120D, #162C4C), no-repeat #162C4C scroll;
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), linear-gradient(10deg, #0A120D, #162C4C), no-repeat #162C4C scroll;
@@ -1022,38 +1044,34 @@ section.inner-content {
           border-radius: 0.2em;
           box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.5);
           margin: auto; } }
+
 .refills-patterns .flex-boxes {
   -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
   clear: both;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center; }
   .refills-patterns .flex-boxes::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .refills-patterns .flex-boxes .flex-box {
-    -webkit-align-self: stretch;
-        -ms-flex-item-align: stretch;
-            align-self: stretch;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
     background: #f7f7f7;
     border-radius: 3px;
     box-shadow: inset 0 0 1px #DDD, 0 2px 4px #e6e6e6;
     display: block;
     -webkit-box-flex: 2;
-    -webkit-flex: 2 2 15em;
         -ms-flex: 2 2 15em;
             flex: 2 2 15em;
     margin: 0.4em;
@@ -1100,9 +1118,9 @@ section.inner-content {
       margin: auto; }
   .refills-patterns .flex-boxes .flex-box-big {
     -webkit-box-flex: 1;
-    -webkit-flex: 1 1 40em;
         -ms-flex: 1 1 40em;
             flex: 1 1 40em; }
+
 .refills-patterns .footer {
   background: #40526b;
   padding: 3em 1.618em;
@@ -1114,24 +1132,19 @@ section.inner-content {
       height: 3em; }
   .refills-patterns .footer .footer-links {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 1.5em; }
   .refills-patterns .footer ul {
-    -webkit-flex-basis: 13em;
-        -ms-flex-preferred-size: 13em;
-            flex-basis: 13em;
-    -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-            flex-shrink: 0;
+    -ms-flex-preferred-size: 13em;
+        flex-basis: 13em;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     margin-bottom: 3em;
     padding: 0; }
   .refills-patterns .footer li {
@@ -1158,6 +1171,7 @@ section.inner-content {
     margin: auto;
     max-width: 35em;
     text-align: center; }
+
 .refills-patterns .footer-2 {
   background: #40526b;
   display: inline-block;
@@ -1219,10 +1233,12 @@ section.inner-content {
       padding: 1px; }
       .refills-patterns .footer-2 .footer-secondary-links ul.footer-social img:focus, .refills-patterns .footer-2 .footer-secondary-links ul.footer-social img:hover {
         opacity: 1; }
+
 .refills-patterns .grid-items::after {
   clear: both;
   content: "";
-  display: table; }
+  display: block; }
+
 .refills-patterns .grid-items .grid-item {
   background: #6b83a6;
   border-bottom: 9px solid white;
@@ -1299,14 +1315,17 @@ section.inner-content {
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover; }
+
 .refills-patterns .grid-items .grid-item img {
   display: block;
   height: 3em;
   margin: 0 auto 1em; }
+
 .refills-patterns .grid-items .grid-item h1 {
   color: white;
   font-size: 1.3em;
   margin-bottom: 0.4em; }
+
 .refills-patterns .grid-items .grid-item p {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.5em;
@@ -1314,24 +1333,28 @@ section.inner-content {
   @media screen and (min-width: 40em) {
     .refills-patterns .grid-items .grid-item p {
       max-width: 70%; } }
+
 @media screen and (min-width: 53.75em) {
   .refills-patterns .grid-items .grid-item-big {
     width: 66.66667%; } }
+
 @media screen and (min-width: 40em) {
   .refills-patterns .grid-items .grid-item-big p {
     max-width: 60%; } }
+
 .refills-patterns .grid-items .grid-item-image {
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
   background-color: #6b83a6;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover; }
+
 .refills-patterns .grid-items-lines {
   position: relative; }
   .refills-patterns .grid-items-lines::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .refills-patterns .grid-items-lines .grid-item {
     background: white;
     border-bottom: 1px solid rgba(51, 51, 51, 0.2);
@@ -1384,20 +1407,18 @@ section.inner-content {
     position: absolute;
     right: 0;
     width: 4px; }
+
 .refills-patterns .hero {
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url(../images/background-image.png);
+  background: url("../images/background-image.png");
   background-position: right;
   background-size: none;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 25em;
@@ -1407,7 +1428,6 @@ section.inner-content {
       background-position: left;
       background-size: cover;
       -webkit-box-pack: end;
-      -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
               justify-content: flex-end; } }
   .refills-patterns .hero .hero-content {
@@ -1418,24 +1438,21 @@ section.inner-content {
         text-align: left; } }
   .refills-patterns .hero .hero-logo {
     margin: auto; }
+
 .refills-patterns .bullets {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 1em;
   margin-bottom: 1.5em;
   overflow: auto;
   padding: 0; }
   .refills-patterns .bullets .bullet {
-    -webkit-flex-basis: 20em;
-        -ms-flex-preferred-size: 20em;
-            flex-basis: 20em;
+    -ms-flex-preferred-size: 20em;
+        flex-basis: 20em;
     -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1; }
   .refills-patterns .bullets .bullet-icon {
@@ -1467,23 +1484,21 @@ section.inner-content {
     line-height: 1.5em; }
   .refills-patterns .bullets img {
     max-width: 100%; }
+
 .refills-patterns .logo-section {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1em; }
   .refills-patterns .logo-section li {
-    -webkit-align-self: center;
-        -ms-flex-item-align: center;
-            align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     list-style: none;
     padding: 2em;
     text-align: center; }
@@ -1493,21 +1508,27 @@ section.inner-content {
       max-width: 10em; }
     .refills-patterns .logo-section li .wider-logo {
       max-width: 15em; }
+
 .refills-patterns #map_canvas {
   height: 400px;
   width: 100%; }
+
 .refills-patterns #map_canvas img {
   max-width: none; }
+
 .refills-patterns #map_canvas .content {
   padding: 0 0.5em 1em 0.5em; }
+
 .refills-patterns #map_canvas .firstHeading {
   font-size: 1em;
   font-weight: bold;
   line-height: 1em;
   margin: 0; }
+
 .refills-patterns #map_canvas #bodyContent p {
   font-size: 1em;
   margin: 0; }
+
 .refills-patterns header.navigation {
   background-color: #333;
   border-bottom: 1px solid #1a1a1a;
@@ -1520,7 +1541,7 @@ section.inner-content {
     .refills-patterns header.navigation .navigation-wrapper::after {
       clear: both;
       content: "";
-      display: table; }
+      display: block; }
   .refills-patterns header.navigation .logo {
     float: left;
     max-height: 60px;
@@ -1628,7 +1649,8 @@ section.inner-content {
         font-size: 1.2em;
         position: absolute;
         right: 0.5em; }
-    .refills-patterns header.navigation li.more:focus > .submenu, .refills-patterns header.navigation li.more:hover > .submenu {
+    .refills-patterns header.navigation li.more:focus > .submenu,
+    .refills-patterns header.navigation li.more:hover > .submenu {
       display: block; }
     @media screen and (min-width: 53.75em) {
       .refills-patterns header.navigation li.more {
@@ -1730,6 +1752,7 @@ section.inner-content {
         .refills-patterns header.navigation .search-bar input {
           box-sizing: border-box;
           display: block; } }
+
 .refills-patterns .scroll-on-page {
   display: inline-block; }
   .refills-patterns .scroll-on-page a {
@@ -1766,16 +1789,15 @@ section.inner-content {
       width: 65.88078%; }
       .refills-patterns .scroll-on-page article:last-child {
         margin-right: 0; } }
+
 .refills-patterns .search-tools {
   background: #f6f6f6;
   border: 1px solid gainsboro;
   border-radius: 3px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1.618em 0.809em;
@@ -1783,7 +1805,7 @@ section.inner-content {
   .refills-patterns .search-tools::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .refills-patterns .search-tools li {
     font-size: 0.8em;
     line-height: 1.5em;
@@ -1794,16 +1816,13 @@ section.inner-content {
     margin-bottom: 0.375em; }
   .refills-patterns .search-tools .filters {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%; }
@@ -1811,17 +1830,14 @@ section.inner-content {
       .refills-patterns .search-tools .filters {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
             -ms-flex-direction: row;
                 flex-direction: row; } }
   .refills-patterns .search-tools .filter {
     -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    -webkit-flex-shrink: 1;
-        -ms-flex-negative: 1;
-            flex-shrink: 1;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
     margin: 0 0.2em 1em 0.2em; }
     @media screen and (min-width: 53.75em) {
       .refills-patterns .search-tools .filter {
@@ -1867,6 +1883,7 @@ section.inner-content {
       padding: 0.5em 1em;
       text-align: center;
       width: 100%; }
+
 .refills-patterns .side-image {
   background: #F9F9F9; }
   @media screen and (min-width: 53.75em) {
@@ -1913,6 +1930,7 @@ section.inner-content {
       color: #333;
       line-height: 1.5em;
       margin-bottom: 3em; }
+
 .refills-patterns .tables {
   border: 1px solid gainsboro;
   border-collapse: separate;
@@ -1966,6 +1984,7 @@ section.inner-content {
           .refills-patterns .tables tbody td button {
             margin-bottom: 0;
             width: auto; } }
+
 .refills-patterns .table-minimal {
   border-collapse: separate;
   border-spacing: 0;
@@ -1999,6 +2018,7 @@ section.inner-content {
           .refills-patterns .table-minimal tbody td button {
             margin-bottom: 0;
             width: auto; } }
+
 .refills-patterns .vertical-tabs-container {
   border: 1px solid gainsboro;
   border-radius: 3px;
@@ -2007,7 +2027,7 @@ section.inner-content {
   .refills-patterns .vertical-tabs-container::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .refills-patterns .vertical-tabs-container li {
     list-style: none; }
   .refills-patterns .vertical-tabs-container a {
@@ -2108,6 +2128,7 @@ section.inner-content {
   .refills-components .accordion .is-expanded {
     display: block;
     padding-bottom: 0; }
+
 .refills-components .animated {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -2122,6 +2143,7 @@ section.inner-content {
   .refills-components .animated.iteration {
     -webkit-animation-iteration-count: 2;
             animation-iteration-count: 2; }
+
 @-webkit-keyframes zoomOut {
   0% {
     opacity: 1; }
@@ -2131,6 +2153,7 @@ section.inner-content {
     transform: scale3d(0.3, 0.3, 0.3); }
   100% {
     opacity: 0; } }
+
 @keyframes zoomOut {
   0% {
     opacity: 1; }
@@ -2140,9 +2163,11 @@ section.inner-content {
     transform: scale3d(0.3, 0.3, 0.3); }
   100% {
     opacity: 0; } }
+
 .refills-components .zoomOut {
   -webkit-animation-name: zoomOut;
   animation-name: zoomOut; }
+
 .refills-components .animate-target {
   height: 6em;
   width: 6em;
@@ -2151,12 +2176,14 @@ section.inner-content {
   margin: 0 auto 3em;
   text-align: center;
   -webkit-transform-style: preserve-3d; }
+
 .refills-components button {
   display: block;
   margin: auto;
   outline: none;
   padding: 0.8em 1em;
   text-align: center; }
+
 .refills-components .animate-info {
   color: #909090;
   display: block;
@@ -2167,6 +2194,7 @@ section.inner-content {
   .refills-components .animate-info a {
     color: #f55481;
     text-decoration: none; }
+
 .refills-components .badge-alert {
   background-color: #fff6bf;
   border-radius: 3.75em;
@@ -2175,6 +2203,7 @@ section.inner-content {
   font-size: 0.75em;
   line-height: 1;
   padding: 0.4em 1.2em; }
+
 .refills-components .badge-default {
   background-color: #999;
   border-radius: 3.75em;
@@ -2183,6 +2212,7 @@ section.inner-content {
   font-size: 0.75em;
   line-height: 1;
   padding: 0.4em 1.2em; }
+
 .refills-components .badge-error {
   background-color: #fbe3e4;
   border-radius: 3.75em;
@@ -2191,6 +2221,7 @@ section.inner-content {
   font-size: 0.75em;
   line-height: 1;
   padding: 0.4em 1.2em; }
+
 .refills-components .badge-notice {
   background-color: #e5edf8;
   border-radius: 3.75em;
@@ -2199,6 +2230,7 @@ section.inner-content {
   font-size: 0.75em;
   line-height: 1;
   padding: 0.4em 1.2em; }
+
 .refills-components .badge-success {
   background-color: #e6efc2;
   border-radius: 3.75em;
@@ -2207,6 +2239,7 @@ section.inner-content {
   font-size: 0.75em;
   line-height: 1;
   padding: 0.4em 1.2em; }
+
 .refills-components .breadcrumb {
   display: inline-block;
   margin-bottom: 1.5em;
@@ -2263,8 +2296,10 @@ section.inner-content {
       .refills-components .breadcrumb a {
         font-size: 1em;
         padding: 0 1.125em 0 1.5em; } }
+
 .refills-components .button-group input {
   display: none; }
+
 .refills-components .button-group label {
   margin-bottom: 0; }
   @media screen and (min-width: 53.75em) {
@@ -2317,6 +2352,7 @@ section.inner-content {
     border: 1px solid #2c5999;
     box-shadow: inset 0 1px 2px #3264ac;
     color: white; }
+
 .refills-components .dropdown {
   line-height: 1.5em; }
   .refills-components .dropdown .dropdown-container {
@@ -2375,7 +2411,7 @@ section.inner-content {
     cursor: pointer;
     display: none;
     margin: 0;
-    overflow: show;
+    overflow: visible;
     padding: 0;
     position: absolute;
     right: 0;
@@ -2412,6 +2448,7 @@ section.inner-content {
     border-bottom-right-radius: 3px; }
   .refills-components .dropdown .show-menu {
     display: block; }
+
 .refills-components .expander {
   width: 60%; }
   .refills-components .expander .expander-trigger {
@@ -2439,6 +2476,7 @@ section.inner-content {
     font-size: 0.7em; }
   .refills-components .expander .expander-hidden + .expander-content {
     display: none; }
+
 .refills-components .fade-in-element {
   background: white;
   border: 1px solid silver;
@@ -2452,16 +2490,19 @@ section.inner-content {
   .refills-components .fade-in-element::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .refills-components .fade-in-element p {
     color: #333;
     line-height: 1.5em; }
+
 .refills-components .js-fade-element-hide {
   opacity: 0; }
+
 .refills-components .js-fade-element-show {
   opacity: 1;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; }
+
 .refills-components .flash-alert {
   background-color: #fff6bf;
   color: #66624c;
@@ -2474,6 +2515,7 @@ section.inner-content {
     text-decoration: underline; }
     .refills-components .flash-alert a:focus, .refills-components .flash-alert a:hover {
       color: #1a1913; }
+
 .refills-components .flash-error {
   background-color: #fbe3e4;
   color: #645b5b;
@@ -2486,6 +2528,7 @@ section.inner-content {
     text-decoration: underline; }
     .refills-components .flash-error a:focus, .refills-components .flash-error a:hover {
       color: #191717; }
+
 .refills-components .flash-notice {
   background-color: #e5edf8;
   color: #5c5f63;
@@ -2498,6 +2541,7 @@ section.inner-content {
     text-decoration: underline; }
     .refills-components .flash-notice a:focus, .refills-components .flash-notice a:hover {
       color: #171819; }
+
 .refills-components .flash-success {
   background-color: #e6efc2;
   color: #5c604e;
@@ -2510,6 +2554,7 @@ section.inner-content {
     text-decoration: underline; }
     .refills-components .flash-success a:focus, .refills-components .flash-success a:hover {
       color: #171813; }
+
 .refills-components .hover-tile-outer {
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
   background-color: beige;
@@ -2543,6 +2588,7 @@ section.inner-content {
       line-height: 1.5em; }
     .refills-components .hover-tile-outer .hover-tile-hidden h4 {
       margin: 0 0 0.5em 0; }
+
 .refills-components .image-gradient-dynamic {
   line-height: 0;
   position: relative;
@@ -2588,17 +2634,22 @@ section.inner-content {
       background-image: linear-gradient(90deg, rgba(0, 128, 128, 0.2), rgba(255, 255, 0, 0.2));
       content: "";
       display: block; }
+
 .refills-components .modal label {
   cursor: pointer;
   margin-bottom: 0; }
+
 .refills-components .modal label img {
   border-radius: 150px;
   display: block;
   max-width: 300px; }
+
 .refills-components .modal .modal-state {
   display: none; }
+
 .refills-components .modal .modal-trigger {
   padding: 0.8em 1em; }
+
 .refills-components .modal .modal-fade-screen {
   position: fixed;
   top: 0;
@@ -2623,6 +2674,7 @@ section.inner-content {
     bottom: 0;
     left: 0;
     cursor: pointer; }
+
 .refills-components .modal .modal-close {
   position: absolute;
   top: 1.5em;
@@ -2650,6 +2702,7 @@ section.inner-content {
   .refills-components .modal .modal-close::before {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg); }
+
 .refills-components .modal .modal-inner {
   background: #fff;
   border-radius: 3px;
@@ -2693,13 +2746,17 @@ section.inner-content {
     margin-top: 1em; }
     .refills-components .modal .modal-inner a.cta:last-child {
       padding: 0 2em; }
+
 .refills-components .modal .modal-state:checked + .modal-fade-screen {
   opacity: 1;
   visibility: visible; }
+
 .refills-components .modal .modal-state:checked + .modal-fade-screen .modal-inner {
   top: 0.5em; }
+
 .refills-components .modal-open {
   overflow: hidden; }
+
 .refills-components .pagination {
   text-align: center; }
   .refills-components .pagination ul {
@@ -2732,17 +2789,20 @@ section.inner-content {
         color: #477dca; }
       .refills-components .pagination ul li a:active {
         background: #f6f6f6; }
+
 .refills-components .parallax-window {
   max-height: 30em;
   overflow: hidden;
   position: relative;
   text-align: center;
   width: 100%; }
+
 .refills-components .parallax-static-content {
   color: #9A9A8A;
   padding: 8em 0;
   position: relative;
   z-index: 9; }
+
 .refills-components .parallax-background {
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png") repeat;
   background-position: top;
@@ -2753,6 +2813,7 @@ section.inner-content {
   position: absolute;
   top: -10em;
   width: 100%; }
+
 .refills-components .progress-bar {
   background-color: #f2f2f2;
   border: 1px solid gainsboro;
@@ -2776,16 +2837,19 @@ section.inner-content {
     display: block;
     height: 100%;
     width: 60%; }
+
 @-webkit-keyframes progress {
   0% {
     background-position: 0 0; }
   100% {
     background-position: 40px 0; } }
+
 @keyframes progress {
   0% {
     background-position: 0 0; }
   100% {
     background-position: 40px 0; } }
+
 .refills-components .progress-bar-indication {
   background-color: #f2f2f2;
   border-radius: 3px;
@@ -2811,11 +2875,13 @@ section.inner-content {
     margin: 0;
     padding: 0.1em 0.5em;
     text-shadow: 0 0 1px black; }
+
 .refills-components .ribbon-box {
   height: 100px;
   width: 100px;
   border: 1px solid #bbb;
   position: relative; }
+
 .refills-components .ribbon-wrapper {
   height: 85px;
   width: 85px;
@@ -2837,6 +2903,7 @@ section.inner-content {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
     width: 120px; }
+
 .refills-components form.search-bar {
   position: relative; }
   .refills-components form.search-bar input[type=search] {
@@ -2865,6 +2932,7 @@ section.inner-content {
     .refills-components form.search-bar button[type=submit] img {
       height: 12px;
       opacity: 0.7; }
+
 .refills-components .sliding-panel-content {
   position: fixed;
   top: 0;
@@ -2901,6 +2969,7 @@ section.inner-content {
   .refills-components .sliding-panel-content.is-visible {
     -webkit-transform: translateX(0);
             transform: translateX(0); }
+
 .refills-components .sliding-panel-fade-screen {
   position: fixed;
   top: 0;
@@ -2916,6 +2985,7 @@ section.inner-content {
   .refills-components .sliding-panel-fade-screen.is-visible {
     opacity: 0.4;
     visibility: visible; }
+
 .refills-components .sliding-panel-button {
   cursor: pointer;
   display: inline-block;
@@ -2924,6 +2994,7 @@ section.inner-content {
   position: relative; }
   .refills-components .sliding-panel-button img {
     height: 1.3em; }
+
 .refills-components .label-switch {
   border-radius: 32px;
   cursor: pointer;
@@ -2984,6 +3055,7 @@ section.inner-content {
                 transform: scale(0); }
       .refills-components .label-switch input[type="checkbox"]:checked + .checkbox::after {
         left: 22px; }
+
 .refills-components .stats {
   padding: 0.75em; }
   .refills-components .stats ul {
@@ -3005,6 +3077,7 @@ section.inner-content {
     display: block;
     font-size: 0.7em;
     font-weight: normal; }
+
 .refills-components .texture-examples {
   border: 1px solid silver;
   border-radius: 6px;
@@ -3013,11 +3086,11 @@ section.inner-content {
   .refills-components .texture-examples::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .refills-components .texture-examples .texture-examples-container::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .refills-components .texture-examples h3 {
     color: #CDCDCD;
     font-size: 1em;
@@ -3048,21 +3121,25 @@ section.inner-content {
     line-height: 1.5em;
     margin: 1em auto 1em auto;
     max-width: 74%; }
+
 .refills-components .examples {
   height: 2.5em;
   width: 100%; }
+
 .refills-components .example-normal {
   border-bottom-left-radius: 6px;
   border-top-left-radius: 6px;
   float: left;
   height: 100%;
   width: 50%; }
+
 .refills-components .example-inverted {
   border-bottom-right-radius: 6px;
   border-top-right-radius: 6px;
   float: left;
   height: 100%;
   width: 50%; }
+
 .refills-components .texture-1 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3074,6 +3151,7 @@ section.inner-content {
   .refills-components .texture-1 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/paper.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/paper.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-2 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3085,6 +3163,7 @@ section.inner-content {
   .refills-components .texture-2 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/rice_paper.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/rice_paper.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-3 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3096,6 +3175,7 @@ section.inner-content {
   .refills-components .texture-3 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/noise_lines.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/noise_lines.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-4 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3107,6 +3187,7 @@ section.inner-content {
   .refills-components .texture-4 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/fabric_plaid.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/fabric_plaid.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-5 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3118,6 +3199,7 @@ section.inner-content {
   .refills-components .texture-5 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/first_aid_kit.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/first_aid_kit.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-6 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3129,6 +3211,7 @@ section.inner-content {
   .refills-components .texture-6 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/texturetastic_gray.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/texturetastic_gray.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-7 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3140,6 +3223,7 @@ section.inner-content {
   .refills-components .texture-7 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/lil_fiber.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/lil_fiber.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-8 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3151,6 +3235,7 @@ section.inner-content {
   .refills-components .texture-8 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/tex2res5.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/tex2res5.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-9 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3162,6 +3247,7 @@ section.inner-content {
   .refills-components .texture-9 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/skin_side_up.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/skin_side_up.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-10 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3173,6 +3259,7 @@ section.inner-content {
   .refills-components .texture-10 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/light_noise_diagonal.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/light_noise_diagonal.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-11 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3184,6 +3271,7 @@ section.inner-content {
   .refills-components .texture-11 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/chruch.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/chruch.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-12 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3195,6 +3283,7 @@ section.inner-content {
   .refills-components .texture-12 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/45degreee_fabric.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/45degreee_fabric.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-13 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3206,6 +3295,7 @@ section.inner-content {
   .refills-components .texture-13 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/bgnoise_lg.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/bgnoise_lg.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-14 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3217,6 +3307,7 @@ section.inner-content {
   .refills-components .texture-14 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/little_pluses.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/little_pluses.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-15 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3228,6 +3319,7 @@ section.inner-content {
   .refills-components .texture-15 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/squairy_light.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/squairy_light.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-16 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3239,6 +3331,7 @@ section.inner-content {
   .refills-components .texture-16 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/white_texture.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/white_texture.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-17 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3250,6 +3343,7 @@ section.inner-content {
   .refills-components .texture-17 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/binding_light.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/binding_light.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-18 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3261,6 +3355,7 @@ section.inner-content {
   .refills-components .texture-18 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/double_lined.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/double_lined.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-19 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3272,6 +3367,7 @@ section.inner-content {
   .refills-components .texture-19 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/grid.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/grid.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-20 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3283,6 +3379,7 @@ section.inner-content {
   .refills-components .texture-20 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/absurdidad.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/absurdidad.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-21 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3294,6 +3391,7 @@ section.inner-content {
   .refills-components .texture-21 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/grid_noise.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/grid_noise.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-22 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3305,6 +3403,7 @@ section.inner-content {
   .refills-components .texture-22 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/fancy_deboss.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/fancy_deboss.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-23 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3316,6 +3415,7 @@ section.inner-content {
   .refills-components .texture-23 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/graphy.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/graphy.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-24 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3327,6 +3427,7 @@ section.inner-content {
   .refills-components .texture-24 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/noise_pattern_with_crosslines.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/noise_pattern_with_crosslines.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-25 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3338,6 +3439,7 @@ section.inner-content {
   .refills-components .texture-25 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/old_mathematics.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/old_mathematics.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-26 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3349,6 +3451,7 @@ section.inner-content {
   .refills-components .texture-26 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/ps_neutral.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/ps_neutral.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-27 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3360,6 +3463,7 @@ section.inner-content {
   .refills-components .texture-27 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_freckles.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_freckles.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-28 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3371,6 +3475,7 @@ section.inner-content {
   .refills-components .texture-28 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/wavegrid.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/wavegrid.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-29 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3382,6 +3487,7 @@ section.inner-content {
   .refills-components .texture-29 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/az_subtle.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/az_subtle.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-30 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3393,6 +3499,7 @@ section.inner-content {
   .refills-components .texture-30 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/tiny_grid.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/tiny_grid.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-31 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3404,6 +3511,7 @@ section.inner-content {
   .refills-components .texture-31 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/wavegrid.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/wavegrid.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-32 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3415,6 +3523,7 @@ section.inner-content {
   .refills-components .texture-32 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/gridme.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/gridme.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-33 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3426,6 +3535,7 @@ section.inner-content {
   .refills-components .texture-33 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/noisy_grid.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/noisy_grid.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-34 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3437,6 +3547,7 @@ section.inner-content {
   .refills-components .texture-34 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtlenet2.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtlenet2.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-35 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3448,6 +3559,7 @@ section.inner-content {
   .refills-components .texture-35 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/white_carbon.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/white_carbon.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-36 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3459,6 +3571,7 @@ section.inner-content {
   .refills-components .texture-36 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/lghtmesh.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/lghtmesh.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-37 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3470,6 +3583,7 @@ section.inner-content {
   .refills-components .texture-37 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/p5.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/p5.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-38 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3481,6 +3595,7 @@ section.inner-content {
   .refills-components .texture-38 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/worn_dots.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/worn_dots.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-39 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3492,6 +3607,7 @@ section.inner-content {
   .refills-components .texture-39 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_dots.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_dots.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-40 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3503,6 +3619,7 @@ section.inner-content {
   .refills-components .texture-40 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/brillant.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/brillant.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-41 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3514,6 +3631,7 @@ section.inner-content {
   .refills-components .texture-41 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/farmer.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/farmer.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-42 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3525,6 +3643,7 @@ section.inner-content {
   .refills-components .texture-42 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/retina_dust.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/retina_dust.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-43 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3536,6 +3655,7 @@ section.inner-content {
   .refills-components .texture-43 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/pinstripe.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/pinstripe.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-44 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3547,6 +3667,7 @@ section.inner-content {
   .refills-components .texture-44 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/line_horizontal1.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/line_horizontal1.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-45 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3558,6 +3679,7 @@ section.inner-content {
   .refills-components .texture-45 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/line_horizontal2.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/line_horizontal2.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-46 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3569,6 +3691,7 @@ section.inner-content {
   .refills-components .texture-46 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/linen.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/linen.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-47 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3580,6 +3703,7 @@ section.inner-content {
   .refills-components .texture-47 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/vintage_speckles.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/vintage_speckles.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-48 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3591,6 +3715,7 @@ section.inner-content {
   .refills-components .texture-48 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_grunge.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_grunge.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-49 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3602,6 +3727,7 @@ section.inner-content {
   .refills-components .texture-49 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/old_wall.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/old_wall.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-50 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3613,6 +3739,7 @@ section.inner-content {
   .refills-components .texture-50 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/brushed.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/brushed.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-51 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3624,6 +3751,7 @@ section.inner-content {
   .refills-components .texture-51 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/stucco.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/stucco.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-52 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3635,6 +3763,7 @@ section.inner-content {
   .refills-components .texture-52 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/mooning.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/mooning.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-53 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3646,6 +3775,7 @@ section.inner-content {
   .refills-components .texture-53 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/husk.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/husk.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-54 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3657,6 +3787,7 @@ section.inner-content {
   .refills-components .texture-54 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/concrete_wall_2.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/concrete_wall_2.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-55 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3668,6 +3799,7 @@ section.inner-content {
   .refills-components .texture-55 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/noisy.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/noisy.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-56 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3679,6 +3811,7 @@ section.inner-content {
   .refills-components .texture-56 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/concrete_wall_3.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/concrete_wall_3.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-57 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3690,6 +3823,7 @@ section.inner-content {
   .refills-components .texture-57 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_surface.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_surface.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-58 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3701,6 +3835,7 @@ section.inner-content {
   .refills-components .texture-58 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/dust.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/dust.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-59 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3712,6 +3847,7 @@ section.inner-content {
   .refills-components .texture-59 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/light_alu.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/light_alu.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-60 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3723,6 +3859,7 @@ section.inner-content {
   .refills-components .texture-60 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/corrugation.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/corrugation.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-61 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3734,6 +3871,7 @@ section.inner-content {
   .refills-components .texture-61 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/kindajean.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/kindajean.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-62 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3745,6 +3883,7 @@ section.inner-content {
   .refills-components .texture-62 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/line_diagonal1.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/line_diagonal1.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-63 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3756,6 +3895,7 @@ section.inner-content {
   .refills-components .texture-63 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/line_diagonal2.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/line_diagonal2.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-64 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3767,6 +3907,7 @@ section.inner-content {
   .refills-components .texture-64 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/groovepaper.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/groovepaper.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-65 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3778,6 +3919,7 @@ section.inner-content {
   .refills-components .texture-65 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/brushed_alu.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/brushed_alu.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-66 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3789,6 +3931,7 @@ section.inner-content {
   .refills-components .texture-66 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/rough_diagonal.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/rough_diagonal.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-67 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3800,6 +3943,7 @@ section.inner-content {
   .refills-components .texture-67 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/diagonal-noise.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/diagonal-noise.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-68 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3811,6 +3955,7 @@ section.inner-content {
   .refills-components .texture-68 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/cross_scratches.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/cross_scratches.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-69 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3822,6 +3967,7 @@ section.inner-content {
   .refills-components .texture-69 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/striped_lens.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/striped_lens.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-70 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3833,6 +3979,7 @@ section.inner-content {
   .refills-components .texture-70 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/debut_light.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/debut_light.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-71 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3844,6 +3991,7 @@ section.inner-content {
   .refills-components .texture-71 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/diagonal_waves.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/diagonal_waves.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-72 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3855,6 +4003,7 @@ section.inner-content {
   .refills-components .texture-72 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/honey_im_subtle.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/honey_im_subtle.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-73 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3866,6 +4015,7 @@ section.inner-content {
   .refills-components .texture-73 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/pw_maze_white.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/pw_maze_white.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-74 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3877,6 +4027,7 @@ section.inner-content {
   .refills-components .texture-74 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_zebra_3d.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_zebra_3d.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-75 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3888,6 +4039,7 @@ section.inner-content {
   .refills-components .texture-75 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/white_wave.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/white_wave.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-76 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3899,6 +4051,7 @@ section.inner-content {
   .refills-components .texture-76 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/circles.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/circles.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-77 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3910,6 +4063,7 @@ section.inner-content {
   .refills-components .texture-77 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/crosses.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/crosses.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-78 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3921,6 +4075,7 @@ section.inner-content {
   .refills-components .texture-78 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/grilled.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/grilled.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-79 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3932,6 +4087,7 @@ section.inner-content {
   .refills-components .texture-79 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/pw_pattern.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/pw_pattern.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-80 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3943,6 +4099,7 @@ section.inner-content {
   .refills-components .texture-80 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/struckaxiom.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/struckaxiom.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-81 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3954,6 +4111,7 @@ section.inner-content {
   .refills-components .texture-81 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/vichy.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/vichy.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-82 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3965,6 +4123,7 @@ section.inner-content {
   .refills-components .texture-82 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/wavecut.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/wavecut.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-83 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3976,6 +4135,7 @@ section.inner-content {
   .refills-components .texture-83 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/whitey.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/whitey.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-84 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3987,6 +4147,7 @@ section.inner-content {
   .refills-components .texture-84 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/cream_pixels.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/cream_pixels.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-85 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -3998,6 +4159,7 @@ section.inner-content {
   .refills-components .texture-85 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/grey.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/grey.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-86 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -4009,6 +4171,7 @@ section.inner-content {
   .refills-components .texture-86 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/shinedotted.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/shinedotted.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-87 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -4020,6 +4183,7 @@ section.inner-content {
   .refills-components .texture-87 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/stacked_circles.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/stacked_circles.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture-88 {
   float: left;
   margin: 0 0.95% 1em 0.95%;
@@ -4031,6 +4195,7 @@ section.inner-content {
   .refills-components .texture-88 .example-inverted {
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/noisy_grid_simple.png"), -webkit-linear-gradient(top, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
     background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/noisy_grid_simple.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
 .refills-components .texture {
   height: 5em;
   width: 100%; }
@@ -4046,6 +4211,7 @@ section.inner-content {
     float: left;
     height: 5em;
     width: 50%; }
+
 .refills-components .tooltip-item {
   background: white;
   border: 1px solid gainsboro;
@@ -4054,7 +4220,8 @@ section.inner-content {
   padding: 0.5em 1em;
   position: relative;
   text-align: center; }
-  .refills-components .tooltip-item:focus, .refills-components .tooltip-item:hover .tooltip {
+  .refills-components .tooltip-item:focus,
+  .refills-components .tooltip-item:hover .tooltip {
     opacity: 1;
     visibility: visible; }
   .refills-components .tooltip-item .tooltip {
@@ -4094,6 +4261,7 @@ section.inner-content {
       margin-left: -8px;
       text-align: center;
       text-shadow: 0 2px 2px silver; }
+
 .refills-components .video-wrapper {
   height: 0;
   overflow: hidden;
@@ -4114,7 +4282,7 @@ section.inner-content {
   .type-systems article.type-system-geometric::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .type-systems article.type-system-geometric h1, .type-systems article.type-system-geometric h2, .type-systems article.type-system-geometric h3, .type-systems article.type-system-geometric p {
     margin: 0; }
   .type-systems article.type-system-geometric hr {
@@ -4201,13 +4369,14 @@ section.inner-content {
     width: 3em; }
   .type-systems article.type-system-geometric p.author {
     font-family: "Questrial", sans-serif; }
+
 .type-systems article.type-system-rounded {
   font-family: "Nunito", sans-serif;
   text-align: left; }
   .type-systems article.type-system-rounded::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .type-systems article.type-system-rounded h1,
   .type-systems article.type-system-rounded h2,
   .type-systems article.type-system-rounded h3,
@@ -4298,13 +4467,14 @@ section.inner-content {
     width: 3em; }
   .type-systems article.type-system-rounded p.author {
     font-family: "Nunito", sans-serif; }
+
 .type-systems article.type-system-sans {
   font-family: "PT Sans", sans-serif;
   text-align: left; }
   .type-systems article.type-system-sans::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .type-systems article.type-system-sans h1,
   .type-systems article.type-system-sans h2,
   .type-systems article.type-system-sans h3,
@@ -4399,13 +4569,14 @@ section.inner-content {
   .type-systems article.type-system-sans p.author {
     font-family: "PT Sans", sans-serif;
     font-style: italic; }
+
 .type-systems article.type-system-serif {
   font-family: "Merriweather", serif;
   text-align: left; }
   .type-systems article.type-system-serif::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .type-systems article.type-system-serif h1, .type-systems article.type-system-serif h2, .type-systems article.type-system-serif h3, .type-systems article.type-system-serif p {
     margin: 0; }
   .type-systems article.type-system-serif hr {
@@ -4497,13 +4668,14 @@ section.inner-content {
   .type-systems article.type-system-serif p.author {
     font-family: "Merriweather", serif;
     font-style: italic; }
+
 .type-systems article.type-system-slab {
   font-family: "Roboto Slab", serif;
   text-align: left; }
   .type-systems article.type-system-slab::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .type-systems article.type-system-slab h1, .type-systems article.type-system-slab h2, .type-systems article.type-system-slab h3, .type-systems article.type-system-slab p {
     margin: 0; }
   .type-systems article.type-system-slab hr {
@@ -4592,13 +4764,14 @@ section.inner-content {
     width: 3em; }
   .type-systems article.type-system-slab p.author {
     font-family: "Roboto Slab", serif; }
+
 .type-systems article.type-system-traditional {
   font-family: "Noto Sans", sans-serif;
   text-align: left; }
   .type-systems article.type-system-traditional::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .type-systems article.type-system-traditional h1, .type-systems article.type-system-traditional h2, .type-systems article.type-system-traditional h3, .type-systems article.type-system-traditional p {
     margin: 0; }
   .type-systems article.type-system-traditional hr {

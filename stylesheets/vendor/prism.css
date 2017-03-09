@@ -4,7 +4,6 @@
  * @author Lea Verou
  */
 
-
 code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
@@ -22,7 +21,6 @@ pre[class*="language-"] {
 	tab-size: 4;
 
 	-webkit-hyphens: none;
-	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
 }
