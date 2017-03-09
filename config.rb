@@ -1,5 +1,6 @@
 activate :autoprefixer
 activate :directory_indexes
+activate :sprockets
 
 set :css_dir, "stylesheets"
 set :images_dir, "images"
