@@ -6,6 +6,7 @@
  * Site: http://jedrzejchalubek.com/
  * Licensed under the MIT license
  */
+
 ;(function ($, window, document, undefined) {
 
   var name = 'glide',
