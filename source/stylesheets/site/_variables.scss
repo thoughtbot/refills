@@ -1,13 +1,31 @@
 // Spacing
 $x-small-spacing: $small-spacing / 2;
 $large-spacing: $base-spacing * 2;
-$x-large-spacing: $large-spacing * 2;
+$x-large-spacing: $large-spacing * 1.5;
+
+// Breakpoints
+$x-large-screen: 1000px;
+$max-width: 1280px;
 
 // Colors
-$secondary-background-color: tint($base-border-color, 90%);
-$tertiary-background-color: #e7f1ec;
+$secondary-background-color: #fafcfe;
+$tertiary-background-color: shade($secondary-background-color, 1.5%);
 $accent-color: #f55481;
+$danube: #7990cc;
+$french-pass: #c0e5f3;
 $hover-accent-color: shade($accent-color, 20%);
 
 // Font Stacks
 $serif-font-family: $font-stack-georgia;
+
+// Font Sizes
+$medium-font-size: 1.125em;
+$large-font-size: 1.75em;
+$x-large-font-size: 2.25em;
+
+// Borders
+$light-border-color: shade($secondary-background-color, 4%);
+$light-border: 1px solid $light-border-color;
+
+// Box Shadows
+$site-box-shadow: 0 2px 4px rgba($base-font-color, 0.1);

@@ -1,0 +1,5 @@
+.u-hide-small-screen {
+  @media(max-width: $large-screen) {
+    display: none;
+  }
+}

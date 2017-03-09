@@ -1,0 +1,26 @@
+html,
+body {
+  height: initial;
+}
+
+body {
+  @media (min-width: $medium-screen) {
+    background-image: linear-gradient($danube, $french-pass);
+    padding: $small-spacing;
+  }
+
+  @media (min-width: $max-width) {
+    padding: $x-large-spacing;
+  }
+}
+
+.site-wrapper {
+  @include margin(null auto);
+  max-width: $max-width;
+
+  @media (min-width: $medium-screen) {
+    border-radius: $base-border-radius;
+    box-shadow: $site-box-shadow;
+    overflow: hidden;
+  }
+}

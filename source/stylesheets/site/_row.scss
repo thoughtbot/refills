@@ -1,0 +1,7 @@
+.row {
+  background-color: $base-background-color;
+
+  @media (min-width: $large-screen) {
+    display: flex;
+  }
+}

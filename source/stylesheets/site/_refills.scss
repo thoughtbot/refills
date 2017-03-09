@@ -1,19 +1,14 @@
-.refill {
-  margin-bottom: $x-large-spacing;
-}
-
-.refill-title {
-  border-top: 2px solid $base-border-color;
-  padding-top: $base-spacing;
-}
-
 .refill-wrapper {
   align-items: center;
   background-color: $secondary-background-color;
-  border: $base-border;
+  border: $light-border;
   display: flex;
   justify-content: space-around;
   margin-top: $base-spacing;
-  min-height: $x-large-spacing * 3;
+  min-height: $x-large-spacing * 4;
   padding: $large-spacing;
+}
+
+.refill-body {
+  border-bottom: $light-border;
 }

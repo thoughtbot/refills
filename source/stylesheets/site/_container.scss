@@ -1,5 +1,17 @@
 .container {
   @include margin(null auto);
-  @include padding(null $base-spacing);
-  max-width: 42em;
+  flex: 1 50%;
+  padding: $base-spacing;
+
+  @media (min-width: $medium-screen) {
+    padding: $large-spacing;
+  }
+
+  @media (min-width: 1000px) {
+    padding: $x-large-spacing;
+  }
+}
+
+.container--narrow {
+  max-width: 46em;
 }

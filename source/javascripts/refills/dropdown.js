@@ -7,8 +7,8 @@ $(function() {
     $(menuSelector).attr('aria-hidden', true);
   }
 
-  $(toggleSelector).on('click', function() {
-    var button = $(this);
+  $(toggleSelector).on('click', function(event) {
+    var button = $(event.target);
     var dropdown = $('#' + button.attr('aria-controls'));
     var isExpanded = dropdown.attr('aria-hidden') === 'false';
 
