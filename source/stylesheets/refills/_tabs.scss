@@ -1,0 +1,18 @@
+.tab-list {
+  display: flex;
+  margin-bottom: $base-spacing;
+}
+
+.tab-link {
+  border-bottom: $base-border;
+  display: inline-block;
+  padding: $small-spacing;
+
+  &[aria-selected="true"] {
+    box-shadow: inset 0 -3px $action-color;
+  }
+}
+
+.tab-panel[aria-hidden="true"] {
+  display: none;
+}

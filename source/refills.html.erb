@@ -47,6 +47,33 @@
 
   <li class="row">
     <div class="container refill-body">
+      <h2 class="refill-title">Tabs</h2>
+      <p>
+        Tabs are used to switch the display of local content without a page
+        refresh.
+      </p>
+      <p>
+        In this implementation, we wire up the association between the tab link
+        and the tabpanel by an <code>href</code> and <code>id</code>. JavaScript
+        sets up the appropriate ARIA roles. Left and right arrow keys can change
+        focus between tabs, and pressing the <code>tab</code> key focuses the
+        first element inside the tabpanel.
+      </p>
+      <p class="references">
+        References:
+        <a href="http://heydonworks.com/practical_aria_examples/#tab-interface">
+          Practical ARIA Examples
+        </a>
+      </p>
+      <div class="refill-wrapper">
+        <%= partial "refills/tabs" %>
+      </div>
+    </div>
+    <%= code_for("tabs") %>
+  </li>
+
+  <li class="row">
+    <div class="container refill-body">
       <h2 class="refill-title">Tooltipped</h2>
       <p>
         Tooltips are used to add descriptive text to interactive elements which
