@@ -20,7 +20,9 @@
 //   height: 17em;
 
 //   @include media($large-screen) {
-//     height: 4em;
+//     height: 4.5em;
+//     bottom: 0;
+//     position: absolute;
 //   }
 // }
 
