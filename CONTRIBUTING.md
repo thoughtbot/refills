@@ -57,6 +57,14 @@ generate the corresponding CoffeScript.
 **NOTE** - do not manually change any of the CoffeeScript files, they are
 automatically generated with `js2coffee`.
 
+## Installing js2coffee
+
+Install `js2coffee` by running:
+
+```bash
+$ npm install js2coffee --save-dev
+```
+
 ## Build
 
 If you rename/remove/add any files to the repository, please make sure that the
