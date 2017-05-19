@@ -8,6 +8,7 @@
   border: $base-border;
   margin-top: $small-spacing;
   min-width: 12em;
+  z-index: 1;
 
   &[aria-hidden="true"] {
     display: none;

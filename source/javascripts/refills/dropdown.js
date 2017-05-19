@@ -8,7 +8,7 @@ $(function() {
   }
 
   $(toggleSelector).on('click', function(event) {
-    var button = $(event.target);
+    var button = findButton(event.target);
     var dropdown = $('#' + button.attr('aria-controls'));
     var isExpanded = dropdown.attr('aria-hidden') === 'false';
 
@@ -20,14 +20,10 @@ $(function() {
     }
   });
 
-  function parentIsMenu(element) {
-    return $(element).parents(menuSelector).length > 0;
-  }
-
   $('body').click(function(event) {
-    var target = $(event.target);
+    var button = findButton(event.target);
 
-    if (!(target.is(toggleSelector) || parentIsMenu(event.target))) {
+    if (!(button.is(toggleSelector) || parentIsMenu(event.target))) {
       closeDropdowns();
     }
   });
@@ -39,4 +35,16 @@ $(function() {
       closeDropdowns();
     }
   });
+
+  function findButton(element) {
+    if ($(element).is(toggleSelector)) {
+      return $(element);
+    } else {
+      return $(element).closest(toggleSelector);
+    }
+  }
+
+  function parentIsMenu(element) {
+    return $(element).parents(menuSelector).length > 0;
+  }
 });
