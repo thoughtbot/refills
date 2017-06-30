@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.3.1"
+ruby "2.4.0"
 
 gem "accesslint-ci", "0.2.6"
 gem "bourbon", "~> 5.0.0.beta.8"
