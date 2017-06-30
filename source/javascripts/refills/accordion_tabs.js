@@ -1,6 +1,11 @@
 $(document).ready(function () {
   $('.accordion-tabs').each(function(index) {
-    $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+    $(this).children('li').each(function() {
+      var $a = $(this).find('a');
+      if ($a.hasClass('is-active')) {
+        $a.addClass('is-active').next().addClass('is-open').show();
+      }
+    })
   });
   $('.accordion-tabs').on('click', 'li > a.tab-link', function(event) {
     if (!$(this).hasClass('is-active')) {
