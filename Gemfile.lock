@@ -1,9 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    accesslint-ci (0.2.6)
-      rest-client (~> 2.0)
-      thor (~> 0.19)
     activesupport (5.0.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
@@ -25,8 +22,6 @@ GEM
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.5)
     contracts (0.13.0)
-    domain_name (0.5.20161129)
-      unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.1)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -43,8 +38,6 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashie (3.5.5)
-    http-cookie (1.0.3)
-      domain_name (~> 0.5)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     kramdown (1.14.0)
@@ -95,12 +88,8 @@ GEM
     middleman-sprockets (4.1.0)
       middleman-core (~> 4.0)
       sprockets (>= 3.0)
-    mime-types (3.1)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
     minitest (5.10.2)
-    netrc (0.11.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     padrino-helpers (0.13.3.4)
@@ -117,10 +106,6 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rest-client (2.0.0)
-      http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 4.0)
-      netrc (~> 0.8)
     sass (3.4.24)
     servolux (0.13.0)
     sprockets (3.7.1)
@@ -134,15 +119,11 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  accesslint-ci (= 0.2.6)
   bourbon (~> 5.0.0.beta.8)
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.8)

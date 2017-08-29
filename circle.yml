@@ -1,21 +1,3 @@
-general:
-  artifacts:
-    - "tmp"
-
-machine:
-  node:
-    version: 6.1.0
-
-dependencies:
-  post:
-    - npm install -g accesslint-cli
-
-compile:
+test:
   override:
     - bundle exec middleman build --verbose
-
-test:
-  post:
-    - |
-      bundle exec middleman server --daemon --port=4567 --watcher-disable && \
-      bundle exec accesslint-ci scan http://localhost:4567
