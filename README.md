@@ -60,7 +60,7 @@ Firefox, Safari, and Edge.
 
 Refills is part of a larger, modular family of Sass utilities:
 
-- [Bourbon]: A library of Sass mixins and functions
+- [Bourbon]: A lightweight Sass tool set
 - [Neat]: A lightweight and flexible Sass grid
 - [Bitters]: Scaffold styles, variables and structure for Bourbon projects
 
