@@ -81,7 +81,7 @@ body {
 
 ## The Bourbon family
 
-- [Bourbon](https://github.com/thoughtbot/bourbon): A simple and lightweight mixin library for Sass
+- [Bourbon](https://github.com/thoughtbot/bourbon): A lightweight Sass tool set
 - [Neat](https://github.com/thoughtbot/neat): A lightweight semantic grid framework for Sass and Bourbon
 - [Bitters](https://github.com/thoughtbot/bitters): Scaffold styles, variables and structure for Bourbon projects
 - [Refills](https://github.com/thoughtbot/refills): Components and patterns built with Bourbon and Neat
