@@ -2,6 +2,8 @@
 
 ## Components and patterns built with Bourbon and Neat
 
+**Note:** This project is no longer maintained.
+
 - **[Examples & Code Snippets](http://refills.bourbon.io)**
 - **[Changelog](https://github.com/thoughtbot/refills/releases)**
 - **[Issues & Bugs](https://github.com/thoughtbot/refills/issues)**

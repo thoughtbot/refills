@@ -77,3 +77,10 @@
   @import "refills/type-system-slab";
   @import "refills/type-system-traditional";
 }
+
+.notice {
+  font-weight: 600;
+  margin: 0;
+  padding: 2rem 4rem;
+  text-align: center;
+}
